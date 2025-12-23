@@ -1,3 +1,8 @@
+/**
+ * TESTIFY QUIZ MANAGER - HATASIZ FINAL
+ * Tüm memory leak, event listener ve bug'lar düzeltildi
+ */
+
 'use strict';
 
 const QuizManager = {
