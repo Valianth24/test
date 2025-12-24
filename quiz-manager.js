@@ -1,6 +1,8 @@
 /**
  * TESTIFY QUIZ MANAGER - HATASIZ FINAL
  * Tüm memory leak, event listener ve bug'lar düzeltildi
+ * ✅ FIX: Practice/Exam her zaman window.questionBank kullanır.
+ * ✅ FIX: AI testi sadece AI/Custom modunda devreye girer.
  */
 
 'use strict';
@@ -51,10 +53,12 @@ const QuizManager = {
     this.cleanupPreviousQuiz();
 
     try {
-      const aiTest = this.loadAIGeneratedTest();
+      // ✅ FIX: AI testi sadece AI/Custom modunda kullanılacak
+      const wantsAI = (mode === 'ai' || mode === 'custom');
+      const aiTest = wantsAI ? this.loadAIGeneratedTest() : null;
 
       if (aiTest && aiTest.questions && aiTest.questions.length > 0) {
-        console.log('🤖 AI testi kullanılıyor');
+        console.log('🤖 AI testi kullanılıyor (sadece AI/Custom)');
 
         this.state = {
           currentMode: 'ai',
@@ -74,11 +78,11 @@ const QuizManager = {
 
         Utils.showToast(`🤖 AI Testi: ${aiTest.title} - ${aiTest.questions.length} soru`, 'info', 4000);
       } else {
-        console.log('📚 Varsayılan sorular kullanılıyor');
+        console.log('📚 Varsayılan sorular (questionBank) kullanılıyor');
 
         if (!window.questionBank || !Array.isArray(window.questionBank)) {
-          Utils.showToast('Soru bankası yüklenemedi!', 'error');
-          console.error('questionBank bulunamadı!');
+          Utils.showToast('Soru bankası yüklenemedi! (window.questionBank yok)', 'error');
+          console.error('questionBank bulunamadı! Script sırası: question-bank.js önce yüklenmeli.');
           return;
         }
 
@@ -244,7 +248,7 @@ const QuizManager = {
       }
 
       optionDiv.innerHTML = `
-        <span class="option-letter">${letters[index]}</span>
+        <span class="option-letter">${letters[index] || ''}</span>
         <span>${Utils.sanitizeHTML(option)}</span>
       `;
 
