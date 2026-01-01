@@ -1,1649 +1,1013 @@
-// CSS (Final/Vize) – 50 Soruluk Soru Bankası (MCQ)
+// FINAL – 15 HTML + 35 CSS = 50 Soru (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
-  // ==== CSS Temelleri, Yazım Yöntemleri, Seçiciler ====
+  // =========================
+  // ==== 1-15: HTML (15) ====
+  // =========================
 
   {
-    q: "CSS’in temel amacı aşağıdakilerden hangisidir?",
+    q: "Internet ve Web (WWW) arasındaki fark için en doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "HTML’in veri tabanına bağlanmasını sağlamak",
-      "HTML elemanlarının görünümünü (renk, boyut, hizalama, düzen) belirlemek",
-      "Sunucu tarafında kullanıcı doğrulaması yapmak",
-      "Dosya sıkıştırmak",
-      "Sadece bağlantı (href) vermek"
+      "Internet, web sayfalarının yazıldığı dildir; Web ise kabloların adıdır.",
+      "Internet, ağ altyapısıdır (ağlar ağı); Web ise internet üzerinde çalışan bir hizmettir (HTTP/URL ile sayfa sunumu).",
+      "Internet sadece tarayıcıdır; Web sadece modemdir.",
+      "Web, donanımdır; Internet, HTML etiketidir.",
+      "İkisi aynı kavramdır; sınavda ayırt etmeye gerek yoktur."
     ],
-    a: "HTML elemanlarının görünümünü (renk, boyut, hizalama, düzen) belirlemek",
+    a: "Internet, ağ altyapısıdır (ağlar ağı); Web ise internet üzerinde çalışan bir hizmettir (HTTP/URL ile sayfa sunumu).",
     difficulty: "easy",
-    week: 10,
-    topic: "CSS tanımı",
-    importance: "high",
-    explanation: "Taktik: CSS = görünüm/stil. HTML = yapı/içerik. Sınavda tanım sorusu gelirse bu ayrımı yaz."
-  },
-
-  {
-    q: "“Cascading (kademeli)” mantığında aynı elemana 2 kural çakışırsa en temel belirleyiciler hangileridir?",
-    t: "mcq",
-    o: [
-      "Sadece dosya ismi",
-      "Öncelik (specificity) + yazılma sırası (en son yazılan)",
-      "Sadece tarayıcı türü",
-      "Sadece bilgisayarın RAM’i",
-      "Sadece font ailesi"
-    ],
-    a: "Öncelik (specificity) + yazılma sırası (en son yazılan)",
-    difficulty: "medium",
-    week: 10,
-    topic: "cascade",
+    week: 1,
+    topic: "Internet vs Web",
     importance: "high",
     explanation:
-      "Taktik: Ezber: Inline > #id > .class > etiket. Aynı seviyede en son yazılan kazanır."
+      "Kavram: Internet = altyapı (ağlar ağı). Web = bu altyapı üstünde çalışan servis (web sayfaları).\nÇözüm: Şıklarda “altyapı vs servis” ayrımını ararsın.\nTuzak: “Internet=web” diyen şıklar.\nEzber: Internet = yol, Web = o yoldaki web sayfası/servis."
   },
 
   {
-    q: "CSS 3 şekilde yazılır. Aşağıdakilerden hangisi bu 3 yöntemin doğru sıralamasıdır?",
+    q:
+      "Aşağıdaki HTML iskeletinde <head> ve <body> görevleri için doğru eşleştirme hangisidir?\n\n(1) <head> ... </head>\n(2) <body> ... </body>",
     t: "mcq",
     o: [
-      "External – Inline – Database",
-      "Inline – Internal (dahili) – External (harici)",
-      "Internal – HTML – PHP",
-      "Inline – Bootstrap – SQL",
-      "CSS yazım yöntemi yoktur"
+      "(1) Görünen içerik, (2) Sayfa ayarları",
+      "(1) Sayfa ayarları (title, meta, css link), (2) Görünen içerik",
+      "(1) Sadece tablolar, (2) Sadece formlar",
+      "(1) Footer bölümü, (2) Frame bölümü",
+      "(1) Görseller, (2) Sadece metin"
     ],
-    a: "Inline – Internal (dahili) – External (harici)",
+    a: "(1) Sayfa ayarları (title, meta, css link), (2) Görünen içerik",
+    difficulty: "easy",
+    week: 1,
+    topic: "head vs body",
+    importance: "high",
+    explanation:
+      "Kavram: head = sayfa ayarları/bağlantılar (CSS/JS, meta, title). body = ekranda görünen içerik.\nÇözüm: “CSS linki nerede olur?” → head.\nTuzak: body’ye style/link koydurmaya çalışan şık.\nEzber: head=ayar, body=görüntü."
+  },
+
+  {
+    q:
+      "Aşağıdaki HTML çalıştırıldığında ekranda ne görünür?\n\n<body>\n  <h1>Başlık</h1>\n  <p>Merhaba</p>\n</body>",
+    t: "mcq",
+    o: [
+      "Sadece “Başlık” görünür",
+      "Sadece “Merhaba” görünür",
+      "“Başlık” ve altında “Merhaba” görünür",
+      "Hiçbir şey görünmez",
+      "h1 görünmez, p görünür"
+    ],
+    a: "“Başlık” ve altında “Merhaba” görünür",
+    difficulty: "easy",
+    week: 2,
+    topic: "temel etiketler çıktı",
+    importance: "medium",
+    explanation:
+      "Kavram: h1 başlıktır, p paragraftır; ikisi de body içinde görünür.\nÇözüm: “Çıktı sorusu”nda etiketlerin görünür olup olmadığına bak.\nTuzak: head ile body karıştırmak.\nEzber: body içinde yazılan metin görünür."
+  },
+
+  {
+    q: "Bağlantı (köprü) oluşturmak için hangi etiket ve hangi attribute kullanılır?",
+    t: "mcq",
+    o: [
+      "<img> — href",
+      "<a> — href",
+      "<a> — src",
+      "<link> — src",
+      "<p> — href"
+    ],
+    a: "<a> — href",
+    difficulty: "easy",
+    week: 3,
+    topic: "hyperlink",
+    importance: "high",
+    explanation:
+      "Kavram: <a> link oluşturur, hedefi href ile alır.\nÇözüm: “href=hedef” anahtar kelime.\nTuzak: img ile href’i eşleştiren şık.\nEzber: href = “nereye gidecek?”"
+  },
+
+  {
+    q:
+      "Aşağıdaki iki kullanımın doğru açıklaması hangisidir?\n\n1) <img src='foto.jpg'>\n2) <a href='sayfa.html'>Git</a>",
+    t: "mcq",
+    o: [
+      "1) href dosya kaynağıdır, 2) src link hedefidir",
+      "1) src dosya kaynağıdır, 2) href link hedefidir",
+      "İkisi de link hedefidir",
+      "src sadece tabloda kullanılır",
+      "href sadece formda kullanılır"
+    ],
+    a: "1) src dosya kaynağıdır, 2) href link hedefidir",
+    difficulty: "easy",
+    week: 3,
+    topic: "href vs src",
+    importance: "high",
+    explanation:
+      "Kavram: src = kaynak dosya (resim/script/video). href = link hedefi (a/link).\nÇözüm: “source=src” aklına getir.\nTuzak: src-href yer değiştiren şık.\nEzber: src=source, href=hedef."
+  },
+
+  {
+    q:
+      "Aşağıdaki HTML çalıştırıldığında çıktı nasıl olur?\n\n<p>Merhaba<br>Dünya</p>",
+    t: "mcq",
+    o: [
+      "Tek satır: “MerhabaDünya”",
+      "İki satır: üstte “Merhaba”, altta “Dünya”",
+      "Sadece “Merhaba” görünür",
+      "Sadece “Dünya” görünür",
+      "<br> yazısı ekranda görünür"
+    ],
+    a: "İki satır: üstte “Merhaba”, altta “Dünya”",
+    difficulty: "medium",
+    week: 2,
+    topic: "br çıktı",
+    importance: "medium",
+    explanation:
+      "Kavram: <br> satır kırar (line break), kendisi görünmez.\nÇözüm: Metni iki satıra böl.\nTuzak: “br yazısı görünür” diyen şık.\nEzber: br = ‘satır atla’."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi doğru tablo (table) yapısıdır?",
+    t: "mcq",
+    o: [
+      "<table><td>1</td><tr>2</tr></table>",
+      "<table><tr><td>1</td><td>2</td></tr></table>",
+      "<table><td><tr>1</tr></td></table>",
+      "<tr><table><td>1</td></table></tr>",
+      "<table><th>1</th><p>2</p></table>"
+    ],
+    a: "<table><tr><td>1</td><td>2</td></tr></table>",
+    difficulty: "medium",
+    week: 4,
+    topic: "table yapı",
+    importance: "high",
+    explanation:
+      "Kavram: table → tr(satır) → td(hücre). Bu sıra temel kural.\nÇözüm: Şıkta bu hiyerarşi doğru mu kontrol et.\nTuzak: td’yi tr’nin dışına koyan şıklar.\nEzber: T-R-D (Table-Row-Data)."
+  },
+
+  {
+    q:
+      "Aşağıdaki HTML’de 1. satırda kaç hücre oluşur?\n\n<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>",
+    t: "mcq",
+    o: ["0", "1", "2", "3", "4"],
+    a: "2",
+    difficulty: "easy",
+    week: 4,
+    topic: "table çıktı",
+    importance: "medium",
+    explanation:
+      "Kavram: tr = satır, td sayısı = hücre sayısı.\nÇözüm: td say: A,B → 2.\nTuzak: tr’yi hücre zannetmek.\nEzber: ‘Kaç td varsa o kadar hücre’."
+  },
+
+  {
+    q: "Form oluşturmak için temel kapsayıcı etiket hangisidir?",
+    t: "mcq",
+    o: ["<input>", "<form>", "<button>", "<label>", "<table>"],
+    a: "<form>",
+    difficulty: "easy",
+    week: 5,
+    topic: "forms",
+    importance: "high",
+    explanation:
+      "Kavram: <form> formun kabıdır; input/button içeride olur.\nÇözüm: ‘Kapsayıcı’ kelimesini görünce form.\nTuzak: input’u kapsayıcı sanmak.\nEzber: form = çerçeve, input = eleman."
+  },
+
+  {
+    q:
+      "Aşağıdaki HTML’de kullanıcı yazısını hangi eleman alır?\n\n<form>\n  <input type='text'>\n  <input type='submit' value='Gönder'>\n</form>",
+    t: "mcq",
+    o: [
+      "type='submit' input",
+      "type='text' input",
+      "form etiketi",
+      "value attribute",
+      "body etiketi"
+    ],
+    a: "type='text' input",
+    difficulty: "easy",
+    week: 5,
+    topic: "input türleri",
+    importance: "high",
+    explanation:
+      "Kavram: text input yazı alır; submit gönder butonudur.\nÇözüm: ‘Kullanıcı yazısı’ → text.\nTuzak: submit’i yazı alanı sanmak.\nEzber: text=yazı, submit=gönder."
+  },
+
+  {
+    q:
+      "Çerçeveler (frames) mantığında sayfa içine başka bir sayfa gömmek için en yaygın etiket hangisidir?",
+    t: "mcq",
+    o: ["<frame>", "<iframe>", "<div>", "<span>", "<embed-css>"],
+    a: "<iframe>",
+    difficulty: "medium",
+    week: 7,
+    topic: "frames/iframe",
+    importance: "medium",
+    explanation:
+      "Kavram: iframe = sayfa içinde sayfa (gömülü pencere).\nÇözüm: ‘frame’ konusu → iframe.\nTuzak: frame etiketi (eski) ile karıştırmak.\nEzber: iFrame = ‘inside frame’."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi çoklu ortam (multimedia) örneğidir?",
+    t: "mcq",
+    o: ["<p>", "<table>", "<img>", "<tr>", "<th>"],
+    a: "<img>",
+    difficulty: "easy",
+    week: 8,
+    topic: "multimedia",
+    importance: "medium",
+    explanation:
+      "Kavram: Multimedia = resim/ses/video.\nÇözüm: Şıklarda medya olanı seç.\nTuzak: table/tr gibi yapısal etiketler.\nEzber: img = medya başlangıcı."
+  },
+
+  {
+    q:
+      "Aşağıdaki HTML çalıştırıldığında kullanıcı resme tıklayınca ne olur?\n\n<a href='sayfa.html'>\n  <img src='foto.jpg'>\n</a>",
+    t: "mcq",
+    o: [
+      "Resim görünmez",
+      "Resme tıklayınca sayfa.html açılır",
+      "Resme tıklayınca sadece foto.jpg büyür",
+      "href img ile çalışmaz",
+      "src link hedefi olur"
+    ],
+    a: "Resme tıklayınca sayfa.html açılır",
+    difficulty: "medium",
+    week: 4,
+    topic: "link içinde img çıktı",
+    importance: "high",
+    explanation:
+      "Kavram: a etiketi içine ne koyarsan tıklanabilir olur.\nÇözüm: tıklanınca href çalışır → sayfa.html.\nTuzak: src’yi hedef sanmak.\nEzber: ‘Tıklama = href’."
+  },
+
+  {
+    q: "Footer (sayfanın alt bölümü) için doğru HTML etiketi hangisidir?",
+    t: "mcq",
+    o: ["<foot>", "<footer>", "<bottom>", "<end>", "<tail>"],
+    a: "<footer>",
+    difficulty: "easy",
+    week: 2,
+    topic: "footer etiketi",
+    importance: "medium",
+    explanation:
+      "Kavram: Semantik etiket: footer.\nÇözüm: ‘foot değil footer’.\nTuzak: <foot> diye kandırma.\nEzber: footer = alt kısım."
+  },
+
+  {
+    q: "Aşağıdaki seçeneklerden hangisi HTML yorum (comment) yazımıdır?",
+    t: "mcq",
+    o: [
+      "// yorum",
+      "/* yorum */",
+      "<!-- yorum -->",
+      "<comment>yorum</comment>",
+      "# yorum"
+    ],
+    a: "<!-- yorum -->",
+    difficulty: "easy",
+    week: 2,
+    topic: "HTML comment",
+    importance: "medium",
+    explanation:
+      "Kavram: HTML comment = <!-- -->.\nÇözüm: CSS comment (/* */) ile karıştırma.\nTuzak: /* */ şıkkı.\nEzber: HTML’de ok işareti gibi: <!-- -->."
+  },
+
+  // ========================
+  // ==== 16-50: CSS (35) ===
+  // ========================
+
+  {
+    q: "CSS (Cascading Style Sheets) en doğru ne yapar?",
+    t: "mcq",
+    o: [
+      "HTML’in linklerini çalıştırır (href yönetir)",
+      "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon)",
+      "Veritabanı bağlantısını kurar",
+      "Sadece internet bağlantısını yönetir",
+      "Tabloya yeni satır ekler"
+    ],
+    a: "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon)",
+    difficulty: "easy",
+    week: 10,
+    topic: "CSS tanım",
+    importance: "high",
+    explanation:
+      "Kavram: CSS = görünüm katmanı (style).\nÇözüm: ‘görünüm/renk/düzen’ geçen şık doğruya yakındır.\nTuzak: CSS’yi HTML fonksiyonu sanmak.\nEzber: HTML=iskelet, CSS=makyaj."
+  },
+
+  {
+    q:
+      "Specificity (öncelik) sorusu: Aşağıdaki kodda “Merhaba” hangi renkte görünür?\n\nHTML:\n<p id='x' class='y' style='color: green;'>Merhaba</p>\n\nCSS:\n#x{ color:red; }\n.y{ color:blue; }\np{ color:black; }",
+    t: "mcq",
+    o: [
+      "Siyah (etiket seçici en güçlüdür)",
+      "Mavi (.class, id’den güçlüdür)",
+      "Kırmızı (#id en güçlüdür ve inline’ı ezer)",
+      "Yeşil (inline style en güçlüdür)",
+      "Karışık çıkar; tarayıcı rastgele seçer"
+    ],
+    a: "Yeşil (inline style en güçlüdür)",
+    difficulty: "hard",
+    week: 10,
+    topic: "Specificity / cascade çıktı",
+    importance: "high",
+    explanation:
+      "Kavram: Öncelik sırası: Inline > #id > .class > etiket.\nÇözüm: Aynı özelliği (color) kim daha güçlü söylüyor? Inline.\nTuzak: ‘id en güçlü’ deyip inline’ı unutmak.\nEzber: I > # > . > tag."
+  },
+
+  {
+    q: "CSS 3 yazım yöntemi aşağıdakilerden hangisinde doğru verilmiştir?",
+    t: "mcq",
+    o: [
+      "Inline (style=''), Internal (<style>), External (<link rel='stylesheet'>)",
+      "Inline (<link>), Internal (src=''), External (<style>)",
+      "Sadece External vardır; diğerleri geçersizdir",
+      "Sadece Internal vardır; external çalışmaz",
+      "CSS sadece body içinde yazılır"
+    ],
+    a: "Inline (style=''), Internal (<style>), External (<link rel='stylesheet'>)",
     difficulty: "easy",
     week: 10,
     topic: "CSS yazım yöntemleri",
     importance: "high",
     explanation:
-      "Taktik: I-I-E diye ezberle: Inline, Internal, External. Finalde klasik sorudur."
+      "Kavram: 3 yol = Inline / Internal / External.\nÇözüm: Şıkta hem doğru isim hem doğru yer/etiket var mı bak.\nTuzak: External’ı <script> ile bağlatmaya çalışan şık.\nEzber: I-I-E."
   },
 
   {
-    q: "Aşağıdakilerden hangisi doğru External CSS bağlama örneğidir?",
+    q: "External CSS dosyasını doğru bağlayan kod hangisidir?",
     t: "mcq",
     o: [
-      "<script src=\"style.css\"></script>",
-      "<link rel=\"stylesheet\" href=\"style.css\">",
-      "<style href=\"style.css\"></style>",
-      "<a href=\"style.css\">CSS</a>",
-      "<img src=\"style.css\">"
+      "<link href='style.css'>",
+      "<link rel='stylesheet' href='style.css'>",
+      "<style src='style.css'></style>",
+      "<script rel='stylesheet' href='style.css'></script>",
+      "<a rel='stylesheet' href='style.css'>CSS</a>"
     ],
-    a: "<link rel=\"stylesheet\" href=\"style.css\">",
+    a: "<link rel='stylesheet' href='style.css'>",
     difficulty: "easy",
     week: 10,
-    topic: "external css",
+    topic: "External bağlama",
     importance: "high",
     explanation:
-      "Taktik: CSS dosyası <link rel=\"stylesheet\" ...> ile bağlanır. script CSS bağlamaz."
+      "Kavram: CSS ekleme = link + rel='stylesheet' + href.\nÇözüm: rel şart, yoksa bağlantı ‘stylesheet’ olarak anlaşılmaz.\nTuzak: src ile bağlama.\nEzber: CSS linki = <link rel='stylesheet' href='...'>."
   },
 
   {
-    q: "CSS’te @import kullanımına örnek hangisidir?",
+    q:
+      "@import ile ilgili doğru ifade hangisidir? (Optimization konusu da dahil)\n\nCSS:\n@import url('theme.css');",
     t: "mcq",
     o: [
-      "@import url(\"theme.css\");",
-      "import(\"theme.css\");",
-      "<import href=\"theme.css\">",
-      "require(\"theme.css\")",
-      "theme.css @import"
+      "@import HTML içinde yazılır, CSS içinde yazılamaz",
+      "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> performans açısından daha tercih edilir",
+      "@import sadece JavaScript dosyası çağırır",
+      "@import, inline CSS’in tek şeklidir",
+      "@import, sadece hover çalıştırır"
     ],
-    a: "@import url(\"theme.css\");",
+    a: "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> performans açısından daha tercih edilir",
     difficulty: "medium",
-    week: 10,
-    topic: "@import",
+    week: 12,
+    topic: "@import + optimization",
     importance: "medium",
     explanation:
-      "Taktik: @import genelde CSS dosyasının en üstünde yazılır. Hoca performans sorarsa: <link> daha tercih edilir."
+      "Kavram: @import CSS’in içinde CSS çağırır.\nÇözüm: ‘Başka CSS’i içeri alır’ diyen şık doğru.\nTuzak: @import’ı HTML attribute sanmak.\nEzber: Import = CSS içinde CSS çağırma (ama link daha klasik/tercih)."
   },
 
   {
-    q: "Aşağıdakilerden hangisi doğru Internal (dahili) CSS yazımıdır?",
+    q:
+      "CSS yazım hatası (finalde puan kırdırır): Aşağıdakilerden hangisi HATALI yazımdır?",
     t: "mcq",
     o: [
-      "<head> <css> p{color:red;} </css> </head>",
-      "<head> <style> p{color:red;} </style> </head>",
-      "<body> <style src=\"style.css\"> </style> </body>",
-      "<head> <script> p{color:red;} </script> </head>",
-      "<html style=\"p{color:red;}\">"
+      "max-width",
+      "min-width",
+      "opacity",
+      "padding",
+      "max widght"
     ],
-    a: "<head> <style> p{color:red;} </style> </head>",
+    a: "max widght",
     difficulty: "easy",
     week: 10,
-    topic: "style etiketi",
+    topic: "CSS yazım hataları",
     importance: "high",
     explanation:
-      "Taktik: Dahili CSS = head içinde <style> ... </style>."
+      "Kavram: width kelimesi doğru yazılmalı; max-width tire ile.\nÇözüm: Şıklar arasında ‘widght’ gibi hatalı yazımı bul.\nTuzak: ‘maxwidth’ gibi tireyi unutturan şıklar.\nEzber: width doğru; max-width tireli."
   },
 
   {
-    q: "Aşağıdaki seçici “p.anil” ne anlama gelir?",
+    q:
+      "Çıktı sorusu: Aşağıdaki CSS, metni mi yoksa arka planı mı değiştirir?\n\np{ color:red; background-color: yellow; }",
     t: "mcq",
     o: [
-      "Tüm p etiketleri",
-      "Sadece class=\"anil\" olan p etiketleri",
-      "Sadece id=\"anil\" olan p etiketleri",
-      "anil isimli etiket",
-      "p etiketinin içindeki anil etiketleri"
+      "color arka planı, background-color yazıyı değiştirir",
+      "color yazıyı kırmızı yapar; background-color arka planı sarı yapar",
+      "İkisi de sadece border’ı değiştirir",
+      "İkisi de sadece saydamlık verir",
+      "Sadece h1’de çalışır, p’de çalışmaz"
     ],
-    a: "Sadece class=\"anil\" olan p etiketleri",
+    a: "color yazıyı kırmızı yapar; background-color arka planı sarı yapar",
     difficulty: "easy",
     week: 10,
-    topic: "selector",
+    topic: "color vs background-color",
     importance: "high",
     explanation:
-      "Kod: p.anil{ color:red; font-size:20px; }  Taktik: Nokta(.) class, diyez(#) id’dir."
+      "Kavram: color = yazı rengi. background-color = arka plan.\nÇözüm: ‘metin mi zemin mi?’ ayrımını yap.\nTuzak: bu ikisini ters yazan şık.\nEzber: color=metin, background=zemin."
   },
 
   {
-    q: "Aşağıdakilerden hangisi doğru ID seçicisidir?",
+    q:
+      "“Punto” sorusu: Aşağıdaki font-size birimlerinden hangisi ‘punto/point’ ile ilişkilidir?",
     t: "mcq",
-    o: [
-      ".header { color: blue; }",
-      "#header { color: blue; }",
-      "header# { color: blue; }",
-      "header. { color: blue; }",
-      "*header { color: blue; }"
-    ],
-    a: "#header { color: blue; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "id selector",
-    importance: "high",
-    explanation:
-      "Taktik: # = id, . = class. Öncelik sorusu gelirse: #id genelde .class’tan daha baskındır."
-  },
-
-  {
-    q: "Aşağıdaki iki seçiciden hangisi “.box içindeki .title” anlamına gelir?\n1) .box .title\n2) .box.title",
-    t: "mcq",
-    o: [
-      "1) .box .title",
-      "2) .box.title",
-      "İkisi de aynı anlamdadır",
-      "İkisi de geçersizdir",
-      "Hiçbiri doğru değildir"
-    ],
-    a: "1) .box .title",
-    difficulty: "medium",
-    week: 10,
-    topic: "descendant selector",
-    importance: "high",
-    explanation:
-      "Taktik: Boşluk = “içindeki”. .box.title ise aynı elemanın iki class’ı var demektir."
-  },
-
-  // ==== Renk, Arka Plan, Yazı Boyutu, Birimler ====
-
-  {
-    q: "Arka plan rengini ayarlayan doğru CSS hangisidir?",
-    t: "mcq",
-    o: [
-      "bg-color: red;",
-      "background-color: red;",
-      "color-background: red;",
-      "background: color(red);",
-      "font-background: red;"
-    ],
-    a: "background-color: red;",
-    difficulty: "easy",
-    week: 10,
-    topic: "background-color",
-    importance: "high",
-    explanation:
-      "Taktik: color = yazı rengi, background-color = arka plan rengi. Karıştırma."
-  },
-
-  {
-    q: "“Punto” web/typography bağlamında genelde hangi birimle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "pt (point)",
-      "px (pixel)",
-      "vw (viewport width)",
-      "fr (grid fraction)",
-      "deg (degree)"
-    ],
-    a: "pt (point)",
+    o: ["px", "pt", "%", "vh", "fr"],
+    a: "pt",
     difficulty: "easy",
     week: 10,
     topic: "font-size birimleri",
     importance: "medium",
     explanation:
-      "Örnek: p{ font-size:12pt; }  Taktik: pt daha çok baskı/print; web’de px/em/rem sık gelir."
+      "Kavram: pt = point (punto). px = piksel.\nÇözüm: ‘punto’ kelimesi geçiyorsa pt’yi seç.\nTuzak: px’i ‘boyut birimi’ diye atlamak.\nEzber: Punto = PT."
   },
 
   {
-    q: "Aşağıdakilerden hangisi doğru font-size kullanım örneğidir?",
+    q:
+      "% (yüzde) ile ilgili: Aşağıdaki CSS’de .box genişliği neye göre %50 olur?\n\n.parent{ width: 400px; }\n.box{ width: 50%; }",
     t: "mcq",
     o: [
-      "p { font-size: 20; }",
-      "p { font-size: 20px; }",
-      "p { font-size: px20; }",
-      "p { font-size: 20%px; }",
-      "p { font-size: pixel(20); }"
+      "Ekran genişliğine göre",
+      "Parent (.parent) genişliğine göre",
+      "HTML dosyasının boyutuna göre",
+      "Sadece resimlerde çalışır",
+      "Rastgele hesaplanır"
     ],
-    a: "p { font-size: 20px; }",
-    difficulty: "easy",
+    a: "Parent (.parent) genişliğine göre",
+    difficulty: "medium",
     week: 10,
-    topic: "font-size",
+    topic: "% mantığı",
     importance: "high",
     explanation:
-      "Taktik: Birim unutmak sık hata. font-size gibi özelliklerde 20 tek başına genelde yanlış; 20px yaz."
+      "Kavram: % çoğu zaman parent’a göre hesaplanır.\nÇözüm: width:% gördün mü ‘parent genişliği’ düşün.\nTuzak: viewport ile parent’ı karıştırmak.\nEzber: % = parent oranı."
   },
 
   {
-    q: "width: 50% ifadesi çoğunlukla neye göre hesaplanır?",
+    q:
+      "width/height/min-width/max-width için en doğru eşleştirme hangisidir?",
     t: "mcq",
     o: [
-      "Ekranın toplam pikseline göre",
-      "Parent (ebeveyn) elemanın genişliğine göre",
-      "CPU hızına göre",
-      "HTML dosya boyutuna göre",
-      "Sadece resimlerde çalışır"
+      "min-width = en fazla büyüsün, max-width = en az küçülsün",
+      "width = hedef genişlik, max-width = tavan, min-width = taban, height = yükseklik",
+      "height sadece yazı boyutudur",
+      "max-width saydamlık verir",
+      "min-width elemanı sabitler (sticky)"
     ],
-    a: "Parent (ebeveyn) elemanın genişliğine göre",
+    a: "width = hedef genişlik, max-width = tavan, min-width = taban, height = yükseklik",
     difficulty: "easy",
     week: 10,
-    topic: "% birimi",
+    topic: "width/height/min/max",
     importance: "high",
     explanation:
-      "Örnek: .box{ width:50%; }  Taktik: % sorularında “parent’a göre” yaz; puan aldırır."
-  },
-
-  // ==== width/height, min/max, responsive resim ====
-
-  {
-    q: "max-width için doğru açıklama hangisidir?",
-    t: "mcq",
-    o: [
-      "Eleman en az bu kadar geniş olur",
-      "Eleman en fazla bu kadar genişleyebilir",
-      "Eleman her zaman bu genişlikte olur",
-      "Eleman görünmez olur",
-      "Sadece height’i etkiler"
-    ],
-    a: "Eleman en fazla bu kadar genişleyebilir",
-    difficulty: "easy",
-    week: 10,
-    topic: "max-width",
-    importance: "high",
-    explanation:
-      "Örnek: .card{ max-width:600px; }  Taktik: “max = tavan” diye ezberle."
+      "Kavram: width/heigth temel ölçü; min=taban, max=tavan.\nÇözüm: Tanım sorularında ‘en fazla/en az’ kelimesini yakala.\nTuzak: min ile max’ı terslemek.\nEzber: min=minimum taban, max=maximum tavan."
   },
 
   {
-    q: "min-width için doğru açıklama hangisidir?",
+    q:
+      "Responsive çıktı sorusu: Aşağıdaki kural ne sağlar?\n\nimg{ max-width:100%; height:auto; }",
     t: "mcq",
     o: [
-      "Eleman en fazla bu kadar geniş olur",
-      "Eleman en az bu kadar geniş olur (daha küçülmez)",
-      "Eleman sadece telefonlarda çalışır",
-      "Eleman saydam olur",
-      "Eleman float yapar"
+      "Resim her zaman 1000px olur",
+      "Resim parent’ı aşarsa küçülür; oran bozulmaz",
+      "Resim sadece büyür, küçülmez",
+      "Resim görünmez olur (display:none)",
+      "Resim grid’e dönüşür"
     ],
-    a: "Eleman en az bu kadar geniş olur (daha küçülmez)",
-    difficulty: "easy",
-    week: 10,
-    topic: "min-width",
-    importance: "medium",
-    explanation:
-      "Örnek: .panel{ min-width:280px; }  Taktik: “min = taban” diye düşün."
-  },
-
-  {
-    q: "Responsive görüntü için en klasik resim kuralı hangisidir?",
-    t: "mcq",
-    o: [
-      "img { width: 1000px; height: 1000px; }",
-      "img { max-width: 100%; height: auto; }",
-      "img { min-width: 100%; height: 100%; }",
-      "img { position: absolute; }",
-      "img { display: none; }"
-    ],
-    a: "img { max-width: 100%; height: auto; }",
+    a: "Resim parent’ı aşarsa küçülür; oran bozulmaz",
     difficulty: "easy",
     week: 10,
     topic: "responsive image",
     importance: "high",
     explanation:
-      "Taktik: max-width:100% taşmayı engeller, height:auto oranı korur. Finalde direkt sorulur."
+      "Kavram: max-width=100% taşmayı engeller; height:auto oranı korur.\nÇözüm: ‘bozulmasın’ denince max-width+auto kalıbı.\nTuzak: width:100% ile max-width farkı.\nEzber: Responsive resim = max-width:100% + height:auto."
   },
 
-  // ==== Opacity, RGBA, Görünürlük ====
-
   {
-    q: "opacity değeri hangi aralıkta olmalıdır?",
+    q:
+      "Opacity çıktı sorusu: .box{ opacity:0; } ise aşağıdakilerden hangisi doğrudur?",
     t: "mcq",
     o: [
-      "0 ile 1 arasında",
-      "0 ile 10 arasında",
-      "1 ile 100 arasında",
-      "-1 ile 1 arasında",
-      "Sadece yüzde ile yazılır"
+      "Eleman görünmez ve sayfada yer kaplamaz",
+      "Eleman görünmez ama sayfada yer kaplar",
+      "Eleman daha opak olur",
+      "Sadece yazı görünmez, arka plan görünür",
+      "Sadece hover olunca görünmez"
     ],
-    a: "0 ile 1 arasında",
-    difficulty: "easy",
+    a: "Eleman görünmez ama sayfada yer kaplar",
+    difficulty: "medium",
     week: 10,
     topic: "opacity",
     importance: "high",
     explanation:
-      "Örnek: img{ opacity:0.6; }  Taktik: 0 görünmez, 1 tam görünür."
+      "Kavram: opacity=0 görünmez yapar ama layout’ta yer durur.\nÇözüm: Yer kaplamasın istiyorsan display:none.\nTuzak: opacity ile display’i aynı sanmak.\nEzber: opacity görünümü etkiler, display yerleşimi."
   },
 
   {
-    q: "Sadece arka plan saydam olsun, iç yazı etkilenmesin. En uygun yaklaşım hangisidir?",
+    q:
+      "Sadece arka planı saydam yapıp içindeki yazıyı etkilememek için hangisi daha uygundur?",
     t: "mcq",
     o: [
-      "opacity: 0.5; (kapsayıcıya)",
-      "background: rgba(0,0,0,0.5);",
-      "z-index: 999;",
-      "float: left;",
-      "display: none;"
+      ".box{ opacity:0.5; }",
+      ".box{ background: rgba(0,0,0,0.5); }",
+      ".box{ display:none; }",
+      ".box{ z-index:0.5; }",
+      ".box{ max-width:0.5; }"
     ],
-    a: "background: rgba(0,0,0,0.5);",
-    difficulty: "medium",
+    a: ".box{ background: rgba(0,0,0,0.5); }",
+    difficulty: "hard",
     week: 10,
     topic: "rgba vs opacity",
     importance: "high",
     explanation:
-      "Taktik: opacity parent’a verilirse çocuklar da saydam olur. Sadece arka plan için rgba kullan."
+      "Kavram: opacity tüm çocukları da saydamlaştırır; rgba sadece arka planı saydam yapar.\nÇözüm: ‘Yazı etkilenmesin’ kelimesi → rgba.\nTuzak: opacity seçip yazıyı da soldurmak.\nEzber: Yazı sabit kalsın = rgba."
   },
 
   {
-    q: "display:none ile visibility:hidden arasındaki temel fark hangisidir?",
+    q: "Margin ve padding için en doğru tanım hangisidir?",
     t: "mcq",
     o: [
-      "İkisi tamamen aynıdır",
-      "display:none elemanı akıştan kaldırır; visibility:hidden yer kaplar ama görünmez",
-      "visibility:hidden elemanı akıştan kaldırır; display:none yer kaplar",
-      "İkisi de sadece resimlerde çalışır",
-      "İkisi de z-index’i değiştirir"
-    ],
-    a: "display:none elemanı akıştan kaldırır; visibility:hidden yer kaplar ama görünmez",
-    difficulty: "medium",
-    week: 10,
-    topic: "display vs visibility",
-    importance: "medium",
-    explanation:
-      "Taktik: “none = yokmuş gibi”, “hidden = var ama görünmüyor” diye ezberle."
-  },
-
-  // ==== Margin, Padding, Box Model, Box-Sizing ====
-
-  {
-    q: "Margin ve Padding farkı için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Margin iç boşluktur, Padding dış boşluktur",
-      "Margin dış boşluktur, Padding iç boşluktur",
-      "İkisi de sadece yazıyı büyütür",
+      "Margin iç boşluk, padding dış boşluktur",
+      "Margin dış boşluk, padding iç boşluktur",
+      "İkisi de sadece yazı rengini değiştirir",
       "Padding sadece tabloda çalışır",
       "Margin sadece resimde çalışır"
     ],
-    a: "Margin dış boşluktur, Padding iç boşluktur",
+    a: "Margin dış boşluk, padding iç boşluktur",
     difficulty: "easy",
     week: 10,
     topic: "margin vs padding",
     importance: "high",
     explanation:
-      "Örnek:\n.box{ margin:20px; padding:10px; }\nTaktik: Margin=Mahalle(dış), Padding=Pijama(iç)."
+      "Kavram: Margin = dış mesafe; Padding = içerikle border arası iç mesafe.\nÇözüm: ‘Dış/İç’ kelimesini yakala.\nTuzak: İkisini terslemek.\nEzber: Margin=Mahalle(dış), Padding=Pijama(iç)."
   },
 
   {
-    q: "Shorthand: margin: 10px 20px 30px 40px; sırası hangisidir?",
+    q:
+      "Shorthand sorusu: margin: 10px 20px 30px 40px; sırası hangisidir?",
     t: "mcq",
     o: [
-      "Sol, Sağ, Üst, Alt",
-      "Üst, Sağ, Alt, Sol",
-      "Üst, Alt, Sağ, Sol",
-      "Sağ, Üst, Sol, Alt",
-      "Alt, Üst, Sol, Sağ"
+      "Sol-Sağ-Üst-Alt",
+      "Üst-Sağ-Alt-Sol",
+      "Üst-Alt-Sağ-Sol",
+      "Sağ-Üst-Sol-Alt",
+      "Alt-Üst-Sol-Sağ"
     ],
-    a: "Üst, Sağ, Alt, Sol",
+    a: "Üst-Sağ-Alt-Sol",
     difficulty: "medium",
     week: 10,
     topic: "margin shorthand",
     importance: "high",
     explanation:
-      "Taktik: Saat yönü: Top(üst) → Right(sağ) → Bottom(alt) → Left(sol)."
+      "Kavram: 4 değer = TRBL (Top Right Bottom Left).\nÇözüm: Saat yönü gibi oku.\nTuzak: Sol-sağ karıştırmak.\nEzber: TRBL = üst-sağ-alt-sol."
   },
 
   {
-    q: "Box Model katman sırası hangisidir?",
+    q:
+      "Box Model hesap sorusu (border-box YOK):\n\n.box{ width:200px; padding:20px; border:5px solid black; }\n\nToplam görünen kutu genişliği (content+padding+border) kaç px olur?",
     t: "mcq",
-    o: [
-      "margin → border → padding → content",
-      "content → padding → border → margin",
-      "border → content → padding → margin",
-      "padding → margin → content → border",
-      "content → border → margin → padding"
-    ],
-    a: "content → padding → border → margin",
-    difficulty: "easy",
+    o: ["200px", "220px", "230px", "250px", "260px"],
+    a: "250px",
+    difficulty: "hard",
     week: 10,
-    topic: "box model",
+    topic: "box model hesap",
     importance: "high",
     explanation:
-      "Taktik: İçten dışa doğru oku: içerik, iç boşluk, çerçeve, dış boşluk."
+      "Kavram: Toplam = width + (padding*2) + (border*2).\nÇözüm: 200 + 40 + 10 = 250.\nTuzak: Sadece width’ü toplam sanmak.\nEzber: ‘2 taraf var’ → padding ve border 2 ile çarpılır."
   },
 
   {
-    q: "Aşağıdaki kuralın etkisi nedir?\n* { box-sizing: border-box; }",
+    q:
+      "Aynı kutu için border-box açılırsa ne olur?\n\n*{ box-sizing:border-box; }\n.box{ width:200px; padding:20px; border:5px solid black; }\n\nToplam görünen kutu genişliği kaç px olur?",
     t: "mcq",
-    o: [
-      "width hesaplamasına padding+border dahil olur (hesap kolaylaşır)",
-      "Tüm elemanları görünmez yapar",
-      "Sadece fontu değiştirir",
-      "Sadece z-index’i artırır",
-      "Sadece grid’i aktif eder"
-    ],
-    a: "width hesaplamasına padding+border dahil olur (hesap kolaylaşır)",
-    difficulty: "medium",
+    o: ["200px", "210px", "240px", "250px", "260px"],
+    a: "200px",
+    difficulty: "hard",
     week: 10,
     topic: "box-sizing",
     importance: "high",
     explanation:
-      "Taktik: border-box = kutu genişliği sabit kalır; padding/border dışarı taşmaz. Finalde ‘hesap’ sorusunda çok iş görür."
-  },
-
-  // ==== Display, Inline/Block, Layout Temeli ====
-
-  {
-    q: "div etiketi default olarak hangi display davranışına sahiptir?",
-    t: "mcq",
-    o: ["inline", "block", "none", "grid", "flex"],
-    a: "block",
-    difficulty: "easy",
-    week: 10,
-    topic: "div",
-    importance: "high",
-    explanation:
-      "Taktik: div = block; satırı kaplar, alt satıra geçer. (CSS sorusunda “div nedir?” diye gelir.)"
+      "Kavram: border-box = width’in içine padding+border dahil.\nÇözüm: width=200 ise toplam da 200 kalır.\nTuzak: Yine 250 hesaplamak.\nEzber: border-box = ‘hesap kolay, width=tam kutu’."
   },
 
   {
-    q: "inline-block için doğru ifade hangisidir?",
+    q:
+      "Yer kaplama farkı sorusu: Hangisi elemanı görünmez yapar ama YER KAPLATMAYA devam eder?",
     t: "mcq",
     o: [
-      "Satırı tamamen kaplar ve width/height almaz",
-      "Yan yana durabilir ve width/height alabilir",
-      "Her zaman görünmezdir",
-      "Sadece position ile çalışır",
-      "Sadece tabloda kullanılır"
+      "display:none;",
+      "opacity:0;",
+      "remove(); (HTML’de)",
+      "width:0; height:0; (her zaman aynı etki)",
+      "link rel='stylesheet';"
     ],
-    a: "Yan yana durabilir ve width/height alabilir",
+    a: "opacity:0;",
     difficulty: "medium",
     week: 10,
-    topic: "display",
-    importance: "medium",
+    topic: "opacity vs display",
+    importance: "high",
     explanation:
-      "Taktik: inline gibi yan yana + block gibi ölçü alır. Sınavda sık karışır."
+      "Kavram: opacity/visibility yer tutabilir; display:none yer tutmaz.\nÇözüm: ‘yer kaplasın’ ifadesi → opacity/visibility.\nTuzak: display:none seçmek.\nEzber: display:none = yok, opacity=hayalet (yer var)."
   },
 
-  // ==== Position, Z-index, Overlap ====
-
   {
-    q: "position: relative için doğru açıklama hangisidir?",
+    q:
+      "Display çıktı sorusu:\n\nHTML:\n<span class='a'>A</span><span class='b'>B</span>\n\nCSS:\n.a{ display:block; }\n\nÇıktı nasıl olur?",
     t: "mcq",
     o: [
-      "Eleman akıştan çıkar, en yakın parent’a göre konumlanır",
-      "Eleman kendi normal konumuna göre top/left ile kaydırılır, akıştaki yeri korunur",
-      "Eleman ekrana sabitlenir (scroll etmez)",
-      "Eleman görünmez olur",
-      "Eleman her zaman en üst katmana çıkar"
+      "A ve B yan yana kalır",
+      "A alt satıra iner, B üstte kalır",
+      "A tek başına satırı kaplar, B alt satıra geçer",
+      "A görünmez olur",
+      "B görünmez olur"
     ],
-    a: "Eleman kendi normal konumuna göre top/left ile kaydırılır, akıştaki yeri korunur",
+    a: "A tek başına satırı kaplar, B alt satıra geçer",
+    difficulty: "hard",
+    week: 10,
+    topic: "display block çıktı",
+    importance: "high",
+    explanation:
+      "Kavram: block = satırı kaplar, alt satıra iter.\nÇözüm: span normalde inline, ama block olunca davranış değişir.\nTuzak: span hep inline sanmak.\nEzber: block = ‘satır kapatır’."
+  },
+
+  {
+    q:
+      "Selector (p.anil) çıktı sorusu:\n\nCSS:\np.anil{ color:red; font-size:20px; }\n\nHTML:\n<p class='anil'>A</p>\n<div class='anil'>B</div>",
+    t: "mcq",
+    o: [
+      "A ve B kırmızı olur",
+      "Sadece A kırmızı ve 20px olur; B etkilenmez",
+      "Sadece B kırmızı olur",
+      "A 20px olur ama kırmızı olmaz",
+      "Hiçbiri etkilenmez"
+    ],
+    a: "Sadece A kırmızı ve 20px olur; B etkilenmez",
+    difficulty: "hard",
+    week: 10,
+    topic: "selector p.class",
+    importance: "high",
+    explanation:
+      "Kavram: p.anil = ‘class’ı anil olan p etiketleri.\nÇözüm: div değil p seçildi.\nTuzak: .anil ile p.anil’i aynı sanmak.\nEzber: Etiket yazdıysan sadece o etiket."
+  },
+
+  {
+    q:
+      "position: relative için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Eleman normal akıştan çıkar ve yer kaplamaz",
+      "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur",
+      "Eleman ekrana sabitlenir (scroll etmez)",
+      "Eleman otomatik en üste çıkar",
+      "Eleman sadece grid içinde çalışır"
+    ],
+    a: "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur",
     difficulty: "medium",
     week: 10,
     topic: "position relative",
     importance: "high",
     explanation:
-      "Örnek:\n.box{ position:relative; top:10px; }\nTaktik: Relative = “kendi yerinden kayar”."
+      "Kavram: relative = ‘kendi yerinden kay’ (top/left ile).\nÇözüm: ‘Yer korunur’ ifadesi relative’in imzasıdır.\nTuzak: absolute ile karıştırmak.\nEzber: relative = kayar ama izi kalır."
   },
 
   {
-    q: "position: absolute için doğru açıklama hangisidir?",
+    q:
+      "position: absolute referans sorusu:\n\n.parent{ position:relative; }\n.badge{ position:absolute; top:10px; right:10px; }\n\n.badge konumu neye göre hesaplanır?",
     t: "mcq",
     o: [
-      "Eleman normal akışta kalır",
-      "Eleman akıştan çıkar; en yakın position verilmiş ataya göre konumlanır",
-      "Eleman sadece flex içinde çalışır",
-      "Eleman sadece grid içinde çalışır",
-      "Eleman sadece metinlerde kullanılır"
+      "Her zaman ekranın sağ üstüne göre",
+      "En yakın position verilmiş ata (.parent) kutusuna göre",
+      "Sadece kendi eski yerine göre",
+      "Sadece z-index’e göre",
+      "Sadece body’nin ortasına göre"
     ],
-    a: "Eleman akıştan çıkar; en yakın position verilmiş ataya göre konumlanır",
-    difficulty: "medium",
+    a: "En yakın position verilmiş ata (.parent) kutusuna göre",
+    difficulty: "hard",
     week: 10,
-    topic: "position absolute",
+    topic: "absolute referans",
     importance: "high",
     explanation:
-      "Örnek:\n.parent{ position:relative; }\n.badge{ position:absolute; top:0; right:0; }\nTaktik: Absolute = “akıştan çıkar + referans ata”."
+      "Kavram: absolute = normal akıştan çıkar; en yakın ‘position’lı ata referans olur.\nÇözüm: parent’a relative verilmiş → referans parent.\nTuzak: ‘her zaman ekran’ sanmak (o fixed’e daha yakın).\nEzber: absolute = ‘en yakın position’lı ata."
   },
 
   {
-    q: "position: sticky en doğru nasıl çalışır?",
+    q:
+      "position: sticky ile ilgili doğru ifade hangisidir?\n\nheader{ position:sticky; top:0; }",
     t: "mcq",
     o: [
-      "Her zaman ekrana sabitlenir (fixed gibi)",
-      "Belirli bir noktaya kadar normal akar; top gibi eşik sonrası yapışır",
+      "Her zaman fixed gibi yapışır, hiç normal akışta olmaz",
+      "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır",
       "Sadece resimlerde çalışır",
-      "Z-index’i otomatik 999 yapar",
+      "Sadece z-index ile çalışır",
       "Overflow’u otomatik hidden yapar"
     ],
-    a: "Belirli bir noktaya kadar normal akar; top gibi eşik sonrası yapışır",
+    a: "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır",
     difficulty: "medium",
     week: 10,
-    topic: "position sticky",
+    topic: "sticky",
     importance: "high",
     explanation:
-      "Örnek: header{ position:sticky; top:0; }\nTaktik: Sticky sorularında mutlaka top/left gibi eşik değerini ararsın."
+      "Kavram: sticky = ‘yaklaşınca yapış’.\nÇözüm: top:0 eşiği gelince sabitlenir.\nTuzak: sticky’yi fixed sanmak.\nEzber: sticky = yarı normal, yarı sabit."
   },
 
   {
-    q: "z-index’in temel amacı nedir?",
+    q:
+      "z-index çıktı sorusu:\n\nHTML:\n<div class='a'>A</div>\n<div class='b'>B</div>\n\nCSS:\n.a{ position:absolute; z-index:1; }\n.b{ position:absolute; z-index:2; }\n\nÜstte hangisi görünür?",
     t: "mcq",
     o: [
-      "Yazı boyutunu büyütmek",
-      "Üst üste binen elemanlarda katman sırasını belirlemek",
-      "Elemanı döndürmek",
-      "Saydamlık vermek",
-      "Flex’i aktif etmek"
+      "A üstte görünür (çünkü önce yazıldı)",
+      "B üstte görünür (z-index daha büyük)",
+      "İkisi de görünmez",
+      "z-index sadece relative’de çalışır, burada çalışmaz",
+      "Tarayıcıya göre değişir"
     ],
-    a: "Üst üste binen elemanlarda katman sırasını belirlemek",
-    difficulty: "easy",
+    a: "B üstte görünür (z-index daha büyük)",
+    difficulty: "hard",
     week: 10,
-    topic: "z-index",
+    topic: "z-index çıktı",
     importance: "high",
     explanation:
-      "Taktik: z-index çalışması için genelde position gerekir. Büyük z-index öne gelir."
+      "Kavram: z-index büyük olan öne gelir (katman).\nÇözüm: 2 > 1 → B önde.\nTuzak: ‘önce yazılan üstte’ sanmak.\nEzber: z-index = katman numarası; büyük numara önde."
   },
 
-  // ==== Overflow ====
-
   {
-    q: "Aşağıdaki kod ne yapar?\n.box{ max-height:200px; overflow:auto; }",
+    q:
+      "Overflow sorusu: Aşağıdaki CSS’in etkisi nedir?\n\n.box{ max-height:100px; overflow:auto; }",
     t: "mcq",
     o: [
-      "Taşan içeriği keser ve asla scroll göstermez",
-      "Gerekiyorsa scroll çıkarır, gerekmezse çıkarmaz",
-      "Her zaman yatay scroll çıkarır",
-      "Elemanı görünmez yapar",
-      "Elemanı sağa kaydırır"
+      "Her durumda scroll çubuğu çıkar (içerik az olsa bile)",
+      "İçerik taşarsa scroll çıkar; taşmazsa çıkmaz",
+      "Taşan kısım kesilir, scroll olmaz",
+      "Kutu görünmez olur",
+      "Kutu yapışkan olur"
     ],
-    a: "Gerekiyorsa scroll çıkarır, gerekmezse çıkarmaz",
+    a: "İçerik taşarsa scroll çıkar; taşmazsa çıkmaz",
     difficulty: "medium",
     week: 10,
-    topic: "overflow",
+    topic: "overflow auto",
     importance: "high",
     explanation:
-      "Taktik: overflow:auto = akıllı scroll. overflow:hidden = keser. Sorularda bu ikisi karıştırılır."
+      "Kavram: auto = gerekiyorsa kaydır.\nÇözüm: ‘taşarsa’ kelimesi → auto.\nTuzak: scroll ile auto’yu karıştırmak.\nEzber: auto = akıllı scroll."
   },
 
-  // ==== Float ve Yanına Açıklama (klasik) ====
-
   {
-    q: "Aşağıdaki kodun sonucu genelde nasıl olur?\nimg{ float:left; margin-right:10px; }",
+    q:
+      "Float çıktı sorusu:\n\nCSS:\nimg{ float:left; margin-right:10px; }\n\nBu kullanım genelde ne amaçla yapılır?",
     t: "mcq",
     o: [
-      "Resim ortalanır",
-      "Resim sola yaslanır, metin resmin sağından akmaya başlar",
-      "Resim görünmez olur",
-      "Resim en alta iner",
-      "Resim sticky olur"
+      "Resmi ortalamak için",
+      "Resmi sola alıp metni resmin sağına sardırmak (ürün görseli + açıklama)",
+      "Resmi görünmez yapmak için",
+      "Resmi sabitlemek için (sticky/fixed)",
+      "Sadece grid sütun sayısını artırmak için"
     ],
-    a: "Resim sola yaslanır, metin resmin sağından akmaya başlar",
+    a: "Resmi sola alıp metni resmin sağına sardırmak (ürün görseli + açıklama)",
     difficulty: "medium",
     week: 10,
     topic: "float",
     importance: "high",
     explanation:
-      "Taktik: Float sorusu gelirse “metin etrafına sarar” diye yaz. Modern karşılık: flexbox."
+      "Kavram: float = elemanı yana alır; metin etrafına sarar.\nÇözüm: ‘ürünün yanına açıklama’ ifadesi float’ın tipik kullanımıdır.\nTuzak: float’ı flex sanmak.\nEzber: Float = ‘yana al + metni sar’."
   },
 
-  // ==== Pseudo-class (çok önemli) ====
-
   {
-    q: "Aşağıdaki CSS ne yapar?\na:hover{ color:red; text-decoration:underline; }",
+    q:
+      "Border + border-radius çıktı sorusu:\n\n.box{ border: 2px solid black; border-radius: 10px; }\n\nBu CSS ne üretir?",
     t: "mcq",
     o: [
-      "Linke tıklanınca (visited) kırmızı yapar",
-      "Fare linkin üstüne gelince link rengi kırmızı olur ve altı çizilir",
-      "Sayfa açılınca linkleri gizler",
-      "Linki her zaman kırmızı yapar",
-      "Input odaktayken çalışır"
+      "Kutu tamamen daire olur",
+      "Kutunun kenarlığı olur ve köşeleri hafif yuvarlanır",
+      "Kutu görünmez olur",
+      "Kutu sadece yazıyı kalınlaştırır",
+      "Kutu otomatik responsive olur"
     ],
-    a: "Fare linkin üstüne gelince link rengi kırmızı olur ve altı çizilir",
+    a: "Kutunun kenarlığı olur ve köşeleri hafif yuvarlanır",
     difficulty: "easy",
-    week: 10,
-    topic: ":hover",
+    week: 11,
+    topic: "border + radius",
     importance: "high",
     explanation:
-      "Taktik: hover = mouse üstüne gelince. Finalde klasik pseudo-class sorusu."
+      "Kavram: border = çerçeve; border-radius = köşe yuvarlama.\nÇözüm: 10px yuvarlama = hafif yumuşak köşe.\nTuzak: 50% ile 10px’i karıştırmak.\nEzber: 50% daire, px yuvarlama."
   },
 
   {
-    q: "Aşağıdaki CSS hangi durumda çalışır?\ninput:focus{ border:2px solid black; }",
+    q:
+      "Gölge sorusu: Aşağıdakilerden hangisi kutuya gölge verir?",
     t: "mcq",
     o: [
-      "Input’a fare değince",
-      "Input’a tıklanıp yazı yazma odağı gelince",
-      "Sayfa kapanınca",
-      "Resim yüklenince",
-      "Div hover olunca"
+      "text-shadow: 0 4px 12px rgba(0,0,0,0.2);",
+      "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
+      "shadow-box: 0 4px 12px;",
+      "box-radius: 12px;",
+      "opacity-shadow: 0.2;"
     ],
-    a: "Input’a tıklanıp yazı yazma odağı gelince",
+    a: "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
     difficulty: "easy",
-    week: 10,
-    topic: ":focus",
-    importance: "high",
-    explanation:
-      "Taktik: focus = aktif yazma odağı. Hover ile karıştırma: hover sadece üstüne gelmek."
-  },
-
-  {
-    q: "button:active pseudo-class’i genelde neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Buton sayfada görünür",
-      "Butona basılı tutulduğu an",
-      "Buton disable",
-      "Buton visited",
-      "Buton sticky"
-    ],
-    a: "Butona basılı tutulduğu an",
-    difficulty: "medium",
-    week: 10,
-    topic: ":active",
-    importance: "medium",
-    explanation:
-      "Örnek: button:active{ transform:scale(0.98); }\nTaktik: active = basma anı (çok kısa sürer)."
-  },
-
-  {
-    q: "Linklerde :visited pseudo-class’i neyi hedefler?",
-    t: "mcq",
-    o: [
-      "Hiç ziyaret edilmemiş link",
-      "Ziyaret edilmiş link",
-      "Mouse üstündeki link",
-      "Tıklanan buton",
-      "Input odaktaki alan"
-    ],
-    a: "Ziyaret edilmiş link",
-    difficulty: "easy",
-    week: 10,
-    topic: ":visited",
-    importance: "medium",
-    explanation:
-      "Taktik: visited = geçmişte tıklanmış link. (Bazı CSS özellikleri güvenlik nedeniyle kısıtlı olabilir.)"
-  },
-
-  // ==== Dropdown (hover ile açılan) + display ====
-
-  {
-    q: "Aşağıdaki CSS mantığı dropdown’ı nasıl açar?\n.dd-content{display:none;}\n.dd:hover .dd-content{display:block;}",
-    t: "mcq",
-    o: [
-      "Sayfa açılır açılmaz menü görünür",
-      "Mouse .dd üzerine gelince .dd-content görünür olur",
-      "Sadece tıklayınca görünür olur",
-      "Sadece mobilde görünür olur",
-      "Z-index artırır"
-    ],
-    a: "Mouse .dd üzerine gelince .dd-content görünür olur",
-    difficulty: "medium",
-    week: 10,
-    topic: "dropdown",
-    importance: "high",
-    explanation:
-      "Taktik: Dropdown sorularında 2 şey ararsın: display:none ve :hover ile display:block."
-  },
-
-  // ==== CSS Yazım Hataları (puan kırdırır) ====
-
-  {
-    q: "Aşağıdakilerden hangisi DOĞRU CSS özelliği ismidir?",
-    t: "mcq",
-    o: ["max widght", "max-width", "max_widght", "maxwidth", "max widht"],
-    a: "max-width",
-    difficulty: "easy",
-    week: 10,
-    topic: "yazım hataları",
-    importance: "high",
-    explanation:
-      "Taktik: width kelimesi en çok yanlış yazılır. Finalde hoca özellikle bu tarz şık koyar."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi DOĞRU CSS yazımıdır?",
-    t: "mcq",
-    o: [
-      "p { color red }",
-      "p { color: red }",
-      "p { color = red; }",
-      "p ( color: red; )",
-      "p { color: red, }"
-    ],
-    a: "p { color: red }",
-    difficulty: "medium",
-    week: 10,
-    topic: "syntax",
-    importance: "high",
-    explanation:
-      "Taktik: CSS kuralı: seçici { özellik: değer; }  Noktalı virgül çoğu zaman gerekir; ama tek satırda tarayıcı bazen tolere etse de sınavda düzgün yaz."
-  },
-
-  // ==== Text Align, Cursor, Border ====
-
-  {
-    q: "Metni ortalamak için doğru CSS hangisidir?",
-    t: "mcq",
-    o: [
-      ".t{ text-align:center; }",
-      ".t{ align-text:center; }",
-      ".t{ text:center; }",
-      ".t{ center-text:true; }",
-      ".t{ text-align:middle; }"
-    ],
-    a: ".t{ text-align:center; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "text-align",
-    importance: "medium",
-    explanation:
-      "Taktik: text-align sadece inline içerikleri hizalar; kutunun kendisini ortalamak farklıdır (margin:auto gibi)."
-  },
-
-  {
-    q: "Mouse imlecini “tıklanabilir” göstermek için doğru CSS hangisidir?",
-    t: "mcq",
-    o: [
-      ".btn{ cursor:hand; }",
-      ".btn{ cursor:pointer; }",
-      ".btn{ cursor:click; }",
-      ".btn{ cursor:link; }",
-      ".btn{ cursor:touch; }"
-    ],
-    a: ".btn{ cursor:pointer; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "cursor",
-    importance: "medium",
-    explanation:
-      "Taktik: pointer en klasik. “hand” eski/yanlış şık olarak gelir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru border kullanım örneğidir?",
-    t: "mcq",
-    o: [
-      ".box{ border: 1px solid black; }",
-      ".box{ border: solid 1 black; }",
-      ".box{ border: black 1px; }",
-      ".box{ border: 1 solid; }",
-      ".box{ border: px1 solid black; }"
-    ],
-    a: ".box{ border: 1px solid black; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "border",
-    importance: "high",
-    explanation:
-      "Taktik: border sırası genelde: kalınlık (1px) + stil (solid) + renk (black)."
-  },
-
-  // ==== Shadow, Border-radius, Image Styling, Filters ====
-
-  {
-    q: "Kutu gölgesi (shadow) vermek için doğru özellik hangisidir?",
-    t: "mcq",
-    o: ["text-shadow", "box-shadow", "shadow-box", "border-shadow", "opacity-shadow"],
-    a: "box-shadow",
-    difficulty: "easy",
-    week: 10,
+    week: 11,
     topic: "box-shadow",
-    importance: "high",
-    explanation:
-      "Örnek: .card{ box-shadow: 0 4px 12px rgba(0,0,0,.2); }  Taktik: yazı gölgesi = text-shadow, kutu = box-shadow."
-  },
-
-  {
-    q: "Aşağıdaki border-radius hangi sonucu verir?\n.avatar{ border-radius:50%; }",
-    t: "mcq",
-    o: [
-      "Resmi üçgen yapar",
-      "Resmi daire/yuvarlak yapar (kare ise tam daire)",
-      "Resmi görünmez yapar",
-      "Resmi sola yaslar",
-      "Resmi sticky yapar"
-    ],
-    a: "Resmi daire/yuvarlak yapar (kare ise tam daire)",
-    difficulty: "easy",
-    week: 10,
-    topic: "border-radius",
-    importance: "high",
-    explanation:
-      "Taktik: 50% köşeleri tam yuvarlar. px verince sadece yumuşatır (örn 12px)."
-  },
-
-  {
-    q: "Resmi siyah-beyaz yapmak için doğru CSS hangisidir?",
-    t: "mcq",
-    o: [
-      "img{ filter: grayscale(100%); }",
-      "img{ opacity: grayscale(100%); }",
-      "img{ grayscale: 100%; }",
-      "img{ color: gray; }",
-      "img{ background-color: gray; }"
-    ],
-    a: "img{ filter: grayscale(100%); }",
-    difficulty: "medium",
-    week: 10,
-    topic: "image filters",
     importance: "medium",
     explanation:
-      "Taktik: filter sorularında anahtar kelime “filter:” ile başlar. opacity ile karıştırma."
-  },
-
-  // ==== Responsive + Media Query ====
-
-  {
-    q: "Responsive tasarım en doğru ne demektir?",
-    t: "mcq",
-    o: [
-      "Sadece masaüstünde güzel görünmesi",
-      "Ekran boyutu değişince tasarımın bozulmaması (uyum sağlaması)",
-      "Sadece CSS animasyon kullanmak",
-      "Sadece Bootstrap kullanmak",
-      "Sadece büyük font kullanmak"
-    ],
-    a: "Ekran boyutu değişince tasarımın bozulmaması (uyum sağlaması)",
-    difficulty: "easy",
-    week: 10,
-    topic: "responsive",
-    importance: "high",
-    explanation:
-      "Taktik: Tanım sorusu gelirse “bozulmaması/uyum” kelimelerini mutlaka yaz."
+      "Kavram: box-shadow = kutu; text-shadow = yazı.\nÇözüm: ‘kutunun gölgesi’ → box-shadow.\nTuzak: text-shadow seçmek.\nEzber: box=kutunun gölgesi."
   },
 
   {
-    q: "Aşağıdakilerden hangisi doğru media query örneğidir?",
+    q:
+      "Çıktı sorusu (text-align + cursor):\n\n.btn{ text-align:center; cursor:pointer; }\n\nBu iki özellik ne sağlar?",
     t: "mcq",
     o: [
-      "@media max-width 768px { .menu{display:none;} }",
-      "@media (max-width: 768px) { .menu{display:none;} }",
-      "@media { max-width:768px; .menu:none; }",
-      "@media screen 768px { .menu{display:none;} }",
-      "@media (width<768px) { .menu{display:none;} }"
+      "Metni sola alır; mouse işaretçisi değişmez",
+      "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
+      "Metni büyütür; resme filtre ekler",
+      "Elemanı yapışkan yapar",
+      "Elemanı görünmez yapar"
     ],
-    a: "@media (max-width: 768px) { .menu{display:none;} }",
+    a: "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
     difficulty: "medium",
-    week: 10,
-    topic: "media query",
-    importance: "high",
-    explanation:
-      "Taktik: Parantezli yazım: (max-width: 768px). En çok yazım hatası burada çıkar."
-  },
-
-  // ==== Transitions, Animation, @keyframes ====
-
-  {
-    q: "Transition’ın temel amacı nedir?",
-    t: "mcq",
-    o: [
-      "Sayfayı yenilemek",
-      "Bir durum değişiminde (örn hover) yumuşak geçiş sağlamak",
-      "HTML’i doğrulamak",
-      "Veri tabanı bağlamak",
-      "Z-index’i otomatik ayarlamak"
-    ],
-    a: "Bir durum değişiminde (örn hover) yumuşak geçiş sağlamak",
-    difficulty: "easy",
-    week: 10,
-    topic: "transition",
-    importance: "high",
-    explanation:
-      "Örnek: .btn{ transition:0.3s; } .btn:hover{ transform:scale(1.05); }  Taktik: Transition = geçiş, Animation = sürekli/ana kareli hareket."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru transition yazımıdır?",
-    t: "mcq",
-    o: [
-      ".box{ transition=0.3s; }",
-      ".box{ transition: 0.3s; }",
-      ".box{ transition: seconds(0.3); }",
-      ".box{ transform: transition(0.3s); }",
-      ".box{ transition: 0.3; }"
-    ],
-    a: ".box{ transition: 0.3s; }",
-    difficulty: "medium",
-    week: 10,
-    topic: "transition syntax",
+    week: 11,
+    topic: "text-align + cursor",
     importance: "medium",
     explanation:
-      "Taktik: Birim s (saniye) unutulmaz. 0.3 tek başına hatalı şık olarak gelebilir."
+      "Kavram: text-align=center metni ortalar. cursor=pointer tıklanabilir hissi verir.\nÇözüm: İki özelliği ayrı ayrı okuyup etkisini birleştir.\nTuzak: cursor’ın sadece linkte çalıştığını sanmak.\nEzber: pointer = ‘elin işareti’."
   },
 
   {
-    q: "Aşağıdaki kodun amacı nedir?\n@keyframes pulse{0%{transform:scale(1);}100%{transform:scale(1.05);}}",
+    q:
+      "Pseudo-class çıktı sorusu:\n\na:hover{ color:red; }\n\nBu kural ne zaman çalışır?",
     t: "mcq",
     o: [
-      "CSS dosyasını import eder",
-      "Animasyonun karelerini (başlangıç-bitiş) tanımlar",
-      "Butona hover ekler",
-      "Z-index’i artırır",
-      "Grid şablonu kurar"
+      "Link ziyaret edilince (visited)",
+      "Mouse linkin üstüne gelince",
+      "Linke tıklayıp basılı tutunca (active)",
+      "Input’a tıklayınca (focus)",
+      "Sayfa ilk açılınca"
     ],
-    a: "Animasyonun karelerini (başlangıç-bitiş) tanımlar",
-    difficulty: "medium",
+    a: "Mouse linkin üstüne gelince",
+    difficulty: "easy",
     week: 10,
-    topic: "@keyframes",
+    topic: "hover",
     importance: "high",
     explanation:
-      "Taktik: Animation sorularında iki parça vardır: 1) @keyframes tanımı 2) animation: ... ile elemana uygulama."
+      "Kavram: :hover = üstüne gelince.\nÇözüm: ‘mouse üzerine gelince’ ifadesi hover’dır.\nTuzak: active/focus ile karıştırmak.\nEzber: hover = ‘üzerindeyken’."
   },
 
   {
-    q: "Aşağıdaki kullanım animasyonu elemana uygular:\n.box{ animation: pulse 1s infinite alternate; }\nBu satırdaki “infinite” ne demektir?",
+    q:
+      "Pseudo-class çıktı sorusu:\n\ninput:focus{ border:2px solid black; }\n\nKullanıcı input’a tıklayıp yazmaya başladığında ne olur?",
     t: "mcq",
     o: [
-      "Animasyon 1 kez çalışır",
-      "Animasyon sonsuz tekrar eder",
-      "Animasyon sadece hover’da çalışır",
-      "Animasyon kapalıdır",
-      "Animasyon hızını 0 yapar"
+      "Hiçbir şey olmaz",
+      "Input odak alınca border kalınlaşıp siyah olur",
+      "Sadece mouse üstüne gelince border siyah olur",
+      "Sadece form gönderilince border siyah olur",
+      "Input görünmez olur"
     ],
-    a: "Animasyon sonsuz tekrar eder",
+    a: "Input odak alınca border kalınlaşıp siyah olur",
     difficulty: "easy",
     week: 10,
-    topic: "animation",
-    importance: "medium",
+    topic: "focus",
+    importance: "high",
     explanation:
-      "Taktik: infinite = sınırsız tekrar. iteration-count mantığı."
+      "Kavram: :focus = eleman aktif/odakta (tıklanıp yazı girilen an).\nÇözüm: ‘tıkla-yaz’ = focus.\nTuzak: hover ile karıştırmak.\nEzber: focus = odak."
   },
 
-  // ==== Flexbox (tek boyut) ====
-
   {
-    q: "Flexbox için doğru ifade hangisidir?",
+    q:
+      "Pseudo-class karışık soru: Aşağıdaki eşleştirmelerden hangisi doğrudur?",
     t: "mcq",
     o: [
-      "İki boyutlu (satır+sütun) düzen sistemidir",
-      "Tek boyutlu (satır veya sütun) hizalama/düzen sistemidir",
-      "Sadece font değiştirir",
-      "Sadece z-index yönetir",
-      "Sadece tablo oluşturur"
+      "visited: mouse üstüne gelince, hover: ziyaret edilmiş link",
+      "active: tıklama basılıyken, visited: daha önce ziyaret edilmiş link",
+      "focus: ziyaret edilmiş link, active: input yazma hali",
+      "hover: sadece klavye ile olur, focus: sadece mouse ile olur",
+      "visited: saydamlık verir, active: gölge verir"
     ],
-    a: "Tek boyutlu (satır veya sütun) hizalama/düzen sistemidir",
-    difficulty: "easy",
+    a: "active: tıklama basılıyken, visited: daha önce ziyaret edilmiş link",
+    difficulty: "hard",
     week: 10,
+    topic: "hover/focus/active/visited",
+    importance: "high",
+    explanation:
+      "Kavram: visited=geçmişte tıklanmış link, active=basılı tutma anı.\nÇözüm: Eşleştirmede ‘anlık’ (active/hover) vs ‘geçmiş’ (visited) ayrımı yap.\nTuzak: visited-hover yer değiştiren şıklar.\nEzber: visited=geçmiş, active=basılı."
+  },
+
+  {
+    q:
+      "Dropdown çıktı sorusu:\n\nCSS:\n.dd-content{ display:none; }\n.dd:hover .dd-content{ display:block; }\n\nBu kuralın etkisi hangisidir?",
+    t: "mcq",
+    o: [
+      ".dd-content sayfa açılır açılmaz görünür",
+      ".dd-content sadece tıklayınca görünür",
+      ".dd üzerine mouse gelince .dd-content görünür olur",
+      ".dd-content sadece mobilde çalışır",
+      ".dd-content hover olunca kaybolur"
+    ],
+    a: ".dd üzerine mouse gelince .dd-content görünür olur",
+    difficulty: "medium",
+    week: 12,
+    topic: "dropdown + display",
+    importance: "high",
+    explanation:
+      "Kavram: display:none gizler, hover ile display:block gösterir.\nÇözüm: ‘hover geldi mi görünür’ kalıbını tanı.\nTuzak: ‘tıklayınca’ (JS gibi) sanmak.\nEzber: Dropdown = none → hover → block."
+  },
+
+  {
+    q:
+      "Responsive tanımı + media query çıktı:\n\n@media (max-width:768px){ .menu{ display:none; } }\n\nEkran genişliği 600px iken ne olur?",
+    t: "mcq",
+    o: [
+      "Menu görünür kalır, çünkü 600 < 768 çalışmaz",
+      "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır",
+      "Menu büyür",
+      "Menu sticky olur",
+      "Menu z-index 999 olur"
+    ],
+    a: "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır",
+    difficulty: "hard",
+    week: 14,
+    topic: "responsive + media query",
+    importance: "high",
+    explanation:
+      "Kavram: responsive = ekran değişse de tasarım bozulmaması.\nÇözüm: max-width:768 → 768 ve ALTINDA çalışır. 600 bu aralıkta.\nTuzak: max-width’i ‘768 üstü’ sanmak.\nEzber: max = ‘en fazla’ (küçük ekranlar)."
+  },
+
+  {
+    q:
+      "Flexbox sorusu (tek boyut):\n\n.container{ display:flex; justify-content:center; align-items:center; height:200px; }\n\nBu ne sağlar?",
+    t: "mcq",
+    o: [
+      "Elemanları yalnızca dikey hizalar",
+      "Elemanları yalnızca yatay hizalar",
+      "Elemanları hem ana eksende hem çapraz eksende ortalar (tipik olarak tam ortalama)",
+      "Elemanları grid’e çevirir",
+      "Elemanları görünmez yapar"
+    ],
+    a: "Elemanları hem ana eksende hem çapraz eksende ortalar (tipik olarak tam ortalama)",
+    difficulty: "medium",
+    week: 14,
     topic: "flexbox",
     importance: "high",
     explanation:
-      "Taktik: Flex = 1D. Grid = 2D. Finalde karşılaştırma sorusu gelir."
+      "Kavram: Flexbox = tek boyutlu düzen (satır ya da sütun).\nÇözüm: justify-content=ana eksen; align-items=çapraz eksen. İkisi center → ortalama.\nTuzak: justify ile align’i terslemek.\nEzber: justify=ana, align=yan."
   },
 
   {
-    q: "Flex container yapmak için doğru kod hangisidir?",
+    q:
+      "Grid sorusu (iki boyut):\n\n.grid{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; }\n\nBu CSS ne kurar?",
     t: "mcq",
     o: [
-      ".row{ display:flex; }",
-      ".row{ flex:display; }",
-      ".row{ display:flexbox; }",
-      ".row{ flex-on:true; }",
-      ".row{ position:flex; }"
+      "3 eşit sütunlu bir yerleşim ve aralarında 10px boşluk",
+      "3 eşit satırlı bir yerleşim ve aralarında 10px boşluk",
+      "Tek satırda hizalama (flex) oluşturur",
+      "Sadece yazıyı ortalar",
+      "Sadece linkleri renklendirir"
     ],
-    a: ".row{ display:flex; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "display:flex",
-    importance: "high",
-    explanation:
-      "Taktik: flex başlatmak = display:flex. Sonra justify-content ve align-items gelir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi ana eksende (main axis) hizalama yapar?",
-    t: "mcq",
-    o: ["align-items", "justify-content", "z-index", "overflow", "opacity"],
-    a: "justify-content",
+    a: "3 eşit sütunlu bir yerleşim ve aralarında 10px boşluk",
     difficulty: "medium",
-    week: 10,
-    topic: "flex hizalama",
-    importance: "high",
-    explanation:
-      "Taktik: justify = ana eksen, align-items = çapraz eksen. Flex-direction değişirse eksen de değişir."
-  },
-
-  {
-    q: "Aşağıdaki kod ne yapar?\n.container{ display:flex; flex-direction:column; }",
-    t: "mcq",
-    o: [
-      "Öğeleri soldan sağa dizer",
-      "Öğeleri yukarıdan aşağı (sütun) dizer",
-      "Öğeleri grid yapar",
-      "Öğeleri görünmez yapar",
-      "Öğeleri sticky yapar"
-    ],
-    a: "Öğeleri yukarıdan aşağı (sütun) dizer",
-    difficulty: "medium",
-    week: 10,
-    topic: "flex-direction",
-    importance: "medium",
-    explanation:
-      "Taktik: column olunca main axis dikey olur; justify-content artık dikey hizalar."
-  },
-
-  // ==== Grid (iki boyut) ====
-
-  {
-    q: "CSS Grid için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Tek boyutlu sistemdir",
-      "İki boyutlu (satır + sütun) düzen sistemidir",
-      "Sadece animasyon yapar",
-      "Sadece hover üretir",
-      "Sadece border ekler"
-    ],
-    a: "İki boyutlu (satır + sütun) düzen sistemidir",
-    difficulty: "easy",
-    week: 10,
+    week: 14,
     topic: "grid",
     importance: "high",
     explanation:
-      "Taktik: Grid = 2D. Flex = 1D. Bu cümle finalde birebir çıkar."
+      "Kavram: Grid = 2D (satır+sütun). grid-template-columns sütunları kurar.\nÇözüm: 1fr 1fr 1fr = eşit 3 sütun. gap=aralık.\nTuzak: rows ile columns karıştırmak.\nEzber: columns = sütun."
   },
 
   {
-    q: "Aşağıdakilerden hangisi grid container yapar?",
+    q:
+      "Transition vs Animation farkı hangisidir? (Finalde @keyframes sorusu gelebilir)",
     t: "mcq",
     o: [
-      ".grid{ display:grid; }",
-      ".grid{ grid:true; }",
-      ".grid{ display:table; }",
-      ".grid{ position:grid; }",
-      ".grid{ grid-template:true; }"
+      "Transition sonsuz döngü yapar; animation sadece hover’da çalışır",
+      "Transition bir durumdan diğerine yumuşak geçiştir; Animation @keyframes ile zaman çizelgesi/akış tanımlar",
+      "Transition sadece grid’de çalışır; animation sadece flex’te çalışır",
+      "Animation için @keyframes gerekmez",
+      "Transition görünürlüğü (display) değiştirir"
     ],
-    a: ".grid{ display:grid; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "display:grid",
+    a: "Transition bir durumdan diğerine yumuşak geçiştir; Animation @keyframes ile zaman çizelgesi/akış tanımlar",
+    difficulty: "hard",
+    week: 14,
+    topic: "transition vs animation",
     importance: "high",
     explanation:
-      "Taktik: Grid başlatmak = display:grid. Sonra template’ler gelir."
+      "Kavram: transition = ‘değişim olunca yumuşat’. animation = ‘kare kare hareket’ (@keyframes şart).\nÇözüm: @keyframes kelimesi animation’a işaret eder.\nTuzak: transition’ı animasyon sanmak.\nEzber: Transition=geçiş, Animation=senaryo (@keyframes)."
   },
 
   {
-    q: "Aşağıdaki kodun anlamı nedir?\n.grid{ grid-template-columns: 1fr 1fr 1fr; }",
+    q:
+      "Bootstrap sorusu: Bootstrap nedir ve CSS olarak projeye eklemek için hangi yaklaşım kullanılır?",
     t: "mcq",
     o: [
-      "3 sütun oluşturur, her biri eşit genişlikte",
-      "3 satır oluşturur",
-      "3 elemanı gizler",
-      "Sadece kenarlık çizer",
-      "Opacity ayarlar"
+      "Bootstrap bir veritabanıdır; <img src='...'> ile eklenir",
+      "Bootstrap hazır UI bileşenleri sunan kütüphanedir; <link rel='stylesheet' href='CDN'> ile eklenir",
+      "Bootstrap HTML’in yerine geçen dildir; <script> ile zorunlu eklenir",
+      "Bootstrap sadece hover efektidir; style='' içinde yazılır",
+      "Bootstrap bir tarayıcıdır; kurulmadan çalışmaz"
     ],
-    a: "3 sütun oluşturur, her biri eşit genişlikte",
+    a: "Bootstrap hazır UI bileşenleri sunan kütüphanedir; <link rel='stylesheet' href='CDN'> ile eklenir",
     difficulty: "medium",
-    week: 10,
-    topic: "grid-template-columns",
-    importance: "high",
-    explanation:
-      "Taktik: fr = kalan alanın paylaştırılması. 1fr 1fr 1fr = eşit 3 sütun."
-  },
-
-  {
-    q: "Grid/Flex düzenlerinde boşluk bırakmak için kullanılan yaygın özellik hangisidir?",
-    t: "mcq",
-    o: ["gap", "padding-only", "space", "border-gap", "float-gap"],
-    a: "gap",
-    difficulty: "easy",
-    week: 10,
-    topic: "gap",
-    importance: "medium",
-    explanation:
-      "Taktik: gap hem grid hem flex’te kullanılabilir. Eski yöntem: margin ile uğraşmak."
-  },
-
-  // ==== Bootstrap (kütüphane) – CSS perspektifi ====
-
-  {
-    q: "Bootstrap için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Bir programlama dilidir",
-      "Hazır tasarım bileşenleri sağlayan CSS/JS kütüphanesidir (buton, navbar, grid vb.)",
-      "Bir veritabanıdır",
-      "Sadece tarayıcı eklentisidir",
-      "Sadece animasyon motorudur"
-    ],
-    a: "Hazır tasarım bileşenleri sağlayan CSS/JS kütüphanesidir (buton, navbar, grid vb.)",
-    difficulty: "easy",
-    week: 10,
+    week: 14,
     topic: "bootstrap",
     importance: "medium",
     explanation:
-      "Taktik: “Kütüphane” kelimesini görünce: projeye ekleme gerekir (CDN link vb.)."
-  },
-
-  // ==== Kalan CSS Başlıkları: display, dropdown, buttons, optimization ====
-
-  {
-    q: "Aşağıdakilerden hangisi elemanı tamamen kaldırır (sayfada yer de kaplamaz)?",
-    t: "mcq",
-    o: ["visibility:hidden;", "display:none;", "opacity:0;", "z-index:-1;", "filter:blur(2px);"],
-    a: "display:none;",
-    difficulty: "medium",
-    week: 10,
-    topic: "display:none",
-    importance: "high",
-    explanation:
-      "Taktik: opacity:0 görünmez yapar ama yer kaplar ve tıklanabilir kalabilir; display:none yok eder."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru CSS buton hover + transition örneğidir?",
-    t: "mcq",
-    o: [
-      ".btn{ transition:0.3s; } .btn:hover{ transform:scale(1.05); }",
-      ".btn{ hover:0.3s; } .btn:transition{ scale:1.05; }",
-      ".btn{ transform:hover(1.05); }",
-      ".btn:hover{ transition:scale(1.05); }",
-      ".btn{ animation:hover 0.3s; }"
-    ],
-    a: ".btn{ transition:0.3s; } .btn:hover{ transform:scale(1.05); }",
-    difficulty: "medium",
-    week: 10,
-    topic: "css button",
-    importance: "medium",
-    explanation:
-      "Taktik: Transition normal durumda yazılır; hover’da değişen değer yazılır."
-  },
-
-  {
-    q: "“Optimization” açısından CSS için en doğru genel yaklaşım hangisidir?",
-    t: "mcq",
-    o: [
-      "Tüm CSS’i inline yazmak en hızlıdır",
-      "Harici CSS dosyası (external) kullanıp gereksiz tekrarları azaltmak daha düzenli/ölçeklenebilir olur",
-      "Her elemana !important yazmak performansı artırır",
-      "Sadece @import kullanmak her zaman en iyisidir",
-      "CSS yazmak yerine HTML’e style eklemek zorunludur"
-    ],
-    a: "Harici CSS dosyası (external) kullanıp gereksiz tekrarları azaltmak daha düzenli/ölçeklenebilir olur",
-    difficulty: "medium",
-    week: 10,
-    topic: "optimization",
-    importance: "medium",
-    explanation:
-      "Taktik: Sınavda 'neden external?' sorusu: tekrar azaltır, bakım kolay, dosya düzeni iyi."
-  },
-
-  // ==== 50'ye tamamlamak için ek, doğrudan nottaki başlıklara bağlı kısa klasik sorular ====
-
-  {
-    q: "Aşağıdaki kod hangi etkiyi verir?\nimg{ opacity:0.5; }",
-    t: "mcq",
-    o: [
-      "Resmi büyütür",
-      "Resmi %50 saydam yapar",
-      "Resmi yuvarlak yapar",
-      "Resmi sola alır",
-      "Resmi gizler (yer kaplamaz)"
-    ],
-    a: "Resmi %50 saydam yapar",
-    difficulty: "easy",
-    week: 10,
-    topic: "img opacity",
-    importance: "high",
-    explanation:
-      "Taktik: opacity 0.5 = yarı saydam. display:none değildir."
-  },
-
-  {
-    q: "Aşağıdaki kodda hangi ifade DOĞRUDUR?\n.text{ position:absolute; z-index:2; }\n.photo{ position:relative; z-index:1; }",
-    t: "mcq",
-    o: [
-      ".photo üstte görünür",
-      ".text üstte görünür",
-      "İkisi aynı katmandadır, z-index işe yaramaz",
-      "z-index sadece flex’te çalışır",
-      "z-index sadece hover’da çalışır"
-    ],
-    a: ".text üstte görünür",
-    difficulty: "easy",
-    week: 10,
-    topic: "z-index",
-    importance: "high",
-    explanation:
-      "Taktik: Büyük z-index öne gelir. Üst üste gelme sorularında sayılara bak."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “taşanı kes” (overflow) seçeneğidir?",
-    t: "mcq",
-    o: ["overflow: visible;", "overflow: hidden;", "overflow: auto;", "overflow: sticky;", "overflow: float;"],
-    a: "overflow: hidden;",
-    difficulty: "easy",
-    week: 10,
-    topic: "overflow hidden",
-    importance: "medium",
-    explanation:
-      "Taktik: hidden = kes, auto = gerekirse kaydır, scroll = her zaman kaydır."
-  },
-
-  // Toplam 50 soru olacak şekilde (yukarıdaki seti 50’ye tamamlamak için)
-  // Not: Aşağıdaki 20 soru, sadece CSS başlıklarını kapsar ve kod örnekleri içerir.
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “metin rengi” ayarlamadır?",
-    t: "mcq",
-    o: [
-      "p{ background-color: red; }",
-      "p{ color: red; }",
-      "p{ font-color: red; }",
-      "p{ text-color: red; }",
-      "p{ color-background: red; }"
-    ],
-    a: "p{ color: red; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "color",
-    importance: "high",
-    explanation: "Taktik: color = yazı rengi. background-color = arka plan."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru padding örneğidir?",
-    t: "mcq",
-    o: [
-      ".box{ pedding:10px; }",
-      ".box{ padding:10px; }",
-      ".box{ pad:10px; }",
-      ".box{ inside-margin:10px; }",
-      ".box{ padding:10; }"
-    ],
-    a: ".box{ padding:10px; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "padding",
-    importance: "high",
-    explanation: "Taktik: Yazım hatası sorusu: pedding değil padding. Birimi de unutma (10px)."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru margin örneğidir?",
-    t: "mcq",
-    o: [
-      ".box{ margin:20px; }",
-      ".box{ margin=20px; }",
-      ".box{ outside:20px; }",
-      ".box{ border:20px; }",
-      ".box{ margin:20; }"
-    ],
-    a: ".box{ margin:20px; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "margin",
-    importance: "high",
-    explanation: "Taktik: margin dış boşluk. 20 tek başına genelde yanlış; 20px yaz."
-  },
-
-  {
-    q: "Aşağıdaki selector neyi seçer?\n.box > p",
-    t: "mcq",
-    o: [
-      ".box içindeki tüm p’ler (torunlar dahil)",
-      ".box’un direkt çocuğu olan p’ler",
-      "Sadece id’si box olan p",
-      "Sadece class’ı p olan box",
-      "Sadece hover’daki p"
-    ],
-    a: ".box’un direkt çocuğu olan p’ler",
-    difficulty: "hard",
-    week: 10,
-    topic: "child selector",
-    importance: "medium",
-    explanation: "Taktik: '>' = direkt çocuk. Boşluk olsaydı tüm torunlar dahil olurdu."
-  },
-
-  {
-    q: "Aşağıdaki kod ne yapar?\n.hidden{ display:none; }",
-    t: "mcq",
-    o: [
-      "Elemanı saydam yapar",
-      "Elemanı yokmuş gibi kaldırır",
-      "Elemanı sadece görünmez yapar ama yer kaplar",
-      "Elemanı öne getirir",
-      "Elemanı sola yaslar"
-    ],
-    a: "Elemanı yokmuş gibi kaldırır",
-    difficulty: "easy",
-    week: 10,
-    topic: "display:none",
-    importance: "high",
-    explanation: "Taktik: display:none = akıştan çıkarır."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “inline” açıklamasıdır?",
-    t: "mcq",
-    o: [
-      "Satırı tamamen kaplar",
-      "Sadece içerik kadar yer kaplar, width/height genelde almaz",
-      "Her zaman alt satıra iner",
-      "Z-index’i otomatik ayarlar",
-      "Sadece grid’de çalışır"
-    ],
-    a: "Sadece içerik kadar yer kaplar, width/height genelde almaz",
-    difficulty: "medium",
-    week: 10,
-    topic: "inline",
-    importance: "medium",
-    explanation: "Taktik: inline = span gibi; block = div gibi."
-  },
-
-  {
-    q: "position: static için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Default’tur; top/left ile kaymaz",
-      "Akıştan çıkar ve üst üste biner",
-      "Scroll ile sabit kalır",
-      "Yapışkan menü yapar",
-      "Sadece z-index’i artırır"
-    ],
-    a: "Default’tur; top/left ile kaymaz",
-    difficulty: "medium",
-    week: 10,
-    topic: "position static",
-    importance: "medium",
-    explanation: "Taktik: static = normal akış. Konumlandırma istiyorsan relative/absolute/fixed/sticky."
-  },
-
-  {
-    q: "Absolute eleman, kendine referans olarak en yakın hangi atayı kullanır?",
-    t: "mcq",
-    o: [
-      "Her zaman body",
-      "En yakın position verilmiş ata (relative/absolute/fixed/sticky)",
-      "En yakın float verilmiş ata",
-      "En yakın z-index verilmiş ata",
-      "Her zaman html"
-    ],
-    a: "En yakın position verilmiş ata (relative/absolute/fixed/sticky)",
-    difficulty: "hard",
-    week: 10,
-    topic: "absolute referans",
-    importance: "high",
-    explanation: "Taktik: Bu soru finalde çok gelir. Parent’a position:relative verilmezse absolute bazen body’ye göre gider."
-  },
-
-  {
-    q: "Aşağıdaki kodda .child nereye göre konumlanır?\n.parent{ } \n.child{ position:absolute; top:0; left:0; }",
-    t: "mcq",
-    o: [
-      "Kesinlikle .parent’a göre",
-      "En yakın position’lı ata olmadığı için sayfanın (genelde body) başlangıcına göre",
-      "Her zaman ekranın ortasına",
-      "Sadece grid alanına göre",
-      "Z-index’e göre"
-    ],
-    a: "En yakın position’lı ata olmadığı için sayfanın (genelde body) başlangıcına göre",
-    difficulty: "hard",
-    week: 10,
-    topic: "absolute without relative",
-    importance: "high",
-    explanation: "Taktik: Absolute kullanacaksan çoğu zaman parent’a position:relative ekle."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru text-shadow kullanımına örnektir?",
-    t: "mcq",
-    o: [
-      "h1{ text-shadow: 1px 1px 2px rgba(0,0,0,.4); }",
-      "h1{ shadow-text: 1px; }",
-      "h1{ text-shadow: rgba(0,0,0,.4); }",
-      "h1{ text-shadow: 1 1 2; }",
-      "h1{ text-shadow: on; }"
-    ],
-    a: "h1{ text-shadow: 1px 1px 2px rgba(0,0,0,.4); }",
-    difficulty: "medium",
-    week: 10,
-    topic: "text-shadow",
-    importance: "medium",
-    explanation: "Taktik: box-shadow kutuya, text-shadow yazıya."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “border-radius: 12px;” etkisidir?",
-    t: "mcq",
-    o: [
-      "Köşeleri yuvarlatır",
-      "Yazıyı kalınlaştırır",
-      "Resmi saydam yapar",
-      "Elemanı yapışkan yapar",
-      "Elemanı grid yapar"
-    ],
-    a: "Köşeleri yuvarlatır",
-    difficulty: "easy",
-    week: 10,
-    topic: "border-radius px",
-    importance: "medium",
-    explanation: "Taktik: px = hafif yuvarlama, 50% = tam daire (karede)."
-  },
-
-  {
-    q: "Aşağıdaki kod neyi sağlar?\n.modal{ position:fixed; top:0; left:0; width:100%; height:100%; }",
-    t: "mcq",
-    o: [
-      "Elemanı sadece parent’a göre konumlandırır",
-      "Elemanı ekrana sabitler ve tüm ekranı kaplatabilir (modal mantığı)",
-      "Elemanı float yapar",
-      "Elemanı grid yapar",
-      "Elemanı görünmez yapar"
-    ],
-    a: "Elemanı ekrana sabitler ve tüm ekranı kaplatabilir (modal mantığı)",
-    difficulty: "medium",
-    week: 10,
-    topic: "modal fikri (CSS)",
-    importance: "medium",
-    explanation: "Taktik: Modal sorularında fixed + full-screen (100%/100vh) kalıbı çıkar."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “opacity resme saydamlık verir” ifadesini gösterir?",
-    t: "mcq",
-    o: [
-      "img{ opacity: 60%; }",
-      "img{ opacity: 0.6; }",
-      "img{ opacity: 6; }",
-      "img{ opacity: sixty; }",
-      "img{ transparent:0.6; }"
-    ],
-    a: "img{ opacity: 0.6; }",
-    difficulty: "easy",
-    week: 10,
-    topic: "opacity kullanım",
-    importance: "high",
-    explanation: "Taktik: opacity 0-1 aralığı. % ile yazmak genelde yanlış şık olur."
-  },
-
-  {
-    q: "Aşağıdaki kod ne yapar?\n.nav{ position:sticky; top:0; }",
-    t: "mcq",
-    o: [
-      "Sayfada akmaz, her zaman en alta gider",
-      "Scroll’da belirli noktadan sonra üstte yapışır",
-      "Elemanı saydam yapar",
-      "Elemanı float yapar",
-      "Elemanı kaldırır"
-    ],
-    a: "Scroll’da belirli noktadan sonra üstte yapışır",
-    difficulty: "easy",
-    week: 10,
-    topic: "sticky",
-    importance: "high",
-    explanation: "Taktik: sticky’nin çalışması için top gibi eşik şarttır."
-  },
-
-  {
-    q: "Aşağıdaki CSS ile hangisi hedeflenir?\n.dd{ position:relative; }\n.dd-content{ position:absolute; top:100%; left:0; }",
-    t: "mcq",
-    o: [
-      "Dropdown içeriğini parent’ın altına açmak",
-      "Resmi büyütmek",
-      "Metni ortalamak",
-      "Sayfayı responsive yapmak",
-      "Grid kolon sayısını artırmak"
-    ],
-    a: "Dropdown içeriğini parent’ın altına açmak",
-    difficulty: "hard",
-    week: 10,
-    topic: "dropdown konum",
-    importance: "high",
-    explanation: "Taktik: Dropdown’da parent relative, içerik absolute olur. top:100% → altına getirir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi CSS3 ile daha sık ilişkilidir (modern özellik)?",
-    t: "mcq",
-    o: ["transition", "table", "td", "href", "src"],
-    a: "transition",
-    difficulty: "easy",
-    week: 10,
-    topic: "CSS3",
-    importance: "medium",
-    explanation: "Taktik: CSS3 deyince transition/animation/flexbox/grid gibi modernler akla gelir."
-  },
-
-  {
-    q: "Aşağıdaki kod ne yapar?\n.box{ width:300px; max-width:100%; }",
-    t: "mcq",
-    o: [
-      "Her zaman 300px olur, ekrana sığmazsa taşar",
-      "Normalde 300px; küçük ekranda 100%’e kadar küçülerek taşmayı engeller",
-      "Her zaman 100% olur",
-      "Elemanı gizler",
-      "Elemanı absolute yapar"
-    ],
-    a: "Normalde 300px; küçük ekranda 100%’e kadar küçülerek taşmayı engeller",
-    difficulty: "hard",
-    week: 10,
-    topic: "max-width pratik",
-    importance: "high",
-    explanation: "Taktik: max-width responsive kurtarıcıdır. Taşma sorularında bu kalıp çıkar."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “overflow: scroll” açıklamasıdır?",
-    t: "mcq",
-    o: [
-      "Gerekiyorsa scroll gösterir",
-      "Her durumda scroll çubuğu gösterir",
-      "Taşanı keser",
-      "Taşanı görünür yapar",
-      "Elemanı yapışkan yapar"
-    ],
-    a: "Her durumda scroll çubuğu gösterir",
-    difficulty: "medium",
-    week: 10,
-    topic: "overflow scroll",
-    importance: "medium",
-    explanation: "Taktik: scroll = zorla çubuk, auto = gerekirse çubuk."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “@import” kullanım notudur?",
-    t: "mcq",
-    o: [
-      "@import sadece HTML içinde kullanılır",
-      "@import genelde CSS dosyasının üstünde kullanılır",
-      "@import z-index’i artırır",
-      "@import sadece resimlerde çalışır",
-      "@import yalnızca margin ayarlar"
-    ],
-    a: "@import genelde CSS dosyasının üstünde kullanılır",
-    difficulty: "medium",
-    week: 10,
-    topic: "@import kuralı",
-    importance: "medium",
-    explanation: "Taktik: @import kuralını ortada yazmak bazı durumlarda sorun çıkarabilir; sınavda “en üstte” diye geçer."
-  },
-
-  {
-    q: "Aşağıdaki kodda hangisi doğrudur?\n.box{ margin:10px; padding:10px; border:2px solid black; }\nBu elemanın “kutu” katmanları hangi sıradadır?",
-    t: "mcq",
-    o: [
-      "padding → content → margin → border",
-      "content → padding → border → margin",
-      "margin → border → padding → content",
-      "border → margin → padding → content",
-      "content → border → padding → margin"
-    ],
-    a: "content → padding → border → margin",
-    difficulty: "easy",
-    week: 10,
-    topic: "box model tekrar",
-    importance: "high",
-    explanation: "Taktik: İçten dışa: content, padding, border, margin."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi “div” gibi block davranışını değiştirip yan yana dizmeye yardımcı olur?",
-    t: "mcq",
-    o: [
-      "display:none",
-      "display:inline-block",
-      "position:sticky",
-      "overflow:hidden",
-      "filter:blur(2px)"
-    ],
-    a: "display:inline-block",
-    difficulty: "medium",
-    week: 10,
-    topic: "inline-block",
-    importance: "medium",
-    explanation: "Taktik: inline-block yan yana getirir ve ölçü aldırır."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “CSS dropdown text” (hover’da başka yazı gösterme) mantığıdır?",
-    t: "mcq",
-    o: [
-      ".tip{display:none;} .wrap:hover .tip{display:block;}",
-      ".tip{position:static;} .wrap:focus .tip{display:none;}",
-      ".tip{z-index:0;} .wrap:hover .tip{opacity:0;}",
-      ".tip{float:left;} .wrap:hover .tip{float:right;}",
-      ".tip{grid:1;} .wrap:hover .tip{grid:2;}"
-    ],
-    a: ".tip{display:none;} .wrap:hover .tip{display:block;}",
-    difficulty: "medium",
-    week: 10,
-    topic: "hover ile tooltip/dropdown",
-    importance: "high",
-    explanation: "Taktik: Hover ile gizliyi açma = display none → hover’da block."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi doğru “Flexbox tek boyut / Grid iki boyut” cümlesini kodla başlatır?",
-    t: "mcq",
-    o: [
-      "Flex: .c{display:flex;}  Grid: .g{display:grid;}",
-      "Flex: .c{display:grid;}  Grid: .g{display:flex;}",
-      "Flex: .c{position:flex;} Grid: .g{position:grid;}",
-      "Flex: .c{flex:true;}     Grid: .g{grid:true;}",
-      "Flex: .c{float:flex;}   Grid: .g{float:grid;}"
-    ],
-    a: "Flex: .c{display:flex;}  Grid: .g{display:grid;}",
-    difficulty: "easy",
-    week: 10,
-    topic: "flex vs grid",
-    importance: "high",
-    explanation: "Taktik: display:flex ve display:grid kalıplarını ezberle; finalde direkt çıkar."
+      "Kavram: Bootstrap = hazır buton/navbar/form/grid gibi tasarımlar (kütüphane).\nÇözüm: CSS kütüphanesi ekleme = <link rel='stylesheet' href='...'>.\nTuzak: CSS’i script ile ekleme sanmak.\nEzber: Kütüphane=link ile CSS eklenir."
   }
 ];
