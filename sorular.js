@@ -7,14 +7,14 @@ window.questionBank = [
   // =========================
 
   {
-    q: "Internet ve Web (WWW) arasındaki fark için en doğru ifade hangisidir?",
+    q: "Internet ve Web (WWW) arasındaki fark için en doğru ifade hangisidir? (PÇ2,4,10 / ÖÇ1)",
     t: "mcq",
     o: [
       "Internet, web sayfalarının yazıldığı dildir; Web ise kabloların adıdır.",
       "Internet, ağ altyapısıdır (ağlar ağı); Web ise internet üzerinde çalışan bir hizmettir (HTTP/URL ile sayfa sunumu).",
       "Internet sadece tarayıcıdır; Web sadece modemdir.",
-      "Web, donanımdır; Internet, HTML etiketidir.",
-      "İkisi aynı kavramdır; sınavda ayırt etmeye gerek yoktur."
+      "Web donanımdır; Internet HTML etiketidir.",
+      "İkisi aynı kavramdır; ayırt etmeye gerek yoktur."
     ],
     a: "Internet, ağ altyapısıdır (ağlar ağı); Web ise internet üzerinde çalışan bir hizmettir (HTTP/URL ile sayfa sunumu).",
     difficulty: "easy",
@@ -22,12 +22,11 @@ window.questionBank = [
     topic: "Internet vs Web",
     importance: "high",
     explanation:
-      "Kavram: Internet = altyapı (ağlar ağı). Web = bu altyapı üstünde çalışan servis (web sayfaları).\nÇözüm: Şıklarda “altyapı vs servis” ayrımını ararsın.\nTuzak: “Internet=web” diyen şıklar.\nEzber: Internet = yol, Web = o yoldaki web sayfası/servis."
+      "Kavram: Internet = altyapı (ağlar ağı). Web = bu altyapı üzerinde çalışan servis (WWW, HTTP).\nNasıl çözersin: Şıklarda “altyapı” ve “servis” ayrımını ararsın.\nTuzak: “Internet=Web” diyen şıklar.\nTaktik: Internet=yol, Web=yoldaki hizmet (web sayfası)."
   },
 
   {
-    q:
-      "Aşağıdaki HTML iskeletinde <head> ve <body> görevleri için doğru eşleştirme hangisidir?\n\n(1) <head> ... </head>\n(2) <body> ... </body>",
+    q: "Aşağıdaki HTML iskeletinde <head> ve <body> görevleri için doğru eşleştirme hangisidir? (PÇ2,4,10 / ÖÇ2)\n\n(1) <head> ... </head>\n(2) <body> ... </body>",
     t: "mcq",
     o: [
       "(1) Görünen içerik, (2) Sayfa ayarları",
@@ -42,12 +41,11 @@ window.questionBank = [
     topic: "head vs body",
     importance: "high",
     explanation:
-      "Kavram: head = sayfa ayarları/bağlantılar (CSS/JS, meta, title). body = ekranda görünen içerik.\nÇözüm: “CSS linki nerede olur?” → head.\nTuzak: body’ye style/link koydurmaya çalışan şık.\nEzber: head=ayar, body=görüntü."
+      "Kavram: head = sayfa ayarları/bağlantılar (title, meta, CSS/JS link). body = ekranda görünen içerik.\nNasıl çözersin: “CSS linki nerede olur?” → head.\nTuzak: head ile body’yi tersleyen şık.\nTaktik: head=ayar, body=görünen."
   },
 
   {
-    q:
-      "Aşağıdaki HTML çalıştırıldığında ekranda ne görünür?\n\n<body>\n  <h1>Başlık</h1>\n  <p>Merhaba</p>\n</body>",
+    q: "Aşağıdaki HTML çalıştırıldığında ekranda ne görünür? (PÇ2,4,10 / ÖÇ2)\n\n<body>\n  <h1>Başlık</h1>\n  <p>Merhaba</p>\n</body>",
     t: "mcq",
     o: [
       "Sadece “Başlık” görünür",
@@ -59,14 +57,14 @@ window.questionBank = [
     a: "“Başlık” ve altında “Merhaba” görünür",
     difficulty: "easy",
     week: 2,
-    topic: "temel etiketler çıktı",
+    topic: "Temel etiketler çıktı",
     importance: "medium",
     explanation:
-      "Kavram: h1 başlıktır, p paragraftır; ikisi de body içinde görünür.\nÇözüm: “Çıktı sorusu”nda etiketlerin görünür olup olmadığına bak.\nTuzak: head ile body karıştırmak.\nEzber: body içinde yazılan metin görünür."
+      "Kavram: h1 başlık, p paragraf; body içinde yazılan görünür.\nNasıl çözersin: “Body içinde mi?” → Evetse görünür.\nTuzak: head-body karıştırmak.\nTaktik: Body=ekran."
   },
 
   {
-    q: "Bağlantı (köprü) oluşturmak için hangi etiket ve hangi attribute kullanılır?",
+    q: "Bağlantı (köprü) oluşturmak için hangi etiket ve hangi attribute kullanılır? (PÇ2,4,10 / ÖÇ3)",
     t: "mcq",
     o: [
       "<img> — href",
@@ -78,15 +76,14 @@ window.questionBank = [
     a: "<a> — href",
     difficulty: "easy",
     week: 3,
-    topic: "hyperlink",
+    topic: "Hyperlink",
     importance: "high",
     explanation:
-      "Kavram: <a> link oluşturur, hedefi href ile alır.\nÇözüm: “href=hedef” anahtar kelime.\nTuzak: img ile href’i eşleştiren şık.\nEzber: href = “nereye gidecek?”"
+      "Kavram: <a> link üretir; hedef adres href’te olur.\nNasıl çözersin: href=hedef, src=kaynak.\nTuzak: <img> ile href’i eşleştiren şık.\nTaktik: href = “nereye gidecek?”."
   },
 
   {
-    q:
-      "Aşağıdaki iki kullanımın doğru açıklaması hangisidir?\n\n1) <img src='foto.jpg'>\n2) <a href='sayfa.html'>Git</a>",
+    q: "Aşağıdaki iki kullanımın doğru açıklaması hangisidir? (PÇ2,4,10 / ÖÇ3)\n\n1) <img src='foto.jpg'>\n2) <a href='sayfa.html'>Git</a>",
     t: "mcq",
     o: [
       "1) href dosya kaynağıdır, 2) src link hedefidir",
@@ -101,12 +98,11 @@ window.questionBank = [
     topic: "href vs src",
     importance: "high",
     explanation:
-      "Kavram: src = kaynak dosya (resim/script/video). href = link hedefi (a/link).\nÇözüm: “source=src” aklına getir.\nTuzak: src-href yer değiştiren şık.\nEzber: src=source, href=hedef."
+      "Kavram: src = source/kaynak (img, script, video). href = link hedefi (a, link).\nNasıl çözersin: Kaynak mı hedef mi? diye ayır.\nTuzak: src-href yer değiştiren şık.\nTaktik: src=source, href=hedef."
   },
 
   {
-    q:
-      "Aşağıdaki HTML çalıştırıldığında çıktı nasıl olur?\n\n<p>Merhaba<br>Dünya</p>",
+    q: "Aşağıdaki HTML çalıştırıldığında çıktı nasıl olur? (PÇ2,4,10 / ÖÇ2)\n\n<p>Merhaba<br>Dünya</p>",
     t: "mcq",
     o: [
       "Tek satır: “MerhabaDünya”",
@@ -121,11 +117,11 @@ window.questionBank = [
     topic: "br çıktı",
     importance: "medium",
     explanation:
-      "Kavram: <br> satır kırar (line break), kendisi görünmez.\nÇözüm: Metni iki satıra böl.\nTuzak: “br yazısı görünür” diyen şık.\nEzber: br = ‘satır atla’."
+      "Kavram: <br> satır kırar, kendisi yazı gibi görünmez.\nNasıl çözersin: <br> gördün mü alt satıra geçir.\nTuzak: “<br> görünür” diyen şık.\nTaktik: br = break line."
   },
 
   {
-    q: "Aşağıdakilerden hangisi doğru tablo (table) yapısıdır?",
+    q: "Aşağıdakilerden hangisi doğru tablo (table) yapısıdır? (PÇ2,4,10 / ÖÇ2)",
     t: "mcq",
     o: [
       "<table><td>1</td><tr>2</tr></table>",
@@ -137,42 +133,40 @@ window.questionBank = [
     a: "<table><tr><td>1</td><td>2</td></tr></table>",
     difficulty: "medium",
     week: 4,
-    topic: "table yapı",
+    topic: "Table yapı",
     importance: "high",
     explanation:
-      "Kavram: table → tr(satır) → td(hücre). Bu sıra temel kural.\nÇözüm: Şıkta bu hiyerarşi doğru mu kontrol et.\nTuzak: td’yi tr’nin dışına koyan şıklar.\nEzber: T-R-D (Table-Row-Data)."
+      "Kural: table → tr(satır) → td(hücre).\nNasıl çözersin: Hiyerarşi doğru mu kontrol et.\nTuzak: td’yi tr dışına koymak.\nTaktik: T-R-D (Table-Row-Data)."
   },
 
   {
-    q:
-      "Aşağıdaki HTML’de 1. satırda kaç hücre oluşur?\n\n<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>",
+    q: "Aşağıdaki HTML’de 1. satırda kaç hücre oluşur? (PÇ2,4,10 / ÖÇ2)\n\n<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>",
     t: "mcq",
     o: ["0", "1", "2", "3", "4"],
     a: "2",
     difficulty: "easy",
     week: 4,
-    topic: "table çıktı",
+    topic: "Table çıktı",
     importance: "medium",
     explanation:
-      "Kavram: tr = satır, td sayısı = hücre sayısı.\nÇözüm: td say: A,B → 2.\nTuzak: tr’yi hücre zannetmek.\nEzber: ‘Kaç td varsa o kadar hücre’."
+      "Kural: Bir tr içindeki td sayısı = hücre sayısı.\nNasıl çözersin: td’leri say (A,B → 2).\nTuzak: tr’yi hücre sanmak.\nTaktik: “Kaç td varsa o kadar hücre”."
   },
 
   {
-    q: "Form oluşturmak için temel kapsayıcı etiket hangisidir?",
+    q: "Form oluşturmak için temel kapsayıcı etiket hangisidir? (PÇ2,4,10 / ÖÇ2)",
     t: "mcq",
     o: ["<input>", "<form>", "<button>", "<label>", "<table>"],
     a: "<form>",
     difficulty: "easy",
     week: 5,
-    topic: "forms",
+    topic: "Forms",
     importance: "high",
     explanation:
-      "Kavram: <form> formun kabıdır; input/button içeride olur.\nÇözüm: ‘Kapsayıcı’ kelimesini görünce form.\nTuzak: input’u kapsayıcı sanmak.\nEzber: form = çerçeve, input = eleman."
+      "Kavram: <form> formun kabıdır; input/button/select içeride olur.\nNasıl çözersin: ‘kapsayıcı’ kelimesi görünce form.\nTuzak: input’u kapsayıcı sanmak.\nTaktik: form=kap, input=parça."
   },
 
   {
-    q:
-      "Aşağıdaki HTML’de kullanıcı yazısını hangi eleman alır?\n\n<form>\n  <input type='text'>\n  <input type='submit' value='Gönder'>\n</form>",
+    q: "Aşağıdaki HTML’de kullanıcı yazısını hangi eleman alır? (PÇ2,4,10 / ÖÇ2)\n\n<form>\n  <input type='text'>\n  <input type='submit' value='Gönder'>\n</form>",
     t: "mcq",
     o: [
       "type='submit' input",
@@ -183,43 +177,41 @@ window.questionBank = [
     ],
     a: "type='text' input",
     difficulty: "easy",
-    week: 5,
-    topic: "input türleri",
+    week: 6,
+    topic: "Input türleri",
     importance: "high",
     explanation:
-      "Kavram: text input yazı alır; submit gönder butonudur.\nÇözüm: ‘Kullanıcı yazısı’ → text.\nTuzak: submit’i yazı alanı sanmak.\nEzber: text=yazı, submit=gönder."
+      "Kural: type='text' yazı alır; submit gönder butonudur.\nNasıl çözersin: ‘Yazı girilecek alan’ → text.\nTuzak: submit’i yazı alanı sanmak.\nTaktik: text=yazı, submit=gönder."
   },
 
   {
-    q:
-      "Çerçeveler (frames) mantığında sayfa içine başka bir sayfa gömmek için en yaygın etiket hangisidir?",
+    q: "Çerçeveler (frames) mantığında sayfa içine başka bir sayfa gömmek için en yaygın etiket hangisidir? (PÇ2,4,11 / ÖÇ5)",
     t: "mcq",
     o: ["<frame>", "<iframe>", "<div>", "<span>", "<embed-css>"],
     a: "<iframe>",
     difficulty: "medium",
     week: 7,
-    topic: "frames/iframe",
+    topic: "Frames / iframe",
     importance: "medium",
     explanation:
-      "Kavram: iframe = sayfa içinde sayfa (gömülü pencere).\nÇözüm: ‘frame’ konusu → iframe.\nTuzak: frame etiketi (eski) ile karıştırmak.\nEzber: iFrame = ‘inside frame’."
+      "Kavram: iframe = sayfa içinde sayfa (gömülü içerik).\nNasıl çözersin: Harita/YouTube gömme denince iframe.\nTuzak: eski <frame> ile karıştırmak.\nTaktik: iFrame = inside frame."
   },
 
   {
-    q: "Aşağıdakilerden hangisi çoklu ortam (multimedia) örneğidir?",
+    q: "Aşağıdakilerden hangisi çoklu ortam (multimedia) örneğidir? (PÇ2,4,11 / ÖÇ5)",
     t: "mcq",
     o: ["<p>", "<table>", "<img>", "<tr>", "<th>"],
     a: "<img>",
     difficulty: "easy",
     week: 8,
-    topic: "multimedia",
+    topic: "Multimedia",
     importance: "medium",
     explanation:
-      "Kavram: Multimedia = resim/ses/video.\nÇözüm: Şıklarda medya olanı seç.\nTuzak: table/tr gibi yapısal etiketler.\nEzber: img = medya başlangıcı."
+      "Kavram: Multimedia = resim/ses/video.\nNasıl çözersin: Medya etiketi hangisi? → img.\nTuzak: Yapısal etiketleri medya sanmak.\nTaktik: img = medya başlangıcı."
   },
 
   {
-    q:
-      "Aşağıdaki HTML çalıştırıldığında kullanıcı resme tıklayınca ne olur?\n\n<a href='sayfa.html'>\n  <img src='foto.jpg'>\n</a>",
+    q: "Aşağıdaki HTML çalıştırıldığında kullanıcı resme tıklayınca ne olur? (PÇ2,4,10 / ÖÇ3)\n\n<a href='sayfa.html'>\n  <img src='foto.jpg'>\n</a>",
     t: "mcq",
     o: [
       "Resim görünmez",
@@ -231,27 +223,27 @@ window.questionBank = [
     a: "Resme tıklayınca sayfa.html açılır",
     difficulty: "medium",
     week: 4,
-    topic: "link içinde img çıktı",
+    topic: "Link içinde img",
     importance: "high",
     explanation:
-      "Kavram: a etiketi içine ne koyarsan tıklanabilir olur.\nÇözüm: tıklanınca href çalışır → sayfa.html.\nTuzak: src’yi hedef sanmak.\nEzber: ‘Tıklama = href’."
+      "Kural: <a> içine koyduğun her şey tıklanabilir olur; tıklanınca href çalışır.\nNasıl çözersin: “tıklama = href”.\nTuzak: src’yi hedef sanmak.\nTaktik: href=hedef, src=kaynak."
   },
 
   {
-    q: "Footer (sayfanın alt bölümü) için doğru HTML etiketi hangisidir?",
+    q: "Footer (sayfanın alt bölümü) için doğru HTML etiketi hangisidir? (PÇ2,4,10 / ÖÇ2)",
     t: "mcq",
     o: ["<foot>", "<footer>", "<bottom>", "<end>", "<tail>"],
     a: "<footer>",
     difficulty: "easy",
     week: 2,
-    topic: "footer etiketi",
+    topic: "Footer etiketi",
     importance: "medium",
     explanation:
-      "Kavram: Semantik etiket: footer.\nÇözüm: ‘foot değil footer’.\nTuzak: <foot> diye kandırma.\nEzber: footer = alt kısım."
+      "Kural: Semantik etiket footer’dır; <foot> diye bir etiket beklenmez.\nTuzak: <foot> şıkkı.\nTaktik: footer = sayfanın altı."
   },
 
   {
-    q: "Aşağıdaki seçeneklerden hangisi HTML yorum (comment) yazımıdır?",
+    q: "Aşağıdaki seçeneklerden hangisi HTML yorum (comment) yazımıdır? (PÇ2,4,10 / ÖÇ2)",
     t: "mcq",
     o: [
       "// yorum",
@@ -266,7 +258,7 @@ window.questionBank = [
     topic: "HTML comment",
     importance: "medium",
     explanation:
-      "Kavram: HTML comment = <!-- -->.\nÇözüm: CSS comment (/* */) ile karıştırma.\nTuzak: /* */ şıkkı.\nEzber: HTML’de ok işareti gibi: <!-- -->."
+      "Kural: HTML yorum = <!-- ... -->.\nTuzak: CSS yorumunu (/* */) seçmek.\nTaktik: HTML’de ok gibi: <!-- -->."
   },
 
   // ========================
@@ -274,239 +266,211 @@ window.questionBank = [
   // ========================
 
   {
-    q: "CSS (Cascading Style Sheets) en doğru ne yapar?",
+    q: "CSS en doğru ne yapar? (PÇ2,4,10 / ÖÇ4)",
     t: "mcq",
     o: [
-      "HTML’in linklerini çalıştırır (href yönetir)",
-      "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon)",
-      "Veritabanı bağlantısını kurar",
-      "Sadece internet bağlantısını yönetir",
-      "Tabloya yeni satır ekler"
+      "HTML’in linklerini çalıştırır (href yönetir).",
+      "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon).",
+      "Veritabanı bağlantısını kurar.",
+      "Sadece internet bağlantısını yönetir.",
+      "Tabloya yeni satır ekler."
     ],
-    a: "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon)",
+    a: "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon).",
     difficulty: "easy",
     week: 10,
     topic: "CSS tanım",
     importance: "high",
     explanation:
-      "Kavram: CSS = görünüm katmanı (style).\nÇözüm: ‘görünüm/renk/düzen’ geçen şık doğruya yakındır.\nTuzak: CSS’yi HTML fonksiyonu sanmak.\nEzber: HTML=iskelet, CSS=makyaj."
+      "Kavram: HTML = iskelet/içerik, CSS = görünüm.\nNasıl çözersin: “renk, boyut, düzen” geçen şık doğruya gider.\nTuzak: CSS’yi programlama/DB sanmak.\nTaktik: HTML=iskelet, CSS=makyaj."
   },
 
   {
-    q:
-      "Specificity (öncelik) sorusu: Aşağıdaki kodda “Merhaba” hangi renkte görünür?\n\nHTML:\n<p id='x' class='y' style='color: green;'>Merhaba</p>\n\nCSS:\n#x{ color:red; }\n.y{ color:blue; }\np{ color:black; }",
+    q: "CSS’de resme filtre uygulamak için hangi özellik kullanılır? (PÇ2,4,11 / ÖÇ5)\n\nÖrnek: img{ filter: grayscale(100%); }",
     t: "mcq",
-    o: [
-      "Siyah (etiket seçici en güçlüdür)",
-      "Mavi (.class, id’den güçlüdür)",
-      "Kırmızı (#id en güçlüdür ve inline’ı ezer)",
-      "Yeşil (inline style en güçlüdür)",
-      "Karışık çıkar; tarayıcı rastgele seçer"
-    ],
-    a: "Yeşil (inline style en güçlüdür)",
-    difficulty: "hard",
-    week: 10,
-    topic: "Specificity / cascade çıktı",
-    importance: "high",
+    o: ["transform", "filter", "opacity", "overflow", "position"],
+    a: "filter",
+    difficulty: "easy",
+    week: 11,
+    topic: "Image filters",
+    importance: "medium",
     explanation:
-      "Kavram: Öncelik sırası: Inline > #id > .class > etiket.\nÇözüm: Aynı özelliği (color) kim daha güçlü söylüyor? Inline.\nTuzak: ‘id en güçlü’ deyip inline’ı unutmak.\nEzber: I > # > . > tag."
+      "Kavram: filter = görüntü efektleri (grayscale, blur, brightness vb.).\nNasıl çözersin: ‘filtre/efekt’ denince filter.\nTuzak: opacity (saydamlık) ile karıştırmak.\nTaktik: filter=efekt, opacity=saydamlık."
   },
 
   {
-    q: "CSS 3 yazım yöntemi aşağıdakilerden hangisinde doğru verilmiştir?",
+    q: "CSS 3 yazım yöntemi aşağıdakilerden hangisinde doğru verilmiştir? (PÇ2,4,10 / ÖÇ4)",
     t: "mcq",
     o: [
-      "Inline (style=''), Internal (<style>), External (<link rel='stylesheet'>)",
+      "Inline (style=''), Internal (<style>), External (<link rel='stylesheet' href='...'>)",
       "Inline (<link>), Internal (src=''), External (<style>)",
-      "Sadece External vardır; diğerleri geçersizdir",
-      "Sadece Internal vardır; external çalışmaz",
-      "CSS sadece body içinde yazılır"
+      "Sadece External vardır; diğerleri geçersizdir.",
+      "Sadece Internal vardır; External çalışmaz.",
+      "CSS sadece body içinde yazılır."
     ],
-    a: "Inline (style=''), Internal (<style>), External (<link rel='stylesheet'>)",
+    a: "Inline (style=''), Internal (<style>), External (<link rel='stylesheet' href='...'>)",
     difficulty: "easy",
     week: 10,
     topic: "CSS yazım yöntemleri",
     importance: "high",
     explanation:
-      "Kavram: 3 yol = Inline / Internal / External.\nÇözüm: Şıkta hem doğru isim hem doğru yer/etiket var mı bak.\nTuzak: External’ı <script> ile bağlatmaya çalışan şık.\nEzber: I-I-E."
+      "Kural: 3 yol = Inline / Internal / External.\nNasıl çözersin: External için doğru kalıp <link rel='stylesheet' href='...'> olmalı.\nTuzak: CSS’yi script gibi bağlatan şık.\nTaktik: I-I-E (Inline-Internal-External)."
   },
 
   {
-    q: "External CSS dosyasını doğru bağlayan kod hangisidir?",
+    q: "@import ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ4)\n\nCSS:\n@import url('theme.css');",
     t: "mcq",
     o: [
-      "<link href='style.css'>",
-      "<link rel='stylesheet' href='style.css'>",
-      "<style src='style.css'></style>",
-      "<script rel='stylesheet' href='style.css'></script>",
-      "<a rel='stylesheet' href='style.css'>CSS</a>"
+      "@import HTML içinde yazılır, CSS içinde yazılamaz.",
+      "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> daha tercih edilir.",
+      "@import sadece JavaScript dosyası çağırır.",
+      "@import, inline CSS’in tek şeklidir.",
+      "@import, sadece hover çalıştırır."
     ],
-    a: "<link rel='stylesheet' href='style.css'>",
-    difficulty: "easy",
-    week: 10,
-    topic: "External bağlama",
-    importance: "high",
-    explanation:
-      "Kavram: CSS ekleme = link + rel='stylesheet' + href.\nÇözüm: rel şart, yoksa bağlantı ‘stylesheet’ olarak anlaşılmaz.\nTuzak: src ile bağlama.\nEzber: CSS linki = <link rel='stylesheet' href='...'>."
-  },
-
-  {
-    q:
-      "@import ile ilgili doğru ifade hangisidir? (Optimization konusu da dahil)\n\nCSS:\n@import url('theme.css');",
-    t: "mcq",
-    o: [
-      "@import HTML içinde yazılır, CSS içinde yazılamaz",
-      "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> performans açısından daha tercih edilir",
-      "@import sadece JavaScript dosyası çağırır",
-      "@import, inline CSS’in tek şeklidir",
-      "@import, sadece hover çalıştırır"
-    ],
-    a: "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> performans açısından daha tercih edilir",
+    a: "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> daha tercih edilir.",
     difficulty: "medium",
     week: 12,
     topic: "@import + optimization",
     importance: "medium",
     explanation:
-      "Kavram: @import CSS’in içinde CSS çağırır.\nÇözüm: ‘Başka CSS’i içeri alır’ diyen şık doğru.\nTuzak: @import’ı HTML attribute sanmak.\nEzber: Import = CSS içinde CSS çağırma (ama link daha klasik/tercih)."
+      "Kavram: @import CSS’in içinden başka CSS’i çağırır.\nNasıl çözersin: ‘CSS içinden CSS alır’ cümlesini ararsın.\nTuzak: @import’ı HTML attribute sanmak.\nTaktik: Import=‘içeri al’, Link=klasik bağlantı."
   },
 
   {
-    q:
-      "CSS yazım hatası (finalde puan kırdırır): Aşağıdakilerden hangisi HATALI yazımdır?",
+    q: "CSS yazım hatası (puan kırdırır): Aşağıdakilerden hangisi HATALI yazımdır? (PÇ2,4,10 / ÖÇ4)",
     t: "mcq",
-    o: [
-      "max-width",
-      "min-width",
-      "opacity",
-      "padding",
-      "max widght"
-    ],
+    o: ["max-width", "min-width", "opacity", "padding", "max widght"],
     a: "max widght",
     difficulty: "easy",
     week: 10,
     topic: "CSS yazım hataları",
     importance: "high",
     explanation:
-      "Kavram: width kelimesi doğru yazılmalı; max-width tire ile.\nÇözüm: Şıklar arasında ‘widght’ gibi hatalı yazımı bul.\nTuzak: ‘maxwidth’ gibi tireyi unutturan şıklar.\nEzber: width doğru; max-width tireli."
+      "Kural: width doğru yazılır; max-width tire ile yazılır.\nTuzak: widght gibi ‘harf kaydırma’ hataları.\nTaktik: width = W I D T H."
   },
 
   {
-    q:
-      "Çıktı sorusu: Aşağıdaki CSS, metni mi yoksa arka planı mı değiştirir?\n\np{ color:red; background-color: yellow; }",
+    q: "Çıktı sorusu: Aşağıdaki CSS’te color ve background-color neyi değiştirir? (PÇ2,4,10 / ÖÇ4)\n\np{ color:red; background-color: yellow; }",
     t: "mcq",
     o: [
-      "color arka planı, background-color yazıyı değiştirir",
-      "color yazıyı kırmızı yapar; background-color arka planı sarı yapar",
-      "İkisi de sadece border’ı değiştirir",
-      "İkisi de sadece saydamlık verir",
-      "Sadece h1’de çalışır, p’de çalışmaz"
+      "color arka planı, background-color yazıyı değiştirir.",
+      "color yazıyı kırmızı yapar; background-color arka planı sarı yapar.",
+      "İkisi de sadece border’ı değiştirir.",
+      "İkisi de sadece saydamlık verir.",
+      "Sadece h1’de çalışır, p’de çalışmaz."
     ],
-    a: "color yazıyı kırmızı yapar; background-color arka planı sarı yapar",
+    a: "color yazıyı kırmızı yapar; background-color arka planı sarı yapar.",
     difficulty: "easy",
     week: 10,
     topic: "color vs background-color",
     importance: "high",
     explanation:
-      "Kavram: color = yazı rengi. background-color = arka plan.\nÇözüm: ‘metin mi zemin mi?’ ayrımını yap.\nTuzak: bu ikisini ters yazan şık.\nEzber: color=metin, background=zemin."
+      "Kural: color=metin rengi, background-color=zemin.\nTuzak: İkisini tersleyen şık.\nTaktik: background=arka plan."
   },
 
   {
-    q:
-      "“Punto” sorusu: Aşağıdaki font-size birimlerinden hangisi ‘punto/point’ ile ilişkilidir?",
+    q: "“Punto” (yazı boyutu) genelde hangi birimle ifade edilir? (PÇ2,4,10 / ÖÇ4)",
     t: "mcq",
     o: ["px", "pt", "%", "vh", "fr"],
     a: "pt",
     difficulty: "easy",
     week: 10,
     topic: "font-size birimleri",
-    importance: "medium",
+    importance: "high",
     explanation:
-      "Kavram: pt = point (punto). px = piksel.\nÇözüm: ‘punto’ kelimesi geçiyorsa pt’yi seç.\nTuzak: px’i ‘boyut birimi’ diye atlamak.\nEzber: Punto = PT."
+      "Kavram: pt = point (punto). px = piksel.\nTuzak: px’i ‘en çok kullanılan’ diye otomatik seçmek.\nTaktik: Punto = PT."
   },
 
   {
-    q:
-      "% (yüzde) ile ilgili: Aşağıdaki CSS’de .box genişliği neye göre %50 olur?\n\n.parent{ width: 400px; }\n.box{ width: 50%; }",
+    q: "Çıktı sorusu: .parent genişliği 400px ise, .box kaç px olur? (PÇ2,4,10 / ÖÇ4)\n\n.parent{ width:400px; }\n.box{ width:50%; }",
     t: "mcq",
-    o: [
-      "Ekran genişliğine göre",
-      "Parent (.parent) genişliğine göre",
-      "HTML dosyasının boyutuna göre",
-      "Sadece resimlerde çalışır",
-      "Rastgele hesaplanır"
-    ],
-    a: "Parent (.parent) genişliğine göre",
+    o: ["50px", "100px", "150px", "200px", "400px"],
+    a: "200px",
     difficulty: "medium",
     week: 10,
     topic: "% mantığı",
     importance: "high",
     explanation:
-      "Kavram: % çoğu zaman parent’a göre hesaplanır.\nÇözüm: width:% gördün mü ‘parent genişliği’ düşün.\nTuzak: viewport ile parent’ı karıştırmak.\nEzber: % = parent oranı."
+      "Kural: width:% çoğu zaman parent genişliğine göre hesaplanır.\nHesap: 400’ün %50’si = 200.\nTuzak: %’yi ekran genişliğine göre sanmak.\nTaktik: % = parent oranı."
   },
 
   {
-    q:
-      "width/height/min-width/max-width için en doğru eşleştirme hangisidir?",
+    q: "min-width / max-width için en doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ4)",
     t: "mcq",
     o: [
-      "min-width = en fazla büyüsün, max-width = en az küçülsün",
-      "width = hedef genişlik, max-width = tavan, min-width = taban, height = yükseklik",
-      "height sadece yazı boyutudur",
-      "max-width saydamlık verir",
-      "min-width elemanı sabitler (sticky)"
+      "min-width en fazla büyüsün demektir; max-width en az küçülsün demektir.",
+      "max-width elemanın en fazla büyüyebileceği genişliği sınırlar; min-width en fazla küçülebileceği sınırı belirler.",
+      "max-width yazıyı kalınlaştırır.",
+      "min-width sadece img’de çalışır.",
+      "İkisi de sadece margin’i etkiler."
     ],
-    a: "width = hedef genişlik, max-width = tavan, min-width = taban, height = yükseklik",
-    difficulty: "easy",
-    week: 10,
-    topic: "width/height/min/max",
-    importance: "high",
-    explanation:
-      "Kavram: width/heigth temel ölçü; min=taban, max=tavan.\nÇözüm: Tanım sorularında ‘en fazla/en az’ kelimesini yakala.\nTuzak: min ile max’ı terslemek.\nEzber: min=minimum taban, max=maximum tavan."
-  },
-
-  {
-    q:
-      "Responsive çıktı sorusu: Aşağıdaki kural ne sağlar?\n\nimg{ max-width:100%; height:auto; }",
-    t: "mcq",
-    o: [
-      "Resim her zaman 1000px olur",
-      "Resim parent’ı aşarsa küçülür; oran bozulmaz",
-      "Resim sadece büyür, küçülmez",
-      "Resim görünmez olur (display:none)",
-      "Resim grid’e dönüşür"
-    ],
-    a: "Resim parent’ı aşarsa küçülür; oran bozulmaz",
-    difficulty: "easy",
-    week: 10,
-    topic: "responsive image",
-    importance: "high",
-    explanation:
-      "Kavram: max-width=100% taşmayı engeller; height:auto oranı korur.\nÇözüm: ‘bozulmasın’ denince max-width+auto kalıbı.\nTuzak: width:100% ile max-width farkı.\nEzber: Responsive resim = max-width:100% + height:auto."
-  },
-
-  {
-    q:
-      "Opacity çıktı sorusu: .box{ opacity:0; } ise aşağıdakilerden hangisi doğrudur?",
-    t: "mcq",
-    o: [
-      "Eleman görünmez ve sayfada yer kaplamaz",
-      "Eleman görünmez ama sayfada yer kaplar",
-      "Eleman daha opak olur",
-      "Sadece yazı görünmez, arka plan görünür",
-      "Sadece hover olunca görünmez"
-    ],
-    a: "Eleman görünmez ama sayfada yer kaplar",
+    a: "max-width elemanın en fazla büyüyebileceği genişliği sınırlar; min-width en fazla küçülebileceği sınırı belirler.",
     difficulty: "medium",
     week: 10,
-    topic: "opacity",
+    topic: "min/max width",
     importance: "high",
     explanation:
-      "Kavram: opacity=0 görünmez yapar ama layout’ta yer durur.\nÇözüm: Yer kaplamasın istiyorsan display:none.\nTuzak: opacity ile display’i aynı sanmak.\nEzber: opacity görünümü etkiler, display yerleşimi."
+      "Kural: max=tavan (daha büyümesin), min=taban (daha küçülmesin).\nTuzak: min ile max’ı terslemek.\nTaktik: min=minimum taban, max=maximum tavan."
   },
 
   {
-    q:
-      "Sadece arka planı saydam yapıp içindeki yazıyı etkilememek için hangisi daha uygundur?",
+    q: "Responsive çıktı sorusu: Aşağıdaki kural ne sağlar? (PÇ2,4,11 / ÖÇ5)\n\nimg{ max-width:100%; height:auto; }",
+    t: "mcq",
+    o: [
+      "Resim her zaman 1000px olur.",
+      "Resim parent’ı aşarsa küçülür; oran bozulmaz.",
+      "Resim sadece büyür, küçülmez.",
+      "Resim görünmez olur (display:none).",
+      "Resim grid’e dönüşür."
+    ],
+    a: "Resim parent’ı aşarsa küçülür; oran bozulmaz.",
+    difficulty: "easy",
+    week: 10,
+    topic: "Responsive image",
+    importance: "high",
+    explanation:
+      "Kural: max-width:100% taşmayı engeller; height:auto oranı korur.\nTuzak: width:100% ile karıştırmak (her zaman gerer).\nTaktik: Responsive resim = max-width + height:auto."
+  },
+
+  {
+    q: "Opacity ile ilgili doğru ifade hangisidir? (PÇ2,4,10 / ÖÇ4)\n\nimg{ opacity:0.6; }",
+    t: "mcq",
+    o: [
+      "Resmi 0.6px yapar.",
+      "Resmi %60 saydam yapar (kısmen şeffaf).",
+      "Resmi tamamen kaldırır ve yer kaplatmaz.",
+      "Sadece border’ı saydam yapar.",
+      "Sadece hover olunca çalışır."
+    ],
+    a: "Resmi %60 saydam yapar (kısmen şeffaf).",
+    difficulty: "easy",
+    week: 10,
+    topic: "Opacity",
+    importance: "high",
+    explanation:
+      "Kural: opacity 0–1 arasıdır. 1=tam görünür, 0=görünmez.\nTuzak: opacity’yi ‘px’ sanmak.\nTaktik: 0 yok, 1 tam."
+  },
+
+  {
+    q: "opacity:0 ile display:none farkı hangisidir? (PÇ2,4,11 / ÖÇ4)",
+    t: "mcq",
+    o: [
+      "İkisi de elemanı görünmez yapar ve yer kaplatmaz.",
+      "opacity görünmez yapar ama yer kaplar; display:none yer de kaplatmaz.",
+      "display:none görünmez yapar ama yer kaplar.",
+      "opacity sadece resimde çalışır.",
+      "Fark yoktur."
+    ],
+    a: "opacity görünmez yapar ama yer kaplar; display:none yer de kaplatmaz.",
+    difficulty: "medium",
+    week: 10,
+    topic: "Opacity vs display",
+    importance: "high",
+    explanation:
+      "Kural: display yerleşimi değiştirir; opacity sadece görünümü.\nTuzak: ‘görünmez’ deyip ikisini aynı sanmak.\nTaktik: display:none = yok; opacity=hayalet (yer var)."
+  },
+
+  {
+    q: "Sadece arka planı saydam yapıp içindeki yazıyı etkilememek için hangisi daha uygundur? (PÇ2,4,11 / ÖÇ4)",
     t: "mcq",
     o: [
       ".box{ opacity:0.5; }",
@@ -518,34 +482,33 @@ window.questionBank = [
     a: ".box{ background: rgba(0,0,0,0.5); }",
     difficulty: "hard",
     week: 10,
-    topic: "rgba vs opacity",
+    topic: "RGBA",
     importance: "high",
     explanation:
-      "Kavram: opacity tüm çocukları da saydamlaştırır; rgba sadece arka planı saydam yapar.\nÇözüm: ‘Yazı etkilenmesin’ kelimesi → rgba.\nTuzak: opacity seçip yazıyı da soldurmak.\nEzber: Yazı sabit kalsın = rgba."
+      "Kural: opacity tüm çocukları da soldurur; rgba sadece arka planı saydam yapar.\nTuzak: opacity seçip yazıyı da saydam yapmak.\nTaktik: Yazı etkilenmesin = rgba."
   },
 
   {
-    q: "Margin ve padding için en doğru tanım hangisidir?",
+    q: "Margin ve Padding için en doğru tanım hangisidir? (PÇ2,4,10 / ÖÇ4)",
     t: "mcq",
     o: [
-      "Margin iç boşluk, padding dış boşluktur",
-      "Margin dış boşluk, padding iç boşluktur",
-      "İkisi de sadece yazı rengini değiştirir",
-      "Padding sadece tabloda çalışır",
-      "Margin sadece resimde çalışır"
+      "Margin iç boşluk, padding dış boşluktur.",
+      "Margin dış boşluk, padding iç boşluktur.",
+      "İkisi de aynı şeydir.",
+      "Padding sadece tabloda çalışır.",
+      "Margin sadece resimde çalışır."
     ],
-    a: "Margin dış boşluk, padding iç boşluktur",
+    a: "Margin dış boşluk, padding iç boşluktur.",
     difficulty: "easy",
     week: 10,
-    topic: "margin vs padding",
+    topic: "Margin vs Padding",
     importance: "high",
     explanation:
-      "Kavram: Margin = dış mesafe; Padding = içerikle border arası iç mesafe.\nÇözüm: ‘Dış/İç’ kelimesini yakala.\nTuzak: İkisini terslemek.\nEzber: Margin=Mahalle(dış), Padding=Pijama(iç)."
+      "Kural: Margin=dış mesafe, Padding=iç dolgu.\nTuzak: İkisini terslemek.\nTaktik: Margin=Mahalle(dış), Padding=Pijama(iç)."
   },
 
   {
-    q:
-      "Shorthand sorusu: margin: 10px 20px 30px 40px; sırası hangisidir?",
+    q: "Shorthand sorusu: margin: 10px 20px 30px 40px; sırası hangisidir? (PÇ2,4,11 / ÖÇ4)",
     t: "mcq",
     o: [
       "Sol-Sağ-Üst-Alt",
@@ -557,83 +520,65 @@ window.questionBank = [
     a: "Üst-Sağ-Alt-Sol",
     difficulty: "medium",
     week: 10,
-    topic: "margin shorthand",
+    topic: "Shorthand TRBL",
     importance: "high",
     explanation:
-      "Kavram: 4 değer = TRBL (Top Right Bottom Left).\nÇözüm: Saat yönü gibi oku.\nTuzak: Sol-sağ karıştırmak.\nEzber: TRBL = üst-sağ-alt-sol."
+      "Kural: 4 değer = TRBL (Top Right Bottom Left).\nTuzak: sol-sağ karıştırmak.\nTaktik: Saat yönü: üst → sağ → alt → sol."
   },
 
   {
-    q:
-      "Box Model hesap sorusu (border-box YOK):\n\n.box{ width:200px; padding:20px; border:5px solid black; }\n\nToplam görünen kutu genişliği (content+padding+border) kaç px olur?",
+    q: "Box Model hesap sorusu (border-box YOK): Toplam görünen kutu genişliği kaç px olur? (PÇ2,4,11 / ÖÇ4)\n\n.box{ width:200px; padding:20px; border:5px solid black; }",
     t: "mcq",
     o: ["200px", "220px", "230px", "250px", "260px"],
     a: "250px",
     difficulty: "hard",
     week: 10,
-    topic: "box model hesap",
+    topic: "Box Model hesap",
     importance: "high",
     explanation:
-      "Kavram: Toplam = width + (padding*2) + (border*2).\nÇözüm: 200 + 40 + 10 = 250.\nTuzak: Sadece width’ü toplam sanmak.\nEzber: ‘2 taraf var’ → padding ve border 2 ile çarpılır."
+      "Kural: Toplam genişlik = width + 2*padding + 2*border.\nHesap: 200 + 40 + 10 = 250.\nTuzak: Sadece width’ü toplam sanmak.\nTaktik: ‘İki taraf var’ → padding ve border 2 ile çarpılır."
   },
 
   {
-    q:
-      "Aynı kutu için border-box açılırsa ne olur?\n\n*{ box-sizing:border-box; }\n.box{ width:200px; padding:20px; border:5px solid black; }\n\nToplam görünen kutu genişliği kaç px olur?",
-    t: "mcq",
-    o: ["200px", "210px", "240px", "250px", "260px"],
-    a: "200px",
-    difficulty: "hard",
-    week: 10,
-    topic: "box-sizing",
-    importance: "high",
-    explanation:
-      "Kavram: border-box = width’in içine padding+border dahil.\nÇözüm: width=200 ise toplam da 200 kalır.\nTuzak: Yine 250 hesaplamak.\nEzber: border-box = ‘hesap kolay, width=tam kutu’."
-  },
-
-  {
-    q:
-      "Yer kaplama farkı sorusu: Hangisi elemanı görünmez yapar ama YER KAPLATMAYA devam eder?",
+    q: "Display değerleri ile ilgili doğru eşleştirme hangisidir? (PÇ2,4,10 / ÖÇ3)",
     t: "mcq",
     o: [
-      "display:none;",
-      "opacity:0;",
-      "remove(); (HTML’de)",
-      "width:0; height:0; (her zaman aynı etki)",
-      "link rel='stylesheet';"
+      "block: yan yana dizer, none: görünür bırakır",
+      "inline: satırı kaplar, block: sadece içerik kadar",
+      "inline-block: yan yana durabilir ve width/height alır",
+      "none: elemanı saydam yapar ama yer bırakır",
+      "block: sadece img’de çalışır"
     ],
-    a: "opacity:0;",
+    a: "inline-block: yan yana durabilir ve width/height alır",
     difficulty: "medium",
     week: 10,
-    topic: "opacity vs display",
+    topic: "Display",
     importance: "high",
     explanation:
-      "Kavram: opacity/visibility yer tutabilir; display:none yer tutmaz.\nÇözüm: ‘yer kaplasın’ ifadesi → opacity/visibility.\nTuzak: display:none seçmek.\nEzber: display:none = yok, opacity=hayalet (yer var)."
+      "Kural: block=satırı kaplar, inline=içerik kadar, inline-block=yan yana + ölçü alır, none=hiç yok.\nTuzak: none ile opacity karıştırmak.\nTaktik: inline-block = ‘yan yana + boyut’. "
   },
 
   {
-    q:
-      "Display çıktı sorusu:\n\nHTML:\n<span class='a'>A</span><span class='b'>B</span>\n\nCSS:\n.a{ display:block; }\n\nÇıktı nasıl olur?",
+    q: "Çıktı sorusu: Aşağıdaki kodda çıktı nasıl olur? (PÇ2,4,11 / ÖÇ3)\n\nHTML:\n<span>A</span><span class='x'>B</span>\n\nCSS:\n.x{ display:block; }",
     t: "mcq",
     o: [
-      "A ve B yan yana kalır",
+      "A ve B yan yana",
       "A alt satıra iner, B üstte kalır",
-      "A tek başına satırı kaplar, B alt satıra geçer",
-      "A görünmez olur",
-      "B görünmez olur"
+      "A üstte kalır, B alt satıra geçer (B satırı kaplar)",
+      "B görünmez olur",
+      "A görünmez olur"
     ],
-    a: "A tek başına satırı kaplar, B alt satıra geçer",
+    a: "A üstte kalır, B alt satıra geçer (B satırı kaplar)",
     difficulty: "hard",
     week: 10,
-    topic: "display block çıktı",
+    topic: "Display çıktı",
     importance: "high",
     explanation:
-      "Kavram: block = satırı kaplar, alt satıra iter.\nÇözüm: span normalde inline, ama block olunca davranış değişir.\nTuzak: span hep inline sanmak.\nEzber: block = ‘satır kapatır’."
+      "Kural: block = satırı kaplar ve alt satıra iter.\nNasıl çözersin: .x block oldu → B alt satıra düşer.\nTuzak: span hep inline sanmak.\nTaktik: display değişirse davranış değişir."
   },
 
   {
-    q:
-      "Selector (p.anil) çıktı sorusu:\n\nCSS:\np.anil{ color:red; font-size:20px; }\n\nHTML:\n<p class='anil'>A</p>\n<div class='anil'>B</div>",
+    q: "Selector (p.anil) çıktı sorusu: Hangisi doğrudur? (PÇ2,4,10 / ÖÇ4)\n\nCSS:\np.anil{ color:red; font-size:20px; }\n\nHTML:\n<p class='anil'>A</p>\n<div class='anil'>B</div>",
     t: "mcq",
     o: [
       "A ve B kırmızı olur",
@@ -645,35 +590,52 @@ window.questionBank = [
     a: "Sadece A kırmızı ve 20px olur; B etkilenmez",
     difficulty: "hard",
     week: 10,
-    topic: "selector p.class",
+    topic: "Selector p.class",
     importance: "high",
     explanation:
-      "Kavram: p.anil = ‘class’ı anil olan p etiketleri.\nÇözüm: div değil p seçildi.\nTuzak: .anil ile p.anil’i aynı sanmak.\nEzber: Etiket yazdıysan sadece o etiket."
+      "Kural: p.anil = class’ı anil olan p etiketleri.\nNasıl çözersin: Seçici ‘p’ dediği için div etkilenmez.\nTuzak: .anil ile p.anil’i aynı sanmak.\nTaktik: Etiket yazdıysan sadece o etiket."
   },
 
   {
-    q:
-      "position: relative için en doğru ifade hangisidir?",
+    q: "Float ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\nimg{ float:left; margin-right:10px; }",
     t: "mcq",
     o: [
-      "Eleman normal akıştan çıkar ve yer kaplamaz",
-      "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur",
-      "Eleman ekrana sabitlenir (scroll etmez)",
-      "Eleman otomatik en üste çıkar",
-      "Eleman sadece grid içinde çalışır"
+      "Resmi ortalamak için kullanılır.",
+      "Resmi sola alır, metni resmin yanına sardırır (ürün görseli + açıklama).",
+      "Elemanı görünmez yapar.",
+      "Elemanı sticky yapar.",
+      "Elemanı grid’e çevirir."
     ],
-    a: "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur",
+    a: "Resmi sola alır, metni resmin yanına sardırır (ürün görseli + açıklama).",
     difficulty: "medium",
     week: 10,
-    topic: "position relative",
-    importance: "high",
+    topic: "Float",
+    importance: "medium",
     explanation:
-      "Kavram: relative = ‘kendi yerinden kay’ (top/left ile).\nÇözüm: ‘Yer korunur’ ifadesi relative’in imzasıdır.\nTuzak: absolute ile karıştırmak.\nEzber: relative = kayar ama izi kalır."
+      "Kavram: float = elemanı yana alır; metin etrafına sarabilir.\nTuzak: float’ı flex sanmak.\nTaktik: ‘Ürün görseli solda, yazı sağda’ = float klasik."
   },
 
   {
-    q:
-      "position: absolute referans sorusu:\n\n.parent{ position:relative; }\n.badge{ position:absolute; top:10px; right:10px; }\n\n.badge konumu neye göre hesaplanır?",
+    q: "position: relative için en doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)",
+    t: "mcq",
+    o: [
+      "Eleman normal akıştan çıkar ve yer kaplamaz.",
+      "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur.",
+      "Eleman ekrana sabitlenir (scroll etmez).",
+      "Eleman otomatik en üste çıkar.",
+      "Eleman sadece grid içinde çalışır."
+    ],
+    a: "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur.",
+    difficulty: "medium",
+    week: 10,
+    topic: "Position relative",
+    importance: "high",
+    explanation:
+      "Kural: relative = yerini korur, top/left ile görsel olarak kayar.\nTuzak: absolute ile karıştırmak.\nTaktik: relative = ‘kayar ama izi kalır’."
+  },
+
+  {
+    q: "position:absolute referans sorusu: .badge konumu neye göre hesaplanır? (PÇ2,4,11 / ÖÇ5)\n\n.parent{ position:relative; }\n.badge{ position:absolute; top:10px; right:10px; }",
     t: "mcq",
     o: [
       "Her zaman ekranın sağ üstüne göre",
@@ -685,35 +647,33 @@ window.questionBank = [
     a: "En yakın position verilmiş ata (.parent) kutusuna göre",
     difficulty: "hard",
     week: 10,
-    topic: "absolute referans",
+    topic: "Absolute referans",
     importance: "high",
     explanation:
-      "Kavram: absolute = normal akıştan çıkar; en yakın ‘position’lı ata referans olur.\nÇözüm: parent’a relative verilmiş → referans parent.\nTuzak: ‘her zaman ekran’ sanmak (o fixed’e daha yakın).\nEzber: absolute = ‘en yakın position’lı ata."
+      "Kural: absolute = en yakın ‘position’lı ata referans olur.\nNasıl çözersin: parent’ta position:relative var → referans parent.\nTuzak: absolute’ı ‘her zaman ekran’ sanmak.\nTaktik: Absolute = ‘en yakın konumlu ebeveyn’."
   },
 
   {
-    q:
-      "position: sticky ile ilgili doğru ifade hangisidir?\n\nheader{ position:sticky; top:0; }",
+    q: "position:sticky ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\nheader{ position:sticky; top:0; }",
     t: "mcq",
     o: [
-      "Her zaman fixed gibi yapışır, hiç normal akışta olmaz",
-      "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır",
-      "Sadece resimlerde çalışır",
-      "Sadece z-index ile çalışır",
-      "Overflow’u otomatik hidden yapar"
+      "Her zaman fixed gibi yapışır, hiç normal akışta olmaz.",
+      "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır.",
+      "Sadece resimlerde çalışır.",
+      "Sadece z-index ile çalışır.",
+      "Overflow’u otomatik hidden yapar."
     ],
-    a: "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır",
+    a: "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır.",
     difficulty: "medium",
     week: 10,
-    topic: "sticky",
+    topic: "Sticky",
     importance: "high",
     explanation:
-      "Kavram: sticky = ‘yaklaşınca yapış’.\nÇözüm: top:0 eşiği gelince sabitlenir.\nTuzak: sticky’yi fixed sanmak.\nEzber: sticky = yarı normal, yarı sabit."
+      "Kavram: sticky = normal + yapışma karışımı.\nTuzak: sticky’yi fixed sanmak.\nTaktik: ‘Yaklaşınca yapış’."
   },
 
   {
-    q:
-      "z-index çıktı sorusu:\n\nHTML:\n<div class='a'>A</div>\n<div class='b'>B</div>\n\nCSS:\n.a{ position:absolute; z-index:1; }\n.b{ position:absolute; z-index:2; }\n\nÜstte hangisi görünür?",
+    q: "z-index çıktı sorusu: Üstte hangisi görünür? (PÇ2,4,11 / ÖÇ5)\n\n.a{ position:absolute; z-index:1; }\n.b{ position:absolute; z-index:2; }",
     t: "mcq",
     o: [
       "A üstte görünür (çünkü önce yazıldı)",
@@ -725,120 +685,45 @@ window.questionBank = [
     a: "B üstte görünür (z-index daha büyük)",
     difficulty: "hard",
     week: 10,
-    topic: "z-index çıktı",
+    topic: "z-index",
     importance: "high",
     explanation:
-      "Kavram: z-index büyük olan öne gelir (katman).\nÇözüm: 2 > 1 → B önde.\nTuzak: ‘önce yazılan üstte’ sanmak.\nEzber: z-index = katman numarası; büyük numara önde."
+      "Kural: z-index büyük olan öne gelir.\nTuzak: “önce yazılan üstte” zannetmek.\nTaktik: Katman numarası büyükse önde."
   },
 
   {
-    q:
-      "Overflow sorusu: Aşağıdaki CSS’in etkisi nedir?\n\n.box{ max-height:100px; overflow:auto; }",
+    q: "Overflow sorusu: Aşağıdaki senaryoda hangisi doğru seçilir? (PÇ2,4,11 / ÖÇ5)\n\nSenaryo: Kutu küçük, içerik taşıyor. Taşarsa kaydırma çıksın; taşmazsa çıkmasın.",
     t: "mcq",
-    o: [
-      "Her durumda scroll çubuğu çıkar (içerik az olsa bile)",
-      "İçerik taşarsa scroll çıkar; taşmazsa çıkmaz",
-      "Taşan kısım kesilir, scroll olmaz",
-      "Kutu görünmez olur",
-      "Kutu yapışkan olur"
-    ],
-    a: "İçerik taşarsa scroll çıkar; taşmazsa çıkmaz",
+    o: ["overflow:hidden", "overflow:scroll", "overflow:auto", "overflow:sticky", "overflow:absolute"],
+    a: "overflow:auto",
     difficulty: "medium",
     week: 10,
-    topic: "overflow auto",
+    topic: "Overflow",
     importance: "high",
     explanation:
-      "Kavram: auto = gerekiyorsa kaydır.\nÇözüm: ‘taşarsa’ kelimesi → auto.\nTuzak: scroll ile auto’yu karıştırmak.\nEzber: auto = akıllı scroll."
+      "Kural: auto = gerekiyorsa scroll çıkar.\nTuzak: scroll’u seçmek (her zaman çubuk çıkar).\nTaktik: Auto = akıllı scroll."
   },
 
   {
-    q:
-      "Float çıktı sorusu:\n\nCSS:\nimg{ float:left; margin-right:10px; }\n\nBu kullanım genelde ne amaçla yapılır?",
+    q: "Pseudo-class hangisidir? (PÇ2,4,11 / ÖÇ5)",
     t: "mcq",
-    o: [
-      "Resmi ortalamak için",
-      "Resmi sola alıp metni resmin sağına sardırmak (ürün görseli + açıklama)",
-      "Resmi görünmez yapmak için",
-      "Resmi sabitlemek için (sticky/fixed)",
-      "Sadece grid sütun sayısını artırmak için"
-    ],
-    a: "Resmi sola alıp metni resmin sağına sardırmak (ürün görseli + açıklama)",
-    difficulty: "medium",
+    o: [".menu", "#menu", "a:hover", "div.box", "p.anil"],
+    a: "a:hover",
+    difficulty: "easy",
     week: 10,
-    topic: "float",
+    topic: "Pseudo-class",
     importance: "high",
     explanation:
-      "Kavram: float = elemanı yana alır; metin etrafına sarar.\nÇözüm: ‘ürünün yanına açıklama’ ifadesi float’ın tipik kullanımıdır.\nTuzak: float’ı flex sanmak.\nEzber: Float = ‘yana al + metni sar’."
+      "Kural: Pseudo-class ‘:’ ile gelir (hover, focus, active, visited).\nTuzak: .class ve #id ile karıştırmak.\nTaktik: ‘:’ gördün mü pseudo."
   },
 
   {
-    q:
-      "Border + border-radius çıktı sorusu:\n\n.box{ border: 2px solid black; border-radius: 10px; }\n\nBu CSS ne üretir?",
-    t: "mcq",
-    o: [
-      "Kutu tamamen daire olur",
-      "Kutunun kenarlığı olur ve köşeleri hafif yuvarlanır",
-      "Kutu görünmez olur",
-      "Kutu sadece yazıyı kalınlaştırır",
-      "Kutu otomatik responsive olur"
-    ],
-    a: "Kutunun kenarlığı olur ve köşeleri hafif yuvarlanır",
-    difficulty: "easy",
-    week: 11,
-    topic: "border + radius",
-    importance: "high",
-    explanation:
-      "Kavram: border = çerçeve; border-radius = köşe yuvarlama.\nÇözüm: 10px yuvarlama = hafif yumuşak köşe.\nTuzak: 50% ile 10px’i karıştırmak.\nEzber: 50% daire, px yuvarlama."
-  },
-
-  {
-    q:
-      "Gölge sorusu: Aşağıdakilerden hangisi kutuya gölge verir?",
-    t: "mcq",
-    o: [
-      "text-shadow: 0 4px 12px rgba(0,0,0,0.2);",
-      "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
-      "shadow-box: 0 4px 12px;",
-      "box-radius: 12px;",
-      "opacity-shadow: 0.2;"
-    ],
-    a: "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
-    difficulty: "easy",
-    week: 11,
-    topic: "box-shadow",
-    importance: "medium",
-    explanation:
-      "Kavram: box-shadow = kutu; text-shadow = yazı.\nÇözüm: ‘kutunun gölgesi’ → box-shadow.\nTuzak: text-shadow seçmek.\nEzber: box=kutunun gölgesi."
-  },
-
-  {
-    q:
-      "Çıktı sorusu (text-align + cursor):\n\n.btn{ text-align:center; cursor:pointer; }\n\nBu iki özellik ne sağlar?",
-    t: "mcq",
-    o: [
-      "Metni sola alır; mouse işaretçisi değişmez",
-      "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
-      "Metni büyütür; resme filtre ekler",
-      "Elemanı yapışkan yapar",
-      "Elemanı görünmez yapar"
-    ],
-    a: "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
-    difficulty: "medium",
-    week: 11,
-    topic: "text-align + cursor",
-    importance: "medium",
-    explanation:
-      "Kavram: text-align=center metni ortalar. cursor=pointer tıklanabilir hissi verir.\nÇözüm: İki özelliği ayrı ayrı okuyup etkisini birleştir.\nTuzak: cursor’ın sadece linkte çalıştığını sanmak.\nEzber: pointer = ‘elin işareti’."
-  },
-
-  {
-    q:
-      "Pseudo-class çıktı sorusu:\n\na:hover{ color:red; }\n\nBu kural ne zaman çalışır?",
+    q: "Çıktı sorusu: a:hover kuralı ne zaman çalışır? (PÇ2,4,11 / ÖÇ5)\n\na:hover{ color:red; }",
     t: "mcq",
     o: [
       "Link ziyaret edilince (visited)",
       "Mouse linkin üstüne gelince",
-      "Linke tıklayıp basılı tutunca (active)",
+      "Linke basılı tutunca (active)",
       "Input’a tıklayınca (focus)",
       "Sayfa ilk açılınca"
     ],
@@ -848,32 +733,30 @@ window.questionBank = [
     topic: "hover",
     importance: "high",
     explanation:
-      "Kavram: :hover = üstüne gelince.\nÇözüm: ‘mouse üzerine gelince’ ifadesi hover’dır.\nTuzak: active/focus ile karıştırmak.\nEzber: hover = ‘üzerindeyken’."
+      "Kural: hover = üstüne gelince.\nTuzak: active/focus ile karıştırmak.\nTaktik: hover = ‘üzerindeyken’."
   },
 
   {
-    q:
-      "Pseudo-class çıktı sorusu:\n\ninput:focus{ border:2px solid black; }\n\nKullanıcı input’a tıklayıp yazmaya başladığında ne olur?",
+    q: "Çıktı sorusu: input:focus kuralı ne zaman çalışır? (PÇ2,4,11 / ÖÇ5)\n\ninput:focus{ border:2px solid black; }",
     t: "mcq",
     o: [
-      "Hiçbir şey olmaz",
-      "Input odak alınca border kalınlaşıp siyah olur",
-      "Sadece mouse üstüne gelince border siyah olur",
-      "Sadece form gönderilince border siyah olur",
-      "Input görünmez olur"
+      "Mouse input üstüne gelince",
+      "Input tıklanıp odak alınca/yazı girerken",
+      "Form gönderilince",
+      "Sayfa yenilenince",
+      "Sadece visited olunca"
     ],
-    a: "Input odak alınca border kalınlaşıp siyah olur",
+    a: "Input tıklanıp odak alınca/yazı girerken",
     difficulty: "easy",
     week: 10,
     topic: "focus",
     importance: "high",
     explanation:
-      "Kavram: :focus = eleman aktif/odakta (tıklanıp yazı girilen an).\nÇözüm: ‘tıkla-yaz’ = focus.\nTuzak: hover ile karıştırmak.\nEzber: focus = odak."
+      "Kural: focus = klavye odağı/aktif giriş.\nTuzak: hover ile karıştırmak.\nTaktik: Tıkla + yaz = focus."
   },
 
   {
-    q:
-      "Pseudo-class karışık soru: Aşağıdaki eşleştirmelerden hangisi doğrudur?",
+    q: "Pseudo-class eşleştirmelerinden hangisi doğrudur? (PÇ2,4,11 / ÖÇ5)",
     t: "mcq",
     o: [
       "visited: mouse üstüne gelince, hover: ziyaret edilmiş link",
@@ -888,12 +771,11 @@ window.questionBank = [
     topic: "hover/focus/active/visited",
     importance: "high",
     explanation:
-      "Kavram: visited=geçmişte tıklanmış link, active=basılı tutma anı.\nÇözüm: Eşleştirmede ‘anlık’ (active/hover) vs ‘geçmiş’ (visited) ayrımı yap.\nTuzak: visited-hover yer değiştiren şıklar.\nEzber: visited=geçmiş, active=basılı."
+      "Kural: visited=geçmişte tıklanmış link, active=basılı tutma anı.\nTuzak: visited-hover yer değiştiren şık.\nTaktik: visited=geçmiş, active=basılı."
   },
 
   {
-    q:
-      "Dropdown çıktı sorusu:\n\nCSS:\n.dd-content{ display:none; }\n.dd:hover .dd-content{ display:block; }\n\nBu kuralın etkisi hangisidir?",
+    q: "Dropdown mantığı: Aşağıdaki CSS’in etkisi hangisidir? (PÇ2,4,11 / ÖÇ5)\n\n.dd-content{ display:none; }\n.dd:hover .dd-content{ display:block; }",
     t: "mcq",
     o: [
       ".dd-content sayfa açılır açılmaz görünür",
@@ -905,109 +787,161 @@ window.questionBank = [
     a: ".dd üzerine mouse gelince .dd-content görünür olur",
     difficulty: "medium",
     week: 12,
-    topic: "dropdown + display",
+    topic: "Dropdown",
     importance: "high",
     explanation:
-      "Kavram: display:none gizler, hover ile display:block gösterir.\nÇözüm: ‘hover geldi mi görünür’ kalıbını tanı.\nTuzak: ‘tıklayınca’ (JS gibi) sanmak.\nEzber: Dropdown = none → hover → block."
+      "Kural: display:none gizler; hover gelince display:block gösterir.\nTuzak: ‘tıklayınca açılır’ sanmak (JS gibi).\nTaktik: Dropdown = none → hover → block."
   },
 
   {
-    q:
-      "Responsive tanımı + media query çıktı:\n\n@media (max-width:768px){ .menu{ display:none; } }\n\nEkran genişliği 600px iken ne olur?",
+    q: "text-align ve cursor için doğru yorum hangisidir? (PÇ2,4,11 / ÖÇ4)\n\n.btn{ text-align:center; cursor:pointer; }",
     t: "mcq",
     o: [
-      "Menu görünür kalır, çünkü 600 < 768 çalışmaz",
-      "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır",
-      "Menu büyür",
-      "Menu sticky olur",
-      "Menu z-index 999 olur"
+      "Metni sola alır; mouse işaretçisi değişmez",
+      "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
+      "Metni büyütür; resme filtre ekler",
+      "Elemanı yapışkan yapar",
+      "Elemanı görünmez yapar"
     ],
-    a: "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır",
-    difficulty: "hard",
-    week: 14,
-    topic: "responsive + media query",
-    importance: "high",
-    explanation:
-      "Kavram: responsive = ekran değişse de tasarım bozulmaması.\nÇözüm: max-width:768 → 768 ve ALTINDA çalışır. 600 bu aralıkta.\nTuzak: max-width’i ‘768 üstü’ sanmak.\nEzber: max = ‘en fazla’ (küçük ekranlar)."
-  },
-
-  {
-    q:
-      "Flexbox sorusu (tek boyut):\n\n.container{ display:flex; justify-content:center; align-items:center; height:200px; }\n\nBu ne sağlar?",
-    t: "mcq",
-    o: [
-      "Elemanları yalnızca dikey hizalar",
-      "Elemanları yalnızca yatay hizalar",
-      "Elemanları hem ana eksende hem çapraz eksende ortalar (tipik olarak tam ortalama)",
-      "Elemanları grid’e çevirir",
-      "Elemanları görünmez yapar"
-    ],
-    a: "Elemanları hem ana eksende hem çapraz eksende ortalar (tipik olarak tam ortalama)",
+    a: "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
     difficulty: "medium",
-    week: 14,
-    topic: "flexbox",
-    importance: "high",
-    explanation:
-      "Kavram: Flexbox = tek boyutlu düzen (satır ya da sütun).\nÇözüm: justify-content=ana eksen; align-items=çapraz eksen. İkisi center → ortalama.\nTuzak: justify ile align’i terslemek.\nEzber: justify=ana, align=yan."
-  },
-
-  {
-    q:
-      "Grid sorusu (iki boyut):\n\n.grid{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px; }\n\nBu CSS ne kurar?",
-    t: "mcq",
-    o: [
-      "3 eşit sütunlu bir yerleşim ve aralarında 10px boşluk",
-      "3 eşit satırlı bir yerleşim ve aralarında 10px boşluk",
-      "Tek satırda hizalama (flex) oluşturur",
-      "Sadece yazıyı ortalar",
-      "Sadece linkleri renklendirir"
-    ],
-    a: "3 eşit sütunlu bir yerleşim ve aralarında 10px boşluk",
-    difficulty: "medium",
-    week: 14,
-    topic: "grid",
-    importance: "high",
-    explanation:
-      "Kavram: Grid = 2D (satır+sütun). grid-template-columns sütunları kurar.\nÇözüm: 1fr 1fr 1fr = eşit 3 sütun. gap=aralık.\nTuzak: rows ile columns karıştırmak.\nEzber: columns = sütun."
-  },
-
-  {
-    q:
-      "Transition vs Animation farkı hangisidir? (Finalde @keyframes sorusu gelebilir)",
-    t: "mcq",
-    o: [
-      "Transition sonsuz döngü yapar; animation sadece hover’da çalışır",
-      "Transition bir durumdan diğerine yumuşak geçiştir; Animation @keyframes ile zaman çizelgesi/akış tanımlar",
-      "Transition sadece grid’de çalışır; animation sadece flex’te çalışır",
-      "Animation için @keyframes gerekmez",
-      "Transition görünürlüğü (display) değiştirir"
-    ],
-    a: "Transition bir durumdan diğerine yumuşak geçiştir; Animation @keyframes ile zaman çizelgesi/akış tanımlar",
-    difficulty: "hard",
-    week: 14,
-    topic: "transition vs animation",
-    importance: "high",
-    explanation:
-      "Kavram: transition = ‘değişim olunca yumuşat’. animation = ‘kare kare hareket’ (@keyframes şart).\nÇözüm: @keyframes kelimesi animation’a işaret eder.\nTuzak: transition’ı animasyon sanmak.\nEzber: Transition=geçiş, Animation=senaryo (@keyframes)."
-  },
-
-  {
-    q:
-      "Bootstrap sorusu: Bootstrap nedir ve CSS olarak projeye eklemek için hangi yaklaşım kullanılır?",
-    t: "mcq",
-    o: [
-      "Bootstrap bir veritabanıdır; <img src='...'> ile eklenir",
-      "Bootstrap hazır UI bileşenleri sunan kütüphanedir; <link rel='stylesheet' href='CDN'> ile eklenir",
-      "Bootstrap HTML’in yerine geçen dildir; <script> ile zorunlu eklenir",
-      "Bootstrap sadece hover efektidir; style='' içinde yazılır",
-      "Bootstrap bir tarayıcıdır; kurulmadan çalışmaz"
-    ],
-    a: "Bootstrap hazır UI bileşenleri sunan kütüphanedir; <link rel='stylesheet' href='CDN'> ile eklenir",
-    difficulty: "medium",
-    week: 14,
-    topic: "bootstrap",
+    week: 11,
+    topic: "text-align + cursor",
     importance: "medium",
     explanation:
-      "Kavram: Bootstrap = hazır buton/navbar/form/grid gibi tasarımlar (kütüphane).\nÇözüm: CSS kütüphanesi ekleme = <link rel='stylesheet' href='...'>.\nTuzak: CSS’i script ile ekleme sanmak.\nEzber: Kütüphane=link ile CSS eklenir."
+      "Kural: text-align=center metni ortalar. cursor:pointer tıklanabilir hissi verir.\nTuzak: cursor’ın sadece linkte çalıştığını sanmak.\nTaktik: pointer=elin işareti."
+  },
+
+  {
+    q: "Border ve border-radius için doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ4)\n\n.avatar{ border:2px solid black; border-radius:50%; }",
+    t: "mcq",
+    o: [
+      "Border resmi siler, radius yazıyı büyütür.",
+      "Border kenarlık çizer; border-radius:50% elemanı daire yapar (kare kutuda).",
+      "Border sadece tabloda çalışır.",
+      "border-radius sadece px olur, % olmaz.",
+      "border-radius:50% köşeleri 10px yapar."
+    ],
+    a: "Border kenarlık çizer; border-radius:50% elemanı daire yapar (kare kutuda).",
+    difficulty: "medium",
+    week: 11,
+    topic: "border + border-radius",
+    importance: "high",
+    explanation:
+      "Kural: border=çerçeve; border-radius köşe yuvarlar.\nBilgi: 50% (kare kutuysa) daire görünümü verir.\nTuzak: % olmaz sanmak.\nTaktik: 50% = daire, px = yumuşak köşe."
+  },
+
+  {
+    q: "Kutunun gölgesi için hangi özellik kullanılır? (PÇ2,4,11 / ÖÇ5)",
+    t: "mcq",
+    o: [
+      "text-shadow: 0 4px 12px rgba(0,0,0,0.2);",
+      "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
+      "shadow-box: 0 4px 12px;",
+      "box-radius: 12px;",
+      "opacity-shadow: 0.2;"
+    ],
+    a: "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
+    difficulty: "easy",
+    week: 11,
+    topic: "box-shadow",
+    importance: "medium",
+    explanation:
+      "Kural: box-shadow kutuya, text-shadow yazıya gölge verir.\nTuzak: text-shadow seçmek.\nTaktik: box=kutunun gölgesi."
+  },
+
+  {
+    q: "Transition (geçiş) ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\n.btn{ transition:0.3s; }\n.btn:hover{ transform:scale(1.05); }",
+    t: "mcq",
+    o: [
+      "Hover olunca aniden büyür, yumuşak geçiş olmaz.",
+      "Hover olunca büyüme yumuşak (0.3 saniyede) gerçekleşir.",
+      "transition sadece border’a etki eder.",
+      "transition sadece grid’de çalışır.",
+      "transition elemanı görünmez yapar."
+    ],
+    a: "Hover olunca büyüme yumuşak (0.3 saniyede) gerçekleşir.",
+    difficulty: "medium",
+    week: 14,
+    topic: "Transitions",
+    importance: "high",
+    explanation:
+      "Kural: transition durum değişimini yumuşatır (hover gibi).\nTuzak: transition’ı animation sanmak.\nTaktik: Transition=geçiş (yumuşatma)."
+  },
+
+  {
+    q: "@keyframes ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\n@keyframes pulse{\n  0%{ transform:scale(1); }\n  100%{ transform:scale(1.05); }\n}\n.box{ animation:pulse 1s infinite alternate; }",
+    t: "mcq",
+    o: [
+      "@keyframes başka CSS dosyası çağırır.",
+      "@keyframes animasyonun zaman içindeki adımlarını tanımlar; animation ile uygulanır.",
+      "@keyframes sadece hover’da çalışır, animation ile ilgisi yoktur.",
+      "@keyframes sadece tabloda kullanılır.",
+      "@keyframes display değerini değiştirir."
+    ],
+    a: "@keyframes animasyonun zaman içindeki adımlarını tanımlar; animation ile uygulanır.",
+    difficulty: "hard",
+    week: 14,
+    topic: "Animation + keyframes",
+    importance: "high",
+    explanation:
+      "Kural: animation = çalıştırma, keyframes = senaryo/adımlar.\nTuzak: transition ile karıştırmak.\nTaktik: Keyframes = ‘kare kare hareket planı’."
+  },
+
+  {
+    q: "Responsive + media query çıktı: Ekran 600px iken ne olur? (PÇ2,4,11 / ÖÇ5)\n\n@media (max-width:768px){ .menu{ display:none; } }",
+    t: "mcq",
+    o: [
+      "Menu görünür kalır, çünkü 600 < 768 çalışmaz.",
+      "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır.",
+      "Menu büyür.",
+      "Menu sticky olur.",
+      "Menu z-index 999 olur."
+    ],
+    a: "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır.",
+    difficulty: "hard",
+    week: 14,
+    topic: "Responsive",
+    importance: "high",
+    explanation:
+      "Kural: max-width:768 → 768 ve ALTINDA çalışır.\nTuzak: max-width’i ‘768 üstü’ sanmak.\nTaktik: max=‘en fazla’ (küçük ekran)."
+  },
+
+  {
+    q: "Flexbox ve Grid farkı için en doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)",
+    t: "mcq",
+    o: [
+      "Flexbox iki boyut, Grid tek boyuttur.",
+      "Flexbox tek boyut (satır veya sütun), Grid iki boyut (satır+sütun) düzen kurar.",
+      "İkisi tamamen aynı şeydir.",
+      "Grid sadece hover yapar; Flexbox sadece renk değiştirir.",
+      "Flexbox sadece tabloda çalışır; Grid sadece formda çalışır."
+    ],
+    a: "Flexbox tek boyut (satır veya sütun), Grid iki boyut (satır+sütun) düzen kurar.",
+    difficulty: "medium",
+    week: 14,
+    topic: "Flexbox vs Grid",
+    importance: "high",
+    explanation:
+      "Kavram: Flex=tek eksen (1D), Grid=iki eksen (2D).\nTuzak: İkisini terslemek.\nTaktik: Flex=tek çizgi, Grid=ızgara."
+  },
+
+  {
+    q: "Bootstrap nedir ve projeye eklemek için en doğru yaklaşım hangisidir? (PÇ2,4,11 / ÖÇ5)",
+    t: "mcq",
+    o: [
+      "Bootstrap veritabanıdır; <img src='...'> ile eklenir.",
+      "Bootstrap hazır UI bileşenleri sunan kütüphanedir; genelde <link rel='stylesheet' href='CDN'> ile eklenir.",
+      "Bootstrap HTML’in yerine geçen dildir; sadece <script> ile eklenir.",
+      "Bootstrap sadece hover efektidir; style='' içinde yazılır.",
+      "Bootstrap tarayıcıdır; kurulmadan çalışmaz."
+    ],
+    a: "Bootstrap hazır UI bileşenleri sunan kütüphanedir; genelde <link rel='stylesheet' href='CDN'> ile eklenir.",
+    difficulty: "medium",
+    week: 14,
+    topic: "Bootstrap",
+    importance: "medium",
+    explanation:
+      "Kavram: Bootstrap = hazır buton, navbar, form, grid gibi tasarımlar.\nNasıl çözersin: CSS kütüphanesi ekleme → <link rel='stylesheet' ...>.\nTuzak: CSS’i script ile ekleme sanmak.\nTaktik: ‘Kütüphane = hazır tasarım parçaları’."
   }
 ];
