@@ -1,986 +1,833 @@
-// FINAL – Yazılım Mimarileri (1-6. Hafta) – 50 Soru (MCQ)
-// ÖNEMLİ: a alanı 1-tabanlıdır: 1=A, 2=B, 3=C, 4=D
+// Yazılım Mimarileri (7-11) – 50 Soruluk Sınav Soru Bankası (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
-
-  // =========================
-  // ===== 1. HAFTA (8) ======
-  // =========================
+  // =========================================================
+  // ==== 7. HAFTA – Spiral Model & RAD (10 Soru) ============
+  // =========================================================
   {
-    q: "‘Yazılım’ kavramını en doğru şekilde hangisi açıklar?",
+    q: "Spiral Model’in temel amacı aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Bilgisayarın fiziksel parçaları ve bunların elektriksel yapısı",
-      "Bir sistemi çalıştıran komutlar/talimatlar ve bunların oluşturduğu programlar bütünü",
-      "Sadece kullanıcı arayüzü tasarımı (buton, renk, font)",
-      "Sadece internet bağlantısı ve ağ ayarları"
+      "Sadece kodu hızlı yazmak",
+      "Riskleri erken tespit edip yöneterek iteratif geliştirmek",
+      "Testi tamamen sona bırakmak",
+      "Sadece küçük projeleri tek seferde bitirmek",
+      "Sadece tasarım dokümanı üretmek"
     ],
-    a: 2,
-    difficulty: 1,
-    week: 1,
-    topic: "Yazılım Tanımı",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nYazılım, donanıma ‘ne yapacağını’ söyleyen komutlar ve bu komutların oluşturduğu programlar bütünüdür. Donanım tek başına iş yapamaz; işi yaptıran yazılımdır.\nTaktik: Donanım = beden, yazılım = komut veren zihin."
+    a: "Riskleri erken tespit edip yöneterek iteratif geliştirmek",
+    difficulty: "easy",
+    week: 7,
+    topic: "Spiral Model - amaç",
+    importance: "high",
+    explanation: "Spiral Model her döngüde risk analizi yapıp riski azaltarak iteratif geliştirmeyi hedefler."
   },
   {
-    q: "Sistem yazılımı ile uygulama yazılımı arasındaki temel fark hangisidir?",
+    q: "Spiral Model’de her döngü (spiral turu) genel olarak hangi mantıkla ilerler?",
     t: "mcq",
     o: [
-      "Sistem yazılımı kullanıcı işlerini yapar; uygulama yazılımı donanımı yönetir",
-      "Sistem yazılımı donanım/kaynakları yönetir ve ortam sağlar; uygulama yazılımı kullanıcı görevlerini gerçekleştirir",
-      "Sistem yazılımı sadece internet içindir; uygulama yazılımı sadece oyun içindir",
-      "İkisi aynı şeydir, sadece isimleri farklıdır"
+      "Tek sefer gereksinim yaz → direkt teslim",
+      "Planla → risk analizi yap → geliştir → değerlendir ve sonraki döngüyü planla",
+      "Kodla → hiç test etmeden yayınla",
+      "Sadece prototip çiz → projeyi bitir",
+      "Sadece müşteri toplantısı yap → kod yazma"
     ],
-    a: 2,
-    difficulty: 1,
-    week: 1,
-    topic: "Sistem vs Uygulama",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nSistem yazılımı (işletim sistemi, sürücüler) kaynakları yönetir ve ortam sağlar. Uygulama yazılımı (tarayıcı, ofis, oyun) kullanıcı işini yapar.\nTaktik: Sistem = altyapı; uygulama = hizmet."
+    a: "Planla → risk analizi yap → geliştir → değerlendir ve sonraki döngüyü planla",
+    difficulty: "medium",
+    week: 7,
+    topic: "Spiral Model - aşamalar",
+    importance: "high",
+    explanation: "Spiral döngüsü; hedef/plan, risk analizi, geliştirme ve değerlendirme-planlama adımlarını tekrarlar."
   },
   {
-    q: "Bir yazılımın geliştirilmesinde en temel yaşam döngüsü akışı hangisine en yakındır?",
+    q: "Spiral Model, hangi proje tipi için daha uygundur?",
     t: "mcq",
     o: [
-      "Test → Kodlama → Dağıtım → Tasarım",
-      "Gereksinim/Tasarım → Kodlama → Test → Dağıtım/Canlıya Alma",
-      "Kodlama → Tasarım → Test → Gereksinim",
-      "Dağıtım → Tasarım → Kodlama → Test"
+      "Riskin çok düşük olduğu, çok küçük projeler",
+      "Gereksinimleri hiç değişmeyen, çok basit projeler",
+      "Büyük, karmaşık ve riskli projeler",
+      "Sadece tek geliştirici ile yapılan hobi projeleri",
+      "Sadece statik web sayfası projeleri"
     ],
-    a: 2,
-    difficulty: 1,
-    week: 1,
-    topic: "SDLC Temel Akış",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nGenel omurga: ne istendiğini anla/tasarla, kodla, test et, sonra kullanıcıya sun.\nTaktik: Planla → Yap → Doğrula → Yayınla."
+    a: "Büyük, karmaşık ve riskli projeler",
+    difficulty: "easy",
+    week: 7,
+    topic: "Spiral Model - kullanım",
+    importance: "high",
+    explanation: "Risk yönetimi güçlü olduğu için büyük ve riskli projelerde tercih edilir."
   },
   {
-    q: "Algoritma nedir?",
+    q: "RAD (Rapid Application Development) yaklaşımının en belirgin özelliği hangisidir?",
     t: "mcq",
     o: [
-      "Bir problemin çözümünü adım adım tanımlayan işlem sırası",
-      "Sadece programlama dilinin sözdizimi kuralları",
-      "Uygulamanın ekran çizimleri",
-      "Bilgisayarın işlem gücünü ölçen değer"
+      "Uzun analiz dönemi, geç teslim",
+      "Hızlı prototipleme ve kısa iterasyonlarla hızlı teslim",
+      "Testin tamamen kaldırılması",
+      "Sadece dokümantasyon üretmek",
+      "Yalnızca tek teknoloji kullanmak zorunda olmak"
     ],
-    a: 1,
-    difficulty: 1,
-    week: 1,
-    topic: "Algoritma",
-    importance: 2,
-    explanation:
-      "Doğru cevap: A\nAlgoritma, bir işi çözmek için izlenen adımların mantıksal tarifidir. Kod, algoritmanın bir dille yazılmış halidir.\nTaktik: Algoritma = tarif; kod = tarifin yazıldığı dil."
+    a: "Hızlı prototipleme ve kısa iterasyonlarla hızlı teslim",
+    difficulty: "easy",
+    week: 7,
+    topic: "RAD - temel fikir",
+    importance: "high",
+    explanation: "RAD hızlı prototip + kısa iterasyon + sık geri bildirim ile teslim süresini kısaltır."
   },
   {
-    q: "Derleme (compile) ile yorumlama (interpret) arasındaki fark hangisidir?",
+    q: "RAD yaklaşımında müşteri/kullanıcı katılımı için hangisi DOĞRUDUR?",
     t: "mcq",
     o: [
-      "Derleme kodu çalışma anında satır satır çalıştırır; yorumlama önce makine diline çevirir",
-      "Derleme kaynak kodu önce makine diline/ara koda çevirir; yorumlama kodu genellikle çalışma anında işler",
-      "İkisi tamamen aynı süreçtir",
-      "Derleme sadece mobilde, yorumlama sadece masaüstünde olur"
+      "Müşteri sadece proje sonunda sistemi görür",
+      "Müşteri sadece test aşamasında devreye girer",
+      "Müşteri iterasyonlar boyunca sık geri bildirim verir",
+      "Müşteri katılımı RAD’da önerilmez",
+      "Müşteri sadece kod incelemesi yapar"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 1,
-    topic: "Compile vs Interpret",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nCompile: önce çevir, sonra çalıştır. Interpret: çoğunlukla çalıştırırken yorumla. Bu fark performans ve hata yakalama biçimini etkileyebilir.\nTaktik: Compile = önce çevir; Interpret = çalıştırırken çevir."
+    a: "Müşteri iterasyonlar boyunca sık geri bildirim verir",
+    difficulty: "easy",
+    week: 7,
+    topic: "RAD - müşteri geri bildirimi",
+    importance: "high",
+    explanation: "RAD’da geri bildirim, prototip ve iterasyonların yönünü belirler."
   },
   {
-    q: "Entegrasyon (integration) neyi ifade eder?",
+    q: "RAD’da prototip (prototype) kullanmanın temel amacı hangisidir?",
     t: "mcq",
     o: [
-      "Bir yazılımın görsel tasarımını hazırlamak",
-      "Farklı bileşen/sistemlerin birlikte çalışacak şekilde birleştirilmesi ve veri alışverişinin sağlanması",
-      "Sadece veritabanında tablo oluşturmak",
-      "Kodu kısaltmak için yapılan optimizasyon"
+      "Kodu tamamen bitirmek",
+      "İhtiyaçları ve arayüz/işlevi erken görünür kılıp geri bildirim almak",
+      "Sadece performans ölçmek",
+      "Sadece veritabanı kurmak",
+      "Sadece dokümantasyon yazmak"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 1,
-    topic: "Entegrasyon",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nEntegrasyon, farklı parçaların (servis/modül/harici sistem) birbirine bağlanıp birlikte çalışmasıdır.\nTaktik: Entegrasyon = parçaları konuşturma."
+    a: "İhtiyaçları ve arayüz/işlevi erken görünür kılıp geri bildirim almak",
+    difficulty: "medium",
+    week: 7,
+    topic: "RAD - prototip",
+    importance: "high",
+    explanation: "Prototip, doğru ihtiyacı erken yakalamayı ve yön değiştirmeyi kolaylaştırır."
   },
   {
-    q: "Sürüm kontrol (version control) sistemlerinin (örn. Git) temel faydası hangisidir?",
+    q: "Spiral Model’de her döngü sonunda sonuçlar hangi işlemden geçer ve sonraki döngü buna göre planlanır?",
     t: "mcq",
     o: [
-      "Uygulamanın internet hızını artırmak",
-      "Kod değişikliklerini tarihçeli takip etmek, geri almak ve ekip çalışmasını kolaylaştırmak",
-      "Sadece arayüz tasarımını çizmek",
-      "Veritabanındaki verileri otomatik silmek"
+      "Şifrelenir",
+      "Silinir",
+      "Değerlendirilir",
+      "Arşivlenip değişmeden kalır",
+      "Test edilmeden yayınlanır"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 1,
-    topic: "Sürüm Kontrol",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nSürüm kontrol; değişiklik geçmişi, geri dönüş (rollback) ve ekip çalışmasını düzenler.\nTaktik: Git = geçmiş + geri alma + ekip uyumu."
+    a: "Değerlendirilir",
+    difficulty: "easy",
+    week: 7,
+    topic: "Spiral - değerlendirme",
+    importance: "medium",
+    explanation: "Her turda çıktı gözden geçirilir; geri bildirimle bir sonraki tur planlanır."
   },
   {
-    q: "‘Yazılım mimarisi’ en iyi hangi ifadeyle özetlenir?",
+    q: "RAD yaklaşımında hızlı geliştirme için sık kullanılan yöntemlerden biri aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Kodun girinti ve yazım stili kuralları",
-      "Sistemin bileşenleri, sorumlulukları ve aralarındaki ilişkilerin üst seviye tasarımı",
-      "Sadece renk/font seçimi",
-      "Sadece veritabanı tablo isimlendirmesi"
+      "Prototip oluşturma",
+      "Sadece uzun dokümantasyon yazma",
+      "Tüm testleri sona bırakma",
+      "Tek seferde büyük teslim",
+      "Değişiklik taleplerini reddetme"
     ],
-    a: 2,
-    difficulty: 3,
-    week: 1,
-    topic: "Mimari Kavramı",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nMimari; büyük resimdir: hangi parçalar var, ne yaparlar, nasıl iletişim kurarlar.\nTaktik: Mimari = harita (büyük resim)."
+    a: "Prototip oluşturma",
+    difficulty: "easy",
+    week: 7,
+    topic: "RAD - prototip",
+    importance: "high",
+    explanation: "RAD’da prototip ile hızlı geri bildirim alınır ve ürün hızlı olgunlaştırılır."
   },
-
-  // =========================
-  // ===== 2. HAFTA (8) ======
-  // =========================
   {
-    q: "Komut (command) kavramı en doğru hangi açıklamaya uyar?",
+    q: "Spiral Model ile RAD arasındaki en doğru fark hangisidir?",
     t: "mcq",
     o: [
-      "Sadece grafikli arayüzde tıklanan buton adı",
-      "İşletim sistemi veya bir yazılıma belirli bir işi yaptıran talimat",
-      "Programlama dilinde değişken türü",
-      "Veritabanında kayıtların saklandığı alan"
+      "Spiral tamamen tek seferliktir, RAD iteratiftir",
+      "Spiral risk yönetimine çok odaklanır; RAD hız ve prototiplemeye odaklanır",
+      "RAD sadece büyük projelerde kullanılır, Spiral küçük projelerde",
+      "İkisi de test yapmayı yasaklar",
+      "İkisi de kullanıcı geri bildirimini gereksiz görür"
     ],
-    a: 2,
-    difficulty: 1,
-    week: 2,
-    topic: "Komut Kavramı",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nKomut, sisteme ‘şunu yap’ diyen talimattır (CLI komutları gibi).\nTaktik: Komut = tek satırlık iş emri."
+    a: "Spiral risk yönetimine çok odaklanır; RAD hız ve prototiplemeye odaklanır",
+    difficulty: "medium",
+    week: 7,
+    topic: "Spiral vs RAD",
+    importance: "high",
+    explanation: "Spiral’in omurgası risk analizi; RAD’ın omurgası hızlı prototip ve hızlı teslimdir."
   },
   {
-    q: "Linux/Unix’te dizin içeriğini listelemek için kullanılan komut hangisidir?",
-    t: "mcq",
-    o: ["cd", "ls", "mkdir", "rm"],
-    a: 2,
-    difficulty: 1,
-    week: 2,
-    topic: "Linux Komutları",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nls içerik listeler. cd dizin değiştirir, mkdir klasör oluşturur, rm siler.\nTaktik: ls = list."
-  },
-  {
-    q: "Linux/Unix’te dizin değiştirmek için kullanılan komut hangisidir?",
-    t: "mcq",
-    o: ["pwd", "cd", "rm", "touch"],
-    a: 2,
-    difficulty: 1,
-    week: 2,
-    topic: "Linux Komutları",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\ncd (change directory) dizin değiştirir.\nTaktik: cd = change directory."
-  },
-  {
-    q: "Windows CMD’de dizin içeriğini listelemek için kullanılan komut hangisidir?",
-    t: "mcq",
-    o: ["dir", "ls", "pwd", "cat"],
-    a: 1,
-    difficulty: 1,
-    week: 2,
-    topic: "Windows Komutları",
-    importance: 2,
-    explanation:
-      "Doğru cevap: A\nWindows’ta dir içerik listeler.\nTaktik: dir = directory."
-  },
-  {
-    q: "SQL’de veri eklemek için kullanılan temel komut hangisidir?",
-    t: "mcq",
-    o: ["SELECT", "UPDATE", "INSERT", "DELETE"],
-    a: 3,
-    difficulty: 1,
-    week: 2,
-    topic: "SQL CRUD",
-    importance: 3,
-    explanation:
-      "Doğru cevap: C\nINSERT ekler, SELECT okur, UPDATE günceller, DELETE siler.\nTaktik: CRUD: Create=INSERT, Read=SELECT, Update=UPDATE, Delete=DELETE."
-  },
-  {
-    q: "SQL’de veri çekmek (okumak) için kullanılan temel komut hangisidir?",
-    t: "mcq",
-    o: ["SELECT", "INSERT", "UPDATE", "DELETE"],
-    a: 1,
-    difficulty: 1,
-    week: 2,
-    topic: "SQL CRUD",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nSELECT veriyi okur/çeker.\nTaktik: SELECT = seç/çek."
-  },
-  {
-    q: "Veri yapıları neden performans açısından kritiktir?",
+    q: "Aşağıdakilerden hangisi RAD için daha uygun bir senaryodur?",
     t: "mcq",
     o: [
-      "Sadece arayüz tasarımını belirler",
-      "Erişim/arama/ekleme/silme maliyetini ve bellek kullanımını doğrudan etkiler",
-      "İnternet hızını artırır",
-      "Programlama dilinin kurallarını değiştirir"
+      "Çok sık değişen kullanıcı talepleri olan bir arayüz uygulaması",
+      "Hiç değişmeyecek, sabit gereksinimli bir proje",
+      "Kullanıcıyla iletişimin mümkün olmadığı proje",
+      "Teslim tarihi çok uzak, hızın önemsiz olduğu proje",
+      "Risk analizi gerekmeyen, tamamen standart bir ürün"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 2,
-    topic: "Veri Yapıları",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nDoğru veri yapısı seçimi işlemleri hızlandırır ve kaynak kullanımını iyileştirir.\nTaktik: Yavaşlıkta önce ‘algoritma + veri yapısı’na bak."
-  },
-  {
-    q: "DBMS (Veritabanı Yönetim Sistemi) ile veritabanı (database) arasındaki fark hangisidir?",
-    t: "mcq",
-    o: [
-      "DBMS verinin kendisidir; veritabanı yönetim yazılımıdır",
-      "DBMS veritabanını yönetmeye yarayan yazılımdır; veritabanı verinin saklandığı yapıdır",
-      "İkisi aynı şeydir",
-      "DBMS sadece dosya sistemi yönetir; veritabanı sadece UI’dır"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 2,
-    topic: "DBMS Kavramı",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nDatabase = veri deposu/yapı; DBMS = o depoyu yöneten sistem (MySQL, PostgreSQL vb.).\nTaktik: DBMS = yönetici, database = depo."
+    a: "Çok sık değişen kullanıcı talepleri olan bir arayüz uygulaması",
+    difficulty: "medium",
+    week: 7,
+    topic: "RAD - uygunluk",
+    importance: "medium",
+    explanation: "RAD, değişime açık işlerde prototip + hızlı geri bildirimle çok etkilidir."
   },
 
-  // =========================
-  // ===== 3. HAFTA (9) ======
-  // =========================
+  // =========================================================
+  // ==== 8. HAFTA – V-Model, CBSD, Incremental, Scrum, Kanban
+  // ==== (10 Soru) ==========================================
+  // =========================================================
   {
-    q: "Gereksinim (requirement) en doğru neyi ifade eder?",
+    q: "V-Model için aşağıdakilerden hangisi DOĞRUDUR?",
     t: "mcq",
     o: [
-      "Sistemin nasıl kodlanacağını belirleyen sınıf isimleri",
-      "Sistemin hangi ihtiyacı karşılayacağı ve ne yapması gerektiğinin tanımı",
-      "Sadece veritabanı tablo listesi",
-      "Sadece UI renk ve font listesi"
+      "Test sadece en sonda yapılır",
+      "Geliştirme aşamalarının karşısında ilgili test aşamaları vardır",
+      "Dokümantasyon hiç yapılmaz",
+      "Sadece prototipleme kullanır",
+      "Sadece mobil uygulamalarda kullanılır"
     ],
-    a: 2,
-    difficulty: 1,
-    week: 3,
-    topic: "Gereksinim",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nGereksinim ‘NE yapılacak?’ sorusunu cevaplar. ‘NASIL yapılacak?’ tasarım/kodlamadır.\nTaktik: Requirement=NE, Design=NASIL."
+    a: "Geliştirme aşamalarının karşısında ilgili test aşamaları vardır",
+    difficulty: "easy",
+    week: 8,
+    topic: "V-Model - temel mantık",
+    importance: "high",
+    explanation: "V-Model’de doğrulama/validasyon testleri, geliştirme adımlarıyla eşleştirilir."
   },
   {
-    q: "Gereksinim çıkarımı (elicitation) için kullanılan yöntemlerden biri hangisidir?",
+    q: "V-Model’de “Birim Testi (Unit Test)” en çok hangi aşamanın karşılığı gibi düşünülür?",
     t: "mcq",
-    o: [
-      "Kullanıcı/paydaş mülakatı ve gözlem",
-      "Kodun minify edilmesi",
-      "Sunucu ölçekleme",
-      "Veritabanı index ekleme"
-    ],
-    a: 1,
-    difficulty: 2,
-    week: 3,
-    topic: "Elicitation",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nElicitation: ihtiyaç toplama. Mülakat/anket/gözlem/prototip geri bildirimi gibi yöntemlerle yapılır.\nTaktik: İhtiyaç tahmin edilmez, toplanır."
+    o: ["Gereksinim analizi", "Sistem tasarımı", "Kodlama", "Kullanıcı kabul", "Bakım"],
+    a: "Kodlama",
+    difficulty: "easy",
+    week: 8,
+    topic: "V-Model - test eşleşmesi",
+    importance: "high",
+    explanation: "Birim testleri fonksiyon/sınıf düzeyinde olduğu için kodlama ile doğrudan ilişkilidir."
   },
   {
-    q: "Gereksinim analizi aşamasında temel olarak ne yapılır?",
+    q: "CBSD (Bileşen Tabanlı Geliştirme) yaklaşımının temel avantajı hangisidir?",
     t: "mcq",
     o: [
-      "Gereksinimler kod haline getirilir",
-      "Gereksinimler netleştirilir, çakışma/eksikler bulunur ve önceliklendirilir",
-      "Sadece UI çizilir",
-      "Sadece sunucu kurulur"
+      "Her şeyi sıfırdan yazmayı zorunlu kılar",
+      "Tekrar kullanılabilir bileşenlerle geliştirmeyi hızlandırır",
+      "İletişimi tamamen kaldırır",
+      "Test ihtiyacını yok eder",
+      "Sadece tek katmanlı mimariye uygundur"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 3,
-    topic: "Gereksinim Analizi",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nAnaliz: belirsizliği temizler ve öncelik sırası oluşturur.\nTaktik: Analiz = temizle + sırala."
+    a: "Tekrar kullanılabilir bileşenlerle geliştirmeyi hızlandırır",
+    difficulty: "easy",
+    week: 8,
+    topic: "CBSD - avantaj",
+    importance: "high",
+    explanation: "Hazır bileşen kullanımı süreyi kısaltır ve yeniden kullanım ile verim sağlar."
   },
   {
-    q: "Fonksiyonel ve fonksiyonel olmayan gereksinim farkı hangisidir?",
+    q: "CBSD sürecinde “Bileşen Kataloğu” (component catalog) ne işe yarar?",
     t: "mcq",
     o: [
-      "Fonksiyonel olmayan gereksinimler önemsizdir",
-      "Fonksiyonel gereksinim sistemin ne yapacağını; fonksiyonel olmayan gereksinim kalite özelliklerini (performans, güvenlik vb.) tanımlar",
-      "Fonksiyonel sadece UI’dır, fonksiyonel olmayan sadece veritabanıdır",
-      "Fonksiyonel sadece performans, fonksiyonel olmayan sadece güvenliktir"
+      "Kullanıcı şifrelerini saklar",
+      "Kullanılabilir bileşenleri listeler ve seçimi kolaylaştırır",
+      "Test raporlarını otomatik siler",
+      "Sunucu kurulumunu yapar",
+      "Sadece UI renk paletini tutar"
     ],
-    a: 2,
-    difficulty: 3,
-    week: 3,
-    topic: "Requirement Türleri",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nFonksiyonel: kayıt ol, sipariş ver. Non-functional: hızlı olsun, güvenli olsun, kullanılabilir olsun.\nTaktik: Fonksiyonel=NE, Non-functional=NE KADAR İYİ."
+    a: "Kullanılabilir bileşenleri listeler ve seçimi kolaylaştırır",
+    difficulty: "medium",
+    week: 8,
+    topic: "CBSD - katalog",
+    importance: "high",
+    explanation: "Katalog; bileşen bulma, karşılaştırma ve yeniden kullanımı sistematik hale getirir."
   },
   {
-    q: "SRS (Software Requirements Specification) belgesinin temel amacı nedir?",
+    q: "Artımlı (Incremental) modelin temel fikri hangisidir?",
     t: "mcq",
     o: [
-      "Kodun otomatik üretilmesini sağlamak",
-      "Gereksinimleri net ve test edilebilir şekilde belgelendirip ortak referans oluşturmak",
-      "Sadece tasarım renklerini sabitlemek",
-      "Sadece sürüm numarası belirlemek"
+      "Ürün tek seferde tam teslim edilir",
+      "Ürün, küçük artımlarla (parça parça) geliştirilip teslim edilir",
+      "Hiç geri bildirim alınmaz",
+      "Sadece test yazılır",
+      "Sadece tasarım yapılır"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 3,
-    topic: "SRS",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nSRS, geliştirme ve test ekipleri için ‘tek doğru kaynak’ gibidir.\nTaktik: SRS = ortak sözleşme."
+    a: "Ürün, küçük artımlarla (parça parça) geliştirilip teslim edilir",
+    difficulty: "easy",
+    week: 8,
+    topic: "Incremental - temel fikir",
+    importance: "high",
+    explanation: "Her artım yeni bir özellik veya iyileştirme getirir; kullanıcı erken sürüm görebilir."
   },
   {
-    q: "Gereksinim doğrulama (validation) en iyi hangi soruyla özetlenir?",
+    q: "Artımlı modelde erken geri bildirim almanın pratik sonucu hangisidir?",
     t: "mcq",
     o: [
-      "Doğru ürünü mü yapıyoruz?",
-      "Kodu doğru mu yazdık?",
-      "Sunucu doğru mu seçildi?",
-      "UI renkleri doğru mu?"
+      "Hatalar daha geç ortaya çıkar",
+      "Sonradan değişiklik yapmak imkânsız olur",
+      "Sonraki artımlar, gerçek kullanıcı geri bildirimine göre şekillenir",
+      "Test ihtiyacı tamamen biter",
+      "Sadece dokümantasyon artar"
     ],
-    a: 1,
-    difficulty: 3,
-    week: 3,
-    topic: "Validation",
-    importance: 2,
-    explanation:
-      "Doğru cevap: A\nValidation: ihtiyaca uygun mu? Paydaş/kullanıcı ile doğrulanır.\nTaktik: Validation = doğru ürün."
+    a: "Sonraki artımlar, gerçek kullanıcı geri bildirimine göre şekillenir",
+    difficulty: "medium",
+    week: 8,
+    topic: "Incremental - geri bildirim",
+    importance: "high",
+    explanation: "İlk artımlar hızlı geri bildirim sağlar; sonraki artımlar buna göre evrilir."
   },
   {
-    q: "Gereksinim yönetimi neden gereklidir?",
+    q: "Scrum’da Product Owner (Ürün Sahibi) için en doğru görev hangisidir?",
     t: "mcq",
     o: [
-      "Gereksinimler hiç değişmediği için",
-      "Gereksinimler değişebildiği için değişikliklerin kayıt-altına alınması, etkisinin analiz edilmesi ve onaylanması gerektiği için",
-      "Sadece test ekibini ilgilendirdiği için",
-      "Sadece tasarım süresini uzatmak için"
+      "Sunucu konfigürasyonu yapmak",
+      "Product Backlog’u oluşturmak ve önceliklendirmek",
+      "Her gün kod incelemek zorunda olmak",
+      "Testleri tamamen kaldırmak",
+      "Sadece tasarım çizmek"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 3,
-    topic: "Gereksinim Yönetimi",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nDeğişiklik kontrol edilmezse kapsam taşar, süre/bütçe bozulur.\nTaktik: Değişiklik = kayıt + etki + onay."
+    a: "Product Backlog’u oluşturmak ve önceliklendirmek",
+    difficulty: "medium",
+    week: 8,
+    topic: "Scrum - roller",
+    importance: "high",
+    explanation: "Product Owner iş değerini temsil eder; backlog önceliğini belirler."
   },
   {
-    q: "Proje planlamada ‘kapsam (scope)’ ne demektir?",
+    q: "Kanban’da WIP limitinin (Work In Progress limiti) temel amacı hangisidir?",
     t: "mcq",
     o: [
-      "Projede yapılacak işlerin sınırı: neler var/neler yok",
-      "Takımın kişi sayısı",
-      "Programlama dili seçimi",
-      "Test araçlarının listesi"
+      "Daha fazla işi aynı anda başlatmak",
+      "İş akışında tıkanmayı azaltıp odaklanmayı artırmak",
+      "Testleri iptal etmek",
+      "Sadece rapor üretmek",
+      "Yalnızca tasarım işlerini engellemek"
     ],
-    a: 1,
-    difficulty: 2,
-    week: 3,
-    topic: "Planlama / Scope",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nScope net değilse proje sürekli genişler ve bitmesi zorlaşır.\nTaktik: Scope = sınır çizgisi."
+    a: "İş akışında tıkanmayı azaltıp odaklanmayı artırmak",
+    difficulty: "easy",
+    week: 8,
+    topic: "Kanban - WIP",
+    importance: "high",
+    explanation: "WIP limiti, aynı anda çok iş açıp bitirmemeyi engeller; akışı dengeler."
   },
   {
-    q: "Mimari tasarım ile detay tasarım arasındaki doğru fark hangisidir?",
+    q: "Scrum’da işi zaman kutularına bölen yinelemeli geliştirme aralığına ne denir?",
     t: "mcq",
-    o: [
-      "Mimari tasarım sınıf fonksiyonlarını; detay tasarım bileşen ilişkilerini belirler",
-      "Mimari tasarım büyük resmi (bileşenler/ilişkiler); detay tasarım sınıflar/algoritmalar gibi ayrıntıları belirler",
-      "Detay tasarım sadece UI; mimari tasarım sadece renk seçer",
-      "İkisi tamamen aynıdır"
-    ],
-    a: 2,
-    difficulty: 3,
-    week: 3,
-    topic: "Mimari vs Detay",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nMimari = sistemin iskeleti; detay = kasları/organları (sınıf-fonksiyon-çıktı).\nTaktik: Mimari=harita, detay=sokak planı."
+    o: ["Sprint", "Milestone", "Release Train", "Kanban WIP", "Prototype"],
+    a: "Sprint",
+    difficulty: "easy",
+    week: 8,
+    topic: "Scrum - sprint",
+    importance: "high",
+    explanation: "Scrum’da sprint; planlama, geliştirme, gözden geçirme ve iyileştirme döngüsünün temel birimidir."
+  },
+  {
+    q: "Kanban tahtasında işler genellikle “Yapılacak → Yapılıyor → ____” şeklinde ilerler. Boşluğa en uygun ifade hangisidir?",
+    t: "mcq",
+    o: ["Bitti", "Analiz", "Risk", "Backlog", "Test Yok"],
+    a: "Bitti",
+    difficulty: "easy",
+    week: 8,
+    topic: "Kanban - kolonlar",
+    importance: "medium",
+    explanation: "Kolonlar işin durumunu gösterir; amaç işi görünür ve yönetilebilir kılmaktır."
   },
 
-  // =========================
-  // ===== 4. HAFTA (9) ======
-  // =========================
+  // =========================================================
+  // ==== 9. HAFTA – Döngüsel/Evrimsel, Katmanlar, 2-Tier (10)
+  // =========================================================
   {
-    q: "Modüler geliştirme (modularity) neden tercih edilir?",
+    q: "Döngüsel (Cyclic) geliştirme modelinin ana fikri hangisidir?",
     t: "mcq",
     o: [
-      "Her şeyi tek dosyada tutmayı kolaylaştırdığı için",
-      "Bakım, test ve yeniden kullanım kolaylaştığı; değişikliklerin daha kontrollü yönetildiği için",
-      "Veritabanını otomatik kurduğu için",
-      "İnternet bağlantısını artırdığı için"
+      "Tek seferde analiz yapıp bitirmek",
+      "Her döngü sonunda geri bildirim alıp bir sonraki döngüde geliştirmek",
+      "Testi tamamen kaldırmak",
+      "Sadece prototip çizip kod yazmamak",
+      "Sadece sunucu tarafını geliştirmek"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 4,
-    topic: "Modülerlik",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nModülerlik sistemi parçalara böler; parçalar ayrı test edilir, bakım kolaylaşır.\nTaktik: Büyük işi parçala, yönet."
+    a: "Her döngü sonunda geri bildirim alıp bir sonraki döngüde geliştirmek",
+    difficulty: "easy",
+    week: 9,
+    topic: "Döngüsel model - temel fikir",
+    importance: "high",
+    explanation: "Cyclic modelde her tur, önceki turdan alınan geri bildirime göre iyileştirilir."
   },
   {
-    q: "Code review (kod inceleme) en doğru hangi amaçla yapılır?",
+    q: "Döngüsel modelde aşağıdaki sıralamalardan hangisi daha doğrudur?",
     t: "mcq",
     o: [
-      "Kodu daha uzun yazdırmak için",
-      "Hata/kalite sorunlarını erken yakalamak ve ekip standardını korumak için",
-      "Sadece tasarım kararlarını değiştirmek için",
-      "Sadece sürüm numarasını artırmak için"
+      "Kodlama → bakım → analiz",
+      "Gereksinim → tasarım/planlama → geliştirme → test/değerlendirme → geri bildirim",
+      "Test → kodlama → hiç değerlendirme yok",
+      "Sadece analiz → teslim",
+      "Sadece bakım → teslim"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 4,
-    topic: "Code Review",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nReview, hatayı üretime gitmeden yakalar ve kaliteyi yükseltir.\nTaktik: Erken yakala = ucuz düzelt."
+    a: "Gereksinim → tasarım/planlama → geliştirme → test/değerlendirme → geri bildirim",
+    difficulty: "medium",
+    week: 9,
+    topic: "Döngüsel model - adımlar",
+    importance: "high",
+    explanation: "Her turda geliştirme ve değerlendirme yapılır, geri bildirimle bir sonraki tur şekillenir."
   },
   {
-    q: "Birim testi (unit test) en çok neyi test eder?",
+    q: "Evrimsel (Evolutionary) geliştirme için en doğru açıklama hangisidir?",
     t: "mcq",
     o: [
-      "Tüm sistemin uçtan uca akışını",
-      "En küçük kod parçalarını (fonksiyon/sınıf) izole şekilde",
-      "Gerçek kullanıcı senaryolarını tarayıcıda",
-      "Sunucu ağ performansını"
+      "Ürün en baştan tam yapılır, sonra hiç değişmez",
+      "Önce çekirdek bir sürüm çıkar, zamanla özellikler eklenerek evrilir",
+      "Sadece tasarım yapılır, kod yazılmaz",
+      "Test yapılmaz",
+      "Sadece veritabanı geliştirilir"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 4,
-    topic: "Unit Test",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nUnit test: küçük parçanın doğru çalışması.\nTaktik: Unit = en küçük parça."
+    a: "Önce çekirdek bir sürüm çıkar, zamanla özellikler eklenerek evrilir",
+    difficulty: "easy",
+    week: 9,
+    topic: "Evrimsel geliştirme",
+    importance: "high",
+    explanation: "Evrimsel yaklaşım küçük başlangıç + sürekli geliştirme fikrine dayanır."
   },
   {
-    q: "Entegrasyon testi ile sistem testi arasındaki fark hangisidir?",
+    q: "Evrimsel geliştirmede kontrolsüz büyüme riskini azaltmak için en mantıklı yaklaşım hangisidir?",
     t: "mcq",
     o: [
-      "Entegrasyon testi bileşenlerin birlikte çalışmasını; sistem testi tüm sistemin gereksinimlere göre davranmasını test eder",
-      "Entegrasyon testi sadece UI; sistem testi sadece veritabanını test eder",
-      "Sistem testi tek fonksiyonu test eder",
-      "İkisi aynı testtir"
+      "Gereksinimleri hiç yazmamak",
+      "Her yeni özellik için değerlendirme/önceliklendirme ve test sürecini sürdürmek",
+      "Testleri kaldırmak",
+      "Backlog’u tamamen kapatmak",
+      "Sadece UI değiştirip iş mantığını hiç dokunmamak"
     ],
-    a: 1,
-    difficulty: 3,
-    week: 4,
-    topic: "Test Seviyeleri",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nEntegrasyon: parçalar konuşuyor mu? Sistem testi: bütün sistem doğru mu?\nTaktik: Entegrasyon=parça-parça, sistem=bütün."
+    a: "Her yeni özellik için değerlendirme/önceliklendirme ve test sürecini sürdürmek",
+    difficulty: "medium",
+    week: 9,
+    topic: "Evrimsel - yönetim",
+    importance: "medium",
+    explanation: "Sürekli ekleme geldiği için öncelik, kalite ve test disiplinini korumak gerekir."
   },
   {
-    q: "Test senaryosu (test case) tipik olarak hangi bilgileri içerir?",
+    q: "Katmanlı yaklaşımda UI (Sunum) katmanının temel görevi hangisidir?",
     t: "mcq",
     o: [
-      "Sadece yazılımcı adı ve tarih",
-      "Adımlar, test verisi, beklenen sonuç ve gerçek sonuç",
-      "Sadece ekran görüntüsü",
-      "Sadece sürüm numarası"
+      "Veritabanı tablolarını oluşturmak",
+      "Kullanıcı ile etkileşim ve verinin ekranda gösterilmesi",
+      "Sunucu işletim sistemini kurmak",
+      "Sadece log dosyası yönetmek",
+      "Sadece ağ trafiğini izlemek"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 4,
-    topic: "Test Case",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nTest case tekrar edilebilir olmalı: adım + veri + beklenen sonuç.\nTaktik: Test case = tekrar edilebilirlik."
+    a: "Kullanıcı ile etkileşim ve verinin ekranda gösterilmesi",
+    difficulty: "easy",
+    week: 9,
+    topic: "Katmanlar - UI",
+    importance: "high",
+    explanation: "UI katmanı kullanıcıdan giriş alır ve sonuçları kullanıcıya sunar."
   },
   {
-    q: "Hata raporu (bug report) yazarken en kritik nokta hangisidir?",
+    q: "Katmanlı mimaride “iş mantığı (application/business logic)” katmanı neyi yapar?",
     t: "mcq",
     o: [
-      "Hatanın nasıl tekrar edileceğini (reproduce steps) açık yazmak",
-      "Sadece ‘çalışmıyor’ demek",
-      "Sadece kullanıcıyı suçlamak",
-      "Hatanın olduğu sayfayı gizlemek"
+      "Sadece buton rengi ayarlar",
+      "Kurallar, süreçler ve hesaplamalar gibi iş kurallarını yürütür",
+      "Sadece veritabanını yedekler",
+      "Sadece HTML üretir",
+      "Sadece ağ paketlerini işler"
     ],
-    a: 1,
-    difficulty: 2,
-    week: 4,
-    topic: "Bug Report",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nEn kritik şey: adım adım tekrar. Böylece geliştirici aynı hatayı görüp çözer.\nTaktik: Bug report = adımlar + beklenen/gerçek."
+    a: "Kurallar, süreçler ve hesaplamalar gibi iş kurallarını yürütür",
+    difficulty: "medium",
+    week: 9,
+    topic: "Katmanlar - iş mantığı",
+    importance: "high",
+    explanation: "İş mantığı katmanı uygulamanın “kurallarını” ve süreç akışını barındırır."
   },
   {
-    q: "Dağıtım (deployment) neyi ifade eder?",
+    q: "2-Tier (İstemci–Sunucu) mimarinin en doğru tanımı hangisidir?",
     t: "mcq",
     o: [
-      "Kodun bilgisayardan silinmesini",
-      "Yazılımın canlı ortama/ kullanıcıların erişebileceği ortama alınmasını",
-      "Sadece testlerin yazılmasını",
-      "Sadece tasarımın çizilmesini"
+      "İstemci ile sunucu hiç konuşmaz",
+      "İstemci doğrudan sunucuya bağlanır ve veri/servis alır",
+      "Sadece tek bilgisayarda çalışan sistemdir",
+      "Sadece mikroservislerde kullanılır",
+      "Sadece mobil uygulamalarda zorunludur"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 4,
-    topic: "Deployment",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nDeployment: uygulamayı kullanıcıların erişeceği ortama taşımak/yayınlamak.\nTaktik: Deployment = yayına alma."
+    a: "İstemci doğrudan sunucuya bağlanır ve veri/servis alır",
+    difficulty: "easy",
+    week: 9,
+    topic: "2-Tier - tanım",
+    importance: "high",
+    explanation: "2-Tier’de istemci uygulama ile sunucu (genellikle servis/veritabanı) doğrudan iletişim kurar."
   },
   {
-    q: "Bakım (maintenance) aşamasında hangisi tipik bir faaliyettir?",
+    q: "2-Tier mimaride performansla ilgili olası bir sorun hangisidir?",
     t: "mcq",
     o: [
-      "Canlıda hata düzeltmek ve ihtiyaçlara göre iyileştirmeler yapmak",
-      "Sadece uygulama ikonunu değiştirmek",
-      "Sadece kodu silmek",
-      "Sadece proje adını değiştirmek"
+      "Hiç ağ gecikmesi olmaz",
+      "Ağ gecikmesi ve sunucu yükü artabilir",
+      "Test ihtiyacı kalmaz",
+      "UI katmanı ortadan kalkar",
+      "Veri asla bozulmaz"
     ],
-    a: 1,
-    difficulty: 2,
-    week: 4,
-    topic: "Maintenance",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nCanlıda hata düzeltme, uyarlama ve iyileştirme bakımın parçasıdır.\nTaktik: Canlıya çıktı = bakım başladı."
+    a: "Ağ gecikmesi ve sunucu yükü artabilir",
+    difficulty: "medium",
+    week: 9,
+    topic: "2-Tier - dezavantaj",
+    importance: "medium",
+    explanation: "İstemci-sunucu iletişimi ağ üzerinden olduğundan gecikme ve yoğunlukta yük artışı görülebilir."
   },
   {
-    q: "Yedekleme ve kurtarma (backup & recovery) neden önemlidir?",
+    q: "Katmanlı mimaride veriye erişim ve CRUD işlemleri genellikle hangi katmanda yapılır?",
+    t: "mcq",
+    o: ["UI (Sunum)", "İş Mantığı", "Veri Erişim (Data Access)", "Ağ Katmanı", "Test Katmanı"],
+    a: "Veri Erişim (Data Access)",
+    difficulty: "easy",
+    week: 9,
+    topic: "Katmanlar - data access",
+    importance: "high",
+    explanation: "Veri erişim katmanı veritabanı/depoya erişimi soyutlar ve düzenli hale getirir."
+  },
+  {
+    q: "Döngüsel modelde her döngünün sonunda kullanıcı/müşteri ne alınır ve bir sonraki döngü buna göre şekillenir?",
+    t: "mcq",
+    o: ["Log", "Geri bildirim", "Derleme çıktısı", "Sadece tasarım", "Kod standardı"],
+    a: "Geri bildirim",
+    difficulty: "easy",
+    week: 9,
+    topic: "Döngüsel - geri bildirim",
+    importance: "high",
+    explanation: "Cyclic modelin ana motoru her turda geri bildirimle iyileştirmedir."
+  },
+
+  // =========================================================
+  // ==== 10. HAFTA – UML (10 Soru) ==========================
+  // =========================================================
+  {
+    q: "UML (Unified Modeling Language) ne için kullanılır?",
     t: "mcq",
     o: [
-      "Veri kaybını azaltmak ve felaket durumunda geri dönebilmek için",
-      "Sadece arayüzü güzelleştirmek için",
-      "Sadece test sayısını azaltmak için",
+      "Sadece program derlemek için",
+      "Sistemleri görsel olarak modellemek, tasarlamak ve dokümante etmek için",
+      "Sadece veri tabanı yedeği almak için",
+      "Sadece CSS yazmak için",
+      "Sadece işletim sistemi kurmak için"
+    ],
+    a: "Sistemleri görsel olarak modellemek, tasarlamak ve dokümante etmek için",
+    difficulty: "easy",
+    week: 10,
+    topic: "UML - amaç",
+    importance: "high",
+    explanation: "UML, karmaşık sistemleri diyagramlarla anlaşılır hale getirir ve ekip iletişimini güçlendirir."
+  },
+  {
+    q: "UML’in “ortak dil” olması aşağıdakilerden hangisini en çok kolaylaştırır?",
+    t: "mcq",
+    o: [
+      "Sunucu RAM’ini artırmayı",
+      "Ekip içinde analiz/tasarım hakkında iletişim kurmayı",
+      "Ekran parlaklığını ayarlamayı",
+      "Kodu otomatik yazmayı",
+      "Sadece UI renk seçimini"
+    ],
+    a: "Ekip içinde analiz/tasarım hakkında iletişim kurmayı",
+    difficulty: "easy",
+    week: 10,
+    topic: "UML - iletişim",
+    importance: "high",
+    explanation: "Analist, geliştirici ve yönetici aynı diyagram diliyle konuşur; yanlış anlaşılmalar azalır."
+  },
+  {
+    q: "UML diyagramlarının projeye katkılarından biri aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Testi tamamen kaldırır",
+      "Erken aşamada tasarım hatalarını görmeye yardım eder",
+      "Gereksinimleri gereksiz yapar",
+      "Sunucu maliyetini otomatik düşürür",
+      "İnternet bağlantısını hızlandırır"
+    ],
+    a: "Erken aşamada tasarım hatalarını görmeye yardım eder",
+    difficulty: "medium",
+    week: 10,
+    topic: "UML - erken hata tespiti",
+    importance: "high",
+    explanation: "Modelleme ile sorunlar koda geçmeden fark edilebilir; düzeltme maliyeti düşer."
+  },
+  {
+    q: "Bir sistemi modellemek için UML kullanırken doğru yaklaşım hangisidir?",
+    t: "mcq",
+    o: [
+      "Önce kod yaz, sonra diyagram çiz",
+      "Önce analiz yap, sonra uygun diyagram türünü seç ve diyagramı oluştur",
+      "Sadece tek diyagram çizmek yeterlidir",
+      "Diyagramları testten sonra çizmek zorunludur",
+      "Diyagramlar sadece görsel amaçlıdır, içerik doldurulmaz"
+    ],
+    a: "Önce analiz yap, sonra uygun diyagram türünü seç ve diyagramı oluştur",
+    difficulty: "medium",
+    week: 10,
+    topic: "UML - süreç",
+    importance: "high",
+    explanation: "Analiz → diyagram seçimi → oluşturma → detaylandırma sırası, modelin doğru ve faydalı olmasını sağlar."
+  },
+  {
+    q: "Sınıf diyagramı (Class Diagram) çoğunlukla neyi göstermede kullanılır?",
+    t: "mcq",
+    o: [
+      "Zaman çizelgesi",
+      "Sınıflar, özellikler, metotlar ve aralarındaki ilişkiler",
+      "Sunucu CPU kullanımı",
+      "Sadece kullanıcı arayüzü renkleri",
+      "Sadece dosya boyutları"
+    ],
+    a: "Sınıflar, özellikler, metotlar ve aralarındaki ilişkiler",
+    difficulty: "easy",
+    week: 10,
+    topic: "UML - sınıf diyagramı",
+    importance: "high",
+    explanation: "Class diagram, sistemin yapısal (structure) görünümünü anlatır."
+  },
+  {
+    q: "Durum diyagramı (State Diagram) en çok hangi tip bilgiyi gösterir?",
+    t: "mcq",
+    o: [
+      "Bir varlığın zaman içinde farklı durumlara geçişini",
+      "Sadece veritabanı tablolarını",
+      "Sadece UI bileşenlerini",
+      "Sadece sınıf ilişkilerini",
+      "Sadece proje bütçesini"
+    ],
+    a: "Bir varlığın zaman içinde farklı durumlara geçişini",
+    difficulty: "medium",
+    week: 10,
+    topic: "UML - durum diyagramı",
+    importance: "medium",
+    explanation: "State diagram; örn. Sipariş: Hazırlanıyor → Kargoda → Teslim edildi gibi geçişleri gösterir."
+  },
+  {
+    q: "UML diyagramları dokümantasyon açısından neden değerlidir?",
+    t: "mcq",
+    o: [
+      "Çünkü kodu tamamen değiştirir",
+      "Çünkü sistemi herkes için anlaşılır şekilde kayıt altına alır",
+      "Çünkü test yazmayı yasaklar",
+      "Çünkü interneti hızlandırır",
+      "Çünkü sadece görsel süs amaçlıdır"
+    ],
+    a: "Çünkü sistemi herkes için anlaşılır şekilde kayıt altına alır",
+    difficulty: "easy",
+    week: 10,
+    topic: "UML - dokümantasyon",
+    importance: "high",
+    explanation: "Yeni ekip üyeleri ve paydaşlar, diyagramlarla sistemi daha hızlı kavrar."
+  },
+  {
+    q: "UML, sistemleri ______ olarak modellemek için kullanılan standart bir dildir. Boşluğa en uygun kelime hangisidir?",
+    t: "mcq",
+    o: ["Görsel", "Rastgele", "Sadece metin", "Sadece kod", "Donanımsal"],
+    a: "Görsel",
+    difficulty: "easy",
+    week: 10,
+    topic: "UML - tanım",
+    importance: "high",
+    explanation: "UML; diyagramlar ile görsel modelleme yapmayı sağlar."
+  },
+  {
+    q: "UML kullanırken önce ______ yapılır, sonra uygun diyagram türü seçilir. Boşluğa hangisi gelir?",
+    t: "mcq",
+    o: ["Analiz", "Formatlama", "Deploy", "Refactor", "Sadece test"],
+    a: "Analiz",
+    difficulty: "easy",
+    week: 10,
+    topic: "UML - süreç",
+    importance: "medium",
+    explanation: "Analiz, neyi modelleyeceğini netleştirir; doğru diyagram türünü seçmeyi kolaylaştırır."
+  },
+  {
+    q: "UML’in ekip çalışmasına katkısı en iyi hangi seçenekle açıklanır?",
+    t: "mcq",
+    o: [
+      "Herkesin farklı semboller kullanmasını sağlar",
+      "Tüm paydaşların aynı modeli görüp aynı dili konuşmasını kolaylaştırır",
+      "Sadece yöneticilerin anlayacağı şekilde tasarlanır",
+      "Sadece testçilerin kullanacağı bir araçtır",
+      "Sadece çizim programıdır"
+    ],
+    a: "Tüm paydaşların aynı modeli görüp aynı dili konuşmasını kolaylaştırır",
+    difficulty: "medium",
+    week: 10,
+    topic: "UML - ekip çalışması",
+    importance: "high",
+    explanation: "Ortak gösterim, takım içinde tutarlılık ve hızlı karar almayı destekler."
+  },
+
+  // =========================================================
+  // ==== 11. HAFTA – UI/UX + Mikroservis + SOA (10 Soru) =====
+  // =========================================================
+  {
+    q: "UI (User Interface) en doğru hangi ifadeyle tanımlanır?",
+    t: "mcq",
+    o: [
+      "Kullanıcının ürünü kullanırken hissettiği duygu",
+      "Kullanıcının etkileşime geçtiği arayüz (ekran, buton, menü vb.)",
+      "Sadece veritabanı şeması",
+      "Sadece sunucu tarafı kodu",
+      "Sadece test senaryoları"
+    ],
+    a: "Kullanıcının etkileşime geçtiği arayüz (ekran, buton, menü vb.)",
+    difficulty: "easy",
+    week: 11,
+    topic: "UI - tanım",
+    importance: "high",
+    explanation: "UI, kullanıcının gördüğü ve dokunduğu arayüz elemanlarının tamamıdır."
+  },
+  {
+    q: "UX (User Experience) aşağıdakilerden hangisini kapsar?",
+    t: "mcq",
+    o: [
+      "Sadece sekme başlığını",
+      "Kullanıcının ürünü kullanırken yaşadığı genel deneyimi (kolaylık, hız, memnuniyet vb.)",
+      "Sadece ikon tasarımını",
+      "Sadece veritabanını",
+      "Sadece kod standardını"
+    ],
+    a: "Kullanıcının ürünü kullanırken yaşadığı genel deneyimi (kolaylık, hız, memnuniyet vb.)",
+    difficulty: "easy",
+    week: 11,
+    topic: "UX - tanım",
+    importance: "high",
+    explanation: "UX, kullanıcı yolculuğunun tamamındaki deneyimi (hız, anlaşılabilirlik, memnuniyet) kapsar."
+  },
+  {
+    q: "UI ve UX farkı için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "UI deneyimdir, UX arayüzdür",
+      "UI arayüzün kendisidir; UX kullanıcı deneyiminin bütünüdür",
+      "İkisi tamamen aynı şeydir",
+      "UI sadece mobil içindir, UX sadece web içindir",
+      "UX sadece renk seçimiyle ilgilidir"
+    ],
+    a: "UI arayüzün kendisidir; UX kullanıcı deneyiminin bütünüdür",
+    difficulty: "easy",
+    week: 11,
+    topic: "UI vs UX",
+    importance: "high",
+    explanation: "UI = yüzey; UX = o yüzeyle kullanım sürecinde yaşanan toplam deneyim."
+  },
+  {
+    q: "UX tasarım sürecinde “kullanıcı araştırması” neden yapılır?",
+    t: "mcq",
+    o: [
+      "Sunucu performansını artırmak için",
+      "Kullanıcının ihtiyaçlarını, hedeflerini ve sorunlarını anlamak için",
+      "Sadece renk paleti seçmek için",
+      "Sadece veritabanı tasarlamak için",
       "Sadece kodu kısaltmak için"
     ],
-    a: 1,
-    difficulty: 2,
-    week: 4,
-    topic: "Backup/Recovery",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nVeri kaybı ciddi zarar verir. Backup & recovery bu riske karşı güvenlik ağıdır.\nTaktik: Veri = en kritik varlık."
+    a: "Kullanıcının ihtiyaçlarını, hedeflerini ve sorunlarını anlamak için",
+    difficulty: "medium",
+    week: 11,
+    topic: "UX - kullanıcı araştırması",
+    importance: "high",
+    explanation: "Araştırma, doğru problemi çözmeyi sağlar; UX kararları gerçek kullanıcı verisine dayanır."
   },
-
-  // =========================
-  // ===== 5. HAFTA (8) ======
-  // =========================
   {
-    q: "Proje yönetiminin temel amacı hangisidir?",
+    q: "Mikroservis mimarisi için aşağıdakilerden hangisi DOĞRUDUR?",
     t: "mcq",
     o: [
-      "Projeyi plansız yürütüp hızlı bitirmek",
-      "Kapsam-zaman-bütçe-kalite dengesini yöneterek hedeflere uygun tamamlamak",
-      "Sadece kod standardı belirlemek",
-      "Sadece arayüz tasarlamak"
+      "Uygulama tek parça (monolit) olmalıdır",
+      "Uygulama küçük, bağımsız servisler halinde bölünür",
+      "Servisler hiçbir şekilde iletişim kurmaz",
+      "Tek bir veritabanı zorunludur",
+      "Deploy (dağıtım) her zaman toplu yapılır"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 5,
-    topic: "Proje Yönetimi",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nProje yönetimi; kapsam, zaman, bütçe ve kaliteyi dengeleyip projeyi hedefte tutar.\nTaktik: Dörtlü kısıt: scope-time-cost-quality."
+    a: "Uygulama küçük, bağımsız servisler halinde bölünür",
+    difficulty: "easy",
+    week: 11,
+    topic: "Mikroservis - tanım",
+    importance: "high",
+    explanation: "Mikroservis; servisleri bağımsız geliştirme/dağıtma/ölçekleme fikrine dayanır."
   },
   {
-    q: "Planlama aşamasında tipik olarak hangisi yapılır?",
+    q: "Mikroservislerde “hata izolasyonu” (fault isolation) ne sağlar?",
     t: "mcq",
     o: [
-      "Takvim, bütçe, kaynak ve risk planlarının çıkarılması",
-      "Sadece logo tasarımı",
-      "Sadece testleri silme",
-      "Sadece internet paketi seçme"
+      "Bir servisteki sorun tüm sistemi her zaman çökertebilir",
+      "Bir servisteki sorun diğer servisleri mümkün olduğunca az etkiler",
+      "Test ihtiyacını kaldırır",
+      "Veritabanını otomatik çoğaltır",
+      "UI’ı otomatik çizer"
     ],
-    a: 1,
-    difficulty: 2,
-    week: 5,
-    topic: "Planlama",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nPlanlama ‘ne, ne zaman, kim, hangi kaynakla’ sorularını netleştirir.\nTaktik: Plan = zaman + kaynak + risk."
+    a: "Bir servisteki sorun diğer servisleri mümkün olduğunca az etkiler",
+    difficulty: "medium",
+    week: 11,
+    topic: "Mikroservis - hata izolasyonu",
+    importance: "high",
+    explanation: "Servisler ayrıldığı için bir servisin çökmesi tüm sistemi çökertmek zorunda değildir."
   },
   {
-    q: "İzleme ve kontrol (monitoring & controlling) aşamasının odak noktası hangisidir?",
+    q: "Mikroservislerde servisler arası iletişim genellikle hangi yöntemlerle yapılır?",
     t: "mcq",
     o: [
-      "Planı bir kere yazıp hiç bakmamak",
-      "Gerçek ilerlemeyi planla karşılaştırmak ve sapma varsa düzeltici aksiyon almak",
-      "Sadece tasarım değişikliklerini yapmak",
-      "Sadece kullanıcı şikayetlerini kapatmak"
+      "Sadece USB ile",
+      "API çağrıları (HTTP/HTTPS) ve gerektiğinde mesajlaşma/RPC gibi yöntemlerle",
+      "Sadece ekran görüntüsü ile",
+      "Sadece e-posta ile",
+      "Hiç iletişim kurulmaz"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 5,
-    topic: "İzleme & Kontrol",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nİzleme-kontrol, sapmayı erken yakalayıp proje raydan çıkmadan düzeltmeyi sağlar.\nTaktik: Erken sapma = ucuz çözüm."
+    a: "API çağrıları (HTTP/HTTPS) ve gerektiğinde mesajlaşma/RPC gibi yöntemlerle",
+    difficulty: "medium",
+    week: 11,
+    topic: "Mikroservis - iletişim",
+    importance: "medium",
+    explanation: "Servisler ayrı çalıştığı için API üzerinden veya mesajlaşma ile haberleşebilir."
   },
   {
-    q: "Risk yönetiminde doğru yaklaşım hangisidir?",
+    q: "Mikroservis mimaride “servis bazlı veritabanı” yaklaşımı neyi anlatır?",
     t: "mcq",
     o: [
-      "Riskleri yok saymak",
-      "Riskleri tanımlamak, olasılık/etki analiz etmek, önlem planlamak ve izlemek",
-      "Riskleri sadece test ekibine bırakmak",
-      "Riskleri sadece proje sonunda konuşmak"
+      "Tüm servisler tek ortak veritabanı kullanmak zorundadır",
+      "Her servisin kendi verisini yönetebilmesi ve gerekirse ayrı veritabanı kullanabilmesi",
+      "Veritabanı kullanılmaması",
+      "Sadece dosya sistemi kullanılması",
+      "Verinin UI içinde tutulması"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 5,
-    topic: "Risk Yönetimi",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nRisk yönetimi: olası sorunları önceden görüp hazırlık yapmaktır.\nTaktik: Risk = olasılık × etki."
+    a: "Her servisin kendi verisini yönetebilmesi ve gerekirse ayrı veritabanı kullanabilmesi",
+    difficulty: "hard",
+    week: 11,
+    topic: "Mikroservis - veri bağımsızlığı",
+    importance: "medium",
+    explanation: "Servis bağımsızlığı, veri bağımsızlığıyla güçlenir; servis kendi verisini sahiplenir."
   },
   {
-    q: "Kalite kontrol (QC) ile kalite güvence (QA) arasındaki fark hangisidir?",
+    q: "SOA (Service-Oriented Architecture) yaklaşımında “interface (arabirim)” kavramı en çok neyi ifade eder?",
     t: "mcq",
     o: [
-      "QC süreç odaklıdır, QA ürün odaklıdır",
-      "QC ürün/çıktı üzerinde hatayı bulur; QA süreçleri iyileştirerek hatayı azaltır",
-      "QC sadece toplantıdır, QA sadece kod yazmaktır",
-      "İkisi tamamen aynıdır"
+      "Servisin veritabanı dosyasını",
+      "Servisin dışarıya sunduğu hizmeti nasıl çağıracağını tanımlayan sözleşmeyi",
+      "Servisin ekran tasarımını",
+      "Servisin sunucu IP adresini",
+      "Servisin renk paletini"
     ],
-    a: 2,
-    difficulty: 3,
-    week: 5,
-    topic: "QA vs QC",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nQC: ürün üzerinde kontrol (test/inceleme). QA: süreçle kaliteyi garanti etme (standart/denetim/iyileştirme).\nTaktik: QC=ürün, QA=süreç."
+    a: "Servisin dışarıya sunduğu hizmeti nasıl çağıracağını tanımlayan sözleşmeyi",
+    difficulty: "medium",
+    week: 11,
+    topic: "SOA - interface",
+    importance: "high",
+    explanation: "Interface, servislerin nasıl kullanılacağını standartlaştırır; entegrasyonu kolaylaştırır."
   },
   {
-    q: "Değişiklik (change) yönetimi neden gereklidir?",
+    q: "Aşağıdakilerden hangisi Mikroservis mimarinin olası bir zorluğudur?",
     t: "mcq",
     o: [
-      "Değişiklikler her zaman projeyi hızlandırır",
-      "Değişiklikler kapsam/süre/bütçeyi etkiler; kontrol edilmezse proje yönetilemez hale gelir",
-      "Değişiklikler sadece renkleri etkiler",
-      "Değişiklik yönetimi sadece küçük projelerde yapılır"
+      "Yönetim ve operasyonel karmaşıklığın artması (izleme, dağıtım, ağ iletişimi)",
+      "Hiçbir şekilde ölçeklenememesi",
+      "Sadece tek teknoloji ile yazılabilmesi",
+      "API kullanamaması",
+      "Test yapılamaması"
     ],
-    a: 2,
-    difficulty: 2,
-    week: 5,
-    topic: "Değişiklik Yönetimi",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nHer değişiklik yeni iş ve maliyet demektir; etkisi ölçülmeli ve onayla ilerlemeli.\nTaktik: Değişiklik = yeni iş + yeni maliyet."
-  },
-  {
-    q: "İletişim planı (communication plan) neyi sağlar?",
-    t: "mcq",
-    o: [
-      "Bilginin kimden kime, hangi sıklıkla ve hangi formatta gideceğini netleştirir",
-      "Sadece sprint süresini belirler",
-      "Sadece veritabanı şemasını çizer",
-      "Sadece kod inceleme kurallarını yazar"
-    ],
-    a: 1,
-    difficulty: 2,
-    week: 5,
-    topic: "İletişim Yönetimi",
-    importance: 2,
-    explanation:
-      "Doğru cevap: A\nDoğru bilgi doğru kişiye zamanında giderse beklenti hizalanır.\nTaktik: İyi iletişim = hizalı beklenti."
-  },
-  {
-    q: "Konfigürasyon yönetimi (configuration management) en çok hangi ihtiyacı karşılar?",
-    t: "mcq",
-    o: [
-      "Sürüm/değişiklik/yayınların kontrol altında tutulmasını ve izlenebilirliği sağlar",
-      "Sadece kullanıcı şifre politikasını belirler",
-      "Sadece UI tasarım sistemini seçer",
-      "Sadece ağ kablolamasını düzenler"
-    ],
-    a: 1,
-    difficulty: 3,
-    week: 5,
-    topic: "Konfigürasyon Yönetimi",
-    importance: 2,
-    explanation:
-      "Doğru cevap: A\nHangi sürümde ne var, hangi değişiklik nereden geldi, yayın nasıl çıktı gibi soruları düzenler.\nTaktik: Konfigürasyon = sürüm disiplini."
-  },
-
-  // =========================
-  // ===== 6. HAFTA (8) ======
-  // =========================
-  {
-    q: "Şelale (Waterfall) modelinin en ayırt edici özelliği hangisidir?",
-    t: "mcq",
-    o: [
-      "Aşamalar sıralıdır; bir aşama tamamlanmadan diğeri başlamaz, geri dönüş maliyetlidir",
-      "Sürekli küçük teslimler ve sprintlerle ilerler",
-      "Her döngüde risk analizi merkezde yer alır",
-      "Sadece prototip üretip ardından proje biter"
-    ],
-    a: 1,
-    difficulty: 2,
-    week: 6,
-    topic: "Waterfall",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A\nWaterfall sıralı ilerler; gereksinimler çok değişmiyorsa daha uygundur.\nTaktik: Waterfall = sıra var, geri dönüş pahalı."
-  },
-  {
-    q: "Çevik (Agile) yaklaşımın temel ilerleme şekli hangisidir?",
-    t: "mcq",
-    o: [
-      "Bütün ürünü tek seferde en sonda teslim etmek",
-      "Küçük parçalarda iteratif/inkremental ilerlemek ve sık geri bildirim almak",
-      "Testleri tamamen kaldırmak",
-      "Gereksinimleri hiç yazmadan direkt kodlamak"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 6,
-    topic: "Agile",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nAgile; küçük teslim + hızlı geri bildirimle gelişir, değişime daha dayanıklıdır.\nTaktik: Agile = küçük teslim + sık geri bildirim."
-  },
-  {
-    q: "Scrum’da ‘Sprint’ en doğru nasıl tanımlanır?",
-    t: "mcq",
-    o: [
-      "Belirsiz süreli, plansız çalışma dönemi",
-      "Zaman kutulu (time-boxed) belirli süreli geliştirme döngüsü ve sonunda çalışan çıktı hedefi",
-      "Sadece test ekibinin çalıştığı dönem",
-      "Sadece tasarım ekibinin çizim yaptığı dönem"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 6,
-    topic: "Scrum",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nSprint kısa bir döngüdür; amaç sprint sonunda çalışan ürün artışı üretmektir.\nTaktik: Sprint = kısa süre + somut çıktı."
-  },
-  {
-    q: "Kanban yaklaşımında WIP (Work In Progress) limiti neyi hedefler?",
-    t: "mcq",
-    o: [
-      "Aynı anda çok iş açıp hızlanmayı",
-      "Aynı anda yapılan işi sınırlayıp darboğazları azaltmayı ve akışı iyileştirmeyi",
-      "Testleri tamamen kaldırmayı",
-      "Gereksinimleri belgesiz yapmayı"
-    ],
-    a: 2,
-    difficulty: 3,
-    week: 6,
-    topic: "Kanban",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nWIP limiti ‘başlamak’ yerine ‘bitirmeyi’ artırır; akışı güçlendirir.\nTaktik: Kanban’da hedef = bitirmek."
-  },
-  {
-    q: "Spiral modelin merkezindeki kritik fikir hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece sıralı adımlarla ilerlemek",
-      "Her döngüde risk analizi yaparak ilerlemek ve kararları buna göre güncellemek",
-      "Sadece hızlı prototip yapmak",
-      "Testi en sona bırakmak"
-    ],
-    a: 2,
-    difficulty: 3,
-    week: 6,
-    topic: "Spiral",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nSpiral döngüsel ilerler ve her döngüde risk değerlendirmesi temel karardır.\nTaktik: Spiral = döngü + risk kontrolü."
-  },
-  {
-    q: "RAD (Rapid Application Development) yaklaşımının temel hedefi hangisidir?",
-    t: "mcq",
-    o: [
-      "Değişimi minimuma indirip sabit plana bağlı kalmak",
-      "Hızlı prototipleme ve kullanıcı geri bildirimiyle hızlı geliştirme yapmak",
-      "Sadece dokümantasyon üretmek",
-      "Sadece performans testi yapmak"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 6,
-    topic: "RAD",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nRAD: hızlı prototip + hızlı geri bildirimle ürünü çabuk olgunlaştırma yaklaşımıdır.\nTaktik: RAD = hızlı prototip, hızlı öğrenme."
-  },
-  {
-    q: "V-Model’in temel fikri hangisidir?",
-    t: "mcq",
-    o: [
-      "Testi tamamen en sona bırakmak",
-      "Her geliştirme aşamasına karşılık gelen bir test aşaması tasarlamak ve eşlemek",
-      "Sadece sprintlerle ilerlemek",
-      "Sadece risk analizine odaklanmak"
-    ],
-    a: 2,
-    difficulty: 3,
-    week: 6,
-    topic: "V-Model",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nV-Model’de geliştirme adımlarıyla test adımları eşleştirilir; test planı erkenden düşünülür.\nTaktik: V’nin bir tarafı geliştirme, diğer tarafı test."
-  },
-  {
-    q: "Bileşen tabanlı geliştirme (Component-Based Development) neyi vurgular?",
-    t: "mcq",
-    o: [
-      "Her şeyi sıfırdan yazmayı",
-      "Yeniden kullanılabilir, önceden test edilmiş bileşenleri birleştirerek geliştirmeyi",
-      "Sadece tek bir dil kullanmayı",
-      "Sadece UI tasarımı yapmayı"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 6,
-    topic: "Component-Based",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nAmaç tekrar eden işleri hazır bileşenlerle hızlandırmak ve kaliteyi artırmaktır.\nTaktik: Bileşen = hazır parça, sistem = parçaların uyumu."
-  },
-
-  // =========================
-  // ===== EK 8 SORU (50’yi tamamlamak için) =====
-  // (Dağılım: 1-6 haftaların kavramlarına paralel, sınavda çok sorulan tarzda)
-  // =========================
-  {
-    q: "Aşağıdakilerden hangisi ‘uygulama yazılımına’ örnektir?",
-    t: "mcq",
-    o: ["Aygıt sürücüsü (driver)", "İşletim sistemi çekirdeği", "Web tarayıcısı", "BIOS/UEFI yazılımı"],
-    a: 3,
-    difficulty: 1,
-    week: 1,
-    topic: "Uygulama Yazılımı",
-    importance: 2,
-    explanation:
-      "Doğru cevap: C\nTarayıcı kullanıcıya hizmet veren uygulamadır. Driver/BIOS/çekirdek daha çok sistem katmanındadır.\nTaktik: Kullanıcı işi yapan = uygulama."
-  },
-  {
-    q: "SQL’de ‘veri silme’ işlemi için kullanılan komut hangisidir?",
-    t: "mcq",
-    o: ["DELETE", "DROP", "REMOVE", "CLEAR"],
-    a: 1,
-    difficulty: 1,
-    week: 2,
-    topic: "SQL CRUD",
-    importance: 2,
-    explanation:
-      "Doğru cevap: A\nDELETE satır/kayıt siler. DROP tablo gibi nesneyi tamamen kaldırabilir.\nTaktik: DELETE = kayıt sil; DROP = tabloyu bile kaldırabilir."
-  },
-  {
-    q: "Prototip kullanmanın en büyük faydası hangisidir?",
-    t: "mcq",
-    o: [
-      "Kodu tamamen gereksiz hale getirmesi",
-      "Yanlış anlama varsa erken fark edilmesini ve tasarım kararlarının hızla doğrulanmasını sağlaması",
-      "Testi tamamen ortadan kaldırması",
-      "Gereksinim belgesini yazmayı engellemesi"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 3,
-    topic: "Prototip",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nPrototip, kullanıcıya erken gösterip geri bildirim almayı sağlar; yanlış yön daha baştan düzeltilir.\nTaktik: Erken göster = erken düzelt."
-  },
-  {
-    q: "Dokümantasyonun bakım (maintenance) maliyetine etkisi genelde nasıldır?",
-    t: "mcq",
-    o: [
-      "Bakım maliyetini artırır çünkü daha çok dosya olur",
-      "Bakım maliyetini düşürür çünkü yeni gelen kişi sistemi daha hızlı anlar",
-      "Bakımla ilgisi yoktur",
-      "Sadece test maliyetini artırır"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 4,
-    topic: "Dokümantasyon",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nDokümantasyon bilgi kaybını azaltır; ekip değişse bile sistem sürdürülebilir olur.\nTaktik: Belge = proje hafızası."
-  },
-  {
-    q: "Kalite planı oluşturmanın en doğru amacı hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece ekip için motivasyon metni yazmak",
-      "Kalite hedeflerini, standartları ve kalite faaliyetlerini önceden tanımlamak",
-      "Sadece kod satır sayısını artırmak",
-      "Sadece testleri azaltmak"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 5,
-    topic: "Kalite Planı",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nKalite planı: hangi kalite seviyesine ulaşılacak, nasıl ölçülecek, hangi kontroller yapılacak gibi konuları belirler.\nTaktik: Plan = hedef + ölçüm + yöntem."
-  },
-  {
-    q: "Şelale modelinin en zayıf kaldığı durum hangisine daha yakındır?",
-    t: "mcq",
-    o: [
-      "Gereksinimlerin baştan net ve sabit olduğu projeler",
-      "Gereksinimlerin süreç içinde sık değiştiği projeler",
-      "Çok küçük ve basit projeler",
-      "Yasal zorunlulukların güçlü olduğu projeler"
-    ],
-    a: 2,
-    difficulty: 3,
-    week: 6,
-    topic: "Waterfall Uygunluk",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B\nWaterfall’da geri dönüş pahalıdır; gereksinim çok değişiyorsa çevik yaklaşımlar daha rahat eder.\nTaktik: Değişim çoksa → çevik düşün."
-  },
-  {
-    q: "Agile yaklaşımda ‘geri bildirim’ neden bu kadar değerlidir?",
-    t: "mcq",
-    o: [
-      "Çünkü dokümantasyonu tamamen kaldırır",
-      "Çünkü ürünün doğru yöne evrilmesini sağlar ve hatalı varsayımları erken düzeltir",
-      "Çünkü test ihtiyacını ortadan kaldırır",
-      "Çünkü proje yönetimini gereksiz yapar"
-    ],
-    a: 2,
-    difficulty: 2,
-    week: 6,
-    topic: "Agile Geri Bildirim",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nSık geri bildirim, yanlış özelliğe aylar harcamayı önler ve değeri artırır.\nTaktik: Geri bildirim = yön düzeltme."
-  },
-  {
-    q: "Bir proje ‘kapsam taşması (scope creep)’ yaşadığında en olası sonuç hangisidir?",
-    t: "mcq",
-    o: [
-      "Zaman ve bütçenin daha rahat yönetilmesi",
-      "Zaman/bütçe sapması ve kalite riskinin artması",
-      "Test ihtiyacının azalması",
-      "Dokümantasyon ihtiyacının ortadan kalkması"
-    ],
-    a: 2,
-    difficulty: 3,
-    week: 5,
-    topic: "Scope Creep",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B\nKapsam kontrolsüz büyürse süre uzar, bütçe artar, kalite düşebilir.\nTaktik: Kapsam = sınır; sınır yoksa proje uzar."
+    a: "Yönetim ve operasyonel karmaşıklığın artması (izleme, dağıtım, ağ iletişimi)",
+    difficulty: "medium",
+    week: 11,
+    topic: "Mikroservis - zorluklar",
+    importance: "high",
+    explanation: "Servis sayısı arttıkça izleme, loglama, dağıtım ve servis iletişimi gibi operasyonel işler büyür."
   }
 ];
