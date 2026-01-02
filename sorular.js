@@ -1,947 +1,878 @@
-// FINAL – 15 HTML + 35 CSS = 50 Soru (MCQ)
+// FINAL – Yazılım Mimarileri (1-6. Hafta) – 50 Soru (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
   // =========================
-  // ==== 1-15: HTML (15) ====
+  // ==== 1. HAFTA (8) ========
   // =========================
-
   {
-    q: "Internet ve Web (WWW) arasındaki fark için en doğru ifade hangisidir? (PÇ2,4,10 / ÖÇ1)",
+    q: "‘Yazılım’ kavramını en doğru şekilde hangisi açıklar?",
     t: "mcq",
     o: [
-      "Internet, web sayfalarının yazıldığı dildir; Web ise kabloların adıdır.",
-      "Internet, ağ altyapısıdır (ağlar ağı); Web ise internet üzerinde çalışan bir hizmettir (HTTP/URL ile sayfa sunumu).",
-      "Internet sadece tarayıcıdır; Web sadece modemdir.",
-      "Web donanımdır; Internet HTML etiketidir.",
-      "İkisi aynı kavramdır; ayırt etmeye gerek yoktur."
+      "Bilgisayarın fiziksel parçalarının (ekran, RAM, işlemci) tümü",
+      "Dijital sistemlerin çalışmasını sağlayan komutlar, veriler ve talimatların oluşturduğu programlar bütünü",
+      "Sadece internet sitelerinde kullanılan görseller ve tasarımlar",
+      "Sadece oyunlar için yazılan kodlar"
     ],
-    a: "Internet, ağ altyapısıdır (ağlar ağı); Web ise internet üzerinde çalışan bir hizmettir (HTTP/URL ile sayfa sunumu).",
-    difficulty: "easy",
+    a: 1,
+    difficulty: 1,
     week: 1,
-    topic: "Internet vs Web",
-    importance: "high",
+    topic: "Yazılım Tanımı",
+    importance: 3,
     explanation:
-      "Kavram: Internet = altyapı (ağlar ağı). Web = bu altyapı üzerinde çalışan servis (WWW, HTTP).\nNasıl çözersin: Şıklarda “altyapı” ve “servis” ayrımını ararsın.\nTuzak: “Internet=Web” diyen şıklar.\nTaktik: Internet=yol, Web=yoldaki hizmet (web sayfası)."
+      "Yazılım; bilgisayar/akıllı cihaz gibi dijital sistemlere ‘ne yapacağını’ söyleyen komutlar ve talimatlardan oluşur. Donanım tek başına iş yapamaz; işi yaptıran şey yazılımdır. Örneğin bir bankacılık uygulaması da, bir işletim sistemi de yazılımdır.\nTaktik: Donanım = beden, yazılım = beyin gibi düşün."
   },
-
   {
-    q: "Aşağıdaki HTML iskeletinde <head> ve <body> görevleri için doğru eşleştirme hangisidir? (PÇ2,4,10 / ÖÇ2)\n\n(1) <head> ... </head>\n(2) <body> ... </body>",
+    q: "Sistem yazılımı ile uygulama yazılımı arasındaki temel fark nedir?",
     t: "mcq",
     o: [
-      "(1) Görünen içerik, (2) Sayfa ayarları",
-      "(1) Sayfa ayarları (title, meta, css link), (2) Görünen içerik",
-      "(1) Sadece tablolar, (2) Sadece formlar",
-      "(1) Footer bölümü, (2) Frame bölümü",
-      "(1) Görseller, (2) Sadece metin"
+      "Sistem yazılımı sadece oyun çalıştırır, uygulama yazılımı sadece internete girer",
+      "Sistem yazılımı donanımı ve kaynakları yönetir; uygulama yazılımı belirli kullanıcı görevlerini yapar",
+      "Uygulama yazılımı donanım sürücülerini yönetir; sistem yazılımı metin düzenler",
+      "İkisi aynı şeydir, sadece isimleri farklıdır"
     ],
-    a: "(1) Sayfa ayarları (title, meta, css link), (2) Görünen içerik",
-    difficulty: "easy",
+    a: 1,
+    difficulty: 1,
     week: 1,
-    topic: "head vs body",
-    importance: "high",
+    topic: "Sistem vs Uygulama Yazılımı",
+    importance: 3,
     explanation:
-      "Kavram: head = sayfa ayarları/bağlantılar (title, meta, CSS/JS link). body = ekranda görünen içerik.\nNasıl çözersin: “CSS linki nerede olur?” → head.\nTuzak: head ile body’yi tersleyen şık.\nTaktik: head=ayar, body=görünen."
+      "Sistem yazılımı (ör. işletim sistemi, sürücüler) bilgisayarın kaynaklarını yönetir ve diğer yazılımların çalışmasını sağlar. Uygulama yazılımı ise kullanıcıya yönelik ‘iş’ yapar: tarayıcı, ofis programı, oyun, mesajlaşma gibi.\nTaktik: Sistem yazılımı = altyapı, uygulama yazılımı = üstüne kurulan hizmet."
   },
-
   {
-    q: "Aşağıdaki HTML çalıştırıldığında ekranda ne görünür? (PÇ2,4,10 / ÖÇ2)\n\n<body>\n  <h1>Başlık</h1>\n  <p>Merhaba</p>\n</body>",
+    q: "‘Yazılım süreci’ denince en temel olarak hangi adımlar anlaşılmalıdır?",
     t: "mcq",
     o: [
-      "Sadece “Başlık” görünür",
-      "Sadece “Merhaba” görünür",
-      "“Başlık” ve altında “Merhaba” görünür",
-      "Hiçbir şey görünmez",
-      "h1 görünmez, p görünür"
+      "Sadece kod yazma ve uygulamayı mağazaya koyma",
+      "Tasarım, kodlama, test ve dağıtımı içeren geliştirme süreci",
+      "Sadece kullanıcı arayüzü çizme",
+      "Sadece veri tabanı kurma"
     ],
-    a: "“Başlık” ve altında “Merhaba” görünür",
-    difficulty: "easy",
+    a: 1,
+    difficulty: 1,
+    week: 1,
+    topic: "Yazılım Süreci",
+    importance: 3,
+    explanation:
+      "Yazılım geliştirme; önce nasıl çalışacağını planlamak/tasarlamak, sonra kodlamak, sonra test etmek ve en sonunda kullanıcıya dağıtmak gibi aşamalardan oluşur. Bu adımlar birlikte yönetilmezse proje “çalışıyor gibi” görünür ama sürdürülemez hale gelir.\nTaktik: T-K-T-D = Tasarla, Kodla, Test et, Dağıt."
+  },
+  {
+    q: "Algoritma nedir?",
+    t: "mcq",
+    o: [
+      "Bir bilgisayarın fiziksel işlem gücü",
+      "Bir problemin çözümünü adım adım tanımlayan mantıksal sıralama",
+      "Bir programlama dilinin derleyicisi",
+      "Bir veritabanı türü"
+    ],
+    a: 1,
+    difficulty: 1,
+    week: 1,
+    topic: "Algoritma",
+    importance: 2,
+    explanation:
+      "Algoritma; bir işi ‘hangi sırayla ve nasıl’ yapacağını adım adım anlatan çözümdür. Kod, algoritmanın programlama diliyle yazılmış halidir. Örneğin ‘iki sayıyı topla’ işi bile bir algoritmadır: sayıları al, topla, sonucu yazdır.\nTaktik: Algoritma = yemek tarifi, kod = tarifi yazdığın dil."
+  },
+  {
+    q: "Derleme (compile) ile yorumlama (interpret) arasındaki fark hangisidir?",
+    t: "mcq",
+    o: [
+      "Derleme satır satır çalıştırır; yorumlama tamamen makine diline çevirir",
+      "Derleme kaynak kodu makine diline çevirir; yorumlama kodu çalışma anında satır satır çalıştırır",
+      "İkisi de aynı anlama gelir",
+      "Derleme sadece web sitelerinde olur"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 1,
+    topic: "Compile vs Interpret",
+    importance: 3,
+    explanation:
+      "Derlemede (compile) kaynak kod önce makine diline çevrilir; sonra çalışır. Yorumlamada (interpret) kod genellikle çalışma anında satır satır yorumlanır. Bu fark, hata yakalama biçimini ve çalışma performansını etkileyebilir.\nTaktik: Compile = önce çevir sonra çalıştır; Interpret = çalıştırırken çevir."
+  },
+  {
+    q: "Entegrasyon (integration) en doğru şekilde hangi durumu ifade eder?",
+    t: "mcq",
+    o: [
+      "Bir yazılımın hiç test edilmeden yayınlanması",
+      "Farklı yazılımlar/bileşenlerin birlikte çalışacak şekilde bir araya getirilmesi",
+      "Sadece kullanıcı arayüzünün tasarlanması",
+      "Veritabanındaki tüm tabloların silinmesi"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 1,
+    topic: "Entegrasyon",
+    importance: 2,
+    explanation:
+      "Entegrasyon; bir sistemin parçalarının veya farklı sistemlerin birbirine bağlanıp veri alışverişi yapmasıdır. Örneğin bir e-ticaret sitesinin ödeme sağlayıcısıyla API üzerinden konuşması bir entegrasyondur.\nTaktik: Entegrasyon = parçaları konuşturma."
+  },
+  {
+    q: "CI/CD kavramı genel olarak neyi amaçlar?",
+    t: "mcq",
+    o: [
+      "Sadece tasarım dokümanı yazmayı",
+      "Sürekli entegrasyon ve sürekli dağıtım ile hızlı ve sık sürüm çıkarmayı",
+      "Sadece veritabanını yedeklemeyi",
+      "Sadece kullanıcı şifrelerini değiştirmeyi"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 1,
+    topic: "CI/CD",
+    importance: 2,
+    explanation:
+      "CI/CD; kodun sık sık birleştirilmesi (entegrasyon) ve güvenli/otomatik şekilde ortama taşınması (dağıtım) fikridir. Amaç, “büyük-büyük yayınlar” yerine daha küçük ama daha sık ve kontrollü sürümlerle ilerlemektir.\nTaktik: CI = birleştir, CD = dağıt."
+  },
+  {
+    q: "Mikroservis mimarisi en iyi hangi cümleyle özetlenir?",
+    t: "mcq",
+    o: [
+      "Uygulamanın tek bir dev program olarak yazılması",
+      "Uygulamanın bağımsız hizmetlere bölünmesi ve her hizmetin ayrı bileşen olarak çalışması",
+      "Sadece mobil uygulamalar için kullanılan bir yöntem",
+      "Veritabanı normalizasyon tekniği"
+    ],
+    a: 1,
+    difficulty: 3,
+    week: 1,
+    topic: "Mikroservis",
+    importance: 2,
+    explanation:
+      "Mikroserviste sistem; ‘sipariş’, ‘ödeme’, ‘kargo’ gibi bağımsız servislerden oluşur. Her servis ayrı geliştirilebilir/dağıtılabilir. Bu, ölçeklemeyi ve ekiplerin paralel çalışmasını kolaylaştırır; ancak servisler arası iletişim ve yönetim daha dikkat ister.\nTaktik: Mikroservis = küçük bağımsız servisler, birlikte büyük sistem."
+  },
+
+  // =========================
+  // ==== 2. HAFTA (8) ========
+  // =========================
+  {
+    q: "Veri yapıları (data structures) neden önemlidir?",
+    t: "mcq",
+    o: [
+      "Sadece ekran tasarımını güzelleştirmek için",
+      "Veriye hızlı erişim, düzenleme, bellek yönetimi ve performans optimizasyonu sağladığı için",
+      "Sadece internet hızını artırdığı için",
+      "Sadece işletim sistemine özel olduğu için"
+    ],
+    a: 1,
+    difficulty: 2,
     week: 2,
-    topic: "Temel etiketler çıktı",
-    importance: "medium",
+    topic: "Veri Yapıları",
+    importance: 3,
     explanation:
-      "Kavram: h1 başlık, p paragraf; body içinde yazılan görünür.\nNasıl çözersin: “Body içinde mi?” → Evetse görünür.\nTuzak: head-body karıştırmak.\nTaktik: Body=ekran."
+      "Veri yapıları, veriyi nasıl sakladığını ve nasıl eriştiğini belirler. Doğru veri yapısı seçimi programı hızlandırır, bellek kullanımını iyileştirir ve problemi daha temiz çözer.\nTaktik: Veri yapısı seçimi = performansın temel anahtarı."
   },
-
   {
-    q: "Bağlantı (köprü) oluşturmak için hangi etiket ve hangi attribute kullanılır? (PÇ2,4,10 / ÖÇ3)",
+    q: "Aynı problemi çözen iki programdan biri çok yavaşsa, aşağıdakilerden hangisi en mantıklı ilk kontrol noktasıdır?",
     t: "mcq",
     o: [
-      "<img> — href",
-      "<a> — href",
-      "<a> — src",
-      "<link> — src",
-      "<p> — href"
+      "Programın ikonunun rengi",
+      "Kullanılan veri yapısı ve algoritmanın verimliliği",
+      "Klavyenin marka modeli",
+      "Bilgisayarın ekran çözünürlüğü"
     ],
-    a: "<a> — href",
-    difficulty: "easy",
-    week: 3,
-    topic: "Hyperlink",
-    importance: "high",
-    explanation:
-      "Kavram: <a> link üretir; hedef adres href’te olur.\nNasıl çözersin: href=hedef, src=kaynak.\nTuzak: <img> ile href’i eşleştiren şık.\nTaktik: href = “nereye gidecek?”."
-  },
-
-  {
-    q: "Aşağıdaki iki kullanımın doğru açıklaması hangisidir? (PÇ2,4,10 / ÖÇ3)\n\n1) <img src='foto.jpg'>\n2) <a href='sayfa.html'>Git</a>",
-    t: "mcq",
-    o: [
-      "1) href dosya kaynağıdır, 2) src link hedefidir",
-      "1) src dosya kaynağıdır, 2) href link hedefidir",
-      "İkisi de link hedefidir",
-      "src sadece tabloda kullanılır",
-      "href sadece formda kullanılır"
-    ],
-    a: "1) src dosya kaynağıdır, 2) href link hedefidir",
-    difficulty: "easy",
-    week: 3,
-    topic: "href vs src",
-    importance: "high",
-    explanation:
-      "Kavram: src = source/kaynak (img, script, video). href = link hedefi (a, link).\nNasıl çözersin: Kaynak mı hedef mi? diye ayır.\nTuzak: src-href yer değiştiren şık.\nTaktik: src=source, href=hedef."
-  },
-
-  {
-    q: "Aşağıdaki HTML çalıştırıldığında çıktı nasıl olur? (PÇ2,4,10 / ÖÇ2)\n\n<p>Merhaba<br>Dünya</p>",
-    t: "mcq",
-    o: [
-      "Tek satır: “MerhabaDünya”",
-      "İki satır: üstte “Merhaba”, altta “Dünya”",
-      "Sadece “Merhaba” görünür",
-      "Sadece “Dünya” görünür",
-      "<br> yazısı ekranda görünür"
-    ],
-    a: "İki satır: üstte “Merhaba”, altta “Dünya”",
-    difficulty: "medium",
+    a: 1,
+    difficulty: 2,
     week: 2,
-    topic: "br çıktı",
-    importance: "medium",
+    topic: "Performans Mantığı",
+    importance: 2,
     explanation:
-      "Kavram: <br> satır kırar, kendisi yazı gibi görünmez.\nNasıl çözersin: <br> gördün mü alt satıra geçir.\nTuzak: “<br> görünür” diyen şık.\nTaktik: br = break line."
+      "Performans çoğu zaman veri yapısı + algoritma seçiminden etkilenir. Örneğin büyük bir listede sürekli arama yapıyorsan, yanlış yapı seçimi (ör. düz liste yerine uygun indeks yapısı) programı gereksiz yavaşlatır.\nTaktik: Yavaşlıkta önce ‘algoritma + veri yapısı’ diye düşün."
   },
-
   {
-    q: "Aşağıdakilerden hangisi doğru tablo (table) yapısıdır? (PÇ2,4,10 / ÖÇ2)",
+    q: "‘Kuyruk (Queue)’ mantığına en uygun örnek hangisidir?",
     t: "mcq",
     o: [
-      "<table><td>1</td><tr>2</tr></table>",
-      "<table><tr><td>1</td><td>2</td></tr></table>",
-      "<table><td><tr>1</tr></td></table>",
-      "<tr><table><td>1</td></table></tr>",
-      "<table><th>1</th><p>2</p></table>"
+      "Son giren ilk çıkar (LIFO) çalışan bir geri alma sistemi",
+      "İlk giren ilk çıkar (FIFO) çalışan bir banka sırası",
+      "Rastgele sırayla işlem yapan bir sistem",
+      "Sadece tek eleman tutan yapı"
     ],
-    a: "<table><tr><td>1</td><td>2</td></tr></table>",
-    difficulty: "medium",
-    week: 4,
-    topic: "Table yapı",
-    importance: "high",
+    a: 1,
+    difficulty: 2,
+    week: 2,
+    topic: "FIFO/LIFO",
+    importance: 2,
     explanation:
-      "Kural: table → tr(satır) → td(hücre).\nNasıl çözersin: Hiyerarşi doğru mu kontrol et.\nTuzak: td’yi tr dışına koymak.\nTaktik: T-R-D (Table-Row-Data)."
+      "Queue (kuyruk) FIFO çalışır: İlk gelen ilk işlem görür. Banka sırası, yazıcı kuyruğu gibi örnekler FIFO’ya uygundur. Stack ise LIFO’dur (son gelen ilk çıkar).\nTaktik: FIFO = “First In First Out” = sıradaki mantık."
+  },
+  {
+    q: "Ofis üretkenliği uygulamalarının temel amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece oyun oynamak",
+      "Belge düzenleme, tablo, sunum ve e-posta gibi iş görevlerini desteklemek",
+      "Sadece donanım sürücülerini yönetmek",
+      "Sadece işletim sistemi kurmak"
+    ],
+    a: 1,
+    difficulty: 1,
+    week: 2,
+    topic: "Uygulama Türleri",
+    importance: 2,
+    explanation:
+      "Ofis uygulamaları iş dünyasının temel işlerini kolaylaştırır: Word benzeri belge, Excel benzeri tablo, PowerPoint benzeri sunum ve e-posta yönetimi gibi.\nTaktik: Ofis yazılımları = belge + tablo + sunum + iletişim."
+  },
+  {
+    q: "Web tarayıcılarının (browser) temel görevi hangisidir?",
+    t: "mcq",
+    o: [
+      "Bilgisayarın RAM’ini artırmak",
+      "Web sayfalarını görüntülemek ve çevrimiçi işlemleri yapmak",
+      "Sadece fotoğraf düzenlemek",
+      "Sadece antivirüs taraması yapmak"
+    ],
+    a: 1,
+    difficulty: 1,
+    week: 2,
+    topic: "Web Tarayıcıları",
+    importance: 2,
+    explanation:
+      "Tarayıcı, web sayfalarını açan ve kullanıcı ile internet hizmetleri arasında köprü kuran uygulamadır. Örneğin bir e-devlet işlemi, alışveriş, form doldurma gibi işlemler tarayıcı üzerinden yapılır.\nTaktik: Tarayıcı = web’e giriş kapısı."
+  },
+  {
+    q: "‘İşletim Sistemi’ en iyi hangi tanıma uyar?",
+    t: "mcq",
+    o: [
+      "Sadece internete bağlanmayı sağlayan bir uygulama",
+      "Donanımı yönetir, kaynakları tahsis eder ve uygulamaların çalışmasını sağlar",
+      "Sadece metin yazma programıdır",
+      "Sadece veritabanı türüdür"
+    ],
+    a: 1,
+    difficulty: 1,
+    week: 2,
+    topic: "İşletim Sistemleri",
+    importance: 3,
+    explanation:
+      "İşletim sistemi; işlemci, bellek, disk gibi kaynakları yönetir ve uygulamaların bu kaynakları kullanmasını sağlar. Windows/macOS/Linux tipik örneklerdir.\nTaktik: OS = kaynak yöneticisi + uygulama çalıştırıcı."
+  },
+  {
+    q: "Yazılım Mühendisliği’nin temel amacı en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece kod yazmayı öğrenmek",
+      "Mühendislik prensipleri ve iyi uygulamalarla yazılım geliştirme süreçlerini yönetip projeyi başarıyla tamamlamak",
+      "Sadece tasarım yapmak",
+      "Sadece bilgisayar donanımı üretmek"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 2,
+    topic: "Yazılım Mühendisliği",
+    importance: 3,
+    explanation:
+      "Yazılım mühendisliği; tasarım, geliştirme, test, sürdürme ve yönetim süreçlerini disiplinli şekilde ele alır. Amaç ‘tesadüfen çalışan’ değil, planlı ve sürdürülebilir yazılım üretmektir.\nTaktik: Mühendislik = süreç + kalite + yönetim."
+  },
+  {
+    q: "Bir yazılım mühendisinin tipik görevleri arasında hangisi yer alır?",
+    t: "mcq",
+    o: [
+      "Sadece bilgisayar toplamak",
+      "Gereksinim analizi, tasarım, kod geliştirme gibi süreçlerde aktif rol almak",
+      "Sadece klavye sürücüsü güncellemek",
+      "Sadece internet kablosu çekmek"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 2,
+    topic: "Mühendis Görevleri",
+    importance: 2,
+    explanation:
+      "Yazılım mühendisi sadece kod yazmaz; gereksinimi anlamadan kod yazmak, doğru ürünü üretmeyi zorlaştırır. Bu yüzden analiz, tasarım ve geliştirme gibi aşamalar birlikte ele alınır.\nTaktik: İyi yazılım = doğru gereksinim + doğru tasarım + doğru kod."
   },
 
+  // =========================
+  // ==== 3. HAFTA (9) ========
+  // =========================
   {
-    q: "Aşağıdaki HTML’de 1. satırda kaç hücre oluşur? (PÇ2,4,10 / ÖÇ2)\n\n<table>\n  <tr><td>A</td><td>B</td></tr>\n</table>",
+    q: "Gereksinim toplamada (requirements gathering) aşağıdakilerden hangisi kullanılan bir yöntemdir?",
     t: "mcq",
-    o: ["0", "1", "2", "3", "4"],
-    a: "2",
-    difficulty: "easy",
-    week: 4,
-    topic: "Table çıktı",
-    importance: "medium",
+    o: [
+      "Ekran kartı overclock ayarı",
+      "Mülakat/anket/gözlem gibi yöntemlerle kullanıcı ihtiyaçlarını toplama",
+      "Sadece rastgele özellik ekleme",
+      "Sadece log dosyası silme"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 3,
+    topic: "Gereksinim Toplama",
+    importance: 3,
     explanation:
-      "Kural: Bir tr içindeki td sayısı = hücre sayısı.\nNasıl çözersin: td’leri say (A,B → 2).\nTuzak: tr’yi hücre sanmak.\nTaktik: “Kaç td varsa o kadar hücre”."
+      "Gereksinimler; kullanıcıyı dinleyerek, anket yaparak, sahada gözlemleyerek veya prototip gösterip geri bildirim alarak toplanabilir. Amaç, ‘ne yapılacağını’ netleştirmektir.\nTaktik: Gereksinim = tahmin değil, kullanıcıdan veri toplama."
+  },
+  {
+    q: "Gereksinim analizi aşamasında temel olarak ne yapılır?",
+    t: "mcq",
+    o: [
+      "Kod yazılır ve hemen yayınlanır",
+      "Tutarsızlık/eksik/çakışma bulunur, gereksinimler önceliklendirilir",
+      "Sadece ikonlar çizilir",
+      "Sadece sunucu kurulur"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 3,
+    topic: "Gereksinim Analizi",
+    importance: 3,
+    explanation:
+      "Toplanan gereksinimler her zaman temiz değildir: çelişebilir, eksik olabilir. Analizde bunlar düzeltilir ve hangi gereksinimin daha önemli olduğu belirlenir. Böylece ekip neye önce odaklanacağını bilir.\nTaktik: Analiz = temizle + sırala (önceliklendir)."
+  },
+  {
+    q: "Gereksinim belirtimi (requirements specification) belgesinin amacı nedir?",
+    t: "mcq",
+    o: [
+      "Sadece kodun çalışmasını sağlamak",
+      "Yazılımın işlevsellik, performans, arayüz ve diğer özelliklerini ayrıntılı belgelemek",
+      "Sadece reklam metni yazmak",
+      "Sadece bilgisayara sürücü yüklemek"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 3,
+    topic: "Gereksinim Belirtimi",
+    importance: 3,
+    explanation:
+      "Belirtim belgesi, ‘ürün tam olarak ne yapacak?’ sorusunun yazılı cevabıdır. Geliştirme ve test ekibi bu belgeyi referans alarak çalışır. Belge yoksa “kimin dediği doğru?” tartışması büyür.\nTaktik: Belirtim = proje için ortak sözleşme."
+  },
+  {
+    q: "Gereksinim doğrulama (validation) aşamasında ne hedeflenir?",
+    t: "mcq",
+    o: [
+      "Gereksinimleri müşteri/paydaş ile gözden geçirip doğru ve eksiksiz olduğunu onaylamak",
+      "Sadece veritabanı yedeklemek",
+      "Sadece kodu minify etmek",
+      "Sadece sunucu kapatıp açmak"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 3,
+    topic: "Gereksinim Doğrulama",
+    importance: 3,
+    explanation:
+      "Doğrulama; yazılan gereksinimlerin müşteri ve paydaşlarca incelenip onaylanmasıdır. Burada amaç, yanlış anlama varsa erken yakalamaktır; çünkü geç yakalanırsa maliyet artar.\nTaktik: Doğrulama = ‘Doğru mu anladık?’ kontrolü."
+  },
+  {
+    q: "Gereksinim yönetimi (requirements management) neden kritik kabul edilir?",
+    t: "mcq",
+    o: [
+      "Çünkü gereksinimler proje boyunca değişebilir; değişiklikler belgelenmeli, izlenmeli ve onaylanmalıdır",
+      "Çünkü gereksinimler hiç değişmez",
+      "Çünkü sadece test ekibini ilgilendirir",
+      "Çünkü sadece tasarım renklerini belirler"
+    ],
+    a: 0,
+    difficulty: 3,
+    week: 3,
+    topic: "Gereksinim Yönetimi",
+    importance: 3,
+    explanation:
+      "Projede yeni ihtiyaçlar çıkabilir. Eğer değişiklik kontrol edilmezse kapsam şişer, zaman/bütçe bozulur. Bu yüzden her değişiklik kayda alınır, etkisi değerlendirilir ve onaylanarak projeye eklenir.\nTaktik: Değişiklik = kayıt + etki analizi + onay."
+  },
+  {
+    q: "‘İzleme ve güncelleme’ adımı gereksinim sürecinde neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Proje ilerlerken gereksinimlerin hedeflerle uyumunu kontrol etmek ve değişiklikleri belgeye yansıtmak",
+      "Sadece sunucu loglarını silmek",
+      "Sadece yeni logo tasarlamak",
+      "Sadece kablo değiştirmek"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 3,
+    topic: "İzleme & Güncelleme",
+    importance: 2,
+    explanation:
+      "Proje ilerledikçe gereksinimler güncel kalmalıdır. Aksi halde ekip eski belgeye göre çalışır, ürün yanlış yöne gider. İzleme, gereksinimlerin proje hedefleriyle uyumlu olduğundan emin olmayı sağlar.\nTaktik: Belge yaşayan bir şeydir; güncel tut."
+  },
+  {
+    q: "Yazılım planlama sürecinin ana amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Projenin hedefini, kapsamını, kaynaklarını ve takvimini belirlemek",
+      "Sadece kod stilini seçmek",
+      "Sadece test araçlarını kurmak",
+      "Sadece kullanıcı şifrelerini sıfırlamak"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 3,
+    topic: "Planlama",
+    importance: 3,
+    explanation:
+      "Planlama; ‘ne yapıyoruz, ne kadar sürede, kimlerle, hangi kaynakla’ sorularını netleştirir. Planlama yoksa proje yönetilemez, sürprizler artar.\nTaktik: Plan = kapsam + zaman + kaynak."
+  },
+  {
+    q: "Tasarım sürecinde ‘yazılım mimarisi tasarımı’ en çok neyi belirler?",
+    t: "mcq",
+    o: [
+      "Uygulamanın bileşenlerini/modüllerini ve alt sistemlerini; aralarındaki bağlantıları",
+      "Sadece font ve renkleri",
+      "Sadece klavye kısayollarını",
+      "Sadece internet hızını"
+    ],
+    a: 0,
+    difficulty: 3,
+    week: 3,
+    topic: "Mimari Tasarım",
+    importance: 3,
+    explanation:
+      "Mimari tasarım; sistemin büyük resmini çıkarır: modüller, veritabanı yaklaşımı, UI yapısı ve bileşenlerin nasıl konuşacağı. İyi mimari, geliştirmeyi hızlandırır ve değişiklik maliyetini düşürür.\nTaktik: Mimari = büyük resim + parçaların ilişkisi."
+  },
+  {
+    q: "Prototip geliştirme tasarım aşamasında neden faydalı olabilir?",
+    t: "mcq",
+    o: [
+      "Müşteriye/paydaşlara daha iyi anlayış sunar ve tasarım kararlarını doğrulamaya yardım eder",
+      "Kod yazmayı tamamen gereksiz yapar",
+      "Testi tamamen ortadan kaldırır",
+      "Veritabanını otomatik normalleştirir"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 3,
+    topic: "Prototip",
+    importance: 2,
+    explanation:
+      "Prototip, ürünün küçük bir örneğidir. Kullanıcı prototipi görünce ‘evet bu’ veya ‘böyle değil’ diyebilir. Bu geri bildirim erken gelirse, yanlış tasarıma büyük emek harcanmaz.\nTaktik: Prototip = erken göster, erken düzelt."
   },
 
+  // =========================
+  // ==== 4. HAFTA (9) ========
+  // =========================
   {
-    q: "Form oluşturmak için temel kapsayıcı etiket hangisidir? (PÇ2,4,10 / ÖÇ2)",
+    q: "Kod geliştirme sırasında ‘test aşaması’ ile birlikte sık geçen ‘debugging’ ne demektir?",
     t: "mcq",
-    o: ["<input>", "<form>", "<button>", "<label>", "<table>"],
-    a: "<form>",
-    difficulty: "easy",
+    o: [
+      "Kodu süsleme işlemi",
+      "Hataları bulma ve düzeltme süreci",
+      "Sadece veritabanı tablo ekleme",
+      "Sadece tasarım rengi değiştirme"
+    ],
+    a: 1,
+    difficulty: 1,
+    week: 4,
+    topic: "Debugging",
+    importance: 3,
+    explanation:
+      "Debugging (hata ayıklama), yazılımın yanlış davranmasının nedenini bulup düzeltmektir. Test hatayı ortaya çıkarır; debugging ise hatanın kaynağına inip çözmektir.\nTaktik: Test = hatayı buldurur, debug = hatayı çözer."
+  },
+  {
+    q: "Performans optimizasyonunun temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Kodun daha yavaş çalışmasını sağlamak",
+      "Kodun daha hızlı çalışması veya daha az kaynak kullanması için iyileştirme yapmak",
+      "Sadece ikonları küçültmek",
+      "Sadece kullanıcı adını değiştirmek"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 4,
+    topic: "Performans",
+    importance: 2,
+    explanation:
+      "Performans optimizasyonu; CPU/RAM gibi kaynakları verimli kullanmak ve uygulamayı hızlandırmak için yapılır. Örneğin gereksiz döngüler azaltılır, ağır sorgular iyileştirilir.\nTaktik: Performans = aynı işi daha az maliyetle yapmak."
+  },
+  {
+    q: "Kod güvenliği incelenmesi (security review) en doğru hangi amaçla yapılır?",
+    t: "mcq",
+    o: [
+      "Kodun daha uzun görünmesi için",
+      "Güvenlik açıklarını tespit edip düzeltmek için",
+      "Sadece renk paletini seçmek için",
+      "Sadece klavye düzenini değiştirmek için"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 4,
+    topic: "Güvenlik",
+    importance: 3,
+    explanation:
+      "Güvenlik incelemesi; kullanıcı verisini korumak ve sistemin saldırılara açık olmamasını sağlamak için yapılır. Örneğin input doğrulama eksikleri, yetki kontrolleri, zayıf şifreleme gibi konular burada ele alınır.\nTaktik: Güvenlikte soru: ‘Bu açık nasıl kötüye kullanılabilir?’"
+  },
+  {
+    q: "Belgelemenin (documentation) en pratik faydası hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece projeyi daha ağır yapmak",
+      "Gelecekteki geliştiricilerin ve bakım ekibinin sistemi anlamasını ve sürdürmesini kolaylaştırmak",
+      "Sadece testleri silmek",
+      "Sadece veri tabanını kapatmak"
+    ],
+    a: 1,
+    difficulty: 1,
+    week: 4,
+    topic: "Dokümantasyon",
+    importance: 3,
+    explanation:
+      "Dokümantasyon; ‘bu sistem nasıl çalışıyor, nasıl kurulur, nasıl geliştirilir’ sorularını cevaplar. Ekip değişse bile proje devam eder. Belge yoksa bilgi kişilerin kafasında kalır ve kaybolur.\nTaktik: Belge = projeyi kişiden bağımsızlaştırır."
+  },
+  {
+    q: "‘Dağıtım ve sürdürme’ aşamasında temel hedef nedir?",
+    t: "mcq",
+    o: [
+      "Yazılımı canlı ortama çıkarıp kullanıcıların erişebileceği ve desteklenebileceği hale getirmek",
+      "Sadece kodu silmek",
+      "Sadece interneti kapatmak",
+      "Sadece yeni logo eklemek"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 4,
+    topic: "Dağıtım",
+    importance: 2,
+    explanation:
+      "Dağıtım; yazılımın canlı ortama alınmasıdır. Sürdürme ise bu canlı ortamda yazılımın desteklenmesi, sorunların çözülmesi ve güncellemelerin yönetilmesidir.\nTaktik: Dağıtım = yayına al, sürdürme = yayında sağlam tut."
+  },
+  {
+    q: "Yazılım test sürecinin temel amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Yazılımın kalitesini/doğruluğunu değerlendirmek ve hataları tespit etmek",
+      "Sadece tasarımı güzelleştirmek",
+      "Sadece kullanıcı adını değiştirmek",
+      "Sadece bilgisayarı hızlandırmak"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 4,
+    topic: "Test Süreci",
+    importance: 3,
+    explanation:
+      "Test süreci, yazılımın gereksinimleri karşıladığını ve güvenilir çalıştığını doğrular. Erken hata yakalamak maliyeti düşürür ve kullanıcı memnuniyetini artırır.\nTaktik: Test = kalite sigortası."
+  },
+  {
+    q: "Test sürecinde ‘hata raporlama ve izleme’ neyi sağlar?",
+    t: "mcq",
+    o: [
+      "Bulunan hataların belgelenmesini ve geliştirme ekibine düzenli geri bildirim verilmesini",
+      "Hataları saklamayı",
+      "Sadece internet hızını artırmayı",
+      "Sadece logları yok etmeyi"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 4,
+    topic: "Hata Yönetimi",
+    importance: 3,
+    explanation:
+      "Hata raporu; hatanın ne olduğu, nasıl oluştuğu, beklenen/gerçek sonuç gibi bilgileri içerir. İzleme sayesinde hata ‘kaybolmaz’, çözüm süreci takip edilir.\nTaktik: Hata raporu = “nasıl tekrar ederim?” bilgisini yaz."
+  },
+  {
+    q: "Test raporu (test report) hazırlanmasının en önemli katkısı nedir?",
+    t: "mcq",
+    o: [
+      "Test sonuçlarını, bulunan hataları ve durumu görünür kılar; proje ilerlemesini takip etmeyi kolaylaştırır",
+      "Sadece klasörleri çoğaltır",
+      "Sadece bilgisayarı yavaşlatır",
+      "Sadece renk paleti seçtirir"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 4,
+    topic: "Test Raporu",
+    importance: 2,
+    explanation:
+      "Test raporu; ne test edildi, hangi sonuçlar çıktı, kaç hata var gibi bilgileri toplar. Böylece yönetim ve ekip ‘hazır mıyız?’ sorusuna somut verilerle cevap verir.\nTaktik: Rapor = karar vermeyi kolaylaştırır."
+  },
+  {
+    q: "İşletim ve bakım sürecinde ‘veri yedekleme ve kurtarma’ neden yapılır?",
+    t: "mcq",
+    o: [
+      "Veri kaybını önlemek ve felaket durumlarında verileri geri getirebilmek için",
+      "Sadece arayüzü güzelleştirmek için",
+      "Sadece kodu daha uzun yapmak için",
+      "Sadece yeni özellik eklemek için"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 4,
+    topic: "Bakım: Backup/Recovery",
+    importance: 3,
+    explanation:
+      "Canlı sistemlerde veri en kritik varlıktır. Hata, saldırı veya donanım arızasında veri kaybı ciddi sonuç doğurur. Yedekleme ve kurtarma bu riski azaltır.\nTaktik: Veri giderse sistem de gider; yedek = hayat kurtarır."
+  },
+
+  // =========================
+  // ==== 5. HAFTA (8) ========
+  // =========================
+  {
+    q: "Proje planlama aşamasında aşağıdakilerden hangisi tipik bir faaliyettir?",
+    t: "mcq",
+    o: [
+      "Proje takvimi oluşturma, bütçe tahmini, risk analizi ve iletişim planı hazırlama",
+      "Sadece logo tasarlama",
+      "Sadece bilgisayar toplama",
+      "Sadece internet paketi satın alma"
+    ],
+    a: 0,
+    difficulty: 2,
     week: 5,
-    topic: "Forms",
-    importance: "high",
+    topic: "Proje Planlama",
+    importance: 3,
     explanation:
-      "Kavram: <form> formun kabıdır; input/button/select içeride olur.\nNasıl çözersin: ‘kapsayıcı’ kelimesi görünce form.\nTuzak: input’u kapsayıcı sanmak.\nTaktik: form=kap, input=parça."
+      "Proje planlama; zaman çizelgesi, bütçe, riskler, görev paketleri ve iletişim gibi başlıkları netleştirir. Bu çıktılar, projenin yönetilebilir olmasını sağlar.\nTaktik: Plan = zaman + bütçe + risk + görev + iletişim."
   },
-
   {
-    q: "Aşağıdaki HTML’de kullanıcı yazısını hangi eleman alır? (PÇ2,4,10 / ÖÇ2)\n\n<form>\n  <input type='text'>\n  <input type='submit' value='Gönder'>\n</form>",
+    q: "Kaynak tahsisi ve ekip oluşturma sürecinde temel olarak ne yapılır?",
     t: "mcq",
     o: [
-      "type='submit' input",
-      "type='text' input",
-      "form etiketi",
-      "value attribute",
-      "body etiketi"
+      "Gerekli insan/donanım/yazılım kaynakları atanır; ekip rolleri ve sorumlulukları tanımlanır",
+      "Sadece test raporu yazılır",
+      "Sadece kod sıkıştırılır",
+      "Sadece veritabanı tablo isimleri değiştirilir"
     ],
-    a: "type='text' input",
-    difficulty: "easy",
+    a: 0,
+    difficulty: 2,
+    week: 5,
+    topic: "Kaynak & Ekip",
+    importance: 2,
+    explanation:
+      "Proje planı kağıtta kalmamalıdır. İşin yapılması için doğru yetkinlikte insanlar atanır, roller netleşir ve ekip uyumu desteklenir.\nTaktik: Rol net değilse sorumluluk dağılır."
+  },
+  {
+    q: "İlerleme izleme ve kontrol (monitoring & controlling) sürecinin ana odağı nedir?",
+    t: "mcq",
+    o: [
+      "Zaman çizelgesi ve bütçenin takip edilmesi; sapma varsa düzeltici eylem alınması",
+      "Sadece ikon çizmek",
+      "Sadece sunucuyu kapatmak",
+      "Sadece e-posta yazmak"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 5,
+    topic: "İzleme & Kontrol",
+    importance: 3,
+    explanation:
+      "Proje ilerlerken her şey plana birebir uymayabilir. İzleme-kontrol, sapmayı erken yakalayıp önlem almayı sağlar. Böylece proje “geç fark edip büyük kriz yaşama” yerine “erken düzeltme” ile yürür.\nTaktik: Sapmayı erken gör = maliyeti düşür."
+  },
+  {
+    q: "Proje yönetiminde ‘gereksinimler yönetimi’ neyi kapsar?",
+    t: "mcq",
+    o: [
+      "Gereksinim değişikliklerini/eklemelerini izleme, belgeleme, değerlendirme ve onaylayarak projeye entegre etme",
+      "Sadece tasarım rengini seçme",
+      "Sadece testleri silme",
+      "Sadece bilgisayar hızlandırma"
+    ],
+    a: 0,
+    difficulty: 3,
+    week: 5,
+    topic: "Gereksinim Değişikliği",
+    importance: 3,
+    explanation:
+      "Gereksinim değişince iş yükü, süre ve maliyet değişebilir. Bu yüzden değişiklikler kayıt altına alınır, etkisi değerlendirilir ve kontrollü şekilde projeye dahil edilir.\nTaktik: Değişiklik = kontrol edilmezse kapsam taşar."
+  },
+  {
+    q: "Risk yönetiminde doğru yaklaşım hangisidir?",
+    t: "mcq",
+    o: [
+      "Riskleri tanımlamak, analiz etmek, önlem planlamak ve süreç boyunca izleyip güncellemek",
+      "Riskleri yok saymak",
+      "Riskleri sadece final haftası düşünmek",
+      "Riskleri sadece test ekibine bırakmak"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 5,
+    topic: "Risk Yönetimi",
+    importance: 3,
+    explanation:
+      "Risk yönetimi; kötü şeyler olduğunda ‘şaşırmamak’ için yapılır. Riskleri erken görürsen önlem alırsın; böylece proje daha öngörülebilir olur.\nTaktik: Risk = olasılık + etki; ikisini de düşün."
+  },
+  {
+    q: "Kalite yönetimi proje yönetiminde neyi hedefler?",
+    t: "mcq",
+    o: [
+      "Kalite planı oluşturmak, kalite standartlarını izlemek ve kalite kontrol faaliyetleri yürütmek",
+      "Sadece yeni özellik eklemek",
+      "Sadece veritabanını büyütmek",
+      "Sadece sunucu maliyetini artırmak"
+    ],
+    a: 0,
+    difficulty: 2,
+    week: 5,
+    topic: "Kalite Yönetimi",
+    importance: 3,
+    explanation:
+      "Kalite yönetimi, ürünün belirlenen seviyede güvenilir/kullanılabilir/güvenli/perfomanslı olmasını hedefler. Kalite ‘sonradan eklenen’ değil, süreç içinde yönetilen bir konudur.\nTaktik: Kalite = süreç boyunca inşa edilir."
+  },
+  {
+    q: "İletişim yönetimi proje başarısına nasıl katkı sağlar?",
+    t: "mcq",
+    o: [
+      "Paydaşlarla düzenli iletişim, ilerleme raporları ve güncel iletişim planı ile bilgi akışını düzenler",
+      "Sadece kodu kısaltır",
+      "Sadece testleri azaltır",
+      "Sadece UI renklerini değiştirir"
+    ],
+    a: 0,
+    difficulty: 1,
+    week: 5,
+    topic: "İletişim Yönetimi",
+    importance: 2,
+    explanation:
+      "Projede herkes aynı resmi görmezse yanlış beklentiler oluşur. İletişim yönetimi, doğru bilginin doğru kişiye zamanında gitmesini sağlar.\nTaktik: Sessizlik = yanlış varsayım üretir; iletişim = hizalar."
+  },
+  {
+    q: "Yazılım kalite yönetimi sürecinde aşağıdakilerden hangisi yer alır?",
+    t: "mcq",
+    o: [
+      "Dokümantasyon/standartlar, risk & değişiklik kontrolü, müşteri geri bildirimiyle sürekli iyileştirme, test & denetim",
+      "Sadece masaüstü duvar kağıdı seçmek",
+      "Sadece kablo düzenlemek",
+      "Sadece bilgisayar formatlamak"
+    ],
+    a: 0,
+    difficulty: 3,
+    week: 5,
+    topic: "Kalite Süreci Adımları",
+    importance: 3,
+    explanation:
+      "Kalite yönetimi; standartlara uyum, değişikliklerin kontrolü, müşteri geri bildirimiyle iyileştirme ve denetim/testlerle seviyenin ölçülmesi gibi parçaları kapsar. Böylece kalite rastlantı değil, sistematik hale gelir.\nTaktik: Kalite = standart + kontrol + geri bildirim + ölçüm."
+  },
+
+  // =========================
+  // ==== 6. HAFTA (8) ========
+  // =========================
+  {
+    q: "Aşağıdakilerden hangisi yaygın yazılım geliştirme modelleri arasında yer alır?",
+    t: "mcq",
+    o: [
+      "Şelale, Çevik, Spiral, RAD, V-Model, Bileşen Tabanlı Geliştirme",
+      "Sadece ‘Tek Seferde Kodla’ modeli",
+      "Sadece ‘Logo Tasarla’ modeli",
+      "Sadece ‘Sunucu Satın Al’ modeli"
+    ],
+    a: 0,
+    difficulty: 1,
     week: 6,
-    topic: "Input türleri",
-    importance: "high",
+    topic: "Geliştirme Modelleri",
+    importance: 3,
     explanation:
-      "Kural: type='text' yazı alır; submit gönder butonudur.\nNasıl çözersin: ‘Yazı girilecek alan’ → text.\nTuzak: submit’i yazı alanı sanmak.\nTaktik: text=yazı, submit=gönder."
+      "Geliştirme modelleri projenin nasıl ilerleyeceğini belirler. Şelale daha sıralı; çevik daha iteratif; spiral risk odaklı; RAD hızlı prototip; V-model test eşleşmeli; bileşen tabanlı ise yeniden kullanım odaklıdır.\nTaktik: Model seçimi = projenin doğasına göre yapılır."
   },
-
   {
-    q: "Çerçeveler (frames) mantığında sayfa içine başka bir sayfa gömmek için en yaygın etiket hangisidir? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: ["<frame>", "<iframe>", "<div>", "<span>", "<embed-css>"],
-    a: "<iframe>",
-    difficulty: "medium",
-    week: 7,
-    topic: "Frames / iframe",
-    importance: "medium",
-    explanation:
-      "Kavram: iframe = sayfa içinde sayfa (gömülü içerik).\nNasıl çözersin: Harita/YouTube gömme denince iframe.\nTuzak: eski <frame> ile karıştırmak.\nTaktik: iFrame = inside frame."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi çoklu ortam (multimedia) örneğidir? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: ["<p>", "<table>", "<img>", "<tr>", "<th>"],
-    a: "<img>",
-    difficulty: "easy",
-    week: 8,
-    topic: "Multimedia",
-    importance: "medium",
-    explanation:
-      "Kavram: Multimedia = resim/ses/video.\nNasıl çözersin: Medya etiketi hangisi? → img.\nTuzak: Yapısal etiketleri medya sanmak.\nTaktik: img = medya başlangıcı."
-  },
-
-  {
-    q: "Aşağıdaki HTML çalıştırıldığında kullanıcı resme tıklayınca ne olur? (PÇ2,4,10 / ÖÇ3)\n\n<a href='sayfa.html'>\n  <img src='foto.jpg'>\n</a>",
+    q: "Şelale (Waterfall) modelinin en ayırt edici özelliği hangisidir?",
     t: "mcq",
     o: [
-      "Resim görünmez",
-      "Resme tıklayınca sayfa.html açılır",
-      "Resme tıklayınca sadece foto.jpg büyür",
-      "href img ile çalışmaz",
-      "src link hedefi olur"
+      "Aşamalar sıralıdır; bir aşama bitmeden diğeri başlamaz ve geriye dönüş sınırlıdır",
+      "Gereksinimler sürekli değişir ve her gün yeni sprint açılır",
+      "Hiç dokümantasyon yapılmaz",
+      "Test asla yapılmaz"
     ],
-    a: "Resme tıklayınca sayfa.html açılır",
-    difficulty: "medium",
-    week: 4,
-    topic: "Link içinde img",
-    importance: "high",
+    a: 0,
+    difficulty: 2,
+    week: 6,
+    topic: "Waterfall Özellikleri",
+    importance: 3,
     explanation:
-      "Kural: <a> içine koyduğun her şey tıklanabilir olur; tıklanınca href çalışır.\nNasıl çözersin: “tıklama = href”.\nTuzak: src’yi hedef sanmak.\nTaktik: href=hedef, src=kaynak."
+      "Şelale modelinde iş akışı basamak basamaktır. Gereksinimler başta netleşmiş kabul edilir. Sonradan değişiklik çıkarsa geriye dönmek maliyetli olur.\nTaktik: Şelale = sıra var, geri dönüş zor."
   },
-
   {
-    q: "Footer (sayfanın alt bölümü) için doğru HTML etiketi hangisidir? (PÇ2,4,10 / ÖÇ2)",
-    t: "mcq",
-    o: ["<foot>", "<footer>", "<bottom>", "<end>", "<tail>"],
-    a: "<footer>",
-    difficulty: "easy",
-    week: 2,
-    topic: "Footer etiketi",
-    importance: "medium",
-    explanation:
-      "Kural: Semantik etiket footer’dır; <foot> diye bir etiket beklenmez.\nTuzak: <foot> şıkkı.\nTaktik: footer = sayfanın altı."
-  },
-
-  {
-    q: "Aşağıdaki seçeneklerden hangisi HTML yorum (comment) yazımıdır? (PÇ2,4,10 / ÖÇ2)",
+    q: "Şelale modelinde doğru aşama sırası hangisidir?",
     t: "mcq",
     o: [
-      "// yorum",
-      "/* yorum */",
-      "<!-- yorum -->",
-      "<comment>yorum</comment>",
-      "# yorum"
+      "Test → Kodlama → Tasarım → Gereksinim",
+      "Gereksinim → Tasarım → Geliştirme → Test → Entegrasyon/Dağıtım → Bakım",
+      "Bakım → Dağıtım → Gereksinim → Tasarım",
+      "Tasarım → Bakım → Test → Gereksinim"
     ],
-    a: "<!-- yorum -->",
-    difficulty: "easy",
-    week: 2,
-    topic: "HTML comment",
-    importance: "medium",
+    a: 1,
+    difficulty: 2,
+    week: 6,
+    topic: "Waterfall Aşamaları",
+    importance: 3,
     explanation:
-      "Kural: HTML yorum = <!-- ... -->.\nTuzak: CSS yorumunu (/* */) seçmek.\nTaktik: HTML’de ok gibi: <!-- -->."
+      "Şelale modelinde önce ne isteniyor belirlenir (gereksinim), sonra nasıl yapılacağı tasarlanır, sonra kodlanır, test edilir, bütünleştirilip dağıtılır ve kullanım sırasında bakım yapılır.\nTaktik: G-T-G-T-D-B diye kısa sırala."
   },
-
-  // ========================
-  // ==== 16-50: CSS (35) ===
-  // ========================
-
   {
-    q: "CSS en doğru ne yapar? (PÇ2,4,10 / ÖÇ4)",
+    q: "Çevik (Agile) yaklaşımın temel ilerleme biçimi hangisidir?",
     t: "mcq",
     o: [
-      "HTML’in linklerini çalıştırır (href yönetir).",
-      "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon).",
-      "Veritabanı bağlantısını kurar.",
-      "Sadece internet bağlantısını yönetir.",
-      "Tabloya yeni satır ekler."
+      "Tek seferde büyük ürün teslimi",
+      "İteratif ve inkremental: küçük parçalarda ilerleme ve her iterasyonda çalışan ürün artışı",
+      "Sadece dokümantasyon yazma",
+      "Sadece veritabanı kurma"
     ],
-    a: "HTML’in görünümünü/stilini belirler (renk, boyut, hizalama, düzen, animasyon).",
-    difficulty: "easy",
-    week: 10,
-    topic: "CSS tanım",
-    importance: "high",
+    a: 1,
+    difficulty: 2,
+    week: 6,
+    topic: "Agile Temeli",
+    importance: 3,
     explanation:
-      "Kavram: HTML = iskelet/içerik, CSS = görünüm.\nNasıl çözersin: “renk, boyut, düzen” geçen şık doğruya gider.\nTuzak: CSS’yi programlama/DB sanmak.\nTaktik: HTML=iskelet, CSS=makyaj."
+      "Çevik yaklaşımda ürün küçük parçalara bölünür. Her sprint/iterasyon sonunda çalışır bir parça ortaya çıkar ve geri bildirimle sonraki adımlar şekillenir.\nTaktik: Agile = küçük teslim + hızlı geri bildirim."
   },
-
   {
-    q: "CSS’de resme filtre uygulamak için hangi özellik kullanılır? (PÇ2,4,11 / ÖÇ5)\n\nÖrnek: img{ filter: grayscale(100%); }",
-    t: "mcq",
-    o: ["transform", "filter", "opacity", "overflow", "position"],
-    a: "filter",
-    difficulty: "easy",
-    week: 11,
-    topic: "Image filters",
-    importance: "medium",
-    explanation:
-      "Kavram: filter = görüntü efektleri (grayscale, blur, brightness vb.).\nNasıl çözersin: ‘filtre/efekt’ denince filter.\nTuzak: opacity (saydamlık) ile karıştırmak.\nTaktik: filter=efekt, opacity=saydamlık."
-  },
-
-  {
-    q: "CSS 3 yazım yöntemi aşağıdakilerden hangisinde doğru verilmiştir? (PÇ2,4,10 / ÖÇ4)",
+    q: "Çevik geliştirmede ‘müşteri odaklılık’ ne anlama gelir?",
     t: "mcq",
     o: [
-      "Inline (style=''), Internal (<style>), External (<link rel='stylesheet' href='...'>)",
-      "Inline (<link>), Internal (src=''), External (<style>)",
-      "Sadece External vardır; diğerleri geçersizdir.",
-      "Sadece Internal vardır; External çalışmaz.",
-      "CSS sadece body içinde yazılır."
+      "Müşteri projeye hiç karışmaz",
+      "Müşteri geri bildirimi ve ihtiyaçları önceliklidir; müşteri süreç boyunca katılır",
+      "Müşteri sadece finalde görür",
+      "Müşteri sadece bütçe konuşur"
     ],
-    a: "Inline (style=''), Internal (<style>), External (<link rel='stylesheet' href='...'>)",
-    difficulty: "easy",
-    week: 10,
-    topic: "CSS yazım yöntemleri",
-    importance: "high",
+    a: 1,
+    difficulty: 2,
+    week: 6,
+    topic: "Agile Müşteri Odaklılık",
+    importance: 3,
     explanation:
-      "Kural: 3 yol = Inline / Internal / External.\nNasıl çözersin: External için doğru kalıp <link rel='stylesheet' href='...'> olmalı.\nTuzak: CSS’yi script gibi bağlatan şık.\nTaktik: I-I-E (Inline-Internal-External)."
+      "Çevikte müşteri, sadece başta istek verip kaybolmaz; süreçte ürünü görür, geri bildirim verir. Bu sayede ürün gerçekten değer üreten yöne evrilir.\nTaktik: Müşteri = erken + sık geri bildirim."
   },
-
   {
-    q: "@import ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ4)\n\nCSS:\n@import url('theme.css');",
+    q: "Scrum ile Kanban arasındaki temel fark en doğru hangisidir?",
     t: "mcq",
     o: [
-      "@import HTML içinde yazılır, CSS içinde yazılamaz.",
-      "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> daha tercih edilir.",
-      "@import sadece JavaScript dosyası çağırır.",
-      "@import, inline CSS’in tek şeklidir.",
-      "@import, sadece hover çalıştırır."
+      "Scrum sprint ve rollerle ilerler; Kanban iş akışını görsel takip edip akışı yönetir",
+      "Kanban sprint zorunludur; Scrum’da hiç sprint yoktur",
+      "Scrum sadece donanım içindir; Kanban sadece oyun içindir",
+      "İkisi tamamen aynıdır"
     ],
-    a: "@import başka CSS dosyasını CSS içinden çağırır; genelde <link> daha tercih edilir.",
-    difficulty: "medium",
-    week: 12,
-    topic: "@import + optimization",
-    importance: "medium",
+    a: 0,
+    difficulty: 3,
+    week: 6,
+    topic: "Scrum vs Kanban",
+    importance: 2,
     explanation:
-      "Kavram: @import CSS’in içinden başka CSS’i çağırır.\nNasıl çözersin: ‘CSS içinden CSS alır’ cümlesini ararsın.\nTuzak: @import’ı HTML attribute sanmak.\nTaktik: Import=‘içeri al’, Link=klasik bağlantı."
+      "Scrum genellikle time-boxed sprintlerle ve belirli rollerle ilerler. Kanban ise iş akışını (board) görünür kılar, darboğazları yönetir ve akışı optimize eder.\nTaktik: Scrum = sprint; Kanban = akış."
   },
-
   {
-    q: "CSS yazım hatası (puan kırdırır): Aşağıdakilerden hangisi HATALI yazımdır? (PÇ2,4,10 / ÖÇ4)",
-    t: "mcq",
-    o: ["max-width", "min-width", "opacity", "padding", "max widght"],
-    a: "max widght",
-    difficulty: "easy",
-    week: 10,
-    topic: "CSS yazım hataları",
-    importance: "high",
-    explanation:
-      "Kural: width doğru yazılır; max-width tire ile yazılır.\nTuzak: widght gibi ‘harf kaydırma’ hataları.\nTaktik: width = W I D T H."
-  },
-
-  {
-    q: "Çıktı sorusu: Aşağıdaki CSS’te color ve background-color neyi değiştirir? (PÇ2,4,10 / ÖÇ4)\n\np{ color:red; background-color: yellow; }",
+    q: "Spiral modelin en kritik ayırt edici noktası hangisidir?",
     t: "mcq",
     o: [
-      "color arka planı, background-color yazıyı değiştirir.",
-      "color yazıyı kırmızı yapar; background-color arka planı sarı yapar.",
-      "İkisi de sadece border’ı değiştirir.",
-      "İkisi de sadece saydamlık verir.",
-      "Sadece h1’de çalışır, p’de çalışmaz."
+      "Her döngü sonunda risk analizi yapıp devam/ değişiklik kararları vermesi",
+      "Gereksinimlerin hiç değişmemesi",
+      "Testin tamamen kaldırılması",
+      "Sadece tek teslim yapılması"
     ],
-    a: "color yazıyı kırmızı yapar; background-color arka planı sarı yapar.",
-    difficulty: "easy",
-    week: 10,
-    topic: "color vs background-color",
-    importance: "high",
+    a: 0,
+    difficulty: 3,
+    week: 6,
+    topic: "Spiral Model",
+    importance: 2,
     explanation:
-      "Kural: color=metin rengi, background-color=zemin.\nTuzak: İkisini tersleyen şık.\nTaktik: background=arka plan."
+      "Spiral model döngüler halinde ilerler; her döngüde analiz-tasarım-geliştirme-test yapılır ve risk değerlendirilir. Risk yüksekse yön değiştirme veya durdurma kararı daha erken alınabilir.\nTaktik: Spiral = döngü + risk kontrolü."
   },
-
   {
-    q: "“Punto” (yazı boyutu) genelde hangi birimle ifade edilir? (PÇ2,4,10 / ÖÇ4)",
-    t: "mcq",
-    o: ["px", "pt", "%", "vh", "fr"],
-    a: "pt",
-    difficulty: "easy",
-    week: 10,
-    topic: "font-size birimleri",
-    importance: "high",
-    explanation:
-      "Kavram: pt = point (punto). px = piksel.\nTuzak: px’i ‘en çok kullanılan’ diye otomatik seçmek.\nTaktik: Punto = PT."
-  },
-
-  {
-    q: "Çıktı sorusu: .parent genişliği 400px ise, .box kaç px olur? (PÇ2,4,10 / ÖÇ4)\n\n.parent{ width:400px; }\n.box{ width:50%; }",
-    t: "mcq",
-    o: ["50px", "100px", "150px", "200px", "400px"],
-    a: "200px",
-    difficulty: "medium",
-    week: 10,
-    topic: "% mantığı",
-    importance: "high",
-    explanation:
-      "Kural: width:% çoğu zaman parent genişliğine göre hesaplanır.\nHesap: 400’ün %50’si = 200.\nTuzak: %’yi ekran genişliğine göre sanmak.\nTaktik: % = parent oranı."
-  },
-
-  {
-    q: "min-width / max-width için en doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ4)",
+    q: "V-Model’de temel fikir hangisidir?",
     t: "mcq",
     o: [
-      "min-width en fazla büyüsün demektir; max-width en az küçülsün demektir.",
-      "max-width elemanın en fazla büyüyebileceği genişliği sınırlar; min-width en fazla küçülebileceği sınırı belirler.",
-      "max-width yazıyı kalınlaştırır.",
-      "min-width sadece img’de çalışır.",
-      "İkisi de sadece margin’i etkiler."
+      "Her geliştirme aşamasının karşılığında bir test aşaması bulunması (eşleşme)",
+      "Testin tamamen en sona bırakılması",
+      "Sadece prototipleme yapılması",
+      "Sadece bakım yapılması"
     ],
-    a: "max-width elemanın en fazla büyüyebileceği genişliği sınırlar; min-width en fazla küçülebileceği sınırı belirler.",
-    difficulty: "medium",
-    week: 10,
-    topic: "min/max width",
-    importance: "high",
+    a: 0,
+    difficulty: 3,
+    week: 6,
+    topic: "V-Model",
+    importance: 2,
     explanation:
-      "Kural: max=tavan (daha büyümesin), min=taban (daha küçülmesin).\nTuzak: min ile max’ı terslemek.\nTaktik: min=minimum taban, max=maximum tavan."
-  },
-
-  {
-    q: "Responsive çıktı sorusu: Aşağıdaki kural ne sağlar? (PÇ2,4,11 / ÖÇ5)\n\nimg{ max-width:100%; height:auto; }",
-    t: "mcq",
-    o: [
-      "Resim her zaman 1000px olur.",
-      "Resim parent’ı aşarsa küçülür; oran bozulmaz.",
-      "Resim sadece büyür, küçülmez.",
-      "Resim görünmez olur (display:none).",
-      "Resim grid’e dönüşür."
-    ],
-    a: "Resim parent’ı aşarsa küçülür; oran bozulmaz.",
-    difficulty: "easy",
-    week: 10,
-    topic: "Responsive image",
-    importance: "high",
-    explanation:
-      "Kural: max-width:100% taşmayı engeller; height:auto oranı korur.\nTuzak: width:100% ile karıştırmak (her zaman gerer).\nTaktik: Responsive resim = max-width + height:auto."
-  },
-
-  {
-    q: "Opacity ile ilgili doğru ifade hangisidir? (PÇ2,4,10 / ÖÇ4)\n\nimg{ opacity:0.6; }",
-    t: "mcq",
-    o: [
-      "Resmi 0.6px yapar.",
-      "Resmi %60 saydam yapar (kısmen şeffaf).",
-      "Resmi tamamen kaldırır ve yer kaplatmaz.",
-      "Sadece border’ı saydam yapar.",
-      "Sadece hover olunca çalışır."
-    ],
-    a: "Resmi %60 saydam yapar (kısmen şeffaf).",
-    difficulty: "easy",
-    week: 10,
-    topic: "Opacity",
-    importance: "high",
-    explanation:
-      "Kural: opacity 0–1 arasıdır. 1=tam görünür, 0=görünmez.\nTuzak: opacity’yi ‘px’ sanmak.\nTaktik: 0 yok, 1 tam."
-  },
-
-  {
-    q: "opacity:0 ile display:none farkı hangisidir? (PÇ2,4,11 / ÖÇ4)",
-    t: "mcq",
-    o: [
-      "İkisi de elemanı görünmez yapar ve yer kaplatmaz.",
-      "opacity görünmez yapar ama yer kaplar; display:none yer de kaplatmaz.",
-      "display:none görünmez yapar ama yer kaplar.",
-      "opacity sadece resimde çalışır.",
-      "Fark yoktur."
-    ],
-    a: "opacity görünmez yapar ama yer kaplar; display:none yer de kaplatmaz.",
-    difficulty: "medium",
-    week: 10,
-    topic: "Opacity vs display",
-    importance: "high",
-    explanation:
-      "Kural: display yerleşimi değiştirir; opacity sadece görünümü.\nTuzak: ‘görünmez’ deyip ikisini aynı sanmak.\nTaktik: display:none = yok; opacity=hayalet (yer var)."
-  },
-
-  {
-    q: "Sadece arka planı saydam yapıp içindeki yazıyı etkilememek için hangisi daha uygundur? (PÇ2,4,11 / ÖÇ4)",
-    t: "mcq",
-    o: [
-      ".box{ opacity:0.5; }",
-      ".box{ background: rgba(0,0,0,0.5); }",
-      ".box{ display:none; }",
-      ".box{ z-index:0.5; }",
-      ".box{ max-width:0.5; }"
-    ],
-    a: ".box{ background: rgba(0,0,0,0.5); }",
-    difficulty: "hard",
-    week: 10,
-    topic: "RGBA",
-    importance: "high",
-    explanation:
-      "Kural: opacity tüm çocukları da soldurur; rgba sadece arka planı saydam yapar.\nTuzak: opacity seçip yazıyı da saydam yapmak.\nTaktik: Yazı etkilenmesin = rgba."
-  },
-
-  {
-    q: "Margin ve Padding için en doğru tanım hangisidir? (PÇ2,4,10 / ÖÇ4)",
-    t: "mcq",
-    o: [
-      "Margin iç boşluk, padding dış boşluktur.",
-      "Margin dış boşluk, padding iç boşluktur.",
-      "İkisi de aynı şeydir.",
-      "Padding sadece tabloda çalışır.",
-      "Margin sadece resimde çalışır."
-    ],
-    a: "Margin dış boşluk, padding iç boşluktur.",
-    difficulty: "easy",
-    week: 10,
-    topic: "Margin vs Padding",
-    importance: "high",
-    explanation:
-      "Kural: Margin=dış mesafe, Padding=iç dolgu.\nTuzak: İkisini terslemek.\nTaktik: Margin=Mahalle(dış), Padding=Pijama(iç)."
-  },
-
-  {
-    q: "Shorthand sorusu: margin: 10px 20px 30px 40px; sırası hangisidir? (PÇ2,4,11 / ÖÇ4)",
-    t: "mcq",
-    o: [
-      "Sol-Sağ-Üst-Alt",
-      "Üst-Sağ-Alt-Sol",
-      "Üst-Alt-Sağ-Sol",
-      "Sağ-Üst-Sol-Alt",
-      "Alt-Üst-Sol-Sağ"
-    ],
-    a: "Üst-Sağ-Alt-Sol",
-    difficulty: "medium",
-    week: 10,
-    topic: "Shorthand TRBL",
-    importance: "high",
-    explanation:
-      "Kural: 4 değer = TRBL (Top Right Bottom Left).\nTuzak: sol-sağ karıştırmak.\nTaktik: Saat yönü: üst → sağ → alt → sol."
-  },
-
-  {
-    q: "Box Model hesap sorusu (border-box YOK): Toplam görünen kutu genişliği kaç px olur? (PÇ2,4,11 / ÖÇ4)\n\n.box{ width:200px; padding:20px; border:5px solid black; }",
-    t: "mcq",
-    o: ["200px", "220px", "230px", "250px", "260px"],
-    a: "250px",
-    difficulty: "hard",
-    week: 10,
-    topic: "Box Model hesap",
-    importance: "high",
-    explanation:
-      "Kural: Toplam genişlik = width + 2*padding + 2*border.\nHesap: 200 + 40 + 10 = 250.\nTuzak: Sadece width’ü toplam sanmak.\nTaktik: ‘İki taraf var’ → padding ve border 2 ile çarpılır."
-  },
-
-  {
-    q: "Display değerleri ile ilgili doğru eşleştirme hangisidir? (PÇ2,4,10 / ÖÇ3)",
-    t: "mcq",
-    o: [
-      "block: yan yana dizer, none: görünür bırakır",
-      "inline: satırı kaplar, block: sadece içerik kadar",
-      "inline-block: yan yana durabilir ve width/height alır",
-      "none: elemanı saydam yapar ama yer bırakır",
-      "block: sadece img’de çalışır"
-    ],
-    a: "inline-block: yan yana durabilir ve width/height alır",
-    difficulty: "medium",
-    week: 10,
-    topic: "Display",
-    importance: "high",
-    explanation:
-      "Kural: block=satırı kaplar, inline=içerik kadar, inline-block=yan yana + ölçü alır, none=hiç yok.\nTuzak: none ile opacity karıştırmak.\nTaktik: inline-block = ‘yan yana + boyut’. "
-  },
-
-  {
-    q: "Çıktı sorusu: Aşağıdaki kodda çıktı nasıl olur? (PÇ2,4,11 / ÖÇ3)\n\nHTML:\n<span>A</span><span class='x'>B</span>\n\nCSS:\n.x{ display:block; }",
-    t: "mcq",
-    o: [
-      "A ve B yan yana",
-      "A alt satıra iner, B üstte kalır",
-      "A üstte kalır, B alt satıra geçer (B satırı kaplar)",
-      "B görünmez olur",
-      "A görünmez olur"
-    ],
-    a: "A üstte kalır, B alt satıra geçer (B satırı kaplar)",
-    difficulty: "hard",
-    week: 10,
-    topic: "Display çıktı",
-    importance: "high",
-    explanation:
-      "Kural: block = satırı kaplar ve alt satıra iter.\nNasıl çözersin: .x block oldu → B alt satıra düşer.\nTuzak: span hep inline sanmak.\nTaktik: display değişirse davranış değişir."
-  },
-
-  {
-    q: "Selector (p.anil) çıktı sorusu: Hangisi doğrudur? (PÇ2,4,10 / ÖÇ4)\n\nCSS:\np.anil{ color:red; font-size:20px; }\n\nHTML:\n<p class='anil'>A</p>\n<div class='anil'>B</div>",
-    t: "mcq",
-    o: [
-      "A ve B kırmızı olur",
-      "Sadece A kırmızı ve 20px olur; B etkilenmez",
-      "Sadece B kırmızı olur",
-      "A 20px olur ama kırmızı olmaz",
-      "Hiçbiri etkilenmez"
-    ],
-    a: "Sadece A kırmızı ve 20px olur; B etkilenmez",
-    difficulty: "hard",
-    week: 10,
-    topic: "Selector p.class",
-    importance: "high",
-    explanation:
-      "Kural: p.anil = class’ı anil olan p etiketleri.\nNasıl çözersin: Seçici ‘p’ dediği için div etkilenmez.\nTuzak: .anil ile p.anil’i aynı sanmak.\nTaktik: Etiket yazdıysan sadece o etiket."
-  },
-
-  {
-    q: "Float ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\nimg{ float:left; margin-right:10px; }",
-    t: "mcq",
-    o: [
-      "Resmi ortalamak için kullanılır.",
-      "Resmi sola alır, metni resmin yanına sardırır (ürün görseli + açıklama).",
-      "Elemanı görünmez yapar.",
-      "Elemanı sticky yapar.",
-      "Elemanı grid’e çevirir."
-    ],
-    a: "Resmi sola alır, metni resmin yanına sardırır (ürün görseli + açıklama).",
-    difficulty: "medium",
-    week: 10,
-    topic: "Float",
-    importance: "medium",
-    explanation:
-      "Kavram: float = elemanı yana alır; metin etrafına sarabilir.\nTuzak: float’ı flex sanmak.\nTaktik: ‘Ürün görseli solda, yazı sağda’ = float klasik."
-  },
-
-  {
-    q: "position: relative için en doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: [
-      "Eleman normal akıştan çıkar ve yer kaplamaz.",
-      "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur.",
-      "Eleman ekrana sabitlenir (scroll etmez).",
-      "Eleman otomatik en üste çıkar.",
-      "Eleman sadece grid içinde çalışır."
-    ],
-    a: "Eleman kendi normal konumuna göre kaydırılır; sayfadaki yeri korunur.",
-    difficulty: "medium",
-    week: 10,
-    topic: "Position relative",
-    importance: "high",
-    explanation:
-      "Kural: relative = yerini korur, top/left ile görsel olarak kayar.\nTuzak: absolute ile karıştırmak.\nTaktik: relative = ‘kayar ama izi kalır’."
-  },
-
-  {
-    q: "position:absolute referans sorusu: .badge konumu neye göre hesaplanır? (PÇ2,4,11 / ÖÇ5)\n\n.parent{ position:relative; }\n.badge{ position:absolute; top:10px; right:10px; }",
-    t: "mcq",
-    o: [
-      "Her zaman ekranın sağ üstüne göre",
-      "En yakın position verilmiş ata (.parent) kutusuna göre",
-      "Sadece kendi eski yerine göre",
-      "Sadece z-index’e göre",
-      "Sadece body’nin ortasına göre"
-    ],
-    a: "En yakın position verilmiş ata (.parent) kutusuna göre",
-    difficulty: "hard",
-    week: 10,
-    topic: "Absolute referans",
-    importance: "high",
-    explanation:
-      "Kural: absolute = en yakın ‘position’lı ata referans olur.\nNasıl çözersin: parent’ta position:relative var → referans parent.\nTuzak: absolute’ı ‘her zaman ekran’ sanmak.\nTaktik: Absolute = ‘en yakın konumlu ebeveyn’."
-  },
-
-  {
-    q: "position:sticky ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\nheader{ position:sticky; top:0; }",
-    t: "mcq",
-    o: [
-      "Her zaman fixed gibi yapışır, hiç normal akışta olmaz.",
-      "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır.",
-      "Sadece resimlerde çalışır.",
-      "Sadece z-index ile çalışır.",
-      "Overflow’u otomatik hidden yapar."
-    ],
-    a: "Normal akar; belirli noktaya gelince top:0 çizgisinde yapışır.",
-    difficulty: "medium",
-    week: 10,
-    topic: "Sticky",
-    importance: "high",
-    explanation:
-      "Kavram: sticky = normal + yapışma karışımı.\nTuzak: sticky’yi fixed sanmak.\nTaktik: ‘Yaklaşınca yapış’."
-  },
-
-  {
-    q: "z-index çıktı sorusu: Üstte hangisi görünür? (PÇ2,4,11 / ÖÇ5)\n\n.a{ position:absolute; z-index:1; }\n.b{ position:absolute; z-index:2; }",
-    t: "mcq",
-    o: [
-      "A üstte görünür (çünkü önce yazıldı)",
-      "B üstte görünür (z-index daha büyük)",
-      "İkisi de görünmez",
-      "z-index sadece relative’de çalışır, burada çalışmaz",
-      "Tarayıcıya göre değişir"
-    ],
-    a: "B üstte görünür (z-index daha büyük)",
-    difficulty: "hard",
-    week: 10,
-    topic: "z-index",
-    importance: "high",
-    explanation:
-      "Kural: z-index büyük olan öne gelir.\nTuzak: “önce yazılan üstte” zannetmek.\nTaktik: Katman numarası büyükse önde."
-  },
-
-  {
-    q: "Overflow sorusu: Aşağıdaki senaryoda hangisi doğru seçilir? (PÇ2,4,11 / ÖÇ5)\n\nSenaryo: Kutu küçük, içerik taşıyor. Taşarsa kaydırma çıksın; taşmazsa çıkmasın.",
-    t: "mcq",
-    o: ["overflow:hidden", "overflow:scroll", "overflow:auto", "overflow:sticky", "overflow:absolute"],
-    a: "overflow:auto",
-    difficulty: "medium",
-    week: 10,
-    topic: "Overflow",
-    importance: "high",
-    explanation:
-      "Kural: auto = gerekiyorsa scroll çıkar.\nTuzak: scroll’u seçmek (her zaman çubuk çıkar).\nTaktik: Auto = akıllı scroll."
-  },
-
-  {
-    q: "Pseudo-class hangisidir? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: [".menu", "#menu", "a:hover", "div.box", "p.anil"],
-    a: "a:hover",
-    difficulty: "easy",
-    week: 10,
-    topic: "Pseudo-class",
-    importance: "high",
-    explanation:
-      "Kural: Pseudo-class ‘:’ ile gelir (hover, focus, active, visited).\nTuzak: .class ve #id ile karıştırmak.\nTaktik: ‘:’ gördün mü pseudo."
-  },
-
-  {
-    q: "Çıktı sorusu: a:hover kuralı ne zaman çalışır? (PÇ2,4,11 / ÖÇ5)\n\na:hover{ color:red; }",
-    t: "mcq",
-    o: [
-      "Link ziyaret edilince (visited)",
-      "Mouse linkin üstüne gelince",
-      "Linke basılı tutunca (active)",
-      "Input’a tıklayınca (focus)",
-      "Sayfa ilk açılınca"
-    ],
-    a: "Mouse linkin üstüne gelince",
-    difficulty: "easy",
-    week: 10,
-    topic: "hover",
-    importance: "high",
-    explanation:
-      "Kural: hover = üstüne gelince.\nTuzak: active/focus ile karıştırmak.\nTaktik: hover = ‘üzerindeyken’."
-  },
-
-  {
-    q: "Çıktı sorusu: input:focus kuralı ne zaman çalışır? (PÇ2,4,11 / ÖÇ5)\n\ninput:focus{ border:2px solid black; }",
-    t: "mcq",
-    o: [
-      "Mouse input üstüne gelince",
-      "Input tıklanıp odak alınca/yazı girerken",
-      "Form gönderilince",
-      "Sayfa yenilenince",
-      "Sadece visited olunca"
-    ],
-    a: "Input tıklanıp odak alınca/yazı girerken",
-    difficulty: "easy",
-    week: 10,
-    topic: "focus",
-    importance: "high",
-    explanation:
-      "Kural: focus = klavye odağı/aktif giriş.\nTuzak: hover ile karıştırmak.\nTaktik: Tıkla + yaz = focus."
-  },
-
-  {
-    q: "Pseudo-class eşleştirmelerinden hangisi doğrudur? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: [
-      "visited: mouse üstüne gelince, hover: ziyaret edilmiş link",
-      "active: tıklama basılıyken, visited: daha önce ziyaret edilmiş link",
-      "focus: ziyaret edilmiş link, active: input yazma hali",
-      "hover: sadece klavye ile olur, focus: sadece mouse ile olur",
-      "visited: saydamlık verir, active: gölge verir"
-    ],
-    a: "active: tıklama basılıyken, visited: daha önce ziyaret edilmiş link",
-    difficulty: "hard",
-    week: 10,
-    topic: "hover/focus/active/visited",
-    importance: "high",
-    explanation:
-      "Kural: visited=geçmişte tıklanmış link, active=basılı tutma anı.\nTuzak: visited-hover yer değiştiren şık.\nTaktik: visited=geçmiş, active=basılı."
-  },
-
-  {
-    q: "Dropdown mantığı: Aşağıdaki CSS’in etkisi hangisidir? (PÇ2,4,11 / ÖÇ5)\n\n.dd-content{ display:none; }\n.dd:hover .dd-content{ display:block; }",
-    t: "mcq",
-    o: [
-      ".dd-content sayfa açılır açılmaz görünür",
-      ".dd-content sadece tıklayınca görünür",
-      ".dd üzerine mouse gelince .dd-content görünür olur",
-      ".dd-content sadece mobilde çalışır",
-      ".dd-content hover olunca kaybolur"
-    ],
-    a: ".dd üzerine mouse gelince .dd-content görünür olur",
-    difficulty: "medium",
-    week: 12,
-    topic: "Dropdown",
-    importance: "high",
-    explanation:
-      "Kural: display:none gizler; hover gelince display:block gösterir.\nTuzak: ‘tıklayınca açılır’ sanmak (JS gibi).\nTaktik: Dropdown = none → hover → block."
-  },
-
-  {
-    q: "text-align ve cursor için doğru yorum hangisidir? (PÇ2,4,11 / ÖÇ4)\n\n.btn{ text-align:center; cursor:pointer; }",
-    t: "mcq",
-    o: [
-      "Metni sola alır; mouse işaretçisi değişmez",
-      "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
-      "Metni büyütür; resme filtre ekler",
-      "Elemanı yapışkan yapar",
-      "Elemanı görünmez yapar"
-    ],
-    a: "Metni ortalar; üzerine gelince mouse eli (tıklanabilir) olur",
-    difficulty: "medium",
-    week: 11,
-    topic: "text-align + cursor",
-    importance: "medium",
-    explanation:
-      "Kural: text-align=center metni ortalar. cursor:pointer tıklanabilir hissi verir.\nTuzak: cursor’ın sadece linkte çalıştığını sanmak.\nTaktik: pointer=elin işareti."
-  },
-
-  {
-    q: "Border ve border-radius için doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ4)\n\n.avatar{ border:2px solid black; border-radius:50%; }",
-    t: "mcq",
-    o: [
-      "Border resmi siler, radius yazıyı büyütür.",
-      "Border kenarlık çizer; border-radius:50% elemanı daire yapar (kare kutuda).",
-      "Border sadece tabloda çalışır.",
-      "border-radius sadece px olur, % olmaz.",
-      "border-radius:50% köşeleri 10px yapar."
-    ],
-    a: "Border kenarlık çizer; border-radius:50% elemanı daire yapar (kare kutuda).",
-    difficulty: "medium",
-    week: 11,
-    topic: "border + border-radius",
-    importance: "high",
-    explanation:
-      "Kural: border=çerçeve; border-radius köşe yuvarlar.\nBilgi: 50% (kare kutuysa) daire görünümü verir.\nTuzak: % olmaz sanmak.\nTaktik: 50% = daire, px = yumuşak köşe."
-  },
-
-  {
-    q: "Kutunun gölgesi için hangi özellik kullanılır? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: [
-      "text-shadow: 0 4px 12px rgba(0,0,0,0.2);",
-      "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
-      "shadow-box: 0 4px 12px;",
-      "box-radius: 12px;",
-      "opacity-shadow: 0.2;"
-    ],
-    a: "box-shadow: 0 4px 12px rgba(0,0,0,0.2);",
-    difficulty: "easy",
-    week: 11,
-    topic: "box-shadow",
-    importance: "medium",
-    explanation:
-      "Kural: box-shadow kutuya, text-shadow yazıya gölge verir.\nTuzak: text-shadow seçmek.\nTaktik: box=kutunun gölgesi."
-  },
-
-  {
-    q: "Transition (geçiş) ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\n.btn{ transition:0.3s; }\n.btn:hover{ transform:scale(1.05); }",
-    t: "mcq",
-    o: [
-      "Hover olunca aniden büyür, yumuşak geçiş olmaz.",
-      "Hover olunca büyüme yumuşak (0.3 saniyede) gerçekleşir.",
-      "transition sadece border’a etki eder.",
-      "transition sadece grid’de çalışır.",
-      "transition elemanı görünmez yapar."
-    ],
-    a: "Hover olunca büyüme yumuşak (0.3 saniyede) gerçekleşir.",
-    difficulty: "medium",
-    week: 14,
-    topic: "Transitions",
-    importance: "high",
-    explanation:
-      "Kural: transition durum değişimini yumuşatır (hover gibi).\nTuzak: transition’ı animation sanmak.\nTaktik: Transition=geçiş (yumuşatma)."
-  },
-
-  {
-    q: "@keyframes ile ilgili doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)\n\n@keyframes pulse{\n  0%{ transform:scale(1); }\n  100%{ transform:scale(1.05); }\n}\n.box{ animation:pulse 1s infinite alternate; }",
-    t: "mcq",
-    o: [
-      "@keyframes başka CSS dosyası çağırır.",
-      "@keyframes animasyonun zaman içindeki adımlarını tanımlar; animation ile uygulanır.",
-      "@keyframes sadece hover’da çalışır, animation ile ilgisi yoktur.",
-      "@keyframes sadece tabloda kullanılır.",
-      "@keyframes display değerini değiştirir."
-    ],
-    a: "@keyframes animasyonun zaman içindeki adımlarını tanımlar; animation ile uygulanır.",
-    difficulty: "hard",
-    week: 14,
-    topic: "Animation + keyframes",
-    importance: "high",
-    explanation:
-      "Kural: animation = çalıştırma, keyframes = senaryo/adımlar.\nTuzak: transition ile karıştırmak.\nTaktik: Keyframes = ‘kare kare hareket planı’."
-  },
-
-  {
-    q: "Responsive + media query çıktı: Ekran 600px iken ne olur? (PÇ2,4,11 / ÖÇ5)\n\n@media (max-width:768px){ .menu{ display:none; } }",
-    t: "mcq",
-    o: [
-      "Menu görünür kalır, çünkü 600 < 768 çalışmaz.",
-      "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır.",
-      "Menu büyür.",
-      "Menu sticky olur.",
-      "Menu z-index 999 olur."
-    ],
-    a: "Menu gizlenir, çünkü 600px 768px ve altı aralığındadır.",
-    difficulty: "hard",
-    week: 14,
-    topic: "Responsive",
-    importance: "high",
-    explanation:
-      "Kural: max-width:768 → 768 ve ALTINDA çalışır.\nTuzak: max-width’i ‘768 üstü’ sanmak.\nTaktik: max=‘en fazla’ (küçük ekran)."
-  },
-
-  {
-    q: "Flexbox ve Grid farkı için en doğru ifade hangisidir? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: [
-      "Flexbox iki boyut, Grid tek boyuttur.",
-      "Flexbox tek boyut (satır veya sütun), Grid iki boyut (satır+sütun) düzen kurar.",
-      "İkisi tamamen aynı şeydir.",
-      "Grid sadece hover yapar; Flexbox sadece renk değiştirir.",
-      "Flexbox sadece tabloda çalışır; Grid sadece formda çalışır."
-    ],
-    a: "Flexbox tek boyut (satır veya sütun), Grid iki boyut (satır+sütun) düzen kurar.",
-    difficulty: "medium",
-    week: 14,
-    topic: "Flexbox vs Grid",
-    importance: "high",
-    explanation:
-      "Kavram: Flex=tek eksen (1D), Grid=iki eksen (2D).\nTuzak: İkisini terslemek.\nTaktik: Flex=tek çizgi, Grid=ızgara."
-  },
-
-  {
-    q: "Bootstrap nedir ve projeye eklemek için en doğru yaklaşım hangisidir? (PÇ2,4,11 / ÖÇ5)",
-    t: "mcq",
-    o: [
-      "Bootstrap veritabanıdır; <img src='...'> ile eklenir.",
-      "Bootstrap hazır UI bileşenleri sunan kütüphanedir; genelde <link rel='stylesheet' href='CDN'> ile eklenir.",
-      "Bootstrap HTML’in yerine geçen dildir; sadece <script> ile eklenir.",
-      "Bootstrap sadece hover efektidir; style='' içinde yazılır.",
-      "Bootstrap tarayıcıdır; kurulmadan çalışmaz."
-    ],
-    a: "Bootstrap hazır UI bileşenleri sunan kütüphanedir; genelde <link rel='stylesheet' href='CDN'> ile eklenir.",
-    difficulty: "medium",
-    week: 14,
-    topic: "Bootstrap",
-    importance: "medium",
-    explanation:
-      "Kavram: Bootstrap = hazır buton, navbar, form, grid gibi tasarımlar.\nNasıl çözersin: CSS kütüphanesi ekleme → <link rel='stylesheet' ...>.\nTuzak: CSS’i script ile ekleme sanmak.\nTaktik: ‘Kütüphane = hazır tasarım parçaları’."
+      "V-Model, geliştirme adımlarını test adımlarıyla eşleştirir. Böylece doğrulama/validasyon mantığı daha sistematik hale gelir ve test planı daha erken düşünülür.\nTaktik: V harfi = sol taraf geliştirme, sağ taraf test eşleşmesi."
   }
 ];
