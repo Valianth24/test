@@ -1,28 +1,28 @@
 // FINAL – Yazılım Mimarileri (1-6. Hafta) – 50 Soru (MCQ)
-// Not: a alanı 0-tabanlıdır: 0=A, 1=B, 2=C, 3=D
+// ÖNEMLİ: a alanı 1-tabanlıdır: 1=A, 2=B, 3=C, 4=D
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
 
   // =========================
-  // ==== 1. HAFTA (8) ========
+  // ===== 1. HAFTA (8) ======
   // =========================
   {
     q: "‘Yazılım’ kavramını en doğru şekilde hangisi açıklar?",
     t: "mcq",
     o: [
-      "Bilgisayarın fiziksel parçaları (işlemci, RAM, disk) ve bunların çalışması",
-      "Bir sistemi çalıştıran komutlar/talimatlar ve bu talimatların işlendiği programlar bütünü",
-      "Sadece kullanıcı arayüzü (butonlar, menüler, ekran tasarımları)",
-      "Sadece programlama diliyle yazılmış metin dosyaları (kod) ve başka hiçbir şey"
+      "Bilgisayarın fiziksel parçaları ve bunların elektriksel yapısı",
+      "Bir sistemi çalıştıran komutlar/talimatlar ve bunların oluşturduğu programlar bütünü",
+      "Sadece kullanıcı arayüzü tasarımı (buton, renk, font)",
+      "Sadece internet bağlantısı ve ağ ayarları"
     ],
-    a: 1,
+    a: 2,
     difficulty: 1,
     week: 1,
     topic: "Yazılım Tanımı",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nYazılım; bir sistemin ne yapacağını belirleyen komutlar/talimatlar ve bunların bir araya geldiği programlar bütünüdür. Donanım (fiziksel parçalar) tek başına iş yapamaz; işi yaptıran yazılımdır.\nTaktik: Donanım ‘beden’, yazılım ‘komut veren zihin’ gibi düşün."
+      "Doğru cevap: B\nYazılım, donanıma ‘ne yapacağını’ söyleyen komutlar ve bu komutların oluşturduğu programlar bütünüdür. Donanım tek başına iş yapamaz; işi yaptıran yazılımdır.\nTaktik: Donanım = beden, yazılım = komut veren zihin."
   },
   {
     q: "Sistem yazılımı ile uygulama yazılımı arasındaki temel fark hangisidir?",
@@ -30,19 +30,19 @@ window.questionBank = [
     o: [
       "Sistem yazılımı kullanıcı işlerini yapar; uygulama yazılımı donanımı yönetir",
       "Sistem yazılımı donanım/kaynakları yönetir ve ortam sağlar; uygulama yazılımı kullanıcı görevlerini gerçekleştirir",
-      "Sistem yazılımı sadece internete çıkar; uygulama yazılımı sadece dosya yönetir",
+      "Sistem yazılımı sadece internet içindir; uygulama yazılımı sadece oyun içindir",
       "İkisi aynı şeydir, sadece isimleri farklıdır"
     ],
-    a: 1,
+    a: 2,
     difficulty: 1,
     week: 1,
     topic: "Sistem vs Uygulama",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nSistem yazılımı (işletim sistemi, sürücüler vb.) kaynak yönetimi yapar ve diğer yazılımların çalışacağı ortamı sağlar. Uygulama yazılımı ise kullanıcıya yönelik iş üretir (tarayıcı, oyun, ofis vb.).\nTaktik: Sistem = altyapı; uygulama = hizmet."
+      "Doğru cevap: B\nSistem yazılımı (işletim sistemi, sürücüler) kaynakları yönetir ve ortam sağlar. Uygulama yazılımı (tarayıcı, ofis, oyun) kullanıcı işini yapar.\nTaktik: Sistem = altyapı; uygulama = hizmet."
   },
   {
-    q: "Bir yazılımın geliştirilmesinde en temel yaşam döngüsü sırası hangisine en yakındır?",
+    q: "Bir yazılımın geliştirilmesinde en temel yaşam döngüsü akışı hangisine en yakındır?",
     t: "mcq",
     o: [
       "Test → Kodlama → Dağıtım → Tasarım",
@@ -50,290 +50,285 @@ window.questionBank = [
       "Kodlama → Tasarım → Test → Gereksinim",
       "Dağıtım → Tasarım → Kodlama → Test"
     ],
-    a: 1,
+    a: 2,
     difficulty: 1,
     week: 1,
     topic: "SDLC Temel Akış",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nGenel akış: Ne istendiğini anla/tasarla, kodla, test et, sonra kullanıcıya sun (dağıt). Kurumlara göre detaylar değişse de omurga bu sıradır.\nTaktik: ‘Önce planla, sonra yap, sonra doğrula, sonra yayınla’ diye ezberle."
+      "Doğru cevap: B\nGenel omurga: ne istendiğini anla/tasarla, kodla, test et, sonra kullanıcıya sun.\nTaktik: Planla → Yap → Doğrula → Yayınla."
   },
   {
-    q: "Algoritma kavramı en doğru nasıl tanımlanır?",
+    q: "Algoritma nedir?",
     t: "mcq",
     o: [
       "Bir problemin çözümünü adım adım tanımlayan işlem sırası",
-      "Sadece yüksek seviyeli programlama dillerinin sözdizimi kuralları",
-      "Bir uygulamanın ekran tasarımının çizimi",
-      "Bilgisayarın işlem gücünü ölçen birim"
+      "Sadece programlama dilinin sözdizimi kuralları",
+      "Uygulamanın ekran çizimleri",
+      "Bilgisayarın işlem gücünü ölçen değer"
     ],
-    a: 0,
+    a: 1,
     difficulty: 1,
     week: 1,
     topic: "Algoritma",
     importance: 2,
     explanation:
-      "Doğru cevap: A)\nAlgoritma; bir problemi çözmek için izlenen adımların (işlem sırasının) mantıksal tarifidir. Kod, bu adımların bir programlama diliyle yazılmış halidir.\nTaktik: Algoritma = tarif; kod = tarifin yazıldığı dil."
+      "Doğru cevap: A\nAlgoritma, bir işi çözmek için izlenen adımların mantıksal tarifidir. Kod, algoritmanın bir dille yazılmış halidir.\nTaktik: Algoritma = tarif; kod = tarifin yazıldığı dil."
   },
   {
     q: "Derleme (compile) ile yorumlama (interpret) arasındaki fark hangisidir?",
     t: "mcq",
     o: [
       "Derleme kodu çalışma anında satır satır çalıştırır; yorumlama önce makine diline çevirir",
-      "Derleme kaynak kodu önce makine diline çevirir; yorumlama kodu genellikle çalışma anında işler",
+      "Derleme kaynak kodu önce makine diline/ara koda çevirir; yorumlama kodu genellikle çalışma anında işler",
       "İkisi tamamen aynı süreçtir",
-      "Derleme sadece mobil uygulamalarda olur; yorumlama sadece masaüstünde olur"
+      "Derleme sadece mobilde, yorumlama sadece masaüstünde olur"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 1,
     topic: "Compile vs Interpret",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nDerlemede kod önce çevrilir (makine diline / ara koda), sonra çalışır. Yorumlamada kod daha çok çalışma anında yorumlanarak yürütülür. Bu fark hata yakalama ve performans gibi konuları etkileyebilir.\nTaktik: Compile = ‘önce çevir, sonra çalıştır’; Interpret = ‘çalıştırırken çevir’."
+      "Doğru cevap: B\nCompile: önce çevir, sonra çalıştır. Interpret: çoğunlukla çalıştırırken yorumla. Bu fark performans ve hata yakalama biçimini etkileyebilir.\nTaktik: Compile = önce çevir; Interpret = çalıştırırken çevir."
   },
   {
     q: "Entegrasyon (integration) neyi ifade eder?",
     t: "mcq",
     o: [
-      "Bir yazılımın görsel tasarımını (UI) hazırlama süreci",
+      "Bir yazılımın görsel tasarımını hazırlamak",
       "Farklı bileşen/sistemlerin birlikte çalışacak şekilde birleştirilmesi ve veri alışverişinin sağlanması",
-      "Sadece veritabanında tablo oluşturma işlemi",
-      "Kodu daha kısa yazmak için yapılan optimizasyon"
+      "Sadece veritabanında tablo oluşturmak",
+      "Kodu kısaltmak için yapılan optimizasyon"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 1,
     topic: "Entegrasyon",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nEntegrasyon, farklı parçaların (servisler, modüller, harici sistemler) birbirleriyle konuşup birlikte çalışmasıdır. Örneğin ödeme altyapısı ile e-ticaret sisteminin API üzerinden bağlanması.\nTaktik: Entegrasyon = ‘parçaları konuşturma’."
+      "Doğru cevap: B\nEntegrasyon, farklı parçaların (servis/modül/harici sistem) birbirine bağlanıp birlikte çalışmasıdır.\nTaktik: Entegrasyon = parçaları konuşturma."
   },
   {
-    q: "Sürüm kontrol (version control) sistemleri (örn. Git) en çok ne işe yarar?",
+    q: "Sürüm kontrol (version control) sistemlerinin (örn. Git) temel faydası hangisidir?",
     t: "mcq",
     o: [
-      "Uygulamanın internet hızını artırır",
-      "Kod değişikliklerini tarihçeli takip eder, geri alma ve ekip çalışmasını kolaylaştırır",
-      "Sadece kullanıcı arayüzü çiziminde kullanılır",
-      "Veritabanındaki verileri otomatik siler"
+      "Uygulamanın internet hızını artırmak",
+      "Kod değişikliklerini tarihçeli takip etmek, geri almak ve ekip çalışmasını kolaylaştırmak",
+      "Sadece arayüz tasarımını çizmek",
+      "Veritabanındaki verileri otomatik silmek"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 1,
     topic: "Sürüm Kontrol",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nSürüm kontrol; kim neyi ne zaman değiştirdi, önceki sürüme nasıl dönülür, ekip aynı kod üzerinde nasıl güvenle çalışır gibi konuları çözer.\nTaktik: Git = ‘geri alma + ekip uyumu + değişiklik geçmişi’."
+      "Doğru cevap: B\nSürüm kontrol; değişiklik geçmişi, geri dönüş (rollback) ve ekip çalışmasını düzenler.\nTaktik: Git = geçmiş + geri alma + ekip uyumu."
   },
   {
     q: "‘Yazılım mimarisi’ en iyi hangi ifadeyle özetlenir?",
     t: "mcq",
     o: [
-      "Kodun satır satır yazım stili ve girintileme kuralları",
-      "Sistemin bileşenleri, bu bileşenlerin sorumlulukları ve aralarındaki ilişkilerin üst seviye tasarımı",
-      "Sadece ekranların (UI) renk ve font seçimi",
-      "Sadece veritabanı tablo isimlendirme yöntemi"
+      "Kodun girinti ve yazım stili kuralları",
+      "Sistemin bileşenleri, sorumlulukları ve aralarındaki ilişkilerin üst seviye tasarımı",
+      "Sadece renk/font seçimi",
+      "Sadece veritabanı tablo isimlendirmesi"
     ],
-    a: 1,
+    a: 2,
     difficulty: 3,
     week: 1,
     topic: "Mimari Kavramı",
-    importance: 2,
+    importance: 3,
     explanation:
-      "Doğru cevap: B)\nMimari, sistemin ‘büyük resmi’dir: hangi parçalar var, her parça ne yapar, nasıl iletişim kurarlar. Kod detayından önce gelir.\nTaktik: Mimari = ‘büyük resim + bileşen ilişkileri’."
+      "Doğru cevap: B\nMimari; büyük resimdir: hangi parçalar var, ne yaparlar, nasıl iletişim kurarlar.\nTaktik: Mimari = harita (büyük resim)."
   },
 
   // =========================
-  // ==== 2. HAFTA (8) ========
+  // ===== 2. HAFTA (8) ======
   // =========================
   {
     q: "Komut (command) kavramı en doğru hangi açıklamaya uyar?",
     t: "mcq",
     o: [
-      "Sadece grafikli arayüzde (GUI) tıklanan butonlara verilen isim",
+      "Sadece grafikli arayüzde tıklanan buton adı",
       "İşletim sistemi veya bir yazılıma belirli bir işi yaptıran talimat",
-      "Bir programlama dilindeki değişken türü",
-      "Veritabanındaki kayıtların saklandığı alan"
+      "Programlama dilinde değişken türü",
+      "Veritabanında kayıtların saklandığı alan"
     ],
-    a: 1,
+    a: 2,
     difficulty: 1,
     week: 2,
     topic: "Komut Kavramı",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nKomut; işletim sistemine veya bir araca ‘şunu yap’ diyen talimattır. Komut satırı (CLI) üzerinden verilir (ör. ls, dir, cd).\nTaktik: Komut = ‘tek cümlelik iş emri’."
+      "Doğru cevap: B\nKomut, sisteme ‘şunu yap’ diyen talimattır (CLI komutları gibi).\nTaktik: Komut = tek satırlık iş emri."
   },
   {
-    q: "Linux/Unix’te dizin içeriğini listelemek için en yaygın komut hangisidir?",
+    q: "Linux/Unix’te dizin içeriğini listelemek için kullanılan komut hangisidir?",
     t: "mcq",
     o: ["cd", "ls", "mkdir", "rm"],
-    a: 1,
+    a: 2,
     difficulty: 1,
     week: 2,
     topic: "Linux Komutları",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nls dizin içeriğini listeler. cd dizin değiştirir, mkdir klasör oluşturur, rm siler.\nTaktik: ls = ‘list’ (listele)."
+      "Doğru cevap: B\nls içerik listeler. cd dizin değiştirir, mkdir klasör oluşturur, rm siler.\nTaktik: ls = list."
+  },
+  {
+    q: "Linux/Unix’te dizin değiştirmek için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["pwd", "cd", "rm", "touch"],
+    a: 2,
+    difficulty: 1,
+    week: 2,
+    topic: "Linux Komutları",
+    importance: 2,
+    explanation:
+      "Doğru cevap: B\ncd (change directory) dizin değiştirir.\nTaktik: cd = change directory."
   },
   {
     q: "Windows CMD’de dizin içeriğini listelemek için kullanılan komut hangisidir?",
     t: "mcq",
     o: ["dir", "ls", "pwd", "cat"],
-    a: 0,
+    a: 1,
     difficulty: 1,
     week: 2,
     topic: "Windows Komutları",
     importance: 2,
     explanation:
-      "Doğru cevap: A)\nWindows CMD’de dir içerik listeler. ls Linux tarafında yaygındır.\nTaktik: Windows’ta ‘dir’ = directory (dizin)."
+      "Doğru cevap: A\nWindows’ta dir içerik listeler.\nTaktik: dir = directory."
   },
   {
-    q: "SQL’de ‘veri ekleme’ işlemi için kullanılan temel komut hangisidir?",
+    q: "SQL’de veri eklemek için kullanılan temel komut hangisidir?",
     t: "mcq",
     o: ["SELECT", "UPDATE", "INSERT", "DELETE"],
-    a: 2,
+    a: 3,
     difficulty: 1,
     week: 2,
     topic: "SQL CRUD",
     importance: 3,
     explanation:
-      "Doğru cevap: C)\nINSERT yeni kayıt ekler. SELECT okur, UPDATE günceller, DELETE siler.\nTaktik: CRUD = Create(INSERT), Read(SELECT), Update(UPDATE), Delete(DELETE)."
+      "Doğru cevap: C\nINSERT ekler, SELECT okur, UPDATE günceller, DELETE siler.\nTaktik: CRUD: Create=INSERT, Read=SELECT, Update=UPDATE, Delete=DELETE."
   },
   {
-    q: "SQL’de ‘mevcut veriyi güncelleme’ işlemi için kullanılan komut hangisidir?",
+    q: "SQL’de veri çekmek (okumak) için kullanılan temel komut hangisidir?",
     t: "mcq",
-    o: ["UPDATE", "INSERT", "SELECT", "DROP"],
-    a: 0,
+    o: ["SELECT", "INSERT", "UPDATE", "DELETE"],
+    a: 1,
     difficulty: 1,
     week: 2,
     topic: "SQL CRUD",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nUPDATE mevcut kaydı değiştirir. INSERT ekler, SELECT okur. DROP ise tablo gibi nesneleri kaldırmaya gider (daha farklı ve tehlikeli bir işlemdir).\nTaktik: Güncelleme = UPDATE."
+      "Doğru cevap: A\nSELECT veriyi okur/çeker.\nTaktik: SELECT = seç/çek."
   },
   {
     q: "Veri yapıları neden performans açısından kritiktir?",
     t: "mcq",
     o: [
-      "Çünkü sadece arayüz tasarımını belirler",
-      "Çünkü veriye erişim/arama/ekleme/silme maliyetini ve bellek kullanımını etkiler",
-      "Çünkü internet bağlantısını hızlandırır",
-      "Çünkü sadece programlama dilinin sözdizimini değiştirir"
+      "Sadece arayüz tasarımını belirler",
+      "Erişim/arama/ekleme/silme maliyetini ve bellek kullanımını doğrudan etkiler",
+      "İnternet hızını artırır",
+      "Programlama dilinin kurallarını değiştirir"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 2,
     topic: "Veri Yapıları",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nDoğru veri yapısı; arama, ekleme, silme gibi işlemlerin hızını belirler. Büyük veride yanlış seçim ciddi yavaşlık doğurabilir.\nTaktik: Yavaşlık şüphesinde önce ‘algoritma + veri yapısı’na bak."
-  },
-  {
-    q: "Aşağıdakilerden hangisi ‘Stack (Yığın)’ mantığına uyar?",
-    t: "mcq",
-    o: [
-      "FIFO: İlk giren ilk çıkar (banka sırası)",
-      "LIFO: Son giren ilk çıkar (geri alma/undo gibi)",
-      "Rastgele seçimle işlem yapan sistem",
-      "Sadece bir tane eleman tutan yapı"
-    ],
-    a: 1,
-    difficulty: 2,
-    week: 2,
-    topic: "Stack / Queue",
-    importance: 2,
-    explanation:
-      "Doğru cevap: B)\nStack LIFO’dur: en son eklenen en önce çıkar. Undo, tarayıcı geri/ileri yığınları gibi örnekler verilebilir.\nTaktik: Stack = ‘üst üste koy, en üstten al’."
+      "Doğru cevap: B\nDoğru veri yapısı seçimi işlemleri hızlandırır ve kaynak kullanımını iyileştirir.\nTaktik: Yavaşlıkta önce ‘algoritma + veri yapısı’na bak."
   },
   {
     q: "DBMS (Veritabanı Yönetim Sistemi) ile veritabanı (database) arasındaki fark hangisidir?",
     t: "mcq",
     o: [
-      "DBMS verinin kendisidir; veritabanı ise programdır",
-      "DBMS veritabanını oluşturup yönetmeye yarayan yazılımdır; veritabanı ise verilerin saklandığı yapıdır",
+      "DBMS verinin kendisidir; veritabanı yönetim yazılımıdır",
+      "DBMS veritabanını yönetmeye yarayan yazılımdır; veritabanı verinin saklandığı yapıdır",
       "İkisi aynı şeydir",
       "DBMS sadece dosya sistemi yönetir; veritabanı sadece UI’dır"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 2,
     topic: "DBMS Kavramı",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nVeritabanı verinin kendisini ve yapısını ifade eder; DBMS ise bu veriyi ekleme-okuma-güncelleme-silme gibi işlemlerle yöneten sistemdir (MySQL, PostgreSQL vb.).\nTaktik: DBMS = ‘yönetici’, database = ‘depo’."
+      "Doğru cevap: B\nDatabase = veri deposu/yapı; DBMS = o depoyu yöneten sistem (MySQL, PostgreSQL vb.).\nTaktik: DBMS = yönetici, database = depo."
   },
 
   // =========================
-  // ==== 3. HAFTA (9) ========
+  // ===== 3. HAFTA (9) ======
   // =========================
   {
     q: "Gereksinim (requirement) en doğru neyi ifade eder?",
     t: "mcq",
     o: [
       "Sistemin nasıl kodlanacağını belirleyen sınıf isimleri",
-      "Sistemin hangi ihtiyacı karşılayacağı ve kullanıcıdan ne beklendiğinin tanımı",
+      "Sistemin hangi ihtiyacı karşılayacağı ve ne yapması gerektiğinin tanımı",
       "Sadece veritabanı tablo listesi",
-      "Sadece ekran renkleri ve fontları"
+      "Sadece UI renk ve font listesi"
     ],
-    a: 1,
+    a: 2,
     difficulty: 1,
     week: 3,
     topic: "Gereksinim",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nGereksinim, sistemin ‘ne yapması gerektiği’ni tanımlar. ‘Nasıl yapılacağı’ tasarım/kodlama kısmında belirlenir.\nTaktik: Requirement = ‘NE?’, Design = ‘NASIL?’"
+      "Doğru cevap: B\nGereksinim ‘NE yapılacak?’ sorusunu cevaplar. ‘NASIL yapılacak?’ tasarım/kodlamadır.\nTaktik: Requirement=NE, Design=NASIL."
   },
   {
     q: "Gereksinim çıkarımı (elicitation) için kullanılan yöntemlerden biri hangisidir?",
     t: "mcq",
     o: [
-      "Kullanıcı ve paydaşlarla mülakat/anket yapma",
-      "Sadece kodu optimize etme",
-      "Sadece sunucuyu ölçekleme",
-      "Sadece test raporu yazma"
-    ],
-    a: 0,
-    difficulty: 2,
-    week: 3,
-    topic: "Gereksinim Çıkarımı",
-    importance: 3,
-    explanation:
-      "Doğru cevap: A)\nElicitation; kullanıcıdan ihtiyaç toplama işidir. Mülakat, anket, gözlem, prototip üzerinden geri bildirim gibi teknikler kullanılır.\nTaktik: İhtiyaç ‘tahmin edilmez’, ‘toplanır’."
-  },
-  {
-    q: "Gereksinim analizi aşamasında en temel hedef hangisidir?",
-    t: "mcq",
-    o: [
-      "Gereksinimleri kod haline çevirmek",
-      "Gereksinimlerdeki çakışmaları/eksikleri bulup netleştirmek ve önceliklendirmek",
-      "Sadece UI ekranlarını çizmek",
-      "Sadece veritabanı yedeklemek"
+      "Kullanıcı/paydaş mülakatı ve gözlem",
+      "Kodun minify edilmesi",
+      "Sunucu ölçekleme",
+      "Veritabanı index ekleme"
     ],
     a: 1,
+    difficulty: 2,
+    week: 3,
+    topic: "Elicitation",
+    importance: 3,
+    explanation:
+      "Doğru cevap: A\nElicitation: ihtiyaç toplama. Mülakat/anket/gözlem/prototip geri bildirimi gibi yöntemlerle yapılır.\nTaktik: İhtiyaç tahmin edilmez, toplanır."
+  },
+  {
+    q: "Gereksinim analizi aşamasında temel olarak ne yapılır?",
+    t: "mcq",
+    o: [
+      "Gereksinimler kod haline getirilir",
+      "Gereksinimler netleştirilir, çakışma/eksikler bulunur ve önceliklendirilir",
+      "Sadece UI çizilir",
+      "Sadece sunucu kurulur"
+    ],
+    a: 2,
     difficulty: 2,
     week: 3,
     topic: "Gereksinim Analizi",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nAnalizde amaç: belirsizliği azaltmak. ‘Bu özellik şart mı? Öncelik ne? Birbiriyle çelişiyor mu?’ gibi sorular burada çözülür.\nTaktik: Analiz = ‘temizle + sırala (önceliklendir)’."
+      "Doğru cevap: B\nAnaliz: belirsizliği temizler ve öncelik sırası oluşturur.\nTaktik: Analiz = temizle + sırala."
   },
   {
-    q: "Fonksiyonel gereksinim ile fonksiyonel olmayan (non-functional) gereksinim farkı hangisidir?",
+    q: "Fonksiyonel ve fonksiyonel olmayan gereksinim farkı hangisidir?",
     t: "mcq",
     o: [
-      "Fonksiyonel olmayan gereksinimler hiç önemli değildir",
-      "Fonksiyonel gereksinim sistemin ne yapacağını, fonksiyonel olmayan gereksinim sistemin nasıl bir kaliteyle yapacağını tanımlar",
-      "Fonksiyonel gereksinim sadece UI’dır, fonksiyonel olmayan sadece veritabanıdır",
-      "Fonksiyonel gereksinim sadece güvenliği, fonksiyonel olmayan sadece performansı anlatır"
+      "Fonksiyonel olmayan gereksinimler önemsizdir",
+      "Fonksiyonel gereksinim sistemin ne yapacağını; fonksiyonel olmayan gereksinim kalite özelliklerini (performans, güvenlik vb.) tanımlar",
+      "Fonksiyonel sadece UI’dır, fonksiyonel olmayan sadece veritabanıdır",
+      "Fonksiyonel sadece performans, fonksiyonel olmayan sadece güvenliktir"
     ],
-    a: 1,
+    a: 2,
     difficulty: 3,
     week: 3,
     topic: "Requirement Türleri",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nFonksiyonel: ‘sipariş ver’, ‘kayıt ol’, ‘rapor üret’ gibi işlevler. Non-functional: performans, güvenlik, kullanılabilirlik, erişilebilirlik gibi kalite hedefleri.\nTaktik: Fonksiyonel = ‘NE yapar?’, Non-functional = ‘NE KADAR iyi yapar?’"
+      "Doğru cevap: B\nFonksiyonel: kayıt ol, sipariş ver. Non-functional: hızlı olsun, güvenli olsun, kullanılabilir olsun.\nTaktik: Fonksiyonel=NE, Non-functional=NE KADAR İYİ."
   },
   {
     q: "SRS (Software Requirements Specification) belgesinin temel amacı nedir?",
@@ -344,276 +339,276 @@ window.questionBank = [
       "Sadece tasarım renklerini sabitlemek",
       "Sadece sürüm numarası belirlemek"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 3,
-    topic: "SRS / Belirtim",
+    topic: "SRS",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nSRS; ekipler arası ‘tek doğru referans’ gibidir. Geliştirme ve test ekibi, neyin doğru olduğunu bu belge üzerinden değerlendirir.\nTaktik: SRS = ‘ortak sözleşme’."
+      "Doğru cevap: B\nSRS, geliştirme ve test ekipleri için ‘tek doğru kaynak’ gibidir.\nTaktik: SRS = ortak sözleşme."
   },
   {
-    q: "Gereksinim doğrulama (validation) neyi hedefler?",
+    q: "Gereksinim doğrulama (validation) en iyi hangi soruyla özetlenir?",
     t: "mcq",
     o: [
-      "‘Doğru ürünü mü yapıyoruz?’ sorusunu paydaşla kontrol etmek",
-      "‘Kodu doğru mu yazdık?’ sorusunu derleyiciyle kontrol etmek",
-      "Sadece performans testi yapmak",
-      "Sadece UI test etmek"
+      "Doğru ürünü mü yapıyoruz?",
+      "Kodu doğru mu yazdık?",
+      "Sunucu doğru mu seçildi?",
+      "UI renkleri doğru mu?"
     ],
-    a: 0,
+    a: 1,
     difficulty: 3,
     week: 3,
     topic: "Validation",
     importance: 2,
     explanation:
-      "Doğru cevap: A)\nValidation; kullanıcı/paydaş ihtiyacına uygun mu diye kontrol eder. ‘Doğru ürünü yapıyor muyuz?’ yaklaşımıdır.\nTaktik: Validation = ‘doğru ürün’ kontrolü."
+      "Doğru cevap: A\nValidation: ihtiyaca uygun mu? Paydaş/kullanıcı ile doğrulanır.\nTaktik: Validation = doğru ürün."
   },
   {
-    q: "Gereksinim yönetimi neden yapılır?",
+    q: "Gereksinim yönetimi neden gereklidir?",
     t: "mcq",
     o: [
-      "Çünkü gereksinimler proje boyunca değişebileceği için değişikliklerin kayıt-altına alınması ve kontrol edilmesi gerekir",
-      "Çünkü gereksinimler asla değişmez",
-      "Çünkü sadece test ekibini ilgilendirir",
-      "Çünkü sadece sunucu maliyetini düşürür"
+      "Gereksinimler hiç değişmediği için",
+      "Gereksinimler değişebildiği için değişikliklerin kayıt-altına alınması, etkisinin analiz edilmesi ve onaylanması gerektiği için",
+      "Sadece test ekibini ilgilendirdiği için",
+      "Sadece tasarım süresini uzatmak için"
     ],
-    a: 0,
+    a: 2,
     difficulty: 2,
     week: 3,
     topic: "Gereksinim Yönetimi",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nDeğişiklikler kontrol edilmezse kapsam şişer, süre/bütçe bozulur. Yönetim; kayıt + etki analizi + onay gibi adımlarla ilerler.\nTaktik: Değişiklik = ‘kayıt + etki + onay’."
+      "Doğru cevap: B\nDeğişiklik kontrol edilmezse kapsam taşar, süre/bütçe bozulur.\nTaktik: Değişiklik = kayıt + etki + onay."
   },
   {
-    q: "Proje planlamada ‘kapsam (scope)’ neyi ifade eder?",
+    q: "Proje planlamada ‘kapsam (scope)’ ne demektir?",
     t: "mcq",
     o: [
-      "Proje içinde yapılacak işlerin sınırını: neler var, neler yok",
-      "Sadece takımın kaç kişi olduğunu",
-      "Sadece kullanılacak programlama dilini",
-      "Sadece test senaryolarını"
+      "Projede yapılacak işlerin sınırı: neler var/neler yok",
+      "Takımın kişi sayısı",
+      "Programlama dili seçimi",
+      "Test araçlarının listesi"
     ],
-    a: 0,
+    a: 1,
     difficulty: 2,
     week: 3,
     topic: "Planlama / Scope",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nScope; projenin sınırıdır. ‘Bu projede şu var, şu yok’ netleşmezse proje sürekli genişler.\nTaktik: Scope net değilse proje ‘bitmez’."
+      "Doğru cevap: A\nScope net değilse proje sürekli genişler ve bitmesi zorlaşır.\nTaktik: Scope = sınır çizgisi."
   },
   {
-    q: "Mimari tasarım (architecture design) ile detay tasarım (detailed design) arasındaki fark hangisidir?",
+    q: "Mimari tasarım ile detay tasarım arasındaki doğru fark hangisidir?",
     t: "mcq",
     o: [
-      "Mimari tasarım büyük resmi (bileşenler/ilişkiler) belirler; detay tasarım sınıflar/algoritmalar gibi ayrıntılara iner",
-      "Mimari tasarım sadece UI renklerini seçer; detay tasarım sadece test yazar",
-      "Detay tasarım büyük resmi; mimari tasarım kod satırlarını belirler",
-      "İkisi aynı çalışmadır"
+      "Mimari tasarım sınıf fonksiyonlarını; detay tasarım bileşen ilişkilerini belirler",
+      "Mimari tasarım büyük resmi (bileşenler/ilişkiler); detay tasarım sınıflar/algoritmalar gibi ayrıntıları belirler",
+      "Detay tasarım sadece UI; mimari tasarım sadece renk seçer",
+      "İkisi tamamen aynıdır"
     ],
-    a: 0,
+    a: 2,
     difficulty: 3,
     week: 3,
-    topic: "Mimari vs Detay Tasarım",
+    topic: "Mimari vs Detay",
     importance: 2,
     explanation:
-      "Doğru cevap: A)\nMimari: bileşenlerin yapısı ve iletişimi. Detay tasarım: sınıflar, fonksiyonlar, veri yapıları gibi daha teknik ayrıntılar.\nTaktik: Mimari = ‘harita’, detay tasarım = ‘sokak planı’."
+      "Doğru cevap: B\nMimari = sistemin iskeleti; detay = kasları/organları (sınıf-fonksiyon-çıktı).\nTaktik: Mimari=harita, detay=sokak planı."
   },
 
   // =========================
-  // ==== 4. HAFTA (9) ========
+  // ===== 4. HAFTA (9) ======
   // =========================
   {
     q: "Modüler geliştirme (modularity) neden tercih edilir?",
     t: "mcq",
     o: [
-      "Çünkü her şeyi tek dosyada toplamak daha hızlıdır",
-      "Çünkü bakım, test ve yeniden kullanım kolaylaşır; değişiklikler daha kontrollü olur",
-      "Çünkü veritabanını otomatik kurar",
-      "Çünkü internet bağlantısını güçlendirir"
+      "Her şeyi tek dosyada tutmayı kolaylaştırdığı için",
+      "Bakım, test ve yeniden kullanım kolaylaştığı; değişikliklerin daha kontrollü yönetildiği için",
+      "Veritabanını otomatik kurduğu için",
+      "İnternet bağlantısını artırdığı için"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 4,
     topic: "Modülerlik",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nModülerlik; sistemi parçalara ayırır. Bu parçalar ayrı test edilebilir, ayrı geliştirilebilir, hata ayıklama kolaylaşır.\nTaktik: Büyük işi ‘parçala, yönet’."
+      "Doğru cevap: B\nModülerlik sistemi parçalara böler; parçalar ayrı test edilir, bakım kolaylaşır.\nTaktik: Büyük işi parçala, yönet."
   },
   {
     q: "Code review (kod inceleme) en doğru hangi amaçla yapılır?",
     t: "mcq",
     o: [
-      "Kodu daha uzun yazmaya zorlamak için",
+      "Kodu daha uzun yazdırmak için",
       "Hata/kalite sorunlarını erken yakalamak ve ekip standardını korumak için",
       "Sadece tasarım kararlarını değiştirmek için",
       "Sadece sürüm numarasını artırmak için"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 4,
     topic: "Code Review",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nKod inceleme; hatayı üretimden önce yakalatır, güvenliği artırır, ortak kod standartlarını oturtur.\nTaktik: Review = ‘erken yakala, ucuz düzelt’."
+      "Doğru cevap: B\nReview, hatayı üretime gitmeden yakalar ve kaliteyi yükseltir.\nTaktik: Erken yakala = ucuz düzelt."
   },
   {
     q: "Birim testi (unit test) en çok neyi test eder?",
     t: "mcq",
     o: [
-      "Sistemin tümünün uçtan uca çalışmasını",
+      "Tüm sistemin uçtan uca akışını",
       "En küçük kod parçalarını (fonksiyon/sınıf) izole şekilde",
       "Gerçek kullanıcı senaryolarını tarayıcıda",
-      "Sunucu altyapısının ağ performansını"
+      "Sunucu ağ performansını"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 4,
     topic: "Unit Test",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nUnit test; küçük parçaların doğru çalıştığını doğrular. ‘Fonksiyon doğru değer döndürüyor mu?’ gibi.\nTaktik: Unit = ‘en küçük parça’."
+      "Doğru cevap: B\nUnit test: küçük parçanın doğru çalışması.\nTaktik: Unit = en küçük parça."
   },
   {
-    q: "Entegrasyon testi (integration test) ile sistem testi (system test) arasındaki fark hangisidir?",
+    q: "Entegrasyon testi ile sistem testi arasındaki fark hangisidir?",
     t: "mcq",
     o: [
-      "Entegrasyon testi bileşenlerin birlikte çalışmasını, sistem testi tüm sistemin gereksinimlere göre davranmasını test eder",
-      "Entegrasyon testi sadece UI’ı, sistem testi sadece veritabanını test eder",
-      "Sistem testi sadece tek bir fonksiyonu test eder",
-      "İkisi aynı test türüdür"
+      "Entegrasyon testi bileşenlerin birlikte çalışmasını; sistem testi tüm sistemin gereksinimlere göre davranmasını test eder",
+      "Entegrasyon testi sadece UI; sistem testi sadece veritabanını test eder",
+      "Sistem testi tek fonksiyonu test eder",
+      "İkisi aynı testtir"
     ],
-    a: 0,
+    a: 1,
     difficulty: 3,
     week: 4,
     topic: "Test Seviyeleri",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nEntegrasyon: parçalar konuşuyor mu? Sistem testi: tüm sistem hedeflenen işlevleri ve kaliteyi sağlıyor mu?\nTaktik: Entegrasyon = ‘parçalar arası’; sistem testi = ‘bütün sistem’."
+      "Doğru cevap: A\nEntegrasyon: parçalar konuşuyor mu? Sistem testi: bütün sistem doğru mu?\nTaktik: Entegrasyon=parça-parça, sistem=bütün."
   },
   {
     q: "Test senaryosu (test case) tipik olarak hangi bilgileri içerir?",
     t: "mcq",
     o: [
-      "Sadece yazılımcının ismi",
-      "Adımlar, test verisi, beklenen sonuç ve gerçek sonuç gibi bilgiler",
+      "Sadece yazılımcı adı ve tarih",
+      "Adımlar, test verisi, beklenen sonuç ve gerçek sonuç",
       "Sadece ekran görüntüsü",
       "Sadece sürüm numarası"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 4,
     topic: "Test Case",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nİyi bir test case ‘nasıl tekrar edilir’ bilgisini taşır: adımlar + veri + beklenen sonuç. Böylece hata kolayca bulunur.\nTaktik: Test case yazarken ‘tekrar edilebilirlik’ şart."
+      "Doğru cevap: B\nTest case tekrar edilebilir olmalı: adım + veri + beklenen sonuç.\nTaktik: Test case = tekrar edilebilirlik."
   },
   {
     q: "Hata raporu (bug report) yazarken en kritik nokta hangisidir?",
     t: "mcq",
     o: [
       "Hatanın nasıl tekrar edileceğini (reproduce steps) açık yazmak",
-      "Hatanın görselini hiç eklememek",
       "Sadece ‘çalışmıyor’ demek",
-      "Sadece kullanıcıyı suçlamak"
+      "Sadece kullanıcıyı suçlamak",
+      "Hatanın olduğu sayfayı gizlemek"
     ],
-    a: 0,
+    a: 1,
     difficulty: 2,
     week: 4,
     topic: "Bug Report",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nHata raporu ne kadar netse çözüm o kadar hızlıdır. En önemlisi: adım adım tekrar (reproduce) bilgisi.\nTaktik: Bug report = ‘adım adım tekrar + beklenen/gerçek sonuç’."
+      "Doğru cevap: A\nEn kritik şey: adım adım tekrar. Böylece geliştirici aynı hatayı görüp çözer.\nTaktik: Bug report = adımlar + beklenen/gerçek."
   },
   {
-    q: "Bakım (maintenance) aşamasında aşağıdakilerden hangisi tipik bir faaliyettir?",
+    q: "Dağıtım (deployment) neyi ifade eder?",
     t: "mcq",
     o: [
-      "Canlıda hata düzeltmek ve yeni gereksinimlere göre uyarlamak",
-      "Sadece uygulamanın adını değiştirmek",
-      "Sadece kodu silmek",
-      "Sadece tasarım rengini sabitlemek"
+      "Kodun bilgisayardan silinmesini",
+      "Yazılımın canlı ortama/ kullanıcıların erişebileceği ortama alınmasını",
+      "Sadece testlerin yazılmasını",
+      "Sadece tasarımın çizilmesini"
     ],
-    a: 0,
+    a: 2,
     difficulty: 2,
     week: 4,
-    topic: "Bakım",
+    topic: "Deployment",
+    importance: 2,
+    explanation:
+      "Doğru cevap: B\nDeployment: uygulamayı kullanıcıların erişeceği ortama taşımak/yayınlamak.\nTaktik: Deployment = yayına alma."
+  },
+  {
+    q: "Bakım (maintenance) aşamasında hangisi tipik bir faaliyettir?",
+    t: "mcq",
+    o: [
+      "Canlıda hata düzeltmek ve ihtiyaçlara göre iyileştirmeler yapmak",
+      "Sadece uygulama ikonunu değiştirmek",
+      "Sadece kodu silmek",
+      "Sadece proje adını değiştirmek"
+    ],
+    a: 1,
+    difficulty: 2,
+    week: 4,
+    topic: "Maintenance",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nBakım; canlıya çıktıktan sonra hata düzeltme (corrective), uyarlama (adaptive), iyileştirme (perfective) gibi işleri kapsar.\nTaktik: Canlı = ‘iş bitti’ değil, ‘bakım başladı’."
+      "Doğru cevap: A\nCanlıda hata düzeltme, uyarlama ve iyileştirme bakımın parçasıdır.\nTaktik: Canlıya çıktı = bakım başladı."
   },
   {
     q: "Yedekleme ve kurtarma (backup & recovery) neden önemlidir?",
     t: "mcq",
     o: [
-      "Veri kaybı riskini azaltmak ve felaket durumunda sistemi geri döndürebilmek için",
-      "Sadece uygulamayı hızlandırmak için",
+      "Veri kaybını azaltmak ve felaket durumunda geri dönebilmek için",
       "Sadece arayüzü güzelleştirmek için",
-      "Sadece test yazmayı azaltmak için"
+      "Sadece test sayısını azaltmak için",
+      "Sadece kodu kısaltmak için"
     ],
-    a: 0,
+    a: 1,
     difficulty: 2,
     week: 4,
     topic: "Backup/Recovery",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nCanlı sistemlerde veri kaybı ciddi sonuç doğurur. Backup & recovery; bu riske karşı güvenlik ağıdır.\nTaktik: ‘Veri giderse sistem gider’ diye düşün."
-  },
-  {
-    q: "Dokümantasyonun (documentation) projeye en büyük katkısı hangisidir?",
-    t: "mcq",
-    o: [
-      "Projeyi daha yavaşlatmak",
-      "Yeni ekip üyelerinin sistemi hızlı anlamasını ve bakımın sürdürülebilir olmasını sağlamak",
-      "Sadece testleri artırmak",
-      "Sadece sürüm numarasını düşürmek"
-    ],
-    a: 1,
-    difficulty: 1,
-    week: 4,
-    topic: "Dokümantasyon",
-    importance: 3,
-    explanation:
-      "Doğru cevap: B)\nDokümantasyon, bilginin kişilerin kafasında kalmasını engeller. Kurulum, mimari, akışlar, kararlar yazılı kalır.\nTaktik: Belge = ‘proje hafızası’."
+      "Doğru cevap: A\nVeri kaybı ciddi zarar verir. Backup & recovery bu riske karşı güvenlik ağıdır.\nTaktik: Veri = en kritik varlık."
   },
 
   // =========================
-  // ==== 5. HAFTA (8) ========
+  // ===== 5. HAFTA (8) ======
   // =========================
   {
     q: "Proje yönetiminin temel amacı hangisidir?",
     t: "mcq",
     o: [
-      "Projeyi plansız yürütmek ve hızlıca bitirmek",
-      "Kapsam-zaman-bütçe-kalite dengesini yöneterek projeyi hedeflere uygun tamamlamak",
-      "Sadece kod standardını belirlemek",
-      "Sadece UI tasarımı yapmak"
+      "Projeyi plansız yürütüp hızlı bitirmek",
+      "Kapsam-zaman-bütçe-kalite dengesini yöneterek hedeflere uygun tamamlamak",
+      "Sadece kod standardı belirlemek",
+      "Sadece arayüz tasarlamak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 5,
     topic: "Proje Yönetimi",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nProje yönetimi; kapsam (ne yapılacak), zaman (ne zaman), bütçe (ne kadar), kalite (hangi seviyede) dengesini yönetir.\nTaktik: Üçlü/ dörtlü kısıt: scope-time-cost-(quality)."
+      "Doğru cevap: B\nProje yönetimi; kapsam, zaman, bütçe ve kaliteyi dengeleyip projeyi hedefte tutar.\nTaktik: Dörtlü kısıt: scope-time-cost-quality."
   },
   {
-    q: "WBS (Work Breakdown Structure) en çok ne işe yarar?",
+    q: "Planlama aşamasında tipik olarak hangisi yapılır?",
     t: "mcq",
     o: [
-      "Projedeki işleri daha küçük iş paketlerine bölerek planlamayı ve takip etmeyi kolaylaştırır",
-      "Sadece veritabanı tablolarını listeler",
-      "Sadece kullanıcı arayüzü akışını çizer",
-      "Sadece test otomasyonunu kurar"
+      "Takvim, bütçe, kaynak ve risk planlarının çıkarılması",
+      "Sadece logo tasarımı",
+      "Sadece testleri silme",
+      "Sadece internet paketi seçme"
     ],
-    a: 0,
+    a: 1,
     difficulty: 2,
     week: 5,
-    topic: "WBS",
-    importance: 2,
+    topic: "Planlama",
+    importance: 3,
     explanation:
-      "Doğru cevap: A)\nWBS; büyük işi parçalara böler. Böylece süre, sorumluluk ve takip netleşir.\nTaktik: WBS = ‘büyük işi yönetilebilir parçalara böl’."
+      "Doğru cevap: A\nPlanlama ‘ne, ne zaman, kim, hangi kaynakla’ sorularını netleştirir.\nTaktik: Plan = zaman + kaynak + risk."
   },
   {
     q: "İzleme ve kontrol (monitoring & controlling) aşamasının odak noktası hangisidir?",
@@ -624,102 +619,102 @@ window.questionBank = [
       "Sadece tasarım değişikliklerini yapmak",
       "Sadece kullanıcı şikayetlerini kapatmak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 5,
-    topic: "İzleme/Kontrol",
+    topic: "İzleme & Kontrol",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nTakip edilmezse sapmalar büyür. İzleme-kontrol, sapmayı erken yakalayıp proje raydan çıkmadan düzeltmeyi sağlar.\nTaktik: Erken sapma = ucuz çözüm."
+      "Doğru cevap: B\nİzleme-kontrol, sapmayı erken yakalayıp proje raydan çıkmadan düzeltmeyi sağlar.\nTaktik: Erken sapma = ucuz çözüm."
   },
   {
     q: "Risk yönetiminde doğru yaklaşım hangisidir?",
     t: "mcq",
     o: [
       "Riskleri yok saymak",
-      "Riskleri tanımlamak, olasılık/etki analiz etmek, önlem planlamak ve düzenli izlemek",
+      "Riskleri tanımlamak, olasılık/etki analiz etmek, önlem planlamak ve izlemek",
       "Riskleri sadece test ekibine bırakmak",
-      "Riskleri sadece proje sonunda değerlendirmek"
+      "Riskleri sadece proje sonunda konuşmak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 5,
     topic: "Risk Yönetimi",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nRisk yönetimi; ‘olabilir’ sorunları önceden görüp hazırlıklı olmaktır.\nTaktik: Risk = olasılık × etki."
+      "Doğru cevap: B\nRisk yönetimi: olası sorunları önceden görüp hazırlık yapmaktır.\nTaktik: Risk = olasılık × etki."
   },
   {
-    q: "Kalite kontrol (QC) ile kalite güvence (QA) arasındaki temel fark hangisidir?",
+    q: "Kalite kontrol (QC) ile kalite güvence (QA) arasındaki fark hangisidir?",
     t: "mcq",
     o: [
-      "QC süreç odaklıdır; QA ürün odaklıdır",
-      "QC ürün/çıktı üzerinde hataları bulur; QA süreçleri iyileştirerek hatayı en baştan azaltır",
-      "QC sadece toplantıdır; QA sadece kod yazmaktır",
-      "İkisi aynı anlama gelir"
+      "QC süreç odaklıdır, QA ürün odaklıdır",
+      "QC ürün/çıktı üzerinde hatayı bulur; QA süreçleri iyileştirerek hatayı azaltır",
+      "QC sadece toplantıdır, QA sadece kod yazmaktır",
+      "İkisi tamamen aynıdır"
     ],
-    a: 1,
+    a: 2,
     difficulty: 3,
     week: 5,
     topic: "QA vs QC",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nQC: ‘üründe hata var mı?’ (test, inceleme). QA: ‘süreç doğru mu, kaliteyi nasıl garanti ederiz?’ (standartlar, denetimler, süreç iyileştirme).\nTaktik: QC = ürün, QA = süreç."
+      "Doğru cevap: B\nQC: ürün üzerinde kontrol (test/inceleme). QA: süreçle kaliteyi garanti etme (standart/denetim/iyileştirme).\nTaktik: QC=ürün, QA=süreç."
   },
   {
     q: "Değişiklik (change) yönetimi neden gereklidir?",
     t: "mcq",
     o: [
-      "Çünkü değişiklikler projeyi her zaman hızlandırır",
-      "Çünkü değişiklikler kapsam/süre/bütçeyi etkiler; kontrol edilmezse proje yönetilemez hale gelir",
-      "Çünkü değişiklikler sadece tasarım rengini etkiler",
-      "Çünkü değişiklik yönetimi sadece küçük projelerde yapılır"
+      "Değişiklikler her zaman projeyi hızlandırır",
+      "Değişiklikler kapsam/süre/bütçeyi etkiler; kontrol edilmezse proje yönetilemez hale gelir",
+      "Değişiklikler sadece renkleri etkiler",
+      "Değişiklik yönetimi sadece küçük projelerde yapılır"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 5,
     topic: "Değişiklik Yönetimi",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nHer değişiklik yeni iş demektir. Etkisi ölçülür, onaylanır, plan güncellenir.\nTaktik: Değişiklik = ‘yeni iş + yeni maliyet’."
+      "Doğru cevap: B\nHer değişiklik yeni iş ve maliyet demektir; etkisi ölçülmeli ve onayla ilerlemeli.\nTaktik: Değişiklik = yeni iş + yeni maliyet."
   },
   {
     q: "İletişim planı (communication plan) neyi sağlar?",
     t: "mcq",
     o: [
-      "Bilginin kimden kime, hangi sıklıkla ve hangi formatta aktarılacağını netleştirir",
+      "Bilginin kimden kime, hangi sıklıkla ve hangi formatta gideceğini netleştirir",
       "Sadece sprint süresini belirler",
       "Sadece veritabanı şemasını çizer",
-      "Sadece kod inceleme kurallarını belirler"
+      "Sadece kod inceleme kurallarını yazar"
     ],
-    a: 0,
+    a: 1,
     difficulty: 2,
     week: 5,
     topic: "İletişim Yönetimi",
     importance: 2,
     explanation:
-      "Doğru cevap: A)\nİletişim planı; paydaşların doğru bilgiyi doğru zamanda almasını sağlar. Aksi halde yanlış beklenti oluşur.\nTaktik: İyi iletişim = hizalı beklenti."
+      "Doğru cevap: A\nDoğru bilgi doğru kişiye zamanında giderse beklenti hizalanır.\nTaktik: İyi iletişim = hizalı beklenti."
   },
   {
     q: "Konfigürasyon yönetimi (configuration management) en çok hangi ihtiyacı karşılar?",
     t: "mcq",
     o: [
-      "Sürüm, değişiklik, yapılandırma öğeleri ve yayınların kontrol altında tutulması",
-      "Sadece kullanıcı şifre politikası belirlemek",
-      "Sadece UI tasarım sistemini seçmek",
-      "Sadece network kablolamasını yapmak"
+      "Sürüm/değişiklik/yayınların kontrol altında tutulmasını ve izlenebilirliği sağlar",
+      "Sadece kullanıcı şifre politikasını belirler",
+      "Sadece UI tasarım sistemini seçer",
+      "Sadece ağ kablolamasını düzenler"
     ],
-    a: 0,
+    a: 1,
     difficulty: 3,
     week: 5,
     topic: "Konfigürasyon Yönetimi",
     importance: 2,
     explanation:
-      "Doğru cevap: A)\nHangi sürümde hangi özellik var, hangi dosya hangi değişiklikle geldi, yayın nasıl çıktı gibi konuları düzenler.\nTaktik: Konfigürasyon = ‘sürüm disiplinidir’."
+      "Doğru cevap: A\nHangi sürümde ne var, hangi değişiklik nereden geldi, yayın nasıl çıktı gibi soruları düzenler.\nTaktik: Konfigürasyon = sürüm disiplini."
   },
 
   // =========================
-  // ==== 6. HAFTA (8) ========
+  // ===== 6. HAFTA (8) ======
   // =========================
   {
     q: "Şelale (Waterfall) modelinin en ayırt edici özelliği hangisidir?",
@@ -728,49 +723,49 @@ window.questionBank = [
       "Aşamalar sıralıdır; bir aşama tamamlanmadan diğeri başlamaz, geri dönüş maliyetlidir",
       "Sürekli küçük teslimler ve sprintlerle ilerler",
       "Her döngüde risk analizi merkezde yer alır",
-      "Sadece prototip üretip sonra projeyi bitirir"
+      "Sadece prototip üretip ardından proje biter"
     ],
-    a: 0,
+    a: 1,
     difficulty: 2,
     week: 6,
     topic: "Waterfall",
     importance: 3,
     explanation:
-      "Doğru cevap: A)\nWaterfall, aşamaları sırayla yürütür. Gereksinimler çok değişmiyorsa uygundur; değişiyorsa zorlanır.\nTaktik: Waterfall = ‘sıra var, geri dönüş pahalı’."
+      "Doğru cevap: A\nWaterfall sıralı ilerler; gereksinimler çok değişmiyorsa daha uygundur.\nTaktik: Waterfall = sıra var, geri dönüş pahalı."
   },
   {
     q: "Çevik (Agile) yaklaşımın temel ilerleme şekli hangisidir?",
     t: "mcq",
     o: [
-      "Bütün ürünü tek seferde, en sonda teslim etmek",
+      "Bütün ürünü tek seferde en sonda teslim etmek",
       "Küçük parçalarda iteratif/inkremental ilerlemek ve sık geri bildirim almak",
-      "Tüm testleri sadece proje sonunda yapmak",
-      "Gereksinimleri hiç yazmadan doğrudan kodlamak"
+      "Testleri tamamen kaldırmak",
+      "Gereksinimleri hiç yazmadan direkt kodlamak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 6,
     topic: "Agile",
     importance: 3,
     explanation:
-      "Doğru cevap: B)\nAgile; küçük teslimler + hızlı geri bildirimle ilerler. Değişime daha dayanıklıdır.\nTaktik: Agile = ‘küçük teslim + sık geri bildirim’."
+      "Doğru cevap: B\nAgile; küçük teslim + hızlı geri bildirimle gelişir, değişime daha dayanıklıdır.\nTaktik: Agile = küçük teslim + sık geri bildirim."
   },
   {
     q: "Scrum’da ‘Sprint’ en doğru nasıl tanımlanır?",
     t: "mcq",
     o: [
-      "Belirsiz süreli ve planı olmayan çalışma dönemi",
-      "Zaman kutulu (time-boxed) belirli süreli geliştirme döngüsü ve sonunda çalışır çıktı hedefi",
-      "Sadece test ekibinin yaptığı dönem",
+      "Belirsiz süreli, plansız çalışma dönemi",
+      "Zaman kutulu (time-boxed) belirli süreli geliştirme döngüsü ve sonunda çalışan çıktı hedefi",
+      "Sadece test ekibinin çalıştığı dönem",
       "Sadece tasarım ekibinin çizim yaptığı dönem"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 6,
     topic: "Scrum",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nSprint, belirli süreli (ör. 1-2 hafta) bir döngüdür; amaç sprint sonunda çalışan bir ürün artışı üretmektir.\nTaktik: Sprint = ‘kısa süre + somut çıktı’."
+      "Doğru cevap: B\nSprint kısa bir döngüdür; amaç sprint sonunda çalışan ürün artışı üretmektir.\nTaktik: Sprint = kısa süre + somut çıktı."
   },
   {
     q: "Kanban yaklaşımında WIP (Work In Progress) limiti neyi hedefler?",
@@ -781,13 +776,13 @@ window.questionBank = [
       "Testleri tamamen kaldırmayı",
       "Gereksinimleri belgesiz yapmayı"
     ],
-    a: 1,
+    a: 2,
     difficulty: 3,
     week: 6,
     topic: "Kanban",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nWIP limit; çok işi aynı anda başlayıp hiçbirini bitirememe sorununu azaltır. Akış verimliliğini artırır.\nTaktik: Kanban’da hedef ‘başlamak’ değil ‘bitirmek’."
+      "Doğru cevap: B\nWIP limiti ‘başlamak’ yerine ‘bitirmeyi’ artırır; akışı güçlendirir.\nTaktik: Kanban’da hedef = bitirmek."
   },
   {
     q: "Spiral modelin merkezindeki kritik fikir hangisidir?",
@@ -798,13 +793,13 @@ window.questionBank = [
       "Sadece hızlı prototip yapmak",
       "Testi en sona bırakmak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 3,
     week: 6,
     topic: "Spiral",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nSpiral model döngüsel ilerler ve risk analizi her döngünün kritik parçasıdır.\nTaktik: Spiral = ‘döngü + risk kontrolü’."
+      "Doğru cevap: B\nSpiral döngüsel ilerler ve her döngüde risk değerlendirmesi temel karardır.\nTaktik: Spiral = döngü + risk kontrolü."
   },
   {
     q: "RAD (Rapid Application Development) yaklaşımının temel hedefi hangisidir?",
@@ -815,13 +810,13 @@ window.questionBank = [
       "Sadece dokümantasyon üretmek",
       "Sadece performans testi yapmak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 6,
     topic: "RAD",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nRAD, hızlı prototip + hızlı geri bildirim ile ürünü çabuk olgunlaştırmayı hedefler.\nTaktik: RAD = ‘hızlı prototip, hızlı öğrenme’."
+      "Doğru cevap: B\nRAD: hızlı prototip + hızlı geri bildirimle ürünü çabuk olgunlaştırma yaklaşımıdır.\nTaktik: RAD = hızlı prototip, hızlı öğrenme."
   },
   {
     q: "V-Model’in temel fikri hangisidir?",
@@ -832,13 +827,13 @@ window.questionBank = [
       "Sadece sprintlerle ilerlemek",
       "Sadece risk analizine odaklanmak"
     ],
-    a: 1,
+    a: 2,
     difficulty: 3,
     week: 6,
     topic: "V-Model",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nV-Model’de geliştirme adımları test adımlarıyla eşleştirilir; test planı daha erken düşünülür.\nTaktik: V’nin bir tarafı geliştirme, diğer tarafı test."
+      "Doğru cevap: B\nV-Model’de geliştirme adımlarıyla test adımları eşleştirilir; test planı erkenden düşünülür.\nTaktik: V’nin bir tarafı geliştirme, diğer tarafı test."
   },
   {
     q: "Bileşen tabanlı geliştirme (Component-Based Development) neyi vurgular?",
@@ -849,12 +844,143 @@ window.questionBank = [
       "Sadece tek bir dil kullanmayı",
       "Sadece UI tasarımı yapmayı"
     ],
-    a: 1,
+    a: 2,
     difficulty: 2,
     week: 6,
     topic: "Component-Based",
     importance: 2,
     explanation:
-      "Doğru cevap: B)\nAmaç; tekrar eden işleri hazır bileşenlerle hızlandırmak ve kaliteyi yükseltmektir.\nTaktik: Bileşen = ‘hazır parça’; sistem = ‘parçaların uyumu’."
+      "Doğru cevap: B\nAmaç tekrar eden işleri hazır bileşenlerle hızlandırmak ve kaliteyi artırmaktır.\nTaktik: Bileşen = hazır parça, sistem = parçaların uyumu."
+  },
+
+  // =========================
+  // ===== EK 8 SORU (50’yi tamamlamak için) =====
+  // (Dağılım: 1-6 haftaların kavramlarına paralel, sınavda çok sorulan tarzda)
+  // =========================
+  {
+    q: "Aşağıdakilerden hangisi ‘uygulama yazılımına’ örnektir?",
+    t: "mcq",
+    o: ["Aygıt sürücüsü (driver)", "İşletim sistemi çekirdeği", "Web tarayıcısı", "BIOS/UEFI yazılımı"],
+    a: 3,
+    difficulty: 1,
+    week: 1,
+    topic: "Uygulama Yazılımı",
+    importance: 2,
+    explanation:
+      "Doğru cevap: C\nTarayıcı kullanıcıya hizmet veren uygulamadır. Driver/BIOS/çekirdek daha çok sistem katmanındadır.\nTaktik: Kullanıcı işi yapan = uygulama."
+  },
+  {
+    q: "SQL’de ‘veri silme’ işlemi için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["DELETE", "DROP", "REMOVE", "CLEAR"],
+    a: 1,
+    difficulty: 1,
+    week: 2,
+    topic: "SQL CRUD",
+    importance: 2,
+    explanation:
+      "Doğru cevap: A\nDELETE satır/kayıt siler. DROP tablo gibi nesneyi tamamen kaldırabilir.\nTaktik: DELETE = kayıt sil; DROP = tabloyu bile kaldırabilir."
+  },
+  {
+    q: "Prototip kullanmanın en büyük faydası hangisidir?",
+    t: "mcq",
+    o: [
+      "Kodu tamamen gereksiz hale getirmesi",
+      "Yanlış anlama varsa erken fark edilmesini ve tasarım kararlarının hızla doğrulanmasını sağlaması",
+      "Testi tamamen ortadan kaldırması",
+      "Gereksinim belgesini yazmayı engellemesi"
+    ],
+    a: 2,
+    difficulty: 2,
+    week: 3,
+    topic: "Prototip",
+    importance: 2,
+    explanation:
+      "Doğru cevap: B\nPrototip, kullanıcıya erken gösterip geri bildirim almayı sağlar; yanlış yön daha baştan düzeltilir.\nTaktik: Erken göster = erken düzelt."
+  },
+  {
+    q: "Dokümantasyonun bakım (maintenance) maliyetine etkisi genelde nasıldır?",
+    t: "mcq",
+    o: [
+      "Bakım maliyetini artırır çünkü daha çok dosya olur",
+      "Bakım maliyetini düşürür çünkü yeni gelen kişi sistemi daha hızlı anlar",
+      "Bakımla ilgisi yoktur",
+      "Sadece test maliyetini artırır"
+    ],
+    a: 2,
+    difficulty: 2,
+    week: 4,
+    topic: "Dokümantasyon",
+    importance: 2,
+    explanation:
+      "Doğru cevap: B\nDokümantasyon bilgi kaybını azaltır; ekip değişse bile sistem sürdürülebilir olur.\nTaktik: Belge = proje hafızası."
+  },
+  {
+    q: "Kalite planı oluşturmanın en doğru amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece ekip için motivasyon metni yazmak",
+      "Kalite hedeflerini, standartları ve kalite faaliyetlerini önceden tanımlamak",
+      "Sadece kod satır sayısını artırmak",
+      "Sadece testleri azaltmak"
+    ],
+    a: 2,
+    difficulty: 2,
+    week: 5,
+    topic: "Kalite Planı",
+    importance: 3,
+    explanation:
+      "Doğru cevap: B\nKalite planı: hangi kalite seviyesine ulaşılacak, nasıl ölçülecek, hangi kontroller yapılacak gibi konuları belirler.\nTaktik: Plan = hedef + ölçüm + yöntem."
+  },
+  {
+    q: "Şelale modelinin en zayıf kaldığı durum hangisine daha yakındır?",
+    t: "mcq",
+    o: [
+      "Gereksinimlerin baştan net ve sabit olduğu projeler",
+      "Gereksinimlerin süreç içinde sık değiştiği projeler",
+      "Çok küçük ve basit projeler",
+      "Yasal zorunlulukların güçlü olduğu projeler"
+    ],
+    a: 2,
+    difficulty: 3,
+    week: 6,
+    topic: "Waterfall Uygunluk",
+    importance: 2,
+    explanation:
+      "Doğru cevap: B\nWaterfall’da geri dönüş pahalıdır; gereksinim çok değişiyorsa çevik yaklaşımlar daha rahat eder.\nTaktik: Değişim çoksa → çevik düşün."
+  },
+  {
+    q: "Agile yaklaşımda ‘geri bildirim’ neden bu kadar değerlidir?",
+    t: "mcq",
+    o: [
+      "Çünkü dokümantasyonu tamamen kaldırır",
+      "Çünkü ürünün doğru yöne evrilmesini sağlar ve hatalı varsayımları erken düzeltir",
+      "Çünkü test ihtiyacını ortadan kaldırır",
+      "Çünkü proje yönetimini gereksiz yapar"
+    ],
+    a: 2,
+    difficulty: 2,
+    week: 6,
+    topic: "Agile Geri Bildirim",
+    importance: 3,
+    explanation:
+      "Doğru cevap: B\nSık geri bildirim, yanlış özelliğe aylar harcamayı önler ve değeri artırır.\nTaktik: Geri bildirim = yön düzeltme."
+  },
+  {
+    q: "Bir proje ‘kapsam taşması (scope creep)’ yaşadığında en olası sonuç hangisidir?",
+    t: "mcq",
+    o: [
+      "Zaman ve bütçenin daha rahat yönetilmesi",
+      "Zaman/bütçe sapması ve kalite riskinin artması",
+      "Test ihtiyacının azalması",
+      "Dokümantasyon ihtiyacının ortadan kalkması"
+    ],
+    a: 2,
+    difficulty: 3,
+    week: 5,
+    topic: "Scope Creep",
+    importance: 3,
+    explanation:
+      "Doğru cevap: B\nKapsam kontrolsüz büyürse süre uzar, bütçe artar, kalite düşebilir.\nTaktik: Kapsam = sınır; sınır yoksa proje uzar."
   }
 ];
