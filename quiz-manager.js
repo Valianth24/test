@@ -1,981 +1,677 @@
+'use strict';
 
-window.questionBank = [
-  // =========================================================
-  // ==== 7. HAFTA – Spiral Model & RAD (10 Soru) ============
-  // =========================================================
-  {
-    q: "Spiral Model’in temel amacı aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece kodu hızlı yazmak",
-      "Riskleri erken tespit edip yöneterek iteratif geliştirmek",
-      "Testi tamamen sona bırakmak",
-      "Sadece küçük projeleri tek seferde bitirmek",
-      "Sadece tasarım dokümanı üretmek"
-    ],
-    a: "Riskleri erken tespit edip yöneterek iteratif geliştirmek",
-    difficulty: "easy",
-    week: 7,
-    topic: "Spiral Model - amaç",
-    importance: "high",
-    explanation: "Spiral Model, her döngüde riskleri analiz edip azaltmaya odaklanır ve sistemi iteratif olarak geliştirir."
-  },
-  {
-    q: "Spiral Model’de her döngü (spiral turu) genel olarak hangi mantıkla ilerler?",
-    t: "mcq",
-    o: [
-      "Tek sefer gereksinim yaz → direkt teslim",
-      "Planla → risk analizi yap → geliştir → değerlendir ve sonraki döngüyü planla",
-      "Kodla → hiç test etmeden yayınla",
-      "Sadece prototip çiz → projeyi bitir",
-      "Sadece müşteri toplantısı yap → kod yazma"
-    ],
-    a: "Planla → risk analizi yap → geliştir → değerlendir ve sonraki döngüyü planla",
-    difficulty: "medium",
-    week: 7,
-    topic: "Spiral Model - aşamalar",
-    importance: "high",
-    explanation: "Spiral Model’in döngü yapısı; hedef/plan, risk analizi, geliştirme ve değerlendirme-planlama adımlarını tekrarlar."
-  },
-  {
-    q: "Spiral Model, hangi proje tipi için daha uygundur?",
-    t: "mcq",
-    o: [
-      "Riskin çok düşük olduğu, çok küçük projeler",
-      "Gereksinimleri hiç değişmeyen, çok basit projeler",
-      "Büyük, karmaşık ve riskli projeler",
-      "Sadece tek geliştirici ile yapılan hobi projeleri",
-      "Sadece statik web sayfası projeleri"
-    ],
-    a: "Büyük, karmaşık ve riskli projeler",
-    difficulty: "easy",
-    week: 7,
-    topic: "Spiral Model - kullanım",
-    importance: "high",
-    explanation: "Risk yönetimi güçlü olduğu için büyük ve karmaşık projelerde tercih edilir."
-  },
-  {
-    q: "RAD (Rapid Application Development) yaklaşımının en belirgin özelliği hangisidir?",
-    t: "mcq",
-    o: [
-      "Uzun analiz dönemi, geç teslim",
-      "Hızlı prototipleme ve kısa iterasyonlarla hızlı teslim",
-      "Testin tamamen kaldırılması",
-      "Sadece dokümantasyon üretmek",
-      "Yalnızca tek teknoloji kullanmak zorunda olmak"
-    ],
-    a: "Hızlı prototipleme ve kısa iterasyonlarla hızlı teslim",
-    difficulty: "easy",
-    week: 7,
-    topic: "RAD - temel fikir",
-    importance: "high",
-    explanation: "RAD, hızlı prototip + hızlı iterasyon + sık geri bildirim ile teslim süresini kısaltmayı hedefler."
-  },
-  {
-    q: "RAD yaklaşımında müşteri/kullanıcı katılımı için hangisi DOĞRUDUR?",
-    t: "mcq",
-    o: [
-      "Müşteri sadece proje sonunda sistemi görür",
-      "Müşteri sadece test aşamasında devreye girer",
-      "Müşteri iterasyonlar boyunca sık geri bildirim verir",
-      "Müşteri katılımı RAD’da önerilmez",
-      "Müşteri sadece kod incelemesi yapar"
-    ],
-    a: "Müşteri iterasyonlar boyunca sık geri bildirim verir",
-    difficulty: "easy",
-    week: 7,
-    topic: "RAD - müşteri geri bildirimi",
-    importance: "high",
-    explanation: "RAD’da kullanıcı geri bildirimi, prototiplerin ve iterasyonların yönünü belirler."
-  },
-  {
-    q: "RAD’da prototip (prototype) kullanmanın temel amacı hangisidir?",
-    t: "mcq",
-    o: [
-      "Kodu tamamen bitirmek",
-      "İhtiyaçları ve arayüz/işlevi erken görünür kılıp geri bildirim almak",
-      "Sadece performans ölçmek",
-      "Sadece veritabanı kurmak",
-      "Sadece dokümantasyon yazmak"
-    ],
-    a: "İhtiyaçları ve arayüz/işlevi erken görünür kılıp geri bildirim almak",
-    difficulty: "medium",
-    week: 7,
-    topic: "RAD - prototip",
-    importance: "high",
-    explanation: "Prototip, kullanıcıya erken bir örnek göstererek doğru ihtiyacı yakalamayı kolaylaştırır."
-  },
-  {
-    q: "Boşluk Doldurma: Spiral Model’de her döngü sonunda sonuçlar ________ edilir ve bir sonraki döngü planlanır.",
-    t: "blank",
-    o: [],
-    a: "değerlendirilir",
-    difficulty: "easy",
-    week: 7,
-    topic: "Spiral - değerlendirme",
-    importance: "medium",
-    explanation: "Her turda ortaya çıkan çıktı gözden geçirilir; geri bildirimle bir sonraki turun planı yapılır."
-  },
-  {
-    q: "Boşluk Doldurma: RAD yaklaşımında hızlı geliştirme için sık kullanılan yöntemlerden biri ________ oluşturmadır.",
-    t: "blank",
-    o: [],
-    a: "prototip",
-    difficulty: "easy",
-    week: 7,
-    topic: "RAD - prototip",
-    importance: "high",
-    explanation: "RAD’da prototip, kısa sürede çalışan bir örnek çıkarıp geri bildirim toplamayı sağlar."
-  },
-  {
-    q: "Spiral Model ile RAD arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "Spiral tamamen tek seferliktir, RAD iteratiftir",
-      "Spiral risk yönetimine çok odaklanır; RAD hız ve prototiplemeye odaklanır",
-      "RAD sadece büyük projelerde kullanılır, Spiral küçük projelerde",
-      "İkisi de test yapmayı yasaklar",
-      "İkisi de kullanıcı geri bildirimini gereksiz görür"
-    ],
-    a: "Spiral risk yönetimine çok odaklanır; RAD hız ve prototiplemeye odaklanır",
-    difficulty: "medium",
-    week: 7,
-    topic: "Spiral vs RAD",
-    importance: "high",
-    explanation: "Spiral’in omurgası risk analizi; RAD’ın omurgası hızlı prototip ve hızlı teslimdir."
-  },
-  {
-    q: "Aşağıdakilerden hangisi RAD için daha uygun bir senaryodur?",
-    t: "mcq",
-    o: [
-      "Çok sık değişen kullanıcı talepleri olan bir arayüz uygulaması",
-      "Hiç değişmeyecek, sabit gereksinimli bir proje",
-      "Risk analizi gerekmeyen, tamamen standart bir ürün",
-      "Teslim tarihi çok uzak, hızın önemsiz olduğu proje",
-      "Kullanıcıyla iletişimin mümkün olmadığı proje"
-    ],
-    a: "Çok sık değişen kullanıcı talepleri olan bir arayüz uygulaması",
-    difficulty: "medium",
-    week: 7,
-    topic: "RAD - uygunluk",
-    importance: "medium",
-    explanation: "RAD, değişime açık işlerde prototip + hızlı geri bildirimle çok işe yarar."
+const QuizManager = {
+  state: {
+    currentMode: null,
+    questions: [],
+    currentIndex: 0,
+    answers: [],
+    startTime: null,
+    timerInterval: null,
+    elapsedSeconds: 0,
+    isReviewing: false,
+    testTitle: null,
+    testDescription: null,
+    eventListenersAttached: false
   },
 
-  // =========================================================
-  // ==== 8. HAFTA – V-Model, CBSD, Incremental, Scrum, Kanban
-  // ==== (10 Soru) ==========================================
-  // =========================================================
-  {
-    q: "V-Model için aşağıdakilerden hangisi DOĞRUDUR?",
-    t: "mcq",
-    o: [
-      "Test sadece en sonda yapılır",
-      "Geliştirme aşamalarının karşısında ilgili test aşamaları vardır",
-      "Dokümantasyon hiç yapılmaz",
-      "Sadece prototipleme kullanır",
-      "Sadece mobil uygulamalarda kullanılır"
-    ],
-    a: "Geliştirme aşamalarının karşısında ilgili test aşamaları vardır",
-    difficulty: "easy",
-    week: 8,
-    topic: "V-Model - temel mantık",
-    importance: "high",
-    explanation: "V-Model’de doğrulama/validasyon testleri, geliştirme adımlarıyla eşleştirilir."
-  },
-  {
-    q: "V-Model’de “Birim Testi (Unit Test)” en çok hangi aşamanın karşılığı gibi düşünülür?",
-    t: "mcq",
-    o: [
-      "Gereksinim analizi",
-      "Sistem tasarımı",
-      "Kodlama",
-      "Kullanıcı kabul",
-      "Bakım"
-    ],
-    a: "Kodlama",
-    difficulty: "easy",
-    week: 8,
-    topic: "V-Model - test eşleşmesi",
-    importance: "high",
-    explanation: "Birim testleri genellikle fonksiyon/sınıf düzeyinde, kodlama ile doğrudan ilişkilidir."
-  },
-  {
-    q: "CBSD (Bileşen Tabanlı Geliştirme) yaklaşımının temel avantajı hangisidir?",
-    t: "mcq",
-    o: [
-      "Her şeyi sıfırdan yazmayı zorunlu kılar",
-      "Tekrar kullanılabilir bileşenlerle geliştirmeyi hızlandırır",
-      "İletişimi tamamen kaldırır",
-      "Test ihtiyacını yok eder",
-      "Sadece tek katmanlı mimariye uygundur"
-    ],
-    a: "Tekrar kullanılabilir bileşenlerle geliştirmeyi hızlandırır",
-    difficulty: "easy",
-    week: 8,
-    topic: "CBSD - avantaj",
-    importance: "high",
-    explanation: "Hazır bileşen kullanımı, süreyi kısaltır ve yeniden kullanım ile verim sağlar."
-  },
-  {
-    q: "CBSD sürecinde “Bileşen Kataloğu” (component catalog) ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Kullanıcı şifrelerini saklar",
-      "Kullanılabilir bileşenleri listeler ve seçimi kolaylaştırır",
-      "Test raporlarını otomatik siler",
-      "Sunucu kurulumunu yapar",
-      "Sadece UI renk paletini tutar"
-    ],
-    a: "Kullanılabilir bileşenleri listeler ve seçimi kolaylaştırır",
-    difficulty: "medium",
-    week: 8,
-    topic: "CBSD - katalog",
-    importance: "high",
-    explanation: "Katalog; bileşen bulma, karşılaştırma ve yeniden kullanımı sistematik hale getirir."
-  },
-  {
-    q: "Artımlı (Incremental) modelin temel fikri hangisidir?",
-    t: "mcq",
-    o: [
-      "Ürün tek seferde tam teslim edilir",
-      "Ürün, küçük artımlarla (parça parça) geliştirilip teslim edilir",
-      "Hiç geri bildirim alınmaz",
-      "Sadece test yazılır",
-      "Sadece tasarım yapılır"
-    ],
-    a: "Ürün, küçük artımlarla (parça parça) geliştirilip teslim edilir",
-    difficulty: "easy",
-    week: 8,
-    topic: "Incremental - temel fikir",
-    importance: "high",
-    explanation: "Her artım yeni bir özellik veya iyileştirme getirir; kullanıcı erken sürüm görebilir."
-  },
-  {
-    q: "Artımlı modelde erken geri bildirim almanın pratik sonucu hangisidir?",
-    t: "mcq",
-    o: [
-      "Hatalar daha geç ortaya çıkar",
-      "Sonradan değişiklik yapmak imkânsız olur",
-      "Sonraki artımlar, gerçek kullanıcı geri bildirimine göre şekillenir",
-      "Test ihtiyacı tamamen biter",
-      "Sadece dokümantasyon artar"
-    ],
-    a: "Sonraki artımlar, gerçek kullanıcı geri bildirimine göre şekillenir",
-    difficulty: "medium",
-    week: 8,
-    topic: "Incremental - geri bildirim",
-    importance: "high",
-    explanation: "İlk artımlar, ürün yönünü doğrulamak için hızlı geri bildirim sağlar."
-  },
-  {
-    q: "Scrum’da Product Owner (Ürün Sahibi) için en doğru görev hangisidir?",
-    t: "mcq",
-    o: [
-      "Sunucu konfigürasyonu yapmak",
-      "Product Backlog’u oluşturmak ve önceliklendirmek",
-      "Her gün kod incelemek zorunda olmak",
-      "Testleri tamamen kaldırmak",
-      "Sadece tasarım çizmek"
-    ],
-    a: "Product Backlog’u oluşturmak ve önceliklendirmek",
-    difficulty: "medium",
-    week: 8,
-    topic: "Scrum - roller",
-    importance: "high",
-    explanation: "Product Owner, iş değerini temsil eder; backlog önceliğini belirler."
-  },
-  {
-    q: "Kanban’da WIP limitinin (Work In Progress limiti) temel amacı hangisidir?",
-    t: "mcq",
-    o: [
-      "Daha fazla işi aynı anda başlatmak",
-      "İş akışında tıkanmayı azaltıp odaklanmayı artırmak",
-      "Testleri iptal etmek",
-      "Sadece rapor üretmek",
-      "Yalnızca tasarım işlerini engellemek"
-    ],
-    a: "İş akışında tıkanmayı azaltıp odaklanmayı artırmak",
-    difficulty: "easy",
-    week: 8,
-    topic: "Kanban - WIP",
-    importance: "high",
-    explanation: "WIP limiti, aynı anda çok iş açıp bitirmemeyi engeller; akışı dengeler."
-  },
-  {
-    q: "Boşluk Doldurma: Scrum’da işi zaman kutularına bölen yinelemeli geliştirme aralığına ______ denir.",
-    t: "blank",
-    o: [],
-    a: "sprint",
-    difficulty: "easy",
-    week: 8,
-    topic: "Scrum - sprint",
-    importance: "high",
-    explanation: "Scrum’da sprint; planlama, geliştirme, gözden geçirme ve iyileştirme döngüsünün temel birimidir."
-  },
-  {
-    q: "Boşluk Doldurma: Kanban tahtasında işler genellikle “Yapılacak → Yapılıyor → ______” şeklinde ilerler.",
-    t: "blank",
-    o: [],
-    a: "Bitti",
-    difficulty: "easy",
-    week: 8,
-    topic: "Kanban - kolonlar",
-    importance: "medium",
-    explanation: "Kolonlar işin durumunu gösterir; amaç işi görünür ve yönetilebilir kılmaktır."
+  loadAIGeneratedTest() {
+    try {
+      const aiTest = localStorage.getItem('testify_generated_test');
+      if (!aiTest) {
+        console.log('ℹ️ AI testi bulunamadı');
+        return null;
+      }
+
+      const testData = JSON.parse(aiTest);
+
+      if (testData.expiresAt && Date.now() > testData.expiresAt) {
+        console.log('⏰ AI testi süresi dolmuş');
+        localStorage.removeItem('testify_generated_test');
+        return null;
+      }
+
+      console.log('✅ AI testi yüklendi:', testData.title);
+      console.log('📊 Soru sayısı:', testData.questions.length);
+      return testData;
+    } catch (error) {
+      console.error('❌ AI test yükleme hatası:', error);
+      return null;
+    }
   },
 
-  // =========================================================
-  // ==== 9. HAFTA – Döngüsel/Evrimsel, Katmanlar, 2-Tier (10)
-  // =========================================================
-  {
-    q: "Döngüsel (Cyclic) geliştirme modelinin ana fikri hangisidir?",
-    t: "mcq",
-    o: [
-      "Tek seferde analiz yapıp bitirmek",
-      "Her döngü sonunda geri bildirim alıp bir sonraki döngüde geliştirmek",
-      "Testi tamamen kaldırmak",
-      "Sadece prototip çizip kod yazmamak",
-      "Sadece sunucu tarafını geliştirmek"
-    ],
-    a: "Her döngü sonunda geri bildirim alıp bir sonraki döngüde geliştirmek",
-    difficulty: "easy",
-    week: 9,
-    topic: "Döngüsel model - temel fikir",
-    importance: "high",
-    explanation: "Cyclic modelde her tur, önceki turdan alınan geri bildirime göre iyileştirilir."
-  },
-  {
-    q: "Döngüsel modelde aşağıdaki sıralamalardan hangisi daha doğrudur?",
-    t: "mcq",
-    o: [
-      "Kodlama → bakım → analiz",
-      "Gereksinim → tasarım/planlama → geliştirme → test/değerlendirme → geri bildirim",
-      "Test → kodlama → hiç değerlendirme yok",
-      "Sadece analiz → teslim",
-      "Sadece bakım → teslim"
-    ],
-    a: "Gereksinim → tasarım/planlama → geliştirme → test/değerlendirme → geri bildirim",
-    difficulty: "medium",
-    week: 9,
-    topic: "Döngüsel model - adımlar",
-    importance: "high",
-    explanation: "Döngüsel yapı, her turda geliştirme ve değerlendirme yapıp geri bildirimle devam eder."
-  },
-  {
-    q: "Evrimsel (Evolutionary) geliştirme için en doğru açıklama hangisidir?",
-    t: "mcq",
-    o: [
-      "Ürün en baştan tam yapılır, sonra hiç değişmez",
-      "Önce çekirdek bir sürüm çıkar, zamanla özellikler eklenerek evrilir",
-      "Sadece tasarım yapılır, kod yazılmaz",
-      "Test yapılmaz",
-      "Sadece veritabanı geliştirilir"
-    ],
-    a: "Önce çekirdek bir sürüm çıkar, zamanla özellikler eklenerek evrilir",
-    difficulty: "easy",
-    week: 9,
-    topic: "Evrimsel geliştirme",
-    importance: "high",
-    explanation: "Evrimsel yaklaşım, küçük başlangıç + sürekli geliştirme fikrine dayanır."
-  },
-  {
-    q: "Evrimsel geliştirmede kontrolsüz büyüme riskini azaltmak için en mantıklı yaklaşım hangisidir?",
-    t: "mcq",
-    o: [
-      "Gereksinimleri hiç yazmamak",
-      "Her yeni özellik için değerlendirme/önceliklendirme ve test sürecini sürdürmek",
-      "Testleri kaldırmak",
-      "Backlog’u tamamen kapatmak",
-      "Sadece UI değiştirip iş mantığını hiç dokunmamak"
-    ],
-    a: "Her yeni özellik için değerlendirme/önceliklendirme ve test sürecini sürdürmek",
-    difficulty: "medium",
-    week: 9,
-    topic: "Evrimsel - yönetim",
-    importance: "medium",
-    explanation: "Evrimsel yapıda eklemeler sürekli geldiği için öncelik, kalite ve test disiplinini korumak gerekir."
-  },
-  {
-    q: "Katmanlı yaklaşımda UI (Sunum) katmanının temel görevi hangisidir?",
-    t: "mcq",
-    o: [
-      "Veritabanı tablolarını oluşturmak",
-      "Kullanıcı ile etkileşim ve verinin ekranda gösterilmesi",
-      "Sunucu işletim sistemini kurmak",
-      "Sadece log dosyası yönetmek",
-      "Sadece ağ trafiğini izlemek"
-    ],
-    a: "Kullanıcı ile etkileşim ve verinin ekranda gösterilmesi",
-    difficulty: "easy",
-    week: 9,
-    topic: "Katmanlar - UI",
-    importance: "high",
-    explanation: "UI katmanı, kullanıcıdan giriş alır ve sonuçları kullanıcıya sunar."
-  },
-  {
-    q: "Katmanlı mimaride “iş mantığı (application/business logic)” katmanı neyi yapar?",
-    t: "mcq",
-    o: [
-      "Sadece buton rengi ayarlar",
-      "Kurallar, süreçler ve hesaplamalar gibi iş kurallarını yürütür",
-      "Sadece veritabanını yedekler",
-      "Sadece HTML üretir",
-      "Sadece ağ paketlerini işler"
-    ],
-    a: "Kurallar, süreçler ve hesaplamalar gibi iş kurallarını yürütür",
-    difficulty: "medium",
-    week: 9,
-    topic: "Katmanlar - iş mantığı",
-    importance: "high",
-    explanation: "İş mantığı katmanı, uygulamanın “kurallarını” ve süreç akışını barındırır."
-  },
-  {
-    q: "2-Tier (İstemci–Sunucu) mimarinin en doğru tanımı hangisidir?",
-    t: "mcq",
-    o: [
-      "İstemci ile sunucu hiç konuşmaz",
-      "İstemci doğrudan sunucuya bağlanır ve veri/servis alır",
-      "Sadece tek bilgisayarda çalışan sistemdir",
-      "Sadece mikroservislerde kullanılır",
-      "Sadece mobil uygulamalarda zorunludur"
-    ],
-    a: "İstemci doğrudan sunucuya bağlanır ve veri/servis alır",
-    difficulty: "easy",
-    week: 9,
-    topic: "2-Tier - tanım",
-    importance: "high",
-    explanation: "2-Tier’de istemci uygulama ile sunucu (genellikle veritabanı/servis) doğrudan iletişim kurar."
-  },
-  {
-    q: "2-Tier mimaride performansla ilgili olası bir sorun hangisidir?",
-    t: "mcq",
-    o: [
-      "Hiç ağ gecikmesi olmaz",
-      "Ağ gecikmesi ve sunucu yükü artabilir",
-      "Test ihtiyacı kalmaz",
-      "UI katmanı ortadan kalkar",
-      "Veri asla bozulmaz"
-    ],
-    a: "Ağ gecikmesi ve sunucu yükü artabilir",
-    difficulty: "medium",
-    week: 9,
-    topic: "2-Tier - dezavantaj",
-    importance: "medium",
-    explanation: "İstemci-sunucu iletişimi ağ üzerinden olduğu için gecikme; yoğun kullanımda sunucu yükü görülebilir."
-  },
-  {
-    q: "Boşluk Doldurma: Katmanlı mimaride veriye erişim ve CRUD işlemleri genellikle ______ katmanında yapılır.",
-    t: "blank",
-    o: [],
-    a: "veri erişim",
-    difficulty: "easy",
-    week: 9,
-    topic: "Katmanlar - data access",
-    importance: "high",
-    explanation: "Veri erişim katmanı, veritabanı/depoya erişimi soyutlar ve düzenli hale getirir."
-  },
-  {
-    q: "Boşluk Doldurma: Döngüsel modelde her döngünün sonunda kullanıcı/müşteri ______ alınır ve bir sonraki döngü şekillenir.",
-    t: "blank",
-    o: [],
-    a: "geri bildirimi",
-    difficulty: "easy",
-    week: 9,
-    topic: "Döngüsel - geri bildirim",
-    importance: "high",
-    explanation: "Cyclic modelde ana motor, her turda geri bildirimle iyileştirmedir."
+  startQuiz(mode) {
+    console.log('🎯 Quiz başlatılıyor, mod:', mode);
+
+    this.cleanupPreviousQuiz();
+
+    try {
+      const aiTest = this.loadAIGeneratedTest();
+
+      if (aiTest && aiTest.questions && aiTest.questions.length > 0) {
+        console.log('🤖 AI testi kullanılıyor');
+
+        this.state = {
+          currentMode: 'ai',
+          questions: aiTest.questions,
+          currentIndex: 0,
+          answers: [],
+          startTime: Date.now(),
+          timerInterval: null,
+          elapsedSeconds: 0,
+          isReviewing: false,
+          testTitle: aiTest.title,
+          testDescription: aiTest.description,
+          eventListenersAttached: this.state.eventListenersAttached
+        };
+
+        this.state.answers = new Array(aiTest.questions.length).fill(null);
+
+        Utils.showToast(`🤖 AI Testi: ${aiTest.title} - ${aiTest.questions.length} soru`, 'info', 4000);
+      } else {
+        console.log('📚 Varsayılan sorular kullanılıyor');
+
+        if (!window.questionBank || !Array.isArray(window.questionBank)) {
+          Utils.showToast('Soru bankası yüklenemedi!', 'error');
+          console.error('questionBank bulunamadı!');
+          return;
+        }
+
+        if (window.questionBank.length === 0) {
+          Utils.showToast('Soru bankası boş!', 'error');
+          return;
+        }
+
+        const allQuestions = [...window.questionBank];
+
+        this.state = {
+          currentMode: mode,
+          questions: Utils.shuffleArray(allQuestions),
+          currentIndex: 0,
+          answers: [],
+          startTime: Date.now(),
+          timerInterval: null,
+          elapsedSeconds: 0,
+          isReviewing: false,
+          testTitle: null,
+          testDescription: null,
+          eventListenersAttached: this.state.eventListenersAttached
+        };
+
+        this.state.answers = new Array(this.state.questions.length).fill(null);
+      }
+
+      console.log(`✅ ${this.state.questions.length} soru yüklendi`);
+
+      const testSelection = document.getElementById('testSelection');
+      const quizPage = document.getElementById('quizPage');
+
+      if (!testSelection || !quizPage) throw new Error('Quiz sayfaları bulunamadı');
+
+      testSelection.classList.remove('active');
+      quizPage.classList.add('active');
+
+      this.showExitButton();
+      this.startTimer();
+      this.displayQuestion();
+      this.saveState();
+
+      Utils.showToast(`Test başladı! ${this.state.questions.length} soru - Bol şans!`, 'success');
+    } catch (error) {
+      console.error('❌ Quiz başlatma hatası:', error);
+      Utils.showToast('Test başlatılamadı: ' + error.message, 'error');
+    }
   },
 
-  // =========================================================
-  // ==== 10. HAFTA – UML (10 Soru) ==========================
-  // =========================================================
-  {
-    q: "UML (Unified Modeling Language) ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece program derlemek için",
-      "Sistemleri görsel olarak modellemek, tasarlamak ve dokümante etmek için",
-      "Sadece veri tabanı yedeği almak için",
-      "Sadece CSS yazmak için",
-      "Sadece işletim sistemi kurmak için"
-    ],
-    a: "Sistemleri görsel olarak modellemek, tasarlamak ve dokümante etmek için",
-    difficulty: "easy",
-    week: 10,
-    topic: "UML - amaç",
-    importance: "high",
-    explanation: "UML, karmaşık sistemleri diyagramlarla anlaşılır hale getirir ve ekip iletişimini güçlendirir."
-  },
-  {
-    q: "UML’in “ortak dil” olması aşağıdakilerden hangisini en çok kolaylaştırır?",
-    t: "mcq",
-    o: [
-      "Sunucu RAM’ini artırmayı",
-      "Ekip içinde analiz/tasarım hakkında iletişim kurmayı",
-      "Ekran parlaklığını ayarlamayı",
-      "Kodu otomatik yazmayı",
-      "Sadece UI renk seçimini"
-    ],
-    a: "Ekip içinde analiz/tasarım hakkında iletişim kurmayı",
-    difficulty: "easy",
-    week: 10,
-    topic: "UML - iletişim",
-    importance: "high",
-    explanation: "Analist, geliştirici ve yönetici aynı diyagram diliyle konuşur; yanlış anlaşılmalar azalır."
-  },
-  {
-    q: "UML diyagramlarının projeye katkılarından biri aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Testi tamamen kaldırır",
-      "Erken aşamada tasarım hatalarını görmeye yardım eder",
-      "Gereksinimleri gereksiz yapar",
-      "Sunucu maliyetini otomatik düşürür",
-      "İnternet bağlantısını hızlandırır"
-    ],
-    a: "Erken aşamada tasarım hatalarını görmeye yardım eder",
-    difficulty: "medium",
-    week: 10,
-    topic: "UML - erken hata tespiti",
-    importance: "high",
-    explanation: "Modelleme ile sorunlar koda geçmeden fark edilebilir; bu da düzeltmeyi ucuzlatır."
-  },
-  {
-    q: "Bir sistemi modellemek için UML kullanırken doğru yaklaşım hangisidir?",
-    t: "mcq",
-    o: [
-      "Önce kod yaz, sonra diyagram çiz",
-      "Önce analiz yap, sonra uygun diyagram türünü seç ve diyagramı oluştur",
-      "Sadece tek diyagram çizmek yeterlidir",
-      "Diyagramları testten sonra çizmek zorunludur",
-      "Diyagramlar sadece görsel amaçlıdır, içerik doldurulmaz"
-    ],
-    a: "Önce analiz yap, sonra uygun diyagram türünü seç ve diyagramı oluştur",
-    difficulty: "medium",
-    week: 10,
-    topic: "UML - süreç",
-    importance: "high",
-    explanation: "Analiz → diyagram seçimi → oluşturma → detaylandırma sırası, modelin doğru ve faydalı olmasını sağlar."
-  },
-  {
-    q: "Sınıf diyagramı (Class Diagram) çoğunlukla neyi göstermede kullanılır?",
-    t: "mcq",
-    o: [
-      "Zaman çizelgesi",
-      "Sınıflar, özellikler, metotlar ve aralarındaki ilişkiler",
-      "Sunucu CPU kullanımı",
-      "Sadece kullanıcı arayüzü renkleri",
-      "Sadece dosya boyutları"
-    ],
-    a: "Sınıflar, özellikler, metotlar ve aralarındaki ilişkiler",
-    difficulty: "easy",
-    week: 10,
-    topic: "UML - sınıf diyagramı",
-    importance: "high",
-    explanation: "Class diagram, sistemin yapısal (structure) görünümünü anlatır."
-  },
-  {
-    q: "Durum diyagramı (State Diagram) en çok hangi tip bilgiyi gösterir?",
-    t: "mcq",
-    o: [
-      "Bir varlığın zaman içinde farklı durumlara geçişini",
-      "Sadece veritabanı tablolarını",
-      "Sadece UI bileşenlerini",
-      "Sadece sınıf ilişkilerini",
-      "Sadece proje bütçesini"
-    ],
-    a: "Bir varlığın zaman içinde farklı durumlara geçişini",
-    difficulty: "medium",
-    week: 10,
-    topic: "UML - durum diyagramı",
-    importance: "medium",
-    explanation: "State diagram; örn. Sipariş: Hazırlanıyor → Kargoda → Teslim edildi gibi geçişleri gösterir."
-  },
-  {
-    q: "UML diyagramları dokümantasyon açısından neden değerlidir?",
-    t: "mcq",
-    o: [
-      "Çünkü kodu tamamen değiştirir",
-      "Çünkü sistemi herkes için anlaşılır şekilde kayıt altına alır",
-      "Çünkü test yazmayı yasaklar",
-      "Çünkü interneti hızlandırır",
-      "Çünkü sadece görsel süs amaçlıdır"
-    ],
-    a: "Çünkü sistemi herkes için anlaşılır şekilde kayıt altına alır",
-    difficulty: "easy",
-    week: 10,
-    topic: "UML - dokümantasyon",
-    importance: "high",
-    explanation: "Yeni ekip üyeleri ve paydaşlar, diyagramlarla sistemi daha hızlı kavrar."
-  },
-  {
-    q: "Boşluk Doldurma: UML, sistemleri ______ olarak modellemek için kullanılan standart bir dildir.",
-    t: "blank",
-    o: [],
-    a: "görsel",
-    difficulty: "easy",
-    week: 10,
-    topic: "UML - tanım",
-    importance: "high",
-    explanation: "UML; diyagramlar ile görsel modelleme yapmayı sağlar."
-  },
-  {
-    q: "Boşluk Doldurma: UML kullanırken önce ______ yapılır, sonra uygun diyagram türü seçilir.",
-    t: "blank",
-    o: [],
-    a: "analiz",
-    difficulty: "easy",
-    week: 10,
-    topic: "UML - süreç",
-    importance: "medium",
-    explanation: "Analiz, neyi modelleyeceğini netleştirir; doğru diyagram türünü seçmeyi kolaylaştırır."
-  },
-  {
-    q: "UML’in ekip çalışmasına katkısı en iyi hangi seçenekle açıklanır?",
-    t: "mcq",
-    o: [
-      "Herkesin farklı semboller kullanmasını sağlar",
-      "Tüm paydaşların aynı modeli görüp aynı dili konuşmasını kolaylaştırır",
-      "Sadece yöneticilerin anlayacağı şekilde tasarlanır",
-      "Sadece testçilerin kullanacağı bir araçtır",
-      "Sadece çizim programıdır"
-    ],
-    a: "Tüm paydaşların aynı modeli görüp aynı dili konuşmasını kolaylaştırır",
-    difficulty: "medium",
-    week: 10,
-    topic: "UML - ekip çalışması",
-    importance: "high",
-    explanation: "Ortak gösterim, takım içinde tutarlılık ve hızlı karar almayı destekler."
+  cleanupPreviousQuiz() {
+    if (this.state.timerInterval) {
+      clearInterval(this.state.timerInterval);
+      this.state.timerInterval = null;
+      console.log('🧹 Önceki timer temizlendi');
+    }
+
+    const optionsList = document.getElementById('optionsList');
+    if (optionsList) optionsList.innerHTML = '';
   },
 
-  // =========================================================
-  // ==== 11. HAFTA – UI/UX + Mikroservis + SOA (10 Soru) =====
-  // =========================================================
-  {
-    q: "UI (User Interface) en doğru hangi ifadeyle tanımlanır?",
-    t: "mcq",
-    o: [
-      "Kullanıcının ürünü kullanırken hissettiği duygu",
-      "Kullanıcının etkileşime geçtiği arayüz (ekran, buton, menü vb.)",
-      "Sadece veritabanı şeması",
-      "Sadece sunucu tarafı kodu",
-      "Sadece test senaryoları"
-    ],
-    a: "Kullanıcının etkileşime geçtiği arayüz (ekran, buton, menü vb.)",
-    difficulty: "easy",
-    week: 11,
-    topic: "UI - tanım",
-    importance: "high",
-    explanation: "UI, kullanıcının gördüğü ve dokunduğu arayüz elemanlarının tamamıdır."
-  },
-  {
-    q: "Aşağıdakilerden hangisi UI elemanına örnektir?",
-    t: "mcq",
-    o: [
-      "Risk analizi raporu",
-      "Buton (button)",
-      "Veritabanı yedeği",
-      "API dokümantasyonu",
-      "Sunucu logları"
-    ],
-    a: "Buton (button)",
-    difficulty: "easy",
-    week: 11,
-    topic: "UI - elemanlar",
-    importance: "medium",
-    explanation: "Buton, metin alanı, menü gibi öğeler UI elemanlarıdır."
-  },
-  {
-    q: "UI tasarımında “tutarlılık” (consistency) ilkesi neyi hedefler?",
-    t: "mcq",
-    o: [
-      "Her sayfada farklı görünüm kullanmayı",
-      "Benzer işlevlerin benzer görünüm ve davranışla sunulmasını",
-      "Sadece renkleri kaldırmayı",
-      "Sadece yazı tipini büyütmeyi",
-      "Sadece mobilde çalışmayı"
-    ],
-    a: "Benzer işlevlerin benzer görünüm ve davranışla sunulmasını",
-    difficulty: "medium",
-    week: 11,
-    topic: "UI - tutarlılık",
-    importance: "high",
-    explanation: "Tutarlılık, kullanıcıya öğrenme kolaylığı sağlar; her yerde aynı mantıkla ilerler."
-  },
-  {
-    q: "UX (User Experience) aşağıdakilerden hangisini kapsar?",
-    t: "mcq",
-    o: [
-      "Sadece sekme başlığını",
-      "Kullanıcının ürünü kullanırken yaşadığı genel deneyimi (kolaylık, hız, memnuniyet vb.)",
-      "Sadece ikon tasarımını",
-      "Sadece veritabanını",
-      "Sadece kod standardını"
-    ],
-    a: "Kullanıcının ürünü kullanırken yaşadığı genel deneyimi (kolaylık, hız, memnuniyet vb.)",
-    difficulty: "easy",
-    week: 11,
-    topic: "UX - tanım",
-    importance: "high",
-    explanation: "UX, kullanıcı yolculuğunun tamamındaki deneyimi (hız, anlaşılabilirlik, memnuniyet) kapsar."
-  },
-  {
-    q: "UX tasarım sürecinde “kullanıcı araştırması” neden yapılır?",
-    t: "mcq",
-    o: [
-      "Sunucu performansını artırmak için",
-      "Kullanıcının ihtiyaçlarını, hedeflerini ve sorunlarını anlamak için",
-      "Sadece renk paleti seçmek için",
-      "Sadece veritabanı tasarlamak için",
-      "Sadece kodu kısaltmak için"
-    ],
-    a: "Kullanıcının ihtiyaçlarını, hedeflerini ve sorunlarını anlamak için",
-    difficulty: "medium",
-    week: 11,
-    topic: "UX - kullanıcı araştırması",
-    importance: "high",
-    explanation: "Araştırma, doğru problemi çözmeyi sağlar; UX kararları gerçek kullanıcı verisine dayanır."
-  },
-  {
-    q: "UI ve UX farkı için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "UI deneyimdir, UX arayüzdür",
-      "UI arayüzün kendisidir; UX kullanıcı deneyiminin bütünüdür",
-      "İkisi tamamen aynı şeydir",
-      "UI sadece mobil içindir, UX sadece web içindir",
-      "UX sadece renk seçimiyle ilgilidir"
-    ],
-    a: "UI arayüzün kendisidir; UX kullanıcı deneyiminin bütünüdür",
-    difficulty: "easy",
-    week: 11,
-    topic: "UI vs UX",
-    importance: "high",
-    explanation: "UI = yüzey; UX = o yüzeyle kullanım sürecinde yaşanan toplam deneyim."
-  },
-  {
-    q: "Mikroservis mimarisi için aşağıdakilerden hangisi DOĞRUDUR?",
-    t: "mcq",
-    o: [
-      "Uygulama tek parça (monolit) olmalıdır",
-      "Uygulama küçük, bağımsız servisler halinde bölünür",
-      "Servisler hiçbir şekilde iletişim kurmaz",
-      "Tek bir veritabanı zorunludur",
-      "Deploy (dağıtım) her zaman toplu yapılır"
-    ],
-    a: "Uygulama küçük, bağımsız servisler halinde bölünür",
-    difficulty: "easy",
-    week: 11,
-    topic: "Mikroservis - tanım",
-    importance: "high",
-    explanation: "Mikroservis; servisleri bağımsız geliştirme/dağıtma/ölçekleme fikrine dayanır."
-  },
-  {
-    q: "Mikroservislerde “hata izolasyonu” (fault isolation) ne sağlar?",
-    t: "mcq",
-    o: [
-      "Bir servisteki sorun tüm sistemi her zaman çökertebilir",
-      "Bir servisteki sorun diğer servisleri mümkün olduğunca az etkiler",
-      "Test ihtiyacını kaldırır",
-      "Veritabanını otomatik çoğaltır",
-      "UI’ı otomatik çizer"
-    ],
-    a: "Bir servisteki sorun diğer servisleri mümkün olduğunca az etkiler",
-    difficulty: "medium",
-    week: 11,
-    topic: "Mikroservis - hata izolasyonu",
-    importance: "high",
-    explanation: "Servisler ayrıldığı için bir servisin çökmesi tüm sistemi çökertmek zorunda değildir."
-  },
-  {
-    q: "SOA (Service-Oriented Architecture) için aşağıdakilerden hangisi DOĞRUDUR?",
-    t: "mcq",
-    o: [
-      "Servisler standart arayüzlerle tanımlanır ve yeniden kullanılabilir olmayı hedefler",
-      "SOA’da entegrasyon hiç önemli değildir",
-      "SOA sadece tek bir servisle çalışır",
-      "SOA’da servisler dış dünyaya kapalıdır ve çağrılamaz",
-      "SOA test yapılmasını gereksiz görür"
-    ],
-    a: "Servisler standart arayüzlerle tanımlanır ve yeniden kullanılabilir olmayı hedefler",
-    difficulty: "medium",
-    week: 11,
-    topic: "SOA - temel fikir",
-    importance: "high",
-    explanation: "SOA, servisleri standart arayüzlerle sunup entegrasyon ve yeniden kullanılabilirliği güçlendirir."
-  },
-  {
-    q: "Boşluk Doldurma: Mikroservis mimaride servisler bağımsız olarak ______ edilebilir ve ______ edilebilir.",
-    t: "blank",
-    o: [],
-    a: "dağıtılabilir / ölçeklenebilir",
-    difficulty: "easy",
-    week: 11,
-    topic: "Mikroservis - dağıtım/ölçekleme",
-    importance: "high",
-    explanation: "Her servis bağımsız deploy edilebilir; ihtiyaç olan servis ayrı ölçeklenir."
+  showExitButton() {
+    const exitBtn = document.getElementById('exitQuizBtn');
+    if (exitBtn) exitBtn.style.display = this.state.isReviewing ? 'none' : 'inline-flex';
   },
 
-  // =========================================================
-  // ==== 11. HAFTA (Devam) – SOA vs Mikroservis (ek 10) =====
-  // =========================================================
-  {
-    q: "SOA yaklaşımında “interface (arabirim)” kavramı en çok neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Servisin veritabanı dosyasını",
-      "Servisin dışarıya sunduğu hizmeti nasıl çağıracağını tanımlayan sözleşmeyi",
-      "Servisin ekran tasarımını",
-      "Servisin sunucu IP adresini",
-      "Servisin renk paletini"
-    ],
-    a: "Servisin dışarıya sunduğu hizmeti nasıl çağıracağını tanımlayan sözleşmeyi",
-    difficulty: "medium",
-    week: 11,
-    topic: "SOA - interface",
-    importance: "high",
-    explanation: "Interface, servislerin nasıl kullanılacağını standartlaştırır; entegrasyonu kolaylaştırır."
+  saveState() {
+    try {
+      if (window.StorageManager) {
+        StorageManager.saveQuizState({
+          currentMode: this.state.currentMode,
+          currentIndex: this.state.currentIndex,
+          answers: this.state.answers,
+          startTime: this.state.startTime,
+          elapsedSeconds: this.state.elapsedSeconds,
+          questionCount: this.state.questions.length
+        });
+      }
+    } catch (error) {
+      console.warn('Quiz durumu kaydedilemedi:', error);
+    }
   },
-  {
-    q: "Mikroservislerde servisler arası iletişim genellikle hangi yöntemlerle yapılır?",
-    t: "mcq",
-    o: [
-      "Sadece USB ile",
-      "API çağrıları (HTTP/HTTPS) ve gerektiğinde mesajlaşma/RPC gibi yöntemlerle",
-      "Sadece ekran görüntüsü ile",
-      "Sadece e-posta ile",
-      "Hiç iletişim kurulmaz"
-    ],
-    a: "API çağrıları (HTTP/HTTPS) ve gerektiğinde mesajlaşma/RPC gibi yöntemlerle",
-    difficulty: "medium",
-    week: 11,
-    topic: "Mikroservis - iletişim",
-    importance: "medium",
-    explanation: "Servisler ayrı çalıştığı için birbirine API üzerinden istek atarak veya mesajlaşma ile haberleşebilir."
+
+  startTimer() {
+    if (this.state.timerInterval) clearInterval(this.state.timerInterval);
+
+    this.state.timerInterval = setInterval(() => {
+      this.state.elapsedSeconds++;
+      this.updateTimerDisplay();
+      if (this.state.elapsedSeconds % 10 === 0) this.saveState();
+    }, 1000);
   },
-  {
-    q: "SOA’nın güçlü olduğu alanlardan biri aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Farklı sistemleri/uygulamaları standart servisler üzerinden entegre etmek",
-      "Tek dosyada tüm kodu tutmak",
-      "Sadece küçük tek ekran uygulamalar",
-      "İnternet olmadan çalışmak",
-      "Sadece oyun grafikleri üretmek"
-    ],
-    a: "Farklı sistemleri/uygulamaları standart servisler üzerinden entegre etmek",
-    difficulty: "medium",
-    week: 11,
-    topic: "SOA - entegrasyon",
-    importance: "high",
-    explanation: "SOA, kurum içi farklı sistemlerin servislerle konuşmasını ve entegrasyonunu kolaylaştırır."
+
+  stopTimer() {
+    if (this.state.timerInterval) {
+      clearInterval(this.state.timerInterval);
+      this.state.timerInterval = null;
+      console.log('⏹️ Timer durduruldu');
+    }
   },
-  {
-    q: "Mikroservis mimaride “servis bazlı veritabanı” yaklaşımı neyi anlatır?",
-    t: "mcq",
-    o: [
-      "Tüm servisler tek ortak veritabanı kullanmak zorundadır",
-      "Her servisin kendi verisini yönetebilmesi ve gerekirse ayrı veritabanı kullanabilmesi",
-      "Veritabanı kullanılmaması",
-      "Sadece dosya sistemi kullanılması",
-      "Verinin UI içinde tutulması"
-    ],
-    a: "Her servisin kendi verisini yönetebilmesi ve gerekirse ayrı veritabanı kullanabilmesi",
-    difficulty: "hard",
-    week: 11,
-    topic: "Mikroservis - veritabanı bağımsızlığı",
-    importance: "medium",
-    explanation: "Servis bağımsızlığı, veri bağımsızlığıyla güçlenir; servis kendi verisini sahiplenir."
+
+  updateTimerDisplay() {
+    const timerEl = document.getElementById('quizTimer');
+    if (timerEl) timerEl.textContent = Utils.formatTime(this.state.elapsedSeconds);
   },
-  {
-    q: "Aşağıdakilerden hangisi Mikroservis mimarinin olası bir zorluğudur?",
-    t: "mcq",
-    o: [
-      "Yönetim ve operasyonel karmaşıklığın artması (izleme, dağıtım, ağ iletişimi)",
-      "Hiçbir şekilde ölçeklenememesi",
-      "Sadece tek teknoloji ile yazılabilmesi",
-      "API kullanamaması",
-      "Test yapılamaması"
-    ],
-    a: "Yönetim ve operasyonel karmaşıklığın artması (izleme, dağıtım, ağ iletişimi)",
-    difficulty: "medium",
-    week: 11,
-    topic: "Mikroservis - zorluklar",
-    importance: "high",
-    explanation: "Servis sayısı arttıkça izleme, loglama, dağıtım ve servis iletişimi gibi operasyonel işler büyür."
+
+  displayQuestion() {
+    try {
+      const question = this.state.questions[this.state.currentIndex];
+      if (!question) throw new Error('Soru bulunamadı');
+
+      const currentQuestionEl = document.getElementById('currentQuestion');
+      const totalQuestionsEl = document.getElementById('totalQuestionsQuiz');
+
+      if (currentQuestionEl) currentQuestionEl.textContent = this.state.currentIndex + 1;
+      if (totalQuestionsEl) totalQuestionsEl.textContent = this.state.questions.length;
+
+      const progress = ((this.state.currentIndex + 1) / this.state.questions.length) * 100;
+      const progressFill = document.getElementById('progressFill');
+      if (progressFill) {
+        progressFill.style.width = progress + '%';
+        const progressBar = progressFill.parentElement;
+        if (progressBar) progressBar.setAttribute('aria-valuenow', Math.round(progress));
+      }
+
+      const questionTextEl = document.getElementById('questionText');
+      if (questionTextEl) questionTextEl.textContent = question.q;
+
+      this.displayOptions(question);
+      this.updateButtons();
+    } catch (error) {
+      console.error('Soru gösterme hatası:', error);
+      Utils.showToast('Soru gösterilemedi', 'error');
+    }
   },
-  {
-    q: "Aşağıdakilerden hangisi UI tasarımında “geri bildirim” ilkesine örnektir?",
-    t: "mcq",
-    o: [
-      "Kullanıcı tıklayınca hiçbir şey olmaması",
-      "Kaydet butonuna basınca “Kaydedildi” mesajının çıkması",
-      "Tüm yazıların aynı renkte olması",
-      "Menüleri gizleyip erişimi zorlaştırmak",
-      "Ekranı boş bırakmak"
-    ],
-    a: "Kaydet butonuna basınca “Kaydedildi” mesajının çıkması",
-    difficulty: "easy",
-    week: 11,
-    topic: "UI - geri bildirim",
-    importance: "high",
-    explanation: "Geri bildirim, kullanıcıya işlemin sonucunu gösterir (yükleniyor, başarılı, hata vb.)."
+
+  displayOptions(question) {
+    const optionsList = document.getElementById('optionsList');
+    if (!optionsList) return;
+
+    optionsList.innerHTML = '';
+    const letters = ['A', 'B', 'C', 'D', 'E'];
+
+    question.o.forEach((option, index) => {
+      const optionDiv = document.createElement('div');
+      optionDiv.className = 'option-item';
+      optionDiv.setAttribute('role', 'radio');
+      optionDiv.setAttribute('aria-checked', 'false');
+      optionDiv.setAttribute('tabindex', '0');
+
+      const isSelected = this.state.answers[this.state.currentIndex] === index;
+      if (isSelected) {
+        optionDiv.classList.add('selected');
+        optionDiv.setAttribute('aria-checked', 'true');
+      }
+
+      if (this.state.isReviewing) {
+        optionDiv.classList.add('disabled');
+        const correctAnswer = question.a;
+        const isCorrect = option === correctAnswer;
+
+        if (isCorrect) optionDiv.classList.add('correct');
+        if (isSelected && !isCorrect) optionDiv.classList.add('incorrect');
+      }
+
+      optionDiv.innerHTML = `
+        <span class="option-letter">${letters[index]}</span>
+        <span>${Utils.sanitizeHTML(option)}</span>
+      `;
+
+      if (!this.state.isReviewing) {
+        optionDiv.addEventListener('click', () => this.selectOption(index));
+        optionDiv.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.selectOption(index);
+          }
+        });
+      }
+
+      optionsList.appendChild(optionDiv);
+    });
+
+    if (this.state.isReviewing && question.explanation) {
+      const explanationDiv = document.createElement('div');
+      explanationDiv.className = 'question-explanation';
+      explanationDiv.innerHTML = `
+        <div class="explanation-header">
+          <span class="explanation-icon">💡</span>
+          <strong>${window.t ? t('quiz.explanation', 'Açıklama') : 'Açıklama'}:</strong>
+        </div>
+        <p>${Utils.sanitizeHTML(question.explanation)}</p>
+      `;
+      optionsList.appendChild(explanationDiv);
+    }
   },
-  {
-    q: "UX tasarımında “kullanılabilirlik testi” (usability test) için en doğru amaç hangisidir?",
-    t: "mcq",
-    o: [
-      "Sunucuyu hızlandırmak",
-      "Kullanıcının görevleri kolayca yapıp yapamadığını görmek ve sorunları bulmak",
-      "Veritabanını yedeklemek",
-      "Sadece renk seçmek",
-      "Sadece kod satırını azaltmak"
-    ],
-    a: "Kullanıcının görevleri kolayca yapıp yapamadığını görmek ve sorunları bulmak",
-    difficulty: "medium",
-    week: 11,
-    topic: "UX - kullanılabilirlik testi",
-    importance: "high",
-    explanation: "Kullanılabilirlik testi, gerçek kullanıcı davranışıyla akış problemlerini ortaya çıkarır."
+
+  selectOption(index) {
+    if (this.state.isReviewing) return;
+
+    try {
+      const question = this.state.questions[this.state.currentIndex];
+      const selectedOption = question.o[index];
+      const correctAnswer = question.a;
+      const isCorrect = selectedOption === correctAnswer;
+
+      this.state.answers[this.state.currentIndex] = index;
+
+      document.querySelectorAll('.option-item').forEach((item, idx) => {
+        item.classList.add('disabled');
+        item.style.pointerEvents = 'none';
+
+        if (question.o[idx] === correctAnswer) item.classList.add('correct');
+        if (idx === index && !isCorrect) item.classList.add('incorrect');
+
+        if (idx === index) {
+          item.classList.add('selected');
+          item.setAttribute('aria-checked', 'true');
+        } else {
+          item.classList.remove('selected');
+          item.setAttribute('aria-checked', 'false');
+        }
+      });
+
+      this.showExplanation(question, isCorrect);
+      this.saveState();
+    } catch (error) {
+      console.error('Seçenek seçme hatası:', error);
+    }
   },
-  {
-    q: "Boşluk Doldurma: UI tasarımında “erişilebilirlik” hedefi, her tür kullanıcının (ör. engelli kullanıcı) sistemi ______ kullanabilmesidir.",
-    t: "blank",
-    o: [],
-    a: "rahatça",
-    difficulty: "easy",
-    week: 11,
-    topic: "UI - erişilebilirlik",
-    importance: "medium",
-    explanation: "Erişilebilirlik; okunabilirlik, kontrast, ekran okuyucu uyumu gibi konuları kapsar."
+
+  showExplanation(question, isCorrect) {
+    const oldExplanation = document.querySelector('.question-explanation');
+    if (oldExplanation) oldExplanation.remove();
+    if (!question.explanation) return;
+
+    const optionsList = document.getElementById('optionsList');
+    if (!optionsList) return;
+
+    const explanationDiv = document.createElement('div');
+    explanationDiv.className = 'question-explanation';
+    explanationDiv.style.cssText =
+      'margin-top: 20px; padding: 15px; background: var(--bg-tertiary); border-left: 4px solid var(--info); border-radius: 8px; animation: slideIn 0.3s ease-out;';
+
+    const statusIcon = isCorrect ? '✅' : '❌';
+    const statusText = isCorrect
+      ? (window.t ? t('quiz.correct', 'Doğru!') : 'Doğru!')
+      : (window.t ? t('quiz.wrong', 'Yanlış!') : 'Yanlış!');
+    const statusColor = isCorrect ? 'var(--success)' : 'var(--danger)';
+
+    explanationDiv.innerHTML = `
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+        <span style="font-size:1.2rem;">${statusIcon}</span>
+        <strong style="color:${statusColor}; font-size:1.1rem;">${statusText}</strong>
+      </div>
+      <div style="display:flex; align-items:flex-start; gap:8px; margin-top:10px;">
+        <span style="font-size:1.2rem;">💡</span>
+        <div>
+          <strong style="color: var(--info);">${window.t ? t('quiz.explanation', 'Açıklama') : 'Açıklama'}:</strong>
+          <p style="color: var(--text-secondary); line-height:1.6; margin:5px 0 0;">${Utils.sanitizeHTML(question.explanation)}</p>
+        </div>
+      </div>
+    `;
+
+    optionsList.appendChild(explanationDiv);
   },
-  {
-    q: "Boşluk Doldurma: SOA’da servisler genellikle standart protokoller ve veri formatları (ör. XML/JSON) ile ______ kurar.",
-    t: "blank",
-    o: [],
-    a: "iletişim",
-    difficulty: "easy",
-    week: 11,
-    topic: "SOA - haberleşme",
-    importance: "medium",
-    explanation: "Standart iletişim, farklı sistemlerin birbiriyle çalışmasını kolaylaştırır."
+
+  updateButtons() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+
+    const isFirstQuestion = this.state.currentIndex === 0;
+    const isLastQuestion = this.state.currentIndex === this.state.questions.length - 1;
+
+    if (prevBtn) {
+      prevBtn.disabled = isFirstQuestion;
+      if (!isFirstQuestion || this.state.isReviewing) {
+        prevBtn.style.display = 'inline-flex';
+        prevBtn.style.opacity = isFirstQuestion ? '0.5' : '1';
+      } else {
+        prevBtn.style.display = 'none';
+      }
+    }
+
+    if (nextBtn) {
+      if (this.state.isReviewing) {
+        nextBtn.style.display = isLastQuestion ? 'none' : 'inline-flex';
+        const nextText = window.t ? t('quiz.next', 'Sonraki') : 'Sonraki';
+        nextBtn.innerHTML = `${nextText} →`;
+      } else {
+        nextBtn.style.display = isLastQuestion ? 'none' : 'inline-flex';
+      }
+    }
+
+    if (submitBtn) {
+      submitBtn.style.display = isLastQuestion && !this.state.isReviewing ? 'inline-flex' : 'none';
+    }
+
+    this.showExitButton();
   },
-  {
-    q: "Mikroservis ve SOA için en doğru ortak nokta hangisidir?",
-    t: "mcq",
-    o: [
-      "İkisi de servis yaklaşımını kullanır ve modülerliği hedefler",
-      "İkisi de her zaman tek veritabanı zorunlu kılar",
-      "İkisi de testleri gereksiz görür",
-      "İkisi de sadece UI tasarımıyla ilgilidir",
-      "İkisi de yalnızca tek bilgisayarda çalışır"
-    ],
-    a: "İkisi de servis yaklaşımını kullanır ve modülerliği hedefler",
-    difficulty: "medium",
-    week: 11,
-    topic: "Mikroservis vs SOA - ortak",
-    importance: "medium",
-    explanation: "Her iki yaklaşım da servisleri kullanarak modüler yapı kurmayı amaçlar; uygulama tasarımı servislerle parçalanır."
+
+  nextQuestion() {
+    if (this.state.currentIndex < this.state.questions.length - 1) {
+      this.state.currentIndex++;
+      this.displayQuestion();
+      this.saveState();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  },
+
+  previousQuestion() {
+    if (this.state.currentIndex > 0) {
+      this.state.currentIndex--;
+      this.displayQuestion();
+      this.saveState();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  },
+
+  async finishQuiz() {
+    try {
+      const unanswered = this.state.answers.filter(a => a === null).length;
+
+      if (unanswered > 0) {
+        const confirmMsg = window.t
+          ? t('quiz.unansweredConfirm', `${unanswered} soru cevaplanmadı. Testi bitirmek istediğinizden emin misiniz?`)
+          : `${unanswered} soru cevaplanmadı. Testi bitirmek istediğinizden emin misiniz?`;
+
+        const confirmed = await Utils.confirm(confirmMsg);
+        if (!confirmed) return;
+      }
+
+      this.stopTimer();
+      const results = this.calculateResults();
+
+      if (window.StorageManager) {
+        StorageManager.saveTestResult(results);
+        StorageManager.clearQuizState();
+      }
+
+      localStorage.removeItem('testify_generated_test');
+      this.showResults(results);
+    } catch (error) {
+      console.error('Quiz bitirme hatası:', error);
+      Utils.showToast('Test bitirilemedi', 'error');
+    }
+  },
+
+  calculateResults() {
+    let correct = 0;
+    let wrong = 0;
+
+    this.state.questions.forEach((question, index) => {
+      const userAnswer = this.state.answers[index];
+      if (userAnswer !== null) {
+        const selectedOption = question.o[userAnswer];
+        if (selectedOption === question.a) correct++;
+        else wrong++;
+      }
+    });
+
+    const unanswered = this.state.questions.length - (correct + wrong);
+    const successRate = this.state.questions.length > 0
+      ? Math.round((correct / this.state.questions.length) * 100)
+      : 0;
+
+    return {
+      mode: this.state.currentMode,
+      totalQuestions: this.state.questions.length,
+      correctAnswers: correct,
+      wrongAnswers: wrong,
+      unanswered,
+      successRate,
+      time: this.state.elapsedSeconds,
+      timestamp: Date.now(),
+      testTitle: this.state.testTitle
+    };
+  },
+
+  showResults(results) {
+    try {
+      const quizPage = document.getElementById('quizPage');
+      const resultsPage = document.getElementById('resultsPage');
+      if (!quizPage || !resultsPage) throw new Error('Sonuç sayfası bulunamadı');
+
+      quizPage.classList.remove('active');
+      resultsPage.classList.add('active');
+
+      const finalScore = document.getElementById('finalScore');
+      const correctAnswers = document.getElementById('correctAnswers');
+      const wrongAnswers = document.getElementById('wrongAnswers');
+      const successPercent = document.getElementById('successPercent');
+      const totalTimeResult = document.getElementById('totalTimeResult');
+
+      if (finalScore) finalScore.textContent = `${results.correctAnswers}/${results.totalQuestions}`;
+      if (correctAnswers) correctAnswers.textContent = results.correctAnswers;
+      if (wrongAnswers) wrongAnswers.textContent = results.wrongAnswers;
+      if (successPercent) successPercent.textContent = results.successRate + '%';
+      if (totalTimeResult) totalTimeResult.textContent = Utils.formatTime(results.time);
+
+      const resultsIcon = document.querySelector('.results-icon');
+      if (resultsIcon) {
+        if (results.successRate >= 90) resultsIcon.textContent = '🏆';
+        else if (results.successRate >= 75) resultsIcon.textContent = '🎉';
+        else if (results.successRate >= 60) resultsIcon.textContent = '👏';
+        else if (results.successRate >= 40) resultsIcon.textContent = '💪';
+        else resultsIcon.textContent = '📚';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Sonuç gösterme hatası:', error);
+      Utils.showToast('Sonuçlar gösterilemedi', 'error');
+    }
+  },
+
+  reviewAnswers() {
+    try {
+      this.state.isReviewing = true;
+      this.state.currentIndex = 0;
+
+      const resultsPage = document.getElementById('resultsPage');
+      const quizPage = document.getElementById('quizPage');
+      if (!resultsPage || !quizPage) throw new Error('Quiz sayfası bulunamadı');
+
+      resultsPage.classList.remove('active');
+      quizPage.classList.add('active');
+
+      this.displayQuestion();
+
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const submitBtn = document.getElementById('submitBtn');
+
+      if (prevBtn) prevBtn.style.display = 'inline-flex';
+      if (nextBtn) nextBtn.style.display = 'inline-flex';
+      if (submitBtn) submitBtn.style.display = 'none';
+
+      this.showExitButton();
+
+      const reviewMsg = window.t
+        ? t('quiz.reviewMode', 'İnceleme modu - Açıklamaları okuyabilirsiniz')
+        : 'İnceleme modu - Açıklamaları okuyabilirsiniz';
+      Utils.showToast(reviewMsg, 'info');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('İnceleme modu hatası:', error);
+      Utils.showToast('İnceleme modu başlatılamadı', 'error');
+    }
+  },
+
+  newQuiz() {
+    try {
+      this.cleanupPreviousQuiz();
+
+      const resultsPage = document.getElementById('resultsPage');
+      const quizPage = document.getElementById('quizPage');
+      const testSelection = document.getElementById('testSelection');
+
+      if (resultsPage) resultsPage.classList.remove('active');
+      if (quizPage) quizPage.classList.remove('active');
+      if (testSelection) testSelection.classList.add('active');
+
+      this.state = {
+        currentMode: null,
+        questions: [],
+        currentIndex: 0,
+        answers: [],
+        startTime: null,
+        timerInterval: null,
+        elapsedSeconds: 0,
+        isReviewing: false,
+        testTitle: null,
+        testDescription: null,
+        eventListenersAttached: this.state.eventListenersAttached
+      };
+
+      localStorage.removeItem('testify_generated_test');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Yeni quiz başlatma hatası:', error);
+      Utils.showToast('Yeni test başlatılamadı', 'error');
+    }
+  },
+
+  async exitQuiz() {
+    if (this.state.isReviewing) {
+      this.newQuiz();
+      return;
+    }
+
+    const confirmMsg = window.t
+      ? t('quiz.exitConfirm', 'Testi bırakmak istediğine emin misin?\n\nİlerleme kaydedilmeyecek!')
+      : 'Testi bırakmak istediğine emin misin?\n\nİlerleme kaydedilmeyecek!';
+
+    const confirmed = await Utils.confirm(confirmMsg);
+    if (!confirmed) return;
+
+    try {
+      const answeredCount = this.state.answers.filter(a => a !== null).length;
+      const totalCount = this.state.questions.length;
+
+      this.cleanupPreviousQuiz();
+
+      if (window.StorageManager) StorageManager.clearQuizState();
+
+      const quizPage = document.getElementById('quizPage');
+      const resultsPage = document.getElementById('resultsPage');
+      const testSelection = document.getElementById('testSelection');
+
+      if (quizPage) quizPage.classList.remove('active');
+      if (resultsPage) resultsPage.classList.remove('active');
+      if (testSelection) testSelection.classList.add('active');
+
+      this.state = {
+        currentMode: null,
+        questions: [],
+        currentIndex: 0,
+        answers: [],
+        startTime: null,
+        timerInterval: null,
+        elapsedSeconds: 0,
+        isReviewing: false,
+        testTitle: null,
+        testDescription: null,
+        eventListenersAttached: this.state.eventListenersAttached
+      };
+
+      if (answeredCount > 0) {
+        Utils.showToast(`📋 Test bırakıldı (${answeredCount}/${totalCount} soru cevaplanmıştı)`, 'info', 4000);
+      } else {
+        Utils.showToast('Test iptal edildi', 'info');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Quiz çıkış hatası:', error);
+      Utils.showToast('Çıkış yapılamadı', 'error');
+    }
+  },
+
+  setupEventListeners() {
+    if (this.state.eventListenersAttached) {
+      console.log('⚠️ Event listener\'lar zaten ekli');
+      return;
+    }
+
+    console.log('🔧 Quiz event listener\'lar kuruluyor...');
+
+    const testOptions = document.querySelector('.test-options');
+    if (testOptions) {
+      const modes = ['practice', 'exam', 'ai', 'custom'];
+      const cards = testOptions.querySelectorAll('.test-option-card');
+
+      cards.forEach((card, index) => {
+        const mode = modes[index];
+
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          this.startQuiz(mode);
+        });
+
+        card.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.startQuiz(mode);
+          }
+        });
+      });
+    }
+
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const reviewBtn = document.getElementById('reviewBtn');
+    const newQuizBtn = document.getElementById('newQuizBtn');
+    const exitQuizBtn = document.getElementById('exitQuizBtn');
+
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); this.previousQuestion(); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); this.nextQuestion(); });
+    if (submitBtn) submitBtn.addEventListener('click', (e) => { e.preventDefault(); this.finishQuiz(); });
+    if (reviewBtn) reviewBtn.addEventListener('click', (e) => { e.preventDefault(); this.reviewAnswers(); });
+    if (newQuizBtn) newQuizBtn.addEventListener('click', (e) => { e.preventDefault(); this.newQuiz(); });
+    if (exitQuizBtn) exitQuizBtn.addEventListener('click', (e) => { e.preventDefault(); this.exitQuiz(); });
+
+    this.state.eventListenersAttached = true;
+    console.log('✅ Quiz event listener\'lar kuruldu');
   }
-];
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => { QuizManager.setupEventListeners(); });
+} else {
+  QuizManager.setupEventListeners();
+}
+
+window.addEventListener('beforeunload', () => { QuizManager.stopTimer(); });
+
+window.QuizManager = QuizManager;
