@@ -1,4 +1,3 @@
-
 // Yazılım Mimarileri (7-11) – 50 Soruluk Sınav Soru Bankası (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
