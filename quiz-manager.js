@@ -15,6 +15,23 @@ const QuizManager = {
     eventListenersAttached: false
   },
 
+  // ✅ sorular.js geç yüklenirse diye kısa bekleme
+  waitForQuestionBank(timeoutMs = 2500) {
+    return new Promise((resolve) => {
+      const start = Date.now();
+
+      const tick = () => {
+        const qb = window.questionBank;
+        if (Array.isArray(qb) && qb.length > 0) return resolve(true);
+
+        if (Date.now() - start >= timeoutMs) return resolve(false);
+        setTimeout(tick, 50);
+      };
+
+      tick();
+    });
+  },
+
   loadAIGeneratedTest() {
     try {
       const aiTest = localStorage.getItem('testify_generated_test');
@@ -40,15 +57,18 @@ const QuizManager = {
     }
   },
 
-  startQuiz(mode) {
+  // ✅ PRACTICE/EXAM her zaman window.questionBank
+  // ✅ AI/CUSTOM varsa localStorage AI testi, yoksa window.questionBank
+  async startQuiz(mode) {
     console.log('🎯 Quiz başlatılıyor, mod:', mode);
 
     this.cleanupPreviousQuiz();
 
     try {
-      const aiTest = this.loadAIGeneratedTest();
+      const useAI = (mode === 'ai' || mode === 'custom');
+      const aiTest = useAI ? this.loadAIGeneratedTest() : null;
 
-      if (aiTest && aiTest.questions && aiTest.questions.length > 0) {
+      if (useAI && aiTest && aiTest.questions && aiTest.questions.length > 0) {
         console.log('🤖 AI testi kullanılıyor');
 
         this.state = {
@@ -69,7 +89,14 @@ const QuizManager = {
 
         Utils.showToast(`🤖 AI Testi: ${aiTest.title} - ${aiTest.questions.length} soru`, 'info', 4000);
       } else {
-        console.log('📚 Varsayılan sorular kullanılıyor');
+        console.log('📚 Varsayılan sorular (sorular.js) kullanılıyor');
+
+        const ok = await this.waitForQuestionBank(2500);
+        if (!ok) {
+          Utils.showToast('Soru bankası yüklenemedi! (sorular.js yüklenmemiş olabilir)', 'error');
+          console.error('questionBank bulunamadı veya dolmadı!', window.questionBank);
+          return;
+        }
 
         if (!window.questionBank || !Array.isArray(window.questionBank)) {
           Utils.showToast('Soru bankası yüklenemedi!', 'error');
