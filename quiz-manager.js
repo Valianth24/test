@@ -1,4 +1,4 @@
-```js
+
 window.questionBank = [
   // =========================================================
   // ==== 7. HAFTA – Spiral Model & RAD (10 Soru) ============
@@ -979,4 +979,3 @@ window.questionBank = [
     explanation: "Her iki yaklaşım da servisleri kullanarak modüler yapı kurmayı amaçlar; uygulama tasarımı servislerle parçalanır."
   }
 ];
-```
