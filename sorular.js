@@ -1,900 +1,959 @@
-
-// Yazılım Mimarileri (1-3) – 50 Soruluk Sınav Soru Bankası (MCQ)
+// Grafik Tasarım + Görsel İletişim + Görüntü Teknolojileri + Photoshop Temelleri
+// 50 Soruluk Öğretici Soru Bankası (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
   // =========================================================
-  // ==== 1. HAFTA – Yazılım Mimarisi Temelleri (17 Soru) =====
+  // ==== 1) Görsel İletişim & Grafik Tasarım Temelleri (12) ==
   // =========================================================
   {
-    q: "Yazılım mimarisi (software architecture) en doğru hangi ifadeyle tanımlanır?",
+    q: "Görsel iletişim en doğru hangi şekilde tanımlanır?",
     t: "mcq",
     o: [
-      "Sadece arayüz (UI) tasarımının renk ve font seçimleri",
-      "Bir uygulamanın kaynak kodundaki tüm fonksiyonların sıralı listesi",
-      "Bir sistemin bileşenleri, bu bileşenlerin ilişkileri ve bu ilişkileri yöneten temel kararlar bütünü",
-      "Yalnızca veritabanı tablolarının şeması",
-      "Sadece test senaryolarının dokümantasyonu"
+      "Sadece uzun metinlerle bilgi aktarma",
+      "Fikir ve bilgileri görseller (sembol, renk, çizgi, fotoğraf) aracılığıyla aktarma",
+      "Sadece sözlü anlatımla ikna etme",
+      "Sadece matematiksel grafik çizme",
+      "Sadece video montajı yapma"
     ],
-    a: "Bir sistemin bileşenleri, bu bileşenlerin ilişkileri ve bu ilişkileri yöneten temel kararlar bütünü",
+    a: "Fikir ve bilgileri görseller (sembol, renk, çizgi, fotoğraf) aracılığıyla aktarma",
     difficulty: "easy",
     week: 1,
-    topic: "Mimari - tanım",
+    topic: "Görsel iletişim - tanım",
     importance: "high",
     explanation:
-      "Mimari; sistemin ana parçalarını (bileşenleri), aralarındaki iletişimi/bağımlılığı ve bunları belirleyen kritik kararları kapsar. UI, veritabanı veya test tek başına “mimari” değildir; mimari hepsini üst seviyede organize eden iskelet yapıdır."
+      "Görsel iletişim; mesajı yazıdan çok görsel dil ile taşır. Fotoğraf, simge, renk ve biçimler birer “dil” gibi çalışır ve çoğu zaman daha hızlı algılanır."
   },
   {
-    q: "Mimari (architecture) ile tasarım (design) arasındaki en doğru ayrım hangisidir?",
+    q: "Görsel iletişimin “daha hızlı anlaşılma” avantajının temel nedeni aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Mimari sadece kod yazımıdır; tasarım sadece testtir",
-      "Mimari büyük resim/ana kararlar; tasarım ise bileşen içi detay çözümleridir",
-      "Mimari sadece UI çizimi; tasarım sadece veritabanıdır",
-      "Mimari sadece küçük projelerde; tasarım sadece büyük projelerde kullanılır",
-      "Aralarında fark yoktur; ikisi aynı kavramdır"
+      "İnsan beyni görsel bilgiyi yazıya göre daha çabuk algılar",
+      "Yazı her zaman daha yavaştır ve gereksizdir",
+      "Görsel iletişim sadece çocuklar içindir",
+      "Görseller asla yanlış anlaşılmaz",
+      "Görsel iletişimde hedef kitle önemli değildir"
     ],
-    a: "Mimari büyük resim/ana kararlar; tasarım ise bileşen içi detay çözümleridir",
+    a: "İnsan beyni görsel bilgiyi yazıya göre daha çabuk algılar",
     difficulty: "easy",
     week: 1,
-    topic: "Mimari vs Tasarım",
+    topic: "Görsel iletişim - neden güçlü",
     importance: "high",
     explanation:
-      "Mimari; katmanlar, servisler, iletişim protokolleri, dağıtım/topoloji gibi “ana omurga” kararlarıdır. Tasarım ise bu omurganın içinde sınıflar, metodlar, veri yapıları gibi daha detaylı çözümlerdir. Sınavda bu ayrım sık sorulur."
+      "Görsel bilgi (ikon, renk, şekil) beyin tarafından hızlı işlenir. Bu yüzden reklam, afiş, logo gibi alanlarda görsel iletişim çok etkilidir."
   },
   {
-    q: "Aşağıdakilerden hangisi bir sistemin “paydaşı” (stakeholder) değildir?",
+    q: "Görsel iletişimde en kritik hedef aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Son kullanıcı",
-      "Müşteri/iş sahibi",
-      "Geliştirici ekip",
-      "Sunucudaki RAM modülü (donanım parçası)",
-      "Test/QA ekibi"
+      "Tasarımı mümkün olduğunca süslü yapmak",
+      "Mesajın hedef kitle tarafından doğru anlaşılması",
+      "En fazla renk kullanmak",
+      "Yazıyı tamamen kaldırmak",
+      "Her şeyi küçük puntolarla yazmak"
     ],
-    a: "Sunucudaki RAM modülü (donanım parçası)",
+    a: "Mesajın hedef kitle tarafından doğru anlaşılması",
+    difficulty: "medium",
+    week: 1,
+    topic: "Görsel iletişim - hedef",
+    importance: "high",
+    explanation:
+      "İyi tasarım “güzel” olduğu kadar “doğru anlaşılır” olmalıdır. Hedef kitle mesajı yanlış okursa tasarım başarısız sayılır."
+  },
+  {
+    q: "Grafik tasarımın en doğru tanımı aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece estetik amaçlı resim yapma",
+      "Bir mesajı görsel öğelerle planlı, estetik ve işlevsel biçimde iletme sanatı",
+      "Sadece fotoğraf çekme işi",
+      "Sadece yazı yazma sanatı",
+      "Sadece bilgisayar programı kullanma"
+    ],
+    a: "Bir mesajı görsel öğelerle planlı, estetik ve işlevsel biçimde iletme sanatı",
     difficulty: "easy",
     week: 1,
-    topic: "Paydaşlar",
+    topic: "Grafik tasarım - tanım",
+    importance: "high",
+    explanation:
+      "Grafik tasarımın amacı sadece “güzel görünmek” değil; mesajı anlaşılır, yönlendirici ve hedefe uygun şekilde iletmektir."
+  },
+  {
+    q: "Afişte başlığın büyük ve kalın, alt metnin daha küçük verilmesi hangi ilkeye örnektir?",
+    t: "mcq",
+    o: ["Denge", "Ritim", "Hiyerarşi", "Uyum", "Raster"],
+    a: "Hiyerarşi",
+    difficulty: "easy",
+    week: 1,
+    topic: "Tasarım ilkeleri - hiyerarşi",
+    importance: "high",
+    explanation:
+      "Hiyerarşi, bilgiyi önem sırasına göre düzenlemektir. Başlık en önemli olduğu için daha büyük/kalın verilir; gözün okuma yolu yönetilir."
+  },
+  {
+    q: "Bir tasarımda öğelerin görsel ağırlık bakımından dengeli dağılmasına ne denir?",
+    t: "mcq",
+    o: ["Vurgu", "Denge", "Renk modu", "Çözünürlük", "Kırpma"],
+    a: "Denge",
+    difficulty: "easy",
+    week: 1,
+    topic: "Tasarım ilkeleri - denge",
+    importance: "high",
+    explanation:
+      "Denge, tasarımın bir tarafının “aşırı ağır” görünmemesidir. Metin-görsel dağılımı, boşluk kullanımı dengeyi etkiler."
+  },
+  {
+    q: "İzleyicinin dikkati belirli bir noktaya yönlendiriliyorsa bu ilke hangisidir?",
+    t: "mcq",
+    o: ["Vurgu", "Uyum", "Ritim", "Dpi", "Vektör"],
+    a: "Vurgu",
+    difficulty: "easy",
+    week: 1,
+    topic: "Tasarım ilkeleri - vurgu",
+    importance: "high",
+    explanation:
+      "Vurgu, “önce nereye bakılsın?” sorusunu çözer. Kontrast, boyut, renk gibi araçlarla göz belirli noktaya çekilir."
+  },
+  {
+    q: "Öğelerin düzenli aralıklarla tekrarlanmasıyla oluşan tasarım ilkesi hangisidir?",
+    t: "mcq",
+    o: ["Ritim", "Denge", "Hiyerarşi", "RGB", "Mask"],
+    a: "Ritim",
+    difficulty: "medium",
+    week: 1,
+    topic: "Tasarım ilkeleri - ritim",
     importance: "medium",
     explanation:
-      "Paydaş; sistemden beklentisi olan insan/rol/gruptur (kullanıcı, müşteri, geliştirici, operasyon, güvenlik vb.). Donanım bileşeni paydaş değildir; paydaş “beklentisi olan taraf”tır."
+      "Ritim; tekrar ve düzenle “akış” hissi oluşturur. Örn: ikonların eşit aralıklarla dizilmesi gözü yönlendirir."
   },
   {
-    q: "Fonksiyonel gereksinim (functional requirement) aşağıdakilerden hangisine örnektir?",
+    q: "Renk ve biçimlerin birbirini tamamlayarak bütünlük oluşturmasına ne denir?",
     t: "mcq",
-    o: [
-      "Sistem 2 saniyeden kısa sürede yanıt vermelidir",
-      "Uygulama %99.9 erişilebilir olmalıdır",
-      "Kullanıcı e-posta ve şifre ile giriş yapabilmelidir",
-      "Sistem KVKK/GDPR uyumlu olmalıdır",
-      "Uygulama engelli kullanıcılar için ekran okuyucu desteklemelidir"
-    ],
-    a: "Kullanıcı e-posta ve şifre ile giriş yapabilmelidir",
+    o: ["Uyum", "Kontrast", "Çözünürlük", "Kırpma maskesi", "Histogram"],
+    a: "Uyum",
     difficulty: "easy",
     week: 1,
-    topic: "Gereksinimler - fonksiyonel",
-    importance: "high",
+    topic: "Tasarım ilkeleri - uyum",
+    importance: "medium",
     explanation:
-      "Fonksiyonel gereksinim “sistem ne yapacak?” sorusunun cevabıdır: giriş, kayıt, sipariş oluşturma, ödeme alma gibi işlevler. Diğer seçenekler performans/erişilebilirlik/yasal uyum gibi fonksiyonel olmayan (kalite) gereksinimlerdir."
+      "Uyum, renklerin ve şekillerin kavga etmemesi, birlikte “tek tasarım” gibi çalışmasıdır. Uyum, tasarımı sakin ve tutarlı gösterir."
   },
   {
-    q: "Fonksiyonel olmayan gereksinim (non-functional requirement) en doğru neyi ifade eder?",
+    q: "Bir tasarımın baskı mı dijital mi olacağı neden önemlidir?",
     t: "mcq",
     o: [
-      "Sistemin hangi özellikleri sunduğunu",
-      "Sistemin kalitesini/çıktı standartlarını (performans, güvenlik, kullanılabilirlik vb.)",
-      "Sadece veritabanı tablolarını",
-      "Sadece UI ekran sayısını",
-      "Kodun kaç satır olduğunu"
+      "Çünkü sadece yazı fontu değişir",
+      "Çünkü çözünürlük, renk modu ve dosya boyutu gibi teknik kararlar değişir",
+      "Çünkü baskıda renk hiç kullanılmaz",
+      "Çünkü dijitalde kalite önemli değildir",
+      "Çünkü baskıda vektör hiç kullanılmaz"
     ],
-    a: "Sistemin kalitesini/çıktı standartlarını (performans, güvenlik, kullanılabilirlik vb.)",
+    a: "Çünkü çözünürlük, renk modu ve dosya boyutu gibi teknik kararlar değişir",
+    difficulty: "medium",
+    week: 1,
+    topic: "Baskı vs dijital",
+    importance: "high",
+    explanation:
+      "Baskıda yüksek çözünürlük ve CMYK kritiktir. Dijitalde RGB ve ekran uyumu, ayrıca dosya optimizasyonu önem kazanır."
+  },
+  {
+    q: "Aşağıdakilerden hangisi grafik tasarımın alt alanlarından biridir?",
+    t: "mcq",
+    o: ["Kurumsal kimlik (logo, kartvizit, marka rehberi)", "Sadece işletim sistemi kurulumu", "Sadece ağ yönetimi", "Sadece kod derleme", "Sadece donanım onarımı"],
+    a: "Kurumsal kimlik (logo, kartvizit, marka rehberi)",
     difficulty: "easy",
     week: 1,
-    topic: "Gereksinimler - NFR",
-    importance: "high",
-    explanation:
-      "NFR = kalite hedefleri. Örn: hızlı olsun, güvenli olsun, ölçeklenebilir olsun, kolay bakılsın. Mimari kararlar çoğu zaman NFR’leri karşılamak için alınır."
-  },
-  {
-    q: "Aşağıdakilerden hangisi “ölçeklenebilirlik (scalability)” kavramını en doğru anlatır?",
-    t: "mcq",
-    o: [
-      "Sistemin ekran tasarımının responsive olması",
-      "Sistemin kullanıcı sayısı artınca performansı koruyacak şekilde büyüyebilmesi",
-      "Sistemin kaynak kodunun daha kısa olması",
-      "Sistemin internet olmadan çalışması",
-      "Sistemin sadece tek kullanıcıya hizmet vermesi"
-    ],
-    a: "Sistemin kullanıcı sayısı artınca performansı koruyacak şekilde büyüyebilmesi",
-    difficulty: "medium",
-    week: 1,
-    topic: "Kalite nitelikleri - ölçeklenebilirlik",
-    importance: "high",
-    explanation:
-      "Ölçeklenebilirlik; yük arttığında sistemi daha güçlü hale getirerek (dikey) veya daha fazla node ekleyerek (yatay) performansı koruyabilmektir. UI responsive = ekran uyumu; ölçeklenebilirlik değildir."
-  },
-  {
-    q: "Performans ile ölçeklenebilirlik arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "Performans: hız/yanıt süresi; ölçeklenebilirlik: artan yükte büyüyebilme",
-      "Performans: sadece güvenlik; ölçeklenebilirlik: sadece UI",
-      "Performans: sadece veri tabanı; ölçeklenebilirlik: sadece test",
-      "İkisi aynı kavramdır",
-      "Performans: bakım; ölçeklenebilirlik: dokümantasyon"
-    ],
-    a: "Performans: hız/yanıt süresi; ölçeklenebilirlik: artan yükte büyüyebilme",
-    difficulty: "medium",
-    week: 1,
-    topic: "Kalite nitelikleri - performans vs scalability",
-    importance: "high",
-    explanation:
-      "Performans ‘şu anda ne kadar hızlı?’ sorusudur. Ölçeklenebilirlik ‘yük artınca aynı hızı koruyacak şekilde büyüyebilir miyim?’ sorusudur. Karıştırılan klasik sınav konusudur."
-  },
-  {
-    q: "Aşağıdakilerden hangisi “kısıt (constraint)” örneğidir?",
-    t: "mcq",
-    o: [
-      "Kullanıcı sipariş verebilmelidir",
-      "Sistem çok güzel görünmelidir",
-      "Uygulama sadece Java ile geliştirilecektir (teknoloji zorunluluğu)",
-      "Uygulama 1 saniyede yanıt vermelidir",
-      "Kullanıcılar ürünleri listeleyebilmelidir"
-    ],
-    a: "Uygulama sadece Java ile geliştirilecektir (teknoloji zorunluluğu)",
-    difficulty: "medium",
-    week: 1,
-    topic: "Kısıtlar",
+    topic: "Grafik tasarım - alt alanlar",
     importance: "medium",
     explanation:
-      "Kısıt; seçenekleri sınırlar: belirli dil/altyapı/uyumluluk zorunluluğu gibi. Fonksiyonel gereksinim ‘ne yapacak’ der; NFR ‘ne kadar iyi’ der; kısıt ‘bunu şu şartla yapacaksın’ der."
+      "Grafik tasarım; kurumsal kimlik, yayın tasarımı, dijital tasarım, reklam/afiş, ambalaj gibi birçok alt dala ayrılır."
   },
   {
-    q: "Bir mimari kararın en tipik çıktısı aşağıdakilerden hangisidir?",
+    q: "Kırmızı rengin iletişimde çağrıştırdığı duyguya en uygun ifade hangisidir?",
     t: "mcq",
-    o: [
-      "Renk paleti dosyası",
-      "Sadece kod satırı sayısı",
-      "Kararın gerekçesi ve etkilerini açıklayan kayıt (örn. ADR - Architectural Decision Record)",
-      "Sadece kullanıcı şikayetleri listesi",
-      "Otomatik oluşturulmuş ekran görüntüleri"
-    ],
-    a: "Kararın gerekçesi ve etkilerini açıklayan kayıt (örn. ADR - Architectural Decision Record)",
-    difficulty: "medium",
-    week: 1,
-    topic: "Mimari kararlar - ADR",
-    importance: "medium",
-    explanation:
-      "ADR; “neden bu kararı aldık, alternatifler neydi, artı/eksi etkileri ne?” gibi bilgileri kayıt altına alır. Bu, ileride ekip değişince veya sorun çıkınca ‘niye böyle yaptık?’ sorusunun cevabıdır."
-  },
-  {
-    q: "“Trade-off (ödünleşim)” kavramı mimaride neyi anlatır?",
-    t: "mcq",
-    o: [
-      "Bir özelliği ücretsiz yapmak",
-      "Bir kalite hedefini artırırken başka bir kalite hedefinde bedel ödemek",
-      "Sadece kodu kopyalamak",
-      "Sadece dokümantasyonu azaltmak",
-      "Sunucu fiyatını düşürmek"
-    ],
-    a: "Bir kalite hedefini artırırken başka bir kalite hedefinde bedel ödemek",
-    difficulty: "medium",
-    week: 1,
-    topic: "Trade-off",
-    importance: "high",
-    explanation:
-      "Örn: Güvenliği artırmak bazen kullanım kolaylığını azaltabilir. Performansı artırmak bazen geliştirme maliyetini yükseltir. Mimari çoğunlukla bu dengeyi kurma işidir."
-  },
-  {
-    q: "Yüksek bağlılık (high coupling) genellikle hangi sonuca yol açar?",
-    t: "mcq",
-    o: [
-      "Değişikliklerin daha kolay ve risksiz olmasına",
-      "Bir modüldeki değişikliğin diğer modülleri de kırma riskinin artmasına",
-      "Test yazmanın gereksiz hale gelmesine",
-      "Sistemin otomatik ölçeklenmesine",
-      "UI’ın otomatik güzelleşmesine"
-    ],
-    a: "Bir modüldeki değişikliğin diğer modülleri de kırma riskinin artmasına",
-    difficulty: "medium",
-    week: 1,
-    topic: "Coupling",
-    importance: "high",
-    explanation:
-      "Coupling (bağlılık) yüksekse modüller birbirine aşırı bağımlıdır. Bir yerde yapılan değişiklik domino etkisi yaratır. İyi mimari genelde düşük coupling + yüksek cohesion hedefler."
-  },
-  {
-    q: "Yüksek bütünlük (high cohesion) ne demektir?",
-    t: "mcq",
-    o: [
-      "Bir modülün tek bir sorumluluğa odaklanması ve iç işlerinin birbiriyle ilgili olması",
-      "Bir modülün her işi yapması (her şey onda toplanması)",
-      "Modüller arası bağımlılığın artması",
-      "Kodun satır sayısının artması",
-      "Veritabanının silinmesi"
-    ],
-    a: "Bir modülün tek bir sorumluluğa odaklanması ve iç işlerinin birbiriyle ilgili olması",
+    o: ["Güven ve huzur", "Enerji ve tutku", "Sadelik ve nötrlük", "Soğukluk", "Şeffaflık"],
+    a: "Enerji ve tutku",
     difficulty: "easy",
     week: 1,
-    topic: "Cohesion",
-    importance: "high",
-    explanation:
-      "Cohesion (bütünlük) yüksekse modül içindeki parçalar aynı amaç için çalışır. Bu, bakım ve test edilebilirliği artırır. “Her şeyi yapan sınıf” cohesion’ı düşürür."
-  },
-  {
-    q: "“Görünüm (view)” kavramı mimari dokümantasyonda en çok neyi sağlar?",
-    t: "mcq",
-    o: [
-      "Kodu otomatik üretmeyi",
-      "Farklı paydaşların ihtiyacına göre sistemi farklı açılardan anlatmayı",
-      "Sadece ikon çizimini",
-      "Sadece veri tabanı yedeğini",
-      "Sadece ağ hızını ölçmeyi"
-    ],
-    a: "Farklı paydaşların ihtiyacına göre sistemi farklı açılardan anlatmayı",
-    difficulty: "medium",
-    week: 1,
-    topic: "Mimari dokümantasyon - views",
+    topic: "Renk psikolojisi",
     importance: "medium",
     explanation:
-      "Tek bir çizim/doküman herkesin ihtiyacını karşılamaz. Yönetici “büyük resim” ister, geliştirici “bileşen ilişkisi” ister, operasyon “dağıtım topolojisi” ister. View’lar bu nedenle kullanılır."
-  },
-  {
-    q: "Bir mimarinin “bakım yapılabilirliği (maintainability)” artırmak için en doğru yaklaşım hangisidir?",
-    t: "mcq",
-    o: [
-      "Tüm kodu tek dosyada toplamak",
-      "Modülerleştirmek, sorumlulukları ayırmak ve bağımlılıkları azaltmak",
-      "Testleri tamamen kaldırmak",
-      "Dokümantasyon yazmamak",
-      "Değişiklik taleplerini tamamen reddetmek"
-    ],
-    a: "Modülerleştirmek, sorumlulukları ayırmak ve bağımlılıkları azaltmak",
-    difficulty: "easy",
-    week: 1,
-    topic: "Maintainability",
-    importance: "high",
-    explanation:
-      "Bakım yapılabilirlik; yeni özellik ekleme/hata düzeltme işinin hızlı ve güvenli yapılabilmesidir. Modüler yapı + düşük coupling bu hedefin temelidir."
-  },
-  {
-    q: "Güvenilirlik (reliability) ile erişilebilirlik (availability) arasındaki en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "İkisi aynıdır; ikisi de UI ile ilgilidir",
-      "Reliability: doğru çalışmayı sürdürme; Availability: sistemin erişilebilir/ayakta olma oranı",
-      "Reliability: hız; Availability: tasarım",
-      "Reliability: sadece veritabanı; Availability: sadece tarayıcı",
-      "Reliability: dokümantasyon; Availability: kod satırı"
-    ],
-    a: "Reliability: doğru çalışmayı sürdürme; Availability: sistemin erişilebilir/ayakta olma oranı",
-    difficulty: "hard",
-    week: 1,
-    topic: "Kalite nitelikleri - reliability vs availability",
-    importance: "medium",
-    explanation:
-      "Availability ‘çalışır durumda olma yüzdesi’ (uptime) gibi düşünülür. Reliability ise hata yapmadan doğru sonuç üretme ve arızasız çalışma yeteneğidir. Sistem ayakta olabilir ama yanlış sonuç üretiyorsa reliability düşüktür."
-  },
-  {
-    q: "Aşağıdakilerden hangisi mimari kararların “geç değişmesinin” en olası sonucudur?",
-    t: "mcq",
-    o: [
-      "Maliyetin genelde düşmesi",
-      "Değişiklik maliyetinin artması ve daha büyük refactor ihtiyacı",
-      "Test ihtiyacının tamamen bitmesi",
-      "UI’ın otomatik düzelmesi",
-      "Hiçbir etkisi olmaması"
-    ],
-    a: "Değişiklik maliyetinin artması ve daha büyük refactor ihtiyacı",
-    difficulty: "medium",
-    week: 1,
-    topic: "Mimari kararların etkisi",
-    importance: "high",
-    explanation:
-      "Mimari kararlar omurgadır. Geç değişirse birçok bileşen etkilenir, yeniden düzenleme (refactor) büyür, risk artar. Bu yüzden mimari kararların gerekçeli alınması ve kayıt altına alınması önemlidir."
-  },
-  {
-    q: "“Architectural style (mimari stil)” ile “design pattern (tasarım deseni)” arasındaki fark için en doğru seçenek hangisidir?",
-    t: "mcq",
-    o: [
-      "Stil: sistemin genel organizasyonu; Pattern: daha lokal/tekrarlayan problem çözümleri",
-      "Stil: sadece UI; Pattern: sadece veritabanı",
-      "Stil: sadece küçük projelerde; Pattern: sadece büyük projelerde",
-      "İkisi tamamen aynıdır",
-      "Pattern: sistem topolojisi; Stil: kod satırı"
-    ],
-    a: "Stil: sistemin genel organizasyonu; Pattern: daha lokal/tekrarlayan problem çözümleri",
-    difficulty: "hard",
-    week: 1,
-    topic: "Stil vs Pattern",
-    importance: "medium",
-    explanation:
-      "Mimari stil (örn. katmanlı, istemci-sunucu) sistemi üst düzeyde şekillendirir. Tasarım deseni (örn. Singleton, Factory) daha küçük ölçekte tekrar eden tasarım problemlerine çözümdür."
+      "Renkler mesajın tonunu belirler. Kırmızı daha “dinamik/heyecanlı” algılanırken mavi daha “güven/sakinlik” çağrıştırır."
   },
 
   // =========================================================
-  // ==== 2. HAFTA – SDLC & Şelale (Waterfall) (16 Soru) ======
+  // ==== 2) Piksel/Vektör/Çözünürlük + Renk Teorisi (14) =====
   // =========================================================
   {
-    q: "SDLC (Software Development Life Cycle) en doğru hangi ifadeyle açıklanır?",
+    q: "Raster (bitmap/piksel tabanlı) görsellerin en doğru özelliği hangisidir?",
     t: "mcq",
     o: [
-      "Sadece kod yazma süresi",
-      "Bir yazılımın planlama, geliştirme, test ve bakım dahil uçtan uca yaşam döngüsü",
-      "Sadece UI tasarım aşaması",
-      "Sadece veritabanı kurulum süreci",
-      "Sadece sürüm numarası artırma işlemi"
+      "Matematiksel denklemlerle çizilir ve büyütülünce bozulmaz",
+      "Piksellerden oluşur; büyütülürse pikselleşme/bulanıklık oluşabilir",
+      "Sadece logolar için idealdir",
+      "Çözünürlükten bağımsızdır",
+      "Her zaman dosya boyutu çok küçüktür"
     ],
-    a: "Bir yazılımın planlama, geliştirme, test ve bakım dahil uçtan uca yaşam döngüsü",
+    a: "Piksellerden oluşur; büyütülürse pikselleşme/bulanıklık oluşabilir",
     difficulty: "easy",
     week: 2,
-    topic: "SDLC - tanım",
+    topic: "Raster - temel özellik",
     importance: "high",
     explanation:
-      "SDLC; fikirden üretime ve bakıma kadar tüm süreci kapsar. Sadece kod yazmak değil; analiz, tasarım, test, dağıtım ve bakım da bu döngünün parçalarıdır."
+      "Raster görüntü, küçük renk karelerinden (piksel) oluşur. Piksel sayısı sabit olduğu için aşırı büyütme kaliteyi bozar."
   },
   {
-    q: "Şelale (Waterfall) modelinin temel çalışma mantığı aşağıdakilerden hangisidir?",
+    q: "Vektör görsellerin en büyük avantajı aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Aşamalar arasında sürekli geri dönüş yapılır, sıra önemli değildir",
-      "Aşamalar sıralı ilerler; bir aşama bitmeden diğeri başlatılmaz (genel yaklaşım)",
-      "Sadece prototip üretmeye dayanır",
-      "Test tamamen kaldırılır",
-      "Her gün yeni sürüm yayınlanır"
+      "Fotoğraf kalitesini artırması",
+      "Ne kadar büyütülürse büyütülsün kalite kaybetmemesi",
+      "Sadece 256 renk desteklemesi",
+      "Her zaman JPEG olarak kaydedilmesi",
+      "Sadece piksel tabanlı olması"
     ],
-    a: "Aşamalar sıralı ilerler; bir aşama bitmeden diğeri başlatılmaz (genel yaklaşım)",
+    a: "Ne kadar büyütülürse büyütülsün kalite kaybetmemesi",
     difficulty: "easy",
     week: 2,
-    topic: "Waterfall - temel mantık",
+    topic: "Vektör - avantaj",
     importance: "high",
     explanation:
-      "Waterfall; analiz → tasarım → geliştirme → test → dağıtım → bakım gibi sıralı ilerlemeyi hedefler. Pratikte geri dönüş olabilir ama modelin ana fikri ‘aşamaları tamamlayarak ilerleme’dir."
+      "Vektör; çizgi/şekilleri matematiksel olarak tanımlar. Bu yüzden ölçekleme görüntüyü bozmaz; logo/ikon/teknik çizim için idealdir."
   },
   {
-    q: "Waterfall modelinin en güçlü olduğu senaryo aşağıdakilerden hangisidir?",
+    q: "Bir fotoğrafı çok büyütünce bozulmasının temel nedeni hangisidir?",
     t: "mcq",
     o: [
-      "Gereksinimlerin çok sık değiştiği belirsiz projeler",
-      "Gereksinimlerin baştan net olduğu ve değişimin az beklendiği projeler",
-      "Kullanıcıyla hiç iletişim kurulamayan ama sürekli yeni fikir gelen projeler",
-      "Her gün ürünün yön değiştirdiği startup projeleri",
-      "Sadece UI denemeleri yapılan deneysel projeler"
+      "Fotoğraflar vektördür",
+      "Çözünürlük sabittir; piksel sayısı yetmediği için pikseller büyütülür",
+      "RGB modu bozar",
+      "CMYK modu bozar",
+      "Katman sayısı azdır"
     ],
-    a: "Gereksinimlerin baştan net olduğu ve değişimin az beklendiği projeler",
+    a: "Çözünürlük sabittir; piksel sayısı yetmediği için pikseller büyütülür",
     difficulty: "medium",
     week: 2,
-    topic: "Waterfall - uygunluk",
+    topic: "Çözünürlük - büyütme",
     importance: "high",
     explanation:
-      "Waterfall, net ve sabit gereksinimlerde daha rahattır çünkü planlama ve dokümantasyon fazladır. Gereksinim sürekli değişiyorsa model zorlanır; değişiklik maliyeti artar."
+      "800x600 gibi sabit piksel sayısı olan görüntüyü 2000 px ölçeğe zorlayınca sistem “yeni detay üretemez”; pikseller yayılır ve görüntü yumuşar/pikselleşir."
   },
   {
-    q: "“Gereksinim analizi” aşamasının ana çıktısı (deliverable) aşağıdakilerden hangisidir?",
+    q: "Aşağıdaki programlardan hangisi piksel tabanlı düzenleme için en yaygın kullanılan örnektir?",
     t: "mcq",
-    o: [
-      "Çalışan uygulama (APK/EXE)",
-      "Gereksinim dokümanı (SRS gibi) ve kabul kriterleri",
-      "Sadece veritabanı yedeği",
-      "Sadece UI ikon seti",
-      "Sadece sunucu log dosyası"
-    ],
-    a: "Gereksinim dokümanı (SRS gibi) ve kabul kriterleri",
+    o: ["Adobe Photoshop", "Adobe Illustrator", "CorelDRAW", "Inkscape", "Figma (sadece vektör)"],
+    a: "Adobe Photoshop",
     difficulty: "easy",
     week: 2,
-    topic: "SDLC - gereksinim çıktısı",
+    topic: "Raster yazılımı",
     importance: "high",
     explanation:
-      "Analizin amacı ‘ne yapılacak’ı netleştirmektir. Bu yüzden çıktı çoğunlukla gereksinim dokümanıdır. Kabul kriterleri de ‘bitti sayılması için ne olmalı’ sorusunu netleştirir."
+      "Photoshop, raster/piksel tabanlı düzenleme için endüstri standardı örneklerden biridir (fotoğraf düzenleme, kolaj, retouch)."
   },
   {
-    q: "Doğrulama (verification) ile geçerleme/validasyon (validation) arasındaki en doğru ayrım hangisidir?",
+    q: "Aşağıdakilerden hangisi vektör tabanlı çalışma için tipik bir programdır?",
     t: "mcq",
-    o: [
-      "Verification: doğru ürünü yapmak; Validation: ürünü doğru yapmak",
-      "Verification: spesifikasyona uygun mu? Validation: gerçekten ihtiyaç mı?",
-      "Verification sadece UI içindir; Validation sadece veritabanı içindir",
-      "İkisi aynı kavramdır",
-      "Validation: derleme; Verification: internet bağlantısı"
-    ],
-    a: "Verification: spesifikasyona uygun mu? Validation: gerçekten ihtiyaç mı?",
-    difficulty: "hard",
-    week: 2,
-    topic: "Verification vs Validation",
-    importance: "medium",
-    explanation:
-      "Verification ‘dokümana uygun yaptın mı?’ (spesifikasyon kontrolü) sorusudur. Validation ‘kullanıcının ihtiyacını karşılıyor mu?’ sorusudur. Sınavlarda çok karıştırılır."
-  },
-  {
-    q: "Waterfall modelinde en sık eleştirilen risklerden biri aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Erken aşamada çalışan ürün görülmesi",
-      "Hataların ve yanlış anlaşılmaların geç fark edilmesi",
-      "Sürekli kullanıcı geri bildirimi alınması",
-      "Her sprint sonunda demo yapılması",
-      "WIP limitlerinin aşılması"
-    ],
-    a: "Hataların ve yanlış anlaşılmaların geç fark edilmesi",
-    difficulty: "medium",
-    week: 2,
-    topic: "Waterfall - dezavantaj",
-    importance: "high",
-    explanation:
-      "Çalışan ürün genelde geç ortaya çıktığı için kullanıcı ‘böyle istememiştim’ dediğinde dönüş maliyeti yükselir. Bu yüzden Waterfall’da yanlış anlaşılma riski daha geç görünür."
-  },
-  {
-    q: "Aşağıdakilerden hangisi SDLC’de “bakım (maintenance)” kapsamına girer?",
-    t: "mcq",
-    o: [
-      "İlk gereksinim toplantısını yapmak",
-      "Yeni çıkan işletim sistemi sürümüne uyum için düzenleme yapmak",
-      "İlk tasarım diyagramlarını çizmek",
-      "İlk kodu yazmak",
-      "İlk prototipi hazırlamak"
-    ],
-    a: "Yeni çıkan işletim sistemi sürümüne uyum için düzenleme yapmak",
+    o: ["Adobe Illustrator", "Adobe Photoshop", "Lightroom", "Paint", "Notepad"],
+    a: "Adobe Illustrator",
     difficulty: "easy",
     week: 2,
-    topic: "Bakım - kapsam",
-    importance: "medium",
-    explanation:
-      "Bakım, sistem yayınlandıktan sonra devam eder: hata düzeltme, ortama uyum (adaptation), performans iyileştirme, güvenlik güncellemesi vb."
-  },
-  {
-    q: "Aşağıdakilerden hangisi “düzeltici bakım” (corrective maintenance) örneğidir?",
-    t: "mcq",
-    o: [
-      "Sistemi yeni bir mevzuata uydurmak",
-      "Ürün arama ekranına filtre eklemek",
-      "Prod ortamında bulunan bir hatayı (bug) düzeltmek",
-      "Kodun okunabilirliğini artırmak için yeniden düzenlemek",
-      "Sunucu sayısını artırmak"
-    ],
-    a: "Prod ortamında bulunan bir hatayı (bug) düzeltmek",
-    difficulty: "easy",
-    week: 2,
-    topic: "Bakım türleri - corrective",
+    topic: "Vektör yazılımı",
     importance: "high",
     explanation:
-      "Corrective bakım = hata düzeltme. Kullanıcı ‘şu ekranda hata veriyor’ dediğinde yapılan düzeltme bu sınıfa girer."
+      "Illustrator/CorelDRAW/Inkscape gibi araçlar vektör üretir. Vektör; logo, ikon, infografik gibi keskin kenarlı işler için uygundur."
   },
   {
-    q: "Aşağıdakilerden hangisi “uyarlayıcı bakım” (adaptive maintenance) örneğidir?",
+    q: "Çözünürlük (resolution) en doğru neyi ifade eder?",
     t: "mcq",
     o: [
-      "Kullanıcı şikayetini analiz etmek",
-      "Yeni Android sürümünde bozulmaması için uyumluluk güncellemesi yapmak",
-      "Ödeme akışına yeni kampanya eklemek",
-      "Kodun karmaşıklığını azaltmak için refactor yapmak",
-      "Yeni test aracı kurmak"
+      "Dosyanın adını",
+      "Görseldeki piksel yoğunluğunu (ppi/dpi gibi ölçülerle)",
+      "Sadece renk sayısını",
+      "Sadece katman sayısını",
+      "Sadece ekran parlaklığını"
     ],
-    a: "Yeni Android sürümünde bozulmaması için uyumluluk güncellemesi yapmak",
-    difficulty: "medium",
-    week: 2,
-    topic: "Bakım türleri - adaptive",
-    importance: "medium",
-    explanation:
-      "Adaptive bakım = çevre değişimine uyum. OS sürümü, kütüphane, altyapı, donanım değişir; sistemin çalışması için uyarlama yapılır."
-  },
-  {
-    q: "Waterfall modelinde “değişiklik maliyeti” neden genellikle projede ilerledikçe artar?",
-    t: "mcq",
-    o: [
-      "Çünkü kod satırı sayısı azalır",
-      "Çünkü daha fazla bileşen ve bağımlılık oluşur; değişiklik daha çok yeri etkiler",
-      "Çünkü test sayısı azalır",
-      "Çünkü dokümantasyon hiç yoktur",
-      "Çünkü kullanıcı sayısı sıfıra iner"
-    ],
-    a: "Çünkü daha fazla bileşen ve bağımlılık oluşur; değişiklik daha çok yeri etkiler",
-    difficulty: "medium",
-    week: 2,
-    topic: "Değişiklik maliyeti",
-    importance: "high",
-    explanation:
-      "Projede ilerledikçe tasarım kararları, kod, testler, entegrasyonlar artar. Erken bir gereksinim değişikliği geç fark edilirse birçok modül yeniden düzenlenir; maliyet büyür."
-  },
-  {
-    q: "“İzlenebilirlik (traceability)” kavramı SDLC’de en çok neyi sağlar?",
-    t: "mcq",
-    o: [
-      "Her gereksinimin tasarım, kod ve test ile ilişkilendirilebilmesini",
-      "Sadece ekran renklerinin tutulmasını",
-      "Sadece sunucu maliyetinin hesaplanmasını",
-      "Sadece derleme hızının artmasını",
-      "Kullanıcı şifresinin otomatik değişmesini"
-    ],
-    a: "Her gereksinimin tasarım, kod ve test ile ilişkilendirilebilmesini",
-    difficulty: "hard",
-    week: 2,
-    topic: "Traceability",
-    importance: "medium",
-    explanation:
-      "Traceability; ‘bu gereksinim nerede karşılandı, hangi test bunu doğruluyor?’ sorusunu cevaplar. Büyük projelerde eksik/unutulan gereksinimleri yakalamada kritik rol oynar."
-  },
-  {
-    q: "Aşağıdakilerden hangisi “teslim edilebilir (deliverable)” kavramına en uygun örnektir?",
-    t: "mcq",
-    o: [
-      "Geliştiricinin kişisel not defteri",
-      "Sprintte konuşulan ama yazılmayan fikir",
-      "Gereksinim dokümanı, tasarım diyagramı, çalışan modül gibi resmi proje çıktısı",
-      "Rastgele internet sayfası linki",
-      "Sadece ekip içi sohbet mesajları"
-    ],
-    a: "Gereksinim dokümanı, tasarım diyagramı, çalışan modül gibi resmi proje çıktısı",
+    a: "Görseldeki piksel yoğunluğunu (ppi/dpi gibi ölçülerle)",
     difficulty: "easy",
     week: 2,
-    topic: "Deliverable",
-    importance: "medium",
-    explanation:
-      "Deliverable; proje sonunda veya aşama sonunda ‘teslim edilebilir’ somut çıktıdır. Doküman, çalışan yazılım parçası, test raporu vb. olabilir."
-  },
-  {
-    q: "Sürüm kontrolü (version control) SDLC’de en çok hangi problemi azaltır?",
-    t: "mcq",
-    o: [
-      "Aynı kod üzerinde yapılan değişikliklerin kaybolması/çakışması ve geri dönüşün zor olması",
-      "UI tasarımının otomatik çizilmemesi",
-      "Sunucu internetinin yavaş olması",
-      "Kullanıcıların şifreyi unutması",
-      "Veritabanının hiç büyümemesi"
-    ],
-    a: "Aynı kod üzerinde yapılan değişikliklerin kaybolması/çakışması ve geri dönüşün zor olması",
-    difficulty: "easy",
-    week: 2,
-    topic: "Version Control",
+    topic: "Çözünürlük - tanım",
     importance: "high",
     explanation:
-      "Git gibi araçlar kim neyi ne zaman değiştirdiğini kayıt eder, çakışmaları yönetir ve gerekirse önceki sürüme geri dönmeyi sağlar. Takım çalışmasının omurgasıdır."
+      "Resolution; bir alana kaç piksel/dot düştüğünü ifade eder. Piksel yoğunluğu arttıkça detay ve netlik artar."
   },
   {
-    q: "Aşağıdakilerden hangisi “kabul testi (acceptance test)” için en doğru ifadedir?",
+    q: "Baskı işleri için ideal çözünürlük genellikle kaç dpi olarak kabul edilir?",
     t: "mcq",
-    o: [
-      "Sadece geliştiricinin kendi yazdığı birim testi",
-      "Sistemin kullanıcı/iş gereksinimlerini karşılayıp karşılamadığını doğrulayan test",
-      "Sadece performans testi",
-      "Sadece veritabanı testi",
-      "Sadece UI renk testi"
-    ],
-    a: "Sistemin kullanıcı/iş gereksinimlerini karşılayıp karşılamadığını doğrulayan test",
-    difficulty: "medium",
+    o: ["72 dpi", "150 dpi", "300 dpi", "6000 dpi", "10 dpi"],
+    a: "300 dpi",
+    difficulty: "easy",
     week: 2,
-    topic: "Test - acceptance",
-    importance: "medium",
+    topic: "Baskı çözünürlüğü",
+    importance: "high",
     explanation:
-      "Acceptance test ‘müşteri bunu kabul eder mi?’ sorusuna cevap verir. Genellikle kullanıcı senaryoları ve kabul kriterleri üzerinden yapılır."
+      "Baskıda detay kaybı istemeyiz. Yaygın kural: baskı için 300 dpi; ekran için çoğu basit senaryoda 72 dpi yeterli görülebilir."
   },
   {
-    q: "Waterfall modelinde dokümantasyonun ağır olmasının en doğru avantajı hangisidir?",
+    q: "Ekran görüntüleri için ders notlarında “genellikle yeterli” olarak verilen dpi değeri hangisidir?",
     t: "mcq",
-    o: [
-      "Sistemi kimse anlamasın diye",
-      "Ekip değişse bile bilgi kaybını azaltması ve resmi gereksinim/tasarım kaydı oluşturması",
-      "Testin tamamen kaldırılmasını sağlaması",
-      "Kodu otomatik yazması",
-      "Dağıtımı tamamen ortadan kaldırması"
-    ],
-    a: "Ekip değişse bile bilgi kaybını azaltması ve resmi gereksinim/tasarım kaydı oluşturması",
-    difficulty: "medium",
+    o: ["72 dpi", "300 dpi", "1200 dpi", "1 dpi", "960 dpi"],
+    a: "72 dpi",
+    difficulty: "easy",
     week: 2,
-    topic: "Dokümantasyon - fayda",
+    topic: "Ekran çözünürlüğü",
     importance: "medium",
     explanation:
-      "Dokümantasyon, özellikle kurumsal projelerde ‘kalıcı hafıza’ gibi çalışır. Yeni gelen kişi sistemi daha hızlı anlayabilir; kararlar izlenebilir olur."
+      "Ekran işleri baskıya göre daha düşük piksel yoğunluğu beklentisiyle yürütülebilir. Bu yüzden klasik ders notlarında 72 dpi referansı sık geçer."
+  },
+  {
+    q: "Aşağıdaki dosya uzantılarından hangisi vektör formatına örnektir?",
+    t: "mcq",
+    o: [".SVG", ".JPG", ".PNG", ".GIF", ".TIFF"],
+    a: ".SVG",
+    difficulty: "easy",
+    week: 2,
+    topic: "Vektör format",
+    importance: "high",
+    explanation:
+      "SVG ölçeklenebilir vektör grafiktir. AI/EPS de tipik vektör formatlarıdır. JPG/PNG/GIF/TIFF raster ağırlıklıdır."
+  },
+  {
+    q: "Renk teorisinde ana (primary) renkler hangileridir?",
+    t: "mcq",
+    o: [
+      "Kırmızı, Mavi, Sarı",
+      "Turuncu, Yeşil, Mor",
+      "Siyah, Beyaz, Gri",
+      "Cyan, Magenta, Yellow",
+      "Kırmızı, Yeşil, Mavi"
+    ],
+    a: "Kırmızı, Mavi, Sarı",
+    difficulty: "easy",
+    week: 2,
+    topic: "Renk teorisi - ana renkler",
+    importance: "high",
+    explanation:
+      "Ders notunda renk çemberi için ana renkler kırmızı-mavi-sarı olarak anlatılıyor. Bunların karışımı ara renkleri verir."
+  },
+  {
+    q: "Kırmızı + Sarı karışımı hangi ara (secondary) rengi verir?",
+    t: "mcq",
+    o: ["Mor", "Yeşil", "Turuncu", "Cyan", "Magenta"],
+    a: "Turuncu",
+    difficulty: "easy",
+    week: 2,
+    topic: "Renk karışımı",
+    importance: "high",
+    explanation:
+      "Ara renk örnekleri: Kırmızı+Sarı=Turuncu, Mavi+Sarı=Yeşil, Kırmızı+Mavi=Mor."
+  },
+  {
+    q: "Renk çemberinde birbirinin karşısında olan renklere ne denir?",
+    t: "mcq",
+    o: ["Analogous (benzer)", "Tamamlayıcı (complementary)", "Monokrom", "Gri ton", "Raster"],
+    a: "Tamamlayıcı (complementary)",
+    difficulty: "medium",
+    week: 2,
+    topic: "Renk çemberi - tamamlayıcı",
+    importance: "high",
+    explanation:
+      "Karşıt (tamamlayıcı) renkler yüksek kontrast verir ve dikkat çeker. Bu nedenle reklamda sık kullanılır (örn: kırmızı-yeşil, mavi-turuncu)."
+  },
+  {
+    q: "Mavi–turkuaz–yeşil gibi yan yana tonların birlikte kullanımı hangi renk ilişkisine örnektir?",
+    t: "mcq",
+    o: ["Tamamlayıcı", "Benzer (analogous)", "Triadik", "Split-complementary", "Rastgele"],
+    a: "Benzer (analogous)",
+    difficulty: "medium",
+    week: 2,
+    topic: "Renk ilişkileri - analogous",
+    importance: "medium",
+    explanation:
+      "Benzer renkler renk çemberinde yan yana durur ve daha yumuşak/uyumlu atmosfer verir. Tamamlayıcılar ise daha sert kontrast üretir."
   },
 
   // =========================================================
-  // ==== 3. HAFTA – Prototipleme, Iteratif/Artımlı, Agile (17)
+  // ==== 3) Renk Modları + Renk Uzayları + Cihaz Farkı (10) ===
   // =========================================================
   {
-    q: "Prototip (prototype) oluşturmanın en temel amacı aşağıdakilerden hangisidir?",
+    q: "RGB renk modu en çok hangi ortam için uygundur?",
     t: "mcq",
-    o: [
-      "Sistemi %100 bitmiş halde teslim etmek",
-      "Kullanıcı ihtiyacını ve tasarım doğruluğunu erken doğrulamak (erken geri bildirim)",
-      "Testleri tamamen kaldırmak",
-      "Sadece veritabanını kurmak",
-      "Kod standardını zorunlu kılmak"
-    ],
-    a: "Kullanıcı ihtiyacını ve tasarım doğruluğunu erken doğrulamak (erken geri bildirim)",
+    o: ["Matbaa baskı", "Dijital ekranlar (telefon/TV/monitor)", "Gazete kağıdı", "Serigrafi baskı", "Lazer kesim"],
+    a: "Dijital ekranlar (telefon/TV/monitor)",
     difficulty: "easy",
     week: 3,
-    topic: "Prototip - amaç",
+    topic: "RGB - kullanım",
     importance: "high",
     explanation:
-      "Prototip ‘deneme sürümü’dür. Amaç en başta mükemmel ürünü bitirmek değil; yanlış anlaşılmaları erken yakalamak, kullanıcıya somut bir şey gösterip geri bildirim almaktır."
+      "RGB ışık tabanlıdır ve ekranlar ışık yayarak renk oluşturur. Bu yüzden dijital tasarımlarda RGB seçilir."
   },
   {
-    q: "“Atılabilir prototip” (throwaway prototype) için en doğru ifade hangisidir?",
+    q: "CMYK renk modu en çok hangi ortam için uygundur?",
     t: "mcq",
-    o: [
-      "Prototip üretilir ve aynı kod doğrudan production’a alınır",
-      "Prototip yalnızca ihtiyaçları netleştirmek için yapılır, sonra çöpe atılıp asıl sistem sıfırdan doğru şekilde geliştirilir",
-      "Prototip sadece performans ölçer",
-      "Prototip sadece veritabanı yedeği üretir",
-      "Prototip yapmak kesinlikle yasaktır"
-    ],
-    a: "Prototip yalnızca ihtiyaçları netleştirmek için yapılır, sonra çöpe atılıp asıl sistem sıfırdan doğru şekilde geliştirilir",
-    difficulty: "medium",
-    week: 3,
-    topic: "Prototip türleri - throwaway",
-    importance: "high",
-    explanation:
-      "Throwaway prototip ‘öğrenmek’ içindir. Hızlıca yapılır, geri bildirim alınır, sonra o acele kodun üretim sistemine taşınmaması için atılır. Ama öğrenilenler asıl sisteme aktarılır."
-  },
-  {
-    q: "“Evrimsel prototip” (evolutionary prototype) yaklaşımı neyi anlatır?",
-    t: "mcq",
-    o: [
-      "Prototip asla değişmez",
-      "Prototip zamanla geliştirilerek gerçek ürüne dönüşür (artımlarla olgunlaşır)",
-      "Prototip sadece çizim olarak kalır, kod yazılmaz",
-      "Prototip sadece test için kullanılır, kullanıcı görmez",
-      "Prototip yalnızca bir gün çalışır"
-    ],
-    a: "Prototip zamanla geliştirilerek gerçek ürüne dönüşür (artımlarla olgunlaşır)",
+    o: ["Telefon ekranı", "Web sitesi", "Baskı (dergi/broşür/afiş)", "Video oyunu", "Ekran görüntüsü"],
+    a: "Baskı (dergi/broşür/afiş)",
     difficulty: "easy",
     week: 3,
-    topic: "Prototip türleri - evolutionary",
+    topic: "CMYK - kullanım",
     importance: "high",
     explanation:
-      "Evolutionary prototipte ortaya çıkan sürüm ‘atılmaz’; sürekli iyileştirilir. Böylece ürün, kullanıcı geri bildirimiyle büyüyerek gerçek sisteme dönüşür."
+      "CMYK pigment/mürekkep tabanlıdır. Basılı işler için kullanılır. Dijitalde RGB, baskıda CMYK temel kuraldır."
   },
   {
-    q: "PoC (Proof of Concept) ile prototip arasındaki en doğru ayrım hangisidir?",
+    q: "RGB sisteminde üç ana ışık rengi birleştiğinde hangi sonuç oluşur?",
+    t: "mcq",
+    o: ["Siyah", "Beyaz", "Gri", "Kahverengi", "Yeşil"],
+    a: "Beyaz",
+    difficulty: "easy",
+    week: 3,
+    topic: "RGB - additif",
+    importance: "medium",
+    explanation:
+      "RGB additif (ekleme) modelidir: ışık eklendikçe renk açılır. Kırmızı+Yeşil+Mavi birleşince beyaz ışık oluşur."
+  },
+  {
+    q: "CMYK modeline “Subtractive (çıkarma)” denmesinin temel nedeni hangisidir?",
     t: "mcq",
     o: [
-      "PoC: “bu teknik olarak mümkün mü?”; Prototip: “kullanıcı bunu nasıl deneyimler?”",
-      "PoC: UI makyajı; Prototip: sadece veritabanı",
-      "PoC: yalnızca test; Prototip: yalnızca deploy",
-      "İkisi tamamen aynıdır",
-      "Prototip: teknik kanıt; PoC: kullanıcı akışı"
+      "Işık ekledikçe beyaza yaklaşması",
+      "Pigmentlerin ışığı emmesi; renk karıştıkça yansıyan ışığın azalması ve rengin koyulaşması",
+      "Sadece siyah-beyaz çalışması",
+      "Ekranlar için tasarlanması",
+      "Çözünürlüğü artırması"
     ],
-    a: "PoC: “bu teknik olarak mümkün mü?”; Prototip: “kullanıcı bunu nasıl deneyimler?”",
+    a: "Pigmentlerin ışığı emmesi; renk karıştıkça yansıyan ışığın azalması ve rengin koyulaşması",
     difficulty: "hard",
     week: 3,
-    topic: "PoC vs Prototip",
-    importance: "medium",
-    explanation:
-      "PoC teknik risk azaltır: ‘Bu entegrasyon olur mu? Bu algoritma yeterli mi?’ gibi. Prototip ise genelde kullanıcı akışı/arayüz ve gereksinim doğrulamasına hizmet eder."
-  },
-  {
-    q: "Iteratif (iterative) geliştirme yaklaşımının ana fikri aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Tek seferde tüm sistemi tamamlamak",
-      "Aynı özelliği döngülerle iyileştirerek olgunlaştırmak (yap → değerlendir → düzelt)",
-      "Testi tamamen en sona bırakmak",
-      "Sadece dokümantasyon üretmek",
-      "Değişiklik taleplerini reddetmek"
-    ],
-    a: "Aynı özelliği döngülerle iyileştirerek olgunlaştırmak (yap → değerlendir → düzelt)",
-    difficulty: "easy",
-    week: 3,
-    topic: "Iteratif model",
+    topic: "CMYK - subtractive mantık",
     importance: "high",
     explanation:
-      "Iteratif yaklaşımda aynı kapsam tekrar tekrar elden geçirilir: ilk sürüm basit olur, sonra kullanıcı geri bildirimiyle iyileşir. Amaç ‘mükemmel ilk sefer’ değil, ‘sürekli iyileştirme’dir."
+      "CMYK’da mürekkepler ışığı “yutar”. Daha çok pigment → daha az yansıma → daha koyu sonuç. Bu yüzden subtractive denir."
   },
   {
-    q: "Artımlı (incremental) geliştirme yaklaşımı en doğru neyi ifade eder?",
+    q: "Ekranlarda aynı fotoğrafın farklı görünmesinin en temel nedeni aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Ürünün tek seferde teslim edilmesini",
-      "Ürünün parça parça yeni özellikler eklenerek büyütülmesini",
-      "Sadece UI tasarımını",
-      "Sadece performans testini",
-      "Sadece bakım süreçlerini"
+      "Her cihaz aynı renk uzayını kullanır",
+      "Cihazlar farklı renk uzayları/kalibrasyonlar kullandığı için renkleri farklı yorumlayabilir",
+      "Fotoğraflar vektördür",
+      "PNG formatı renkleri değiştirir",
+      "Katman sayısı azdır"
     ],
-    a: "Ürünün parça parça yeni özellikler eklenerek büyütülmesini",
-    difficulty: "easy",
-    week: 3,
-    topic: "Artımlı model",
-    importance: "high",
-    explanation:
-      "Incremental ‘özellik ekleyerek büyütmek’tir. İlk teslim çekirdek olabilir; sonra her artımda yeni modül/özellik eklenir."
-  },
-  {
-    q: "Iteratif ve artımlı geliştirme arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "Iteratif: aynı parçayı iyileştirir; Artımlı: yeni parçalar ekler",
-      "Iteratif: sadece test; Artımlı: sadece analiz",
-      "Artımlı: geri bildirim almaz; Iteratif: hiç kod yazmaz",
-      "İkisi aynı şeydir",
-      "Iteratif: sadece UI; Artımlı: sadece veritabanı"
-    ],
-    a: "Iteratif: aynı parçayı iyileştirir; Artımlı: yeni parçalar ekler",
+    a: "Cihazlar farklı renk uzayları/kalibrasyonlar kullandığı için renkleri farklı yorumlayabilir",
     difficulty: "medium",
     week: 3,
-    topic: "Iteratif vs Incremental",
+    topic: "Renk uzayı - cihaz farkı",
     importance: "high",
     explanation:
-      "Iterative = aynı özelliği sürüm sürüm iyileştirme. Incremental = kapsamı büyütme (yeni özellik ekleme). Pratikte çoğu proje ikisini birlikte kullanır."
+      "Ekranlar genelde RGB’de olsa bile renk uzayı (sRGB/Adobe RGB) ve kalibrasyon farkları tonu değiştirir. Yazıcılar ise CMYK ve ayrı profillerle çalışır."
   },
   {
-    q: "MVP (Minimum Viable Product) kavramı en doğru hangi amaçla kullanılır?",
+    q: "Web ve ekran görüntüleri için en yaygın renk uzayı hangisidir?",
     t: "mcq",
-    o: [
-      "Ürünün tüm özelliklerini baştan bitirmek",
-      "En az özellik ile piyasaya çıkıp gerçek kullanıcıdan öğrenmek",
-      "Sadece dokümantasyon yazmak",
-      "Testleri kaldırmak",
-      "Veritabanını tamamen kapatmak"
-    ],
-    a: "En az özellik ile piyasaya çıkıp gerçek kullanıcıdan öğrenmek",
+    o: ["sRGB", "Adobe RGB", "Lab", "CMYK", "TIFF RGB+"],
+    a: "sRGB",
     difficulty: "easy",
     week: 3,
-    topic: "MVP",
+    topic: "Renk uzayı - sRGB",
     importance: "high",
     explanation:
-      "MVP ‘minimum ama işe yarar’ sürümdür. Amaç, büyük yatırım yapmadan önce kullanıcı davranışıyla doğrulama yapmaktır: ‘Bu ürün gerçekten isteniyor mu?’"
+      "sRGB, web ve çoğu ekran senaryosunda standart kabul edilir. Cihazlar arası tutarlılığı artırmak için yaygındır."
   },
   {
-    q: "User Story (Kullanıcı Hikayesi) ifadesi genellikle hangi kalıpla yazılır?",
+    q: "Adobe RGB renk uzayının en belirgin avantajı hangisidir?",
     t: "mcq",
     o: [
-      "Sadece teknik görev listesi şeklinde",
-      "“As a …, I want …, so that …” (Ben … olarak … istiyorum, çünkü …)",
-      "Sadece UML sınıf diyagramı ile",
-      "Sadece SQL sorgusu olarak",
-      "Sadece log çıktısı olarak"
+      "sRGB’den daha dar renk gamı sunması",
+      "Daha geniş renk gamı sunarak profesyonel fotoğraf/baskıda avantaj sağlaması",
+      "Sadece siyah-beyaz çalışması",
+      "Sadece GIF üretmesi",
+      "Sadece düşük kalite için kullanılması"
     ],
-    a: "“As a …, I want …, so that …” (Ben … olarak … istiyorum, çünkü …)",
-    difficulty: "easy",
-    week: 3,
-    topic: "Agile - User Story",
-    importance: "medium",
-    explanation:
-      "Bu kalıp, ‘kim’ (rol), ‘ne’ (ihtiyaç) ve ‘neden’ (değer) bilgilerini tek cümlede toplar. Böylece işin amacı netleşir."
-  },
-  {
-    q: "Acceptance Criteria (kabul kriteri) en doğru neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Kodun kaç satır olacağını",
-      "Bir işin “tamamlandı sayılması” için objektif şartlarını",
-      "Sunucunun marka modelini",
-      "UI renk paletini",
-      "Sürüm numarasını"
-    ],
-    a: "Bir işin “tamamlandı sayılması” için objektif şartlarını",
+    a: "Daha geniş renk gamı sunarak profesyonel fotoğraf/baskıda avantaj sağlaması",
     difficulty: "medium",
     week: 3,
-    topic: "Agile - Acceptance Criteria",
-    importance: "high",
-    explanation:
-      "Kabul kriteri; “bitti mi?” tartışmasını azaltır. Örn: ‘Doğru şifre girilince giriş yapılmalı, yanlış şifreye hata mesajı çıkmalı, 3 denemede kilitlenmeli’ gibi net şartlar koyar."
-  },
-  {
-    q: "Backlog kavramı en doğru hangi tanıma karşılık gelir?",
-    t: "mcq",
-    o: [
-      "Tamamlanmış işlerin arşivi",
-      "Yapılacak işlerin (özellik, hata, iyileştirme) öncelikli listesi",
-      "Sadece test sonuçları",
-      "Sadece kullanıcı şikayetleri",
-      "Sadece sunucu logları"
-    ],
-    a: "Yapılacak işlerin (özellik, hata, iyileştirme) öncelikli listesi",
-    difficulty: "easy",
-    week: 3,
-    topic: "Agile - Backlog",
-    importance: "high",
-    explanation:
-      "Backlog; ürün için yapılacak her şeyin listesi gibi düşünülür. Önceliklendirme sayesinde ekip ‘önce en değerli işi yapar’ mantığıyla ilerler."
-  },
-  {
-    q: "Agile yaklaşımın “değişime tepki” (responding to change) ilkesinin pratik sonucu hangisidir?",
-    t: "mcq",
-    o: [
-      "Plan asla değişmez; her şey baştan sabitlenir",
-      "Gereksinim değişirse süreç bunu yönetebilir; değerli değişiklikler planı günceller",
-      "Dokümantasyon tamamen yasaktır",
-      "Test yapmak gereksizdir",
-      "Sürüm kontrolü kullanılmaz"
-    ],
-    a: "Gereksinim değişirse süreç bunu yönetebilir; değerli değişiklikler planı günceller",
-    difficulty: "medium",
-    week: 3,
-    topic: "Agile - değişim",
+    topic: "Renk uzayı - Adobe RGB",
     importance: "medium",
     explanation:
-      "Agile ‘değişiklik kötü’ demez; ‘değişiklik olacak, yönetelim’ der. Ama bu sınırsız değişiklik demek değildir: değer/öncelik hesabıyla plan güncellenir."
+      "Adobe RGB, sRGB’ye göre daha geniş renk aralığı sağlar. Profesyonel fotoğrafçılık ve baskı işlerinde tercih edilebilir."
   },
   {
-    q: "Timeboxing (zaman kutulama) yaklaşımının temel amacı aşağıdakilerden hangisidir?",
+    q: "Lab (CIE Lab) renk modeli için en doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Bir işi sonsuza kadar uzatmak",
-      "Süreyi sabitleyip kapsamı buna göre ayarlayarak odaklanmak",
-      "Testleri iptal etmek",
-      "Kod kalitesini düşürmek",
-      "Sadece rapor üretmek"
+      "Cihaza bağımlıdır ve sadece telefonlarda çalışır",
+      "İnsan gözünün algısına dayalı, cihazdan bağımsız bir renk modelidir",
+      "Sadece CMYK’nın farklı adıdır",
+      "Sadece 256 renk destekler",
+      "Sadece vektörlerde kullanılır"
     ],
-    a: "Süreyi sabitleyip kapsamı buna göre ayarlayarak odaklanmak",
-    difficulty: "medium",
-    week: 3,
-    topic: "Timeboxing",
-    importance: "medium",
-    explanation:
-      "Timebox = ‘2 hafta içinde şu kadar işi bitirelim’ mantığı. Süre sabitlenir; sığmayan iş bir sonraya kalır. Bu, kontrolsüz uzamayı engeller ve ekipte odak yaratır."
-  },
-  {
-    q: "Continuous Integration (CI) yaklaşımının en temel faydası aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Kod değişikliklerini uzun süre biriktirip en sonda birleştirmek",
-      "Sık entegrasyon yaparak entegrasyon hatalarını erken yakalamak",
-      "Sadece UI çizmek",
-      "Sadece veritabanı yedeği almak",
-      "Gereksinim yazmayı kaldırmak"
-    ],
-    a: "Sık entegrasyon yaparak entegrasyon hatalarını erken yakalamak",
+    a: "İnsan gözünün algısına dayalı, cihazdan bağımsız bir renk modelidir",
     difficulty: "hard",
     week: 3,
-    topic: "CI - amaç",
+    topic: "Renk uzayı - Lab",
     importance: "medium",
     explanation:
-      "CI; küçük değişiklikleri sık sık ana dala entegre eder, otomatik build/test çalıştırır. Böylece “son gün birleştirme felaketi” azalır; hatalar erken görülür."
+      "Lab, cihazdan bağımsız bir referans gibidir. Renk dönüşümlerinde ‘algısal’ yaklaşım sağlamak için kullanılabilir; profesyonel iş akışlarında önemlidir."
   },
   {
-    q: "Refactoring (yeniden düzenleme) için en doğru ifade hangisidir?",
+    q: "RGB’de “kırmızı ışık + yeşil ışık” birleşince hangi renk oluşur?",
+    t: "mcq",
+    o: ["Sarı", "Cyan", "Magenta", "Siyah", "Mor"],
+    a: "Sarı",
+    difficulty: "easy",
+    week: 3,
+    topic: "RGB karışım örnekleri",
+    importance: "medium",
+    explanation:
+      "RGB additif modelinde: Kırmızı+Yeşil=Sarı, Kırmızı+Mavi=Magenta, Yeşil+Mavi=Cyan."
+  },
+  {
+    q: "Bir projede en başta doğru renk uzayı seçilmezse en olası sonuç hangisidir?",
     t: "mcq",
     o: [
-      "Dış davranışı değiştirerek yeni özellik eklemek",
-      "Dış davranışı değiştirmeden kodun iç yapısını iyileştirmek",
-      "Sistemi baştan yazmak",
-      "Testleri silmek",
-      "Veritabanını formatlamak"
+      "Renk dönüşümünde kayıplar/ton farkları oluşabilir",
+      "Çözünürlük otomatik artar",
+      "Dosya formatı kendiliğinden SVG olur",
+      "Vektörler pikselleşir",
+      "Katmanlar silinir"
     ],
-    a: "Dış davranışı değiştirmeden kodun iç yapısını iyileştirmek",
+    a: "Renk dönüşümünde kayıplar/ton farkları oluşabilir",
     difficulty: "medium",
     week: 3,
-    topic: "Refactoring",
+    topic: "Renk yönetimi - dönüşüm",
     importance: "high",
     explanation:
-      "Refactor = temizlik. Kullanıcı açısından aynı çalışır; ama iç yapı daha okunabilir, daha modüler, daha sürdürülebilir olur. Yeni özellik eklemekten farklı bir amaçtır."
+      "Renk uzayları arasında dönüşüm yapılabilir ancak bazı renkler hedef uzayda yoksa kayıp yaşanır. Bu yüzden başta doğru uzayı seçmek kritik bir karardır."
   },
+
+  // =========================================================
+  // ==== 4) Formatlar + Ekran Teknolojileri + Çözünürlük (8) ==
+  // =========================================================
   {
-    q: "Aşağıdakilerden hangisi prototiplemenin yanlış kullanımı sonucu ortaya çıkabilecek bir risktir?",
+    q: "JPG (JPEG) formatının temel özelliği aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Prototipteki acele yazılmış kodun üretime taşınması ve kalitenin düşmesi",
-      "Geri bildirimin erken alınması",
-      "Gereksinimlerin daha netleşmesi",
-      "Kullanıcının ürünü daha erken görmesi",
-      "Risklerin daha erken fark edilmesi"
+      "Kayıpsız sıkıştırma ve şeffaflık",
+      "Kayıplı sıkıştırma ile dosya boyutunu küçültmesi; fotoğraflarda yaygın olması",
+      "Vektör tabanlı olması",
+      "Sadece animasyon için olması",
+      "Katman saklaması"
     ],
-    a: "Prototipteki acele yazılmış kodun üretime taşınması ve kalitenin düşmesi",
+    a: "Kayıplı sıkıştırma ile dosya boyutunu küçültmesi; fotoğraflarda yaygın olması",
+    difficulty: "easy",
+    week: 4,
+    topic: "Format - JPG",
+    importance: "high",
+    explanation:
+      "JPEG kayıplı sıkıştırır: kalite bir miktar düşebilir ama dosya boyutu küçülür. Fotoğraf paylaşımında çok yaygındır."
+  },
+  {
+    q: "PNG formatını web tasarımında özel yapan iki özellik hangisidir?",
+    t: "mcq",
+    o: [
+      "Kayıpsız sıkıştırma ve şeffaflık desteği",
+      "Kayıplı sıkıştırma ve animasyon",
+      "Vektör olması ve katman saklaması",
+      "Sadece 256 renk olması",
+      "Baskıda zorunlu olması"
+    ],
+    a: "Kayıpsız sıkıştırma ve şeffaflık desteği",
+    difficulty: "easy",
+    week: 4,
+    topic: "Format - PNG",
+    importance: "high",
+    explanation:
+      "PNG kayıpsızdır ve şeffaf arka planı destekler. Bu yüzden web’de ikon/logo gibi öğelerde sık tercih edilir."
+  },
+  {
+    q: "TIFF formatı genellikle hangi ihtiyaç için tercih edilir?",
+    t: "mcq",
+    o: [
+      "Basit animasyon",
+      "Yüksek kalite gerektiren baskı işleri ve kayıpsız veri saklama",
+      "Çok küçük dosya boyutu",
+      "Sadece vektör logo",
+      "Sadece web ikonları"
+    ],
+    a: "Yüksek kalite gerektiren baskı işleri ve kayıpsız veri saklama",
+    difficulty: "medium",
+    week: 4,
+    topic: "Format - TIFF",
+    importance: "medium",
+    explanation:
+      "TIFF yüksek kalite/kayıpsız saklama için bilinir. Baskı ve arşiv işlerinde tercih edilebilir; dosya boyutu büyüyebilir."
+  },
+  {
+    q: "GIF formatının en belirgin kısıtı ve avantajı birlikte hangisidir?",
+    t: "mcq",
+    o: [
+      "Sınırsız renk + katman desteği",
+      "256 renk sınırı + basit animasyon oynatabilmesi",
+      "Vektör tabanlı olması + büyütülünce bozulmaması",
+      "CMYK desteği + baskı kalitesi",
+      "PSD desteği + düzenlenebilirlik"
+    ],
+    a: "256 renk sınırı + basit animasyon oynatabilmesi",
+    difficulty: "medium",
+    week: 4,
+    topic: "Format - GIF",
+    importance: "medium",
+    explanation:
+      "GIF az renk destekler (256). Ama küçük animasyonları oynatabildiği için internet ortamında kısa hareketli grafiklerde popülerdir."
+  },
+  {
+    q: "Aşağıdakilerden hangisi vektörel formatlara örnektir?",
+    t: "mcq",
+    o: ["SVG ve AI", "JPG ve PNG", "GIF ve JPG", "TIFF ve PNG", "BMP ve JPG"],
+    a: "SVG ve AI",
+    difficulty: "easy",
+    week: 4,
+    topic: "Format - vektör",
+    importance: "high",
+    explanation:
+      "SVG ve AI, vektörel içerik taşır. Logo/ikon gibi ölçeklenebilir işlerde kalite kaybı olmadan kullanılabilir."
+  },
+  {
+    q: "OLED ekranların LCD/LED’e göre öne çıkan özelliği aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Her pikselin kendi ışığını yayması sayesinde daha gerçekçi siyahlar ve yüksek kontrast",
+      "Sadece siyah-beyaz göstermesi",
+      "Sadece düşük çözünürlük sunması",
+      "Renk uzayı kullanmaması",
+      "Sadece baskı için üretilmesi"
+    ],
+    a: "Her pikselin kendi ışığını yayması sayesinde daha gerçekçi siyahlar ve yüksek kontrast",
+    difficulty: "medium",
+    week: 4,
+    topic: "Ekran teknolojisi - OLED",
+    importance: "medium",
+    explanation:
+      "OLED’de piksel kendi ışığını üretir. Bu, özellikle siyah tonlarda ve kontrastta ciddi avantaj sağlar (daha derin siyah)."
+  },
+  {
+    q: "1920x1080 çözünürlük genellikle hangi isimle anılır?",
+    t: "mcq",
+    o: ["HD Ready", "Full HD", "2K", "4K", "8K"],
+    a: "Full HD",
+    difficulty: "easy",
+    week: 4,
+    topic: "Ekran çözünürlüğü",
+    importance: "medium",
+    explanation:
+      "1920x1080 piksel çözünürlük, yaygın adlandırmayla Full HD’dir ve 16:9 en-boy oranıyla sık kullanılır."
+  },
+  {
+    q: "Profesyonel tasarım ortamlarında “renk kalibrasyonu” neden yapılır?",
+    t: "mcq",
+    o: [
+      "Dosya boyutunu artırmak için",
+      "Farklı ekranlarda renklerin daha tutarlı görünmesini sağlamak için",
+      "Görseli vektöre çevirmek için",
+      "GIF animasyon yapmak için",
+      "Sadece katman sayısını azaltmak için"
+    ],
+    a: "Farklı ekranlarda renklerin daha tutarlı görünmesini sağlamak için",
+    difficulty: "medium",
+    week: 4,
+    topic: "Renk kalibrasyonu",
+    importance: "high",
+    explanation:
+      "Kalibrasyon; ekranın renkleri doğru göstermesine yardım eder. Aksi halde aynı tasarım farklı cihazlarda farklı tonlarda görünebilir."
+  },
+
+  // =========================================================
+  // ==== 5) Photoshop Temelleri: Arayüz, Araçlar, PSD (6) ====
+  // =========================================================
+  {
+    q: "Photoshop’un temel çalışma prensibi aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Vektör tabanlı çizim",
+      "Piksel tabanlı (raster) görüntü düzenleme",
+      "Sadece 3D modelleme",
+      "Sadece kod yazma",
+      "Sadece animasyon"
+    ],
+    a: "Piksel tabanlı (raster) görüntü düzenleme",
+    difficulty: "easy",
+    week: 5,
+    topic: "Photoshop - raster",
+    importance: "high",
+    explanation:
+      "Photoshop raster mantıkla çalışır: fotoğraf düzenleme, montaj, kolaj gibi işlerde pikseller üzerinde işlem yapar."
+  },
+  {
+    q: "Photoshop’ta “katman (layer)” mantığının en temel faydası hangisidir?",
+    t: "mcq",
+    o: [
+      "Her şeyi tek parça yapıp düzenlemeyi zorlaştırmak",
+      "Öğeleri bağımsız düzenleyip bir katmandaki değişikliğin diğerini etkilememesini sağlamak",
+      "Dosyayı her zaman küçültmek",
+      "Sadece renk modunu değiştirmek",
+      "Vektör kalite kazandırmak"
+    ],
+    a: "Öğeleri bağımsız düzenleyip bir katmandaki değişikliğin diğerini etkilememesini sağlamak",
+    difficulty: "easy",
+    week: 5,
+    topic: "Katman - neden önemli",
+    importance: "high",
+    explanation:
+      "Arka plan, metin, logo ayrı katmanlarda olursa birini oynatırken diğerleri bozulmaz. Bu da hızlı, kontrollü ve profesyonel çalışma sağlar."
+  },
+  {
+    q: "PSD formatının tasarım sürecinde avantajı aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Katmanları ve düzenleme bilgisini saklayarak çalışmayı sürdürülebilir kılması",
+      "Sadece 256 renk desteklemesi",
+      "Sadece animasyon taşıması",
+      "Sadece vektör saklaması",
+      "Sadece baskı için zorunlu olması"
+    ],
+    a: "Katmanları ve düzenleme bilgisini saklayarak çalışmayı sürdürülebilir kılması",
+    difficulty: "medium",
+    week: 5,
+    topic: "PSD - neden kullanılır",
+    importance: "high",
+    explanation:
+      "PSD, katmanları saklar. Tasarım bitene kadar PSD’de çalışmak mantıklıdır; finalde JPG/PNG/TIFF gibi formatlara export edilir."
+  },
+  {
+    q: "Photoshop’ta “Tools Panel (Araç Kutusu)” nerede bulunur ve ne içerir?",
+    t: "mcq",
+    o: [
+      "Üstte; sadece dosya kaydetme komutlarını",
+      "Solda; seçim, fırça, kırpma, metin gibi araçları",
+      "Sağ altta; yalnızca renk uzaylarını",
+      "Orta kısımda; sadece katman isimlerini",
+      "Altta; sadece ekran çözünürlüğünü"
+    ],
+    a: "Solda; seçim, fırça, kırpma, metin gibi araçları",
+    difficulty: "easy",
+    week: 5,
+    topic: "Photoshop arayüz",
+    importance: "medium",
+    explanation:
+      "Araç kutusu soldadır ve temel düzenleme araçlarını barındırır. Seçilen araca göre üstte Options Bar değişir."
+  },
+  {
+    q: "Options Bar (Seçenek Çubuğu) ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Seçili araca özel ayarların yapıldığı bölümdür",
+      "Dosya formatlarını otomatik çevirir",
+      "Katmanları siler",
+      "Sadece renk çemberini gösterir",
+      "Sadece baskı ayarı yapar"
+    ],
+    a: "Seçili araca özel ayarların yapıldığı bölümdür",
+    difficulty: "medium",
+    week: 5,
+    topic: "Photoshop arayüz - options bar",
+    importance: "medium",
+    explanation:
+      "Brush seçince fırça ayarları; Move seçince hizalama vb. ayarlar burada görünür. Yani aktif araca göre değişen kontrol panelidir."
+  },
+  {
+    q: "Aşağıdakilerden hangisi doğru kısayol-eşleştirme örneğidir?",
+    t: "mcq",
+    o: [
+      "Move Tool = V",
+      "Brush Tool = C",
+      "Crop Tool = T",
+      "Text Tool = E",
+      "Eraser Tool = B"
+    ],
+    a: "Move Tool = V",
+    difficulty: "easy",
+    week: 5,
+    topic: "Photoshop araç kısayolları",
+    importance: "medium",
+    explanation:
+      "Ders notundaki temel kısayollar: Move(V), Brush(B), Eraser(E), Crop(C), Text(T), Marquee(M), Lasso(L)."
+  },
+
+  // =========================================================
+  // ==== 6) Katman Türleri, Maskeler, Efektler, Renk Düzeltme (10)
+  // =========================================================
+  {
+    q: "Aşağıdakilerden hangisi Photoshop’ta “Adjustment Layer”ın doğru kullanım amacıdır?",
+    t: "mcq",
+    o: [
+      "Görseli kalıcı olarak bozmak",
+      "Parlaklık/kontrast, renk, doygunluk gibi ayarları orijinali bozmadan uygulamak",
+      "Sadece metin yazmak",
+      "Sadece vektör çizmek",
+      "Sadece dosya sıkıştırmak"
+    ],
+    a: "Parlaklık/kontrast, renk, doygunluk gibi ayarları orijinali bozmadan uygulamak",
+    difficulty: "medium",
+    week: 6,
+    topic: "Adjustment Layer - non-destructive",
+    importance: "high",
+    explanation:
+      "Adjustment Layer, yıkıcı olmayan düzenleme sağlar: orijinal piksele dokunmadan “üzerinden” ayar uygular; sonradan kapatılıp düzenlenebilir."
+  },
+  {
+    q: "Shape Layer (Şekil katmanı) için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Piksel tabanlıdır ve büyütülünce pikselleşir",
+      "Vektör tabanlıdır; büyütülünce kalite kaybı yaşamaz",
+      "Sadece fotoğraf düzenlemek içindir",
+      "Sadece 256 renk destekler",
+      "Sadece TIFF’e export edilir"
+    ],
+    a: "Vektör tabanlıdır; büyütülünce kalite kaybı yaşamaz",
+    difficulty: "easy",
+    week: 6,
+    topic: "Katman türleri - shape",
+    importance: "high",
+    explanation:
+      "Şekil katmanları vektördür. Bu yüzden ikon/şekil gibi kenarı keskin öğelerde kalite korunur."
+  },
+  {
+    q: "Katmanların üst üste sıralanması Photoshop’ta en çok neyi belirler?",
+    t: "mcq",
+    o: [
+      "Hangi öğenin önde/arkada görüneceğini",
+      "Dosyanın formatını",
+      "Renk uzayını",
+      "Ekran çözünürlüğünü",
+      "GIF animasyon süresini"
+    ],
+    a: "Hangi öğenin önde/arkada görüneceğini",
+    difficulty: "easy",
+    week: 6,
+    topic: "Katman yönetimi - sıralama",
+    importance: "high",
+    explanation:
+      "Katmanlar bir yığın gibidir. Üstte olan alttakinin önünde görünür. Bu, kompozisyon kontrolünün temelidir."
+  },
+  {
+    q: "Layer Mask (katman maskesi) mantığında siyah-beyaz neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "Siyah = görünür, Beyaz = gizli",
+      "Siyah = gizli, Beyaz = görünür",
+      "Siyah = daha parlak, Beyaz = daha karanlık",
+      "Siyah = vektör, Beyaz = raster",
+      "Siyah = CMYK, Beyaz = RGB"
+    ],
+    a: "Siyah = gizli, Beyaz = görünür",
+    difficulty: "easy",
+    week: 6,
+    topic: "Layer Mask - temel kural",
+    importance: "high",
+    explanation:
+      "Maske, görünürlüğü kontrol eder: siyah boyarsan gizlersin, beyaz boyarsan gösterirsin. Gri tonlar yarı saydamlık verir."
+  },
+  {
+    q: "Vektör maskesi (Vector Mask) hangi durumda daha uygundur?",
+    t: "mcq",
+    o: [
+      "Yumuşak geçişli saç seçimi",
+      "Keskin hatlı geometrik kesimler ve çözünürlükten bağımsız kenarlar",
+      "Fotoğrafın tamamına blur vermek",
+      "GIF animasyon yapmak",
+      "Sadece renk doygunluğu ayarlamak"
+    ],
+    a: "Keskin hatlı geometrik kesimler ve çözünürlükten bağımsız kenarlar",
+    difficulty: "medium",
+    week: 6,
+    topic: "Vector Mask - ne zaman",
+    importance: "medium",
+    explanation:
+      "Vektör maskesi, path/shape ile çalışır ve keskin kenar ister. Logo, şekil, net kontur gereken yerlerde idealdir."
+  },
+  {
+    q: "Clipping Mask (Kırpma maskesi) ne yapar?",
+    t: "mcq",
+    o: [
+      "Üst katmanı sadece alt katmanın içeriği/sınırı içinde görünür hale getirir",
+      "Tüm katmanları tekleştirir",
+      "Renk uzayını değiştirir",
+      "Görseli otomatik 300 dpi yapar",
+      "Katman efektlerini siler"
+    ],
+    a: "Üst katmanı sadece alt katmanın içeriği/sınırı içinde görünür hale getirir",
+    difficulty: "medium",
+    week: 6,
+    topic: "Clipping Mask - mantık",
+    importance: "high",
+    explanation:
+      "Örn: Doku katmanını metin katmanına kırparsan doku sadece harflerin içinde görünür. Bu, tipografi ve reklam tasarımında çok kullanılır."
+  },
+  {
+    q: "Layer Effects (fx) ile aşağıdakilerden hangisi yapılabilir?",
+    t: "mcq",
+    o: [
+      "Drop Shadow, Outer Glow, Bevel & Emboss gibi görsel efektler eklemek",
+      "Görseli vektöre çevirmek",
+      "Ekranı kalibre etmek",
+      "JPEG’i PNG’ye otomatik çevirmek",
+      "Dosyayı otomatik Full HD yapmak"
+    ],
+    a: "Drop Shadow, Outer Glow, Bevel & Emboss gibi görsel efektler eklemek",
+    difficulty: "easy",
+    week: 6,
+    topic: "Layer Effects - örnekler",
+    importance: "high",
+    explanation:
+      "Layer Styles; gölge, parlama, kabartma, stroke gibi efektlerle derinlik/vurgu sağlar. Üstelik düzenlenebilir olduğu için esnektir."
+  },
+  {
+    q: "Brightness/Contrast aracı en çok hangi iş için hızlı çözümdür?",
+    t: "mcq",
+    o: [
+      "Görselin genel parlaklığını ve açık-koyu farkını hızlı ayarlamak",
+      "Vektör logo çizmek",
+      "Maske oluşturmak",
+      "Dosya formatı değiştirmek",
+      "Sadece metin düzenlemek"
+    ],
+    a: "Görselin genel parlaklığını ve açık-koyu farkını hızlı ayarlamak",
+    difficulty: "easy",
+    week: 6,
+    topic: "Renk düzeltme - Brightness/Contrast",
+    importance: "medium",
+    explanation:
+      "Brightness genel aydınlığı artırır/azaltır. Contrast açık-koyu farkını düzenler. Hızlı temel düzeltmeler için sık kullanılır."
+  },
+  {
+    q: "Levels aracı histogram üzerinden hangi kontrolü sağlar?",
+    t: "mcq",
+    o: [
+      "Sadece font seçimi",
+      "Siyah nokta, orta ton ve beyaz nokta ayarıyla ton aralığını optimize etme",
+      "Sadece stroke ekleme",
+      "Sadece maske boyama",
+      "Sadece vektör çizgi kalınlığı"
+    ],
+    a: "Siyah nokta, orta ton ve beyaz nokta ayarıyla ton aralığını optimize etme",
+    difficulty: "medium",
+    week: 6,
+    topic: "Renk düzeltme - Levels",
+    importance: "high",
+    explanation:
+      "Levels, görüntünün gölge-orta-parlak bölgelerini kontrol eder. Işık dengesi zayıf fotoğraflarda detay kurtarmada çok etkilidir."
+  },
+  {
+    q: "Apply Image aracının en doğru kullanım fikri hangisidir?",
+    t: "mcq",
+    o: [
+      "Bir katmanın piksel bilgilerini başka bir katmana veya maskeye aktararak gelişmiş ton/maske işlemleri yapmak",
+      "Sadece kırpma yapmak",
+      "Sadece font yüklemek",
+      "Sadece dosyayı GIF’e çevirmek",
+      "Sadece renk çemberini açmak"
+    ],
+    a: "Bir katmanın piksel bilgilerini başka bir katmana veya maskeye aktararak gelişmiş ton/maske işlemleri yapmak",
     difficulty: "hard",
-    week: 3,
-    topic: "Prototip - risk",
+    week: 6,
+    topic: "Apply Image - amaç",
     importance: "high",
     explanation:
-      "Prototip hızlı yapılır; kalite/ölçek/güvenlik tam düşünülmeyebilir. Bu kodu ‘nasıl olsa çalışıyor’ diye production’a taşımak teknik borcu büyütür. Bu yüzden prototipin türü (throwaway/evolutionary) bilinçli seçilmelidir."
-  },
-  {
-    q: "Bir iş için “Definition of Done” (DoD) mantığının en doğru faydası hangisidir?",
-    t: "mcq",
-    o: [
-      "‘Bitti’ kavramını netleştirip kalite standardı oluşturmak (test, review, doküman vb.)",
-      "Sadece UI renk seçimini sabitlemek",
-      "Kod yazmayı yasaklamak",
-      "Gereksinim toplamayı tamamen kaldırmak",
-      "Sadece sunucu maliyetini düşürmek"
-    ],
-    a: "‘Bitti’ kavramını netleştirip kalite standardı oluşturmak (test, review, doküman vb.)",
-    difficulty: "medium",
-    week: 3,
-    topic: "DoD",
-    importance: "medium",
-    explanation:
-      "DoD; ‘iş gerçekten bitti mi?’ sorusuna standart getirir. Örn: kod yazıldı + test eklendi + code review geçti + dokümantasyon güncellendi gibi şartlar koyarak kalitenin düşmesini engeller."
+      "Apply Image; katmanları matematiksel olarak birleştirme, maske üretme veya ton bilgisini taşımada güçlüdür. Örn: parlak alanlara göre otomatik maske üretmek."
   }
 ];
-
