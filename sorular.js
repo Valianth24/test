@@ -1,959 +1,998 @@
-// Grafik Tasarım + Görsel İletişim + Görüntü Teknolojileri + Photoshop Temelleri
+// Photoshop Metin (Type) + Tipografi + Adjustment Layers + Blending Modes
+// + Adobe Illustrator Giriş + Workspace + Bleed + Raster Effects + Araçlar
 // 50 Soruluk Öğretici Soru Bankası (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
   // =========================================================
-  // ==== 1) Görsel İletişim & Grafik Tasarım Temelleri (12) ==
+  // ============ WEEK 1: PHOTOSHOP METİN & TİPOGRAFİ (18) ====
   // =========================================================
   {
-    q: "Görsel iletişim en doğru hangi şekilde tanımlanır?",
+    q: "Bu dersin (Photoshop metin araçları) temel amacı aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Sadece uzun metinlerle bilgi aktarma",
-      "Fikir ve bilgileri görseller (sembol, renk, çizgi, fotoğraf) aracılığıyla aktarma",
-      "Sadece sözlü anlatımla ikna etme",
-      "Sadece matematiksel grafik çizme",
-      "Sadece video montajı yapma"
+      "Sadece fotoğraf kırpmayı öğretmek",
+      "Metin (text) araçlarını etkili kullanmak ve yazıyı kompozisyona doğru yerleştirmek",
+      "Sadece 3D modelleme yapmak",
+      "Sadece dosya formatlarını ezberlemek",
+      "Sadece renk modlarını değiştirmek"
     ],
-    a: "Fikir ve bilgileri görseller (sembol, renk, çizgi, fotoğraf) aracılığıyla aktarma",
+    a: "Metin (text) araçlarını etkili kullanmak ve yazıyı kompozisyona doğru yerleştirmek",
     difficulty: "easy",
     week: 1,
-    topic: "Görsel iletişim - tanım",
+    topic: "Ders amacı - metin",
     importance: "high",
     explanation:
-      "Görsel iletişim; mesajı yazıdan çok görsel dil ile taşır. Fotoğraf, simge, renk ve biçimler birer “dil” gibi çalışır ve çoğu zaman daha hızlı algılanır."
+      "Amaç; Photoshop’ta metni profesyonel biçimde ekleyip düzenlemek, tipografi ilkelerini uygulamak ve metnin mesaj iletimindeki rolünü kavramaktır."
   },
   {
-    q: "Görsel iletişimin “daha hızlı anlaşılma” avantajının temel nedeni aşağıdakilerden hangisidir?",
+    q: "Photoshop’ta metin eklemek için kullanılan temel araç hangisidir?",
     t: "mcq",
-    o: [
-      "İnsan beyni görsel bilgiyi yazıya göre daha çabuk algılar",
-      "Yazı her zaman daha yavaştır ve gereksizdir",
-      "Görsel iletişim sadece çocuklar içindir",
-      "Görseller asla yanlış anlaşılmaz",
-      "Görsel iletişimde hedef kitle önemli değildir"
-    ],
-    a: "İnsan beyni görsel bilgiyi yazıya göre daha çabuk algılar",
+    o: ["Type Tool (T)", "Move Tool (V)", "Brush Tool (B)", "Crop Tool (C)", "Lasso Tool (L)"],
+    a: "Type Tool (T)",
     difficulty: "easy",
     week: 1,
-    topic: "Görsel iletişim - neden güçlü",
+    topic: "Type Tool - giriş",
     importance: "high",
     explanation:
-      "Görsel bilgi (ikon, renk, şekil) beyin tarafından hızlı işlenir. Bu yüzden reklam, afiş, logo gibi alanlarda görsel iletişim çok etkilidir."
+      "Metin ekleme aracı Type Tool’dur ve kısayolu T’dir."
   },
   {
-    q: "Görsel iletişimde en kritik hedef aşağıdakilerden hangisidir?",
+    q: "Type Tool ile hangi iki yönlü metin aracı kullanılabilir?",
     t: "mcq",
     o: [
-      "Tasarımı mümkün olduğunca süslü yapmak",
-      "Mesajın hedef kitle tarafından doğru anlaşılması",
-      "En fazla renk kullanmak",
-      "Yazıyı tamamen kaldırmak",
-      "Her şeyi küçük puntolarla yazmak"
+      "Horizontal Type Tool ve Vertical Type Tool",
+      "Move Tool ve Rotate Tool",
+      "Brush Tool ve Eraser Tool",
+      "Curves ve Levels",
+      "Pen Tool ve Shape Tool"
     ],
-    a: "Mesajın hedef kitle tarafından doğru anlaşılması",
+    a: "Horizontal Type Tool ve Vertical Type Tool",
+    difficulty: "easy",
+    week: 1,
+    topic: "Type Tool - türler",
+    importance: "medium",
+    explanation:
+      "Photoshop’ta metin yatay (Horizontal) veya dikey (Vertical) olarak yazılabilir."
+  },
+  {
+    q: "Ekrana tek bir tıklama ile oluşturulan metin türü hangisidir?",
+    t: "mcq",
+    o: ["Nokta Metin (Point Text)", "Paragraf Metni (Paragraph Text)", "Vektör Metin", "Maskeli Metin", "Raster Metin"],
+    a: "Nokta Metin (Point Text)",
+    difficulty: "easy",
+    week: 1,
+    topic: "Point Text",
+    importance: "high",
+    explanation:
+      "Type Tool ile ekrana tıklarsan Point Text oluşur; genellikle kısa başlıklar/logotip benzeri metinlerde kullanılır."
+  },
+  {
+    q: "Sürükleyerek kutu çizip oluşturulan metin türü hangisidir?",
+    t: "mcq",
+    o: ["Nokta Metin (Point Text)", "Paragraf Metni (Paragraph Text)", "Serif Metin", "Vektör Maske Metni", "Clipping Text"],
+    a: "Paragraf Metni (Paragraph Text)",
+    difficulty: "easy",
+    week: 1,
+    topic: "Paragraph Text",
+    importance: "high",
+    explanation:
+      "Sürükleyerek bir metin kutusu oluşturursan Paragraph Text olur; uzun metin blokları için idealdir."
+  },
+  {
+    q: "Kısa başlıklar ve logotip benzeri metinler için hangisi daha uygundur?",
+    t: "mcq",
+    o: ["Paragraf Metni", "Nokta Metin", "Gradient Map", "Curves", "Blend Mode: Difference"],
+    a: "Nokta Metin",
+    difficulty: "easy",
+    week: 1,
+    topic: "Metin seçimi - kullanım",
+    importance: "high",
+    explanation:
+      "Kısa metinlerde Point Text pratik ve kontrolü kolaydır. Paragraf metni ise uzun içerik için tasarlanmıştır."
+  },
+  {
+    q: "Character Panel’in temel görevi aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Katmanları gruplayıp sıraya dizmek",
+      "Metin biçimlendirmesi (font, size, leading, tracking, renk) yapmak",
+      "Görseli kırpmak",
+      "Dosyayı PDF’e dönüştürmek",
+      "Renk modunu CMYK’a çevirmek"
+    ],
+    a: "Metin biçimlendirmesi (font, size, leading, tracking, renk) yapmak",
+    difficulty: "easy",
+    week: 1,
+    topic: "Character Panel",
+    importance: "high",
+    explanation:
+      "Character Panel; yazı tipi, boyut, satır aralığı (leading), harf aralığı (tracking), ölçek ve renk gibi tipografi ayarlarının merkezidir."
+  },
+  {
+    q: "Satır aralığına (leading) karşılık gelen kavram hangisidir?",
+    t: "mcq",
+    o: ["Harf aralığı", "Satır aralığı", "Girinti", "İki yana yaslama", "Kontrast"],
+    a: "Satır aralığı",
+    difficulty: "easy",
+    week: 1,
+    topic: "Leading",
+    importance: "high",
+    explanation:
+      "Leading; satırların birbirine olan dikey mesafesidir. Okunabilirliği doğrudan etkiler."
+  },
+  {
+    q: "Harf aralığına (tracking) karşılık gelen ifade hangisidir?",
+    t: "mcq",
+    o: ["Satır aralığı", "Harflerin birbirine uzaklığı", "Paragraf aralığı", "Kenar boşluğu", "Renk doygunluğu"],
+    a: "Harflerin birbirine uzaklığı",
+    difficulty: "easy",
+    week: 1,
+    topic: "Tracking",
+    importance: "medium",
+    explanation:
+      "Tracking; metindeki harfler arası genel aralığı ifade eder. Aşırı artırmak/azaltmak okunabilirliği bozar."
+  },
+  {
+    q: "Ders notuna göre 12 pt yazı boyutunda yaygın tercih edilen leading değeri hangisidir?",
+    t: "mcq",
+    o: ["12 pt", "13 pt", "14 pt", "18 pt", "24 pt"],
+    a: "14 pt",
     difficulty: "medium",
     week: 1,
-    topic: "Görsel iletişim - hedef",
-    importance: "high",
+    topic: "Leading oranı",
+    importance: "medium",
     explanation:
-      "İyi tasarım “güzel” olduğu kadar “doğru anlaşılır” olmalıdır. Hedef kitle mesajı yanlış okursa tasarım başarısız sayılır."
+      "Örnek olarak 12 pt yazıda 14 pt leading, satırların nefes almasını ve okunabilirliği artırmayı hedefler."
   },
   {
-    q: "Grafik tasarımın en doğru tanımı aşağıdakilerden hangisidir?",
+    q: "Paragraph Panel en çok hangi iş için kullanılır?",
     t: "mcq",
     o: [
-      "Sadece estetik amaçlı resim yapma",
-      "Bir mesajı görsel öğelerle planlı, estetik ve işlevsel biçimde iletme sanatı",
-      "Sadece fotoğraf çekme işi",
-      "Sadece yazı yazma sanatı",
-      "Sadece bilgisayar programı kullanma"
+      "Metni hizalama, girinti ve paragraf düzenlerini yönetmek",
+      "Renk uzayını Lab’a çevirmek",
+      "Katmanı rasterize etmek",
+      "Görseli keskinleştirmek",
+      "Blend mode gruplarını değiştirmek"
     ],
-    a: "Bir mesajı görsel öğelerle planlı, estetik ve işlevsel biçimde iletme sanatı",
+    a: "Metni hizalama, girinti ve paragraf düzenlerini yönetmek",
     difficulty: "easy",
     week: 1,
-    topic: "Grafik tasarım - tanım",
+    topic: "Paragraph Panel",
     importance: "high",
     explanation:
-      "Grafik tasarımın amacı sadece “güzel görünmek” değil; mesajı anlaşılır, yönlendirici ve hedefe uygun şekilde iletmektir."
+      "Sola/sağa/ortaya hizalama, iki yana yaslama, girinti (indent) ve paragraf aralıkları Paragraph Panel’den kontrol edilir."
   },
   {
-    q: "Afişte başlığın büyük ve kalın, alt metnin daha küçük verilmesi hangi ilkeye örnektir?",
+    q: "Dergi, katalog veya broşür gibi çok metinli tasarımlarda özellikle hangi panel büyük kolaylık sağlar?",
     t: "mcq",
-    o: ["Denge", "Ritim", "Hiyerarşi", "Uyum", "Raster"],
-    a: "Hiyerarşi",
+    o: ["Histogram", "Paragraph Panel", "Swatches", "Navigator", "History"],
+    a: "Paragraph Panel",
     difficulty: "easy",
     week: 1,
-    topic: "Tasarım ilkeleri - hiyerarşi",
-    importance: "high",
-    explanation:
-      "Hiyerarşi, bilgiyi önem sırasına göre düzenlemektir. Başlık en önemli olduğu için daha büyük/kalın verilir; gözün okuma yolu yönetilir."
-  },
-  {
-    q: "Bir tasarımda öğelerin görsel ağırlık bakımından dengeli dağılmasına ne denir?",
-    t: "mcq",
-    o: ["Vurgu", "Denge", "Renk modu", "Çözünürlük", "Kırpma"],
-    a: "Denge",
-    difficulty: "easy",
-    week: 1,
-    topic: "Tasarım ilkeleri - denge",
-    importance: "high",
-    explanation:
-      "Denge, tasarımın bir tarafının “aşırı ağır” görünmemesidir. Metin-görsel dağılımı, boşluk kullanımı dengeyi etkiler."
-  },
-  {
-    q: "İzleyicinin dikkati belirli bir noktaya yönlendiriliyorsa bu ilke hangisidir?",
-    t: "mcq",
-    o: ["Vurgu", "Uyum", "Ritim", "Dpi", "Vektör"],
-    a: "Vurgu",
-    difficulty: "easy",
-    week: 1,
-    topic: "Tasarım ilkeleri - vurgu",
-    importance: "high",
-    explanation:
-      "Vurgu, “önce nereye bakılsın?” sorusunu çözer. Kontrast, boyut, renk gibi araçlarla göz belirli noktaya çekilir."
-  },
-  {
-    q: "Öğelerin düzenli aralıklarla tekrarlanmasıyla oluşan tasarım ilkesi hangisidir?",
-    t: "mcq",
-    o: ["Ritim", "Denge", "Hiyerarşi", "RGB", "Mask"],
-    a: "Ritim",
-    difficulty: "medium",
-    week: 1,
-    topic: "Tasarım ilkeleri - ritim",
+    topic: "Çok metinli tasarım",
     importance: "medium",
     explanation:
-      "Ritim; tekrar ve düzenle “akış” hissi oluşturur. Örn: ikonların eşit aralıklarla dizilmesi gözü yönlendirir."
+      "Çok metinli işlerde paragraf akışı, hizalama ve girinti yönetimi kritiktir; Paragraph Panel bunun için tasarlanmıştır."
   },
   {
-    q: "Renk ve biçimlerin birbirini tamamlayarak bütünlük oluşturmasına ne denir?",
-    t: "mcq",
-    o: ["Uyum", "Kontrast", "Çözünürlük", "Kırpma maskesi", "Histogram"],
-    a: "Uyum",
-    difficulty: "easy",
-    week: 1,
-    topic: "Tasarım ilkeleri - uyum",
-    importance: "medium",
-    explanation:
-      "Uyum, renklerin ve şekillerin kavga etmemesi, birlikte “tek tasarım” gibi çalışmasıdır. Uyum, tasarımı sakin ve tutarlı gösterir."
-  },
-  {
-    q: "Bir tasarımın baskı mı dijital mi olacağı neden önemlidir?",
+    q: "Tipografi en doğru hangi cümleyle özetlenir?",
     t: "mcq",
     o: [
-      "Çünkü sadece yazı fontu değişir",
-      "Çünkü çözünürlük, renk modu ve dosya boyutu gibi teknik kararlar değişir",
-      "Çünkü baskıda renk hiç kullanılmaz",
-      "Çünkü dijitalde kalite önemli değildir",
-      "Çünkü baskıda vektör hiç kullanılmaz"
+      "Sadece güzel font seçmektir",
+      "Okunabilirlik, hiyerarşi ve estetik düzenin birlikte yönetilmesidir",
+      "Sadece metni büyük yazmaktır",
+      "Sadece efekt eklemektir",
+      "Sadece yazıyı eğmektir"
     ],
-    a: "Çünkü çözünürlük, renk modu ve dosya boyutu gibi teknik kararlar değişir",
+    a: "Okunabilirlik, hiyerarşi ve estetik düzenin birlikte yönetilmesidir",
     difficulty: "medium",
     week: 1,
-    topic: "Baskı vs dijital",
+    topic: "Tipografi ilkeleri",
     importance: "high",
     explanation:
-      "Baskıda yüksek çözünürlük ve CMYK kritiktir. Dijitalde RGB ve ekran uyumu, ayrıca dosya optimizasyonu önem kazanır."
+      "Tipografi; metnin okunur olması, başlık-alt başlık-gövde düzeni (hiyerarşi) ve görsel bütünlük hedeflerini birlikte taşır."
   },
   {
-    q: "Aşağıdakilerden hangisi grafik tasarımın alt alanlarından biridir?",
+    q: "Serif yazı tipleri (ör. Times New Roman) ders notuna göre hangi ortamda okunabilirliği artırma eğilimindedir?",
     t: "mcq",
-    o: ["Kurumsal kimlik (logo, kartvizit, marka rehberi)", "Sadece işletim sistemi kurulumu", "Sadece ağ yönetimi", "Sadece kod derleme", "Sadece donanım onarımı"],
-    a: "Kurumsal kimlik (logo, kartvizit, marka rehberi)",
+    o: ["Dijital ekranlar", "Basılı materyaller", "Sadece logo tasarımı", "Sadece ikon", "Sadece animasyon"],
+    a: "Basılı materyaller",
     difficulty: "easy",
     week: 1,
-    topic: "Grafik tasarım - alt alanlar",
+    topic: "Serif vs Sans-serif",
     importance: "medium",
     explanation:
-      "Grafik tasarım; kurumsal kimlik, yayın tasarımı, dijital tasarım, reklam/afiş, ambalaj gibi birçok alt dala ayrılır."
+      "Serif fontlar geleneksel olarak basılı materyallerde okunabilirliği destekleyebilir; sans-serif ise dijitalde sıklıkla tercih edilir."
   },
   {
-    q: "Kırmızı rengin iletişimde çağrıştırdığı duyguya en uygun ifade hangisidir?",
+    q: "Sans-serif yazı tipleri (ör. Helvetica, Arial) ders notuna göre daha çok hangi ortam için uygundur?",
     t: "mcq",
-    o: ["Güven ve huzur", "Enerji ve tutku", "Sadelik ve nötrlük", "Soğukluk", "Şeffaflık"],
-    a: "Enerji ve tutku",
+    o: ["Basılı materyaller", "Dijital ortamlar", "Sadece gravür", "Sadece serigrafi", "Sadece 3D baskı"],
+    a: "Dijital ortamlar",
     difficulty: "easy",
     week: 1,
-    topic: "Renk psikolojisi",
+    topic: "Sans-serif",
     importance: "medium",
     explanation:
-      "Renkler mesajın tonunu belirler. Kırmızı daha “dinamik/heyecanlı” algılanırken mavi daha “güven/sakinlik” çağrıştırır."
+      "Sans-serif fontlar ekranlarda daha temiz ve net algılanabildiği için dijital tasarımda çok kullanılır."
+  },
+  {
+    q: "Aynı tasarımda çok fazla farklı font kullanmanın en olası sonucu hangisidir?",
+    t: "mcq",
+    o: [
+      "Görsel karmaşa ve profesyonellik kaybı",
+      "Dosya boyutunun her zaman küçülmesi",
+      "Metnin otomatik hizalanması",
+      "Renklerin otomatik düzelmesi",
+      "Vektör kalite artışı"
+    ],
+    a: "Görsel karmaşa ve profesyonellik kaybı",
+    difficulty: "easy",
+    week: 1,
+    topic: "Font sayısı",
+    importance: "high",
+    explanation:
+      "Notlara göre genellikle 2–3 fonttan fazlası önerilmez; fazla font, mesajı dağıtır ve tasarımı “dağınık” gösterir."
+  },
+  {
+    q: "Photoshop’ta eklenen her metin varsayılan olarak hangi katman türünde oluşur?",
+    t: "mcq",
+    o: ["Text Layer (Yazı katmanı)", "Adjustment Layer", "Background Layer", "Smart Object", "Mask Layer"],
+    a: "Text Layer (Yazı katmanı)",
+    difficulty: "easy",
+    week: 1,
+    topic: "Text Layer",
+    importance: "high",
+    explanation:
+      "Her metin ayrı bir Text Layer olarak gelir; bu sayede taşınabilir, dönüştürülebilir ve efekt uygulanabilir."
+  },
+  {
+    q: "Metnin düzenlenebilir kalması için hangi davranıştan kaçınmak gerekir?",
+    t: "mcq",
+    o: [
+      "Katmanı rasterize etmek",
+      "Metin katmanına çift tıklamak",
+      "Ctrl+T ile ölçeklemek",
+      "Layer Styles eklemek",
+      "Renk değiştirmek"
+    ],
+    a: "Katmanı rasterize etmek",
+    difficulty: "medium",
+    week: 1,
+    topic: "Rasterize riski",
+    importance: "high",
+    explanation:
+      "Rasterize edersen metin artık piksele dönüşür; font/harf/satır ayarlarını metin gibi düzenlemek zorlaşır. Profesyonel işlerde metni mümkün olduğunca canlı tut."
   },
 
   // =========================================================
-  // ==== 2) Piksel/Vektör/Çözünürlük + Renk Teorisi (14) =====
+  // ====== WEEK 1 DEVAMI: METİN EFEKTLERİ, MASKE, KOMPOZİSYON (8)
   // =========================================================
   {
-    q: "Raster (bitmap/piksel tabanlı) görsellerin en doğru özelliği hangisidir?",
+    q: "Metni büyütmek, döndürmek ve serbest dönüştürmek için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["Free Transform (Ctrl+T)", "Select All (Ctrl+A)", "Save As (Ctrl+Shift+S)", "Levels (Ctrl+L)", "Curves (Ctrl+M)"],
+    a: "Free Transform (Ctrl+T)",
+    difficulty: "easy",
+    week: 1,
+    topic: "Free Transform",
+    importance: "high",
+    explanation:
+      "Ctrl+T ile metni ölçekleyebilir, döndürebilir, konumunu ve yönünü kontrol edebilirsin."
+  },
+  {
+    q: "Metni görselde öne çıkarmak için en sık kullanılan yöntemlerden biri hangisidir?",
     t: "mcq",
     o: [
-      "Matematiksel denklemlerle çizilir ve büyütülünce bozulmaz",
-      "Piksellerden oluşur; büyütülürse pikselleşme/bulanıklık oluşabilir",
-      "Sadece logolar için idealdir",
-      "Çözünürlükten bağımsızdır",
-      "Her zaman dosya boyutu çok küçüktür"
+      "Layer Styles (Katman stilleri) uygulamak",
+      "Dosyayı GIF yapmak",
+      "Renk modunu Lab’a çevirmek",
+      "Artboard eklemek",
+      "Mesh Tool kullanmak"
     ],
-    a: "Piksellerden oluşur; büyütülürse pikselleşme/bulanıklık oluşabilir",
+    a: "Layer Styles (Katman stilleri) uygulamak",
     difficulty: "easy",
-    week: 2,
-    topic: "Raster - temel özellik",
+    week: 1,
+    topic: "Metin efektleri",
     importance: "high",
     explanation:
-      "Raster görüntü, küçük renk karelerinden (piksel) oluşur. Piksel sayısı sabit olduğu için aşırı büyütme kaliteyi bozar."
+      "Drop Shadow, Stroke, Bevel & Emboss, Gradient Overlay gibi Layer Styles metne vurgu, derinlik ve kontrast kazandırır."
   },
   {
-    q: "Vektör görsellerin en büyük avantajı aşağıdakilerden hangisidir?",
+    q: "Drop Shadow (Gölge) efekti metinde genellikle ne sağlar?",
     t: "mcq",
-    o: [
-      "Fotoğraf kalitesini artırması",
-      "Ne kadar büyütülürse büyütülsün kalite kaybetmemesi",
-      "Sadece 256 renk desteklemesi",
-      "Her zaman JPEG olarak kaydedilmesi",
-      "Sadece piksel tabanlı olması"
-    ],
-    a: "Ne kadar büyütülürse büyütülsün kalite kaybetmemesi",
+    o: ["Çözünürlük artırır", "Derinlik ve ayrışma (arka plandan ayırma)", "Fontu değiştirir", "Metni rasterize eder", "Renk uzayı değiştirir"],
+    a: "Derinlik ve ayrışma (arka plandan ayırma)",
     difficulty: "easy",
-    week: 2,
-    topic: "Vektör - avantaj",
-    importance: "high",
-    explanation:
-      "Vektör; çizgi/şekilleri matematiksel olarak tanımlar. Bu yüzden ölçekleme görüntüyü bozmaz; logo/ikon/teknik çizim için idealdir."
-  },
-  {
-    q: "Bir fotoğrafı çok büyütünce bozulmasının temel nedeni hangisidir?",
-    t: "mcq",
-    o: [
-      "Fotoğraflar vektördür",
-      "Çözünürlük sabittir; piksel sayısı yetmediği için pikseller büyütülür",
-      "RGB modu bozar",
-      "CMYK modu bozar",
-      "Katman sayısı azdır"
-    ],
-    a: "Çözünürlük sabittir; piksel sayısı yetmediği için pikseller büyütülür",
-    difficulty: "medium",
-    week: 2,
-    topic: "Çözünürlük - büyütme",
-    importance: "high",
-    explanation:
-      "800x600 gibi sabit piksel sayısı olan görüntüyü 2000 px ölçeğe zorlayınca sistem “yeni detay üretemez”; pikseller yayılır ve görüntü yumuşar/pikselleşir."
-  },
-  {
-    q: "Aşağıdaki programlardan hangisi piksel tabanlı düzenleme için en yaygın kullanılan örnektir?",
-    t: "mcq",
-    o: ["Adobe Photoshop", "Adobe Illustrator", "CorelDRAW", "Inkscape", "Figma (sadece vektör)"],
-    a: "Adobe Photoshop",
-    difficulty: "easy",
-    week: 2,
-    topic: "Raster yazılımı",
-    importance: "high",
-    explanation:
-      "Photoshop, raster/piksel tabanlı düzenleme için endüstri standardı örneklerden biridir (fotoğraf düzenleme, kolaj, retouch)."
-  },
-  {
-    q: "Aşağıdakilerden hangisi vektör tabanlı çalışma için tipik bir programdır?",
-    t: "mcq",
-    o: ["Adobe Illustrator", "Adobe Photoshop", "Lightroom", "Paint", "Notepad"],
-    a: "Adobe Illustrator",
-    difficulty: "easy",
-    week: 2,
-    topic: "Vektör yazılımı",
-    importance: "high",
-    explanation:
-      "Illustrator/CorelDRAW/Inkscape gibi araçlar vektör üretir. Vektör; logo, ikon, infografik gibi keskin kenarlı işler için uygundur."
-  },
-  {
-    q: "Çözünürlük (resolution) en doğru neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Dosyanın adını",
-      "Görseldeki piksel yoğunluğunu (ppi/dpi gibi ölçülerle)",
-      "Sadece renk sayısını",
-      "Sadece katman sayısını",
-      "Sadece ekran parlaklığını"
-    ],
-    a: "Görseldeki piksel yoğunluğunu (ppi/dpi gibi ölçülerle)",
-    difficulty: "easy",
-    week: 2,
-    topic: "Çözünürlük - tanım",
-    importance: "high",
-    explanation:
-      "Resolution; bir alana kaç piksel/dot düştüğünü ifade eder. Piksel yoğunluğu arttıkça detay ve netlik artar."
-  },
-  {
-    q: "Baskı işleri için ideal çözünürlük genellikle kaç dpi olarak kabul edilir?",
-    t: "mcq",
-    o: ["72 dpi", "150 dpi", "300 dpi", "6000 dpi", "10 dpi"],
-    a: "300 dpi",
-    difficulty: "easy",
-    week: 2,
-    topic: "Baskı çözünürlüğü",
-    importance: "high",
-    explanation:
-      "Baskıda detay kaybı istemeyiz. Yaygın kural: baskı için 300 dpi; ekran için çoğu basit senaryoda 72 dpi yeterli görülebilir."
-  },
-  {
-    q: "Ekran görüntüleri için ders notlarında “genellikle yeterli” olarak verilen dpi değeri hangisidir?",
-    t: "mcq",
-    o: ["72 dpi", "300 dpi", "1200 dpi", "1 dpi", "960 dpi"],
-    a: "72 dpi",
-    difficulty: "easy",
-    week: 2,
-    topic: "Ekran çözünürlüğü",
+    week: 1,
+    topic: "Layer Style - Drop Shadow",
     importance: "medium",
     explanation:
-      "Ekran işleri baskıya göre daha düşük piksel yoğunluğu beklentisiyle yürütülebilir. Bu yüzden klasik ders notlarında 72 dpi referansı sık geçer."
+      "Gölge, metni arka plandan ayırır ve görsel hiyerarşi sağlar. Özellikle yoğun arka planlarda okunabilirliği artırabilir."
   },
   {
-    q: "Aşağıdaki dosya uzantılarından hangisi vektör formatına örnektir?",
+    q: "Stroke (Çizgi) efekti metinde ne yapar?",
     t: "mcq",
-    o: [".SVG", ".JPG", ".PNG", ".GIF", ".TIFF"],
-    a: ".SVG",
+    o: ["Metnin etrafına kenarlık ekler", "Metni bulanıklaştırır", "Metni seçime çevirir", "Metni paragraf yapar", "Renkleri ters çevirir"],
+    a: "Metnin etrafına kenarlık ekler",
     difficulty: "easy",
-    week: 2,
-    topic: "Vektör format",
-    importance: "high",
-    explanation:
-      "SVG ölçeklenebilir vektör grafiktir. AI/EPS de tipik vektör formatlarıdır. JPG/PNG/GIF/TIFF raster ağırlıklıdır."
-  },
-  {
-    q: "Renk teorisinde ana (primary) renkler hangileridir?",
-    t: "mcq",
-    o: [
-      "Kırmızı, Mavi, Sarı",
-      "Turuncu, Yeşil, Mor",
-      "Siyah, Beyaz, Gri",
-      "Cyan, Magenta, Yellow",
-      "Kırmızı, Yeşil, Mavi"
-    ],
-    a: "Kırmızı, Mavi, Sarı",
-    difficulty: "easy",
-    week: 2,
-    topic: "Renk teorisi - ana renkler",
-    importance: "high",
-    explanation:
-      "Ders notunda renk çemberi için ana renkler kırmızı-mavi-sarı olarak anlatılıyor. Bunların karışımı ara renkleri verir."
-  },
-  {
-    q: "Kırmızı + Sarı karışımı hangi ara (secondary) rengi verir?",
-    t: "mcq",
-    o: ["Mor", "Yeşil", "Turuncu", "Cyan", "Magenta"],
-    a: "Turuncu",
-    difficulty: "easy",
-    week: 2,
-    topic: "Renk karışımı",
-    importance: "high",
-    explanation:
-      "Ara renk örnekleri: Kırmızı+Sarı=Turuncu, Mavi+Sarı=Yeşil, Kırmızı+Mavi=Mor."
-  },
-  {
-    q: "Renk çemberinde birbirinin karşısında olan renklere ne denir?",
-    t: "mcq",
-    o: ["Analogous (benzer)", "Tamamlayıcı (complementary)", "Monokrom", "Gri ton", "Raster"],
-    a: "Tamamlayıcı (complementary)",
-    difficulty: "medium",
-    week: 2,
-    topic: "Renk çemberi - tamamlayıcı",
-    importance: "high",
-    explanation:
-      "Karşıt (tamamlayıcı) renkler yüksek kontrast verir ve dikkat çeker. Bu nedenle reklamda sık kullanılır (örn: kırmızı-yeşil, mavi-turuncu)."
-  },
-  {
-    q: "Mavi–turkuaz–yeşil gibi yan yana tonların birlikte kullanımı hangi renk ilişkisine örnektir?",
-    t: "mcq",
-    o: ["Tamamlayıcı", "Benzer (analogous)", "Triadik", "Split-complementary", "Rastgele"],
-    a: "Benzer (analogous)",
-    difficulty: "medium",
-    week: 2,
-    topic: "Renk ilişkileri - analogous",
+    week: 1,
+    topic: "Layer Style - Stroke",
     importance: "medium",
     explanation:
-      "Benzer renkler renk çemberinde yan yana durur ve daha yumuşak/uyumlu atmosfer verir. Tamamlayıcılar ise daha sert kontrast üretir."
+      "Stroke; metnin dışına (veya içine) çizgi ekleyerek arka planla kontrast oluşturur, okunabilirliği destekler."
+  },
+  {
+    q: "Text Mask Tool (Metin maskesi) kullanıldığında metin en temel olarak nasıl davranır?",
+    t: "mcq",
+    o: [
+      "Bir seçim (selection) alanı gibi davranır",
+      "Vektör çizgiye dönüşür",
+      "Sadece paragraf olur",
+      "Renk uzayı otomatik değişir",
+      "Katmanları tekleştirir"
+    ],
+    a: "Bir seçim (selection) alanı gibi davranır",
+    difficulty: "medium",
+    week: 1,
+    topic: "Text Mask",
+    importance: "high",
+    explanation:
+      "Type Mask araçları metni doğrudan seçili alan (selection) haline getirir. Bu seçim, fotoğraf/desen ile doldurularak yaratıcı efekt yapılır."
+  },
+  {
+    q: "Warp Text aracıyla aşağıdakilerden hangisi yapılabilir?",
+    t: "mcq",
+    o: [
+      "Metni dalga/yay/balon gibi şekillerde eğriltmek",
+      "Metni CMYK’a çevirmek",
+      "Metnin çözünürlüğünü 300 dpi yapmak",
+      "Metni otomatik hizalamak",
+      "Metni vektöre dönüştürmek"
+    ],
+    a: "Metni dalga/yay/balon gibi şekillerde eğriltmek",
+    difficulty: "easy",
+    week: 1,
+    topic: "Warp Text",
+    importance: "medium",
+    explanation:
+      "Warp Text; reklam/afiş tasarımlarında dikkat çekmek için metni eğip bükerek form kazandırır."
+  },
+  {
+    q: "Kompozisyon içinde metnin doğru yerleştirilmesi en çok hangi sonucu etkiler?",
+    t: "mcq",
+    o: [
+      "İzleyicinin bakış yönünü ve mesajın algılanma hızını",
+      "Dosyanın uzantısını",
+      "Ekranın parlaklığını",
+      "Vektör noktalarını",
+      "PPI değerini otomatik artırmayı"
+    ],
+    a: "İzleyicinin bakış yönünü ve mesajın algılanma hızını",
+    difficulty: "medium",
+    week: 1,
+    topic: "Metin-kompozisyon ilişkisi",
+    importance: "high",
+    explanation:
+      "Metin, kompozisyonun yönlendirici unsurudur. Başlığın yeri, boşluk kullanımı ve hiyerarşi izleyicinin nereye bakacağını belirler."
+  },
+  {
+    q: "Negative space (boşluk) kullanımı metin için en çok ne sağlar?",
+    t: "mcq",
+    o: ["Okunabilirliği artırır ve metni nefeslendirir", "Metni rasterize eder", "Renkleri tersine çevirir", "Dosyayı küçültür", "Sadece dekoratif olur"],
+    a: "Okunabilirliği artırır ve metni nefeslendirir",
+    difficulty: "easy",
+    week: 1,
+    topic: "Negative space",
+    importance: "high",
+    explanation:
+      "Boşluk; metnin çevresinde “gürültüyü” azaltır, gözün metni kolay okumasını sağlar ve tasarıma profesyonel denge katar."
   },
 
   // =========================================================
-  // ==== 3) Renk Modları + Renk Uzayları + Cihaz Farkı (10) ===
+  // ============ WEEK 2: ADJUSTMENT LAYERS & BLENDING (16) ===
   // =========================================================
   {
-    q: "RGB renk modu en çok hangi ortam için uygundur?",
-    t: "mcq",
-    o: ["Matbaa baskı", "Dijital ekranlar (telefon/TV/monitor)", "Gazete kağıdı", "Serigrafi baskı", "Lazer kesim"],
-    a: "Dijital ekranlar (telefon/TV/monitor)",
-    difficulty: "easy",
-    week: 3,
-    topic: "RGB - kullanım",
-    importance: "high",
-    explanation:
-      "RGB ışık tabanlıdır ve ekranlar ışık yayarak renk oluşturur. Bu yüzden dijital tasarımlarda RGB seçilir."
-  },
-  {
-    q: "CMYK renk modu en çok hangi ortam için uygundur?",
-    t: "mcq",
-    o: ["Telefon ekranı", "Web sitesi", "Baskı (dergi/broşür/afiş)", "Video oyunu", "Ekran görüntüsü"],
-    a: "Baskı (dergi/broşür/afiş)",
-    difficulty: "easy",
-    week: 3,
-    topic: "CMYK - kullanım",
-    importance: "high",
-    explanation:
-      "CMYK pigment/mürekkep tabanlıdır. Basılı işler için kullanılır. Dijitalde RGB, baskıda CMYK temel kuraldır."
-  },
-  {
-    q: "RGB sisteminde üç ana ışık rengi birleştiğinde hangi sonuç oluşur?",
-    t: "mcq",
-    o: ["Siyah", "Beyaz", "Gri", "Kahverengi", "Yeşil"],
-    a: "Beyaz",
-    difficulty: "easy",
-    week: 3,
-    topic: "RGB - additif",
-    importance: "medium",
-    explanation:
-      "RGB additif (ekleme) modelidir: ışık eklendikçe renk açılır. Kırmızı+Yeşil+Mavi birleşince beyaz ışık oluşur."
-  },
-  {
-    q: "CMYK modeline “Subtractive (çıkarma)” denmesinin temel nedeni hangisidir?",
+    q: "Adjustment Layer’ların temel mantığı aşağıdakilerden hangisidir?",
     t: "mcq",
     o: [
-      "Işık ekledikçe beyaza yaklaşması",
-      "Pigmentlerin ışığı emmesi; renk karıştıkça yansıyan ışığın azalması ve rengin koyulaşması",
-      "Sadece siyah-beyaz çalışması",
-      "Ekranlar için tasarlanması",
-      "Çözünürlüğü artırması"
+      "Orijinal pikselleri kalıcı olarak değiştirir",
+      "Orijinal piksele dokunmadan ton/renk ayarı yapar (yıkıcı olmayan)",
+      "Sadece metin yazmak içindir",
+      "Sadece vektör oluşturur",
+      "Sadece dosya kaydetmeyi sağlar"
     ],
-    a: "Pigmentlerin ışığı emmesi; renk karıştıkça yansıyan ışığın azalması ve rengin koyulaşması",
-    difficulty: "hard",
-    week: 3,
-    topic: "CMYK - subtractive mantık",
+    a: "Orijinal piksele dokunmadan ton/renk ayarı yapar (yıkıcı olmayan)",
+    difficulty: "easy",
+    week: 2,
+    topic: "Adjustment Layer mantığı",
     importance: "high",
     explanation:
-      "CMYK’da mürekkepler ışığı “yutar”. Daha çok pigment → daha az yansıma → daha koyu sonuç. Bu yüzden subtractive denir."
+      "Adjustment Layer; düzenlemeyi ayrı bir katman gibi tutar. İstediğin an kapatabilir, maskeyle sınırlayabilir veya ayarı değiştirebilirsin."
   },
   {
-    q: "Ekranlarda aynı fotoğrafın farklı görünmesinin en temel nedeni aşağıdakilerden hangisidir?",
+    q: "Non-Destructive Editing (Yıkıcı olmayan düzenleme) neden profesyonel işlerde standart kabul edilir?",
     t: "mcq",
     o: [
-      "Her cihaz aynı renk uzayını kullanır",
-      "Cihazlar farklı renk uzayları/kalibrasyonlar kullandığı için renkleri farklı yorumlayabilir",
-      "Fotoğraflar vektördür",
-      "PNG formatı renkleri değiştirir",
-      "Katman sayısı azdır"
+      "Çünkü dosyayı otomatik küçültür",
+      "Çünkü geri alınabilirlik ve esnek kontrol sağlar, orijinali korur",
+      "Çünkü renk uzayını otomatik düzeltir",
+      "Çünkü tüm katmanları birleştirir",
+      "Çünkü sadece hızlıdır"
     ],
-    a: "Cihazlar farklı renk uzayları/kalibrasyonlar kullandığı için renkleri farklı yorumlayabilir",
+    a: "Çünkü geri alınabilirlik ve esnek kontrol sağlar, orijinali korur",
     difficulty: "medium",
-    week: 3,
-    topic: "Renk uzayı - cihaz farkı",
+    week: 2,
+    topic: "Non-destructive",
     importance: "high",
     explanation:
-      "Ekranlar genelde RGB’de olsa bile renk uzayı (sRGB/Adobe RGB) ve kalibrasyon farkları tonu değiştirir. Yazıcılar ise CMYK ve ayrı profillerle çalışır."
+      "Direkt piksele müdahale risklidir. Adjustment Layer ile her şey geri döndürülebilir ve proje boyunca kontrollü ilerlersin."
   },
   {
-    q: "Web ve ekran görüntüleri için en yaygın renk uzayı hangisidir?",
+    q: "Aşağıdakilerden hangisi yaygın bir Adjustment Layer türüdür?",
     t: "mcq",
-    o: ["sRGB", "Adobe RGB", "Lab", "CMYK", "TIFF RGB+"],
-    a: "sRGB",
+    o: ["Curves", "Pen Tool", "Artboard Tool", "Knife Tool", "Mesh Tool"],
+    a: "Curves",
     difficulty: "easy",
-    week: 3,
-    topic: "Renk uzayı - sRGB",
+    week: 2,
+    topic: "Adjustment Layer türleri",
     importance: "high",
     explanation:
-      "sRGB, web ve çoğu ekran senaryosunda standart kabul edilir. Cihazlar arası tutarlılığı artırmak için yaygındır."
+      "Notta geçen örnekler: Brightness/Contrast, Levels, Curves, Exposure, Vibrance, Hue/Saturation, Color Balance, Selective Color, Gradient Map, Black & White vb."
   },
   {
-    q: "Adobe RGB renk uzayının en belirgin avantajı hangisidir?",
+    q: "Adjustment Layer maskesinde beyaz alan neyi ifade eder?",
     t: "mcq",
-    o: [
-      "sRGB’den daha dar renk gamı sunması",
-      "Daha geniş renk gamı sunarak profesyonel fotoğraf/baskıda avantaj sağlaması",
-      "Sadece siyah-beyaz çalışması",
-      "Sadece GIF üretmesi",
-      "Sadece düşük kalite için kullanılması"
-    ],
-    a: "Daha geniş renk gamı sunarak profesyonel fotoğraf/baskıda avantaj sağlaması",
-    difficulty: "medium",
-    week: 3,
-    topic: "Renk uzayı - Adobe RGB",
-    importance: "medium",
-    explanation:
-      "Adobe RGB, sRGB’ye göre daha geniş renk aralığı sağlar. Profesyonel fotoğrafçılık ve baskı işlerinde tercih edilebilir."
-  },
-  {
-    q: "Lab (CIE Lab) renk modeli için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Cihaza bağımlıdır ve sadece telefonlarda çalışır",
-      "İnsan gözünün algısına dayalı, cihazdan bağımsız bir renk modelidir",
-      "Sadece CMYK’nın farklı adıdır",
-      "Sadece 256 renk destekler",
-      "Sadece vektörlerde kullanılır"
-    ],
-    a: "İnsan gözünün algısına dayalı, cihazdan bağımsız bir renk modelidir",
-    difficulty: "hard",
-    week: 3,
-    topic: "Renk uzayı - Lab",
-    importance: "medium",
-    explanation:
-      "Lab, cihazdan bağımsız bir referans gibidir. Renk dönüşümlerinde ‘algısal’ yaklaşım sağlamak için kullanılabilir; profesyonel iş akışlarında önemlidir."
-  },
-  {
-    q: "RGB’de “kırmızı ışık + yeşil ışık” birleşince hangi renk oluşur?",
-    t: "mcq",
-    o: ["Sarı", "Cyan", "Magenta", "Siyah", "Mor"],
-    a: "Sarı",
+    o: ["Efektin etkisiz olduğu alan", "Efektin etkili olduğu alan", "Alan tamamen silinir", "Alan vektöre dönüşür", "Renk uzayı değişir"],
+    a: "Efektin etkili olduğu alan",
     difficulty: "easy",
-    week: 3,
-    topic: "RGB karışım örnekleri",
-    importance: "medium",
-    explanation:
-      "RGB additif modelinde: Kırmızı+Yeşil=Sarı, Kırmızı+Mavi=Magenta, Yeşil+Mavi=Cyan."
-  },
-  {
-    q: "Bir projede en başta doğru renk uzayı seçilmezse en olası sonuç hangisidir?",
-    t: "mcq",
-    o: [
-      "Renk dönüşümünde kayıplar/ton farkları oluşabilir",
-      "Çözünürlük otomatik artar",
-      "Dosya formatı kendiliğinden SVG olur",
-      "Vektörler pikselleşir",
-      "Katmanlar silinir"
-    ],
-    a: "Renk dönüşümünde kayıplar/ton farkları oluşabilir",
-    difficulty: "medium",
-    week: 3,
-    topic: "Renk yönetimi - dönüşüm",
+    week: 2,
+    topic: "Adjustment maskesi",
     importance: "high",
     explanation:
-      "Renk uzayları arasında dönüşüm yapılabilir ancak bazı renkler hedef uzayda yoksa kayıp yaşanır. Bu yüzden başta doğru uzayı seçmek kritik bir karardır."
+      "Maske mantığı: Beyaz = etki var, Siyah = etki yok, Gri = kısmi etki."
   },
-
-  // =========================================================
-  // ==== 4) Formatlar + Ekran Teknolojileri + Çözünürlük (8) ==
-  // =========================================================
   {
-    q: "JPG (JPEG) formatının temel özelliği aşağıdakilerden hangisidir?",
+    q: "Adjustment Layer maskesinde siyah alan neyi ifade eder?",
     t: "mcq",
-    o: [
-      "Kayıpsız sıkıştırma ve şeffaflık",
-      "Kayıplı sıkıştırma ile dosya boyutunu küçültmesi; fotoğraflarda yaygın olması",
-      "Vektör tabanlı olması",
-      "Sadece animasyon için olması",
-      "Katman saklaması"
-    ],
-    a: "Kayıplı sıkıştırma ile dosya boyutunu küçültmesi; fotoğraflarda yaygın olması",
+    o: ["Efektin etkili olduğu alan", "Efektin etkisiz olduğu alan", "Alan daha parlak olur", "Alan rasterize olur", "Alan seçime dönüşür"],
+    a: "Efektin etkisiz olduğu alan",
     difficulty: "easy",
-    week: 4,
-    topic: "Format - JPG",
+    week: 2,
+    topic: "Maske - siyah",
     importance: "high",
     explanation:
-      "JPEG kayıplı sıkıştırır: kalite bir miktar düşebilir ama dosya boyutu küçülür. Fotoğraf paylaşımında çok yaygındır."
+      "Siyah boyadığın bölgede o ayarlama katmanı çalışmaz; böylece düzenlemeyi sadece istediğin bölgeye uygularsın."
   },
   {
-    q: "PNG formatını web tasarımında özel yapan iki özellik hangisidir?",
+    q: "Blending (Harmanlama) kavramı en doğru nasıl tanımlanır?",
     t: "mcq",
     o: [
-      "Kayıpsız sıkıştırma ve şeffaflık desteği",
-      "Kayıplı sıkıştırma ve animasyon",
-      "Vektör olması ve katman saklaması",
-      "Sadece 256 renk olması",
-      "Baskıda zorunlu olması"
-    ],
-    a: "Kayıpsız sıkıştırma ve şeffaflık desteği",
-    difficulty: "easy",
-    week: 4,
-    topic: "Format - PNG",
-    importance: "high",
-    explanation:
-      "PNG kayıpsızdır ve şeffaf arka planı destekler. Bu yüzden web’de ikon/logo gibi öğelerde sık tercih edilir."
-  },
-  {
-    q: "TIFF formatı genellikle hangi ihtiyaç için tercih edilir?",
-    t: "mcq",
-    o: [
-      "Basit animasyon",
-      "Yüksek kalite gerektiren baskı işleri ve kayıpsız veri saklama",
-      "Çok küçük dosya boyutu",
-      "Sadece vektör logo",
-      "Sadece web ikonları"
-    ],
-    a: "Yüksek kalite gerektiren baskı işleri ve kayıpsız veri saklama",
-    difficulty: "medium",
-    week: 4,
-    topic: "Format - TIFF",
-    importance: "medium",
-    explanation:
-      "TIFF yüksek kalite/kayıpsız saklama için bilinir. Baskı ve arşiv işlerinde tercih edilebilir; dosya boyutu büyüyebilir."
-  },
-  {
-    q: "GIF formatının en belirgin kısıtı ve avantajı birlikte hangisidir?",
-    t: "mcq",
-    o: [
-      "Sınırsız renk + katman desteği",
-      "256 renk sınırı + basit animasyon oynatabilmesi",
-      "Vektör tabanlı olması + büyütülünce bozulmaması",
-      "CMYK desteği + baskı kalitesi",
-      "PSD desteği + düzenlenebilirlik"
-    ],
-    a: "256 renk sınırı + basit animasyon oynatabilmesi",
-    difficulty: "medium",
-    week: 4,
-    topic: "Format - GIF",
-    importance: "medium",
-    explanation:
-      "GIF az renk destekler (256). Ama küçük animasyonları oynatabildiği için internet ortamında kısa hareketli grafiklerde popülerdir."
-  },
-  {
-    q: "Aşağıdakilerden hangisi vektörel formatlara örnektir?",
-    t: "mcq",
-    o: ["SVG ve AI", "JPG ve PNG", "GIF ve JPG", "TIFF ve PNG", "BMP ve JPG"],
-    a: "SVG ve AI",
-    difficulty: "easy",
-    week: 4,
-    topic: "Format - vektör",
-    importance: "high",
-    explanation:
-      "SVG ve AI, vektörel içerik taşır. Logo/ikon gibi ölçeklenebilir işlerde kalite kaybı olmadan kullanılabilir."
-  },
-  {
-    q: "OLED ekranların LCD/LED’e göre öne çıkan özelliği aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Her pikselin kendi ışığını yayması sayesinde daha gerçekçi siyahlar ve yüksek kontrast",
-      "Sadece siyah-beyaz göstermesi",
-      "Sadece düşük çözünürlük sunması",
-      "Renk uzayı kullanmaması",
-      "Sadece baskı için üretilmesi"
-    ],
-    a: "Her pikselin kendi ışığını yayması sayesinde daha gerçekçi siyahlar ve yüksek kontrast",
-    difficulty: "medium",
-    week: 4,
-    topic: "Ekran teknolojisi - OLED",
-    importance: "medium",
-    explanation:
-      "OLED’de piksel kendi ışığını üretir. Bu, özellikle siyah tonlarda ve kontrastta ciddi avantaj sağlar (daha derin siyah)."
-  },
-  {
-    q: "1920x1080 çözünürlük genellikle hangi isimle anılır?",
-    t: "mcq",
-    o: ["HD Ready", "Full HD", "2K", "4K", "8K"],
-    a: "Full HD",
-    difficulty: "easy",
-    week: 4,
-    topic: "Ekran çözünürlüğü",
-    importance: "medium",
-    explanation:
-      "1920x1080 piksel çözünürlük, yaygın adlandırmayla Full HD’dir ve 16:9 en-boy oranıyla sık kullanılır."
-  },
-  {
-    q: "Profesyonel tasarım ortamlarında “renk kalibrasyonu” neden yapılır?",
-    t: "mcq",
-    o: [
-      "Dosya boyutunu artırmak için",
-      "Farklı ekranlarda renklerin daha tutarlı görünmesini sağlamak için",
-      "Görseli vektöre çevirmek için",
-      "GIF animasyon yapmak için",
-      "Sadece katman sayısını azaltmak için"
-    ],
-    a: "Farklı ekranlarda renklerin daha tutarlı görünmesini sağlamak için",
-    difficulty: "medium",
-    week: 4,
-    topic: "Renk kalibrasyonu",
-    importance: "high",
-    explanation:
-      "Kalibrasyon; ekranın renkleri doğru göstermesine yardım eder. Aksi halde aynı tasarım farklı cihazlarda farklı tonlarda görünebilir."
-  },
-
-  // =========================================================
-  // ==== 5) Photoshop Temelleri: Arayüz, Araçlar, PSD (6) ====
-  // =========================================================
-  {
-    q: "Photoshop’un temel çalışma prensibi aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Vektör tabanlı çizim",
-      "Piksel tabanlı (raster) görüntü düzenleme",
-      "Sadece 3D modelleme",
-      "Sadece kod yazma",
-      "Sadece animasyon"
-    ],
-    a: "Piksel tabanlı (raster) görüntü düzenleme",
-    difficulty: "easy",
-    week: 5,
-    topic: "Photoshop - raster",
-    importance: "high",
-    explanation:
-      "Photoshop raster mantıkla çalışır: fotoğraf düzenleme, montaj, kolaj gibi işlerde pikseller üzerinde işlem yapar."
-  },
-  {
-    q: "Photoshop’ta “katman (layer)” mantığının en temel faydası hangisidir?",
-    t: "mcq",
-    o: [
-      "Her şeyi tek parça yapıp düzenlemeyi zorlaştırmak",
-      "Öğeleri bağımsız düzenleyip bir katmandaki değişikliğin diğerini etkilememesini sağlamak",
-      "Dosyayı her zaman küçültmek",
-      "Sadece renk modunu değiştirmek",
-      "Vektör kalite kazandırmak"
-    ],
-    a: "Öğeleri bağımsız düzenleyip bir katmandaki değişikliğin diğerini etkilememesini sağlamak",
-    difficulty: "easy",
-    week: 5,
-    topic: "Katman - neden önemli",
-    importance: "high",
-    explanation:
-      "Arka plan, metin, logo ayrı katmanlarda olursa birini oynatırken diğerleri bozulmaz. Bu da hızlı, kontrollü ve profesyonel çalışma sağlar."
-  },
-  {
-    q: "PSD formatının tasarım sürecinde avantajı aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Katmanları ve düzenleme bilgisini saklayarak çalışmayı sürdürülebilir kılması",
-      "Sadece 256 renk desteklemesi",
-      "Sadece animasyon taşıması",
-      "Sadece vektör saklaması",
-      "Sadece baskı için zorunlu olması"
-    ],
-    a: "Katmanları ve düzenleme bilgisini saklayarak çalışmayı sürdürülebilir kılması",
-    difficulty: "medium",
-    week: 5,
-    topic: "PSD - neden kullanılır",
-    importance: "high",
-    explanation:
-      "PSD, katmanları saklar. Tasarım bitene kadar PSD’de çalışmak mantıklıdır; finalde JPG/PNG/TIFF gibi formatlara export edilir."
-  },
-  {
-    q: "Photoshop’ta “Tools Panel (Araç Kutusu)” nerede bulunur ve ne içerir?",
-    t: "mcq",
-    o: [
-      "Üstte; sadece dosya kaydetme komutlarını",
-      "Solda; seçim, fırça, kırpma, metin gibi araçları",
-      "Sağ altta; yalnızca renk uzaylarını",
-      "Orta kısımda; sadece katman isimlerini",
-      "Altta; sadece ekran çözünürlüğünü"
-    ],
-    a: "Solda; seçim, fırça, kırpma, metin gibi araçları",
-    difficulty: "easy",
-    week: 5,
-    topic: "Photoshop arayüz",
-    importance: "medium",
-    explanation:
-      "Araç kutusu soldadır ve temel düzenleme araçlarını barındırır. Seçilen araca göre üstte Options Bar değişir."
-  },
-  {
-    q: "Options Bar (Seçenek Çubuğu) ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Seçili araca özel ayarların yapıldığı bölümdür",
-      "Dosya formatlarını otomatik çevirir",
-      "Katmanları siler",
-      "Sadece renk çemberini gösterir",
-      "Sadece baskı ayarı yapar"
-    ],
-    a: "Seçili araca özel ayarların yapıldığı bölümdür",
-    difficulty: "medium",
-    week: 5,
-    topic: "Photoshop arayüz - options bar",
-    importance: "medium",
-    explanation:
-      "Brush seçince fırça ayarları; Move seçince hizalama vb. ayarlar burada görünür. Yani aktif araca göre değişen kontrol panelidir."
-  },
-  {
-    q: "Aşağıdakilerden hangisi doğru kısayol-eşleştirme örneğidir?",
-    t: "mcq",
-    o: [
-      "Move Tool = V",
-      "Brush Tool = C",
-      "Crop Tool = T",
-      "Text Tool = E",
-      "Eraser Tool = B"
-    ],
-    a: "Move Tool = V",
-    difficulty: "easy",
-    week: 5,
-    topic: "Photoshop araç kısayolları",
-    importance: "medium",
-    explanation:
-      "Ders notundaki temel kısayollar: Move(V), Brush(B), Eraser(E), Crop(C), Text(T), Marquee(M), Lasso(L)."
-  },
-
-  // =========================================================
-  // ==== 6) Katman Türleri, Maskeler, Efektler, Renk Düzeltme (10)
-  // =========================================================
-  {
-    q: "Aşağıdakilerden hangisi Photoshop’ta “Adjustment Layer”ın doğru kullanım amacıdır?",
-    t: "mcq",
-    o: [
-      "Görseli kalıcı olarak bozmak",
-      "Parlaklık/kontrast, renk, doygunluk gibi ayarları orijinali bozmadan uygulamak",
-      "Sadece metin yazmak",
-      "Sadece vektör çizmek",
-      "Sadece dosya sıkıştırmak"
-    ],
-    a: "Parlaklık/kontrast, renk, doygunluk gibi ayarları orijinali bozmadan uygulamak",
-    difficulty: "medium",
-    week: 6,
-    topic: "Adjustment Layer - non-destructive",
-    importance: "high",
-    explanation:
-      "Adjustment Layer, yıkıcı olmayan düzenleme sağlar: orijinal piksele dokunmadan “üzerinden” ayar uygular; sonradan kapatılıp düzenlenebilir."
-  },
-  {
-    q: "Shape Layer (Şekil katmanı) için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Piksel tabanlıdır ve büyütülünce pikselleşir",
-      "Vektör tabanlıdır; büyütülünce kalite kaybı yaşamaz",
-      "Sadece fotoğraf düzenlemek içindir",
-      "Sadece 256 renk destekler",
-      "Sadece TIFF’e export edilir"
-    ],
-    a: "Vektör tabanlıdır; büyütülünce kalite kaybı yaşamaz",
-    difficulty: "easy",
-    week: 6,
-    topic: "Katman türleri - shape",
-    importance: "high",
-    explanation:
-      "Şekil katmanları vektördür. Bu yüzden ikon/şekil gibi kenarı keskin öğelerde kalite korunur."
-  },
-  {
-    q: "Katmanların üst üste sıralanması Photoshop’ta en çok neyi belirler?",
-    t: "mcq",
-    o: [
-      "Hangi öğenin önde/arkada görüneceğini",
-      "Dosyanın formatını",
-      "Renk uzayını",
-      "Ekran çözünürlüğünü",
-      "GIF animasyon süresini"
-    ],
-    a: "Hangi öğenin önde/arkada görüneceğini",
-    difficulty: "easy",
-    week: 6,
-    topic: "Katman yönetimi - sıralama",
-    importance: "high",
-    explanation:
-      "Katmanlar bir yığın gibidir. Üstte olan alttakinin önünde görünür. Bu, kompozisyon kontrolünün temelidir."
-  },
-  {
-    q: "Layer Mask (katman maskesi) mantığında siyah-beyaz neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Siyah = görünür, Beyaz = gizli",
-      "Siyah = gizli, Beyaz = görünür",
-      "Siyah = daha parlak, Beyaz = daha karanlık",
-      "Siyah = vektör, Beyaz = raster",
-      "Siyah = CMYK, Beyaz = RGB"
-    ],
-    a: "Siyah = gizli, Beyaz = görünür",
-    difficulty: "easy",
-    week: 6,
-    topic: "Layer Mask - temel kural",
-    importance: "high",
-    explanation:
-      "Maske, görünürlüğü kontrol eder: siyah boyarsan gizlersin, beyaz boyarsan gösterirsin. Gri tonlar yarı saydamlık verir."
-  },
-  {
-    q: "Vektör maskesi (Vector Mask) hangi durumda daha uygundur?",
-    t: "mcq",
-    o: [
-      "Yumuşak geçişli saç seçimi",
-      "Keskin hatlı geometrik kesimler ve çözünürlükten bağımsız kenarlar",
-      "Fotoğrafın tamamına blur vermek",
-      "GIF animasyon yapmak",
-      "Sadece renk doygunluğu ayarlamak"
-    ],
-    a: "Keskin hatlı geometrik kesimler ve çözünürlükten bağımsız kenarlar",
-    difficulty: "medium",
-    week: 6,
-    topic: "Vector Mask - ne zaman",
-    importance: "medium",
-    explanation:
-      "Vektör maskesi, path/shape ile çalışır ve keskin kenar ister. Logo, şekil, net kontur gereken yerlerde idealdir."
-  },
-  {
-    q: "Clipping Mask (Kırpma maskesi) ne yapar?",
-    t: "mcq",
-    o: [
-      "Üst katmanı sadece alt katmanın içeriği/sınırı içinde görünür hale getirir",
-      "Tüm katmanları tekleştirir",
-      "Renk uzayını değiştirir",
-      "Görseli otomatik 300 dpi yapar",
-      "Katman efektlerini siler"
-    ],
-    a: "Üst katmanı sadece alt katmanın içeriği/sınırı içinde görünür hale getirir",
-    difficulty: "medium",
-    week: 6,
-    topic: "Clipping Mask - mantık",
-    importance: "high",
-    explanation:
-      "Örn: Doku katmanını metin katmanına kırparsan doku sadece harflerin içinde görünür. Bu, tipografi ve reklam tasarımında çok kullanılır."
-  },
-  {
-    q: "Layer Effects (fx) ile aşağıdakilerden hangisi yapılabilir?",
-    t: "mcq",
-    o: [
-      "Drop Shadow, Outer Glow, Bevel & Emboss gibi görsel efektler eklemek",
-      "Görseli vektöre çevirmek",
-      "Ekranı kalibre etmek",
-      "JPEG’i PNG’ye otomatik çevirmek",
-      "Dosyayı otomatik Full HD yapmak"
-    ],
-    a: "Drop Shadow, Outer Glow, Bevel & Emboss gibi görsel efektler eklemek",
-    difficulty: "easy",
-    week: 6,
-    topic: "Layer Effects - örnekler",
-    importance: "high",
-    explanation:
-      "Layer Styles; gölge, parlama, kabartma, stroke gibi efektlerle derinlik/vurgu sağlar. Üstelik düzenlenebilir olduğu için esnektir."
-  },
-  {
-    q: "Brightness/Contrast aracı en çok hangi iş için hızlı çözümdür?",
-    t: "mcq",
-    o: [
-      "Görselin genel parlaklığını ve açık-koyu farkını hızlı ayarlamak",
-      "Vektör logo çizmek",
-      "Maske oluşturmak",
-      "Dosya formatı değiştirmek",
-      "Sadece metin düzenlemek"
-    ],
-    a: "Görselin genel parlaklığını ve açık-koyu farkını hızlı ayarlamak",
-    difficulty: "easy",
-    week: 6,
-    topic: "Renk düzeltme - Brightness/Contrast",
-    importance: "medium",
-    explanation:
-      "Brightness genel aydınlığı artırır/azaltır. Contrast açık-koyu farkını düzenler. Hızlı temel düzeltmeler için sık kullanılır."
-  },
-  {
-    q: "Levels aracı histogram üzerinden hangi kontrolü sağlar?",
-    t: "mcq",
-    o: [
-      "Sadece font seçimi",
-      "Siyah nokta, orta ton ve beyaz nokta ayarıyla ton aralığını optimize etme",
-      "Sadece stroke ekleme",
-      "Sadece maske boyama",
-      "Sadece vektör çizgi kalınlığı"
-    ],
-    a: "Siyah nokta, orta ton ve beyaz nokta ayarıyla ton aralığını optimize etme",
-    difficulty: "medium",
-    week: 6,
-    topic: "Renk düzeltme - Levels",
-    importance: "high",
-    explanation:
-      "Levels, görüntünün gölge-orta-parlak bölgelerini kontrol eder. Işık dengesi zayıf fotoğraflarda detay kurtarmada çok etkilidir."
-  },
-  {
-    q: "Apply Image aracının en doğru kullanım fikri hangisidir?",
-    t: "mcq",
-    o: [
-      "Bir katmanın piksel bilgilerini başka bir katmana veya maskeye aktararak gelişmiş ton/maske işlemleri yapmak",
+      "Sadece yazı tipini değiştirmek",
+      "Katmanların matematiksel olarak karışıp yeni görsel sonuç üretmesi",
+      "Dosyayı PDF yapmak",
       "Sadece kırpma yapmak",
-      "Sadece font yüklemek",
-      "Sadece dosyayı GIF’e çevirmek",
-      "Sadece renk çemberini açmak"
+      "Sadece renk uzayını seçmek"
     ],
-    a: "Bir katmanın piksel bilgilerini başka bir katmana veya maskeye aktararak gelişmiş ton/maske işlemleri yapmak",
-    difficulty: "hard",
-    week: 6,
-    topic: "Apply Image - amaç",
+    a: "Katmanların matematiksel olarak karışıp yeni görsel sonuç üretmesi",
+    difficulty: "medium",
+    week: 2,
+    topic: "Blending kavramı",
     importance: "high",
     explanation:
-      "Apply Image; katmanları matematiksel olarak birleştirme, maske üretme veya ton bilgisini taşımada güçlüdür. Örn: parlak alanlara göre otomatik maske üretmek."
+      "Blending Modes; üst katmanın piksellerinin alt katmanla hangi matematikle etkileşeceğini belirler (karartma, aydınlatma, kontrast vb.)."
+  },
+  {
+    q: "Multiply blending modu genellikle nasıl bir etki verir?",
+    t: "mcq",
+    o: ["Görseli aydınlatır", "Görseli karartır, koyu tonları güçlendirir", "Renkleri ters çevirir", "Sadece doygunluğu artırır", "Sadece keskinleştirir"],
+    a: "Görseli karartır, koyu tonları güçlendirir",
+    difficulty: "easy",
+    week: 2,
+    topic: "Blending - Multiply",
+    importance: "high",
+    explanation:
+      "Multiply ‘Darken group’ mantığına uygundur: üst üste çarpma gibi çalışır ve görüntüyü karartır (gölge güçlendirme vb.)."
+  },
+  {
+    q: "Screen blending modu genellikle nasıl bir etki verir?",
+    t: "mcq",
+    o: ["Görseli karartır", "Görseli aydınlatır, ışık etkilerini güçlendirir", "Renkleri tamamen kaldırır", "Sadece kesim yapar", "Sadece metni seçer"],
+    a: "Görseli aydınlatır, ışık etkilerini güçlendirir",
+    difficulty: "easy",
+    week: 2,
+    topic: "Blending - Screen",
+    importance: "high",
+    explanation:
+      "Screen ‘Lighten group’ gibi çalışır: görüntüyü açar. Işık parlaması/aydınlatma efektlerinde sık kullanılır."
+  },
+  {
+    q: "Overlay, Soft Light, Hard Light gibi modlar hangi grupta düşünülür?",
+    t: "mcq",
+    o: ["Darken Group", "Lighten Group", "Contrast Group", "Inversion Group", "Color Group"],
+    a: "Contrast Group",
+    difficulty: "medium",
+    week: 2,
+    topic: "Blending grupları",
+    importance: "medium",
+    explanation:
+      "Bu modlar kontrastı artırma eğilimindedir. Overlay daha güçlü, Soft Light daha yumuşak etki verir."
+  },
+  {
+    q: "Difference ve Exclusion modları genellikle ne tür sonuçlar üretir?",
+    t: "mcq",
+    o: [
+      "Sadece aydınlatma",
+      "Renkleri tersine çevirme/soyut ve deneysel efektler",
+      "Sadece keskinlik",
+      "Sadece metin hizalama",
+      "Sadece doygunluk artırma"
+    ],
+    a: "Renkleri tersine çevirme/soyut ve deneysel efektler",
+    difficulty: "medium",
+    week: 2,
+    topic: "Inversion Group",
+    importance: "medium",
+    explanation:
+      "Difference/Exclusion; katmanlar arası farkı vurgular ve tersleme benzeri soyut sonuçlar çıkarabilir."
+  },
+  {
+    q: "Hue / Saturation / Color / Luminosity modlarının ortak özelliği nedir?",
+    t: "mcq",
+    o: [
+      "Sadece karartma yaparlar",
+      "Renk bilgisini (ton/doygunluk/parlaklık) ayrı bileşenler olarak manipüle ederler",
+      "Sadece blur eklerler",
+      "Sadece kesim yaparlar",
+      "Sadece dosya kaydederler"
+    ],
+    a: "Renk bilgisini (ton/doygunluk/parlaklık) ayrı bileşenler olarak manipüle ederler",
+    difficulty: "hard",
+    week: 2,
+    topic: "Color Group",
+    importance: "high",
+    explanation:
+      "Bu grup, renk ve parlaklık bileşenlerini ayrı kontrol etmeyi sağlar. Örn: Luminosity sadece parlaklığı etkiler."
+  },
+  {
+    q: "Curves Adjustment Layer’ı “Luminosity” blending moduna almak ne amaçla yapılır?",
+    t: "mcq",
+    o: [
+      "Sadece renkleri değiştirmek için",
+      "Sadece parlaklık/ton değerlerini değiştirip renk kaymasını azaltmak için",
+      "Dosyayı küçültmek için",
+      "Metni paragraf yapmak için",
+      "Katmanı rasterize etmek için"
+    ],
+    a: "Sadece parlaklık/ton değerlerini değiştirip renk kaymasını azaltmak için",
+    difficulty: "hard",
+    week: 2,
+    topic: "Curves + Luminosity",
+    importance: "high",
+    explanation:
+      "Luminosity modu, ton/parlaklık bileşenine odaklanır. Böylece Curves ile ışığı düzeltirken renklerin bozulmasını azaltabilirsin."
+  },
+  {
+    q: "Gradient Map’i “Soft Light” ile harmanlamak ders notuna göre genellikle hangi sonucu hedefler?",
+    t: "mcq",
+    o: [
+      "Metin katmanı üretmek",
+      "Yumuşak tonlama / sinematik renk atmosferi oluşturmak",
+      "Sadece pikselleştirme yapmak",
+      "Sadece hizalama yapmak",
+      "Sadece kırpma yapmak"
+    ],
+    a: "Yumuşak tonlama / sinematik renk atmosferi oluşturmak",
+    difficulty: "medium",
+    week: 2,
+    topic: "Gradient Map + Soft Light",
+    importance: "medium",
+    explanation:
+      "Gradient Map tonları farklı renklere eşler; Soft Light ile birleşince genelde yumuşak, kontrollü bir color grading etkisi verir."
+  },
+  {
+    q: "Kolaj/afiş gibi çoklu fotoğraf birleşimlerinde “Color” blending modu en çok neye yardımcı olur?",
+    t: "mcq",
+    o: [
+      "Fotoğrafların renk bütünlüğünü (renk uyumunu) daha doğal yapmak",
+      "Sadece keskinlik artırmak",
+      "Sadece gölge eklemek",
+      "Sadece vektör yapmak",
+      "Sadece metin yazmak"
+    ],
+    a: "Fotoğrafların renk bütünlüğünü (renk uyumunu) daha doğal yapmak",
+    difficulty: "medium",
+    week: 2,
+    topic: "Renk uyumu - Color mode",
+    importance: "high",
+    explanation:
+      "Color modu, renk bilgisini taşır. Farklı fotoğrafların bir araya geldiği kompozisyonlarda renkleri tutarlı hale getirmede işe yarar."
+  },
+  {
+    q: "Bir portrede ışık çok sertse ve yüz çok aydınlıksa, nottaki örneğe göre hangi yaklaşım mantıklıdır?",
+    t: "mcq",
+    o: [
+      "Multiply ile (maskeli) ton kontrolü yaparak belirli bölgeleri karartmak",
+      "Difference kullanıp renkleri ters çevirmek",
+      "Metni rasterize etmek",
+      "Artboard eklemek",
+      "Sadece JPEG kaydetmek"
+    ],
+    a: "Multiply ile (maskeli) ton kontrolü yaparak belirli bölgeleri karartmak",
+    difficulty: "medium",
+    week: 2,
+    topic: "Işık-gölge dengeleme",
+    importance: "medium",
+    explanation:
+      "Multiply karartır. Curves/Levels gibi ayarlama katmanlarını Multiply/Luminosity ile birleştirip maske ile sadece gerekli yere uygularsan kontrol artar."
+  },
+
+  // =========================================================
+  // ============ WEEK 3: ILLUSTRATOR TEMELLERİ + BLEED + RASTER (16)
+  // =========================================================
+  {
+    q: "Adobe Illustrator’ı Photoshop’tan temel olarak ayıran özellik hangisidir?",
+    t: "mcq",
+    o: [
+      "Raster (piksel) tabanlı olması",
+      "Vektör tabanlı olması (matematiksel noktalar/eğriler) ve ölçeklenince bozulmaması",
+      "Sadece video düzenlemesi yapması",
+      "Sadece metin yazması",
+      "Sadece animasyon yapması"
+    ],
+    a: "Vektör tabanlı olması (matematiksel noktalar/eğriler) ve ölçeklenince bozulmaması",
+    difficulty: "easy",
+    week: 3,
+    topic: "Illustrator nedir",
+    importance: "high",
+    explanation:
+      "Illustrator vektör mantıkla çalışır. Bu yüzden logo/ikon gibi işler her boyutta keskin kalır."
+  },
+  {
+    q: "Illustrator’ın yaygın kullanım alanlarından hangisi doğrudur?",
+    t: "mcq",
+    o: [
+      "Logo ve kurumsal kimlik tasarımı",
+      "Sadece işletim sistemi kurulumu",
+      "Sadece veri tabanı yönetimi",
+      "Sadece oyun motoru derleme",
+      "Sadece ses miksajı"
+    ],
+    a: "Logo ve kurumsal kimlik tasarımı",
+    difficulty: "easy",
+    week: 3,
+    topic: "Illustrator kullanım alanları",
+    importance: "high",
+    explanation:
+      "Notlara göre: logo, kurumsal kimlik, illüstrasyon, tipografi, broşür/afiş/kartvizit, web/mobil ikonları."
+  },
+  {
+    q: "Illustrator çalışma alanında sol tarafta bulunan ve seçim/çizim/metin araçlarını barındıran bölüm hangisidir?",
+    t: "mcq",
+    o: ["Tools Panel", "Menu Bar", "Panels Area", "Artboard", "Status Bar"],
+    a: "Tools Panel",
+    difficulty: "easy",
+    week: 3,
+    topic: "Workspace - Tools Panel",
+    importance: "high",
+    explanation:
+      "Tools Panel sol taraftadır. Birçok aracın altında küçük okla açılan gizli araçlar bulunabilir."
+  },
+  {
+    q: "Illustrator’da çizimin yapıldığı ana sayfa/alanın adı hangisidir?",
+    t: "mcq",
+    o: ["Artboard", "Histogram", "Layer Mask", "Canvas (Photoshop)", "Options Bar"],
+    a: "Artboard",
+    difficulty: "easy",
+    week: 3,
+    topic: "Artboard",
+    importance: "high",
+    explanation:
+      "Artboard; çıktı alınan tasarım sayfası gibi düşünülür. Bir dosyada birden fazla artboard olabilir."
+  },
+  {
+    q: "Yeni belge oluşturma kısayolu notlara göre hangisidir?",
+    t: "mcq",
+    o: ["Ctrl+N", "Ctrl+T", "Ctrl+Shift+S", "Ctrl+M", "Ctrl+L"],
+    a: "Ctrl+N",
+    difficulty: "easy",
+    week: 3,
+    topic: "New Document",
+    importance: "medium",
+    explanation:
+      "File > New (Ctrl+N) ile yeni doküman oluşturulur; profil, boyut, birim, color mode, bleed gibi ayarlar burada yapılır."
+  },
+  {
+    q: "Baskı işi için Illustrator belge Color Mode seçimi hangisi olmalıdır?",
+    t: "mcq",
+    o: ["RGB", "CMYK", "Lab", "Grayscale", "Indexed Color"],
+    a: "CMYK",
+    difficulty: "easy",
+    week: 3,
+    topic: "Belge ayarı - Color Mode",
+    importance: "high",
+    explanation:
+      "Baskı işleri pigment/mürekkep temellidir. Bu yüzden CMYK seçimi standart yaklaşımdır; dijital işlerde RGB."
+  },
+  {
+    q: "Bleed (taşma payı) en doğru neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Metnin harf aralığı",
+      "Kesim çizgisinin dışına taşan, kesim hatalarında beyaz boşluk bırakmamak için eklenen alan",
+      "Dosya boyutunu küçültme yöntemi",
+      "Renkleri ters çevirme modu",
+      "Vektör noktalarının sayısı"
+    ],
+    a: "Kesim çizgisinin dışına taşan, kesim hatalarında beyaz boşluk bırakmamak için eklenen alan",
+    difficulty: "medium",
+    week: 3,
+    topic: "Bleed nedir",
+    importance: "high",
+    explanation:
+      "Matbaada kesim milim şaşabilir. Arka plan/görselleri bleed’e taşırırsan kenarda istenmeyen beyaz çizgi oluşma riski düşer."
+  },
+  {
+    q: "Notlara göre baskı için tipik bleed değeri genellikle kaçtır?",
+    t: "mcq",
+    o: ["1 mm", "3 mm", "10 mm", "0 mm", "25 mm"],
+    a: "3 mm",
+    difficulty: "easy",
+    week: 3,
+    topic: "Bleed ölçüsü",
+    importance: "medium",
+    explanation:
+      "Yaygın uygulama 3 mm bleed’dir. Kurum/matbaa standartları değişebilse de temel eğitimde 3 mm sık öğretilir."
+  },
+  {
+    q: "Bleed ile çalışırken en doğru güvenlik kuralı hangisidir?",
+    t: "mcq",
+    o: [
+      "Önemli metin ve logoları trim line’a çok yakın koymak",
+      "Önemli metin ve logoları kesim çizgisinden güvenli içeride tutmak",
+      "Arka planı bleed’e taşırmamak",
+      "Bleed dışına taşan her şeyin basılacağını varsaymak",
+      "Sadece PNG ile çalışmak"
+    ],
+    a: "Önemli metin ve logoları kesim çizgisinden güvenli içeride tutmak",
+    difficulty: "medium",
+    week: 3,
+    topic: "Bleed - dikkat",
+    importance: "high",
+    explanation:
+      "Arka plan bleed’e taşmalıdır ama kritik öğeler (logo, yazı) kesimde kırpılmasın diye güvenli alanda kalmalıdır."
+  },
+  {
+    q: "PDF çıktısı alırken bleed’in dahil edilmesi için en doğru yaklaşım hangisidir?",
+    t: "mcq",
+    o: [
+      "PDF kaydında Marks and Bleeds bölümünde belge bleed ayarlarını kullanmak",
+      "Sadece JPG kaydetmek",
+      "Renk modunu RGB yapmak",
+      "Tüm katmanları silmek",
+      "Mesh Tool eklemek"
+    ],
+    a: "PDF kaydında Marks and Bleeds bölümünde belge bleed ayarlarını kullanmak",
+    difficulty: "medium",
+    week: 3,
+    topic: "Bleed’li PDF",
+    importance: "high",
+    explanation:
+      "Notlarda: PDF ayarlarında Marks and Bleeds sekmesinde ‘Use Document Bleed Settings’ işaretlenerek bleed dahil edilir."
+  },
+  {
+    q: "Raster Effects (Raster Efektleri) için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Vektör efektlerdir ve çözünürlükten bağımsızdır",
+      "Vektör objeye uygulanır ama piksel tabanlı işlendiği için çözünürlüğe bağlıdır",
+      "Sadece metin hizalar",
+      "Sadece artboard sayısını artırır",
+      "Sadece dosya adını değiştirir"
+    ],
+    a: "Vektör objeye uygulanır ama piksel tabanlı işlendiği için çözünürlüğe bağlıdır",
+    difficulty: "hard",
+    week: 3,
+    topic: "Raster Effects nedir",
+    importance: "high",
+    explanation:
+      "Gölge, blur, glow gibi efektler çoğu zaman raster hesaplanır. Bu yüzden Document Raster Effects Settings’teki PPI kaliteyi etkiler."
+  },
+  {
+    q: "Raster Effects ayarlarında baskı için daha uygun PPI değeri hangisidir?",
+    t: "mcq",
+    o: ["72 PPI", "150 PPI", "300 PPI", "10 PPI", "1 PPI"],
+    a: "300 PPI",
+    difficulty: "easy",
+    week: 3,
+    topic: "Raster Effects - çözünürlük",
+    importance: "high",
+    explanation:
+      "Baskıda pikselleşme istemeyiz. Raster efektler çözünürlüğe bağlı olduğundan baskıda 300 PPI tercih edilir."
+  },
+  {
+    q: "Belge genelindeki raster efekt çözünürlüğü Illustrator’da nereden ayarlanır?",
+    t: "mcq",
+    o: [
+      "Effect > Document Raster Effects Settings",
+      "File > Package",
+      "View > Outline",
+      "Window > Pathfinder",
+      "Object > Expand"
+    ],
+    a: "Effect > Document Raster Effects Settings",
+    difficulty: "medium",
+    week: 3,
+    topic: "Document Raster Effects Settings",
+    importance: "high",
+    explanation:
+      "Raster efektlerin pikselleşmemesi için belge genel ayarından PPI belirlenir (Low/Medium/High gibi seçeneklerle)."
+  },
+  {
+    q: "Raster efektlerin dezavantajı aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Her zaman dosyayı küçültür",
+      "Düşük çözünürlükte kalite kaybı yapabilir ve dosya boyutunu artırabilir",
+      "Sadece vektörle çalışır ve asla bozulmaz",
+      "Sadece metin ekler",
+      "Sadece renk modunu değiştirir"
+    ],
+    a: "Düşük çözünürlükte kalite kaybı yapabilir ve dosya boyutunu artırabilir",
+    difficulty: "medium",
+    week: 3,
+    topic: "Raster Effects - artı/eksi",
+    importance: "medium",
+    explanation:
+      "Raster işlem, piksel üretir: PPI düşükse pikselleşme olur; ayrıca efektler dosyayı ağırlaştırabilir."
+  },
+
+  // =========================================================
+  // ============ WEEK 3: ILLUSTRATOR ARAÇLAR (8) ============
+  // =========================================================
+  {
+    q: "Selection Tool (V) en doğru hangi iş için kullanılır?",
+    t: "mcq",
+    o: [
+      "Nesnenin anchor point’lerini tek tek düzenlemek",
+      "Nesneyi bütün olarak seçmek, taşımak ve boyutlandırmak",
+      "Mesh noktası eklemek",
+      "İki nesne arasında geçiş oluşturmak",
+      "Vektör çizgiyi kesmek"
+    ],
+    a: "Nesneyi bütün olarak seçmek, taşımak ve boyutlandırmak",
+    difficulty: "easy",
+    week: 3,
+    topic: "Selection Tool (V)",
+    importance: "high",
+    explanation:
+      "Selection Tool; nesneyi komple seçer. Genel taşıma/ölçekleme işlerinde temel araçtır."
+  },
+  {
+    q: "Direct Selection Tool (A) en doğru hangi iş için kullanılır?",
+    t: "mcq",
+    o: [
+      "Bir nesnenin parçalarını/anchor point’lerini seçip şekli detaylı düzenlemek",
+      "Belgeyi CMYK’a çevirmek",
+      "Artboard eklemek",
+      "Sembol püskürtmek",
+      "Yazıyı paragraf yapmak"
+    ],
+    a: "Bir nesnenin parçalarını/anchor point’lerini seçip şekli detaylı düzenlemek",
+    difficulty: "easy",
+    week: 3,
+    topic: "Direct Selection (A)",
+    importance: "high",
+    explanation:
+      "Anchor point ve handle’ları düzenleyerek şeklin formunu değiştirirsin. İnce ayar için kullanılır."
+  },
+  {
+    q: "Group Selection Tool’un temel farkı aşağıdakilerden hangisidir?",
+    t: "mcq",
+    o: [
+      "Gruplanmış nesnelerde seçim seviyeleri arasında geçiş yaparak alt öğe/üst grup seçebilmesi",
+      "Sadece metin yazması",
+      "Sadece renk seçmesi",
+      "Sadece blur eklemesi",
+      "Sadece dosya kaydetmesi"
+    ],
+    a: "Gruplanmış nesnelerde seçim seviyeleri arasında geçiş yaparak alt öğe/üst grup seçebilmesi",
+    difficulty: "medium",
+    week: 3,
+    topic: "Group Selection",
+    importance: "medium",
+    explanation:
+      "Grupların içinde tek öğeyi seçmek ve tıklayarak daha üst seviye gruba çıkmak için kullanılır; karmaşık illüstrasyonlarda hayat kurtarır."
+  },
+  {
+    q: "Shape Builder Tool’un (Shift+M) en temel işlevi hangisidir?",
+    t: "mcq",
+    o: [
+      "Şekilleri birleştirip/çıkarıp yeni şekil oluşturmak",
+      "Metin hizalamak",
+      "Renk uzayı dönüştürmek",
+      "PDF’e bleed eklemek",
+      "Raster efekt çözünürlüğü ayarlamak"
+    ],
+    a: "Şekilleri birleştirip/çıkarıp yeni şekil oluşturmak",
+    difficulty: "easy",
+    week: 3,
+    topic: "Shape Builder (Shift+M)",
+    importance: "high",
+    explanation:
+      "Birden fazla şeklin kesişim alanlarını sürükleyerek birleştirirsin; Alt/Option ile alan çıkarma yapılabilir."
+  },
+  {
+    q: "Blend Tool (W) ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "İki veya daha fazla nesne arasında renk/şekil/boyut geçişi (ara adımlar) oluşturmak",
+      "Nesneyi kesmek",
+      "Anchor point silmek",
+      "Metni maske yapmak",
+      "Artboard eklemek"
+    ],
+    a: "İki veya daha fazla nesne arasında renk/şekil/boyut geçişi (ara adımlar) oluşturmak",
+    difficulty: "medium",
+    week: 3,
+    topic: "Blend Tool (W)",
+    importance: "medium",
+    explanation:
+      "Blend; iki form arasında kademeli geçiş üretir. Blend Options ile adım sayısı (Specified Steps) veya mesafe ayarlanabilir."
+  },
+  {
+    q: "Blob Brush Tool (Shift+B) ile ilgili en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Çizgiyi sadece stroke olarak bırakır, dolgu oluşturmaz",
+      "Serbest çizimi dolgu (fill) yapan vektör şekle çevirir; aynı renkte çizimler birleşebilir",
+      "Sadece raster çizim yapar",
+      "Sadece metin yazdırır",
+      "Sadece gradient ekler"
+    ],
+    a: "Serbest çizimi dolgu (fill) yapan vektör şekle çevirir; aynı renkte çizimler birleşebilir",
+    difficulty: "medium",
+    week: 3,
+    topic: "Blob Brush",
+    importance: "medium",
+    explanation:
+      "Blob Brush ile çizdiğin şey ‘dolgu’ olarak şekle dönüşür. Aynı renkte boyadığında otomatik birleşmesi hızlı illüstrasyon üretir."
+  },
+  {
+    q: "Width Tool (Shift+W) en doğru hangi problem için kullanılır?",
+    t: "mcq",
+    o: [
+      "Bir stroke’un farklı noktalarında kalınlığı artırıp azaltmak",
+      "Yeni artboard eklemek",
+      "Renkleri ters çevirmek",
+      "Metni paragraf yapmak",
+      "Raster efekti 300 PPI yapmak"
+    ],
+    a: "Bir stroke’un farklı noktalarında kalınlığı artırıp azaltmak",
+    difficulty: "medium",
+    week: 3,
+    topic: "Width Tool (Shift+W)",
+    importance: "medium",
+    explanation:
+      "Kaligrafik/organik çizgi etkisi için çizgi kalınlığını segment segment yönetirsin. Bu vektör tabanlı olduğundan sonradan düzenlenebilir."
+  },
+  {
+    q: "Mesh Tool (U) hangi amaçla öne çıkar?",
+    t: "mcq",
+    o: [
+      "Nesneye kafes (mesh) ekleyip noktalara renk atayarak gerçekçi, yumuşak geçişli tonlama yapmak",
+      "Nesneyi makasla kesmek",
+      "Metni seçim haline getirmek",
+      "İki şekli blend etmek",
+      "Sembol püskürtmek"
+    ],
+    a: "Nesneye kafes (mesh) ekleyip noktalara renk atayarak gerçekçi, yumuşak geçişli tonlama yapmak",
+    difficulty: "hard",
+    week: 3,
+    topic: "Mesh Tool (U)",
+    importance: "medium",
+    explanation:
+      "Mesh; tek gradyandan daha detaylı kontrol verir. Gölge/ışık yansımalarıyla 3D benzeri gerçekçi illüstrasyonlarda kullanılır; fazla mesh karmaşıklık yaratabilir."
   }
 ];
