@@ -1,4 +1,5 @@
 // Web Tasarım (HTML-CSS-JS) – 50 Soruluk Sınav Soru Bankası (MCQ)
+// TAMAMEN FARKLI SORULAR – Önceki setle aynı sorular yok.
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 
 window.questionBank = [
@@ -7,430 +8,346 @@ window.questionBank = [
   // =========================================================
 
   {
-    q: "Web sayfasını oluşturan 3 temel teknoloji (çok temel düzeyde) en doğru hangisidir?",
+    q: "HTML’de <html lang='tr'> yazmanın en doğru amacı hangisidir?",
     t: "mcq",
     o: [
-      "HTML = stil, CSS = veri tabanı, JS = sunucu",
-      "HTML = yapı (iskelet), CSS = görünüm (stil), JavaScript = davranış (etkileşim)",
-      "HTML = internet, CSS = RAM, JS = ekran kartı",
-      "HTML = sadece resim, CSS = sadece yazı, JS = sadece link",
-      "HTML = programlama dili, CSS = işletim sistemi, JS = donanım"
+      "Sayfayı otomatik Türkçeye çevirir",
+      "Arama motoru ve ekran okuyucu gibi araçlara sayfanın dilini bildirir",
+      "CSS dosyasını aktif eder",
+      "Sayfanın daha hızlı açılmasını sağlar",
+      "JavaScript’in çalışmasını zorunlu yapar"
     ],
-    a: "HTML = yapı (iskelet), CSS = görünüm (stil), JavaScript = davranış (etkileşim)",
-    difficulty: "easy",
+    a: "Arama motoru ve ekran okuyucu gibi araçlara sayfanın dilini bildirir",
+    difficulty: "medium",
     week: 1,
-    topic: "HTML-CSS-JS rol ayrımı",
+    topic: "Dil bildirimi (lang)",
     importance: "high",
-    explanation: `En basit ezber:
-- HTML: Sayfada “ne var?” (başlık, paragraf, buton, resim, form)
-- CSS: “Nasıl görünsün?” (renk, hizalama, boşluk, boyut)
-- JS: “Ne yapsın?” (butona basınca değişsin, veri çeksin, doğrulama yapsın)
-
-Mini örnek mantığı:
-- HTML ile <button>Buton</button> koyarsın.
-- CSS ile butonu mavi yaparsın.
-- JS ile tıklanınca yazıyı değiştirirsin.
-
-Sınavlarda en çok bu rol ayrımı sorulur.`
-  },
-
-  {
-    q: "HTML etiket yapısı (tag anatomy) en doğru hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece { } süslü parantezle yazılır",
-      "<etiket>içerik</etiket> şeklinde açılıp kapanır (bazıları tek başına olabilir)",
-      "Sadece // yorum satırıyla yazılır",
-      "Sadece 'import' yazarak çalışır",
-      "HTML’de hiç kapanış etiketi yoktur"
-    ],
-    a: "<etiket>içerik</etiket> şeklinde açılıp kapanır (bazıları tek başına olabilir)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Etiket yapısı",
-    importance: "high",
-    explanation: `HTML’de çoğu etiket “açılış + kapanış” şeklindedir:
-- <p>Merhaba</p>
-- <h1>Başlık</h1>
-
-Bazı etiketler “tek başına” kullanılır (self-closing gibi düşün):
-- <img ... />
-- <br />
+    explanation: `lang, sayfanın dilini belirtir:
+- Ekran okuyucular doğru telaffuz eder
+- Arama motorları sayfayı doğru sınıflandırır
 
 Örnek:
-<p>Yusuf</p>
-Tarayıcıda “Yusuf” metni paragraf olarak görünür.`
+<html lang="tr">
+Sonuç: Sayfanın dili Türkçe olarak anlaşılır.`
   },
 
   {
-    q: "<!doctype html> satırının görevi en doğru hangisidir?",
+    q: "Mobil uyum (responsive) için en kritik meta etiketi hangisidir?",
     t: "mcq",
     o: [
-      "CSS dosyasını çağırır",
-      "Tarayıcıya belgenin HTML5 olduğunu söyler (standart mod)",
-      "JavaScript’i kapatır",
-      "Veritabanı bağlantısını açar",
-      "Sayfayı otomatik responsive yapar"
+      "<meta name='keywords' content='...'>",
+      "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+      "<meta charset='utf-8'>",
+      "<meta http-equiv='refresh' content='5'>",
+      "<meta name='author' content='...'>"
     ],
-    a: "Tarayıcıya belgenin HTML5 olduğunu söyler (standart mod)",
+    a: "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
     difficulty: "easy",
     week: 1,
-    topic: "DOCTYPE",
+    topic: "Viewport",
     importance: "high",
-    explanation: `<!doctype html> tarayıcıya “Bu sayfa HTML5’tir” der.
-Bu satır yoksa tarayıcı bazen “eski uyumluluk modu” gibi davranabilir ve CSS/HTML beklenmedik sonuçlar verebilir.
+    explanation: `Viewport meta etiketi, mobilde sayfanın genişliğini cihaz genişliğine uydurur.
 
 Örnek:
-<!doctype html>
-<html> ... </html>
-Bu şekilde modern standartlar devreye girer.`
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Sonuç: Mobilde “yakınlaştırılmış/taşmış” görünüm azalır.`
   },
 
   {
-    q: "HTML’de <head> ile <body> arasındaki fark en doğru hangisidir?",
+    q: "Aşağıdakilerden hangisi “semantik” bir içerik parçasını en doğru ifade eder?",
     t: "mcq",
     o: [
-      "<head> sayfada görünen içeriktir; <body> ayarlardır",
-      "<head> ayarlar/metadata/linkler; <body> ekranda görünen içerik",
-      "<head> sadece resimler; <body> sadece yazılar",
-      "İkisi aynı şeydir",
-      "<head> JS yazılır; <body> CSS yazılır"
+      "<div class='haber'> ... </div>",
+      "<article> ... </article>",
+      "<span> ... </span>",
+      "<b> ... </b>",
+      "<br>"
     ],
-    a: "<head> ayarlar/metadata/linkler; <body> ekranda görünen içerik",
+    a: "<article> ... </article>",
     difficulty: "easy",
     week: 1,
-    topic: "Head vs Body",
+    topic: "Semantik etiketler",
     importance: "high",
-    explanation: `<head> sayfanın ayar bölümü gibidir:
-- <title>, <meta>, CSS linkleri, bazı script ayarları
-
-<body> ise kullanıcıya görünen her şeydir:
-- başlık, paragraf, buton, resim, form...
-
-Mini örnek:
-<head><title>Eylül</title></head>
-<body><h1>Merhaba</h1></body>
-Tarayıcı sekmesinde “Eylül” yazar; sayfada “Merhaba” görünür.`
-  },
-
-  {
-    q: "<meta charset='utf-8'> satırı en doğru ne içindir?",
-    t: "mcq",
-    o: [
-      "Sayfayı hızlandırmak için",
-      "Türkçe karakterler gibi doğru metin gösterimi için karakter kodlamasını ayarlamak",
-      "CSS’i etkinleştirmek için",
-      "JavaScript’i devre dışı bırakmak için",
-      "Ekran genişliğini otomatik büyütmek için"
-    ],
-    a: "Türkçe karakterler gibi doğru metin gösterimi için karakter kodlamasını ayarlamak",
-    difficulty: "easy",
-    week: 1,
-    topic: "Charset",
-    importance: "high",
-    explanation: `UTF-8, Türkçe karakterlerin (ş,ğ,ı,ö,ü,ç) bozulmamasını sağlar.
-Bu satır olmazsa “Eylül” gibi kelimeler bazen hatalı görünebilir.
+    explanation: `<article>, tek başına anlamlı bir içerik bloğunu temsil eder (haber, blog yazısı vb.).
+<div> ise genel amaçlı kutudur (anlam taşımaz).
 
 Örnek:
-<meta charset="utf-8">
-Sonuç: Yazılar doğru çıkar.`
+<article>
+  <h2>Haber</h2>
+  <p>Detay...</p>
+</article>`
   },
 
   {
-    q: "<title> etiketinin etkisi en doğru hangisidir?",
+    q: "<section> ile <article> arasındaki en doğru fark hangisidir?",
     t: "mcq",
     o: [
-      "Sayfanın içindeki ana başlığı değiştirir",
-      "Tarayıcı sekmesinde görünen sayfa başlığını belirler",
-      "Butonların rengini değiştirir",
-      "Resmin alt yazısını belirler",
-      "Formu doğrular"
+      "section sadece link içindir, article sadece resim içindir",
+      "article tek başına anlamlı içerik; section sayfanın tematik bir bölümüdür (içinde article olabilir)",
+      "ikisi tamamen aynıdır, fark yoktur",
+      "section sadece CSS ile çalışır",
+      "article sadece form içinde kullanılabilir"
     ],
-    a: "Tarayıcı sekmesinde görünen sayfa başlığını belirler",
-    difficulty: "easy",
+    a: "article tek başına anlamlı içerik; section sayfanın tematik bir bölümüdür (içinde article olabilir)",
+    difficulty: "hard",
     week: 1,
-    topic: "Title",
+    topic: "Semantik yapı mantığı",
     importance: "medium",
-    explanation: `<title> sayfada görünmez; tarayıcı sekmesinde ve arama motoru başlıklarında etkisi olur.
+    explanation: `Basit mantık:
+- article: “tek başına paylaşılabilir içerik” (blog yazısı, haber)
+- section: “konu bölümü” (sayfada bir bölüm)
 
 Örnek:
-<title>Yusuf - Web</title>
-Sekmede “Yusuf - Web” yazar.`
+<section>
+  <h2>Son Haberler</h2>
+  <article>...</article>
+  <article>...</article>
+</section>`
   },
 
   {
-    q: "Başlık etiketleri (h1-h6) için en doğru ifade hangisidir?",
+    q: "<strong> etiketi en doğru neyi ifade eder?",
     t: "mcq",
     o: [
-      "h1 en küçük, h6 en büyüktür",
-      "h1 en büyük başlık, h6 en küçüktür",
-      "h etiketleri sadece CSS içindir",
-      "h etiketleri sadece link oluşturur",
-      "h etiketleri form doğrular"
+      "Sadece yazıyı kalın yapmak için görsel amaçlıdır",
+      "Metnin önemli/ vurgulanması gerektiğini semantik olarak belirtir",
+      "Metni otomatik kırmızı yapar",
+      "Metni linke çevirir",
+      "Metni gizler"
     ],
-    a: "h1 en büyük başlık, h6 en küçüktür",
-    difficulty: "easy",
-    week: 1,
-    topic: "Başlıklar",
-    importance: "high",
-    explanation: `h1-h6 “önem sırası” gibi düşün:
-- h1: ana başlık
-- h2: alt başlık
-- ...
-- h6: en küçük
-
-Örnek:
-<h1>Yusuf</h1>
-<h2>Eylül</h2>
-Tarayıcıda Yusuf daha büyük görünür; Eylül alt başlık gibi durur.`
-  },
-
-  {
-    q: "<p> ile <br> arasındaki fark en doğru hangisidir?",
-    t: "mcq",
-    o: [
-      "<p> satır kırar, <br> paragraf oluşturur",
-      "<p> paragraf (blok) oluşturur; <br> sadece satır sonu ekler",
-      "İkisi aynı şeydir",
-      "<br> başlık yapar",
-      "<p> resim ekler"
-    ],
-    a: "<p> paragraf (blok) oluşturur; <br> sadece satır sonu ekler",
+    a: "Metnin önemli/ vurgulanması gerektiğini semantik olarak belirtir",
     difficulty: "medium",
     week: 1,
-    topic: "Paragraf vs Satır sonu",
+    topic: "Metin vurgusu (strong)",
     importance: "medium",
-    explanation: `<p> yeni bir paragraf kutusu oluşturur (üst-alt boşluk da olur).
-<br> sadece aynı paragraf içinde alt satıra indirir.
+    explanation: `<strong> görselde kalın görünebilir ama asıl amaç “önem” bildirmektir.
+Ekran okuyucular bu önemi daha doğru yorumlar.
 
 Örnek:
-<p>Yusuf<br>Eylül</p>
-Sonuç: Aynı paragraf içinde iki satır görünür.`
+<strong>Önemli:</strong> Şifreyi kimseyle paylaşma.`
   },
 
   {
-    q: "Link (bağlantı) vermek için hangi etiket kullanılır?",
-    t: "mcq",
-    o: ["<img>", "<a>", "<p>", "<div>", "<span>"],
-    a: "<a>",
-    difficulty: "easy",
-    week: 1,
-    topic: "Link",
-    importance: "high",
-    explanation: `<a> etiketi link verir, href hedefi gösterir.
-
-Örnek:
-<a href="https://example.com">Siteye Git</a>
-
-Sonuç:
-“Siteye Git” tıklanınca o adrese gider.`
-  },
-
-  {
-    q: "Bir linki yeni sekmede açmak için hangi özellik kullanılır?",
+    q: "Bir görselin sayfada doğru boyutta görünmesi ve oranının bozulmaması için HTML tarafında en doğru yaklaşım hangisidir?",
     t: "mcq",
     o: [
-      "download='true'",
-      "target='_blank'",
-      "rel='css'",
-      "type='button'",
-      "name='newtab'"
+      "Sadece <img> yazmak yeterlidir, boyut kontrol edilmez",
+      "width ve height öznitelikleri veya CSS ile boyut verip oranı korumak (ör. height:auto)",
+      "Görselleri sadece <div> içine koymak",
+      "Görseli <p> ile sarmak",
+      "Görselin adını büyütmek (ör. foto_BUYUK.png)"
     ],
-    a: "target='_blank'",
+    a: "width ve height öznitelikleri veya CSS ile boyut verip oranı korumak (ör. height:auto)",
     difficulty: "medium",
     week: 1,
-    topic: "Link hedefi",
+    topic: "Görsel boyutlandırma",
     importance: "medium",
-    explanation: `target="_blank" linki yeni sekmede açar.
-Genelde güvenlik için rel="noopener noreferrer" da eklenir (ileri seviye ama bilmek artı puan).
+    explanation: `Boyutlandırma mantığı:
+- HTML’de width/height verilebilir
+- CSS’te width: 300px; height: auto; gibi oran korunur
 
-Örnek:
-<a href="https://example.com" target="_blank">Aç</a>
-Sonuç: Yeni sekme açılır.`
+Örnek CSS:
+img { width: 300px; height: auto; }
+
+Sonuç: Görsel ezilmez, oranı bozulmaz.`
   },
 
   {
-    q: "<img> etiketinde alt özelliği (alt) en doğru ne için kullanılır?",
+    q: "Bir tablo oluştururken sütun başlığı (header cell) için en doğru etiket hangisidir?",
     t: "mcq",
-    o: [
-      "Resmi büyütmek için",
-      "Resim yüklenmezse görünen açıklama ve ekran okuyucu (erişilebilirlik) için",
-      "Resmi link yapmak için",
-      "CSS’i iptal etmek için",
-      "JavaScript’i çalıştırmak için"
-    ],
-    a: "Resim yüklenmezse görünen açıklama ve ekran okuyucu (erişilebilirlik) için",
-    difficulty: "medium",
-    week: 1,
-    topic: "img alt",
-    importance: "high",
-    explanation: `alt metni:
-- Resim açılmazsa kullanıcıya ne olduğunu söyler
-- Ekran okuyucu kullananlar için resmin anlamını okur
-
-Örnek:
-<img src="logo.png" alt="EYSTUDIO logosu" />
-Resim yoksa “EYSTUDIO logosu” metni/okuması devreye girer.`
-  },
-
-  {
-    q: "Liste oluşturmak için doğru kombinasyon hangisidir?",
-    t: "mcq",
-    o: [
-      "<ul> + <li>",
-      "<div> + <p>",
-      "<h1> + <h2>",
-      "<img> + <a>",
-      "<table> + <span>"
-    ],
-    a: "<ul> + <li>",
+    o: ["<td>", "<tr>", "<th>", "<thead>", "<tablehead>"],
+    a: "<th>",
     difficulty: "easy",
     week: 1,
-    topic: "Listeler",
-    importance: "high",
-    explanation: `Sırasız liste: <ul> (unordered list)
-Eleman: <li>
-
-Örnek:
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-</ul>
-
-Sonuç: Madde işaretli bir liste oluşur.`
-  },
-
-  {
-    q: "Semantic (anlamlı) HTML etiketlerinin temel faydası hangisidir?",
-    t: "mcq",
-    o: [
-      "Sayfayı otomatik hızlandırır",
-      "Kodun anlamını güçlendirir: okunabilirlik + SEO + erişilebilirlik",
-      "JavaScript’i devre dışı bırakır",
-      "Veritabanı oluşturur",
-      "CSS’i siler"
-    ],
-    a: "Kodun anlamını güçlendirir: okunabilirlik + SEO + erişilebilirlik",
-    difficulty: "medium",
-    week: 1,
-    topic: "Semantic HTML",
-    importance: "high",
-    explanation: `Semantic etiketler (header, nav, main, section, footer) “bu bölüm ne?” sorusuna cevap verir.
-- Geliştirici daha kolay anlar
-- Arama motoru sayfayı daha iyi yorumlar (SEO)
-- Erişilebilirlik araçları sayfayı daha doğru okur
-
-Örnek: <nav> menü alanıdır, <footer> sayfa altıdır.`
-  },
-
-  {
-    q: "<div> ile <span> arasındaki en temel fark hangisidir?",
-    t: "mcq",
-    o: [
-      "<div> inline, <span> block’tur",
-      "<div> block (satırı kaplar), <span> inline (metin içinde) davranır",
-      "İkisi aynı şeydir",
-      "<span> sadece resim için",
-      "<div> sadece link için"
-    ],
-    a: "<div> block (satırı kaplar), <span> inline (metin içinde) davranır",
-    difficulty: "medium",
-    week: 1,
-    topic: "div vs span",
+    topic: "Tablo etiketleri",
     importance: "medium",
-    explanation: `<div> büyük kutu gibi davranır (blok).
-<span> metin içi küçük işaretleme gibidir (inline).
+    explanation: `<th> tablo başlık hücresidir.
+Genelde kalın ve ortalı görünür, ayrıca semantik olarak “başlık” anlamı taşır.
 
 Örnek:
-<p>Yusuf <span>ve</span> Eylül</p>
-“ve” kelimesini ayrı stil vermek için span ile sararsın.`
+<tr><th>Ad</th><th>Yaş</th></tr>`
   },
 
   {
-    q: "id ile class farkı en doğru hangisidir?",
+    q: "Form verisi gönderirken URL’de görünmesi daha olası olan yöntem hangisidir?",
+    t: "mcq",
+    o: ["POST", "GET", "PUT", "PATCH", "DELETE"],
+    a: "GET",
+    difficulty: "medium",
+    week: 1,
+    topic: "Form method",
+    importance: "high",
+    explanation: `GET genelde veriyi URL’e ekleyerek gönderir (arama gibi).
+POST genelde gövdede gönderir (login/kayıt gibi).
+
+Örnek:
+<form method="get"> ... </form>
+Sonuç: Arama parametreleri URL’de görülebilir.`
+  },
+
+  {
+    q: "<form action='...'> içindeki action özelliği en doğru neyi belirler?",
     t: "mcq",
     o: [
-      "id aynı sayfada birden çok kez kullanılabilir, class sadece bir kez",
-      "id genelde tekil (unique), class tekrar kullanılabilir (çoklu elemanda)",
-      "id sadece CSS içindir, class sadece HTML içindir",
-      "id resim ekler, class link ekler",
-      "id JavaScript’i kapatır"
+      "Formun kaç saniyede bir yenileneceğini",
+      "Form verisinin gönderileceği hedef URL/adresi",
+      "Formun içindeki inputların rengini",
+      "Formu otomatik doğrulama seviyesini",
+      "Formun içine resim eklemeyi"
     ],
-    a: "id genelde tekil (unique), class tekrar kullanılabilir (çoklu elemanda)",
+    a: "Form verisinin gönderileceği hedef URL/adresi",
     difficulty: "easy",
     week: 1,
-    topic: "id vs class",
+    topic: "Form action",
     importance: "high",
-    explanation: `id: tek bir elemanı hedeflemek için (aynı sayfada 1 kez olması beklenir).
-class: aynı stili birçok elemanda kullanmak için.
+    explanation: `action = “Gönderince nereye gitsin?”
 
 Örnek:
-<h1 id="baslik">Yusuf</h1>
-<p class="aciklama">...</p>
-Birden çok <p class="aciklama"> olabilir.`
+<form action="/kayit" method="post">
+Sonuç: Gönderilen veri /kayit adresine gider.`
   },
 
   {
-    q: "Form göndermek için en temel HTML etiketi hangisidir?",
+    q: "Formda bir input’un name özelliği en çok hangi amaçla kritiktir?",
     t: "mcq",
-    o: ["<form>", "<table>", "<img>", "<section>", "<header>"],
-    a: "<form>",
-    difficulty: "easy",
+    o: [
+      "Input’u otomatik büyütmek",
+      "Gönderilen veride alanın anahtar adı (field key) olarak kullanılmak",
+      "Input’u sadece okunur yapmak",
+      "Input’u gizlemek",
+      "Input’a border eklemek"
+    ],
+    a: "Gönderilen veride alanın anahtar adı (field key) olarak kullanılmak",
+    difficulty: "hard",
     week: 1,
-    topic: "Form temeli",
+    topic: "Form name",
     importance: "high",
-    explanation: `<form> kullanıcıdan veri almak içindir (giriş, kayıt, arama).
-İçinde input, textarea, button gibi alanlar olur.
+    explanation: `Form gönderildiğinde çoğu sistem name değerini “alan adı” olarak kullanır.
 
 Örnek:
-<form>
-  <input type="text" />
-  <button>Gönder</button>
-</form>
-
-Sonuç: Kullanıcı veri girer ve gönder butonuna basar.`
+<input name="email" type="email">
+Sonuç: Sunucu tarafına email=... gibi gider.`
   },
 
   {
-    q: "Aşağıdakilerden hangisi <input> için doğru bir type örneğidir?",
+    q: "Tek seçim yapılacak seçenek grubu (örn. cinsiyet: Kadın/Erkek) için en uygun input türü hangisidir?",
     t: "mcq",
-    o: ["type='photo'", "type='mailbox'", "type='email'", "type='screen'", "type='bold'"],
-    a: "type='email'",
+    o: ["checkbox", "radio", "range", "file", "color"],
+    a: "radio",
+    difficulty: "easy",
+    week: 1,
+    topic: "Radio vs Checkbox",
+    importance: "high",
+    explanation: `radio: aynı grupta tek seçim.
+checkbox: birden fazla seçim.
+
+Örnek:
+<input type="radio" name="cinsiyet" value="kadin">
+<input type="radio" name="cinsiyet" value="erkek">`
+  },
+
+  {
+    q: "Kullanıcıdan gizli şekilde şifre girişi almak için doğru input type hangisidir?",
+    t: "mcq",
+    o: ["type='secret'", "type='password'", "type='hide'", "type='secure'", "type='private'"],
+    a: "type='password'",
     difficulty: "easy",
     week: 1,
     topic: "Input type",
-    importance: "high",
-    explanation: `input type, tarayıcıya “bu alan ne tür veri?” der.
-type="email" e-posta formatına uygunluk için yardımcı olur.
+    importance: "medium",
+    explanation: `type="password" girilen karakterleri gizler (nokta/asterisk).
 
 Örnek:
-<input type="email" placeholder="yusuf@example.com" />
-Sonuç: Mobilde e-posta klavyesi gibi yardımcı seçimler gelir.`
+<input type="password" name="sifre">`
   },
 
   {
-    q: "Erişilebilirlik (accessibility) için form alanına en doğru eşleşme hangisidir?",
+    q: "Dışarıdan bir CSS dosyasını HTML’e bağlamanın doğru yolu hangisidir?",
     t: "mcq",
     o: [
-      "<label> ile input’u ilişkilendirmek (for/id)",
-      "Input’u div içine koymak",
-      "Sadece renk kullanarak zorunlu alan göstermek",
-      "placeholder yeterlidir, label gereksizdir",
-      "label yerine sadece <br> kullanmak"
+      "<script src='style.css'></script>",
+      "<link rel='stylesheet' href='style.css'>",
+      "<style href='style.css'></style>",
+      "<css src='style.css'></css>",
+      "<meta css='style.css'>"
     ],
-    a: "<label> ile input’u ilişkilendirmek (for/id)",
+    a: "<link rel='stylesheet' href='style.css'>",
+    difficulty: "easy",
+    week: 1,
+    topic: "External CSS bağlama",
+    importance: "high",
+    explanation: `External CSS en temiz yöntemdir.
+<link rel="stylesheet" href="style.css">
+
+Sonuç: style.css içindeki kurallar sayfaya uygulanır.`
+  },
+
+  {
+    q: "<script src='app.js' defer></script> kullanmanın en doğru avantajı hangisidir?",
+    t: "mcq",
+    o: [
+      "JavaScript’i tamamen kapatır",
+      "HTML parse edilirken script indirilir; HTML bittikten sonra çalışır (daha güvenli yükleme sırası)",
+      "Script’i sadece mobilde çalıştırır",
+      "CSS’in daha hızlı çalışmasını sağlar",
+      "Tarayıcıyı otomatik günceller"
+    ],
+    a: "HTML parse edilirken script indirilir; HTML bittikten sonra çalışır (daha güvenli yükleme sırası)",
     difficulty: "hard",
     week: 1,
-    topic: "Accessibility - label",
-    importance: "high",
-    explanation: `Erişilebilirlikte en kritik şey: alanın adı net olmalı.
-<label for="eposta">E-posta</label>
-<input id="eposta" type="email" />
+    topic: "Script yükleme (defer)",
+    importance: "medium",
+    explanation: `defer:
+- Dosya indirme gecikmeden başlar
+- Çalışma, HTML tamamen okunduktan sonra olur
 
-Sonuç:
-- Ekran okuyucu “E-posta alanı” diye okur.
-- Label’a tıklayınca input odaklanır.
-Sınavda “label/alt/semantic” çok değerli puandır.`
+Sonuç: DOM elemanları oluşmadan JS çalışıp hata verme ihtimali düşer.`
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi bir e-posta linki (mailto) örneğidir?",
+    t: "mcq",
+    o: [
+      "<a href='email:yusuf@site.com'>Mail</a>",
+      "<a href='mailto:yusuf@site.com'>Mail</a>",
+      "<a href='sms:yusuf@site.com'>Mail</a>",
+      "<a href='http://yusuf@site.com'>Mail</a>",
+      "<a href='tel:yusuf@site.com'>Mail</a>"
+    ],
+    a: "<a href='mailto:yusuf@site.com'>Mail</a>",
+    difficulty: "medium",
+    week: 1,
+    topic: "Link türleri",
+    importance: "low",
+    explanation: `mailto: tıklanınca varsayılan mail uygulamasını açar.
+
+Örnek:
+<a href="mailto:eystudio.3d@gmail.com">Bize yaz</a>`
+  },
+
+  {
+    q: "Erişilebilirlik için, butonun sadece ikon içerdiği durumda (metin yoksa) en doğru pratik hangisidir?",
+    t: "mcq",
+    o: [
+      "Butona sadece renk vermek yeterlidir",
+      "Butona aria-label eklemek",
+      "Butonu div ile değiştirmek",
+      "Buton yerine span kullanmak",
+      "Butonun fontunu büyütmek"
+    ],
+    a: "Butona aria-label eklemek",
+    difficulty: "hard",
+    week: 1,
+    topic: "Accessibility - aria-label",
+    importance: "high",
+    explanation: `İkon butonlarda metin yoksa ekran okuyucu ne olduğunu anlayamaz.
+aria-label açıklama verir.
+
+Örnek:
+<button aria-label="Menüyü aç">☰</button>
+
+Sonuç: Ekran okuyucu “Menüyü aç butonu” gibi okur.`
   },
 
   // =========================================================
@@ -438,880 +355,755 @@ Sınavda “label/alt/semantic” çok değerli puandır.`
   // =========================================================
 
   {
-    q: "CSS’in görevi en doğru hangisidir?",
+    q: "CSS’te “child (>)” seçici neyi hedefler?",
     t: "mcq",
     o: [
-      "Veritabanı sorgusu çalıştırmak",
-      "Sayfanın görünümünü/stilini belirlemek (renk, düzen, boşluk, font)",
-      "Sunucu kurmak",
-      "HTML’i otomatik yazmak",
-      "Tarayıcıyı güncellemek"
+      "Tüm torunları (iç içe her şeyi)",
+      "Sadece doğrudan çocuk elemanları",
+      "Sadece kardeş elemanları",
+      "Sadece aynı id’yi taşıyanları",
+      "Sadece hover durumundaki elemanları"
     ],
-    a: "Sayfanın görünümünü/stilini belirlemek (renk, düzen, boşluk, font)",
-    difficulty: "easy",
+    a: "Sadece doğrudan çocuk elemanları",
+    difficulty: "medium",
     week: 2,
-    topic: "CSS rolü",
-    importance: "high",
-    explanation: `CSS: “Nasıl görünsün?” sorusunu cevaplar.
-HTML’de <h1>Başlık</h1> vardır; CSS ile başlık:
-- mavi olsun
-- ortalansın
-- büyük olsun
-dersin.
+    topic: "Seçiciler - child",
+    importance: "medium",
+    explanation: `> seçicisi sadece “bir alt seviye”yi seçer.
 
 Örnek:
-h1 { color: blue; }
-Sonuç: Başlık mavi görünür.`
+ul > li { ... }
+Sonuç: ul’in direkt içindeki li’lar seçilir (daha derindeki li’lar değil).`
   },
 
   {
-    q: "CSS eklemenin 3 temel yolu hangisidir?",
+    q: ".menu li (boşluklu) seçici ile .menu > li (>) seçici arasındaki fark en doğru hangisidir?",
     t: "mcq",
     o: [
-      "only-inline / only-external / only-server",
-      "inline style / <style> (internal) / .css dosyası (external)",
-      "HTML içine gömme / RAM’e gömme / CPU’ya gömme",
-      "script / meta / title",
-      "img / a / p"
+      "İkisi tamamen aynı",
+      "Boşluklu: tüm torun li’lar; > : sadece direkt çocuk li’lar",
+      "Boşluklu: sadece direkt çocuk; > : tüm torunlar",
+      "İkisi sadece id ile çalışır",
+      "İkisi sadece grid içinde çalışır"
     ],
-    a: "inline style / <style> (internal) / .css dosyası (external)",
-    difficulty: "easy",
-    week: 2,
-    topic: "CSS ekleme yöntemleri",
-    importance: "high",
-    explanation: `3 yöntem:
-1) Inline: <p style="color:red">
-2) Internal: <style> p { ... } </style>
-3) External: <link rel="stylesheet" href="style.css">
-
-En temiz ve yaygın: External (ayrı dosya).
-Çünkü kod düzenli olur ve tekrar kullanım artar.`
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi class seçicisine örnektir?",
-    t: "mcq",
-    o: ["#kutu", ".kutu", "kutu()", "<kutu>", "@kutu"],
-    a: ".kutu",
-    difficulty: "easy",
-    week: 2,
-    topic: "Selector - class",
-    importance: "high",
-    explanation: `CSS seçicileri:
-- .class => class
-- #id => id
-- p, h1 => etiket
-
-Örnek:
-<p class="aciklama">...</p>
-.aciklama { color: #333; }
-
-Sonuç: O class’a sahip paragraflar renklendirilir.`
-  },
-
-  {
-    q: "CSS’te id seçicisi hangi sembolle yazılır?",
-    t: "mcq",
-    o: [".", "#", "$", "&", "%"],
-    a: "#",
-    difficulty: "easy",
-    week: 2,
-    topic: "Selector - id",
-    importance: "high",
-    explanation: `id seçicisi # ile başlar.
-
-Örnek:
-<h1 id="baslik">Yusuf</h1>
-#baslik { font-size: 40px; }
-
-Sonuç: Sadece id’si baslik olan eleman büyür.`
-  },
-
-  {
-    q: "CSS specificity (öncelik) mantığı için en doğru genelleme hangisidir?",
-    t: "mcq",
-    o: [
-      "Etiket her zaman class’tan güçlüdür",
-      "id genelde class’tan, class da etiketten daha güçlüdür",
-      "Hepsi eşittir",
-      "Inline style en zayıftır",
-      "CSS’te öncelik yoktur"
-    ],
-    a: "id genelde class’tan, class da etiketten daha güçlüdür",
+    a: "Boşluklu: tüm torun li’lar; > : sadece direkt çocuk li’lar",
     difficulty: "hard",
     week: 2,
-    topic: "Specificity",
+    topic: "Seçiciler - descendant vs child",
     importance: "high",
-    explanation: `Genel öncelik sırası (basit anlatım):
-inline style > #id > .class > etiket (p, div...)
+    explanation: `Boşluk = descendant (içindeki her şey)
+> = child (direkt çocuk)
 
 Örnek:
-p { color: blue; }
-.aciklama { color: red; }
-#ozel { color: green; }
-
-Aynı elemana hepsi uygularsa, id daha baskın olur.`
+.menu li { ... }      // .menu içindeki tüm li’lar
+.menu > li { ... }    // sadece .menu’nün direkt li çocukları`
   },
 
   {
-    q: "Box Model’de doğru sıra hangisidir?",
+    q: "::before pseudo-element’i en doğru ne için kullanılır?",
     t: "mcq",
     o: [
-      "margin -> border -> padding -> content",
-      "content -> padding -> border -> margin",
-      "padding -> content -> margin -> border",
-      "content -> margin -> border -> padding",
-      "border -> margin -> content -> padding"
+      "HTML’e yeni dosya eklemek için",
+      "Bir elemana CSS ile “önüne” sanal içerik eklemek için (content ile)",
+      "JavaScript’i hızlandırmak için",
+      "Tarayıcı cache’ini temizlemek için",
+      "Sadece mobil menü yapmak için"
     ],
-    a: "content -> padding -> border -> margin",
+    a: "Bir elemana CSS ile “önüne” sanal içerik eklemek için (content ile)",
     difficulty: "medium",
     week: 2,
-    topic: "Box Model",
-    importance: "high",
-    explanation: `Box Model:
-- Content: içerik alanı
-- Padding: iç boşluk
-- Border: çerçeve
-- Margin: dış boşluk
-
-Örnek:
-.card { padding:16px; border:1px solid #ddd; margin:12px; }
-Sonuç: Kartın içi nefes alır (padding), etrafında çerçeve olur, dışarıdan da boşluk bırakır (margin).`
-  },
-
-  {
-    q: "display: block ile display: inline arasındaki temel fark hangisidir?",
-    t: "mcq",
-    o: [
-      "block yan yana dizilir, inline alt alta dizilir",
-      "block satırı kaplar (alt satıra iter), inline metin gibi akar (yan yana gelebilir)",
-      "inline genişlik/yükseklik alır, block almaz",
-      "ikisi aynı şeydir",
-      "block sadece resim içindir"
-    ],
-    a: "block satırı kaplar (alt satıra iter), inline metin gibi akar (yan yana gelebilir)",
-    difficulty: "medium",
-    week: 2,
-    topic: "Display türleri",
+    topic: "Pseudo-element",
     importance: "medium",
-    explanation: `block eleman: yeni satırdan başlar, satırı kaplar (div, p).
-inline eleman: metin içinde akar, yan yana olabilir (span, a).
+    explanation: `::before / ::after ile HTML yazmadan küçük ekler yapılır.
+content şarttır.
 
 Örnek:
-<a>Link1</a><a>Link2</a> genelde yan yana durur.
-<div>1</div><div>2</div> alt alta durur.`
+.badge::before { content: "Yeni "; font-weight: bold; }
+
+Sonuç: Elemanın başına “Yeni ” eklenmiş gibi görünür.`
   },
 
   {
-    q: "Bir elemanı sayfada ortalamak için modern ve pratik yöntemlerden biri hangisidir?",
+    q: "box-sizing: border-box; en doğru hangi etkiyi yapar?",
     t: "mcq",
     o: [
-      "Her zaman <center> etiketi kullanmak",
-      "Flexbox kullanıp justify-content ve align-items ile ortalamak",
-      "Sadece <br> ile boşluk atmak",
-      "Sadece tab tuşu ile hizalamak",
-      "Sadece border artırmak"
+      "Border’ı kaldırır",
+      "width/height hesaplamasına padding+border’ı dahil eder (kutu taşması azalır)",
+      "Sadece yazı boyutunu değiştirir",
+      "Elementi inline yapar",
+      "margin’i otomatik sıfırlar"
     ],
-    a: "Flexbox kullanıp justify-content ve align-items ile ortalamak",
+    a: "width/height hesaplamasına padding+border’ı dahil eder (kutu taşması azalır)",
+    difficulty: "hard",
+    week: 2,
+    topic: "Box sizing",
+    importance: "high",
+    explanation: `border-box ile:
+width = content + padding + border toplamını kapsar.
+
+Örnek:
+.kutu { width: 200px; padding: 20px; box-sizing: border-box; }
+Sonuç: Kutu toplamda 200px kalır, taşma riski azalır.`
+  },
+
+  {
+    q: "overflow: auto; en doğru ne yapar?",
+    t: "mcq",
+    o: [
+      "Taşan içeriği tamamen siler",
+      "Taşma yoksa scroll göstermez; taşma varsa scroll çıkarır",
+      "Her zaman iki scroll bar gösterir",
+      "Sadece yatay taşmayı engeller",
+      "Elementi sayfadan kaldırır"
+    ],
+    a: "Taşma yoksa scroll göstermez; taşma varsa scroll çıkarır",
     difficulty: "medium",
     week: 2,
-    topic: "Flexbox - merkezleme",
+    topic: "Overflow",
+    importance: "medium",
+    explanation: `overflow:auto; pratik bir çözümdür:
+- İçerik sığarsa normal
+- Sığmazsa kaydırma ekler
+
+Örnek:
+.panel { max-height: 200px; overflow: auto; }`
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi CSS değişkeni (custom property) tanımlama ve kullanma örneğidir?",
+    t: "mcq",
+    o: [
+      "--renk: red; color: --renk;",
+      ":root { --renk: red; } .btn { color: var(--renk); }",
+      "@var renk = red; .btn { color: renk; }",
+      ".btn { color: $renk; }",
+      "root(--renk=red); btn(color=renk);"
+    ],
+    a: ":root { --renk: red; } .btn { color: var(--renk); }",
+    difficulty: "hard",
+    week: 2,
+    topic: "CSS variables",
+    importance: "medium",
+    explanation: `CSS değişkeni:
+:root { --primary: #0a84ff; }
+.btn { background: var(--primary); }
+
+Sonuç: Renk tek yerden değiştirilebilir (tema mantığı).`
+  },
+
+  {
+    q: "İki CSS kuralı aynı elemanı etkiliyorsa ve specificity eşitse, hangisi kazanır?",
+    t: "mcq",
+    o: [
+      "Her zaman ilk yazılan kazanır",
+      "Her zaman daha kısa kural kazanır",
+      "Dosyada en son yazılan (cascade) kazanır",
+      "Her zaman etiket seçici kazanır",
+      "Tarayıcı rastgele seçer"
+    ],
+    a: "Dosyada en son yazılan (cascade) kazanır",
+    difficulty: "medium",
+    week: 2,
+    topic: "Cascade kuralı",
     importance: "high",
-    explanation: `Flexbox ile çok kolay ortalanır:
-.kutu {
-  display: flex;
-  justify-content: center; // yatay
-  align-items: center;     // dikey
+    explanation: `Specificity eşitse “son yazılan” kazanır.
+
+Örnek:
+.btn { color: red; }
+.btn { color: blue; }
+
+Sonuç: Buton mavi olur (son kural).`
+  },
+
+  {
+    q: "flex-direction: column; kullanılırsa, ana eksen (main axis) genelde hangi yönde olur?",
+    t: "mcq",
+    o: ["Yatay (soldan sağa)", "Dikey (yukarıdan aşağı)", "Çapraz", "Rastgele", "Grid’e dönüşür"],
+    a: "Dikey (yukarıdan aşağı)",
+    difficulty: "hard",
+    week: 2,
+    topic: "Flex yön mantığı",
+    importance: "medium",
+    explanation: `Flex’te ana eksen, flex-direction ile değişir.
+- row: yatay
+- column: dikey
+
+Sonuç: justify-content artık dikey dağıtır gibi düşünülür.`
+  },
+
+  {
+    q: "Flex/Grid düzenlerinde “elemanlar arası boşluk” için en temiz modern özellik hangisidir?",
+    t: "mcq",
+    o: ["margin-left", "padding", "gap", "border-spacing", "outline"],
+    a: "gap",
+    difficulty: "easy",
+    week: 2,
+    topic: "Gap",
+    importance: "high",
+    explanation: `gap, elemanlar arasında temiz boşluk verir.
+Flex ve Grid’de çok pratik.
+
+Örnek:
+.row { display:flex; gap: 12px; }`
+  },
+
+  {
+    q: "Grid’de alan isimleriyle yerleşim yapmak için kullanılan yaklaşım hangisidir?",
+    t: "mcq",
+    o: [
+      "grid-template-areas ve grid-area",
+      "flex-wrap ve flex-grow",
+      "position: absolute ile tablo çizmek",
+      "float ile her şeyi hizalamak",
+      "z-index ile sütun yapmak"
+    ],
+    a: "grid-template-areas ve grid-area",
+    difficulty: "hard",
+    week: 2,
+    topic: "Grid areas",
+    importance: "medium",
+    explanation: `Grid areas:
+.container {
+  display:grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
 }
+header { grid-area: header; }
 
-Sonuç: İçerik hem yatay hem dikey ortalanır.
-Sınavda flex sık çıkar çünkü güncel pratik yöntemdir.`
+Sonuç: Okunabilir bir layout kurulabilir.`
   },
 
   {
-    q: "position: relative ile position: absolute arasındaki ilişki en doğru hangisidir?",
+    q: "position: fixed; ile position: sticky; arasındaki fark en doğru hangisidir?",
     t: "mcq",
     o: [
-      "absolute eleman her zaman ekranın sol üstüne göre konumlanır",
-      "absolute eleman, en yakın “position: relative” ebeveyne göre konumlanır",
-      "relative eleman görünmez olur",
-      "absolute sadece metin içindir",
-      "relative, CSS’i devre dışı bırakır"
+      "fixed scroll ile birlikte normal akar; sticky ekrana yapışır",
+      "fixed her zaman viewport’a sabitlenir; sticky belirli noktadan sonra yapışır ve konteyner içinde davranır",
+      "ikisi tamamen aynı",
+      "sticky sadece mobilde, fixed sadece masaüstünde çalışır",
+      "fixed z-index’i kapatır, sticky açar"
     ],
-    a: "absolute eleman, en yakın “position: relative” ebeveyne göre konumlanır",
+    a: "fixed her zaman viewport’a sabitlenir; sticky belirli noktadan sonra yapışır ve konteyner içinde davranır",
     difficulty: "hard",
     week: 2,
-    topic: "Positioning",
-    importance: "medium",
-    explanation: `Kural:
-- Parent: position: relative
-- Child: position: absolute; top/right/bottom/left
-
-Örnek:
-.parent { position: relative; }
-.child  { position: absolute; top: 10px; right: 10px; }
-
-Sonuç: child, parent kutusunun içinde sağ üstte durur.`
-  },
-
-  {
-    q: "Flexbox’ta justify-content neyi kontrol eder?",
-    t: "mcq",
-    o: [
-      "Dikey hizalamayı",
-      "Yatay (ana eksen) hizalamayı",
-      "Yazı tipini",
-      "Renk paletini",
-      "Sadece border kalınlığını"
-    ],
-    a: "Yatay (ana eksen) hizalamayı",
-    difficulty: "medium",
-    week: 2,
-    topic: "Flexbox eksenleri",
+    topic: "Position fixed vs sticky",
     importance: "high",
-    explanation: `Flex’te iki eksen vardır:
-- justify-content: ana eksen (default yatay)
-- align-items: çapraz eksen (default dikey)
+    explanation: `fixed: her zaman ekrana sabit (örn. WhatsApp butonu)
+sticky: scroll’da belirli bir noktadan sonra “yapışır” (örn. tablo başlığı)
 
 Örnek:
-.row { display:flex; justify-content: space-between; }
-Sonuç: Elemanlar araya boşluk koyarak sağa-sola yayılır.`
+.header { position: sticky; top: 0; }`
   },
 
   {
-    q: "Grid ile 3 eşit sütun oluşturmanın doğru yolu hangisidir?",
+    q: "transform: translateX(20px); kullanmanın, margin-left: 20px;’e göre tipik farkı hangisidir?",
     t: "mcq",
     o: [
-      "display: grid; grid-template-columns: 1fr 1fr 1fr;",
-      "display: flex; grid-columns: 3;",
-      "position: grid; columns: 3;",
-      "display: block; column-count: 3fr;",
-      "grid: on; columns: equal;"
+      "transform yerleşimi (flow) değiştirmez; margin düzeni etkiler",
+      "margin hiçbir zaman çalışmaz",
+      "transform sadece yazıyı taşır, kutuyu taşımaz",
+      "margin animasyon için daha hızlıdır",
+      "İkisi aynı performanstadır ve aynı etkiyi verir"
     ],
-    a: "display: grid; grid-template-columns: 1fr 1fr 1fr;",
+    a: "transform yerleşimi (flow) değiştirmez; margin düzeni etkiler",
+    difficulty: "hard",
+    week: 2,
+    topic: "Transform vs Layout",
+    importance: "medium",
+    explanation: `transform elemanı görsel olarak kaydırır, komşu elemanların yerleşimi genelde değişmez.
+margin ise “yerleşim” boşluğu yaratarak düzeni etkiler.
+
+Sonuç: Animasyonlarda transform tercih edilir (daha akıcı olabilir).`
+  },
+
+  {
+    q: "transition ile animation arasındaki en doğru fark hangisidir?",
+    t: "mcq",
+    o: [
+      "transition sadece JS ile çalışır; animation sadece HTML ile",
+      "transition bir durum değişiminde geçiş yapar; animation keyframes ile kendi başına akabilir",
+      "animation sadece hover’da olur; transition her zaman sonsuz döner",
+      "İkisi sadece renkle ilgilidir",
+      "İkisi aynı şeydir"
+    ],
+    a: "transition bir durum değişiminde geçiş yapar; animation keyframes ile kendi başına akabilir",
     difficulty: "medium",
     week: 2,
-    topic: "CSS Grid",
+    topic: "Transition vs Animation",
     importance: "medium",
-    explanation: `Grid ile sütunları net tanımlarsın:
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-}
+    explanation: `transition: hover/active gibi bir değişimde yumuşak geçiş
+animation: @keyframes ile bağımsız animasyon akışı
 
-Sonuç: 3 eşit sütun, aralarında boşluk (gap) olur.`
+Örnek:
+@keyframes pulse { ... }
+.box { animation: pulse 1s infinite; }`
   },
 
   {
-    q: "Responsive tasarımda @media sorgusunun amacı en doğru hangisidir?",
+    q: "vh birimi en doğru neyi temsil eder?",
     t: "mcq",
     o: [
-      "Sayfayı veritabanına bağlamak",
-      "Ekran boyutuna göre CSS kurallarını değiştirmek",
-      "JavaScript’i hızlandırmak",
-      "HTML’i şifrelemek",
-      "Tarayıcıyı güncellemek"
+      "Yazı tipi yüksekliğini",
+      "Viewport (ekran) yüksekliğinin yüzdesini",
+      "Sadece genişliği",
+      "Sadece font kalınlığını",
+      "Sadece margin değerini"
     ],
-    a: "Ekran boyutuna göre CSS kurallarını değiştirmek",
+    a: "Viewport (ekran) yüksekliğinin yüzdesini",
     difficulty: "easy",
     week: 2,
-    topic: "Responsive - media query",
-    importance: "high",
-    explanation: `@media ile “ekran şu kadar küçükse şöyle yap” dersin.
-
-Örnek:
-@media (max-width: 768px) {
-  .grid { grid-template-columns: 1fr; }
-}
-
-Sonuç: Masaüstünde 3 sütun olan grid, mobilde 1 sütuna düşer.`
-  },
-
-  {
-    q: "CSS birimleriyle ilgili doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "px her zaman ekrana göre değişir, sabit değildir",
-      "rem genelde root font-size’a göre ölçeklenir, responsive için daha kontrollü olabilir",
-      "vw sadece yükseklik birimidir",
-      "% sadece renkle ilgilidir",
-      "em ve rem aynı şey değildir, ikisi de asla kullanılmaz"
-    ],
-    a: "rem genelde root font-size’a göre ölçeklenir, responsive için daha kontrollü olabilir",
-    difficulty: "hard",
-    week: 2,
-    topic: "CSS units",
+    topic: "CSS units (vh)",
     importance: "medium",
-    explanation: `px: sabite yakın ölçü (temel anlatım).
-em: bulunduğu elemanın font-size’ına göre değişir.
-rem: html (root) font-size’ına göre değişir.
-
-Örn:
-html { font-size: 16px; }
-h1 { font-size: 2rem; } => 32px
-
-Sonuç: rem ile genel ölçek kontrolü daha düzenli olur.`
-  },
-
-  {
-    q: ":hover pseudo-class en doğru ne yapar?",
-    t: "mcq",
-    o: [
-      "Kullanıcı elemanın üstüne gelince (mouse over) stil uygular",
-      "Sayfayı otomatik kaydeder",
-      "JavaScript’i devre dışı bırakır",
-      "Veritabanını yedekler",
-      "Sadece mobilde çalışır"
-    ],
-    a: "Kullanıcı elemanın üstüne gelince (mouse over) stil uygular",
-    difficulty: "easy",
-    week: 2,
-    topic: "Pseudo-class",
-    importance: "medium",
-    explanation: `:hover, fareyle üstüne gelince tetiklenen durumdur.
-
+    explanation: `1vh = ekran yüksekliğinin %1’i.
 Örnek:
-.btn:hover { opacity: 0.8; }
-
-Sonuç: Kullanıcı butonun üstüne gelince buton biraz soluk görünür.`
+.hero { height: 100vh; }
+Sonuç: Bölüm ekranı tam kaplar.`
   },
 
   {
-    q: "CSS transition ne işe yarar?",
+    q: "display: inline-block; için en doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Sayfayı sunucuya taşır",
-      "Stil değişimlerini yumuşatır (animasyon gibi geçiş)",
-      "HTML’i şifreler",
-      "Formu doğrular",
-      "JS’i siler"
+      "Yeni satıra geçer ve tüm satırı kaplar",
+      "Metin gibi yan yana durabilir ama width/height alabilir",
+      "Sadece resimler için geçerlidir",
+      "Flex’i kapatır",
+      "Her zaman görünmez yapar"
     ],
-    a: "Stil değişimlerini yumuşatır (animasyon gibi geçiş)",
+    a: "Metin gibi yan yana durabilir ama width/height alabilir",
     difficulty: "medium",
     week: 2,
-    topic: "Transition",
+    topic: "Display inline-block",
     importance: "medium",
-    explanation: `transition, bir özellik değişince “bir anda” değil “yavaşça” değişmesini sağlar.
+    explanation: `inline-block:
+- inline gibi yan yana durabilir
+- block gibi boyutlandırılabilir
 
 Örnek:
-.btn { transition: 0.2s; }
-.btn:hover { transform: scale(1.03); }
-
-Sonuç: Hover olunca buton bir anda zıplamaz, yumuşak büyür.`
+.badge { display:inline-block; padding: 6px 10px; }`
   },
 
   {
-    q: "z-index hangi durumda anlamlıdır?",
+    q: ":nth-child(2) seçicisi en doğru neyi hedefler?",
     t: "mcq",
     o: [
-      "Sadece yazı rengini değiştirirken",
-      "Örtüşen elemanlarda hangisi üstte görünsün diye (position’lı elemanlarda)",
-      "Sadece font seçerken",
-      "Sadece liste oluştururken",
-      "Sadece tablo yaparken"
+      "Sadece class’ı 2 olan elemanı",
+      "Ebeveyninin 2. çocuğu olan elemanı",
+      "İkinci sayfayı",
+      "Sadece ikinci satırdaki metni",
+      "Sadece 2 piksel genişliğindeki elemanı"
     ],
-    a: "Örtüşen elemanlarda hangisi üstte görünsün diye (position’lı elemanlarda)",
-    difficulty: "hard",
+    a: "Ebeveyninin 2. çocuğu olan elemanı",
+    difficulty: "medium",
     week: 2,
-    topic: "Layering",
+    topic: "Pseudo-class nth-child",
     importance: "low",
-    explanation: `z-index, elemanlar üst üste biniyorsa katman sırasını belirler.
-Genelde position (relative/absolute/fixed) olan elemanlarda anlam kazanır.
+    explanation: `nth-child, sıralamaya göre seçim yapar.
 
 Örnek:
-.modal { position: fixed; z-index: 999; }
-Sonuç: Modal çoğu şeyin üstünde görünür.`
+li:nth-child(2) { font-weight: bold; }
+Sonuç: listedeki 2. li kalın olur.`
   },
 
   // =========================================================
-  // ==== 3. HAFTA – JavaScript, DOM, Kütüphane Mantığı (17) ===
+  // ==== 3. HAFTA – JavaScript Temelleri + DOM Mantığı (17) ===
   // =========================================================
 
   {
-    q: "JavaScript’in web sayfasındaki temel rolü en doğru hangisidir?",
+    q: "JavaScript’te == ile === arasındaki en doğru fark hangisidir?",
     t: "mcq",
     o: [
-      "Sadece renkleri belirlemek",
-      "Sayfaya davranış/etkileşim kazandırmak (tıklama, veri çekme, doğrulama)",
-      "Sadece başlık eklemek",
-      "Sadece resim göstermek",
-      "Sadece link vermek"
+      "== daha katıdır, === daha esnektir",
+      "=== hem değer hem tür (type) karşılaştırır; == tür dönüşümü yapabilir",
+      "İkisi tamamen aynıdır",
+      "== sadece sayılarda çalışır",
+      "=== sadece stringlerde çalışır"
     ],
-    a: "Sayfaya davranış/etkileşim kazandırmak (tıklama, veri çekme, doğrulama)",
-    difficulty: "easy",
-    week: 3,
-    topic: "JS rolü",
-    importance: "high",
-    explanation: `HTML sayfada “buton var” der, CSS “mavi olsun” der, JS “basılınca bir şey olsun” der.
-
-Mini örnek:
-button’a tıklanınca yazıyı değiştir.
-Sonuç: sayfa kullanıcıyla etkileşir.`
-  },
-
-  {
-    q: "let ile const arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "let sabittir, const değişkendir",
-      "const yeniden atama (reassign) kabul etmez; let eder",
-      "let sadece sayı tutar, const sadece yazı tutar",
-      "const sadece HTML’de çalışır",
-      "Fark yoktur"
-    ],
-    a: "const yeniden atama (reassign) kabul etmez; let eder",
-    difficulty: "easy",
-    week: 3,
-    topic: "Değişkenler",
-    importance: "high",
-    explanation: `let: değeri sonradan değişebilir.
-const: aynı değişkene tekrar değer atayamazsın.
-
-Örnek:
-let sayac = 0;
-sayac = 1; // olur
-
-const isim = "Eylül";
-isim = "Yusuf"; // hata (yeniden atama)
-
-Sonuç: const sabit referans gibi davranır.`
-  },
-
-  {
-    q: "console.log ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Ekrana HTML basar",
-      "Tarayıcı geliştirici konsoluna bilgi yazdırır (debug için)",
-      "CSS’i çalıştırır",
-      "Sunucuya dosya yükler",
-      "Kullanıcının şifresini değiştirir"
-    ],
-    a: "Tarayıcı geliştirici konsoluna bilgi yazdırır (debug için)",
-    difficulty: "easy",
-    week: 3,
-    topic: "Debug",
-    importance: "high",
-    explanation: `console.log, kodun ne yaptığını anlamanın en basit yoludur.
-
-Örnek:
-let yas = 28;
-console.log(yas);
-
-Sonuç:
-Console’da 28 görürsün. Bu, “kod çalıştı mı?” kontrolüdür.`
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi JavaScript’te doğru bir koşul (if) kullanımına örnektir?",
-    t: "mcq",
-    o: [
-      "if yas = 18 then",
-      "if (yas >= 18) { ... }",
-      "if [yas] >= 18 =>",
-      "if yas >= 18 :",
-      "if (yas) >= 18 ) {"
-    ],
-    a: "if (yas >= 18) { ... }",
+    a: "=== hem değer hem tür (type) karşılaştırır; == tür dönüşümü yapabilir",
     difficulty: "medium",
     week: 3,
-    topic: "Koşul yapıları",
-    importance: "medium",
-    explanation: `if, “şart doğruysa çalış” demektir.
-
-Örnek:
-let yas = 28;
-if (yas >= 18) {
-  console.log("Yetişkin");
-}
-
-Sonuç:
-Console’da “Yetişkin” yazar (çünkü 28 >= 18).`
-  },
-
-  {
-    q: "for döngüsünün temel amacı en doğru hangisidir?",
-    t: "mcq",
-    o: [
-      "Tek bir satırı bir kez çalıştırmak",
-      "Bir işlemi belirli sayıda tekrar etmek",
-      "CSS’i derlemek",
-      "HTML’i şifrelemek",
-      "Tarayıcıyı kapatmak"
-    ],
-    a: "Bir işlemi belirli sayıda tekrar etmek",
-    difficulty: "easy",
-    week: 3,
-    topic: "Döngüler",
-    importance: "medium",
-    explanation: `Döngü = tekrar.
-Örnek:
-for (let i = 1; i <= 3; i++) {
-  console.log(i);
-}
-
-Sonuç:
-Console:
-1
-2
-3
-
-Yani kod 3 kez çalıştı.`
-  },
-
-  {
-    q: "Fonksiyon (function) kullanmanın en temel faydası hangisidir?",
-    t: "mcq",
-    o: [
-      "Kod tekrarını azaltmak ve işi parçalara bölmek",
-      "HTML’i otomatik yazmak",
-      "CSS’i silmek",
-      "Sunucu satın almak",
-      "Resimleri sıkıştırmak"
-    ],
-    a: "Kod tekrarını azaltmak ve işi parçalara bölmek",
-    difficulty: "easy",
-    week: 3,
-    topic: "Fonksiyonlar",
+    topic: "Eşobaşı ve type dönüşümü",
     importance: "high",
-    explanation: `Fonksiyon = “bir işi yapan paket”.
-Aynı işi tekrar yazmak yerine çağırırsın.
+    explanation: `Örnek:
+"5" == 5   -> true (tür dönüşümü olabilir)
+"5" === 5  -> false (string vs number)
 
-Örnek:
-function selamla(ad) {
-  console.log("Merhaba " + ad);
-}
-selamla("Yusuf");
-selamla("Eylül");
-
-Sonuç:
-Merhaba Yusuf
-Merhaba Eylül`
+Sınavlarda “strict equality” (===) genelde doğru tercih olarak sorulur.`
   },
 
   {
-    q: "Array (dizi) en doğru neyi temsil eder?",
+    q: "typeof operatörü en doğru ne yapar?",
     t: "mcq",
     o: [
-      "Tek bir değeri",
-      "Birden çok değeri sıralı şekilde tutan yapı",
-      "Sadece resim formatını",
-      "Sadece CSS sınıfını",
-      "Sadece HTML etiketini"
+      "Bir değişkenin değerini siler",
+      "Bir değişkenin türünü string olarak döndürür",
+      "Bir değişkeni sayıya çevirir",
+      "Kodun hızını artırır",
+      "DOM’u günceller"
     ],
-    a: "Birden çok değeri sıralı şekilde tutan yapı",
+    a: "Bir değişkenin türünü string olarak döndürür",
     difficulty: "easy",
     week: 3,
-    topic: "Array",
+    topic: "typeof",
     importance: "medium",
-    explanation: `Array = liste.
-Örnek:
-const dersler = ["HTML", "CSS", "JS"];
-console.log(dersler[0]);
+    explanation: `typeof, tür kontrolü için kullanılır.
 
-Sonuç:
-“HTML” yazar (0. indeks ilk elemandır).`
+Örnek:
+typeof 10       -> "number"
+typeof "Yusuf"  -> "string"
+typeof true     -> "boolean"`
   },
 
   {
-    q: "Object (nesne) yapısı için en doğru tanım hangisidir?",
+    q: "parseInt('08') ile Number('08') kullanımında en doğru genel fark hangisidir?",
     t: "mcq",
     o: [
-      "Sadece sayı tutar",
-      "Anahtar-değer (key-value) ile bilgi tutar",
-      "Sadece CSS dosyasıdır",
-      "Sadece HTML yorumudur",
-      "Sadece döngüdür"
+      "parseInt her zaman ondalıklı sayı verir, Number vermez",
+      "parseInt metnin başından tam sayı okur; Number tüm metni sayıya çevirmeye çalışır",
+      "Number sadece harfleri kabul eder",
+      "İkisi sadece dizilerde çalışır",
+      "parseInt sadece CSS için kullanılır"
     ],
-    a: "Anahtar-değer (key-value) ile bilgi tutar",
-    difficulty: "medium",
-    week: 3,
-    topic: "Object",
-    importance: "medium",
-    explanation: `Object = etiketli bilgi kutusu.
-Örnek:
-const kisi = { isim: "Yusuf", yas: 28 };
-console.log(kisi.isim);
-
-Sonuç:
-“Yusuf” yazar.`
-  },
-
-  {
-    q: "DOM (Document Object Model) en doğru neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Sunucudaki veritabanı",
-      "Tarayıcının HTML’i bir ağaç yapı olarak temsil etmesi ve JS ile erişilebilmesi",
-      "CSS renk paleti",
-      "Sadece resim galerisi",
-      "Sadece internet protokolü"
-    ],
-    a: "Tarayıcının HTML’i bir ağaç yapı olarak temsil etmesi ve JS ile erişilebilmesi",
+    a: "parseInt metnin başından tam sayı okur; Number tüm metni sayıya çevirmeye çalışır",
     difficulty: "hard",
     week: 3,
-    topic: "DOM kavramı",
-    importance: "high",
-    explanation: `DOM: Tarayıcının sayfayı “nesneler” gibi görmesi.
-JS ile HTML elemanlarını seçip değiştirebilirsin.
+    topic: "Type conversion",
+    importance: "medium",
+    explanation: `Örnek:
+parseInt("12px") -> 12
+Number("12px")   -> NaN
 
-Örnek:
-<h1 id="baslik">Merhaba</h1>
-JS:
-document.getElementById("baslik").textContent = "Yusuf";
-
-Sonuç:
-Sayfadaki başlık “Yusuf” olur.`
+Sonuç: parseInt “başındaki sayıyı alır”, Number daha katıdır.`
   },
 
   {
-    q: "Bir HTML elemanını id ile seçmek için doğru yöntem hangisidir?",
+    q: "NaN değerini doğru kontrol etmenin en güvenli modern yolu hangisidir?",
     t: "mcq",
     o: [
-      "document.pick('#id')",
-      "document.getElementById('id')",
-      "window.getCss('id')",
-      "console.get('id')",
-      "html.find('id')"
+      "x == NaN",
+      "x === NaN",
+      "Number.isNaN(x)",
+      "typeof x === 'NaN'",
+      "x.includes('NaN')"
     ],
-    a: "document.getElementById('id')",
-    difficulty: "easy",
+    a: "Number.isNaN(x)",
+    difficulty: "hard",
     week: 3,
-    topic: "DOM seçiciler",
-    importance: "high",
-    explanation: `ID seçimi:
-const el = document.getElementById("baslik");
+    topic: "NaN kontrolü",
+    importance: "medium",
+    explanation: `NaN ile karşılaştırma tuzaktır:
+NaN === NaN false döner.
+
+Doğru:
+Number.isNaN(deger)
 
 Örnek:
-<h1 id="baslik">Eylül</h1>
-
-JS:
-const baslik = document.getElementById("baslik");
-console.log(baslik.textContent);
-
-Sonuç:
-Console’da “Eylül” yazar.`
+Number.isNaN(Number("abc")) -> true`
   },
 
   {
-    q: "Butona tıklamayı yakalamak için en yaygın yöntem hangisidir?",
+    q: "Aşağıdakilerden hangisi “falsy” bir değerdir?",
     t: "mcq",
-    o: [
-      "addEventListener('click', ...)",
-      "addColor('click', ...)",
-      "setHTML('click', ...)",
-      "install('click', ...)",
-      "import click from 'dom'"
-    ],
-    a: "addEventListener('click', ...)",
-    difficulty: "easy",
+    o: ["'0'", "[]", "{}", "0", "'false'"],
+    a: "0",
+    difficulty: "medium",
     week: 3,
-    topic: "Event",
-    importance: "high",
-    explanation: `Event = olay. Tıklama bir olaydır.
+    topic: "Truthy/Falsy",
+    importance: "medium",
+    explanation: `Falsy değerler (en bilinenler):
+false, 0, "", null, undefined, NaN
 
 Örnek:
-<button id="btn">Tıkla</button>
+if (0) { ... }  // çalışmaz
+if ("0") { ... } // çalışır (string truthy)`
+  },
 
-JS:
-const btn = document.getElementById("btn");
-btn.addEventListener("click", () => {
-  console.log("Tıklandı");
+  {
+    q: "Template literal (şablon string) kullanımı için doğru örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "'Merhaba ${ad}'",
+      "\"Merhaba ${ad}\"",
+      "`Merhaba ${ad}`",
+      "(Merhaba ${ad})",
+      "<Merhaba ${ad}>"
+    ],
+    a: "`Merhaba ${ad}`",
+    difficulty: "easy",
+    week: 3,
+    topic: "Template literals",
+    importance: "medium",
+    explanation: `Template literal backtick ile yazılır:
+const ad = "Yusuf";
+const mesaj = \`Merhaba \${ad}\`;
+
+Sonuç: mesaj = "Merhaba Yusuf"`
+  },
+
+  {
+    q: "Koşullu kısa yazım (ternary) için doğru örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "yas >= 18 ? 'Yetişkin' : 'Çocuk'",
+      "yas >= 18 then 'Yetişkin' else 'Çocuk'",
+      "if ? yas >= 18 : 'Yetişkin'",
+      "yas >= 18 :: 'Yetişkin' ?? 'Çocuk'",
+      "yas => 18 ? 'Yetişkin' : 'Çocuk'"
+    ],
+    a: "yas >= 18 ? 'Yetişkin' : 'Çocuk'",
+    difficulty: "medium",
+    week: 3,
+    topic: "Ternary operator",
+    importance: "medium",
+    explanation: `Ternary: kısa if-else.
+const etiket = yas >= 18 ? "Yetişkin" : "Çocuk";
+
+Sonuç: Tek satırda karar verilir.`
+  },
+
+  {
+    q: "Mantıksal AND (&&) operatörüyle “kısa devre” (short-circuit) davranışı için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Her zaman iki tarafı da çalıştırır",
+      "Sol taraf false ise sağ tarafı çalıştırmadan false benzeri değeri döndürebilir",
+      "Sol taraf true ise her zaman 1 döndürür",
+      "Sadece sayılarda çalışır",
+      "Sadece DOM’da çalışır"
+    ],
+    a: "Sol taraf false ise sağ tarafı çalıştırmadan false benzeri değeri döndürebilir",
+    difficulty: "hard",
+    week: 3,
+    topic: "Short-circuit",
+    importance: "medium",
+    explanation: `Örnek:
+kullanici && kullanici.ad
+
+Eğer kullanici null/undefined ise, hata yerine hızlıca falsey döner.
+Bu, güvenli erişim için basit bir tekniktir.`
+  },
+
+  {
+    q: "Array’de sadece koşulu sağlayan elemanları yeni bir diziye almak için hangi metod uygundur?",
+    t: "mcq",
+    o: ["map", "filter", "reduce", "join", "sliceTo"],
+    a: "filter",
+    difficulty: "easy",
+    week: 3,
+    topic: "Array methods",
+    importance: "high",
+    explanation: `filter yeni bir dizi döndürür.
+
+Örnek:
+const sayilar = [1,2,3,4];
+const cift = sayilar.filter(n => n % 2 === 0);
+
+Sonuç: cift = [2,4]`
+  },
+
+  {
+    q: "Spread operatörü (...) en doğru ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "HTML etiketini kapatmak için",
+      "Dizi/nesne kopyalama ve birleştirme gibi işlemler için",
+      "Sadece sayı yuvarlamak için",
+      "CSS değişkeni tanımlamak için",
+      "DOM’u otomatik yenilemek için"
+    ],
+    a: "Dizi/nesne kopyalama ve birleştirme gibi işlemler için",
+    difficulty: "medium",
+    week: 3,
+    topic: "Spread operator",
+    importance: "medium",
+    explanation: `Örnek:
+const a = [1,2];
+const b = [...a, 3]; // [1,2,3]
+
+Nesne:
+const user2 = { ...user, role: "admin" }`
+  },
+
+  {
+    q: "Destructuring ile bir nesneden alan çekmenin doğru örneği hangisidir?",
+    t: "mcq",
+    o: [
+      "const {ad} = 'Yusuf'",
+      "const [ad] = { ad: 'Yusuf' }",
+      "const { ad } = { ad: 'Yusuf', yas: 28 }",
+      "const (ad) = { ad: 'Yusuf' }",
+      "const ad => { ad: 'Yusuf' }"
+    ],
+    a: "const { ad } = { ad: 'Yusuf', yas: 28 }",
+    difficulty: "medium",
+    week: 3,
+    topic: "Destructuring",
+    importance: "medium",
+    explanation: `Destructuring:
+const kisi = { ad: "Yusuf", yas: 28 };
+const { ad, yas } = kisi;
+
+Sonuç: ad = "Yusuf", yas = 28`
+  },
+
+  {
+    q: "Default parametre (varsayılan değer) için doğru kullanım hangisidir?",
+    t: "mcq",
+    o: [
+      "function selam(ad: 'Misafir') { ... }",
+      "function selam(ad = 'Misafir') { ... }",
+      "function selam('Misafir' = ad) { ... }",
+      "function selam(ad == 'Misafir') { ... }",
+      "function selam(ad => 'Misafir') { ... }"
+    ],
+    a: "function selam(ad = 'Misafir') { ... }",
+    difficulty: "medium",
+    week: 3,
+    topic: "Default parameters",
+    importance: "low",
+    explanation: `Varsayılan parametre:
+function selam(ad = "Misafir") {
+  return "Merhaba " + ad;
+}
+
+selam() -> "Merhaba Misafir"`
+  },
+
+  {
+    q: "setTimeout(fn, 1000) en doğru ne yapar?",
+    t: "mcq",
+    o: [
+      "fn’i tam 1 saniye boyunca sürekli çalıştırır",
+      "fn’i yaklaşık 1 saniye sonra bir kez çalıştırmak için zamanlar",
+      "fn’i hemen çalıştırır ve sonra durdurur",
+      "Sayfayı 1 saniye dondurur",
+      "Sadece CSS animasyonu başlatır"
+    ],
+    a: "fn’i yaklaşık 1 saniye sonra bir kez çalıştırmak için zamanlar",
+    difficulty: "easy",
+    week: 3,
+    topic: "Zamanlayıcılar",
+    importance: "medium",
+    explanation: `setTimeout gecikmeli tek çalıştırmadır.
+
+Örnek:
+setTimeout(() => console.log("1 sn geçti"), 1000);
+
+Sonuç: Yaklaşık 1 saniye sonra log atar.`
+  },
+
+  {
+    q: "Bir element seçmek için document.querySelector('.btn') en doğru ne döndürür?",
+    t: "mcq",
+    o: [
+      "Tüm .btn elemanlarının listesi",
+      "İlk eşleşen .btn elemanını (tek eleman) veya hiç yoksa null",
+      "Her zaman bir Array döndürür",
+      "Sadece id ile çalışır",
+      "Sadece CSS dosyasını seçer"
+    ],
+    a: "İlk eşleşen .btn elemanını (tek eleman) veya hiç yoksa null",
+    difficulty: "medium",
+    week: 3,
+    topic: "DOM seçim (querySelector)",
+    importance: "high",
+    explanation: `querySelector: ilk eşleşen elemanı verir.
+querySelectorAll: tüm eşleşenleri verir.
+
+Örnek:
+const btn = document.querySelector(".btn");
+Sonuç: ilk .btn seçilir.`
+  },
+
+  {
+    q: "document.querySelectorAll('.item') ile seçilen sonuç tipi en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "Tek bir element",
+      "NodeList (liste benzeri), genelde forEach ile gezilebilir",
+      "Sadece string",
+      "Sadece number",
+      "Boolean"
+    ],
+    a: "NodeList (liste benzeri), genelde forEach ile gezilebilir",
+    difficulty: "hard",
+    week: 3,
+    topic: "NodeList",
+    importance: "medium",
+    explanation: `querySelectorAll NodeList döndürür.
+
+Örnek:
+const items = document.querySelectorAll(".item");
+items.forEach(el => console.log(el.textContent));
+
+Sonuç: Her item üzerinde dolaşılır.`
+  },
+
+  {
+    q: "Event objesinde event.target ile event.currentTarget arasındaki en doğru fark hangisidir?",
+    t: "mcq",
+    o: [
+      "İkisi her zaman aynı elemandır",
+      "target: olayı başlatan en içteki eleman; currentTarget: listener’ın bağlı olduğu eleman",
+      "currentTarget sadece mobilde çalışır",
+      "target sadece form submit’te çalışır",
+      "Hiçbiri DOM ile ilgili değildir"
+    ],
+    a: "target: olayı başlatan en içteki eleman; currentTarget: listener’ın bağlı olduğu eleman",
+    difficulty: "hard",
+    week: 3,
+    topic: "Event hedefleri",
+    importance: "high",
+    explanation: `Event delegation mantığının temeli budur.
+
+Örnek:
+<ul> içinde <li> tıklanınca:
+- target: tıklanan li
+- currentTarget: listener ul’da ise ul
+
+Sonuç: Hangi elemana tıklandığını doğru ayırt edersin.`
+  },
+
+  {
+    q: "Event bubbling (olayın yukarı doğru yayılması) sırasında olayı durdurmak için hangi metot kullanılır?",
+    t: "mcq",
+    o: ["event.stopPropagation()", "event.stopDefault()", "event.break()", "event.freeze()", "event.disable()"],
+    a: "event.stopPropagation()",
+    difficulty: "hard",
+    week: 3,
+    topic: "Event propagation",
+    importance: "medium",
+    explanation: `stopPropagation, olayın üst elemanlara yayılmasını engeller.
+
+Örnek:
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
 });
 
-Sonuç:
-Butona basınca Console’da “Tıklandı” yazar.`
+Sonuç: Parent tıklama handler’ı tetiklenmeyebilir.`
   },
 
   {
-    q: "textContent ile innerHTML arasındaki temel fark hangisidir?",
+    q: "localStorage ile sessionStorage arasındaki en doğru temel fark hangisidir?",
     t: "mcq",
     o: [
-      "textContent HTML’i yorumlar, innerHTML düz metindir",
-      "textContent düz metin yazar; innerHTML HTML etiketlerini de yorumlayabilir",
-      "İkisi tamamen aynıdır",
-      "innerHTML sadece CSS içindir",
-      "textContent sadece resim içindir"
+      "localStorage sadece 1 saniye tutar, sessionStorage sonsuza kadar",
+      "localStorage tarayıcı kapanınca da kalabilir; sessionStorage sekme kapanınca silinir",
+      "sessionStorage sadece mobilde çalışır",
+      "localStorage sadece sayı saklar",
+      "İkisi de aynı davranır"
     ],
-    a: "textContent düz metin yazar; innerHTML HTML etiketlerini de yorumlayabilir",
-    difficulty: "hard",
-    week: 3,
-    topic: "DOM içerik",
-    importance: "high",
-    explanation: `textContent güvenli düz metindir.
-innerHTML içine HTML koyarsan tarayıcı onu etiket gibi işler.
-
-Örnek:
-div.textContent = "<b>Yusuf</b>";
-Sonuç: ekranda <b>Yusuf</b> yazısı (etiket gibi değil, metin gibi) görünür.
-
-div.innerHTML = "<b>Yusuf</b>";
-Sonuç: Yusuf kalın (bold) görünür.
-
-Not: innerHTML yanlış kullanılırsa XSS riski doğurabilir (güvenlik).`
-  },
-
-  {
-    q: "Bir formu JavaScript ile “boş geçme” kontrolü yapmak için en temel yaklaşım hangisidir?",
-    t: "mcq",
-    o: [
-      "CSS ile kontrol edilir",
-      "Input value okunur, boşsa uyarı verilir",
-      "HTML’e hiç gerek yoktur",
-      "Sadece resim ekleyerek çözülür",
-      "Sunucu satın alınır"
-    ],
-    a: "Input value okunur, boşsa uyarı verilir",
+    a: "localStorage tarayıcı kapanınca da kalabilir; sessionStorage sekme kapanınca silinir",
     difficulty: "medium",
     week: 3,
-    topic: "Form doğrulama",
+    topic: "Web Storage",
     importance: "medium",
-    explanation: `Mantık:
-1) input’u seç
-2) value değerine bak
-3) boşsa kullanıcıyı uyar
+    explanation: `localStorage: kalıcı depolama (kullanıcı silene kadar)
+sessionStorage: sekme/oturum bazlı
 
-Örnek:
-if (emailInput.value.trim() === "") {
-  alert("E-posta boş olamaz");
-}
-
-Sonuç:
-Kullanıcı boş gönderirse uyarı görür.`
-  },
-
-  {
-    q: "fetch ile veri çekmekte en temel doğru mantık hangisidir?",
-    t: "mcq",
-    o: [
-      "fetch sadece CSS çeker",
-      "fetch bir istek atar, genelde Promise döner; then/await ile sonuç alınır",
-      "fetch sayfayı kapatır",
-      "fetch sadece resim büyütür",
-      "fetch veritabanı oluşturur"
-    ],
-    a: "fetch bir istek atar, genelde Promise döner; then/await ile sonuç alınır",
-    difficulty: "hard",
-    week: 3,
-    topic: "Fetch/Async",
-    importance: "medium",
-    explanation: `fetch, tarayıcıdan bir URL’ye istek atar.
-Sonuç hemen gelmeyebilir; bu yüzden async mantığı vardır.
-
-Örnek (mantık):
-fetch("https://example.com/data")
-  .then(r => r.json())
-  .then(data => console.log(data));
-
-Sonuç:
-Veri gelince console’da görünür.`
-  },
-
-  {
-    q: "JSON nedir? En doğru tanım hangisidir?",
-    t: "mcq",
-    o: [
-      "Bir resim formatı",
-      "Veri taşımak için kullanılan metin tabanlı format (anahtar-değer, dizi vb.)",
-      "CSS dosyası",
-      "HTML etiketi",
-      "Bir donanım türü"
-    ],
-    a: "Veri taşımak için kullanılan metin tabanlı format (anahtar-değer, dizi vb.)",
-    difficulty: "medium",
-    week: 3,
-    topic: "JSON",
-    importance: "medium",
-    explanation: `JSON, veriyi metinle taşır.
-Örnek JSON:
-{ "isim": "Yusuf", "yas": 28 }
-
-JS’te:
-const obj = JSON.parse(jsonMetni);
-Sonuç:
-obj.isim => "Yusuf" olur.`
-  },
-
-  {
-    q: "“Kütüphane ekleme” mantığında CDN ile npm arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "CDN sadece offline çalışır; npm sadece resim indirir",
-      "CDN: link/script ile internetten çağırma; npm: projeye paket kurma (node_modules) ve build sürecinde kullanma",
-      "İkisi aynı şeydir",
-      "npm tarayıcıyı günceller",
-      "CDN veritabanı oluşturur"
-    ],
-    a: "CDN: link/script ile internetten çağırma; npm: projeye paket kurma (node_modules) ve build sürecinde kullanma",
-    difficulty: "hard",
-    week: 3,
-    topic: "Kütüphane mantığı (import/install)",
-    importance: "high",
-    explanation: `Senin “pip install” benzetmesinin web karşılığı:
-- CDN: “hazır linki ekle, kullan” (derslerde en kolay)
-  <script src="..."></script>
-- npm: “projeye kur, import et, build ile paketle”
-  npm install paketAdi
-
-Örnek CDN:
-<script src="https://cdn.../axios.min.js"></script>
-
-Örnek npm (mantık):
-npm install axios
-import axios from "axios";
-
-Sonuç:
-İkisi de kütüphane kullanmanı sağlar ama çalışma şekli farklıdır.`
-  },
-
-  {
-    q: "Tarayıcı DevTools (F12) içinde Network sekmesi en çok neyi görmek için kullanılır?",
-    t: "mcq",
-    o: [
-      "Bilgisayarın RAM’ini artırmak için",
-      "Sayfanın yaptığı istekleri (HTTP), dosya yüklenme sürelerini ve hataları görmek için",
-      "CSS dosyasını silmek için",
-      "HTML’i şifrelemek için",
-      "Klavye ayarlarını değiştirmek için"
-    ],
-    a: "Sayfanın yaptığı istekleri (HTTP), dosya yüklenme sürelerini ve hataları görmek için",
-    difficulty: "medium",
-    week: 3,
-    topic: "DevTools",
-    importance: "medium",
-    explanation: `DevTools:
-- Console: log/hata
-- Elements: HTML/CSS inceleme
-- Network: hangi dosyalar yüklendi, kaç ms sürdü, hata var mı?
-
-Örnek:
-Resim yüklenmiyorsa Network’te 404 görürsün.
-Sonuç: “Neden gelmiyor?” sorusunu somut görerek çözersin.`
-  },
-
-  {
-    q: "XSS riskinin en temel kaynağı web’de çoğunlukla hangi hatalı yaklaşımla büyür?",
-    t: "mcq",
-    o: [
-      "textContent kullanmak",
-      "Kullanıcıdan gelen metni direkt innerHTML ile sayfaya basmak",
-      "CSS ile renk vermek",
-      "HTML’de <title> yazmak",
-      "Responsive yapmak"
-    ],
-    a: "Kullanıcıdan gelen metni direkt innerHTML ile sayfaya basmak",
-    difficulty: "hard",
-    week: 3,
-    topic: "Güvenlik - XSS temel",
-    importance: "high",
-    explanation: `XSS (Cross-Site Scripting) basitçe: “kullanıcı metni gibi görünen şeyin içine script sokup çalıştırma” riskidir.
-Bu yüzden kullanıcıdan gelen içeriği:
-- mümkünse textContent ile basmak (düz metin)
-- ya da sanitize etmek gerekir.
-
-Örnek risk:
-innerHTML = kullanıcıMesaji; // tehlikeli olabilir
-Sonuç: Eğer kötü niyetli kod gelirse tarayıcı çalıştırabilir.`
+Örnek kullanım:
+localStorage.setItem("tema", "dark");
+sessionStorage.setItem("gecici", "1");`
   }
 ];
