@@ -1,820 +1,1317 @@
-// MVC / MVP / MVVM + API + Yazılım Kavramları
-// Mevcut questionBank'e ekleme:
-window.questionBank = (window.questionBank || []).concat([
-  // =========================
-  // WEEK 4: MVC / MVP / MVVM (10)
-  // =========================
+// Web Tasarım (HTML-CSS-JS) – 50 Soruluk Sınav Soru Bankası (MCQ)
+// Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
+
+window.questionBank = [
+  // =========================================================
+  // ==== 1. HAFTA – HTML Temelleri (17 Soru) =================
+  // =========================================================
+
   {
-    q: "MVC mimarisinin temel amacı nedir?",
+    q: "Web sayfasını oluşturan 3 temel teknoloji (çok temel düzeyde) en doğru hangisidir?",
     t: "mcq",
     o: [
-      "Sadece arayüz tasarlamak",
-      "Bileşenleri sorumluluklarına göre ayırarak bakım ve geliştirmeyi kolaylaştırmak",
-      "Sadece veritabanı hızını artırmak",
-      "Sadece güvenlik duvarı eklemek",
-      "Sadece dosya formatlarını yönetmek"
+      "HTML = stil, CSS = veri tabanı, JS = sunucu",
+      "HTML = yapı (iskelet), CSS = görünüm (stil), JavaScript = davranış (etkileşim)",
+      "HTML = internet, CSS = RAM, JS = ekran kartı",
+      "HTML = sadece resim, CSS = sadece yazı, JS = sadece link",
+      "HTML = programlama dili, CSS = işletim sistemi, JS = donanım"
     ],
-    a: "Bileşenleri sorumluluklarına göre ayırarak bakım ve geliştirmeyi kolaylaştırmak",
+    a: "HTML = yapı (iskelet), CSS = görünüm (stil), JavaScript = davranış (etkileşim)",
     difficulty: "easy",
-    week: 4,
-    topic: "MVC - amaç",
+    week: 1,
+    topic: "HTML-CSS-JS rol ayrımı",
     importance: "high",
-    explanation: "MVC; Model, View, Controller rollerini ayırarak kodun temiz, modüler ve test edilebilir olmasını hedefler."
+    explanation: `En basit ezber:
+- HTML: Sayfada “ne var?” (başlık, paragraf, buton, resim, form)
+- CSS: “Nasıl görünsün?” (renk, hizalama, boşluk, boyut)
+- JS: “Ne yapsın?” (butona basınca değişsin, veri çeksin, doğrulama yapsın)
+
+Mini örnek mantığı:
+- HTML ile <button>Buton</button> koyarsın.
+- CSS ile butonu mavi yaparsın.
+- JS ile tıklanınca yazıyı değiştirirsin.
+
+Sınavlarda en çok bu rol ayrımı sorulur.`
   },
+
   {
-    q: "MVC’de Model katmanı en çok hangi sorumlulukları üstlenir?",
+    q: "HTML etiket yapısı (tag anatomy) en doğru hangisidir?",
     t: "mcq",
     o: [
-      "UI elemanlarını çizmek",
-      "Kullanıcı tıklamalarını yakalamak",
-      "Veri ve iş mantığını yönetmek (veritabanı işlemleri dahil)",
-      "Sadece sayfa yönlendirmesi yapmak",
-      "Sadece CSS üretmek"
+      "Sadece { } süslü parantezle yazılır",
+      "<etiket>içerik</etiket> şeklinde açılıp kapanır (bazıları tek başına olabilir)",
+      "Sadece // yorum satırıyla yazılır",
+      "Sadece 'import' yazarak çalışır",
+      "HTML’de hiç kapanış etiketi yoktur"
     ],
-    a: "Veri ve iş mantığını yönetmek (veritabanı işlemleri dahil)",
+    a: "<etiket>içerik</etiket> şeklinde açılıp kapanır (bazıları tek başına olabilir)",
     difficulty: "easy",
-    week: 4,
-    topic: "MVC - Model",
+    week: 1,
+    topic: "Etiket yapısı",
     importance: "high",
-    explanation: "Model; veri, kurallar ve veriye ilişkin işlemlerden sorumludur."
+    explanation: `HTML’de çoğu etiket “açılış + kapanış” şeklindedir:
+- <p>Merhaba</p>
+- <h1>Başlık</h1>
+
+Bazı etiketler “tek başına” kullanılır (self-closing gibi düşün):
+- <img ... />
+- <br />
+
+Örnek:
+<p>Yusuf</p>
+Tarayıcıda “Yusuf” metni paragraf olarak görünür.`
   },
+
   {
-    q: "MVC’de View katmanı neyi temsil eder?",
+    q: "<!doctype html> satırının görevi en doğru hangisidir?",
     t: "mcq",
     o: [
-      "Veritabanı tablolarını",
-      "Kullanıcı arayüzünü ve verinin sunumunu",
-      "Sadece loglama sistemini",
-      "Derleyiciyi",
-      "Cache mekanizmasını"
+      "CSS dosyasını çağırır",
+      "Tarayıcıya belgenin HTML5 olduğunu söyler (standart mod)",
+      "JavaScript’i kapatır",
+      "Veritabanı bağlantısını açar",
+      "Sayfayı otomatik responsive yapar"
     ],
-    a: "Kullanıcı arayüzünü ve verinin sunumunu",
+    a: "Tarayıcıya belgenin HTML5 olduğunu söyler (standart mod)",
     difficulty: "easy",
-    week: 4,
-    topic: "MVC - View",
+    week: 1,
+    topic: "DOCTYPE",
     importance: "high",
-    explanation: "View; kullanıcıya gösterilen arayüzdür (web’de template, masaüstünde UI bileşenleri)."
+    explanation: `<!doctype html> tarayıcıya “Bu sayfa HTML5’tir” der.
+Bu satır yoksa tarayıcı bazen “eski uyumluluk modu” gibi davranabilir ve CSS/HTML beklenmedik sonuçlar verebilir.
+
+Örnek:
+<!doctype html>
+<html> ... </html>
+Bu şekilde modern standartlar devreye girer.`
   },
+
   {
-    q: "MVC’de Controller’ın görevi aşağıdakilerden hangisidir?",
+    q: "HTML’de <head> ile <body> arasındaki fark en doğru hangisidir?",
     t: "mcq",
     o: [
-      "Sadece görsel tasarım yapmak",
-      "Kullanıcı isteklerini işlemek, Model’i kullanmak ve sonucu View’a iletmek",
-      "Sadece veritabanını yedeklemek",
-      "Sadece kodu derlemek",
-      "Sadece CSS yazmak"
+      "<head> sayfada görünen içeriktir; <body> ayarlardır",
+      "<head> ayarlar/metadata/linkler; <body> ekranda görünen içerik",
+      "<head> sadece resimler; <body> sadece yazılar",
+      "İkisi aynı şeydir",
+      "<head> JS yazılır; <body> CSS yazılır"
     ],
-    a: "Kullanıcı isteklerini işlemek, Model’i kullanmak ve sonucu View’a iletmek",
+    a: "<head> ayarlar/metadata/linkler; <body> ekranda görünen içerik",
     difficulty: "easy",
-    week: 4,
-    topic: "MVC - Controller",
+    week: 1,
+    topic: "Head vs Body",
     importance: "high",
-    explanation: "Controller; girişleri/istekleri alır, iş akışını yönetir ve sunumu günceller."
+    explanation: `<head> sayfanın ayar bölümü gibidir:
+- <title>, <meta>, CSS linkleri, bazı script ayarları
+
+<body> ise kullanıcıya görünen her şeydir:
+- başlık, paragraf, buton, resim, form...
+
+Mini örnek:
+<head><title>Eylül</title></head>
+<body><h1>Merhaba</h1></body>
+Tarayıcı sekmesinde “Eylül” yazar; sayfada “Merhaba” görünür.`
   },
+
   {
-    q: "MVP mimarisinde 'Presenter' hangi rolü üstlenir?",
+    q: "<meta charset='utf-8'> satırı en doğru ne içindir?",
     t: "mcq",
     o: [
-      "Veri tabanını fiziksel kurar",
-      "Model ile View arasındaki iletişimi kurar ve View’ı arayüz üzerinden günceller",
-      "Sadece UI çizimini yapar",
-      "Sadece route tanımlar",
-      "Sadece dosya kaydeder"
+      "Sayfayı hızlandırmak için",
+      "Türkçe karakterler gibi doğru metin gösterimi için karakter kodlamasını ayarlamak",
+      "CSS’i etkinleştirmek için",
+      "JavaScript’i devre dışı bırakmak için",
+      "Ekran genişliğini otomatik büyütmek için"
     ],
-    a: "Model ile View arasındaki iletişimi kurar ve View’ı arayüz üzerinden günceller",
+    a: "Türkçe karakterler gibi doğru metin gösterimi için karakter kodlamasını ayarlamak",
+    difficulty: "easy",
+    week: 1,
+    topic: "Charset",
+    importance: "high",
+    explanation: `UTF-8, Türkçe karakterlerin (ş,ğ,ı,ö,ü,ç) bozulmamasını sağlar.
+Bu satır olmazsa “Eylül” gibi kelimeler bazen hatalı görünebilir.
+
+Örnek:
+<meta charset="utf-8">
+Sonuç: Yazılar doğru çıkar.`
+  },
+
+  {
+    q: "<title> etiketinin etkisi en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "Sayfanın içindeki ana başlığı değiştirir",
+      "Tarayıcı sekmesinde görünen sayfa başlığını belirler",
+      "Butonların rengini değiştirir",
+      "Resmin alt yazısını belirler",
+      "Formu doğrular"
+    ],
+    a: "Tarayıcı sekmesinde görünen sayfa başlığını belirler",
+    difficulty: "easy",
+    week: 1,
+    topic: "Title",
+    importance: "medium",
+    explanation: `<title> sayfada görünmez; tarayıcı sekmesinde ve arama motoru başlıklarında etkisi olur.
+
+Örnek:
+<title>Yusuf - Web</title>
+Sekmede “Yusuf - Web” yazar.`
+  },
+
+  {
+    q: "Başlık etiketleri (h1-h6) için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "h1 en küçük, h6 en büyüktür",
+      "h1 en büyük başlık, h6 en küçüktür",
+      "h etiketleri sadece CSS içindir",
+      "h etiketleri sadece link oluşturur",
+      "h etiketleri form doğrular"
+    ],
+    a: "h1 en büyük başlık, h6 en küçüktür",
+    difficulty: "easy",
+    week: 1,
+    topic: "Başlıklar",
+    importance: "high",
+    explanation: `h1-h6 “önem sırası” gibi düşün:
+- h1: ana başlık
+- h2: alt başlık
+- ...
+- h6: en küçük
+
+Örnek:
+<h1>Yusuf</h1>
+<h2>Eylül</h2>
+Tarayıcıda Yusuf daha büyük görünür; Eylül alt başlık gibi durur.`
+  },
+
+  {
+    q: "<p> ile <br> arasındaki fark en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "<p> satır kırar, <br> paragraf oluşturur",
+      "<p> paragraf (blok) oluşturur; <br> sadece satır sonu ekler",
+      "İkisi aynı şeydir",
+      "<br> başlık yapar",
+      "<p> resim ekler"
+    ],
+    a: "<p> paragraf (blok) oluşturur; <br> sadece satır sonu ekler",
     difficulty: "medium",
-    week: 4,
-    topic: "MVP - Presenter",
-    importance: "high",
-    explanation: "Presenter; View’dan olayı alır, Model’e iş yaptırır, sonucu View’a 'ne gösterileceğini' söyleyerek yansıtır."
+    week: 1,
+    topic: "Paragraf vs Satır sonu",
+    importance: "medium",
+    explanation: `<p> yeni bir paragraf kutusu oluşturur (üst-alt boşluk da olur).
+<br> sadece aynı paragraf içinde alt satıra indirir.
+
+Örnek:
+<p>Yusuf<br>Eylül</p>
+Sonuç: Aynı paragraf içinde iki satır görünür.`
   },
+
   {
-    q: "MVVM’de ViewModel’in ana görevi nedir?",
+    q: "Link (bağlantı) vermek için hangi etiket kullanılır?",
     t: "mcq",
-    o: [
-      "Veriyi View için uygun forma sokmak ve View ile Model arasında köprü olmak",
-      "Sadece veritabanı indekslemek",
-      "Sadece CSS üretmek",
-      "Sadece API gateway olmak",
-      "Sadece dosya sıkıştırmak"
-    ],
-    a: "Veriyi View için uygun forma sokmak ve View ile Model arasında köprü olmak",
-    difficulty: "medium",
-    week: 4,
-    topic: "MVVM - ViewModel",
-    importance: "high",
-    explanation: "ViewModel; UI’nin ihtiyaç duyduğu verileri/komutları sunar, Model’e erişir ve View’a bağlanmaya uygun hale getirir."
-  },
-  {
-    q: "MVVM’de en kritik prensiplerden biri hangisidir?",
-    t: "mcq",
-    o: ["Data Binding (Veri Bağlama)", "Bleed", "Rasterize", "FTP", "CRC"],
-    a: "Data Binding (Veri Bağlama)",
+    o: ["<img>", "<a>", "<p>", "<div>", "<span>"],
+    a: "<a>",
     difficulty: "easy",
-    week: 4,
-    topic: "MVVM - Data Binding",
+    week: 1,
+    topic: "Link",
     importance: "high",
-    explanation: "Data Binding ile ViewModel’deki veri otomatik View’a yansır; View girdileri de otomatik ViewModel’e akar."
+    explanation: `<a> etiketi link verir, href hedefi gösterir.
+
+Örnek:
+<a href="https://example.com">Siteye Git</a>
+
+Sonuç:
+“Siteye Git” tıklanınca o adrese gider.`
   },
+
   {
-    q: "MVC ile MVP arasındaki temel farkı en iyi anlatan ifade hangisidir?",
+    q: "Bir linki yeni sekmede açmak için hangi özellik kullanılır?",
     t: "mcq",
     o: [
-      "MVC sadece mobilde kullanılır, MVP sadece web’de",
-      "MVP’de Presenter, View’ı daha doğrudan yönetir; MVC’de Controller istek akışını yönetir",
-      "MVC’de Model yoktur",
-      "MVP’de View yoktur",
-      "İkisi tamamen aynıdır"
+      "download='true'",
+      "target='_blank'",
+      "rel='css'",
+      "type='button'",
+      "name='newtab'"
     ],
-    a: "MVP’de Presenter, View’ı daha doğrudan yönetir; MVC’de Controller istek akışını yönetir",
+    a: "target='_blank'",
+    difficulty: "medium",
+    week: 1,
+    topic: "Link hedefi",
+    importance: "medium",
+    explanation: `target="_blank" linki yeni sekmede açar.
+Genelde güvenlik için rel="noopener noreferrer" da eklenir (ileri seviye ama bilmek artı puan).
+
+Örnek:
+<a href="https://example.com" target="_blank">Aç</a>
+Sonuç: Yeni sekme açılır.`
+  },
+
+  {
+    q: "<img> etiketinde alt özelliği (alt) en doğru ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Resmi büyütmek için",
+      "Resim yüklenmezse görünen açıklama ve ekran okuyucu (erişilebilirlik) için",
+      "Resmi link yapmak için",
+      "CSS’i iptal etmek için",
+      "JavaScript’i çalıştırmak için"
+    ],
+    a: "Resim yüklenmezse görünen açıklama ve ekran okuyucu (erişilebilirlik) için",
+    difficulty: "medium",
+    week: 1,
+    topic: "img alt",
+    importance: "high",
+    explanation: `alt metni:
+- Resim açılmazsa kullanıcıya ne olduğunu söyler
+- Ekran okuyucu kullananlar için resmin anlamını okur
+
+Örnek:
+<img src="logo.png" alt="EYSTUDIO logosu" />
+Resim yoksa “EYSTUDIO logosu” metni/okuması devreye girer.`
+  },
+
+  {
+    q: "Liste oluşturmak için doğru kombinasyon hangisidir?",
+    t: "mcq",
+    o: [
+      "<ul> + <li>",
+      "<div> + <p>",
+      "<h1> + <h2>",
+      "<img> + <a>",
+      "<table> + <span>"
+    ],
+    a: "<ul> + <li>",
+    difficulty: "easy",
+    week: 1,
+    topic: "Listeler",
+    importance: "high",
+    explanation: `Sırasız liste: <ul> (unordered list)
+Eleman: <li>
+
+Örnek:
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
+
+Sonuç: Madde işaretli bir liste oluşur.`
+  },
+
+  {
+    q: "Semantic (anlamlı) HTML etiketlerinin temel faydası hangisidir?",
+    t: "mcq",
+    o: [
+      "Sayfayı otomatik hızlandırır",
+      "Kodun anlamını güçlendirir: okunabilirlik + SEO + erişilebilirlik",
+      "JavaScript’i devre dışı bırakır",
+      "Veritabanı oluşturur",
+      "CSS’i siler"
+    ],
+    a: "Kodun anlamını güçlendirir: okunabilirlik + SEO + erişilebilirlik",
+    difficulty: "medium",
+    week: 1,
+    topic: "Semantic HTML",
+    importance: "high",
+    explanation: `Semantic etiketler (header, nav, main, section, footer) “bu bölüm ne?” sorusuna cevap verir.
+- Geliştirici daha kolay anlar
+- Arama motoru sayfayı daha iyi yorumlar (SEO)
+- Erişilebilirlik araçları sayfayı daha doğru okur
+
+Örnek: <nav> menü alanıdır, <footer> sayfa altıdır.`
+  },
+
+  {
+    q: "<div> ile <span> arasındaki en temel fark hangisidir?",
+    t: "mcq",
+    o: [
+      "<div> inline, <span> block’tur",
+      "<div> block (satırı kaplar), <span> inline (metin içinde) davranır",
+      "İkisi aynı şeydir",
+      "<span> sadece resim için",
+      "<div> sadece link için"
+    ],
+    a: "<div> block (satırı kaplar), <span> inline (metin içinde) davranır",
+    difficulty: "medium",
+    week: 1,
+    topic: "div vs span",
+    importance: "medium",
+    explanation: `<div> büyük kutu gibi davranır (blok).
+<span> metin içi küçük işaretleme gibidir (inline).
+
+Örnek:
+<p>Yusuf <span>ve</span> Eylül</p>
+“ve” kelimesini ayrı stil vermek için span ile sararsın.`
+  },
+
+  {
+    q: "id ile class farkı en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "id aynı sayfada birden çok kez kullanılabilir, class sadece bir kez",
+      "id genelde tekil (unique), class tekrar kullanılabilir (çoklu elemanda)",
+      "id sadece CSS içindir, class sadece HTML içindir",
+      "id resim ekler, class link ekler",
+      "id JavaScript’i kapatır"
+    ],
+    a: "id genelde tekil (unique), class tekrar kullanılabilir (çoklu elemanda)",
+    difficulty: "easy",
+    week: 1,
+    topic: "id vs class",
+    importance: "high",
+    explanation: `id: tek bir elemanı hedeflemek için (aynı sayfada 1 kez olması beklenir).
+class: aynı stili birçok elemanda kullanmak için.
+
+Örnek:
+<h1 id="baslik">Yusuf</h1>
+<p class="aciklama">...</p>
+Birden çok <p class="aciklama"> olabilir.`
+  },
+
+  {
+    q: "Form göndermek için en temel HTML etiketi hangisidir?",
+    t: "mcq",
+    o: ["<form>", "<table>", "<img>", "<section>", "<header>"],
+    a: "<form>",
+    difficulty: "easy",
+    week: 1,
+    topic: "Form temeli",
+    importance: "high",
+    explanation: `<form> kullanıcıdan veri almak içindir (giriş, kayıt, arama).
+İçinde input, textarea, button gibi alanlar olur.
+
+Örnek:
+<form>
+  <input type="text" />
+  <button>Gönder</button>
+</form>
+
+Sonuç: Kullanıcı veri girer ve gönder butonuna basar.`
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi <input> için doğru bir type örneğidir?",
+    t: "mcq",
+    o: ["type='photo'", "type='mailbox'", "type='email'", "type='screen'", "type='bold'"],
+    a: "type='email'",
+    difficulty: "easy",
+    week: 1,
+    topic: "Input type",
+    importance: "high",
+    explanation: `input type, tarayıcıya “bu alan ne tür veri?” der.
+type="email" e-posta formatına uygunluk için yardımcı olur.
+
+Örnek:
+<input type="email" placeholder="yusuf@example.com" />
+Sonuç: Mobilde e-posta klavyesi gibi yardımcı seçimler gelir.`
+  },
+
+  {
+    q: "Erişilebilirlik (accessibility) için form alanına en doğru eşleşme hangisidir?",
+    t: "mcq",
+    o: [
+      "<label> ile input’u ilişkilendirmek (for/id)",
+      "Input’u div içine koymak",
+      "Sadece renk kullanarak zorunlu alan göstermek",
+      "placeholder yeterlidir, label gereksizdir",
+      "label yerine sadece <br> kullanmak"
+    ],
+    a: "<label> ile input’u ilişkilendirmek (for/id)",
     difficulty: "hard",
-    week: 4,
-    topic: "MVC vs MVP",
+    week: 1,
+    topic: "Accessibility - label",
     importance: "high",
-    explanation: "MVP’de Presenter genelde View arayüzü ile sık iletişim kurar; MVC’de Controller daha çok istek/aksiyon odaklıdır."
-  },
-  {
-    q: "MVVM’in büyük UI projelerinde avantajı hangisidir?",
-    t: "mcq",
-    o: [
-      "Tüm kodu tek dosyada toplar",
-      "ViewModel’in View olmadan test edilebilmesi ve data binding ile UI güncellemelerinin otomatikleşmesi",
-      "Veritabanını otomatik kurması",
-      "Her zaman daha az dosya üretmesi",
-      "Sadece oyunlar için uygun olması"
-    ],
-    a: "ViewModel’in View olmadan test edilebilmesi ve data binding ile UI güncellemelerinin otomatikleşmesi",
-    difficulty: "medium",
-    week: 4,
-    topic: "MVVM - avantaj",
-    importance: "high",
-    explanation: "Test edilebilirlik + otomatik UI güncellemeleri MVVM’in güçlü yönleridir."
-  },
-  {
-    q: "MVC/MVP/MVVM gibi yapılar hangi kavram sınıfına girer?",
-    t: "mcq",
-    o: ["Tasarım deseni / mimari desen", "Veri tipi", "Dosya formatı", "İşletim sistemi", "Derleyici"],
-    a: "Tasarım deseni / mimari desen",
-    difficulty: "easy",
-    week: 4,
-    topic: "Mimari desen",
-    importance: "medium",
-    explanation: "Bu yapılar, uygulamayı organize eden mimari yaklaşımlardır."
+    explanation: `Erişilebilirlikte en kritik şey: alanın adı net olmalı.
+<label for="eposta">E-posta</label>
+<input id="eposta" type="email" />
+
+Sonuç:
+- Ekran okuyucu “E-posta alanı” diye okur.
+- Label’a tıklayınca input odaklanır.
+Sınavda “label/alt/semantic” çok değerli puandır.`
   },
 
-  // =========================
-  // WEEK 5: API (10)
-  // =========================
+  // =========================================================
+  // ==== 2. HAFTA – CSS Temelleri (16 Soru) ==================
+  // =========================================================
+
   {
-    q: "API en doğru hangi tanıma uyar?",
+    q: "CSS’in görevi en doğru hangisidir?",
     t: "mcq",
     o: [
-      "Sadece bir veritabanı türü",
-      "Bir yazılımın dış dünya ile iletişim kurması için tanımladığı kurallar ve arayüzler bütünü",
-      "Sadece bir UI tasarım tekniği",
-      "Sadece bir programlama dili",
-      "Sadece bir dosya uzantısı"
+      "Veritabanı sorgusu çalıştırmak",
+      "Sayfanın görünümünü/stilini belirlemek (renk, düzen, boşluk, font)",
+      "Sunucu kurmak",
+      "HTML’i otomatik yazmak",
+      "Tarayıcıyı güncellemek"
     ],
-    a: "Bir yazılımın dış dünya ile iletişim kurması için tanımladığı kurallar ve arayüzler bütünü",
+    a: "Sayfanın görünümünü/stilini belirlemek (renk, düzen, boşluk, font)",
     difficulty: "easy",
-    week: 5,
-    topic: "API - tanım",
+    week: 2,
+    topic: "CSS rolü",
     importance: "high",
-    explanation: "API; başka sistemlerin senin sisteminin fonksiyonlarına/verilerine erişmesini sağlayan arayüzdür."
-  },
-  {
-    q: "Web API’ler genellikle hangi protokol üzerinden çalışır?",
-    t: "mcq",
-    o: ["HTTP", "HDMI", "PCIe", "VGA", "NTFS"],
-    a: "HTTP",
-    difficulty: "easy",
-    week: 5,
-    topic: "Web API",
-    importance: "high",
-    explanation: "Web API’ler çoğunlukla HTTP üzerinden REST veya SOAP yaklaşımıyla sunulur."
-  },
-  {
-    q: "REST ve SOAP en çok hangi API tipinin örneğidir?",
-    t: "mcq",
-    o: ["HTTP API (Web API)", "Donanım API", "Veritabanı API", "GUI API", "Shell API"],
-    a: "HTTP API (Web API)",
-    difficulty: "medium",
-    week: 5,
-    topic: "REST/SOAP",
-    importance: "high",
-    explanation: "REST ve SOAP, web servisleri için kullanılan mimari/standart yaklaşımlardır."
-  },
-  {
-    q: "API’ların en önemli katkılarından biri hangisidir?",
-    t: "mcq",
-    o: [
-      "Uygulamaları birbirinden tamamen izole etmek",
-      "Farklı uygulamaların/sistemlerin entegrasyonunu ve yeniden kullanılabilirliği kolaylaştırmak",
-      "Her zaman interneti hızlandırmak",
-      "Sadece tasarım güzelliğini artırmak",
-      "Sadece donanımı büyütmek"
-    ],
-    a: "Farklı uygulamaların/sistemlerin entegrasyonunu ve yeniden kullanılabilirliği kolaylaştırmak",
-    difficulty: "easy",
-    week: 5,
-    topic: "API - neden önemli",
-    importance: "high",
-    explanation: "API entegrasyon ve işbirliğini sağlar: mobil-app ↔ sunucu, servis ↔ servis gibi."
-  },
-  {
-    q: "Yetkisiz erişimi engellemek API tasarımında hangi başlık altındadır?",
-    t: "mcq",
-    o: ["Güvenlik", "Bleed", "Raster effects", "Typography", "Mesh"],
-    a: "Güvenlik",
-    difficulty: "easy",
-    week: 5,
-    topic: "API - güvenlik",
-    importance: "high",
-    explanation: "Authentication/authorization, rate limit, token kullanımı gibi konular API güvenliğidir."
-  },
-  {
-    q: "Veritabanı işlemleri için kullanılan API’lara örnek hangisidir?",
-    t: "mcq",
-    o: ["JDBC", "CSS", "HTML", "OCR", "GUI"],
-    a: "JDBC",
-    difficulty: "easy",
-    week: 5,
-    topic: "DB API",
-    importance: "medium",
-    explanation: "JDBC, Java uygulamalarının veritabanlarıyla iletişimini sağlayan API’dir."
-  },
-  {
-    q: "API tasarımında 'sürdürülebilirlik' en çok neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Gelecekteki değişikliklere uyum (versiyonlama, geriye dönük uyumluluk) sağlamak",
-      "Her şeyi tek fonksiyona toplamak",
-      "Sadece renk seçmek",
-      "Sadece RAM artırmak",
-      "Sadece UI çizmek"
-    ],
-    a: "Gelecekteki değişikliklere uyum (versiyonlama, geriye dönük uyumluluk) sağlamak",
-    difficulty: "medium",
-    week: 5,
-    topic: "API - sürdürülebilirlik",
-    importance: "high",
-    explanation: "API'lar büyür; versiyonlama ve kırılma yönetimi sürdürülebilirliktir."
-  },
-  {
-    q: "HTTP 404 kodu neyi anlatır?",
-    t: "mcq",
-    o: [
-      "Sunucu hiç yok",
-      "Kaynak bulunamadı (Not Found)",
-      "Şifre yanlış",
-      "Sunucu aşırı yüklü",
-      "İşlem başarılı"
-    ],
-    a: "Kaynak bulunamadı (Not Found)",
-    difficulty: "easy",
-    week: 5,
-    topic: "HTTP 404",
-    importance: "high",
-    explanation: "404; istenen URL/endpoint sunucuda yok demektir. Sunucu bulunamadı ile karıştırılmaz."
-  },
-  {
-    q: "Kütüphane API’larına en iyi örnek hangisidir?",
-    t: "mcq",
-    o: ["Python Standard Library", "FTP", "Bleed", "Artboard", "Drop Shadow"],
-    a: "Python Standard Library",
-    difficulty: "easy",
-    week: 5,
-    topic: "Library API",
-    importance: "medium",
-    explanation: "Kütüphane API’ları; fonksiyon/sınıf koleksiyonlarıdır."
-  },
-  {
-    q: "API’larda hızlı prototipleme ne sağlar?",
-    t: "mcq",
-    o: [
-      "Hazır servisleri kullanarak kısa sürede çalışan bir demo/test sistemi kurmayı",
-      "Her zaman daha pahalı altyapı kurmayı",
-      "Derleyiciyi kaldırmayı",
-      "Sadece UI’yı güzelleştirmeyi",
-      "Sadece metin yazmayı"
-    ],
-    a: "Hazır servisleri kullanarak kısa sürede çalışan bir demo/test sistemi kurmayı",
-    difficulty: "medium",
-    week: 5,
-    topic: "API - prototip",
-    importance: "medium",
-    explanation: "Harita/ödeme/hava durumu gibi hazır API’lar ile hızlıca prototip çıkarırsın."
+    explanation: `CSS: “Nasıl görünsün?” sorusunu cevaplar.
+HTML’de <h1>Başlık</h1> vardır; CSS ile başlık:
+- mavi olsun
+- ortalansın
+- büyük olsun
+dersin.
+
+Örnek:
+h1 { color: blue; }
+Sonuç: Başlık mavi görünür.`
   },
 
-  // =========================
-  // WEEK 6: KAVRAMLAR (30) - Karışık sınav tarzı
-  // =========================
   {
-    q: "Active Directory nedir?",
+    q: "CSS eklemenin 3 temel yolu hangisidir?",
     t: "mcq",
     o: [
-      "Bir web tarayıcısı",
-      "Microsoft ağlarında kullanılan dizin hizmeti (kullanıcı/bilgisayar bilgilerini tutar)",
-      "Bir grafik API",
-      "Bir veritabanı dili",
-      "Bir işletim sistemi çekirdeği"
+      "only-inline / only-external / only-server",
+      "inline style / <style> (internal) / .css dosyası (external)",
+      "HTML içine gömme / RAM’e gömme / CPU’ya gömme",
+      "script / meta / title",
+      "img / a / p"
     ],
-    a: "Microsoft ağlarında kullanılan dizin hizmeti (kullanıcı/bilgisayar bilgilerini tutar)",
+    a: "inline style / <style> (internal) / .css dosyası (external)",
     difficulty: "easy",
-    week: 6,
-    topic: "Active Directory",
-    importance: "medium",
-    explanation: "AD; kurum içi kullanıcı, cihaz, yazıcı gibi nesneleri merkezî yönetir."
+    week: 2,
+    topic: "CSS ekleme yöntemleri",
+    importance: "high",
+    explanation: `3 yöntem:
+1) Inline: <p style="color:red">
+2) Internal: <style> p { ... } </style>
+3) External: <link rel="stylesheet" href="style.css">
+
+En temiz ve yaygın: External (ayrı dosya).
+Çünkü kod düzenli olur ve tekrar kullanım artar.`
   },
+
   {
-    q: "Assembly Language ile Machine Language arasındaki ilişki en doğru hangisidir?",
+    q: "Aşağıdakilerden hangisi class seçicisine örnektir?",
+    t: "mcq",
+    o: ["#kutu", ".kutu", "kutu()", "<kutu>", "@kutu"],
+    a: ".kutu",
+    difficulty: "easy",
+    week: 2,
+    topic: "Selector - class",
+    importance: "high",
+    explanation: `CSS seçicileri:
+- .class => class
+- #id => id
+- p, h1 => etiket
+
+Örnek:
+<p class="aciklama">...</p>
+.aciklama { color: #333; }
+
+Sonuç: O class’a sahip paragraflar renklendirilir.`
+  },
+
+  {
+    q: "CSS’te id seçicisi hangi sembolle yazılır?",
+    t: "mcq",
+    o: [".", "#", "$", "&", "%"],
+    a: "#",
+    difficulty: "easy",
+    week: 2,
+    topic: "Selector - id",
+    importance: "high",
+    explanation: `id seçicisi # ile başlar.
+
+Örnek:
+<h1 id="baslik">Yusuf</h1>
+#baslik { font-size: 40px; }
+
+Sonuç: Sadece id’si baslik olan eleman büyür.`
+  },
+
+  {
+    q: "CSS specificity (öncelik) mantığı için en doğru genelleme hangisidir?",
     t: "mcq",
     o: [
-      "Assembly, makine dilinden daha yüksek soyutlama sunan düşük seviye bir dildir",
-      "Machine Language, Assembly’nin yorumlanmış halidir",
-      "Assembly, sadece web içindir",
-      "Machine Language, insan diliyle yazılır",
-      "İkisi tamamen alakasızdır"
+      "Etiket her zaman class’tan güçlüdür",
+      "id genelde class’tan, class da etiketten daha güçlüdür",
+      "Hepsi eşittir",
+      "Inline style en zayıftır",
+      "CSS’te öncelik yoktur"
     ],
-    a: "Assembly, makine dilinden daha yüksek soyutlama sunan düşük seviye bir dildir",
+    a: "id genelde class’tan, class da etiketten daha güçlüdür",
+    difficulty: "hard",
+    week: 2,
+    topic: "Specificity",
+    importance: "high",
+    explanation: `Genel öncelik sırası (basit anlatım):
+inline style > #id > .class > etiket (p, div...)
+
+Örnek:
+p { color: blue; }
+.aciklama { color: red; }
+#ozel { color: green; }
+
+Aynı elemana hepsi uygularsa, id daha baskın olur.`
+  },
+
+  {
+    q: "Box Model’de doğru sıra hangisidir?",
+    t: "mcq",
+    o: [
+      "margin -> border -> padding -> content",
+      "content -> padding -> border -> margin",
+      "padding -> content -> margin -> border",
+      "content -> margin -> border -> padding",
+      "border -> margin -> content -> padding"
+    ],
+    a: "content -> padding -> border -> margin",
     difficulty: "medium",
-    week: 6,
-    topic: "Assembly vs Machine",
-    importance: "medium",
-    explanation: "Makine dili CPU’nun 0/1 komutlarıdır; assembly bu komutların sembolik yazımıdır."
+    week: 2,
+    topic: "Box Model",
+    importance: "high",
+    explanation: `Box Model:
+- Content: içerik alanı
+- Padding: iç boşluk
+- Border: çerçeve
+- Margin: dış boşluk
+
+Örnek:
+.card { padding:16px; border:1px solid #ddd; margin:12px; }
+Sonuç: Kartın içi nefes alır (padding), etrafında çerçeve olur, dışarıdan da boşluk bırakır (margin).`
   },
+
   {
-    q: "Cache (Önbellek) ne işe yarar?",
+    q: "display: block ile display: inline arasındaki temel fark hangisidir?",
     t: "mcq",
     o: [
-      "Veriyi kalıcı olarak siler",
-      "Sık kullanılan veriyi hızlı erişim için saklar",
-      "Sadece UI çizer",
-      "Sadece derleme yapar",
-      "Sadece şifre üretir"
+      "block yan yana dizilir, inline alt alta dizilir",
+      "block satırı kaplar (alt satıra iter), inline metin gibi akar (yan yana gelebilir)",
+      "inline genişlik/yükseklik alır, block almaz",
+      "ikisi aynı şeydir",
+      "block sadece resim içindir"
     ],
-    a: "Sık kullanılan veriyi hızlı erişim için saklar",
-    difficulty: "easy",
-    week: 6,
-    topic: "Cache",
-    importance: "high",
-    explanation: "Önbellek; tekrar istenen veriyi hızlı döndürmek için kullanılır."
-  },
-  {
-    q: "DBMS neyi ifade eder?",
-    t: "mcq",
-    o: ["Veritabanı yönetim sistemi", "Web sunucusu", "Programlama dili", "İşletim sistemi", "Tarayıcı eklentisi"],
-    a: "Veritabanı yönetim sistemi",
-    difficulty: "easy",
-    week: 6,
-    topic: "DBMS",
-    importance: "high",
-    explanation: "DBMS; veritabanını tanımlar, kullanır, değiştirir, yönetir."
-  },
-  {
-    q: "RDBMS’in temel özelliği hangisidir?",
-    t: "mcq",
-    o: ["Verileri tablolarda satır/sütun olarak tutması", "Sadece dosyada saklaması", "Sadece grafikleri çizmesi", "Sadece oyun motoru olması", "Sadece shell olması"],
-    a: "Verileri tablolarda satır/sütun olarak tutması",
-    difficulty: "easy",
-    week: 6,
-    topic: "RDBMS",
-    importance: "high",
-    explanation: "İlişkisel veritabanları tablo yapısına dayanır; SQL ile yönetilir."
-  },
-  {
-    q: "Deadlock nedir?",
-    t: "mcq",
-    o: [
-      "Bir görsel efekt",
-      "İki veya daha fazla işlemin birbirini bekleyip kilitlenmesi",
-      "Tarayıcı çerezi",
-      "Dosya uzantısı",
-      "Bir programlama dili"
-    ],
-    a: "İki veya daha fazla işlemin birbirini bekleyip kilitlenmesi",
+    a: "block satırı kaplar (alt satıra iter), inline metin gibi akar (yan yana gelebilir)",
     difficulty: "medium",
-    week: 6,
-    topic: "Deadlock",
-    importance: "high",
-    explanation: "Kaynak kilitleri yanlış yönetilince süreçler birbirini bekler ve sistem ilerleyemez."
-  },
-  {
-    q: "Memory Leak ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "RAM’in fiziksel bozulması",
-      "Programın ayırdığı belleği geri verememesi",
-      "Dosyanın sıkışması",
-      "Tarayıcı geçmişi",
-      "Ağ kablosu kopması"
-    ],
-    a: "Programın ayırdığı belleği geri verememesi",
-    difficulty: "medium",
-    week: 6,
-    topic: "Memory Leak",
-    importance: "high",
-    explanation: "Uzun süre çalışınca RAM şişer, performans düşer, çökme riski artar."
-  },
-  {
-    q: "Garbage Collection ne yapar?",
-    t: "mcq",
-    o: [
-      "Ağa paket gönderir",
-      "Kullanılmayan bellek alanlarını otomatik temizler",
-      "Sadece veri tabanı şeması kurar",
-      "Sadece UI render eder",
-      "Sadece hash üretir"
-    ],
-    a: "Kullanılmayan bellek alanlarını otomatik temizler",
-    difficulty: "easy",
-    week: 6,
-    topic: "Garbage Collection",
+    week: 2,
+    topic: "Display türleri",
     importance: "medium",
-    explanation: "Özellikle Java gibi dillerde, kullanılmayan nesnelerin belleğini otomatik geri toplar."
+    explanation: `block eleman: yeni satırdan başlar, satırı kaplar (div, p).
+inline eleman: metin içinde akar, yan yana olabilir (span, a).
+
+Örnek:
+<a>Link1</a><a>Link2</a> genelde yan yana durur.
+<div>1</div><div>2</div> alt alta durur.`
   },
+
   {
-    q: "Compiler (Derleyici) ne yapar?",
+    q: "Bir elemanı sayfada ortalamak için modern ve pratik yöntemlerden biri hangisidir?",
     t: "mcq",
     o: [
-      "Kaynak kodu başka dile/çalıştırılabilir koda çevirir",
-      "Kodun sadece renklerini değiştirir",
-      "Sadece interneti hızlandırır",
-      "Sadece ikon üretir",
-      "Sadece UI testi yapar"
+      "Her zaman <center> etiketi kullanmak",
+      "Flexbox kullanıp justify-content ve align-items ile ortalamak",
+      "Sadece <br> ile boşluk atmak",
+      "Sadece tab tuşu ile hizalamak",
+      "Sadece border artırmak"
     ],
-    a: "Kaynak kodu başka dile/çalıştırılabilir koda çevirir",
-    difficulty: "easy",
-    week: 6,
-    topic: "Compile",
+    a: "Flexbox kullanıp justify-content ve align-items ile ortalamak",
+    difficulty: "medium",
+    week: 2,
+    topic: "Flexbox - merkezleme",
     importance: "high",
-    explanation: "Amaç genellikle çalıştırılabilir bir çıktı üretmektir (exe, bytecode vb.)."
+    explanation: `Flexbox ile çok kolay ortalanır:
+.kutu {
+  display: flex;
+  justify-content: center; // yatay
+  align-items: center;     // dikey
+}
+
+Sonuç: İçerik hem yatay hem dikey ortalanır.
+Sınavda flex sık çıkar çünkü güncel pratik yöntemdir.`
   },
+
   {
-    q: "Interpreter (Yorumlayıcı) ile compiler arasındaki fark için doğru ifade hangisidir?",
+    q: "position: relative ile position: absolute arasındaki ilişki en doğru hangisidir?",
     t: "mcq",
     o: [
-      "Interpreter kodu satır satır çalıştırır; compiler genellikle çalıştırılabilir çıktı üretir",
-      "Compiler satır satır çalıştırır; interpreter dosyayı siler",
+      "absolute eleman her zaman ekranın sol üstüne göre konumlanır",
+      "absolute eleman, en yakın “position: relative” ebeveyne göre konumlanır",
+      "relative eleman görünmez olur",
+      "absolute sadece metin içindir",
+      "relative, CSS’i devre dışı bırakır"
+    ],
+    a: "absolute eleman, en yakın “position: relative” ebeveyne göre konumlanır",
+    difficulty: "hard",
+    week: 2,
+    topic: "Positioning",
+    importance: "medium",
+    explanation: `Kural:
+- Parent: position: relative
+- Child: position: absolute; top/right/bottom/left
+
+Örnek:
+.parent { position: relative; }
+.child  { position: absolute; top: 10px; right: 10px; }
+
+Sonuç: child, parent kutusunun içinde sağ üstte durur.`
+  },
+
+  {
+    q: "Flexbox’ta justify-content neyi kontrol eder?",
+    t: "mcq",
+    o: [
+      "Dikey hizalamayı",
+      "Yatay (ana eksen) hizalamayı",
+      "Yazı tipini",
+      "Renk paletini",
+      "Sadece border kalınlığını"
+    ],
+    a: "Yatay (ana eksen) hizalamayı",
+    difficulty: "medium",
+    week: 2,
+    topic: "Flexbox eksenleri",
+    importance: "high",
+    explanation: `Flex’te iki eksen vardır:
+- justify-content: ana eksen (default yatay)
+- align-items: çapraz eksen (default dikey)
+
+Örnek:
+.row { display:flex; justify-content: space-between; }
+Sonuç: Elemanlar araya boşluk koyarak sağa-sola yayılır.`
+  },
+
+  {
+    q: "Grid ile 3 eşit sütun oluşturmanın doğru yolu hangisidir?",
+    t: "mcq",
+    o: [
+      "display: grid; grid-template-columns: 1fr 1fr 1fr;",
+      "display: flex; grid-columns: 3;",
+      "position: grid; columns: 3;",
+      "display: block; column-count: 3fr;",
+      "grid: on; columns: equal;"
+    ],
+    a: "display: grid; grid-template-columns: 1fr 1fr 1fr;",
+    difficulty: "medium",
+    week: 2,
+    topic: "CSS Grid",
+    importance: "medium",
+    explanation: `Grid ile sütunları net tanımlarsın:
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+Sonuç: 3 eşit sütun, aralarında boşluk (gap) olur.`
+  },
+
+  {
+    q: "Responsive tasarımda @media sorgusunun amacı en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "Sayfayı veritabanına bağlamak",
+      "Ekran boyutuna göre CSS kurallarını değiştirmek",
+      "JavaScript’i hızlandırmak",
+      "HTML’i şifrelemek",
+      "Tarayıcıyı güncellemek"
+    ],
+    a: "Ekran boyutuna göre CSS kurallarını değiştirmek",
+    difficulty: "easy",
+    week: 2,
+    topic: "Responsive - media query",
+    importance: "high",
+    explanation: `@media ile “ekran şu kadar küçükse şöyle yap” dersin.
+
+Örnek:
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+Sonuç: Masaüstünde 3 sütun olan grid, mobilde 1 sütuna düşer.`
+  },
+
+  {
+    q: "CSS birimleriyle ilgili doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "px her zaman ekrana göre değişir, sabit değildir",
+      "rem genelde root font-size’a göre ölçeklenir, responsive için daha kontrollü olabilir",
+      "vw sadece yükseklik birimidir",
+      "% sadece renkle ilgilidir",
+      "em ve rem aynı şey değildir, ikisi de asla kullanılmaz"
+    ],
+    a: "rem genelde root font-size’a göre ölçeklenir, responsive için daha kontrollü olabilir",
+    difficulty: "hard",
+    week: 2,
+    topic: "CSS units",
+    importance: "medium",
+    explanation: `px: sabite yakın ölçü (temel anlatım).
+em: bulunduğu elemanın font-size’ına göre değişir.
+rem: html (root) font-size’ına göre değişir.
+
+Örn:
+html { font-size: 16px; }
+h1 { font-size: 2rem; } => 32px
+
+Sonuç: rem ile genel ölçek kontrolü daha düzenli olur.`
+  },
+
+  {
+    q: ":hover pseudo-class en doğru ne yapar?",
+    t: "mcq",
+    o: [
+      "Kullanıcı elemanın üstüne gelince (mouse over) stil uygular",
+      "Sayfayı otomatik kaydeder",
+      "JavaScript’i devre dışı bırakır",
+      "Veritabanını yedekler",
+      "Sadece mobilde çalışır"
+    ],
+    a: "Kullanıcı elemanın üstüne gelince (mouse over) stil uygular",
+    difficulty: "easy",
+    week: 2,
+    topic: "Pseudo-class",
+    importance: "medium",
+    explanation: `:hover, fareyle üstüne gelince tetiklenen durumdur.
+
+Örnek:
+.btn:hover { opacity: 0.8; }
+
+Sonuç: Kullanıcı butonun üstüne gelince buton biraz soluk görünür.`
+  },
+
+  {
+    q: "CSS transition ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Sayfayı sunucuya taşır",
+      "Stil değişimlerini yumuşatır (animasyon gibi geçiş)",
+      "HTML’i şifreler",
+      "Formu doğrular",
+      "JS’i siler"
+    ],
+    a: "Stil değişimlerini yumuşatır (animasyon gibi geçiş)",
+    difficulty: "medium",
+    week: 2,
+    topic: "Transition",
+    importance: "medium",
+    explanation: `transition, bir özellik değişince “bir anda” değil “yavaşça” değişmesini sağlar.
+
+Örnek:
+.btn { transition: 0.2s; }
+.btn:hover { transform: scale(1.03); }
+
+Sonuç: Hover olunca buton bir anda zıplamaz, yumuşak büyür.`
+  },
+
+  {
+    q: "z-index hangi durumda anlamlıdır?",
+    t: "mcq",
+    o: [
+      "Sadece yazı rengini değiştirirken",
+      "Örtüşen elemanlarda hangisi üstte görünsün diye (position’lı elemanlarda)",
+      "Sadece font seçerken",
+      "Sadece liste oluştururken",
+      "Sadece tablo yaparken"
+    ],
+    a: "Örtüşen elemanlarda hangisi üstte görünsün diye (position’lı elemanlarda)",
+    difficulty: "hard",
+    week: 2,
+    topic: "Layering",
+    importance: "low",
+    explanation: `z-index, elemanlar üst üste biniyorsa katman sırasını belirler.
+Genelde position (relative/absolute/fixed) olan elemanlarda anlam kazanır.
+
+Örnek:
+.modal { position: fixed; z-index: 999; }
+Sonuç: Modal çoğu şeyin üstünde görünür.`
+  },
+
+  // =========================================================
+  // ==== 3. HAFTA – JavaScript, DOM, Kütüphane Mantığı (17) ===
+  // =========================================================
+
+  {
+    q: "JavaScript’in web sayfasındaki temel rolü en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece renkleri belirlemek",
+      "Sayfaya davranış/etkileşim kazandırmak (tıklama, veri çekme, doğrulama)",
+      "Sadece başlık eklemek",
+      "Sadece resim göstermek",
+      "Sadece link vermek"
+    ],
+    a: "Sayfaya davranış/etkileşim kazandırmak (tıklama, veri çekme, doğrulama)",
+    difficulty: "easy",
+    week: 3,
+    topic: "JS rolü",
+    importance: "high",
+    explanation: `HTML sayfada “buton var” der, CSS “mavi olsun” der, JS “basılınca bir şey olsun” der.
+
+Mini örnek:
+button’a tıklanınca yazıyı değiştir.
+Sonuç: sayfa kullanıcıyla etkileşir.`
+  },
+
+  {
+    q: "let ile const arasındaki en doğru fark hangisidir?",
+    t: "mcq",
+    o: [
+      "let sabittir, const değişkendir",
+      "const yeniden atama (reassign) kabul etmez; let eder",
+      "let sadece sayı tutar, const sadece yazı tutar",
+      "const sadece HTML’de çalışır",
+      "Fark yoktur"
+    ],
+    a: "const yeniden atama (reassign) kabul etmez; let eder",
+    difficulty: "easy",
+    week: 3,
+    topic: "Değişkenler",
+    importance: "high",
+    explanation: `let: değeri sonradan değişebilir.
+const: aynı değişkene tekrar değer atayamazsın.
+
+Örnek:
+let sayac = 0;
+sayac = 1; // olur
+
+const isim = "Eylül";
+isim = "Yusuf"; // hata (yeniden atama)
+
+Sonuç: const sabit referans gibi davranır.`
+  },
+
+  {
+    q: "console.log ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Ekrana HTML basar",
+      "Tarayıcı geliştirici konsoluna bilgi yazdırır (debug için)",
+      "CSS’i çalıştırır",
+      "Sunucuya dosya yükler",
+      "Kullanıcının şifresini değiştirir"
+    ],
+    a: "Tarayıcı geliştirici konsoluna bilgi yazdırır (debug için)",
+    difficulty: "easy",
+    week: 3,
+    topic: "Debug",
+    importance: "high",
+    explanation: `console.log, kodun ne yaptığını anlamanın en basit yoludur.
+
+Örnek:
+let yas = 28;
+console.log(yas);
+
+Sonuç:
+Console’da 28 görürsün. Bu, “kod çalıştı mı?” kontrolüdür.`
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi JavaScript’te doğru bir koşul (if) kullanımına örnektir?",
+    t: "mcq",
+    o: [
+      "if yas = 18 then",
+      "if (yas >= 18) { ... }",
+      "if [yas] >= 18 =>",
+      "if yas >= 18 :",
+      "if (yas) >= 18 ) {"
+    ],
+    a: "if (yas >= 18) { ... }",
+    difficulty: "medium",
+    week: 3,
+    topic: "Koşul yapıları",
+    importance: "medium",
+    explanation: `if, “şart doğruysa çalış” demektir.
+
+Örnek:
+let yas = 28;
+if (yas >= 18) {
+  console.log("Yetişkin");
+}
+
+Sonuç:
+Console’da “Yetişkin” yazar (çünkü 28 >= 18).`
+  },
+
+  {
+    q: "for döngüsünün temel amacı en doğru hangisidir?",
+    t: "mcq",
+    o: [
+      "Tek bir satırı bir kez çalıştırmak",
+      "Bir işlemi belirli sayıda tekrar etmek",
+      "CSS’i derlemek",
+      "HTML’i şifrelemek",
+      "Tarayıcıyı kapatmak"
+    ],
+    a: "Bir işlemi belirli sayıda tekrar etmek",
+    difficulty: "easy",
+    week: 3,
+    topic: "Döngüler",
+    importance: "medium",
+    explanation: `Döngü = tekrar.
+Örnek:
+for (let i = 1; i <= 3; i++) {
+  console.log(i);
+}
+
+Sonuç:
+Console:
+1
+2
+3
+
+Yani kod 3 kez çalıştı.`
+  },
+
+  {
+    q: "Fonksiyon (function) kullanmanın en temel faydası hangisidir?",
+    t: "mcq",
+    o: [
+      "Kod tekrarını azaltmak ve işi parçalara bölmek",
+      "HTML’i otomatik yazmak",
+      "CSS’i silmek",
+      "Sunucu satın almak",
+      "Resimleri sıkıştırmak"
+    ],
+    a: "Kod tekrarını azaltmak ve işi parçalara bölmek",
+    difficulty: "easy",
+    week: 3,
+    topic: "Fonksiyonlar",
+    importance: "high",
+    explanation: `Fonksiyon = “bir işi yapan paket”.
+Aynı işi tekrar yazmak yerine çağırırsın.
+
+Örnek:
+function selamla(ad) {
+  console.log("Merhaba " + ad);
+}
+selamla("Yusuf");
+selamla("Eylül");
+
+Sonuç:
+Merhaba Yusuf
+Merhaba Eylül`
+  },
+
+  {
+    q: "Array (dizi) en doğru neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "Tek bir değeri",
+      "Birden çok değeri sıralı şekilde tutan yapı",
+      "Sadece resim formatını",
+      "Sadece CSS sınıfını",
+      "Sadece HTML etiketini"
+    ],
+    a: "Birden çok değeri sıralı şekilde tutan yapı",
+    difficulty: "easy",
+    week: 3,
+    topic: "Array",
+    importance: "medium",
+    explanation: `Array = liste.
+Örnek:
+const dersler = ["HTML", "CSS", "JS"];
+console.log(dersler[0]);
+
+Sonuç:
+“HTML” yazar (0. indeks ilk elemandır).`
+  },
+
+  {
+    q: "Object (nesne) yapısı için en doğru tanım hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece sayı tutar",
+      "Anahtar-değer (key-value) ile bilgi tutar",
+      "Sadece CSS dosyasıdır",
+      "Sadece HTML yorumudur",
+      "Sadece döngüdür"
+    ],
+    a: "Anahtar-değer (key-value) ile bilgi tutar",
+    difficulty: "medium",
+    week: 3,
+    topic: "Object",
+    importance: "medium",
+    explanation: `Object = etiketli bilgi kutusu.
+Örnek:
+const kisi = { isim: "Yusuf", yas: 28 };
+console.log(kisi.isim);
+
+Sonuç:
+“Yusuf” yazar.`
+  },
+
+  {
+    q: "DOM (Document Object Model) en doğru neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Sunucudaki veritabanı",
+      "Tarayıcının HTML’i bir ağaç yapı olarak temsil etmesi ve JS ile erişilebilmesi",
+      "CSS renk paleti",
+      "Sadece resim galerisi",
+      "Sadece internet protokolü"
+    ],
+    a: "Tarayıcının HTML’i bir ağaç yapı olarak temsil etmesi ve JS ile erişilebilmesi",
+    difficulty: "hard",
+    week: 3,
+    topic: "DOM kavramı",
+    importance: "high",
+    explanation: `DOM: Tarayıcının sayfayı “nesneler” gibi görmesi.
+JS ile HTML elemanlarını seçip değiştirebilirsin.
+
+Örnek:
+<h1 id="baslik">Merhaba</h1>
+JS:
+document.getElementById("baslik").textContent = "Yusuf";
+
+Sonuç:
+Sayfadaki başlık “Yusuf” olur.`
+  },
+
+  {
+    q: "Bir HTML elemanını id ile seçmek için doğru yöntem hangisidir?",
+    t: "mcq",
+    o: [
+      "document.pick('#id')",
+      "document.getElementById('id')",
+      "window.getCss('id')",
+      "console.get('id')",
+      "html.find('id')"
+    ],
+    a: "document.getElementById('id')",
+    difficulty: "easy",
+    week: 3,
+    topic: "DOM seçiciler",
+    importance: "high",
+    explanation: `ID seçimi:
+const el = document.getElementById("baslik");
+
+Örnek:
+<h1 id="baslik">Eylül</h1>
+
+JS:
+const baslik = document.getElementById("baslik");
+console.log(baslik.textContent);
+
+Sonuç:
+Console’da “Eylül” yazar.`
+  },
+
+  {
+    q: "Butona tıklamayı yakalamak için en yaygın yöntem hangisidir?",
+    t: "mcq",
+    o: [
+      "addEventListener('click', ...)",
+      "addColor('click', ...)",
+      "setHTML('click', ...)",
+      "install('click', ...)",
+      "import click from 'dom'"
+    ],
+    a: "addEventListener('click', ...)",
+    difficulty: "easy",
+    week: 3,
+    topic: "Event",
+    importance: "high",
+    explanation: `Event = olay. Tıklama bir olaydır.
+
+Örnek:
+<button id="btn">Tıkla</button>
+
+JS:
+const btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  console.log("Tıklandı");
+});
+
+Sonuç:
+Butona basınca Console’da “Tıklandı” yazar.`
+  },
+
+  {
+    q: "textContent ile innerHTML arasındaki temel fark hangisidir?",
+    t: "mcq",
+    o: [
+      "textContent HTML’i yorumlar, innerHTML düz metindir",
+      "textContent düz metin yazar; innerHTML HTML etiketlerini de yorumlayabilir",
       "İkisi tamamen aynıdır",
-      "Interpreter sadece C++ içindir",
-      "Compiler sadece HTML içindir"
+      "innerHTML sadece CSS içindir",
+      "textContent sadece resim içindir"
     ],
-    a: "Interpreter kodu satır satır çalıştırır; compiler genellikle çalıştırılabilir çıktı üretir",
-    difficulty: "medium",
-    week: 6,
-    topic: "Interpreter vs Compiler",
+    a: "textContent düz metin yazar; innerHTML HTML etiketlerini de yorumlayabilir",
+    difficulty: "hard",
+    week: 3,
+    topic: "DOM içerik",
     importance: "high",
-    explanation: "Yorumlayıcı çoğu zaman anında çalıştırır; derleyici dönüştürüp çıktı üretir."
+    explanation: `textContent güvenli düz metindir.
+innerHTML içine HTML koyarsan tarayıcı onu etiket gibi işler.
+
+Örnek:
+div.textContent = "<b>Yusuf</b>";
+Sonuç: ekranda <b>Yusuf</b> yazısı (etiket gibi değil, metin gibi) görünür.
+
+div.innerHTML = "<b>Yusuf</b>";
+Sonuç: Yusuf kalın (bold) görünür.
+
+Not: innerHTML yanlış kullanılırsa XSS riski doğurabilir (güvenlik).`
   },
+
   {
-    q: "CLI ne demektir?",
-    t: "mcq",
-    o: ["Komut satırı arayüzü", "Grafik kartı sürücüsü", "Veritabanı türü", "Web API standardı", "Dosya uzantısı"],
-    a: "Komut satırı arayüzü",
-    difficulty: "easy",
-    week: 6,
-    topic: "CLI",
-    importance: "medium",
-    explanation: "Konsol/terminal üzerinden komut girerek sistemle iletişim kurmaktır."
-  },
-  {
-    q: "CRON ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Zaman tabanlı işleri periyodik çalıştırmak için",
-      "Dosya sıkıştırmak için",
-      "UI çizmek için",
-      "Veritabanı tablosu oluşturmak için",
-      "Makine diline çevirmek için"
-    ],
-    a: "Zaman tabanlı işleri periyodik çalıştırmak için",
-    difficulty: "easy",
-    week: 6,
-    topic: "CRON",
-    importance: "medium",
-    explanation: "Belirli saat/tarih/aralıkta otomatik görev çalıştırma."
-  },
-  {
-    q: "Hash fonksiyonunun temel amacı hangisidir?",
+    q: "Bir formu JavaScript ile “boş geçme” kontrolü yapmak için en temel yaklaşım hangisidir?",
     t: "mcq",
     o: [
-      "Değişken uzunluklu veriyi sabit uzunluklu özete dönüştürmek",
-      "Veriyi her zaman büyütmek",
-      "Sadece UI hizalamak",
-      "Sadece dosyayı PDF yapmak",
-      "Sadece interneti kapatmak"
+      "CSS ile kontrol edilir",
+      "Input value okunur, boşsa uyarı verilir",
+      "HTML’e hiç gerek yoktur",
+      "Sadece resim ekleyerek çözülür",
+      "Sunucu satın alınır"
     ],
-    a: "Değişken uzunluklu veriyi sabit uzunluklu özete dönüştürmek",
+    a: "Input value okunur, boşsa uyarı verilir",
     difficulty: "medium",
-    week: 6,
-    topic: "Hash",
+    week: 3,
+    topic: "Form doğrulama",
     importance: "medium",
-    explanation: "Parola saklama, bütünlük kontrolü gibi alanlarda kullanılır."
+    explanation: `Mantık:
+1) input’u seç
+2) value değerine bak
+3) boşsa kullanıcıyı uyar
+
+Örnek:
+if (emailInput.value.trim() === "") {
+  alert("E-posta boş olamaz");
+}
+
+Sonuç:
+Kullanıcı boş gönderirse uyarı görür.`
   },
+
   {
-    q: "GUID/UUID nedir?",
+    q: "fetch ile veri çekmekte en temel doğru mantık hangisidir?",
     t: "mcq",
     o: [
-      "Evrensel olarak benzersiz tanımlayıcı",
-      "Bir CSS sınıfı",
-      "Bir veritabanı dili",
-      "Bir tarayıcı eklentisi",
-      "Bir işletim sistemi"
+      "fetch sadece CSS çeker",
+      "fetch bir istek atar, genelde Promise döner; then/await ile sonuç alınır",
+      "fetch sayfayı kapatır",
+      "fetch sadece resim büyütür",
+      "fetch veritabanı oluşturur"
     ],
-    a: "Evrensel olarak benzersiz tanımlayıcı",
-    difficulty: "easy",
-    week: 6,
-    topic: "GUID",
+    a: "fetch bir istek atar, genelde Promise döner; then/await ile sonuç alınır",
+    difficulty: "hard",
+    week: 3,
+    topic: "Fetch/Async",
     importance: "medium",
-    explanation: "Sistemlerde kayıtları/nesneleri benzersiz kimlikle tanımlamak için kullanılır."
+    explanation: `fetch, tarayıcıdan bir URL’ye istek atar.
+Sonuç hemen gelmeyebilir; bu yüzden async mantığı vardır.
+
+Örnek (mantık):
+fetch("https://example.com/data")
+  .then(r => r.json())
+  .then(data => console.log(data));
+
+Sonuç:
+Veri gelince console’da görünür.`
   },
+
   {
-    q: "OOP nedir?",
+    q: "JSON nedir? En doğru tanım hangisidir?",
     t: "mcq",
-    o: ["Nesne yönelimli programlama yaklaşımı", "Bir HTTP kodu", "Bir veritabanı türü", "Bir UI stili", "Bir komut satırı aracı"],
-    a: "Nesne yönelimli programlama yaklaşımı",
-    difficulty: "easy",
-    week: 6,
-    topic: "OOP",
+    o: [
+      "Bir resim formatı",
+      "Veri taşımak için kullanılan metin tabanlı format (anahtar-değer, dizi vb.)",
+      "CSS dosyası",
+      "HTML etiketi",
+      "Bir donanım türü"
+    ],
+    a: "Veri taşımak için kullanılan metin tabanlı format (anahtar-değer, dizi vb.)",
+    difficulty: "medium",
+    week: 3,
+    topic: "JSON",
+    importance: "medium",
+    explanation: `JSON, veriyi metinle taşır.
+Örnek JSON:
+{ "isim": "Yusuf", "yas": 28 }
+
+JS’te:
+const obj = JSON.parse(jsonMetni);
+Sonuç:
+obj.isim => "Yusuf" olur.`
+  },
+
+  {
+    q: "“Kütüphane ekleme” mantığında CDN ile npm arasındaki en doğru fark hangisidir?",
+    t: "mcq",
+    o: [
+      "CDN sadece offline çalışır; npm sadece resim indirir",
+      "CDN: link/script ile internetten çağırma; npm: projeye paket kurma (node_modules) ve build sürecinde kullanma",
+      "İkisi aynı şeydir",
+      "npm tarayıcıyı günceller",
+      "CDN veritabanı oluşturur"
+    ],
+    a: "CDN: link/script ile internetten çağırma; npm: projeye paket kurma (node_modules) ve build sürecinde kullanma",
+    difficulty: "hard",
+    week: 3,
+    topic: "Kütüphane mantığı (import/install)",
     importance: "high",
-    explanation: "Programı nesneler/sınıflar üzerinden modelleme yaklaşımıdır."
+    explanation: `Senin “pip install” benzetmesinin web karşılığı:
+- CDN: “hazır linki ekle, kullan” (derslerde en kolay)
+  <script src="..."></script>
+- npm: “projeye kur, import et, build ile paketle”
+  npm install paketAdi
+
+Örnek CDN:
+<script src="https://cdn.../axios.min.js"></script>
+
+Örnek npm (mantık):
+npm install axios
+import axios from "axios";
+
+Sonuç:
+İkisi de kütüphane kullanmanı sağlar ama çalışma şekli farklıdır.`
   },
+
   {
-    q: "Repository neyi ifade eder?",
-    t: "mcq",
-    o: ["Kod deposu", "Sadece resim galerisi", "CPU register alanı", "Ağ kablosu", "Metin fontu"],
-    a: "Kod deposu",
-    difficulty: "easy",
-    week: 6,
-    topic: "Repository",
-    importance: "medium",
-    explanation: "Git repo gibi; kaynak kodu ve tarihçesini tutar."
-  },
-  {
-    q: "Version Control (Sürüm kontrol) neden önemlidir?",
+    q: "Tarayıcı DevTools (F12) içinde Network sekmesi en çok neyi görmek için kullanılır?",
     t: "mcq",
     o: [
-      "Değişiklik geçmişini yönetir ve ekip çalışmasını kolaylaştırır",
-      "Her zaman interneti hızlandırır",
-      "RAM’i otomatik artırır",
-      "Dosyaları rasterize eder",
-      "Sadece UI boyar"
+      "Bilgisayarın RAM’ini artırmak için",
+      "Sayfanın yaptığı istekleri (HTTP), dosya yüklenme sürelerini ve hataları görmek için",
+      "CSS dosyasını silmek için",
+      "HTML’i şifrelemek için",
+      "Klavye ayarlarını değiştirmek için"
     ],
-    a: "Değişiklik geçmişini yönetir ve ekip çalışmasını kolaylaştırır",
+    a: "Sayfanın yaptığı istekleri (HTTP), dosya yüklenme sürelerini ve hataları görmek için",
     difficulty: "medium",
-    week: 6,
-    topic: "Version Control",
+    week: 3,
+    topic: "DevTools",
+    importance: "medium",
+    explanation: `DevTools:
+- Console: log/hata
+- Elements: HTML/CSS inceleme
+- Network: hangi dosyalar yüklendi, kaç ms sürdü, hata var mı?
+
+Örnek:
+Resim yüklenmiyorsa Network’te 404 görürsün.
+Sonuç: “Neden gelmiyor?” sorusunu somut görerek çözersin.`
+  },
+
+  {
+    q: "XSS riskinin en temel kaynağı web’de çoğunlukla hangi hatalı yaklaşımla büyür?",
+    t: "mcq",
+    o: [
+      "textContent kullanmak",
+      "Kullanıcıdan gelen metni direkt innerHTML ile sayfaya basmak",
+      "CSS ile renk vermek",
+      "HTML’de <title> yazmak",
+      "Responsive yapmak"
+    ],
+    a: "Kullanıcıdan gelen metni direkt innerHTML ile sayfaya basmak",
+    difficulty: "hard",
+    week: 3,
+    topic: "Güvenlik - XSS temel",
     importance: "high",
-    explanation: "Branch/merge, geri dönüş, denetim, işbirliği sağlar."
-  },
-  {
-    q: "Virtual Machine nedir?",
-    t: "mcq",
-    o: [
-      "Gerçek sistem gibi çalışan sanal bilgisayar ortamı",
-      "Sadece tarayıcı eklentisi",
-      "Bir CSS standardı",
-      "Bir tür dosya uzantısı",
-      "Bir yazı tipi"
-    ],
-    a: "Gerçek sistem gibi çalışan sanal bilgisayar ortamı",
-    difficulty: "easy",
-    week: 6,
-    topic: "Virtual Machine",
-    importance: "medium",
-    explanation: "Farklı OS’leri aynı fiziksel makinede izole çalıştırmana yarar."
-  },
-  {
-    q: "Hypervisor’ın görevi hangisidir?",
-    t: "mcq",
-    o: [
-      "VM’leri oluşturmak ve çalıştırmak",
-      "Sadece HTML yazmak",
-      "Sadece SQL çalıştırmak",
-      "Sadece görsel düzenlemek",
-      "Sadece cron job eklemek"
-    ],
-    a: "VM’leri oluşturmak ve çalıştırmak",
-    difficulty: "medium",
-    week: 6,
-    topic: "Hypervisor",
-    importance: "medium",
-    explanation: "VirtualBox/VMware/Hyper-V gibi sistemlerin temelinde hypervisor mantığı vardır."
-  },
-  {
-    q: "Sandbox neyi amaçlar?",
-    t: "mcq",
-    o: [
-      "Riskli/test edilmemiş kodu izole ortamda çalıştırarak ana sistemi korumak",
-      "Dosyaları her zaman büyütmek",
-      "UI’ı her zaman küçültmek",
-      "Sadece renkleri ters çevirmek",
-      "Veritabanını otomatik kurmak"
-    ],
-    a: "Riskli/test edilmemiş kodu izole ortamda çalıştırarak ana sistemi korumak",
-    difficulty: "medium",
-    week: 6,
-    topic: "Sandbox",
-    importance: "high",
-    explanation: "Güvenlik ve test amaçlı izolasyon sağlar."
-  },
-  {
-    q: "WYSIWYG ne demektir?",
-    t: "mcq",
-    o: [
-      "Ne görüyorsan onu alırsın (ekranda görülen çıktıya benzer)",
-      "Sadece komut satırı demektir",
-      "Bir veritabanı protokolüdür",
-      "Bir işletim sistemi çekirdeğidir",
-      "Bir hash algoritmasıdır"
-    ],
-    a: "Ne görüyorsan onu alırsın (ekranda görülen çıktıya benzer)",
-    difficulty: "easy",
-    week: 6,
-    topic: "WYSIWYG",
-    importance: "medium",
-    explanation: "Editörde gördüğün düzenin çıktıya çok benzer olmasını ifade eder."
-  },
-  {
-    q: "XML ne için yaygın kullanılır?",
-    t: "mcq",
-    o: [
-      "Veri saklama ve sistemler arası veri alışverişi",
-      "Sadece oyun geliştirme",
-      "Sadece fotoğraf düzenleme",
-      "Sadece komut satırı",
-      "Sadece RAM yönetimi"
-    ],
-    a: "Veri saklama ve sistemler arası veri alışverişi",
-    difficulty: "easy",
-    week: 6,
-    topic: "XML",
-    importance: "medium",
-    explanation: "XML; yapılandırılmış veriyi taşımak için standart bir formattır."
-  },
-  {
-    q: "SQL neyi ifade eder?",
-    t: "mcq",
-    o: ["Veritabanı sorgulama dili", "Bir UI framework", "Bir donanım portu", "Bir tarayıcı", "Bir resim formatı"],
-    a: "Veritabanı sorgulama dili",
-    difficulty: "easy",
-    week: 6,
-    topic: "SQL",
-    importance: "high",
-    explanation: "Tablolardan veri çekme/güncelleme/silme/oluşturma gibi işlemler SQL ile yapılır."
-  },
-  {
-    q: "CMS nedir?",
-    t: "mcq",
-    o: [
-      "İçerik yönetim sistemi",
-      "Sadece bir programlama dili",
-      "Bir işletim sistemi türü",
-      "Bir ekran kartı modeli",
-      "Bir derleyici"
-    ],
-    a: "İçerik yönetim sistemi",
-    difficulty: "easy",
-    week: 6,
-    topic: "CMS",
-    importance: "low",
-    explanation: "Web içeriklerini kolay üretme/düzenleme/yayınlama sistemidir."
-  },
-  {
-    q: "CRM neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Müşteri ilişkileri yönetimi yaklaşımı/sistemi",
-      "Sadece dosya kopyalama",
-      "Sadece hash üretme",
-      "Sadece UI renklendirme",
-      "Sadece sanallaştırma"
-    ],
-    a: "Müşteri ilişkileri yönetimi yaklaşımı/sistemi",
-    difficulty: "easy",
-    week: 6,
-    topic: "CRM",
-    importance: "low",
-    explanation: "Müşteri etkileşimlerini yönetmek için süreç ve yazılım yaklaşımıdır."
-  },
-  {
-    q: "Plug-in (Eklenti) ne yapar?",
-    t: "mcq",
-    o: [
-      "Ana programa bağımsız bir yazılım olarak çalışır ve ana programdan tamamen kopuktur",
-      "Ana programa yeni özellik ekler; çoğu zaman ana program olmadan çalışamaz",
-      "Sadece veritabanı kurar",
-      "Sadece işletim sistemi günceller",
-      "Sadece ağ kablosu yönetir"
-    ],
-    a: "Ana programa yeni özellik ekler; çoğu zaman ana program olmadan çalışamaz",
-    difficulty: "medium",
-    week: 6,
-    topic: "Plug-in",
-    importance: "medium",
-    explanation: "Eklenti; host uygulamaya yeni yetenek kazandırır."
-  },
-  {
-    q: "Open Source yazılımın en doğru özelliği hangisidir?",
-    t: "mcq",
-    o: [
-      "Kaynak kodu kapalıdır",
-      "Kaynak kodu açık lisansla kullanma/değiştirme/dağıtma imkânı sunar",
-      "Sadece ücretlidir",
-      "Sadece Windows’ta çalışır",
-      "Sadece oyun içindir"
-    ],
-    a: "Kaynak kodu açık lisansla kullanma/değiştirme/dağıtma imkânı sunar",
-    difficulty: "easy",
-    week: 6,
-    topic: "Open Source",
-    importance: "medium",
-    explanation: "Açık kaynakta haklar lisansla belirlenir; genel mantık şeffaflık ve yeniden kullanım kolaylığıdır."
-  },
-  {
-    q: "Proprietary Software ne demektir?",
-    t: "mcq",
-    o: [
-      "Kaynak kodu açık yazılım",
-      "Sahipli/kapalı kaynak yazılım",
-      "Sadece ücretsiz yazılım",
-      "Sadece eğitim amaçlı yazılım",
-      "Sadece web standardı"
-    ],
-    a: "Sahipli/kapalı kaynak yazılım",
-    difficulty: "easy",
-    week: 6,
-    topic: "Proprietary",
-    importance: "medium",
-    explanation: "Kaynak kodu ve fikrî haklar üreticide kalır; kullanım lisans şartlarına bağlıdır."
-  },
-  {
-    q: "OCR ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Görüntü içindeki yazıyı metne dönüştürmeye çalışır",
-      "Sadece ses dosyası üretir",
-      "Sadece veritabanı tablo kurar",
-      "Sadece firewall yönetir",
-      "Sadece VM oluşturur"
-    ],
-    a: "Görüntü içindeki yazıyı metne dönüştürmeye çalışır",
-    difficulty: "easy",
-    week: 6,
-    topic: "OCR",
-    importance: "medium",
-    explanation: "Optik karakter tanıma; taranmış dokümanları düzenlenebilir metne çevirmeye yarar."
-  },
-  {
-    q: "FTP hangi amaçla kullanılır?",
-    t: "mcq",
-    o: ["Dosya aktarımı", "Renk düzenleme", "Tipografi ayarı", "Sanallaştırma", "Makine dili çevirisi"],
-    a: "Dosya aktarımı",
-    difficulty: "easy",
-    week: 6,
-    topic: "FTP",
-    importance: "low",
-    explanation: "FTP; dosyaları ağ üzerinden sunucu/istemci arasında taşımak için kullanılan protokoldür."
-  },
-  {
-    q: "Firewall’ın temel görevi hangisidir?",
-    t: "mcq",
-    o: [
-      "Dosyaları sıkıştırmak",
-      "Ağ trafiğini kurallarla kontrol etmek (gelen/giden paketleri filtrelemek)",
-      "UI çizmek",
-      "Veritabanı sorgulamak",
-      "Yazı tipini değiştirmek"
-    ],
-    a: "Ağ trafiğini kurallarla kontrol etmek (gelen/giden paketleri filtrelemek)",
-    difficulty: "easy",
-    week: 6,
-    topic: "Firewall",
-    importance: "medium",
-    explanation: "Güvenlik duvarı; izin verilen/engellenen trafik kuralları uygular."
-  },
-  {
-    q: "Cookies (çerezler) web’de en çok ne için kullanılır?",
-    t: "mcq",
-    o: ["Oturum ve tercih bilgisi saklamak", "Makine dili üretmek", "Derleme yapmak", "VM kurmak", "DNS değiştirmek"],
-    a: "Oturum ve tercih bilgisi saklamak",
-    difficulty: "easy",
-    week: 6,
-    topic: "Cookies",
-    importance: "low",
-    explanation: "Login oturumu, sepet bilgisi, dil tercihi gibi veriler çerezlerde tutulabilir."
-  },
-  {
-    q: "Crawl (arama robotu) ne yapar?",
-    t: "mcq",
-    o: ["Web’i otomatik gezer ve yeni adresleri indeks listesine ekler", "Sadece video oynatır", "Sadece SQL derler", "Sadece UI render eder", "Sadece şifre kırar"],
-    a: "Web’i otomatik gezer ve yeni adresleri indeks listesine ekler",
-    difficulty: "medium",
-    week: 6,
-    topic: "Crawl",
-    importance: "low",
-    explanation: "Arama motorları sayfaları bulmak için crawler kullanır."
+    explanation: `XSS (Cross-Site Scripting) basitçe: “kullanıcı metni gibi görünen şeyin içine script sokup çalıştırma” riskidir.
+Bu yüzden kullanıcıdan gelen içeriği:
+- mümkünse textContent ile basmak (düz metin)
+- ya da sanitize etmek gerekir.
+
+Örnek risk:
+innerHTML = kullanıcıMesaji; // tehlikeli olabilir
+Sonuç: Eğer kötü niyetli kod gelirse tarayıcı çalıştırabilir.`
   }
-]);
+];
