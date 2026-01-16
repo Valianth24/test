@@ -1,998 +1,820 @@
-// Photoshop Metin (Type) + Tipografi + Adjustment Layers + Blending Modes
-// + Adobe Illustrator Giriş + Workspace + Bleed + Raster Effects + Araçlar
-// 50 Soruluk Öğretici Soru Bankası (MCQ)
-// Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
-
-window.questionBank = [
-  // =========================================================
-  // ============ WEEK 1: PHOTOSHOP METİN & TİPOGRAFİ (18) ====
-  // =========================================================
+// MVC / MVP / MVVM + API + Yazılım Kavramları
+// Mevcut questionBank'e ekleme:
+window.questionBank = (window.questionBank || []).concat([
+  // =========================
+  // WEEK 4: MVC / MVP / MVVM (10)
+  // =========================
   {
-    q: "Bu dersin (Photoshop metin araçları) temel amacı aşağıdakilerden hangisidir?",
+    q: "MVC mimarisinin temel amacı nedir?",
     t: "mcq",
     o: [
-      "Sadece fotoğraf kırpmayı öğretmek",
-      "Metin (text) araçlarını etkili kullanmak ve yazıyı kompozisyona doğru yerleştirmek",
-      "Sadece 3D modelleme yapmak",
-      "Sadece dosya formatlarını ezberlemek",
-      "Sadece renk modlarını değiştirmek"
+      "Sadece arayüz tasarlamak",
+      "Bileşenleri sorumluluklarına göre ayırarak bakım ve geliştirmeyi kolaylaştırmak",
+      "Sadece veritabanı hızını artırmak",
+      "Sadece güvenlik duvarı eklemek",
+      "Sadece dosya formatlarını yönetmek"
     ],
-    a: "Metin (text) araçlarını etkili kullanmak ve yazıyı kompozisyona doğru yerleştirmek",
+    a: "Bileşenleri sorumluluklarına göre ayırarak bakım ve geliştirmeyi kolaylaştırmak",
     difficulty: "easy",
-    week: 1,
-    topic: "Ders amacı - metin",
+    week: 4,
+    topic: "MVC - amaç",
     importance: "high",
-    explanation:
-      "Amaç; Photoshop’ta metni profesyonel biçimde ekleyip düzenlemek, tipografi ilkelerini uygulamak ve metnin mesaj iletimindeki rolünü kavramaktır."
+    explanation: "MVC; Model, View, Controller rollerini ayırarak kodun temiz, modüler ve test edilebilir olmasını hedefler."
   },
   {
-    q: "Photoshop’ta metin eklemek için kullanılan temel araç hangisidir?",
-    t: "mcq",
-    o: ["Type Tool (T)", "Move Tool (V)", "Brush Tool (B)", "Crop Tool (C)", "Lasso Tool (L)"],
-    a: "Type Tool (T)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Type Tool - giriş",
-    importance: "high",
-    explanation:
-      "Metin ekleme aracı Type Tool’dur ve kısayolu T’dir."
-  },
-  {
-    q: "Type Tool ile hangi iki yönlü metin aracı kullanılabilir?",
+    q: "MVC’de Model katmanı en çok hangi sorumlulukları üstlenir?",
     t: "mcq",
     o: [
-      "Horizontal Type Tool ve Vertical Type Tool",
-      "Move Tool ve Rotate Tool",
-      "Brush Tool ve Eraser Tool",
-      "Curves ve Levels",
-      "Pen Tool ve Shape Tool"
+      "UI elemanlarını çizmek",
+      "Kullanıcı tıklamalarını yakalamak",
+      "Veri ve iş mantığını yönetmek (veritabanı işlemleri dahil)",
+      "Sadece sayfa yönlendirmesi yapmak",
+      "Sadece CSS üretmek"
     ],
-    a: "Horizontal Type Tool ve Vertical Type Tool",
+    a: "Veri ve iş mantığını yönetmek (veritabanı işlemleri dahil)",
     difficulty: "easy",
-    week: 1,
-    topic: "Type Tool - türler",
-    importance: "medium",
-    explanation:
-      "Photoshop’ta metin yatay (Horizontal) veya dikey (Vertical) olarak yazılabilir."
-  },
-  {
-    q: "Ekrana tek bir tıklama ile oluşturulan metin türü hangisidir?",
-    t: "mcq",
-    o: ["Nokta Metin (Point Text)", "Paragraf Metni (Paragraph Text)", "Vektör Metin", "Maskeli Metin", "Raster Metin"],
-    a: "Nokta Metin (Point Text)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Point Text",
+    week: 4,
+    topic: "MVC - Model",
     importance: "high",
-    explanation:
-      "Type Tool ile ekrana tıklarsan Point Text oluşur; genellikle kısa başlıklar/logotip benzeri metinlerde kullanılır."
+    explanation: "Model; veri, kurallar ve veriye ilişkin işlemlerden sorumludur."
   },
   {
-    q: "Sürükleyerek kutu çizip oluşturulan metin türü hangisidir?",
-    t: "mcq",
-    o: ["Nokta Metin (Point Text)", "Paragraf Metni (Paragraph Text)", "Serif Metin", "Vektör Maske Metni", "Clipping Text"],
-    a: "Paragraf Metni (Paragraph Text)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Paragraph Text",
-    importance: "high",
-    explanation:
-      "Sürükleyerek bir metin kutusu oluşturursan Paragraph Text olur; uzun metin blokları için idealdir."
-  },
-  {
-    q: "Kısa başlıklar ve logotip benzeri metinler için hangisi daha uygundur?",
-    t: "mcq",
-    o: ["Paragraf Metni", "Nokta Metin", "Gradient Map", "Curves", "Blend Mode: Difference"],
-    a: "Nokta Metin",
-    difficulty: "easy",
-    week: 1,
-    topic: "Metin seçimi - kullanım",
-    importance: "high",
-    explanation:
-      "Kısa metinlerde Point Text pratik ve kontrolü kolaydır. Paragraf metni ise uzun içerik için tasarlanmıştır."
-  },
-  {
-    q: "Character Panel’in temel görevi aşağıdakilerden hangisidir?",
+    q: "MVC’de View katmanı neyi temsil eder?",
     t: "mcq",
     o: [
-      "Katmanları gruplayıp sıraya dizmek",
-      "Metin biçimlendirmesi (font, size, leading, tracking, renk) yapmak",
-      "Görseli kırpmak",
-      "Dosyayı PDF’e dönüştürmek",
-      "Renk modunu CMYK’a çevirmek"
+      "Veritabanı tablolarını",
+      "Kullanıcı arayüzünü ve verinin sunumunu",
+      "Sadece loglama sistemini",
+      "Derleyiciyi",
+      "Cache mekanizmasını"
     ],
-    a: "Metin biçimlendirmesi (font, size, leading, tracking, renk) yapmak",
+    a: "Kullanıcı arayüzünü ve verinin sunumunu",
     difficulty: "easy",
-    week: 1,
-    topic: "Character Panel",
+    week: 4,
+    topic: "MVC - View",
     importance: "high",
-    explanation:
-      "Character Panel; yazı tipi, boyut, satır aralığı (leading), harf aralığı (tracking), ölçek ve renk gibi tipografi ayarlarının merkezidir."
+    explanation: "View; kullanıcıya gösterilen arayüzdür (web’de template, masaüstünde UI bileşenleri)."
   },
   {
-    q: "Satır aralığına (leading) karşılık gelen kavram hangisidir?",
+    q: "MVC’de Controller’ın görevi aşağıdakilerden hangisidir?",
     t: "mcq",
-    o: ["Harf aralığı", "Satır aralığı", "Girinti", "İki yana yaslama", "Kontrast"],
-    a: "Satır aralığı",
+    o: [
+      "Sadece görsel tasarım yapmak",
+      "Kullanıcı isteklerini işlemek, Model’i kullanmak ve sonucu View’a iletmek",
+      "Sadece veritabanını yedeklemek",
+      "Sadece kodu derlemek",
+      "Sadece CSS yazmak"
+    ],
+    a: "Kullanıcı isteklerini işlemek, Model’i kullanmak ve sonucu View’a iletmek",
     difficulty: "easy",
-    week: 1,
-    topic: "Leading",
+    week: 4,
+    topic: "MVC - Controller",
     importance: "high",
-    explanation:
-      "Leading; satırların birbirine olan dikey mesafesidir. Okunabilirliği doğrudan etkiler."
+    explanation: "Controller; girişleri/istekleri alır, iş akışını yönetir ve sunumu günceller."
   },
   {
-    q: "Harf aralığına (tracking) karşılık gelen ifade hangisidir?",
+    q: "MVP mimarisinde 'Presenter' hangi rolü üstlenir?",
     t: "mcq",
-    o: ["Satır aralığı", "Harflerin birbirine uzaklığı", "Paragraf aralığı", "Kenar boşluğu", "Renk doygunluğu"],
-    a: "Harflerin birbirine uzaklığı",
-    difficulty: "easy",
-    week: 1,
-    topic: "Tracking",
-    importance: "medium",
-    explanation:
-      "Tracking; metindeki harfler arası genel aralığı ifade eder. Aşırı artırmak/azaltmak okunabilirliği bozar."
-  },
-  {
-    q: "Ders notuna göre 12 pt yazı boyutunda yaygın tercih edilen leading değeri hangisidir?",
-    t: "mcq",
-    o: ["12 pt", "13 pt", "14 pt", "18 pt", "24 pt"],
-    a: "14 pt",
+    o: [
+      "Veri tabanını fiziksel kurar",
+      "Model ile View arasındaki iletişimi kurar ve View’ı arayüz üzerinden günceller",
+      "Sadece UI çizimini yapar",
+      "Sadece route tanımlar",
+      "Sadece dosya kaydeder"
+    ],
+    a: "Model ile View arasındaki iletişimi kurar ve View’ı arayüz üzerinden günceller",
     difficulty: "medium",
-    week: 1,
-    topic: "Leading oranı",
-    importance: "medium",
-    explanation:
-      "Örnek olarak 12 pt yazıda 14 pt leading, satırların nefes almasını ve okunabilirliği artırmayı hedefler."
-  },
-  {
-    q: "Paragraph Panel en çok hangi iş için kullanılır?",
-    t: "mcq",
-    o: [
-      "Metni hizalama, girinti ve paragraf düzenlerini yönetmek",
-      "Renk uzayını Lab’a çevirmek",
-      "Katmanı rasterize etmek",
-      "Görseli keskinleştirmek",
-      "Blend mode gruplarını değiştirmek"
-    ],
-    a: "Metni hizalama, girinti ve paragraf düzenlerini yönetmek",
-    difficulty: "easy",
-    week: 1,
-    topic: "Paragraph Panel",
+    week: 4,
+    topic: "MVP - Presenter",
     importance: "high",
-    explanation:
-      "Sola/sağa/ortaya hizalama, iki yana yaslama, girinti (indent) ve paragraf aralıkları Paragraph Panel’den kontrol edilir."
+    explanation: "Presenter; View’dan olayı alır, Model’e iş yaptırır, sonucu View’a 'ne gösterileceğini' söyleyerek yansıtır."
   },
   {
-    q: "Dergi, katalog veya broşür gibi çok metinli tasarımlarda özellikle hangi panel büyük kolaylık sağlar?",
-    t: "mcq",
-    o: ["Histogram", "Paragraph Panel", "Swatches", "Navigator", "History"],
-    a: "Paragraph Panel",
-    difficulty: "easy",
-    week: 1,
-    topic: "Çok metinli tasarım",
-    importance: "medium",
-    explanation:
-      "Çok metinli işlerde paragraf akışı, hizalama ve girinti yönetimi kritiktir; Paragraph Panel bunun için tasarlanmıştır."
-  },
-  {
-    q: "Tipografi en doğru hangi cümleyle özetlenir?",
+    q: "MVVM’de ViewModel’in ana görevi nedir?",
     t: "mcq",
     o: [
-      "Sadece güzel font seçmektir",
-      "Okunabilirlik, hiyerarşi ve estetik düzenin birlikte yönetilmesidir",
-      "Sadece metni büyük yazmaktır",
-      "Sadece efekt eklemektir",
-      "Sadece yazıyı eğmektir"
+      "Veriyi View için uygun forma sokmak ve View ile Model arasında köprü olmak",
+      "Sadece veritabanı indekslemek",
+      "Sadece CSS üretmek",
+      "Sadece API gateway olmak",
+      "Sadece dosya sıkıştırmak"
     ],
-    a: "Okunabilirlik, hiyerarşi ve estetik düzenin birlikte yönetilmesidir",
+    a: "Veriyi View için uygun forma sokmak ve View ile Model arasında köprü olmak",
     difficulty: "medium",
-    week: 1,
-    topic: "Tipografi ilkeleri",
+    week: 4,
+    topic: "MVVM - ViewModel",
     importance: "high",
-    explanation:
-      "Tipografi; metnin okunur olması, başlık-alt başlık-gövde düzeni (hiyerarşi) ve görsel bütünlük hedeflerini birlikte taşır."
+    explanation: "ViewModel; UI’nin ihtiyaç duyduğu verileri/komutları sunar, Model’e erişir ve View’a bağlanmaya uygun hale getirir."
   },
   {
-    q: "Serif yazı tipleri (ör. Times New Roman) ders notuna göre hangi ortamda okunabilirliği artırma eğilimindedir?",
+    q: "MVVM’de en kritik prensiplerden biri hangisidir?",
     t: "mcq",
-    o: ["Dijital ekranlar", "Basılı materyaller", "Sadece logo tasarımı", "Sadece ikon", "Sadece animasyon"],
-    a: "Basılı materyaller",
+    o: ["Data Binding (Veri Bağlama)", "Bleed", "Rasterize", "FTP", "CRC"],
+    a: "Data Binding (Veri Bağlama)",
     difficulty: "easy",
-    week: 1,
-    topic: "Serif vs Sans-serif",
-    importance: "medium",
-    explanation:
-      "Serif fontlar geleneksel olarak basılı materyallerde okunabilirliği destekleyebilir; sans-serif ise dijitalde sıklıkla tercih edilir."
+    week: 4,
+    topic: "MVVM - Data Binding",
+    importance: "high",
+    explanation: "Data Binding ile ViewModel’deki veri otomatik View’a yansır; View girdileri de otomatik ViewModel’e akar."
   },
   {
-    q: "Sans-serif yazı tipleri (ör. Helvetica, Arial) ders notuna göre daha çok hangi ortam için uygundur?",
-    t: "mcq",
-    o: ["Basılı materyaller", "Dijital ortamlar", "Sadece gravür", "Sadece serigrafi", "Sadece 3D baskı"],
-    a: "Dijital ortamlar",
-    difficulty: "easy",
-    week: 1,
-    topic: "Sans-serif",
-    importance: "medium",
-    explanation:
-      "Sans-serif fontlar ekranlarda daha temiz ve net algılanabildiği için dijital tasarımda çok kullanılır."
-  },
-  {
-    q: "Aynı tasarımda çok fazla farklı font kullanmanın en olası sonucu hangisidir?",
+    q: "MVC ile MVP arasındaki temel farkı en iyi anlatan ifade hangisidir?",
     t: "mcq",
     o: [
-      "Görsel karmaşa ve profesyonellik kaybı",
-      "Dosya boyutunun her zaman küçülmesi",
-      "Metnin otomatik hizalanması",
-      "Renklerin otomatik düzelmesi",
-      "Vektör kalite artışı"
+      "MVC sadece mobilde kullanılır, MVP sadece web’de",
+      "MVP’de Presenter, View’ı daha doğrudan yönetir; MVC’de Controller istek akışını yönetir",
+      "MVC’de Model yoktur",
+      "MVP’de View yoktur",
+      "İkisi tamamen aynıdır"
     ],
-    a: "Görsel karmaşa ve profesyonellik kaybı",
-    difficulty: "easy",
-    week: 1,
-    topic: "Font sayısı",
-    importance: "high",
-    explanation:
-      "Notlara göre genellikle 2–3 fonttan fazlası önerilmez; fazla font, mesajı dağıtır ve tasarımı “dağınık” gösterir."
-  },
-  {
-    q: "Photoshop’ta eklenen her metin varsayılan olarak hangi katman türünde oluşur?",
-    t: "mcq",
-    o: ["Text Layer (Yazı katmanı)", "Adjustment Layer", "Background Layer", "Smart Object", "Mask Layer"],
-    a: "Text Layer (Yazı katmanı)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Text Layer",
-    importance: "high",
-    explanation:
-      "Her metin ayrı bir Text Layer olarak gelir; bu sayede taşınabilir, dönüştürülebilir ve efekt uygulanabilir."
-  },
-  {
-    q: "Metnin düzenlenebilir kalması için hangi davranıştan kaçınmak gerekir?",
-    t: "mcq",
-    o: [
-      "Katmanı rasterize etmek",
-      "Metin katmanına çift tıklamak",
-      "Ctrl+T ile ölçeklemek",
-      "Layer Styles eklemek",
-      "Renk değiştirmek"
-    ],
-    a: "Katmanı rasterize etmek",
-    difficulty: "medium",
-    week: 1,
-    topic: "Rasterize riski",
-    importance: "high",
-    explanation:
-      "Rasterize edersen metin artık piksele dönüşür; font/harf/satır ayarlarını metin gibi düzenlemek zorlaşır. Profesyonel işlerde metni mümkün olduğunca canlı tut."
-  },
-
-  // =========================================================
-  // ====== WEEK 1 DEVAMI: METİN EFEKTLERİ, MASKE, KOMPOZİSYON (8)
-  // =========================================================
-  {
-    q: "Metni büyütmek, döndürmek ve serbest dönüştürmek için kullanılan komut hangisidir?",
-    t: "mcq",
-    o: ["Free Transform (Ctrl+T)", "Select All (Ctrl+A)", "Save As (Ctrl+Shift+S)", "Levels (Ctrl+L)", "Curves (Ctrl+M)"],
-    a: "Free Transform (Ctrl+T)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Free Transform",
-    importance: "high",
-    explanation:
-      "Ctrl+T ile metni ölçekleyebilir, döndürebilir, konumunu ve yönünü kontrol edebilirsin."
-  },
-  {
-    q: "Metni görselde öne çıkarmak için en sık kullanılan yöntemlerden biri hangisidir?",
-    t: "mcq",
-    o: [
-      "Layer Styles (Katman stilleri) uygulamak",
-      "Dosyayı GIF yapmak",
-      "Renk modunu Lab’a çevirmek",
-      "Artboard eklemek",
-      "Mesh Tool kullanmak"
-    ],
-    a: "Layer Styles (Katman stilleri) uygulamak",
-    difficulty: "easy",
-    week: 1,
-    topic: "Metin efektleri",
-    importance: "high",
-    explanation:
-      "Drop Shadow, Stroke, Bevel & Emboss, Gradient Overlay gibi Layer Styles metne vurgu, derinlik ve kontrast kazandırır."
-  },
-  {
-    q: "Drop Shadow (Gölge) efekti metinde genellikle ne sağlar?",
-    t: "mcq",
-    o: ["Çözünürlük artırır", "Derinlik ve ayrışma (arka plandan ayırma)", "Fontu değiştirir", "Metni rasterize eder", "Renk uzayı değiştirir"],
-    a: "Derinlik ve ayrışma (arka plandan ayırma)",
-    difficulty: "easy",
-    week: 1,
-    topic: "Layer Style - Drop Shadow",
-    importance: "medium",
-    explanation:
-      "Gölge, metni arka plandan ayırır ve görsel hiyerarşi sağlar. Özellikle yoğun arka planlarda okunabilirliği artırabilir."
-  },
-  {
-    q: "Stroke (Çizgi) efekti metinde ne yapar?",
-    t: "mcq",
-    o: ["Metnin etrafına kenarlık ekler", "Metni bulanıklaştırır", "Metni seçime çevirir", "Metni paragraf yapar", "Renkleri ters çevirir"],
-    a: "Metnin etrafına kenarlık ekler",
-    difficulty: "easy",
-    week: 1,
-    topic: "Layer Style - Stroke",
-    importance: "medium",
-    explanation:
-      "Stroke; metnin dışına (veya içine) çizgi ekleyerek arka planla kontrast oluşturur, okunabilirliği destekler."
-  },
-  {
-    q: "Text Mask Tool (Metin maskesi) kullanıldığında metin en temel olarak nasıl davranır?",
-    t: "mcq",
-    o: [
-      "Bir seçim (selection) alanı gibi davranır",
-      "Vektör çizgiye dönüşür",
-      "Sadece paragraf olur",
-      "Renk uzayı otomatik değişir",
-      "Katmanları tekleştirir"
-    ],
-    a: "Bir seçim (selection) alanı gibi davranır",
-    difficulty: "medium",
-    week: 1,
-    topic: "Text Mask",
-    importance: "high",
-    explanation:
-      "Type Mask araçları metni doğrudan seçili alan (selection) haline getirir. Bu seçim, fotoğraf/desen ile doldurularak yaratıcı efekt yapılır."
-  },
-  {
-    q: "Warp Text aracıyla aşağıdakilerden hangisi yapılabilir?",
-    t: "mcq",
-    o: [
-      "Metni dalga/yay/balon gibi şekillerde eğriltmek",
-      "Metni CMYK’a çevirmek",
-      "Metnin çözünürlüğünü 300 dpi yapmak",
-      "Metni otomatik hizalamak",
-      "Metni vektöre dönüştürmek"
-    ],
-    a: "Metni dalga/yay/balon gibi şekillerde eğriltmek",
-    difficulty: "easy",
-    week: 1,
-    topic: "Warp Text",
-    importance: "medium",
-    explanation:
-      "Warp Text; reklam/afiş tasarımlarında dikkat çekmek için metni eğip bükerek form kazandırır."
-  },
-  {
-    q: "Kompozisyon içinde metnin doğru yerleştirilmesi en çok hangi sonucu etkiler?",
-    t: "mcq",
-    o: [
-      "İzleyicinin bakış yönünü ve mesajın algılanma hızını",
-      "Dosyanın uzantısını",
-      "Ekranın parlaklığını",
-      "Vektör noktalarını",
-      "PPI değerini otomatik artırmayı"
-    ],
-    a: "İzleyicinin bakış yönünü ve mesajın algılanma hızını",
-    difficulty: "medium",
-    week: 1,
-    topic: "Metin-kompozisyon ilişkisi",
-    importance: "high",
-    explanation:
-      "Metin, kompozisyonun yönlendirici unsurudur. Başlığın yeri, boşluk kullanımı ve hiyerarşi izleyicinin nereye bakacağını belirler."
-  },
-  {
-    q: "Negative space (boşluk) kullanımı metin için en çok ne sağlar?",
-    t: "mcq",
-    o: ["Okunabilirliği artırır ve metni nefeslendirir", "Metni rasterize eder", "Renkleri tersine çevirir", "Dosyayı küçültür", "Sadece dekoratif olur"],
-    a: "Okunabilirliği artırır ve metni nefeslendirir",
-    difficulty: "easy",
-    week: 1,
-    topic: "Negative space",
-    importance: "high",
-    explanation:
-      "Boşluk; metnin çevresinde “gürültüyü” azaltır, gözün metni kolay okumasını sağlar ve tasarıma profesyonel denge katar."
-  },
-
-  // =========================================================
-  // ============ WEEK 2: ADJUSTMENT LAYERS & BLENDING (16) ===
-  // =========================================================
-  {
-    q: "Adjustment Layer’ların temel mantığı aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Orijinal pikselleri kalıcı olarak değiştirir",
-      "Orijinal piksele dokunmadan ton/renk ayarı yapar (yıkıcı olmayan)",
-      "Sadece metin yazmak içindir",
-      "Sadece vektör oluşturur",
-      "Sadece dosya kaydetmeyi sağlar"
-    ],
-    a: "Orijinal piksele dokunmadan ton/renk ayarı yapar (yıkıcı olmayan)",
-    difficulty: "easy",
-    week: 2,
-    topic: "Adjustment Layer mantığı",
-    importance: "high",
-    explanation:
-      "Adjustment Layer; düzenlemeyi ayrı bir katman gibi tutar. İstediğin an kapatabilir, maskeyle sınırlayabilir veya ayarı değiştirebilirsin."
-  },
-  {
-    q: "Non-Destructive Editing (Yıkıcı olmayan düzenleme) neden profesyonel işlerde standart kabul edilir?",
-    t: "mcq",
-    o: [
-      "Çünkü dosyayı otomatik küçültür",
-      "Çünkü geri alınabilirlik ve esnek kontrol sağlar, orijinali korur",
-      "Çünkü renk uzayını otomatik düzeltir",
-      "Çünkü tüm katmanları birleştirir",
-      "Çünkü sadece hızlıdır"
-    ],
-    a: "Çünkü geri alınabilirlik ve esnek kontrol sağlar, orijinali korur",
-    difficulty: "medium",
-    week: 2,
-    topic: "Non-destructive",
-    importance: "high",
-    explanation:
-      "Direkt piksele müdahale risklidir. Adjustment Layer ile her şey geri döndürülebilir ve proje boyunca kontrollü ilerlersin."
-  },
-  {
-    q: "Aşağıdakilerden hangisi yaygın bir Adjustment Layer türüdür?",
-    t: "mcq",
-    o: ["Curves", "Pen Tool", "Artboard Tool", "Knife Tool", "Mesh Tool"],
-    a: "Curves",
-    difficulty: "easy",
-    week: 2,
-    topic: "Adjustment Layer türleri",
-    importance: "high",
-    explanation:
-      "Notta geçen örnekler: Brightness/Contrast, Levels, Curves, Exposure, Vibrance, Hue/Saturation, Color Balance, Selective Color, Gradient Map, Black & White vb."
-  },
-  {
-    q: "Adjustment Layer maskesinde beyaz alan neyi ifade eder?",
-    t: "mcq",
-    o: ["Efektin etkisiz olduğu alan", "Efektin etkili olduğu alan", "Alan tamamen silinir", "Alan vektöre dönüşür", "Renk uzayı değişir"],
-    a: "Efektin etkili olduğu alan",
-    difficulty: "easy",
-    week: 2,
-    topic: "Adjustment maskesi",
-    importance: "high",
-    explanation:
-      "Maske mantığı: Beyaz = etki var, Siyah = etki yok, Gri = kısmi etki."
-  },
-  {
-    q: "Adjustment Layer maskesinde siyah alan neyi ifade eder?",
-    t: "mcq",
-    o: ["Efektin etkili olduğu alan", "Efektin etkisiz olduğu alan", "Alan daha parlak olur", "Alan rasterize olur", "Alan seçime dönüşür"],
-    a: "Efektin etkisiz olduğu alan",
-    difficulty: "easy",
-    week: 2,
-    topic: "Maske - siyah",
-    importance: "high",
-    explanation:
-      "Siyah boyadığın bölgede o ayarlama katmanı çalışmaz; böylece düzenlemeyi sadece istediğin bölgeye uygularsın."
-  },
-  {
-    q: "Blending (Harmanlama) kavramı en doğru nasıl tanımlanır?",
-    t: "mcq",
-    o: [
-      "Sadece yazı tipini değiştirmek",
-      "Katmanların matematiksel olarak karışıp yeni görsel sonuç üretmesi",
-      "Dosyayı PDF yapmak",
-      "Sadece kırpma yapmak",
-      "Sadece renk uzayını seçmek"
-    ],
-    a: "Katmanların matematiksel olarak karışıp yeni görsel sonuç üretmesi",
-    difficulty: "medium",
-    week: 2,
-    topic: "Blending kavramı",
-    importance: "high",
-    explanation:
-      "Blending Modes; üst katmanın piksellerinin alt katmanla hangi matematikle etkileşeceğini belirler (karartma, aydınlatma, kontrast vb.)."
-  },
-  {
-    q: "Multiply blending modu genellikle nasıl bir etki verir?",
-    t: "mcq",
-    o: ["Görseli aydınlatır", "Görseli karartır, koyu tonları güçlendirir", "Renkleri ters çevirir", "Sadece doygunluğu artırır", "Sadece keskinleştirir"],
-    a: "Görseli karartır, koyu tonları güçlendirir",
-    difficulty: "easy",
-    week: 2,
-    topic: "Blending - Multiply",
-    importance: "high",
-    explanation:
-      "Multiply ‘Darken group’ mantığına uygundur: üst üste çarpma gibi çalışır ve görüntüyü karartır (gölge güçlendirme vb.)."
-  },
-  {
-    q: "Screen blending modu genellikle nasıl bir etki verir?",
-    t: "mcq",
-    o: ["Görseli karartır", "Görseli aydınlatır, ışık etkilerini güçlendirir", "Renkleri tamamen kaldırır", "Sadece kesim yapar", "Sadece metni seçer"],
-    a: "Görseli aydınlatır, ışık etkilerini güçlendirir",
-    difficulty: "easy",
-    week: 2,
-    topic: "Blending - Screen",
-    importance: "high",
-    explanation:
-      "Screen ‘Lighten group’ gibi çalışır: görüntüyü açar. Işık parlaması/aydınlatma efektlerinde sık kullanılır."
-  },
-  {
-    q: "Overlay, Soft Light, Hard Light gibi modlar hangi grupta düşünülür?",
-    t: "mcq",
-    o: ["Darken Group", "Lighten Group", "Contrast Group", "Inversion Group", "Color Group"],
-    a: "Contrast Group",
-    difficulty: "medium",
-    week: 2,
-    topic: "Blending grupları",
-    importance: "medium",
-    explanation:
-      "Bu modlar kontrastı artırma eğilimindedir. Overlay daha güçlü, Soft Light daha yumuşak etki verir."
-  },
-  {
-    q: "Difference ve Exclusion modları genellikle ne tür sonuçlar üretir?",
-    t: "mcq",
-    o: [
-      "Sadece aydınlatma",
-      "Renkleri tersine çevirme/soyut ve deneysel efektler",
-      "Sadece keskinlik",
-      "Sadece metin hizalama",
-      "Sadece doygunluk artırma"
-    ],
-    a: "Renkleri tersine çevirme/soyut ve deneysel efektler",
-    difficulty: "medium",
-    week: 2,
-    topic: "Inversion Group",
-    importance: "medium",
-    explanation:
-      "Difference/Exclusion; katmanlar arası farkı vurgular ve tersleme benzeri soyut sonuçlar çıkarabilir."
-  },
-  {
-    q: "Hue / Saturation / Color / Luminosity modlarının ortak özelliği nedir?",
-    t: "mcq",
-    o: [
-      "Sadece karartma yaparlar",
-      "Renk bilgisini (ton/doygunluk/parlaklık) ayrı bileşenler olarak manipüle ederler",
-      "Sadece blur eklerler",
-      "Sadece kesim yaparlar",
-      "Sadece dosya kaydederler"
-    ],
-    a: "Renk bilgisini (ton/doygunluk/parlaklık) ayrı bileşenler olarak manipüle ederler",
+    a: "MVP’de Presenter, View’ı daha doğrudan yönetir; MVC’de Controller istek akışını yönetir",
     difficulty: "hard",
-    week: 2,
-    topic: "Color Group",
+    week: 4,
+    topic: "MVC vs MVP",
     importance: "high",
-    explanation:
-      "Bu grup, renk ve parlaklık bileşenlerini ayrı kontrol etmeyi sağlar. Örn: Luminosity sadece parlaklığı etkiler."
+    explanation: "MVP’de Presenter genelde View arayüzü ile sık iletişim kurar; MVC’de Controller daha çok istek/aksiyon odaklıdır."
   },
   {
-    q: "Curves Adjustment Layer’ı “Luminosity” blending moduna almak ne amaçla yapılır?",
+    q: "MVVM’in büyük UI projelerinde avantajı hangisidir?",
     t: "mcq",
     o: [
-      "Sadece renkleri değiştirmek için",
-      "Sadece parlaklık/ton değerlerini değiştirip renk kaymasını azaltmak için",
-      "Dosyayı küçültmek için",
-      "Metni paragraf yapmak için",
-      "Katmanı rasterize etmek için"
+      "Tüm kodu tek dosyada toplar",
+      "ViewModel’in View olmadan test edilebilmesi ve data binding ile UI güncellemelerinin otomatikleşmesi",
+      "Veritabanını otomatik kurması",
+      "Her zaman daha az dosya üretmesi",
+      "Sadece oyunlar için uygun olması"
     ],
-    a: "Sadece parlaklık/ton değerlerini değiştirip renk kaymasını azaltmak için",
-    difficulty: "hard",
-    week: 2,
-    topic: "Curves + Luminosity",
-    importance: "high",
-    explanation:
-      "Luminosity modu, ton/parlaklık bileşenine odaklanır. Böylece Curves ile ışığı düzeltirken renklerin bozulmasını azaltabilirsin."
-  },
-  {
-    q: "Gradient Map’i “Soft Light” ile harmanlamak ders notuna göre genellikle hangi sonucu hedefler?",
-    t: "mcq",
-    o: [
-      "Metin katmanı üretmek",
-      "Yumuşak tonlama / sinematik renk atmosferi oluşturmak",
-      "Sadece pikselleştirme yapmak",
-      "Sadece hizalama yapmak",
-      "Sadece kırpma yapmak"
-    ],
-    a: "Yumuşak tonlama / sinematik renk atmosferi oluşturmak",
+    a: "ViewModel’in View olmadan test edilebilmesi ve data binding ile UI güncellemelerinin otomatikleşmesi",
     difficulty: "medium",
-    week: 2,
-    topic: "Gradient Map + Soft Light",
+    week: 4,
+    topic: "MVVM - avantaj",
+    importance: "high",
+    explanation: "Test edilebilirlik + otomatik UI güncellemeleri MVVM’in güçlü yönleridir."
+  },
+  {
+    q: "MVC/MVP/MVVM gibi yapılar hangi kavram sınıfına girer?",
+    t: "mcq",
+    o: ["Tasarım deseni / mimari desen", "Veri tipi", "Dosya formatı", "İşletim sistemi", "Derleyici"],
+    a: "Tasarım deseni / mimari desen",
+    difficulty: "easy",
+    week: 4,
+    topic: "Mimari desen",
     importance: "medium",
-    explanation:
-      "Gradient Map tonları farklı renklere eşler; Soft Light ile birleşince genelde yumuşak, kontrollü bir color grading etkisi verir."
-  },
-  {
-    q: "Kolaj/afiş gibi çoklu fotoğraf birleşimlerinde “Color” blending modu en çok neye yardımcı olur?",
-    t: "mcq",
-    o: [
-      "Fotoğrafların renk bütünlüğünü (renk uyumunu) daha doğal yapmak",
-      "Sadece keskinlik artırmak",
-      "Sadece gölge eklemek",
-      "Sadece vektör yapmak",
-      "Sadece metin yazmak"
-    ],
-    a: "Fotoğrafların renk bütünlüğünü (renk uyumunu) daha doğal yapmak",
-    difficulty: "medium",
-    week: 2,
-    topic: "Renk uyumu - Color mode",
-    importance: "high",
-    explanation:
-      "Color modu, renk bilgisini taşır. Farklı fotoğrafların bir araya geldiği kompozisyonlarda renkleri tutarlı hale getirmede işe yarar."
-  },
-  {
-    q: "Bir portrede ışık çok sertse ve yüz çok aydınlıksa, nottaki örneğe göre hangi yaklaşım mantıklıdır?",
-    t: "mcq",
-    o: [
-      "Multiply ile (maskeli) ton kontrolü yaparak belirli bölgeleri karartmak",
-      "Difference kullanıp renkleri ters çevirmek",
-      "Metni rasterize etmek",
-      "Artboard eklemek",
-      "Sadece JPEG kaydetmek"
-    ],
-    a: "Multiply ile (maskeli) ton kontrolü yaparak belirli bölgeleri karartmak",
-    difficulty: "medium",
-    week: 2,
-    topic: "Işık-gölge dengeleme",
-    importance: "medium",
-    explanation:
-      "Multiply karartır. Curves/Levels gibi ayarlama katmanlarını Multiply/Luminosity ile birleştirip maske ile sadece gerekli yere uygularsan kontrol artar."
+    explanation: "Bu yapılar, uygulamayı organize eden mimari yaklaşımlardır."
   },
 
-  // =========================================================
-  // ============ WEEK 3: ILLUSTRATOR TEMELLERİ + BLEED + RASTER (16)
-  // =========================================================
+  // =========================
+  // WEEK 5: API (10)
+  // =========================
   {
-    q: "Adobe Illustrator’ı Photoshop’tan temel olarak ayıran özellik hangisidir?",
+    q: "API en doğru hangi tanıma uyar?",
     t: "mcq",
     o: [
-      "Raster (piksel) tabanlı olması",
-      "Vektör tabanlı olması (matematiksel noktalar/eğriler) ve ölçeklenince bozulmaması",
-      "Sadece video düzenlemesi yapması",
-      "Sadece metin yazması",
-      "Sadece animasyon yapması"
+      "Sadece bir veritabanı türü",
+      "Bir yazılımın dış dünya ile iletişim kurması için tanımladığı kurallar ve arayüzler bütünü",
+      "Sadece bir UI tasarım tekniği",
+      "Sadece bir programlama dili",
+      "Sadece bir dosya uzantısı"
     ],
-    a: "Vektör tabanlı olması (matematiksel noktalar/eğriler) ve ölçeklenince bozulmaması",
+    a: "Bir yazılımın dış dünya ile iletişim kurması için tanımladığı kurallar ve arayüzler bütünü",
     difficulty: "easy",
-    week: 3,
-    topic: "Illustrator nedir",
+    week: 5,
+    topic: "API - tanım",
     importance: "high",
-    explanation:
-      "Illustrator vektör mantıkla çalışır. Bu yüzden logo/ikon gibi işler her boyutta keskin kalır."
+    explanation: "API; başka sistemlerin senin sisteminin fonksiyonlarına/verilerine erişmesini sağlayan arayüzdür."
   },
   {
-    q: "Illustrator’ın yaygın kullanım alanlarından hangisi doğrudur?",
+    q: "Web API’ler genellikle hangi protokol üzerinden çalışır?",
+    t: "mcq",
+    o: ["HTTP", "HDMI", "PCIe", "VGA", "NTFS"],
+    a: "HTTP",
+    difficulty: "easy",
+    week: 5,
+    topic: "Web API",
+    importance: "high",
+    explanation: "Web API’ler çoğunlukla HTTP üzerinden REST veya SOAP yaklaşımıyla sunulur."
+  },
+  {
+    q: "REST ve SOAP en çok hangi API tipinin örneğidir?",
+    t: "mcq",
+    o: ["HTTP API (Web API)", "Donanım API", "Veritabanı API", "GUI API", "Shell API"],
+    a: "HTTP API (Web API)",
+    difficulty: "medium",
+    week: 5,
+    topic: "REST/SOAP",
+    importance: "high",
+    explanation: "REST ve SOAP, web servisleri için kullanılan mimari/standart yaklaşımlardır."
+  },
+  {
+    q: "API’ların en önemli katkılarından biri hangisidir?",
     t: "mcq",
     o: [
-      "Logo ve kurumsal kimlik tasarımı",
-      "Sadece işletim sistemi kurulumu",
-      "Sadece veri tabanı yönetimi",
-      "Sadece oyun motoru derleme",
-      "Sadece ses miksajı"
+      "Uygulamaları birbirinden tamamen izole etmek",
+      "Farklı uygulamaların/sistemlerin entegrasyonunu ve yeniden kullanılabilirliği kolaylaştırmak",
+      "Her zaman interneti hızlandırmak",
+      "Sadece tasarım güzelliğini artırmak",
+      "Sadece donanımı büyütmek"
     ],
-    a: "Logo ve kurumsal kimlik tasarımı",
+    a: "Farklı uygulamaların/sistemlerin entegrasyonunu ve yeniden kullanılabilirliği kolaylaştırmak",
     difficulty: "easy",
-    week: 3,
-    topic: "Illustrator kullanım alanları",
+    week: 5,
+    topic: "API - neden önemli",
     importance: "high",
-    explanation:
-      "Notlara göre: logo, kurumsal kimlik, illüstrasyon, tipografi, broşür/afiş/kartvizit, web/mobil ikonları."
+    explanation: "API entegrasyon ve işbirliğini sağlar: mobil-app ↔ sunucu, servis ↔ servis gibi."
   },
   {
-    q: "Illustrator çalışma alanında sol tarafta bulunan ve seçim/çizim/metin araçlarını barındıran bölüm hangisidir?",
+    q: "Yetkisiz erişimi engellemek API tasarımında hangi başlık altındadır?",
     t: "mcq",
-    o: ["Tools Panel", "Menu Bar", "Panels Area", "Artboard", "Status Bar"],
-    a: "Tools Panel",
+    o: ["Güvenlik", "Bleed", "Raster effects", "Typography", "Mesh"],
+    a: "Güvenlik",
     difficulty: "easy",
-    week: 3,
-    topic: "Workspace - Tools Panel",
+    week: 5,
+    topic: "API - güvenlik",
     importance: "high",
-    explanation:
-      "Tools Panel sol taraftadır. Birçok aracın altında küçük okla açılan gizli araçlar bulunabilir."
+    explanation: "Authentication/authorization, rate limit, token kullanımı gibi konular API güvenliğidir."
   },
   {
-    q: "Illustrator’da çizimin yapıldığı ana sayfa/alanın adı hangisidir?",
+    q: "Veritabanı işlemleri için kullanılan API’lara örnek hangisidir?",
     t: "mcq",
-    o: ["Artboard", "Histogram", "Layer Mask", "Canvas (Photoshop)", "Options Bar"],
-    a: "Artboard",
+    o: ["JDBC", "CSS", "HTML", "OCR", "GUI"],
+    a: "JDBC",
     difficulty: "easy",
-    week: 3,
-    topic: "Artboard",
-    importance: "high",
-    explanation:
-      "Artboard; çıktı alınan tasarım sayfası gibi düşünülür. Bir dosyada birden fazla artboard olabilir."
-  },
-  {
-    q: "Yeni belge oluşturma kısayolu notlara göre hangisidir?",
-    t: "mcq",
-    o: ["Ctrl+N", "Ctrl+T", "Ctrl+Shift+S", "Ctrl+M", "Ctrl+L"],
-    a: "Ctrl+N",
-    difficulty: "easy",
-    week: 3,
-    topic: "New Document",
+    week: 5,
+    topic: "DB API",
     importance: "medium",
-    explanation:
-      "File > New (Ctrl+N) ile yeni doküman oluşturulur; profil, boyut, birim, color mode, bleed gibi ayarlar burada yapılır."
+    explanation: "JDBC, Java uygulamalarının veritabanlarıyla iletişimini sağlayan API’dir."
   },
   {
-    q: "Baskı işi için Illustrator belge Color Mode seçimi hangisi olmalıdır?",
-    t: "mcq",
-    o: ["RGB", "CMYK", "Lab", "Grayscale", "Indexed Color"],
-    a: "CMYK",
-    difficulty: "easy",
-    week: 3,
-    topic: "Belge ayarı - Color Mode",
-    importance: "high",
-    explanation:
-      "Baskı işleri pigment/mürekkep temellidir. Bu yüzden CMYK seçimi standart yaklaşımdır; dijital işlerde RGB."
-  },
-  {
-    q: "Bleed (taşma payı) en doğru neyi ifade eder?",
+    q: "API tasarımında 'sürdürülebilirlik' en çok neyi ifade eder?",
     t: "mcq",
     o: [
-      "Metnin harf aralığı",
-      "Kesim çizgisinin dışına taşan, kesim hatalarında beyaz boşluk bırakmamak için eklenen alan",
-      "Dosya boyutunu küçültme yöntemi",
-      "Renkleri ters çevirme modu",
-      "Vektör noktalarının sayısı"
+      "Gelecekteki değişikliklere uyum (versiyonlama, geriye dönük uyumluluk) sağlamak",
+      "Her şeyi tek fonksiyona toplamak",
+      "Sadece renk seçmek",
+      "Sadece RAM artırmak",
+      "Sadece UI çizmek"
     ],
-    a: "Kesim çizgisinin dışına taşan, kesim hatalarında beyaz boşluk bırakmamak için eklenen alan",
+    a: "Gelecekteki değişikliklere uyum (versiyonlama, geriye dönük uyumluluk) sağlamak",
     difficulty: "medium",
-    week: 3,
-    topic: "Bleed nedir",
+    week: 5,
+    topic: "API - sürdürülebilirlik",
     importance: "high",
-    explanation:
-      "Matbaada kesim milim şaşabilir. Arka plan/görselleri bleed’e taşırırsan kenarda istenmeyen beyaz çizgi oluşma riski düşer."
+    explanation: "API'lar büyür; versiyonlama ve kırılma yönetimi sürdürülebilirliktir."
   },
   {
-    q: "Notlara göre baskı için tipik bleed değeri genellikle kaçtır?",
+    q: "HTTP 404 kodu neyi anlatır?",
     t: "mcq",
-    o: ["1 mm", "3 mm", "10 mm", "0 mm", "25 mm"],
-    a: "3 mm",
+    o: [
+      "Sunucu hiç yok",
+      "Kaynak bulunamadı (Not Found)",
+      "Şifre yanlış",
+      "Sunucu aşırı yüklü",
+      "İşlem başarılı"
+    ],
+    a: "Kaynak bulunamadı (Not Found)",
     difficulty: "easy",
-    week: 3,
-    topic: "Bleed ölçüsü",
+    week: 5,
+    topic: "HTTP 404",
+    importance: "high",
+    explanation: "404; istenen URL/endpoint sunucuda yok demektir. Sunucu bulunamadı ile karıştırılmaz."
+  },
+  {
+    q: "Kütüphane API’larına en iyi örnek hangisidir?",
+    t: "mcq",
+    o: ["Python Standard Library", "FTP", "Bleed", "Artboard", "Drop Shadow"],
+    a: "Python Standard Library",
+    difficulty: "easy",
+    week: 5,
+    topic: "Library API",
     importance: "medium",
-    explanation:
-      "Yaygın uygulama 3 mm bleed’dir. Kurum/matbaa standartları değişebilse de temel eğitimde 3 mm sık öğretilir."
+    explanation: "Kütüphane API’ları; fonksiyon/sınıf koleksiyonlarıdır."
   },
   {
-    q: "Bleed ile çalışırken en doğru güvenlik kuralı hangisidir?",
+    q: "API’larda hızlı prototipleme ne sağlar?",
     t: "mcq",
     o: [
-      "Önemli metin ve logoları trim line’a çok yakın koymak",
-      "Önemli metin ve logoları kesim çizgisinden güvenli içeride tutmak",
-      "Arka planı bleed’e taşırmamak",
-      "Bleed dışına taşan her şeyin basılacağını varsaymak",
-      "Sadece PNG ile çalışmak"
+      "Hazır servisleri kullanarak kısa sürede çalışan bir demo/test sistemi kurmayı",
+      "Her zaman daha pahalı altyapı kurmayı",
+      "Derleyiciyi kaldırmayı",
+      "Sadece UI’yı güzelleştirmeyi",
+      "Sadece metin yazmayı"
     ],
-    a: "Önemli metin ve logoları kesim çizgisinden güvenli içeride tutmak",
+    a: "Hazır servisleri kullanarak kısa sürede çalışan bir demo/test sistemi kurmayı",
     difficulty: "medium",
-    week: 3,
-    topic: "Bleed - dikkat",
-    importance: "high",
-    explanation:
-      "Arka plan bleed’e taşmalıdır ama kritik öğeler (logo, yazı) kesimde kırpılmasın diye güvenli alanda kalmalıdır."
-  },
-  {
-    q: "PDF çıktısı alırken bleed’in dahil edilmesi için en doğru yaklaşım hangisidir?",
-    t: "mcq",
-    o: [
-      "PDF kaydında Marks and Bleeds bölümünde belge bleed ayarlarını kullanmak",
-      "Sadece JPG kaydetmek",
-      "Renk modunu RGB yapmak",
-      "Tüm katmanları silmek",
-      "Mesh Tool eklemek"
-    ],
-    a: "PDF kaydında Marks and Bleeds bölümünde belge bleed ayarlarını kullanmak",
-    difficulty: "medium",
-    week: 3,
-    topic: "Bleed’li PDF",
-    importance: "high",
-    explanation:
-      "Notlarda: PDF ayarlarında Marks and Bleeds sekmesinde ‘Use Document Bleed Settings’ işaretlenerek bleed dahil edilir."
-  },
-  {
-    q: "Raster Effects (Raster Efektleri) için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Vektör efektlerdir ve çözünürlükten bağımsızdır",
-      "Vektör objeye uygulanır ama piksel tabanlı işlendiği için çözünürlüğe bağlıdır",
-      "Sadece metin hizalar",
-      "Sadece artboard sayısını artırır",
-      "Sadece dosya adını değiştirir"
-    ],
-    a: "Vektör objeye uygulanır ama piksel tabanlı işlendiği için çözünürlüğe bağlıdır",
-    difficulty: "hard",
-    week: 3,
-    topic: "Raster Effects nedir",
-    importance: "high",
-    explanation:
-      "Gölge, blur, glow gibi efektler çoğu zaman raster hesaplanır. Bu yüzden Document Raster Effects Settings’teki PPI kaliteyi etkiler."
-  },
-  {
-    q: "Raster Effects ayarlarında baskı için daha uygun PPI değeri hangisidir?",
-    t: "mcq",
-    o: ["72 PPI", "150 PPI", "300 PPI", "10 PPI", "1 PPI"],
-    a: "300 PPI",
-    difficulty: "easy",
-    week: 3,
-    topic: "Raster Effects - çözünürlük",
-    importance: "high",
-    explanation:
-      "Baskıda pikselleşme istemeyiz. Raster efektler çözünürlüğe bağlı olduğundan baskıda 300 PPI tercih edilir."
-  },
-  {
-    q: "Belge genelindeki raster efekt çözünürlüğü Illustrator’da nereden ayarlanır?",
-    t: "mcq",
-    o: [
-      "Effect > Document Raster Effects Settings",
-      "File > Package",
-      "View > Outline",
-      "Window > Pathfinder",
-      "Object > Expand"
-    ],
-    a: "Effect > Document Raster Effects Settings",
-    difficulty: "medium",
-    week: 3,
-    topic: "Document Raster Effects Settings",
-    importance: "high",
-    explanation:
-      "Raster efektlerin pikselleşmemesi için belge genel ayarından PPI belirlenir (Low/Medium/High gibi seçeneklerle)."
-  },
-  {
-    q: "Raster efektlerin dezavantajı aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Her zaman dosyayı küçültür",
-      "Düşük çözünürlükte kalite kaybı yapabilir ve dosya boyutunu artırabilir",
-      "Sadece vektörle çalışır ve asla bozulmaz",
-      "Sadece metin ekler",
-      "Sadece renk modunu değiştirir"
-    ],
-    a: "Düşük çözünürlükte kalite kaybı yapabilir ve dosya boyutunu artırabilir",
-    difficulty: "medium",
-    week: 3,
-    topic: "Raster Effects - artı/eksi",
+    week: 5,
+    topic: "API - prototip",
     importance: "medium",
-    explanation:
-      "Raster işlem, piksel üretir: PPI düşükse pikselleşme olur; ayrıca efektler dosyayı ağırlaştırabilir."
+    explanation: "Harita/ödeme/hava durumu gibi hazır API’lar ile hızlıca prototip çıkarırsın."
   },
 
-  // =========================================================
-  // ============ WEEK 3: ILLUSTRATOR ARAÇLAR (8) ============
-  // =========================================================
+  // =========================
+  // WEEK 6: KAVRAMLAR (30) - Karışık sınav tarzı
+  // =========================
   {
-    q: "Selection Tool (V) en doğru hangi iş için kullanılır?",
+    q: "Active Directory nedir?",
     t: "mcq",
     o: [
-      "Nesnenin anchor point’lerini tek tek düzenlemek",
-      "Nesneyi bütün olarak seçmek, taşımak ve boyutlandırmak",
-      "Mesh noktası eklemek",
-      "İki nesne arasında geçiş oluşturmak",
-      "Vektör çizgiyi kesmek"
+      "Bir web tarayıcısı",
+      "Microsoft ağlarında kullanılan dizin hizmeti (kullanıcı/bilgisayar bilgilerini tutar)",
+      "Bir grafik API",
+      "Bir veritabanı dili",
+      "Bir işletim sistemi çekirdeği"
     ],
-    a: "Nesneyi bütün olarak seçmek, taşımak ve boyutlandırmak",
+    a: "Microsoft ağlarında kullanılan dizin hizmeti (kullanıcı/bilgisayar bilgilerini tutar)",
     difficulty: "easy",
-    week: 3,
-    topic: "Selection Tool (V)",
-    importance: "high",
-    explanation:
-      "Selection Tool; nesneyi komple seçer. Genel taşıma/ölçekleme işlerinde temel araçtır."
+    week: 6,
+    topic: "Active Directory",
+    importance: "medium",
+    explanation: "AD; kurum içi kullanıcı, cihaz, yazıcı gibi nesneleri merkezî yönetir."
   },
   {
-    q: "Direct Selection Tool (A) en doğru hangi iş için kullanılır?",
+    q: "Assembly Language ile Machine Language arasındaki ilişki en doğru hangisidir?",
     t: "mcq",
     o: [
-      "Bir nesnenin parçalarını/anchor point’lerini seçip şekli detaylı düzenlemek",
-      "Belgeyi CMYK’a çevirmek",
-      "Artboard eklemek",
-      "Sembol püskürtmek",
-      "Yazıyı paragraf yapmak"
+      "Assembly, makine dilinden daha yüksek soyutlama sunan düşük seviye bir dildir",
+      "Machine Language, Assembly’nin yorumlanmış halidir",
+      "Assembly, sadece web içindir",
+      "Machine Language, insan diliyle yazılır",
+      "İkisi tamamen alakasızdır"
     ],
-    a: "Bir nesnenin parçalarını/anchor point’lerini seçip şekli detaylı düzenlemek",
+    a: "Assembly, makine dilinden daha yüksek soyutlama sunan düşük seviye bir dildir",
+    difficulty: "medium",
+    week: 6,
+    topic: "Assembly vs Machine",
+    importance: "medium",
+    explanation: "Makine dili CPU’nun 0/1 komutlarıdır; assembly bu komutların sembolik yazımıdır."
+  },
+  {
+    q: "Cache (Önbellek) ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Veriyi kalıcı olarak siler",
+      "Sık kullanılan veriyi hızlı erişim için saklar",
+      "Sadece UI çizer",
+      "Sadece derleme yapar",
+      "Sadece şifre üretir"
+    ],
+    a: "Sık kullanılan veriyi hızlı erişim için saklar",
     difficulty: "easy",
-    week: 3,
-    topic: "Direct Selection (A)",
+    week: 6,
+    topic: "Cache",
     importance: "high",
-    explanation:
-      "Anchor point ve handle’ları düzenleyerek şeklin formunu değiştirirsin. İnce ayar için kullanılır."
+    explanation: "Önbellek; tekrar istenen veriyi hızlı döndürmek için kullanılır."
   },
   {
-    q: "Group Selection Tool’un temel farkı aşağıdakilerden hangisidir?",
+    q: "DBMS neyi ifade eder?",
     t: "mcq",
-    o: [
-      "Gruplanmış nesnelerde seçim seviyeleri arasında geçiş yaparak alt öğe/üst grup seçebilmesi",
-      "Sadece metin yazması",
-      "Sadece renk seçmesi",
-      "Sadece blur eklemesi",
-      "Sadece dosya kaydetmesi"
-    ],
-    a: "Gruplanmış nesnelerde seçim seviyeleri arasında geçiş yaparak alt öğe/üst grup seçebilmesi",
-    difficulty: "medium",
-    week: 3,
-    topic: "Group Selection",
-    importance: "medium",
-    explanation:
-      "Grupların içinde tek öğeyi seçmek ve tıklayarak daha üst seviye gruba çıkmak için kullanılır; karmaşık illüstrasyonlarda hayat kurtarır."
-  },
-  {
-    q: "Shape Builder Tool’un (Shift+M) en temel işlevi hangisidir?",
-    t: "mcq",
-    o: [
-      "Şekilleri birleştirip/çıkarıp yeni şekil oluşturmak",
-      "Metin hizalamak",
-      "Renk uzayı dönüştürmek",
-      "PDF’e bleed eklemek",
-      "Raster efekt çözünürlüğü ayarlamak"
-    ],
-    a: "Şekilleri birleştirip/çıkarıp yeni şekil oluşturmak",
+    o: ["Veritabanı yönetim sistemi", "Web sunucusu", "Programlama dili", "İşletim sistemi", "Tarayıcı eklentisi"],
+    a: "Veritabanı yönetim sistemi",
     difficulty: "easy",
-    week: 3,
-    topic: "Shape Builder (Shift+M)",
+    week: 6,
+    topic: "DBMS",
     importance: "high",
-    explanation:
-      "Birden fazla şeklin kesişim alanlarını sürükleyerek birleştirirsin; Alt/Option ile alan çıkarma yapılabilir."
+    explanation: "DBMS; veritabanını tanımlar, kullanır, değiştirir, yönetir."
   },
   {
-    q: "Blend Tool (W) ne için kullanılır?",
+    q: "RDBMS’in temel özelliği hangisidir?",
+    t: "mcq",
+    o: ["Verileri tablolarda satır/sütun olarak tutması", "Sadece dosyada saklaması", "Sadece grafikleri çizmesi", "Sadece oyun motoru olması", "Sadece shell olması"],
+    a: "Verileri tablolarda satır/sütun olarak tutması",
+    difficulty: "easy",
+    week: 6,
+    topic: "RDBMS",
+    importance: "high",
+    explanation: "İlişkisel veritabanları tablo yapısına dayanır; SQL ile yönetilir."
+  },
+  {
+    q: "Deadlock nedir?",
     t: "mcq",
     o: [
-      "İki veya daha fazla nesne arasında renk/şekil/boyut geçişi (ara adımlar) oluşturmak",
-      "Nesneyi kesmek",
-      "Anchor point silmek",
-      "Metni maske yapmak",
-      "Artboard eklemek"
+      "Bir görsel efekt",
+      "İki veya daha fazla işlemin birbirini bekleyip kilitlenmesi",
+      "Tarayıcı çerezi",
+      "Dosya uzantısı",
+      "Bir programlama dili"
     ],
-    a: "İki veya daha fazla nesne arasında renk/şekil/boyut geçişi (ara adımlar) oluşturmak",
+    a: "İki veya daha fazla işlemin birbirini bekleyip kilitlenmesi",
     difficulty: "medium",
-    week: 3,
-    topic: "Blend Tool (W)",
-    importance: "medium",
-    explanation:
-      "Blend; iki form arasında kademeli geçiş üretir. Blend Options ile adım sayısı (Specified Steps) veya mesafe ayarlanabilir."
+    week: 6,
+    topic: "Deadlock",
+    importance: "high",
+    explanation: "Kaynak kilitleri yanlış yönetilince süreçler birbirini bekler ve sistem ilerleyemez."
   },
   {
-    q: "Blob Brush Tool (Shift+B) ile ilgili en doğru ifade hangisidir?",
+    q: "Memory Leak ne anlama gelir?",
     t: "mcq",
     o: [
-      "Çizgiyi sadece stroke olarak bırakır, dolgu oluşturmaz",
-      "Serbest çizimi dolgu (fill) yapan vektör şekle çevirir; aynı renkte çizimler birleşebilir",
-      "Sadece raster çizim yapar",
-      "Sadece metin yazdırır",
-      "Sadece gradient ekler"
+      "RAM’in fiziksel bozulması",
+      "Programın ayırdığı belleği geri verememesi",
+      "Dosyanın sıkışması",
+      "Tarayıcı geçmişi",
+      "Ağ kablosu kopması"
     ],
-    a: "Serbest çizimi dolgu (fill) yapan vektör şekle çevirir; aynı renkte çizimler birleşebilir",
+    a: "Programın ayırdığı belleği geri verememesi",
     difficulty: "medium",
-    week: 3,
-    topic: "Blob Brush",
-    importance: "medium",
-    explanation:
-      "Blob Brush ile çizdiğin şey ‘dolgu’ olarak şekle dönüşür. Aynı renkte boyadığında otomatik birleşmesi hızlı illüstrasyon üretir."
+    week: 6,
+    topic: "Memory Leak",
+    importance: "high",
+    explanation: "Uzun süre çalışınca RAM şişer, performans düşer, çökme riski artar."
   },
   {
-    q: "Width Tool (Shift+W) en doğru hangi problem için kullanılır?",
+    q: "Garbage Collection ne yapar?",
     t: "mcq",
     o: [
-      "Bir stroke’un farklı noktalarında kalınlığı artırıp azaltmak",
-      "Yeni artboard eklemek",
-      "Renkleri ters çevirmek",
-      "Metni paragraf yapmak",
-      "Raster efekti 300 PPI yapmak"
+      "Ağa paket gönderir",
+      "Kullanılmayan bellek alanlarını otomatik temizler",
+      "Sadece veri tabanı şeması kurar",
+      "Sadece UI render eder",
+      "Sadece hash üretir"
     ],
-    a: "Bir stroke’un farklı noktalarında kalınlığı artırıp azaltmak",
+    a: "Kullanılmayan bellek alanlarını otomatik temizler",
+    difficulty: "easy",
+    week: 6,
+    topic: "Garbage Collection",
+    importance: "medium",
+    explanation: "Özellikle Java gibi dillerde, kullanılmayan nesnelerin belleğini otomatik geri toplar."
+  },
+  {
+    q: "Compiler (Derleyici) ne yapar?",
+    t: "mcq",
+    o: [
+      "Kaynak kodu başka dile/çalıştırılabilir koda çevirir",
+      "Kodun sadece renklerini değiştirir",
+      "Sadece interneti hızlandırır",
+      "Sadece ikon üretir",
+      "Sadece UI testi yapar"
+    ],
+    a: "Kaynak kodu başka dile/çalıştırılabilir koda çevirir",
+    difficulty: "easy",
+    week: 6,
+    topic: "Compile",
+    importance: "high",
+    explanation: "Amaç genellikle çalıştırılabilir bir çıktı üretmektir (exe, bytecode vb.)."
+  },
+  {
+    q: "Interpreter (Yorumlayıcı) ile compiler arasındaki fark için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Interpreter kodu satır satır çalıştırır; compiler genellikle çalıştırılabilir çıktı üretir",
+      "Compiler satır satır çalıştırır; interpreter dosyayı siler",
+      "İkisi tamamen aynıdır",
+      "Interpreter sadece C++ içindir",
+      "Compiler sadece HTML içindir"
+    ],
+    a: "Interpreter kodu satır satır çalıştırır; compiler genellikle çalıştırılabilir çıktı üretir",
     difficulty: "medium",
-    week: 3,
-    topic: "Width Tool (Shift+W)",
-    importance: "medium",
-    explanation:
-      "Kaligrafik/organik çizgi etkisi için çizgi kalınlığını segment segment yönetirsin. Bu vektör tabanlı olduğundan sonradan düzenlenebilir."
+    week: 6,
+    topic: "Interpreter vs Compiler",
+    importance: "high",
+    explanation: "Yorumlayıcı çoğu zaman anında çalıştırır; derleyici dönüştürüp çıktı üretir."
   },
   {
-    q: "Mesh Tool (U) hangi amaçla öne çıkar?",
+    q: "CLI ne demektir?",
+    t: "mcq",
+    o: ["Komut satırı arayüzü", "Grafik kartı sürücüsü", "Veritabanı türü", "Web API standardı", "Dosya uzantısı"],
+    a: "Komut satırı arayüzü",
+    difficulty: "easy",
+    week: 6,
+    topic: "CLI",
+    importance: "medium",
+    explanation: "Konsol/terminal üzerinden komut girerek sistemle iletişim kurmaktır."
+  },
+  {
+    q: "CRON ne için kullanılır?",
     t: "mcq",
     o: [
-      "Nesneye kafes (mesh) ekleyip noktalara renk atayarak gerçekçi, yumuşak geçişli tonlama yapmak",
-      "Nesneyi makasla kesmek",
-      "Metni seçim haline getirmek",
-      "İki şekli blend etmek",
-      "Sembol püskürtmek"
+      "Zaman tabanlı işleri periyodik çalıştırmak için",
+      "Dosya sıkıştırmak için",
+      "UI çizmek için",
+      "Veritabanı tablosu oluşturmak için",
+      "Makine diline çevirmek için"
     ],
-    a: "Nesneye kafes (mesh) ekleyip noktalara renk atayarak gerçekçi, yumuşak geçişli tonlama yapmak",
-    difficulty: "hard",
-    week: 3,
-    topic: "Mesh Tool (U)",
+    a: "Zaman tabanlı işleri periyodik çalıştırmak için",
+    difficulty: "easy",
+    week: 6,
+    topic: "CRON",
     importance: "medium",
-    explanation:
-      "Mesh; tek gradyandan daha detaylı kontrol verir. Gölge/ışık yansımalarıyla 3D benzeri gerçekçi illüstrasyonlarda kullanılır; fazla mesh karmaşıklık yaratabilir."
+    explanation: "Belirli saat/tarih/aralıkta otomatik görev çalıştırma."
+  },
+  {
+    q: "Hash fonksiyonunun temel amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Değişken uzunluklu veriyi sabit uzunluklu özete dönüştürmek",
+      "Veriyi her zaman büyütmek",
+      "Sadece UI hizalamak",
+      "Sadece dosyayı PDF yapmak",
+      "Sadece interneti kapatmak"
+    ],
+    a: "Değişken uzunluklu veriyi sabit uzunluklu özete dönüştürmek",
+    difficulty: "medium",
+    week: 6,
+    topic: "Hash",
+    importance: "medium",
+    explanation: "Parola saklama, bütünlük kontrolü gibi alanlarda kullanılır."
+  },
+  {
+    q: "GUID/UUID nedir?",
+    t: "mcq",
+    o: [
+      "Evrensel olarak benzersiz tanımlayıcı",
+      "Bir CSS sınıfı",
+      "Bir veritabanı dili",
+      "Bir tarayıcı eklentisi",
+      "Bir işletim sistemi"
+    ],
+    a: "Evrensel olarak benzersiz tanımlayıcı",
+    difficulty: "easy",
+    week: 6,
+    topic: "GUID",
+    importance: "medium",
+    explanation: "Sistemlerde kayıtları/nesneleri benzersiz kimlikle tanımlamak için kullanılır."
+  },
+  {
+    q: "OOP nedir?",
+    t: "mcq",
+    o: ["Nesne yönelimli programlama yaklaşımı", "Bir HTTP kodu", "Bir veritabanı türü", "Bir UI stili", "Bir komut satırı aracı"],
+    a: "Nesne yönelimli programlama yaklaşımı",
+    difficulty: "easy",
+    week: 6,
+    topic: "OOP",
+    importance: "high",
+    explanation: "Programı nesneler/sınıflar üzerinden modelleme yaklaşımıdır."
+  },
+  {
+    q: "Repository neyi ifade eder?",
+    t: "mcq",
+    o: ["Kod deposu", "Sadece resim galerisi", "CPU register alanı", "Ağ kablosu", "Metin fontu"],
+    a: "Kod deposu",
+    difficulty: "easy",
+    week: 6,
+    topic: "Repository",
+    importance: "medium",
+    explanation: "Git repo gibi; kaynak kodu ve tarihçesini tutar."
+  },
+  {
+    q: "Version Control (Sürüm kontrol) neden önemlidir?",
+    t: "mcq",
+    o: [
+      "Değişiklik geçmişini yönetir ve ekip çalışmasını kolaylaştırır",
+      "Her zaman interneti hızlandırır",
+      "RAM’i otomatik artırır",
+      "Dosyaları rasterize eder",
+      "Sadece UI boyar"
+    ],
+    a: "Değişiklik geçmişini yönetir ve ekip çalışmasını kolaylaştırır",
+    difficulty: "medium",
+    week: 6,
+    topic: "Version Control",
+    importance: "high",
+    explanation: "Branch/merge, geri dönüş, denetim, işbirliği sağlar."
+  },
+  {
+    q: "Virtual Machine nedir?",
+    t: "mcq",
+    o: [
+      "Gerçek sistem gibi çalışan sanal bilgisayar ortamı",
+      "Sadece tarayıcı eklentisi",
+      "Bir CSS standardı",
+      "Bir tür dosya uzantısı",
+      "Bir yazı tipi"
+    ],
+    a: "Gerçek sistem gibi çalışan sanal bilgisayar ortamı",
+    difficulty: "easy",
+    week: 6,
+    topic: "Virtual Machine",
+    importance: "medium",
+    explanation: "Farklı OS’leri aynı fiziksel makinede izole çalıştırmana yarar."
+  },
+  {
+    q: "Hypervisor’ın görevi hangisidir?",
+    t: "mcq",
+    o: [
+      "VM’leri oluşturmak ve çalıştırmak",
+      "Sadece HTML yazmak",
+      "Sadece SQL çalıştırmak",
+      "Sadece görsel düzenlemek",
+      "Sadece cron job eklemek"
+    ],
+    a: "VM’leri oluşturmak ve çalıştırmak",
+    difficulty: "medium",
+    week: 6,
+    topic: "Hypervisor",
+    importance: "medium",
+    explanation: "VirtualBox/VMware/Hyper-V gibi sistemlerin temelinde hypervisor mantığı vardır."
+  },
+  {
+    q: "Sandbox neyi amaçlar?",
+    t: "mcq",
+    o: [
+      "Riskli/test edilmemiş kodu izole ortamda çalıştırarak ana sistemi korumak",
+      "Dosyaları her zaman büyütmek",
+      "UI’ı her zaman küçültmek",
+      "Sadece renkleri ters çevirmek",
+      "Veritabanını otomatik kurmak"
+    ],
+    a: "Riskli/test edilmemiş kodu izole ortamda çalıştırarak ana sistemi korumak",
+    difficulty: "medium",
+    week: 6,
+    topic: "Sandbox",
+    importance: "high",
+    explanation: "Güvenlik ve test amaçlı izolasyon sağlar."
+  },
+  {
+    q: "WYSIWYG ne demektir?",
+    t: "mcq",
+    o: [
+      "Ne görüyorsan onu alırsın (ekranda görülen çıktıya benzer)",
+      "Sadece komut satırı demektir",
+      "Bir veritabanı protokolüdür",
+      "Bir işletim sistemi çekirdeğidir",
+      "Bir hash algoritmasıdır"
+    ],
+    a: "Ne görüyorsan onu alırsın (ekranda görülen çıktıya benzer)",
+    difficulty: "easy",
+    week: 6,
+    topic: "WYSIWYG",
+    importance: "medium",
+    explanation: "Editörde gördüğün düzenin çıktıya çok benzer olmasını ifade eder."
+  },
+  {
+    q: "XML ne için yaygın kullanılır?",
+    t: "mcq",
+    o: [
+      "Veri saklama ve sistemler arası veri alışverişi",
+      "Sadece oyun geliştirme",
+      "Sadece fotoğraf düzenleme",
+      "Sadece komut satırı",
+      "Sadece RAM yönetimi"
+    ],
+    a: "Veri saklama ve sistemler arası veri alışverişi",
+    difficulty: "easy",
+    week: 6,
+    topic: "XML",
+    importance: "medium",
+    explanation: "XML; yapılandırılmış veriyi taşımak için standart bir formattır."
+  },
+  {
+    q: "SQL neyi ifade eder?",
+    t: "mcq",
+    o: ["Veritabanı sorgulama dili", "Bir UI framework", "Bir donanım portu", "Bir tarayıcı", "Bir resim formatı"],
+    a: "Veritabanı sorgulama dili",
+    difficulty: "easy",
+    week: 6,
+    topic: "SQL",
+    importance: "high",
+    explanation: "Tablolardan veri çekme/güncelleme/silme/oluşturma gibi işlemler SQL ile yapılır."
+  },
+  {
+    q: "CMS nedir?",
+    t: "mcq",
+    o: [
+      "İçerik yönetim sistemi",
+      "Sadece bir programlama dili",
+      "Bir işletim sistemi türü",
+      "Bir ekran kartı modeli",
+      "Bir derleyici"
+    ],
+    a: "İçerik yönetim sistemi",
+    difficulty: "easy",
+    week: 6,
+    topic: "CMS",
+    importance: "low",
+    explanation: "Web içeriklerini kolay üretme/düzenleme/yayınlama sistemidir."
+  },
+  {
+    q: "CRM neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Müşteri ilişkileri yönetimi yaklaşımı/sistemi",
+      "Sadece dosya kopyalama",
+      "Sadece hash üretme",
+      "Sadece UI renklendirme",
+      "Sadece sanallaştırma"
+    ],
+    a: "Müşteri ilişkileri yönetimi yaklaşımı/sistemi",
+    difficulty: "easy",
+    week: 6,
+    topic: "CRM",
+    importance: "low",
+    explanation: "Müşteri etkileşimlerini yönetmek için süreç ve yazılım yaklaşımıdır."
+  },
+  {
+    q: "Plug-in (Eklenti) ne yapar?",
+    t: "mcq",
+    o: [
+      "Ana programa bağımsız bir yazılım olarak çalışır ve ana programdan tamamen kopuktur",
+      "Ana programa yeni özellik ekler; çoğu zaman ana program olmadan çalışamaz",
+      "Sadece veritabanı kurar",
+      "Sadece işletim sistemi günceller",
+      "Sadece ağ kablosu yönetir"
+    ],
+    a: "Ana programa yeni özellik ekler; çoğu zaman ana program olmadan çalışamaz",
+    difficulty: "medium",
+    week: 6,
+    topic: "Plug-in",
+    importance: "medium",
+    explanation: "Eklenti; host uygulamaya yeni yetenek kazandırır."
+  },
+  {
+    q: "Open Source yazılımın en doğru özelliği hangisidir?",
+    t: "mcq",
+    o: [
+      "Kaynak kodu kapalıdır",
+      "Kaynak kodu açık lisansla kullanma/değiştirme/dağıtma imkânı sunar",
+      "Sadece ücretlidir",
+      "Sadece Windows’ta çalışır",
+      "Sadece oyun içindir"
+    ],
+    a: "Kaynak kodu açık lisansla kullanma/değiştirme/dağıtma imkânı sunar",
+    difficulty: "easy",
+    week: 6,
+    topic: "Open Source",
+    importance: "medium",
+    explanation: "Açık kaynakta haklar lisansla belirlenir; genel mantık şeffaflık ve yeniden kullanım kolaylığıdır."
+  },
+  {
+    q: "Proprietary Software ne demektir?",
+    t: "mcq",
+    o: [
+      "Kaynak kodu açık yazılım",
+      "Sahipli/kapalı kaynak yazılım",
+      "Sadece ücretsiz yazılım",
+      "Sadece eğitim amaçlı yazılım",
+      "Sadece web standardı"
+    ],
+    a: "Sahipli/kapalı kaynak yazılım",
+    difficulty: "easy",
+    week: 6,
+    topic: "Proprietary",
+    importance: "medium",
+    explanation: "Kaynak kodu ve fikrî haklar üreticide kalır; kullanım lisans şartlarına bağlıdır."
+  },
+  {
+    q: "OCR ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Görüntü içindeki yazıyı metne dönüştürmeye çalışır",
+      "Sadece ses dosyası üretir",
+      "Sadece veritabanı tablo kurar",
+      "Sadece firewall yönetir",
+      "Sadece VM oluşturur"
+    ],
+    a: "Görüntü içindeki yazıyı metne dönüştürmeye çalışır",
+    difficulty: "easy",
+    week: 6,
+    topic: "OCR",
+    importance: "medium",
+    explanation: "Optik karakter tanıma; taranmış dokümanları düzenlenebilir metne çevirmeye yarar."
+  },
+  {
+    q: "FTP hangi amaçla kullanılır?",
+    t: "mcq",
+    o: ["Dosya aktarımı", "Renk düzenleme", "Tipografi ayarı", "Sanallaştırma", "Makine dili çevirisi"],
+    a: "Dosya aktarımı",
+    difficulty: "easy",
+    week: 6,
+    topic: "FTP",
+    importance: "low",
+    explanation: "FTP; dosyaları ağ üzerinden sunucu/istemci arasında taşımak için kullanılan protokoldür."
+  },
+  {
+    q: "Firewall’ın temel görevi hangisidir?",
+    t: "mcq",
+    o: [
+      "Dosyaları sıkıştırmak",
+      "Ağ trafiğini kurallarla kontrol etmek (gelen/giden paketleri filtrelemek)",
+      "UI çizmek",
+      "Veritabanı sorgulamak",
+      "Yazı tipini değiştirmek"
+    ],
+    a: "Ağ trafiğini kurallarla kontrol etmek (gelen/giden paketleri filtrelemek)",
+    difficulty: "easy",
+    week: 6,
+    topic: "Firewall",
+    importance: "medium",
+    explanation: "Güvenlik duvarı; izin verilen/engellenen trafik kuralları uygular."
+  },
+  {
+    q: "Cookies (çerezler) web’de en çok ne için kullanılır?",
+    t: "mcq",
+    o: ["Oturum ve tercih bilgisi saklamak", "Makine dili üretmek", "Derleme yapmak", "VM kurmak", "DNS değiştirmek"],
+    a: "Oturum ve tercih bilgisi saklamak",
+    difficulty: "easy",
+    week: 6,
+    topic: "Cookies",
+    importance: "low",
+    explanation: "Login oturumu, sepet bilgisi, dil tercihi gibi veriler çerezlerde tutulabilir."
+  },
+  {
+    q: "Crawl (arama robotu) ne yapar?",
+    t: "mcq",
+    o: ["Web’i otomatik gezer ve yeni adresleri indeks listesine ekler", "Sadece video oynatır", "Sadece SQL derler", "Sadece UI render eder", "Sadece şifre kırar"],
+    a: "Web’i otomatik gezer ve yeni adresleri indeks listesine ekler",
+    difficulty: "medium",
+    week: 6,
+    topic: "Crawl",
+    importance: "low",
+    explanation: "Arama motorları sayfaları bulmak için crawler kullanır."
   }
-];
+]);
