@@ -1,1109 +1,1060 @@
-// Web Tasarım (HTML-CSS-JS) – 50 Soruluk Sınav Soru Bankası (MCQ)
-// TAMAMEN FARKLI SORULAR – Önceki setle aynı sorular yok.
+// Yazılım Mimarisi – 50 Soruluk Soru Bankası (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
+// Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 1. HAFTA – HTML Temelleri (17 Soru) =================
+  // ==== 1. HAFTA – Mimari Temeller (10) =====================
   // =========================================================
 
   {
-    q: "HTML’de <html lang='tr'> yazmanın en doğru amacı hangisidir?",
+    q: "Yazılım mimarisi en doğru şekilde neyi tanımlar?",
     t: "mcq",
     o: [
-      "Sayfayı otomatik Türkçeye çevirir",
-      "Arama motoru ve ekran okuyucu gibi araçlara sayfanın dilini bildirir",
-      "CSS dosyasını aktif eder",
-      "Sayfanın daha hızlı açılmasını sağlar",
-      "JavaScript’in çalışmasını zorunlu yapar"
+      "Sadece ekran tasarımını (UI) ve renk paletini",
+      "Kod satırlarının sıralamasını ve değişken isimlerini",
+      "Sistemin ana bileşenlerini, aralarındaki ilişkileri ve önemli kararları",
+      "Sadece veritabanı tablolarını ve kolon tiplerini",
+      "Sadece test senaryolarını ve test raporlarını"
     ],
-    a: "Arama motoru ve ekran okuyucu gibi araçlara sayfanın dilini bildirir",
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mimari Temeller",
+    importance: 5,
+    explanation: "Mimari; yapı taşları (bileşenler), bağlantılar (ilişkiler) ve bu yapıyı doğuran kritik kararları açıklar."
+  },
+  {
+    q: "“Mimari karar” denince en çok hangisi kastedilir?",
+    t: "mcq",
+    o: [
+      "Kodda yorum satırı yazıp yazmama kararı",
+      "Sistemin performans, güvenlik gibi hedeflere göre şekillenmesini etkileyen temel seçimler",
+      "Butonların köşe yuvarlaklığını seçmek",
+      "Her fonksiyona aynı isimle başlamak",
+      "Sadece log formatını seçmek"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mimari Kararlar",
+    importance: 5,
+    explanation: "Mimari kararlar “sistemi gerçekten yönlendiren” büyük seçimlerdir (ör. monolith vs microservice, senkron vs async)."
+  },
+  {
+    q: "Aşağıdakilerden hangisi paydaş (stakeholder) örneğidir?",
+    t: "mcq",
+    o: [
+      "Sadece uygulamanın logosu",
+      "Sadece RAM miktarı",
+      "Sistemin başarısından etkilenen kişi/kurum (kullanıcı, işletme, devops, güvenlik ekibi vb.)",
+      "Sadece kod editörü",
+      "Sadece domain adı"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Paydaşlar",
+    importance: 4,
+    explanation: "Paydaş, sistemle ilgisi olan ve sistemin sonuçlarından etkilenen tüm taraflardır."
+  },
+  {
+    q: "Fonksiyonel gereksinim ile (quality/non-functional) kalite gereksinimi arasındaki fark en iyi hangi seçenekte anlatılır?",
+    t: "mcq",
+    o: [
+      "Fonksiyonel = nasıl hızlı çalışacağı, kalite = hangi butonların olacağı",
+      "Fonksiyonel = ne yapacağı, kalite = ne kadar iyi yapacağı",
+      "Fonksiyonel = sadece test, kalite = sadece kod",
+      "Fonksiyonel = veritabanı, kalite = frontend",
+      "Aralarında fark yoktur"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Gereksinimler",
+    importance: 5,
+    explanation: "Fonksiyonel “özellik”; kalite gereksinimi “performans, güvenlik, kullanılabilirlik” gibi nitelikleri anlatır."
+  },
+  {
+    q: "Aşağıdakilerden hangisi kalite (non-functional) gereksinimine örnektir?",
+    t: "mcq",
+    o: [
+      "Kullanıcı kayıt olabilsin",
+      "Kullanıcı şifre sıfırlayabilsin",
+      "Sistem, %99.9 erişilebilirlik hedefini sağlamalı",
+      "Kullanıcı profil fotoğrafı yükleyebilsin",
+      "Kullanıcı bildirim alabilsin"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Kalite Gereksinimleri",
+    importance: 5,
+    explanation: "Erişilebilirlik (availability) bir kalite özelliğidir."
+  },
+  {
+    q: "“Trade-off” kavramı mimaride en iyi neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Aynı anda tüm kalite özelliklerini maksimum yapmak",
+      "Bir hedefi iyileştirirken başka bir hedefte bedel ödemek (denge kurmak)",
+      "Sadece kodu kısaltmak",
+      "Sadece sunucu sayısını artırmak",
+      "Sadece veri tabanını değiştirmek"
+    ],
+    a: 1,
     difficulty: "medium",
     week: 1,
-    topic: "Dil bildirimi (lang)",
-    importance: "high",
-    explanation: `lang, sayfanın dilini belirtir:
-- Ekran okuyucular doğru telaffuz eder
-- Arama motorları sayfayı doğru sınıflandırır
-
-Örnek:
-<html lang="tr">
-Sonuç: Sayfanın dili Türkçe olarak anlaşılır.`
+    topic: "Trade-off",
+    importance: 5,
+    explanation: "Örn. güvenliği artırmak bazen kullanım kolaylığını düşürebilir; mimari denge kurar."
   },
-
   {
-    q: "Mobil uyum (responsive) için en kritik meta etiketi hangisidir?",
+    q: "Bir mimariyi “iyi” yapan şey en çok hangisidir?",
     t: "mcq",
     o: [
-      "<meta name='keywords' content='...'>",
-      "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
-      "<meta charset='utf-8'>",
-      "<meta http-equiv='refresh' content='5'>",
-      "<meta name='author' content='...'>"
+      "Sadece popüler teknoloji kullanması",
+      "Sadece çok fazla sınıf içermesi",
+      "Paydaş endişelerini (concerns) doğru karşılaması",
+      "Sadece en hızlı olması",
+      "Sadece en ucuz bulut servisini kullanması"
     ],
-    a: "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
-    difficulty: "easy",
-    week: 1,
-    topic: "Viewport",
-    importance: "high",
-    explanation: `Viewport meta etiketi, mobilde sayfanın genişliğini cihaz genişliğine uydurur.
-
-Örnek:
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-Sonuç: Mobilde “yakınlaştırılmış/taşmış” görünüm azalır.`
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi “semantik” bir içerik parçasını en doğru ifade eder?",
-    t: "mcq",
-    o: [
-      "<div class='haber'> ... </div>",
-      "<article> ... </article>",
-      "<span> ... </span>",
-      "<b> ... </b>",
-      "<br>"
-    ],
-    a: "<article> ... </article>",
-    difficulty: "easy",
-    week: 1,
-    topic: "Semantik etiketler",
-    importance: "high",
-    explanation: `<article>, tek başına anlamlı bir içerik bloğunu temsil eder (haber, blog yazısı vb.).
-<div> ise genel amaçlı kutudur (anlam taşımaz).
-
-Örnek:
-<article>
-  <h2>Haber</h2>
-  <p>Detay...</p>
-</article>`
-  },
-
-  {
-    q: "<section> ile <article> arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "section sadece link içindir, article sadece resim içindir",
-      "article tek başına anlamlı içerik; section sayfanın tematik bir bölümüdür (içinde article olabilir)",
-      "ikisi tamamen aynıdır, fark yoktur",
-      "section sadece CSS ile çalışır",
-      "article sadece form içinde kullanılabilir"
-    ],
-    a: "article tek başına anlamlı içerik; section sayfanın tematik bir bölümüdür (içinde article olabilir)",
-    difficulty: "hard",
-    week: 1,
-    topic: "Semantik yapı mantığı",
-    importance: "medium",
-    explanation: `Basit mantık:
-- article: “tek başına paylaşılabilir içerik” (blog yazısı, haber)
-- section: “konu bölümü” (sayfada bir bölüm)
-
-Örnek:
-<section>
-  <h2>Son Haberler</h2>
-  <article>...</article>
-  <article>...</article>
-</section>`
-  },
-
-  {
-    q: "<strong> etiketi en doğru neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Sadece yazıyı kalın yapmak için görsel amaçlıdır",
-      "Metnin önemli/ vurgulanması gerektiğini semantik olarak belirtir",
-      "Metni otomatik kırmızı yapar",
-      "Metni linke çevirir",
-      "Metni gizler"
-    ],
-    a: "Metnin önemli/ vurgulanması gerektiğini semantik olarak belirtir",
+    a: 2,
     difficulty: "medium",
     week: 1,
-    topic: "Metin vurgusu (strong)",
-    importance: "medium",
-    explanation: `<strong> görselde kalın görünebilir ama asıl amaç “önem” bildirmektir.
-Ekran okuyucular bu önemi daha doğru yorumlar.
-
-Örnek:
-<strong>Önemli:</strong> Şifreyi kimseyle paylaşma.`
+    topic: "Değerlendirme",
+    importance: 4,
+    explanation: "Mimari, paydaşların ihtiyaçlarını ve risklerini yönetmek için vardır."
   },
-
   {
-    q: "Bir görselin sayfada doğru boyutta görünmesi ve oranının bozulmaması için HTML tarafında en doğru yaklaşım hangisidir?",
+    q: "“Concern (endişe/ilgi alanı)” neye denir?",
     t: "mcq",
     o: [
-      "Sadece <img> yazmak yeterlidir, boyut kontrol edilmez",
-      "width ve height öznitelikleri veya CSS ile boyut verip oranı korumak (ör. height:auto)",
-      "Görselleri sadece <div> içine koymak",
-      "Görseli <p> ile sarmak",
-      "Görselin adını büyütmek (ör. foto_BUYUK.png)"
+      "Sistemde kullanılan renkler",
+      "Paydaşların önem verdiği konu başlıkları (performans, güvenlik, maliyet vb.)",
+      "Sadece API endpoint listesi",
+      "Sadece kod standardı",
+      "Sadece logo dosyası"
     ],
-    a: "width ve height öznitelikleri veya CSS ile boyut verip oranı korumak (ör. height:auto)",
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Concern",
+    importance: 4,
+    explanation: "Concern = paydaşın “benim için kritik” dediği konulardır."
+  },
+  {
+    q: "Aşağıdakilerden hangisi mimarinin amaçlarından biri değildir?",
+    t: "mcq",
+    o: [
+      "Bakımı kolaylaştırmak",
+      "Riskleri yönetmek",
+      "Geliştirmeyi ölçeklemek",
+      "Tüm geliştirme hatalarını tamamen sıfırlamak",
+      "Kalite hedeflerini görünür kılmak"
+    ],
+    a: 3,
     difficulty: "medium",
     week: 1,
-    topic: "Görsel boyutlandırma",
-    importance: "medium",
-    explanation: `Boyutlandırma mantığı:
-- HTML’de width/height verilebilir
-- CSS’te width: 300px; height: auto; gibi oran korunur
-
-Örnek CSS:
-img { width: 300px; height: auto; }
-
-Sonuç: Görsel ezilmez, oranı bozulmaz.`
+    topic: "Mimari Amaçlar",
+    importance: 3,
+    explanation: "Mimari riski azaltır ama “hata sıfır” garantisi vermez."
   },
-
   {
-    q: "Bir tablo oluştururken sütun başlığı (header cell) için en doğru etiket hangisidir?",
+    q: "“Architecture description” en çok ne işe yarar?",
     t: "mcq",
-    o: ["<td>", "<tr>", "<th>", "<thead>", "<tablehead>"],
-    a: "<th>",
-    difficulty: "easy",
-    week: 1,
-    topic: "Tablo etiketleri",
-    importance: "medium",
-    explanation: `<th> tablo başlık hücresidir.
-Genelde kalın ve ortalı görünür, ayrıca semantik olarak “başlık” anlamı taşır.
-
-Örnek:
-<tr><th>Ad</th><th>Yaş</th></tr>`
-  },
-
-  {
-    q: "Form verisi gönderirken URL’de görünmesi daha olası olan yöntem hangisidir?",
-    t: "mcq",
-    o: ["POST", "GET", "PUT", "PATCH", "DELETE"],
-    a: "GET",
+    o: [
+      "Sadece kodu otomatik üretmek",
+      "Mimariyi paydaşlara anlaşılır biçimde belgelemek ve iletişimi standardize etmek",
+      "Sadece UI mockup saklamak",
+      "Sadece tablo çizmek",
+      "Sadece test otomasyonunu çalıştırmak"
+    ],
+    a: 1,
     difficulty: "medium",
     week: 1,
-    topic: "Form method",
-    importance: "high",
-    explanation: `GET genelde veriyi URL’e ekleyerek gönderir (arama gibi).
-POST genelde gövdede gönderir (login/kayıt gibi).
-
-Örnek:
-<form method="get"> ... </form>
-Sonuç: Arama parametreleri URL’de görülebilir.`
-  },
-
-  {
-    q: "<form action='...'> içindeki action özelliği en doğru neyi belirler?",
-    t: "mcq",
-    o: [
-      "Formun kaç saniyede bir yenileneceğini",
-      "Form verisinin gönderileceği hedef URL/adresi",
-      "Formun içindeki inputların rengini",
-      "Formu otomatik doğrulama seviyesini",
-      "Formun içine resim eklemeyi"
-    ],
-    a: "Form verisinin gönderileceği hedef URL/adresi",
-    difficulty: "easy",
-    week: 1,
-    topic: "Form action",
-    importance: "high",
-    explanation: `action = “Gönderince nereye gitsin?”
-
-Örnek:
-<form action="/kayit" method="post">
-Sonuç: Gönderilen veri /kayit adresine gider.`
-  },
-
-  {
-    q: "Formda bir input’un name özelliği en çok hangi amaçla kritiktir?",
-    t: "mcq",
-    o: [
-      "Input’u otomatik büyütmek",
-      "Gönderilen veride alanın anahtar adı (field key) olarak kullanılmak",
-      "Input’u sadece okunur yapmak",
-      "Input’u gizlemek",
-      "Input’a border eklemek"
-    ],
-    a: "Gönderilen veride alanın anahtar adı (field key) olarak kullanılmak",
-    difficulty: "hard",
-    week: 1,
-    topic: "Form name",
-    importance: "high",
-    explanation: `Form gönderildiğinde çoğu sistem name değerini “alan adı” olarak kullanır.
-
-Örnek:
-<input name="email" type="email">
-Sonuç: Sunucu tarafına email=... gibi gider.`
-  },
-
-  {
-    q: "Tek seçim yapılacak seçenek grubu (örn. cinsiyet: Kadın/Erkek) için en uygun input türü hangisidir?",
-    t: "mcq",
-    o: ["checkbox", "radio", "range", "file", "color"],
-    a: "radio",
-    difficulty: "easy",
-    week: 1,
-    topic: "Radio vs Checkbox",
-    importance: "high",
-    explanation: `radio: aynı grupta tek seçim.
-checkbox: birden fazla seçim.
-
-Örnek:
-<input type="radio" name="cinsiyet" value="kadin">
-<input type="radio" name="cinsiyet" value="erkek">`
-  },
-
-  {
-    q: "Kullanıcıdan gizli şekilde şifre girişi almak için doğru input type hangisidir?",
-    t: "mcq",
-    o: ["type='secret'", "type='password'", "type='hide'", "type='secure'", "type='private'"],
-    a: "type='password'",
-    difficulty: "easy",
-    week: 1,
-    topic: "Input type",
-    importance: "medium",
-    explanation: `type="password" girilen karakterleri gizler (nokta/asterisk).
-
-Örnek:
-<input type="password" name="sifre">`
-  },
-
-  {
-    q: "Dışarıdan bir CSS dosyasını HTML’e bağlamanın doğru yolu hangisidir?",
-    t: "mcq",
-    o: [
-      "<script src='style.css'></script>",
-      "<link rel='stylesheet' href='style.css'>",
-      "<style href='style.css'></style>",
-      "<css src='style.css'></css>",
-      "<meta css='style.css'>"
-    ],
-    a: "<link rel='stylesheet' href='style.css'>",
-    difficulty: "easy",
-    week: 1,
-    topic: "External CSS bağlama",
-    importance: "high",
-    explanation: `External CSS en temiz yöntemdir.
-<link rel="stylesheet" href="style.css">
-
-Sonuç: style.css içindeki kurallar sayfaya uygulanır.`
-  },
-
-  {
-    q: "<script src='app.js' defer></script> kullanmanın en doğru avantajı hangisidir?",
-    t: "mcq",
-    o: [
-      "JavaScript’i tamamen kapatır",
-      "HTML parse edilirken script indirilir; HTML bittikten sonra çalışır (daha güvenli yükleme sırası)",
-      "Script’i sadece mobilde çalıştırır",
-      "CSS’in daha hızlı çalışmasını sağlar",
-      "Tarayıcıyı otomatik günceller"
-    ],
-    a: "HTML parse edilirken script indirilir; HTML bittikten sonra çalışır (daha güvenli yükleme sırası)",
-    difficulty: "hard",
-    week: 1,
-    topic: "Script yükleme (defer)",
-    importance: "medium",
-    explanation: `defer:
-- Dosya indirme gecikmeden başlar
-- Çalışma, HTML tamamen okunduktan sonra olur
-
-Sonuç: DOM elemanları oluşmadan JS çalışıp hata verme ihtimali düşer.`
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi bir e-posta linki (mailto) örneğidir?",
-    t: "mcq",
-    o: [
-      "<a href='email:yusuf@site.com'>Mail</a>",
-      "<a href='mailto:yusuf@site.com'>Mail</a>",
-      "<a href='sms:yusuf@site.com'>Mail</a>",
-      "<a href='http://yusuf@site.com'>Mail</a>",
-      "<a href='tel:yusuf@site.com'>Mail</a>"
-    ],
-    a: "<a href='mailto:yusuf@site.com'>Mail</a>",
-    difficulty: "medium",
-    week: 1,
-    topic: "Link türleri",
-    importance: "low",
-    explanation: `mailto: tıklanınca varsayılan mail uygulamasını açar.
-
-Örnek:
-<a href="mailto:eystudio.3d@gmail.com">Bize yaz</a>`
-  },
-
-  {
-    q: "Erişilebilirlik için, butonun sadece ikon içerdiği durumda (metin yoksa) en doğru pratik hangisidir?",
-    t: "mcq",
-    o: [
-      "Butona sadece renk vermek yeterlidir",
-      "Butona aria-label eklemek",
-      "Butonu div ile değiştirmek",
-      "Buton yerine span kullanmak",
-      "Butonun fontunu büyütmek"
-    ],
-    a: "Butona aria-label eklemek",
-    difficulty: "hard",
-    week: 1,
-    topic: "Accessibility - aria-label",
-    importance: "high",
-    explanation: `İkon butonlarda metin yoksa ekran okuyucu ne olduğunu anlayamaz.
-aria-label açıklama verir.
-
-Örnek:
-<button aria-label="Menüyü aç">☰</button>
-
-Sonuç: Ekran okuyucu “Menüyü aç butonu” gibi okur.`
+    topic: "Architecture Description",
+    importance: 4,
+    explanation: "Mimari tanım, iletişimi ve doğrulanabilirliği güçlendirir; “kim neyi nasıl anladı” problemini azaltır."
   },
 
   // =========================================================
-  // ==== 2. HAFTA – CSS Temelleri (16 Soru) ==================
+  // ==== 2. HAFTA – Kalite Özellikleri & Senaryolar (10) =====
   // =========================================================
 
   {
-    q: "CSS’te “child (>)” seçici neyi hedefler?",
+    q: "Kalite senaryosu (quality scenario) genelde hangi parçaları içerir?",
     t: "mcq",
     o: [
-      "Tüm torunları (iç içe her şeyi)",
-      "Sadece doğrudan çocuk elemanları",
-      "Sadece kardeş elemanları",
-      "Sadece aynı id’yi taşıyanları",
-      "Sadece hover durumundaki elemanları"
+      "Sadece veritabanı şeması",
+      "Sadece UI ekran listesi",
+      "Kaynak (source), tetikleyici (stimulus), ortam (environment), ölçülebilir cevap (response/measure)",
+      "Sadece kod satır sayısı",
+      "Sadece proje bütçesi"
     ],
-    a: "Sadece doğrudan çocuk elemanları",
-    difficulty: "medium",
-    week: 2,
-    topic: "Seçiciler - child",
-    importance: "medium",
-    explanation: `> seçicisi sadece “bir alt seviye”yi seçer.
-
-Örnek:
-ul > li { ... }
-Sonuç: ul’in direkt içindeki li’lar seçilir (daha derindeki li’lar değil).`
-  },
-
-  {
-    q: ".menu li (boşluklu) seçici ile .menu > li (>) seçici arasındaki fark en doğru hangisidir?",
-    t: "mcq",
-    o: [
-      "İkisi tamamen aynı",
-      "Boşluklu: tüm torun li’lar; > : sadece direkt çocuk li’lar",
-      "Boşluklu: sadece direkt çocuk; > : tüm torunlar",
-      "İkisi sadece id ile çalışır",
-      "İkisi sadece grid içinde çalışır"
-    ],
-    a: "Boşluklu: tüm torun li’lar; > : sadece direkt çocuk li’lar",
+    a: 2,
     difficulty: "hard",
     week: 2,
-    topic: "Seçiciler - descendant vs child",
-    importance: "high",
-    explanation: `Boşluk = descendant (içindeki her şey)
-> = child (direkt çocuk)
-
-Örnek:
-.menu li { ... }      // .menu içindeki tüm li’lar
-.menu > li { ... }    // sadece .menu’nün direkt li çocukları`
+    topic: "Kalite Senaryosu",
+    importance: 5,
+    explanation: "Kalite senaryosu ölçülebilir olmalıdır; “hızlı” yerine “< 200ms” gibi."
   },
-
   {
-    q: "::before pseudo-element’i en doğru ne için kullanılır?",
+    q: "Aşağıdakilerden hangisi “performans” için doğru bir ölçü örneğidir?",
     t: "mcq",
     o: [
-      "HTML’e yeni dosya eklemek için",
-      "Bir elemana CSS ile “önüne” sanal içerik eklemek için (content ile)",
-      "JavaScript’i hızlandırmak için",
-      "Tarayıcı cache’ini temizlemek için",
-      "Sadece mobil menü yapmak için"
+      "Ekran güzel görünsün",
+      "İstekler çok hızlı olsun",
+      "API yanıt süresi p95 < 300ms olsun",
+      "Kod okunabilir olsun",
+      "Veritabanı olsun"
     ],
-    a: "Bir elemana CSS ile “önüne” sanal içerik eklemek için (content ile)",
+    a: 2,
     difficulty: "medium",
     week: 2,
-    topic: "Pseudo-element",
-    importance: "medium",
-    explanation: `::before / ::after ile HTML yazmadan küçük ekler yapılır.
-content şarttır.
-
-Örnek:
-.badge::before { content: "Yeni "; font-weight: bold; }
-
-Sonuç: Elemanın başına “Yeni ” eklenmiş gibi görünür.`
+    topic: "Performans",
+    importance: 5,
+    explanation: "Performans hedefi ölçülebilir metrikle yazılır (p95, ms, throughput vb.)."
   },
-
   {
-    q: "box-sizing: border-box; en doğru hangi etkiyi yapar?",
+    q: "Aşağıdakilerden hangisi “güvenilirlik (reliability)” ile en yakından ilişkilidir?",
     t: "mcq",
     o: [
-      "Border’ı kaldırır",
-      "width/height hesaplamasına padding+border’ı dahil eder (kutu taşması azalır)",
-      "Sadece yazı boyutunu değiştirir",
-      "Elementi inline yapar",
-      "margin’i otomatik sıfırlar"
+      "Uygulama ikonunun boyutu",
+      "Sistemin arıza durumunda bekleneni koruması ve hatalara dayanması",
+      "Buton renkleri",
+      "Kodun kısa olması",
+      "Şifrelerin düz metin tutulması"
     ],
-    a: "width/height hesaplamasına padding+border’ı dahil eder (kutu taşması azalır)",
-    difficulty: "hard",
-    week: 2,
-    topic: "Box sizing",
-    importance: "high",
-    explanation: `border-box ile:
-width = content + padding + border toplamını kapsar.
-
-Örnek:
-.kutu { width: 200px; padding: 20px; box-sizing: border-box; }
-Sonuç: Kutu toplamda 200px kalır, taşma riski azalır.`
-  },
-
-  {
-    q: "overflow: auto; en doğru ne yapar?",
-    t: "mcq",
-    o: [
-      "Taşan içeriği tamamen siler",
-      "Taşma yoksa scroll göstermez; taşma varsa scroll çıkarır",
-      "Her zaman iki scroll bar gösterir",
-      "Sadece yatay taşmayı engeller",
-      "Elementi sayfadan kaldırır"
-    ],
-    a: "Taşma yoksa scroll göstermez; taşma varsa scroll çıkarır",
+    a: 1,
     difficulty: "medium",
     week: 2,
-    topic: "Overflow",
-    importance: "medium",
-    explanation: `overflow:auto; pratik bir çözümdür:
-- İçerik sığarsa normal
-- Sığmazsa kaydırma ekler
-
-Örnek:
-.panel { max-height: 200px; overflow: auto; }`
+    topic: "Güvenilirlik",
+    importance: 4,
+    explanation: "Reliability; hata/arıza anında sistem davranışının öngörülebilir ve dayanıklı olmasıdır."
   },
-
   {
-    q: "Aşağıdakilerden hangisi CSS değişkeni (custom property) tanımlama ve kullanma örneğidir?",
+    q: "“Kullanılabilirlik (usability)” çoğunlukla hangi soruyu hedefler?",
     t: "mcq",
     o: [
-      "--renk: red; color: --renk;",
-      ":root { --renk: red; } .btn { color: var(--renk); }",
-      "@var renk = red; .btn { color: renk; }",
-      ".btn { color: $renk; }",
-      "root(--renk=red); btn(color=renk);"
+      "Sistem kaç sunucuda çalışıyor?",
+      "Kullanıcı işi ne kadar kolay ve hatasız yapabiliyor?",
+      "DB index var mı?",
+      "Kodu hangi dilde yazdık?",
+      "Loglar kaç satır?"
     ],
-    a: ":root { --renk: red; } .btn { color: var(--renk); }",
-    difficulty: "hard",
-    week: 2,
-    topic: "CSS variables",
-    importance: "medium",
-    explanation: `CSS değişkeni:
-:root { --primary: #0a84ff; }
-.btn { background: var(--primary); }
-
-Sonuç: Renk tek yerden değiştirilebilir (tema mantığı).`
-  },
-
-  {
-    q: "İki CSS kuralı aynı elemanı etkiliyorsa ve specificity eşitse, hangisi kazanır?",
-    t: "mcq",
-    o: [
-      "Her zaman ilk yazılan kazanır",
-      "Her zaman daha kısa kural kazanır",
-      "Dosyada en son yazılan (cascade) kazanır",
-      "Her zaman etiket seçici kazanır",
-      "Tarayıcı rastgele seçer"
-    ],
-    a: "Dosyada en son yazılan (cascade) kazanır",
-    difficulty: "medium",
-    week: 2,
-    topic: "Cascade kuralı",
-    importance: "high",
-    explanation: `Specificity eşitse “son yazılan” kazanır.
-
-Örnek:
-.btn { color: red; }
-.btn { color: blue; }
-
-Sonuç: Buton mavi olur (son kural).`
-  },
-
-  {
-    q: "flex-direction: column; kullanılırsa, ana eksen (main axis) genelde hangi yönde olur?",
-    t: "mcq",
-    o: ["Yatay (soldan sağa)", "Dikey (yukarıdan aşağı)", "Çapraz", "Rastgele", "Grid’e dönüşür"],
-    a: "Dikey (yukarıdan aşağı)",
-    difficulty: "hard",
-    week: 2,
-    topic: "Flex yön mantığı",
-    importance: "medium",
-    explanation: `Flex’te ana eksen, flex-direction ile değişir.
-- row: yatay
-- column: dikey
-
-Sonuç: justify-content artık dikey dağıtır gibi düşünülür.`
-  },
-
-  {
-    q: "Flex/Grid düzenlerinde “elemanlar arası boşluk” için en temiz modern özellik hangisidir?",
-    t: "mcq",
-    o: ["margin-left", "padding", "gap", "border-spacing", "outline"],
-    a: "gap",
+    a: 1,
     difficulty: "easy",
     week: 2,
-    topic: "Gap",
-    importance: "high",
-    explanation: `gap, elemanlar arasında temiz boşluk verir.
-Flex ve Grid’de çok pratik.
-
-Örnek:
-.row { display:flex; gap: 12px; }`
+    topic: "Kullanılabilirlik",
+    importance: 4,
+    explanation: "Usability: öğrenilebilirlik, verimlilik, hata önleme gibi başlıklara odaklanır."
   },
-
   {
-    q: "Grid’de alan isimleriyle yerleşim yapmak için kullanılan yaklaşım hangisidir?",
+    q: "“Güvenlik (security)” gereksinimi yazarken en doğru yaklaşım hangisidir?",
     t: "mcq",
     o: [
-      "grid-template-areas ve grid-area",
-      "flex-wrap ve flex-grow",
-      "position: absolute ile tablo çizmek",
-      "float ile her şeyi hizalamak",
-      "z-index ile sütun yapmak"
+      "“Güvenlik çok önemli” demek yeterlidir",
+      "Sadece antivirüs önerisi yazmak",
+      "Tehdit modeli + kontrol listesi + ölçülebilir kurallar (şifreleme, yetkilendirme, audit vb.)",
+      "Sadece admin şifresini not etmek",
+      "Sadece UI’da kilit ikonu koymak"
     ],
-    a: "grid-template-areas ve grid-area",
+    a: 2,
     difficulty: "hard",
     week: 2,
-    topic: "Grid areas",
-    importance: "medium",
-    explanation: `Grid areas:
-.container {
-  display:grid;
-  grid-template-areas:
-    "header header"
-    "sidebar main";
-}
-header { grid-area: header; }
-
-Sonuç: Okunabilir bir layout kurulabilir.`
+    topic: "Güvenlik",
+    importance: 5,
+    explanation: "Güvenlik, tehditlere göre kontrol seçimi ve doğrulanabilir kurallarla yönetilir."
   },
-
   {
-    q: "position: fixed; ile position: sticky; arasındaki fark en doğru hangisidir?",
+    q: "“Modifiye edilebilirlik (modifiability/maintainability)” en çok hangi mimari pratikle artar?",
     t: "mcq",
     o: [
-      "fixed scroll ile birlikte normal akar; sticky ekrana yapışır",
-      "fixed her zaman viewport’a sabitlenir; sticky belirli noktadan sonra yapışır ve konteyner içinde davranır",
-      "ikisi tamamen aynı",
-      "sticky sadece mobilde, fixed sadece masaüstünde çalışır",
-      "fixed z-index’i kapatır, sticky açar"
+      "Her şeyi tek dosyada toplamak",
+      "Bileşen sınırlarını net yapmak ve bağımlılıkları azaltmak",
+      "Sadece daha hızlı CPU almak",
+      "Şifreleri düz metin saklamak",
+      "UI renklerini değiştirmek"
     ],
-    a: "fixed her zaman viewport’a sabitlenir; sticky belirli noktadan sonra yapışır ve konteyner içinde davranır",
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Maintainability",
+    importance: 5,
+    explanation: "Düşük bağlılık (loose coupling) ve yüksek uyum (cohesion) bakım kolaylığı sağlar."
+  },
+  {
+    q: "“Ölçeklenebilirlik (scalability)” en iyi hangi senaryoyla test edilir?",
+    t: "mcq",
+    o: [
+      "Tek kullanıcı login olsun",
+      "10 kullanıcı aynı anda profil açsın",
+      "Trafik 10 kat arttığında sistem hedef metrikleri korusun (örn. p95 < 300ms)",
+      "Buton metni değişsin",
+      "Logo güncellensin"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 2,
+    topic: "Scalability",
+    importance: 4,
+    explanation: "Scalability; yük artınca davranışın ölçülebilir şekilde korunmasıdır."
+  },
+  {
+    q: "“Availability (erişilebilirlik)” ile “reliability (güvenilirlik)” ilişkisi için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Aynı şeydir, fark yoktur",
+      "Availability sadece tasarım, reliability sadece kod demektir",
+      "Reliability iyi olursa availability genelde artar; ama aynı kavram değildir",
+      "Availability sadece CPU ile çözülür",
+      "Reliability sadece UI ile çözülür"
+    ],
+    a: 2,
     difficulty: "hard",
     week: 2,
-    topic: "Position fixed vs sticky",
-    importance: "high",
-    explanation: `fixed: her zaman ekrana sabit (örn. WhatsApp butonu)
-sticky: scroll’da belirli bir noktadan sonra “yapışır” (örn. tablo başlığı)
-
-Örnek:
-.header { position: sticky; top: 0; }`
+    topic: "Kalite İlişkileri",
+    importance: 4,
+    explanation: "Reliability (hata toleransı) availability’i destekler; fakat availability “çalışır durumda olma oranıdır”."
   },
-
   {
-    q: "transform: translateX(20px); kullanmanın, margin-left: 20px;’e göre tipik farkı hangisidir?",
+    q: "“Test edilebilirlik (testability)” için en doğru mimari yaklaşım hangisidir?",
     t: "mcq",
     o: [
-      "transform yerleşimi (flow) değiştirmez; margin düzeni etkiler",
-      "margin hiçbir zaman çalışmaz",
-      "transform sadece yazıyı taşır, kutuyu taşımaz",
-      "margin animasyon için daha hızlıdır",
-      "İkisi aynı performanstadır ve aynı etkiyi verir"
+      "Tüm bağımlılıkları global yapmak",
+      "IO (DB, ağ) ile iş mantığını ayırmak ve bağımlılıkları enjekte edilebilir kılmak",
+      "Sadece daha fazla yorum satırı yazmak",
+      "Tüm fonksiyonları 1000 satır yapmak",
+      "Sadece manuel test yapmak"
     ],
-    a: "transform yerleşimi (flow) değiştirmez; margin düzeni etkiler",
+    a: 1,
     difficulty: "hard",
     week: 2,
-    topic: "Transform vs Layout",
-    importance: "medium",
-    explanation: `transform elemanı görsel olarak kaydırır, komşu elemanların yerleşimi genelde değişmez.
-margin ise “yerleşim” boşluğu yaratarak düzeni etkiler.
-
-Sonuç: Animasyonlarda transform tercih edilir (daha akıcı olabilir).`
+    topic: "Testability",
+    importance: 5,
+    explanation: "Bağımlılıkları ayrıştırmak, unit test yazmayı kolaylaştırır (mock/stub ile)."
   },
-
   {
-    q: "transition ile animation arasındaki en doğru fark hangisidir?",
+    q: "Kalite hedefleri belirsiz yazılırsa en büyük risk hangisidir?",
     t: "mcq",
     o: [
-      "transition sadece JS ile çalışır; animation sadece HTML ile",
-      "transition bir durum değişiminde geçiş yapar; animation keyframes ile kendi başına akabilir",
-      "animation sadece hover’da olur; transition her zaman sonsuz döner",
-      "İkisi sadece renkle ilgilidir",
-      "İkisi aynı şeydir"
+      "Kod daha kısa olur",
+      "Takım otomatik hızlanır",
+      "“Hızlı/kolay/iyi” gibi ölçülemez hedefler yüzünden mimari doğrulanamaz ve tartışma uzar",
+      "UI daha güzel olur",
+      "Veritabanı kendiliğinden optimize olur"
     ],
-    a: "transition bir durum değişiminde geçiş yapar; animation keyframes ile kendi başına akabilir",
+    a: 2,
     difficulty: "medium",
     week: 2,
-    topic: "Transition vs Animation",
-    importance: "medium",
-    explanation: `transition: hover/active gibi bir değişimde yumuşak geçiş
-animation: @keyframes ile bağımsız animasyon akışı
-
-Örnek:
-@keyframes pulse { ... }
-.box { animation: pulse 1s infinite; }`
-  },
-
-  {
-    q: "vh birimi en doğru neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Yazı tipi yüksekliğini",
-      "Viewport (ekran) yüksekliğinin yüzdesini",
-      "Sadece genişliği",
-      "Sadece font kalınlığını",
-      "Sadece margin değerini"
-    ],
-    a: "Viewport (ekran) yüksekliğinin yüzdesini",
-    difficulty: "easy",
-    week: 2,
-    topic: "CSS units (vh)",
-    importance: "medium",
-    explanation: `1vh = ekran yüksekliğinin %1’i.
-Örnek:
-.hero { height: 100vh; }
-Sonuç: Bölüm ekranı tam kaplar.`
-  },
-
-  {
-    q: "display: inline-block; için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Yeni satıra geçer ve tüm satırı kaplar",
-      "Metin gibi yan yana durabilir ama width/height alabilir",
-      "Sadece resimler için geçerlidir",
-      "Flex’i kapatır",
-      "Her zaman görünmez yapar"
-    ],
-    a: "Metin gibi yan yana durabilir ama width/height alabilir",
-    difficulty: "medium",
-    week: 2,
-    topic: "Display inline-block",
-    importance: "medium",
-    explanation: `inline-block:
-- inline gibi yan yana durabilir
-- block gibi boyutlandırılabilir
-
-Örnek:
-.badge { display:inline-block; padding: 6px 10px; }`
-  },
-
-  {
-    q: ":nth-child(2) seçicisi en doğru neyi hedefler?",
-    t: "mcq",
-    o: [
-      "Sadece class’ı 2 olan elemanı",
-      "Ebeveyninin 2. çocuğu olan elemanı",
-      "İkinci sayfayı",
-      "Sadece ikinci satırdaki metni",
-      "Sadece 2 piksel genişliğindeki elemanı"
-    ],
-    a: "Ebeveyninin 2. çocuğu olan elemanı",
-    difficulty: "medium",
-    week: 2,
-    topic: "Pseudo-class nth-child",
-    importance: "low",
-    explanation: `nth-child, sıralamaya göre seçim yapar.
-
-Örnek:
-li:nth-child(2) { font-weight: bold; }
-Sonuç: listedeki 2. li kalın olur.`
+    topic: "Kalite Gereksinimi Yazımı",
+    importance: 4,
+    explanation: "Ölçülemeyen hedef, doğru/yanlış değerlendirmeyi imkânsızlaştırır."
   },
 
   // =========================================================
-  // ==== 3. HAFTA – JavaScript Temelleri + DOM Mantığı (17) ===
+  // ==== 3. HAFTA – Mimari Stiller (10) ======================
   // =========================================================
 
   {
-    q: "JavaScript’te == ile === arasındaki en doğru fark hangisidir?",
+    q: "Monolith mimaride en tipik özellik hangisidir?",
     t: "mcq",
     o: [
-      "== daha katıdır, === daha esnektir",
-      "=== hem değer hem tür (type) karşılaştırır; == tür dönüşümü yapabilir",
-      "İkisi tamamen aynıdır",
-      "== sadece sayılarda çalışır",
-      "=== sadece stringlerde çalışır"
+      "Her servis ayrı deploy edilir",
+      "Bütün uygulama tek deploy edilebilir paket olarak çalışır",
+      "Sadece event-driven çalışır",
+      "Her parça farklı dilde olmak zorundadır",
+      "Hiç veritabanı kullanmaz"
     ],
-    a: "=== hem değer hem tür (type) karşılaştırır; == tür dönüşümü yapabilir",
-    difficulty: "medium",
-    week: 3,
-    topic: "Eşobaşı ve type dönüşümü",
-    importance: "high",
-    explanation: `Örnek:
-"5" == 5   -> true (tür dönüşümü olabilir)
-"5" === 5  -> false (string vs number)
-
-Sınavlarda “strict equality” (===) genelde doğru tercih olarak sorulur.`
-  },
-
-  {
-    q: "typeof operatörü en doğru ne yapar?",
-    t: "mcq",
-    o: [
-      "Bir değişkenin değerini siler",
-      "Bir değişkenin türünü string olarak döndürür",
-      "Bir değişkeni sayıya çevirir",
-      "Kodun hızını artırır",
-      "DOM’u günceller"
-    ],
-    a: "Bir değişkenin türünü string olarak döndürür",
+    a: 1,
     difficulty: "easy",
     week: 3,
-    topic: "typeof",
-    importance: "medium",
-    explanation: `typeof, tür kontrolü için kullanılır.
-
-Örnek:
-typeof 10       -> "number"
-typeof "Yusuf"  -> "string"
-typeof true     -> "boolean"`
+    topic: "Monolith",
+    importance: 4,
+    explanation: "Monolith’te tek uygulama paketi vardır; ölçekleme/deploy genelde birlikte yapılır."
   },
-
   {
-    q: "parseInt('08') ile Number('08') kullanımında en doğru genel fark hangisidir?",
+    q: "Microservices yaklaşımının en belirgin artısı hangisidir?",
     t: "mcq",
     o: [
-      "parseInt her zaman ondalıklı sayı verir, Number vermez",
-      "parseInt metnin başından tam sayı okur; Number tüm metni sayıya çevirmeye çalışır",
-      "Number sadece harfleri kabul eder",
-      "İkisi sadece dizilerde çalışır",
-      "parseInt sadece CSS için kullanılır"
+      "Her zaman daha ucuzdur",
+      "Her zaman daha basittir",
+      "Servisleri bağımsız deploy/ölçekleme imkânı",
+      "Test ihtiyacını ortadan kaldırır",
+      "Log ihtiyacını kaldırır"
     ],
-    a: "parseInt metnin başından tam sayı okur; Number tüm metni sayıya çevirmeye çalışır",
-    difficulty: "hard",
-    week: 3,
-    topic: "Type conversion",
-    importance: "medium",
-    explanation: `Örnek:
-parseInt("12px") -> 12
-Number("12px")   -> NaN
-
-Sonuç: parseInt “başındaki sayıyı alır”, Number daha katıdır.`
-  },
-
-  {
-    q: "NaN değerini doğru kontrol etmenin en güvenli modern yolu hangisidir?",
-    t: "mcq",
-    o: [
-      "x == NaN",
-      "x === NaN",
-      "Number.isNaN(x)",
-      "typeof x === 'NaN'",
-      "x.includes('NaN')"
-    ],
-    a: "Number.isNaN(x)",
-    difficulty: "hard",
-    week: 3,
-    topic: "NaN kontrolü",
-    importance: "medium",
-    explanation: `NaN ile karşılaştırma tuzaktır:
-NaN === NaN false döner.
-
-Doğru:
-Number.isNaN(deger)
-
-Örnek:
-Number.isNaN(Number("abc")) -> true`
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi “falsy” bir değerdir?",
-    t: "mcq",
-    o: ["'0'", "[]", "{}", "0", "'false'"],
-    a: "0",
+    a: 2,
     difficulty: "medium",
     week: 3,
-    topic: "Truthy/Falsy",
-    importance: "medium",
-    explanation: `Falsy değerler (en bilinenler):
-false, 0, "", null, undefined, NaN
-
-Örnek:
-if (0) { ... }  // çalışmaz
-if ("0") { ... } // çalışır (string truthy)`
+    topic: "Microservices",
+    importance: 4,
+    explanation: "Microservice’te bağımsız deploy/scale mümkün; ancak operasyonel karmaşıklık artabilir."
   },
-
   {
-    q: "Template literal (şablon string) kullanımı için doğru örnek hangisidir?",
+    q: "Microservices’in en yaygın zorluğu hangisidir?",
     t: "mcq",
     o: [
-      "'Merhaba ${ad}'",
-      "\"Merhaba ${ad}\"",
-      "`Merhaba ${ad}`",
-      "(Merhaba ${ad})",
-      "<Merhaba ${ad}>"
+      "UI tasarımı yapılamaması",
+      "Dağıtık sistem karmaşıklığı (ağ, gözlemlenebilirlik, data tutarlılığı, servis keşfi)",
+      "Hiç test yazılamaması",
+      "Sadece tek dil kullanma zorunluluğu",
+      "Veritabanı kullanamama"
     ],
-    a: "`Merhaba ${ad}`",
+    a: 1,
+    difficulty: "medium",
+    week: 3,
+    topic: "Microservices Riskleri",
+    importance: 5,
+    explanation: "Dağıtık sistem maliyeti: ağ hataları, tracing, versiyonlama, tutarlılık problemleri."
+  },
+  {
+    q: "Layered (katmanlı) mimaride temel amaç genelde hangisidir?",
+    t: "mcq",
+    o: [
+      "Her katmanın aynı işi yapması",
+      "Sorumlulukları ayırmak (UI, iş mantığı, veri erişim vb.)",
+      "Tüm kodu tek dosyada toplamak",
+      "Sadece performansı artırmak",
+      "Sadece güvenliği artırmak"
+    ],
+    a: 1,
     difficulty: "easy",
     week: 3,
-    topic: "Template literals",
-    importance: "medium",
-    explanation: `Template literal backtick ile yazılır:
-const ad = "Yusuf";
-const mesaj = \`Merhaba \${ad}\`;
-
-Sonuç: mesaj = "Merhaba Yusuf"`
+    topic: "Layered Architecture",
+    importance: 5,
+    explanation: "Katmanlama, sorumluluk ayrımı ile bakım ve anlaşılabilirliği artırır."
   },
-
   {
-    q: "Koşullu kısa yazım (ternary) için doğru örnek hangisidir?",
+    q: "Client–Server mimarisinin en basit tanımı hangisidir?",
     t: "mcq",
     o: [
-      "yas >= 18 ? 'Yetişkin' : 'Çocuk'",
-      "yas >= 18 then 'Yetişkin' else 'Çocuk'",
-      "if ? yas >= 18 : 'Yetişkin'",
-      "yas >= 18 :: 'Yetişkin' ?? 'Çocuk'",
-      "yas => 18 ? 'Yetişkin' : 'Çocuk'"
+      "Sadece mobil uygulamalar için kullanılır",
+      "İstemci istek yapar, sunucu hizmet/yanıt verir",
+      "Her zaman offline çalışır",
+      "Veri tabanı yoktur",
+      "Sadece oyunlarda kullanılır"
     ],
-    a: "yas >= 18 ? 'Yetişkin' : 'Çocuk'",
-    difficulty: "medium",
-    week: 3,
-    topic: "Ternary operator",
-    importance: "medium",
-    explanation: `Ternary: kısa if-else.
-const etiket = yas >= 18 ? "Yetişkin" : "Çocuk";
-
-Sonuç: Tek satırda karar verilir.`
-  },
-
-  {
-    q: "Mantıksal AND (&&) operatörüyle “kısa devre” (short-circuit) davranışı için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Her zaman iki tarafı da çalıştırır",
-      "Sol taraf false ise sağ tarafı çalıştırmadan false benzeri değeri döndürebilir",
-      "Sol taraf true ise her zaman 1 döndürür",
-      "Sadece sayılarda çalışır",
-      "Sadece DOM’da çalışır"
-    ],
-    a: "Sol taraf false ise sağ tarafı çalıştırmadan false benzeri değeri döndürebilir",
-    difficulty: "hard",
-    week: 3,
-    topic: "Short-circuit",
-    importance: "medium",
-    explanation: `Örnek:
-kullanici && kullanici.ad
-
-Eğer kullanici null/undefined ise, hata yerine hızlıca falsey döner.
-Bu, güvenli erişim için basit bir tekniktir.`
-  },
-
-  {
-    q: "Array’de sadece koşulu sağlayan elemanları yeni bir diziye almak için hangi metod uygundur?",
-    t: "mcq",
-    o: ["map", "filter", "reduce", "join", "sliceTo"],
-    a: "filter",
+    a: 1,
     difficulty: "easy",
     week: 3,
-    topic: "Array methods",
-    importance: "high",
-    explanation: `filter yeni bir dizi döndürür.
-
-Örnek:
-const sayilar = [1,2,3,4];
-const cift = sayilar.filter(n => n % 2 === 0);
-
-Sonuç: cift = [2,4]`
+    topic: "Client-Server",
+    importance: 3,
+    explanation: "Client (istemci) talep eder; server (sunucu) işleyip yanıt döner."
   },
-
   {
-    q: "Spread operatörü (...) en doğru ne için kullanılır?",
+    q: "Event-driven mimarinin temel fikri hangisidir?",
     t: "mcq",
     o: [
-      "HTML etiketini kapatmak için",
-      "Dizi/nesne kopyalama ve birleştirme gibi işlemler için",
-      "Sadece sayı yuvarlamak için",
-      "CSS değişkeni tanımlamak için",
-      "DOM’u otomatik yenilemek için"
+      "Her şey senkron çalışır",
+      "Bileşenler olay (event) yayınlar, diğerleri olayı dinleyip tepki verir",
+      "Sadece SQL ile çalışır",
+      "UI olmadan çalışmaz",
+      "Sadece tek makinede çalışır"
     ],
-    a: "Dizi/nesne kopyalama ve birleştirme gibi işlemler için",
+    a: 1,
     difficulty: "medium",
     week: 3,
-    topic: "Spread operator",
-    importance: "medium",
-    explanation: `Örnek:
-const a = [1,2];
-const b = [...a, 3]; // [1,2,3]
-
-Nesne:
-const user2 = { ...user, role: "admin" }`
+    topic: "Event-Driven",
+    importance: 4,
+    explanation: "Publish/Subscribe mantığı ile gevşek bağlılık sağlar; asenkron akışlar yaygındır."
   },
-
   {
-    q: "Destructuring ile bir nesneden alan çekmenin doğru örneği hangisidir?",
+    q: "Pipe-and-Filter stiline en yakın örnek hangisidir?",
     t: "mcq",
     o: [
-      "const {ad} = 'Yusuf'",
-      "const [ad] = { ad: 'Yusuf' }",
-      "const { ad } = { ad: 'Yusuf', yas: 28 }",
-      "const (ad) = { ad: 'Yusuf' }",
-      "const ad => { ad: 'Yusuf' }"
+      "Birden çok veritabanı tablosu",
+      "Verinin aşama aşama işlemden geçmesi (filter) ve boru (pipe) ile aktarılması",
+      "Sadece UI bileşen ağacı",
+      "Sadece login ekranı",
+      "Sadece cache kullanımı"
     ],
-    a: "const { ad } = { ad: 'Yusuf', yas: 28 }",
-    difficulty: "medium",
+    a: 1,
+    difficulty: "hard",
     week: 3,
-    topic: "Destructuring",
-    importance: "medium",
-    explanation: `Destructuring:
-const kisi = { ad: "Yusuf", yas: 28 };
-const { ad, yas } = kisi;
-
-Sonuç: ad = "Yusuf", yas = 28`
+    topic: "Pipe-and-Filter",
+    importance: 3,
+    explanation: "Örn. medya işleme hattı: decode → filter → encode → upload."
   },
-
   {
-    q: "Default parametre (varsayılan değer) için doğru kullanım hangisidir?",
+    q: "Repository (depo) stilinde tipik olarak ne olur?",
     t: "mcq",
     o: [
-      "function selam(ad: 'Misafir') { ... }",
-      "function selam(ad = 'Misafir') { ... }",
-      "function selam('Misafir' = ad) { ... }",
-      "function selam(ad == 'Misafir') { ... }",
-      "function selam(ad => 'Misafir') { ... }"
+      "Her servis kendi verisini asla tutmaz",
+      "Ortak bir veri deposu etrafında bileşenler veri okur/yazar",
+      "Sadece event gönderilir, veri tutulmaz",
+      "UI katmanı yoktur",
+      "Sadece mobilde kullanılır"
     ],
-    a: "function selam(ad = 'Misafir') { ... }",
-    difficulty: "medium",
+    a: 1,
+    difficulty: "hard",
     week: 3,
-    topic: "Default parameters",
-    importance: "low",
-    explanation: `Varsayılan parametre:
-function selam(ad = "Misafir") {
-  return "Merhaba " + ad;
-}
-
-selam() -> "Merhaba Misafir"`
+    topic: "Repository Style",
+    importance: 3,
+    explanation: "Merkezi veri deposu (repository) sistemin kalbidir; entegrasyon noktası olur."
   },
-
   {
-    q: "setTimeout(fn, 1000) en doğru ne yapar?",
+    q: "Microservices için “veri yönetimi” konusunda en doğru genelleme hangisidir?",
     t: "mcq",
     o: [
-      "fn’i tam 1 saniye boyunca sürekli çalıştırır",
-      "fn’i yaklaşık 1 saniye sonra bir kez çalıştırmak için zamanlar",
-      "fn’i hemen çalıştırır ve sonra durdurur",
-      "Sayfayı 1 saniye dondurur",
-      "Sadece CSS animasyonu başlatır"
+      "Tek bir ortak veritabanı her zaman en iyi çözümdür",
+      "Her servis kendi verisinin sahibi olmalı; tutarlılık için entegrasyon stratejisi gerekir",
+      "Veritabanı asla kullanılmaz",
+      "Her servis aynı tabloyu yazar",
+      "Sadece CSV saklanır"
     ],
-    a: "fn’i yaklaşık 1 saniye sonra bir kez çalıştırmak için zamanlar",
+    a: 1,
+    difficulty: "hard",
+    week: 3,
+    topic: "Data Ownership",
+    importance: 5,
+    explanation: "Servis sahipliği (ownership) net olmalı; dağıtık tutarlılık için event/CDC/saga gibi yaklaşımlar doğar."
+  },
+  {
+    q: "“Conway’s Law” mimari açısından en çok neye işaret eder?",
+    t: "mcq",
+    o: [
+      "CPU frekansı artınca mimari iyileşir",
+      "Organizasyon yapısı, üretilen sistemin iletişim yapısına benzer",
+      "UI tasarımcıları backend’i belirler",
+      "Test yazmak gereksizdir",
+      "Veritabanı türü mimariyi etkilemez"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 3,
+    topic: "Conway’s Law",
+    importance: 4,
+    explanation: "Takım sınırları ve iletişim şekli, servis sınırlarını ve modülleri etkiler."
+  },
+
+  // =========================================================
+  // ==== 4. HAFTA – View, Viewpoint, C4, ISO 42010 (8) =======
+  // =========================================================
+
+  {
+    q: "View (görünüm) ile viewpoint (bakış açısı) arasındaki fark hangisidir?",
+    t: "mcq",
+    o: [
+      "Aynı şeydir",
+      "Viewpoint, hangi kurallarla/şablonla bakılacağını; view, o şablona göre üretilmiş çıktıyı ifade eder",
+      "View sadece kod, viewpoint sadece UI’dır",
+      "Viewpoint sadece testtir",
+      "View sadece veritabanıdır"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 4,
+    topic: "View & Viewpoint",
+    importance: 5,
+    explanation: "Viewpoint = tarif/şablon; view = o tarifle çizilmiş gerçek mimari görünüm."
+  },
+  {
+    q: "ISO/IEC/IEEE 42010 standardı en çok neyi standardize eder?",
+    t: "mcq",
+    o: [
+      "Programlama dilini",
+      "Mimari tanımın (architecture description) kavramlarını: stakeholder, concern, view, viewpoint vb.",
+      "Sadece veritabanı normalizasyonunu",
+      "Sadece UI çizimlerini",
+      "Sadece log formatını"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 4,
+    topic: "ISO 42010",
+    importance: 4,
+    explanation: "42010, mimariyi nasıl tanımlayıp iletişim kuracağımızın kavramsal çerçevesini verir."
+  },
+  {
+    q: "C4 Modeli’nin “Container” seviyesi en yakın neyi anlatır?",
+    t: "mcq",
+    o: [
+      "Tek bir fonksiyonun içindeki değişkenleri",
+      "Uygulamadaki ana çalıştırılabilir parçaları (web app, mobile app, API, DB gibi) ve ilişkilerini",
+      "Sadece ekran tasarımını",
+      "Sadece CSS dosyalarını",
+      "Sadece kullanıcı hikayelerini"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 4,
+    topic: "C4 Model",
+    importance: 4,
+    explanation: "Container seviyesi; deploy edilebilir/parçalanmış ana birimleri ve aralarındaki iletişimi gösterir."
+  },
+  {
+    q: "C4 Modeli’nde en üst seviye genelde hangisidir?",
+    t: "mcq",
+    o: [
+      "Code",
+      "Component",
+      "Container",
+      "Context",
+      "Class"
+    ],
+    a: 3,
     difficulty: "easy",
-    week: 3,
-    topic: "Zamanlayıcılar",
-    importance: "medium",
-    explanation: `setTimeout gecikmeli tek çalıştırmadır.
-
-Örnek:
-setTimeout(() => console.log("1 sn geçti"), 1000);
-
-Sonuç: Yaklaşık 1 saniye sonra log atar.`
+    week: 4,
+    topic: "C4 Model",
+    importance: 3,
+    explanation: "Context: sistemin çevresi, kullanıcılar ve dış sistemlerle ilişkisi."
   },
-
   {
-    q: "Bir element seçmek için document.querySelector('.btn') en doğru ne döndürür?",
+    q: "4+1 View Model’de “+1” neyi temsil eder?",
     t: "mcq",
     o: [
-      "Tüm .btn elemanlarının listesi",
-      "İlk eşleşen .btn elemanını (tek eleman) veya hiç yoksa null",
-      "Her zaman bir Array döndürür",
-      "Sadece id ile çalışır",
-      "Sadece CSS dosyasını seçer"
+      "Logo dosyasını",
+      "Geliştirici sayısını",
+      "Senaryoları / use-case’leri (diğer görünümleri doğrulamak için)",
+      "Veritabanını",
+      "Sadece test otomasyonunu"
     ],
-    a: "İlk eşleşen .btn elemanını (tek eleman) veya hiç yoksa null",
+    a: 2,
     difficulty: "medium",
-    week: 3,
-    topic: "DOM seçim (querySelector)",
-    importance: "high",
-    explanation: `querySelector: ilk eşleşen elemanı verir.
-querySelectorAll: tüm eşleşenleri verir.
-
-Örnek:
-const btn = document.querySelector(".btn");
-Sonuç: ilk .btn seçilir.`
+    week: 4,
+    topic: "4+1 View Model",
+    importance: 4,
+    explanation: "Use-case senaryoları, diğer görünüm kararlarını gerçek kullanım üzerinden test eder."
   },
-
   {
-    q: "document.querySelectorAll('.item') ile seçilen sonuç tipi en doğru hangisidir?",
+    q: "Mimari dokümantasyonda “tek diyagram her şeyi anlatır” yaklaşımının temel sorunu nedir?",
     t: "mcq",
     o: [
-      "Tek bir element",
-      "NodeList (liste benzeri), genelde forEach ile gezilebilir",
-      "Sadece string",
-      "Sadece number",
-      "Boolean"
+      "Her zaman doğrudur, sorun yoktur",
+      "Farklı paydaşların farklı concerns’larını tek çizimde net karşılamak zordur",
+      "PDF açılmaz",
+      "Kod derlenmez",
+      "Sunucu yanar"
     ],
-    a: "NodeList (liste benzeri), genelde forEach ile gezilebilir",
-    difficulty: "hard",
-    week: 3,
-    topic: "NodeList",
-    importance: "medium",
-    explanation: `querySelectorAll NodeList döndürür.
-
-Örnek:
-const items = document.querySelectorAll(".item");
-items.forEach(el => console.log(el.textContent));
-
-Sonuç: Her item üzerinde dolaşılır.`
-  },
-
-  {
-    q: "Event objesinde event.target ile event.currentTarget arasındaki en doğru fark hangisidir?",
-    t: "mcq",
-    o: [
-      "İkisi her zaman aynı elemandır",
-      "target: olayı başlatan en içteki eleman; currentTarget: listener’ın bağlı olduğu eleman",
-      "currentTarget sadece mobilde çalışır",
-      "target sadece form submit’te çalışır",
-      "Hiçbiri DOM ile ilgili değildir"
-    ],
-    a: "target: olayı başlatan en içteki eleman; currentTarget: listener’ın bağlı olduğu eleman",
-    difficulty: "hard",
-    week: 3,
-    topic: "Event hedefleri",
-    importance: "high",
-    explanation: `Event delegation mantığının temeli budur.
-
-Örnek:
-<ul> içinde <li> tıklanınca:
-- target: tıklanan li
-- currentTarget: listener ul’da ise ul
-
-Sonuç: Hangi elemana tıklandığını doğru ayırt edersin.`
-  },
-
-  {
-    q: "Event bubbling (olayın yukarı doğru yayılması) sırasında olayı durdurmak için hangi metot kullanılır?",
-    t: "mcq",
-    o: ["event.stopPropagation()", "event.stopDefault()", "event.break()", "event.freeze()", "event.disable()"],
-    a: "event.stopPropagation()",
-    difficulty: "hard",
-    week: 3,
-    topic: "Event propagation",
-    importance: "medium",
-    explanation: `stopPropagation, olayın üst elemanlara yayılmasını engeller.
-
-Örnek:
-btn.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-Sonuç: Parent tıklama handler’ı tetiklenmeyebilir.`
-  },
-
-  {
-    q: "localStorage ile sessionStorage arasındaki en doğru temel fark hangisidir?",
-    t: "mcq",
-    o: [
-      "localStorage sadece 1 saniye tutar, sessionStorage sonsuza kadar",
-      "localStorage tarayıcı kapanınca da kalabilir; sessionStorage sekme kapanınca silinir",
-      "sessionStorage sadece mobilde çalışır",
-      "localStorage sadece sayı saklar",
-      "İkisi de aynı davranır"
-    ],
-    a: "localStorage tarayıcı kapanınca da kalabilir; sessionStorage sekme kapanınca silinir",
+    a: 1,
     difficulty: "medium",
-    week: 3,
-    topic: "Web Storage",
-    importance: "medium",
-    explanation: `localStorage: kalıcı depolama (kullanıcı silene kadar)
-sessionStorage: sekme/oturum bazlı
+    week: 4,
+    topic: "Dokümantasyon",
+    importance: 4,
+    explanation: "Farklı ihtiyaçlar için farklı view’lar gerekir (ops, dev, security, business)."
+  },
+  {
+    q: "Bir mimari diyagramın “yanlış anlaşılma” riskini azaltan en temel pratik hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece renkleri değiştirmek",
+      "Legend/anahtar ve net isimlendirme + sınırların çizilmesi",
+      "PDF’i kilitlemek",
+      "Daha büyük font seçmek",
+      "Sadece screenshot almak"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Diyagram Pratikleri",
+    importance: 3,
+    explanation: "Neyi temsil ettiği belli olmayan kutu/oklar iletişimi bozar; legend ve sınırlar kritik."
+  },
+  {
+    q: "C4 “Component” seviyesi genelde hangi soruya cevap verir?",
+    t: "mcq",
+    o: [
+      "Bu sistemin kullanıcıları kimler?",
+      "Bu container’ın içinde hangi ana modüller/bileşenler var ve nasıl konuşuyorlar?",
+      "Bu fonksiyonun if-else’i kaç satır?",
+      "Bu log satırı neden var?",
+      "Bu ikon kaç piksel?"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 4,
+    topic: "C4 Model",
+    importance: 4,
+    explanation: "Component seviyesi, container içindeki büyük parçaları (ör. AuthService, BillingModule) gösterir."
+  },
 
-Örnek kullanım:
-localStorage.setItem("tema", "dark");
-sessionStorage.setItem("gecici", "1");`
+  // =========================================================
+  // ==== 5. HAFTA – ADR, Değerlendirme, ATAM (6) =============
+  // =========================================================
+
+  {
+    q: "ADR (Architectural Decision Record) temel olarak neyi kayıt altına alır?",
+    t: "mcq",
+    o: [
+      "Sadece commit mesajlarını",
+      "Mimari kararın bağlamını, alternatifleri, seçimi ve sonuçlarını",
+      "Sadece UI renklerini",
+      "Sadece sprint planını",
+      "Sadece test sonuçlarını"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 5,
+    topic: "ADR",
+    importance: 5,
+    explanation: "ADR, “neden böyle yaptık?” sorusunu gelecekte net cevaplayabilmek için yazılır."
+  },
+  {
+    q: "ADR yazmanın en büyük faydası genelde hangisidir?",
+    t: "mcq",
+    o: [
+      "Derleme hızını artırır",
+      "Takım hafızası oluşturur ve kararların nedenlerini görünür kılar",
+      "UI’ı güzelleştirir",
+      "Bug bulmayı imkânsız yapar",
+      "Veritabanını otomatik tasarlar"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "ADR",
+    importance: 4,
+    explanation: "Kararların gerekçesi kaybolmaz; yeni gelen ekip üyeleri hızlanır."
+  },
+  {
+    q: "ATAM (Architecture Tradeoff Analysis Method) en çok ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "UI çizmek için",
+      "Mimariyi kalite hedefleri üzerinden değerlendirmek ve trade-off/riskleri çıkarmak için",
+      "Kod formatlamak için",
+      "Sadece veritabanı yedeklemek için",
+      "Sadece deployment yapmak için"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 5,
+    topic: "ATAM",
+    importance: 4,
+    explanation: "ATAM, kalite senaryolarıyla mimari riskleri ve hassas noktaları ortaya çıkarır."
+  },
+  {
+    q: "ATAM çıktılarından biri olarak en çok hangisi beklenir?",
+    t: "mcq",
+    o: [
+      "Yeni logo",
+      "Risk listesi ve hassas noktalar (sensitivity points) / trade-off noktaları",
+      "Sadece yeni renk paleti",
+      "Sadece daha fazla kod",
+      "Sadece sprint sayısı"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 5,
+    topic: "ATAM",
+    importance: 4,
+    explanation: "ATAM, kararların hangi kaliteyi etkilediğini ve nerede risk biriktiğini görünür kılar."
+  },
+  {
+    q: "“Sensitivity point” mimari değerlendirmede en iyi neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "UI’daki hassas renk",
+      "Bir tasarım kararının belirli bir kalite özelliğini güçlü şekilde etkilemesi",
+      "CPU sıcaklığı",
+      "Log seviyeleri",
+      "Klavye kısayolu"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 5,
+    topic: "Değerlendirme Kavramları",
+    importance: 3,
+    explanation: "Örn. cache stratejisi performansı çok etkiler → sensitivity point."
+  },
+  {
+    q: "Mimari değerlendirmede “risk” ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Kodun uzun olması",
+      "Bir kararın kalite hedefini tutturmama ihtimali ve bunun doğuracağı olumsuz sonuç",
+      "UI’ın çirkin olması",
+      "Sadece internetin yavaş olması",
+      "Sadece RAM’in az olması"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 5,
+    topic: "Risk Yönetimi",
+    importance: 4,
+    explanation: "Risk = olasılık × etki; mimari, yüksek riskli alanları erken görmeye çalışır."
+  },
+
+  // =========================================================
+  // ==== 6. HAFTA – MVC, Clean, Hexagonal, Bağımlılık (6) ====
+  // =========================================================
+
+  {
+    q: "MVC’de “Model” katmanı en çok hangi sorumluluğu taşır?",
+    t: "mcq",
+    o: [
+      "Butonların yerini ayarlamak",
+      "Veri ve iş kurallarını temsil etmek (domain + business logic)",
+      "Sadece HTTP istek atmak",
+      "Sadece CSS yazmak",
+      "Sadece test raporu üretmek"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "MVC",
+    importance: 5,
+    explanation: "Model; uygulamanın “anlamını” ve iş kurallarını taşır, UI’dan bağımsızdır."
+  },
+  {
+    q: "MVC’de “Controller” genelde ne yapar?",
+    t: "mcq",
+    o: [
+      "Veritabanı tablolarını çizer",
+      "Kullanıcı girdisini alır, gerekli iş akışını başlatır, view/model arasında koordinasyon sağlar",
+      "Sadece animasyon yapar",
+      "Sadece log temizler",
+      "Sadece cache siler"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "MVC",
+    importance: 5,
+    explanation: "Controller, kullanıcı aksiyonunu uygulama davranışına çeviren “orkestra şefi” gibidir."
+  },
+  {
+    q: "Clean Architecture / Hexagonal (Ports & Adapters) yaklaşımında temel ilke hangisidir?",
+    t: "mcq",
+    o: [
+      "İş mantığı UI’a sıkı bağlı olmalı",
+      "Bağımlılıkların dışarıdan içeriye doğru akması (domain merkezde, dış dünya adaptör)",
+      "Her şey tek dosyada olmalı",
+      "Sadece microservices ile olur",
+      "Veritabanı her şeyi belirler"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 6,
+    topic: "Clean/Hexagonal",
+    importance: 5,
+    explanation: "Merkez (domain) dışa bağımlı olmaz; DB/UI gibi detaylar adaptör olur."
+  },
+  {
+    q: "Dependency Inversion Principle (DIP) pratikte çoğunlukla ne sağlar?",
+    t: "mcq",
+    o: [
+      "Daha büyük ikon",
+      "İş mantığını framework/DB gibi detaylardan bağımsız tutmayı",
+      "Her zaman daha hızlı çalışmayı",
+      "Her zaman daha ucuz bulutu",
+      "Hiç test yazmamayı"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 6,
+    topic: "SOLID & Bağımlılık",
+    importance: 4,
+    explanation: "DIP sayesinde domain, dış bağımlılıklara değil arayüzlere (abstraction) bağlı kalır."
+  },
+  {
+    q: "Hexagonal mimaride “port” ile “adapter” en iyi nasıl eşleşir?",
+    t: "mcq",
+    o: [
+      "Port = somut kütüphane, Adapter = domain kuralı",
+      "Port = arayüz/kontrat, Adapter = bu kontratı dış sistemle (DB/API/UI) gerçekleştiren parça",
+      "Port = ikon, Adapter = renk",
+      "Port = test, Adapter = deploy",
+      "Port = tablo, Adapter = kolon"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 6,
+    topic: "Ports & Adapters",
+    importance: 4,
+    explanation: "Port “ne isterim?”; adapter “bunu şu teknolojiyle nasıl yaparım?” cevabıdır."
+  },
+  {
+    q: "Layered mimaride “katman atlama” (UI doğrudan DB’ye bağlanması gibi) en çok neyi bozar?",
+    t: "mcq",
+    o: [
+      "Sadece ikon boyutunu",
+      "Sorumluluk ayrımını ve bakım/test edilebilirliği",
+      "Sadece internet hızını",
+      "Sadece ekran parlaklığını",
+      "Hiçbir şeyi bozmaz"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "Layered Architecture",
+    importance: 4,
+    explanation: "Katman atlama bağımlılıkları karıştırır; değişiklik maliyeti ve bug riski artar."
+  },
+
+  // =========================================================
+  // ==== EXTRA (10) – Karışık / Sınav Tarzı ==================
+  // =========================================================
+
+  {
+    q: "“Architecture is about the important stuff... whatever that is” ifadesi en çok ne anlatır?",
+    t: "mcq",
+    o: [
+      "Mimari tamamen rastgeledir",
+      "Mimarinin kapsamı projeye göre değişir; önemli olan kararlar mimaridir",
+      "Mimari sadece UI’dır",
+      "Mimari sadece DB’dir",
+      "Mimari sadece testtir"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 1,
+    topic: "Mimari Kavramı",
+    importance: 3,
+    explanation: "Mimari, proje bağlamına göre “kritik kararlar” kümesidir."
+  },
+  {
+    q: "Bir sistemde “bileşen sınırları” yanlış çizilirse en olası sonuç hangisidir?",
+    t: "mcq",
+    o: [
+      "Her şey otomatik hızlanır",
+      "Bağımlılıklar artar, değişiklikler zincirleme etkiler, ekipler birbirini bloklar",
+      "Test ihtiyacı azalır",
+      "Hiçbir şey değişmez",
+      "Sadece ikon kalitesi düşer"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Modülerlik",
+    importance: 4,
+    explanation: "Yanlış sınırlar, coupling’i artırır; teslimat hızı düşer."
+  },
+  {
+    q: "“Loose coupling” ile en uyumlu hedef hangisidir?",
+    t: "mcq",
+    o: [
+      "Değişiklikleri daha izole yapmak ve bakım kolaylığı",
+      "Tek dosyada her şeyi toplamak",
+      "Şifreleri düz metin saklamak",
+      "Hiç log tutmamak",
+      "UI’ı büyütmek"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Coupling",
+    importance: 4,
+    explanation: "Loose coupling: bir parçayı değiştirince diğerleri minimum etkilenir."
+  },
+  {
+    q: "SLA/SLO gibi kavramlar mimaride en çok hangi alanda kullanılır?",
+    t: "mcq",
+    o: [
+      "Renk seçimi",
+      "Hizmet seviyesini ölçmek (availability/latency hedefleri) ve operasyonel beklenti yönetimi",
+      "Sadece test yazmak",
+      "Sadece kod formatlamak",
+      "Sadece ikon boyutu"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 2,
+    topic: "Operasyonel Kalite",
+    importance: 3,
+    explanation: "SLO hedefleri (örn. p95 latency, uptime) mimari ve operasyonu yönlendirir."
+  },
+  {
+    q: "Bir mimari karar verirken “alternatifler” bölümünü yazmanın temel sebebi nedir?",
+    t: "mcq",
+    o: [
+      "Metni uzatmak",
+      "Seçimin nedenini ve reddedilen seçeneklerin gerekçesini görünür kılmak",
+      "UI’ı renklendirmek",
+      "Sadece testleri kapatmak",
+      "Veritabanını silmek"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 5,
+    topic: "ADR Pratiği",
+    importance: 4,
+    explanation: "Alternatifler, gelecekte “neden bunu seçtik?” sorusuna net cevap verir."
+  },
+  {
+    q: "“Observability (gözlemlenebilirlik)” dağıtık sistemlerde en çok hangi üçlüyle anılır?",
+    t: "mcq",
+    o: [
+      "HTML-CSS-JS",
+      "CPU-RAM-GPU",
+      "Logs-Metrics-Traces",
+      "PNG-JPG-WEBP",
+      "FTP-SMTP-POP3"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 3,
+    topic: "Operasyon",
+    importance: 4,
+    explanation: "Microservices dünyasında logs/metrics/traces olmadan hata ayıklamak çok zorlaşır."
+  },
+  {
+    q: "“Consistency” ile ilgili olarak CAP teoremi bağlamında en doğru yaklaşım hangisidir?",
+    t: "mcq",
+    o: [
+      "Her sistem aynı anda her şeyi maksimum sağlar",
+      "Dağıtık sistemde bazı durumlarda tutarlılık yerine erişilebilirlik/partition tolerance dengesi seçilir",
+      "CAP sadece UI için geçerlidir",
+      "CAP veritabanıyla ilgisizdir",
+      "CAP sadece tek makinede geçerlidir"
+    ],
+    a: 1,
+    difficulty: "hard",
+    week: 3,
+    topic: "Dağıtık Sistemler",
+    importance: 3,
+    explanation: "Partition durumlarında bazı özellikler arasında seçim yapılır; mimari bu dengeyi yönetir."
+  },
+  {
+    q: "Bir “mimari stil” seçimi en çok neyi etkiler?",
+    t: "mcq",
+    o: [
+      "Sadece ikon boyutunu",
+      "Kalite özelliklerini (performans, ölçeklenebilirlik, bakım, deploy kolaylığı vb.)",
+      "Sadece yazı tipini",
+      "Sadece cihaz modelini",
+      "Sadece kullanıcı adını"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mimari Stiller",
+    importance: 4,
+    explanation: "Stil seçimi, hangi kalite hedeflerinin kolay/zor olacağını belirler."
+  },
+  {
+    q: "“Single point of failure (SPOF)” en çok hangi durumla ilgilidir?",
+    t: "mcq",
+    o: [
+      "Tek bir bileşenin çökmesiyle tüm sistemin durması riski",
+      "Tek bir ikonun bozulması",
+      "Tek bir CSS kuralı",
+      "Tek bir kullanıcı",
+      "Tek bir log satırı"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Availability",
+    importance: 4,
+    explanation: "SPOF azaltmak için redundancy/failover gibi yaklaşımlar kullanılır."
+  },
+  {
+    q: "Bir sistemi “modüler” yapmak mimari açıdan en çok ne kazandırır?",
+    t: "mcq",
+    o: [
+      "Değişiklikleri parça parça yönetme, daha iyi test edilebilirlik ve bakım kolaylığı",
+      "Her zaman daha fazla bug",
+      "Her zaman daha pahalı sunucu",
+      "Her zaman daha yavaş UI",
+      "Hiçbir kazanç"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Modülerlik",
+    importance: 5,
+    explanation: "Modülerlik değişiklik maliyetini düşürür; karmaşıklığı yönetilebilir parçalara böler."
   }
 ];
