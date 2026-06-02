@@ -1,921 +1,875 @@
-// Mobil Programlama – 50 Soruluk Soru Bankası (MCQ)
+// Mobil Programlama – Vize Tarzı Kısa Bilgi Testi 2 (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 1. HAFTA – Mobil Programlamaya Giriş, Donanım ve Sensörler (12) =
+  // ==== 1. HAFTA – Mobil Giriş, Ağlar, Donanım, Sensörler (12)
   // =========================================================
 
   {
-    q: "Mobil uygulamanın masaüstü yazılımdan temel farkı aşağıdakilerden hangisidir?",
+    q: "Mobil bilişim hangi temel fikre dayanır?",
     t: "mcq",
     o: [
-      "Her zaman web tarayıcıda çalışması",
-      "Sadece kablolu ağ kullanması",
-      "Taşınabilir ve kaynakları sınırlı cihazlarda belirli bir işi optimize biçimde yapması",
-      "Sunucu tarafında çalışmasının zorunlu olması",
-      "Donanım özelliklerinden bağımsız geliştirilmesi"
+      "Zamandan ve mekândan bağımsız erişim",
+      "Sadece masaüstü kullanımı",
+      "Kablolu ağ zorunluluğu",
+      "Tek kullanıcı desteği",
+      "Sunucusuz çalışma"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Bilişim",
+    importance: 5,
+    explanation: "Mobil bilişim, kullanıcının hareket hâlindeyken de bilgiye ve servislere erişebilmesini sağlar."
+  },
+  {
+    q: "0G sistemler en çok neyle ilişkilidir?",
+    t: "mcq",
+    o: [
+      "5G internet",
+      "Radyo tabanlı araç telefonları",
+      "Mobil uygulama mağazaları",
+      "HD video akışı",
+      "Bulut oyun"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Ağ Tarihi",
+    importance: 3,
+    explanation: "0G dönemi radyo tabanlı, genellikle araç içi ve operatör destekli mobil iletişim sistemlerini ifade eder."
+  },
+  {
+    q: "1G ağlarda veri iletimi nasıldı?",
+    t: "mcq",
+    o: [
+      "Tamamen dijitaldi",
+      "Yalnızca Wi-Fi kullanırdı",
+      "Analogdu",
+      "Fiber tabanlıydı",
+      "Bulut tabanlıydı"
     ],
     a: 2,
     difficulty: "easy",
     week: 1,
-    topic: "Mobil Uygulama Tanımı",
-    importance: 5,
-    explanation: "Mobil uygulama; pil, bellek ve sensör gibi kısıtları olan taşınabilir cihazlarda belirli işlevleri optimize biçimde yerine getirir."
-  },
-
-  {
-    q: "Mobil bilişim alanının temelini oluşturan dört unsur hangi seçenekte doğru verilmiştir?",
-    t: "mcq",
-    o: [
-      "Veritabanı, kablo, masaüstü CPU, yazıcı",
-      "Kablosuz iletişim, küresel ağlar, cihaz minyatürleşmesi ve mobil yazılım platformları",
-      "Sadece internet, klavye, monitör ve fare",
-      "Yalnızca işletim sistemi, RAM, disk ve ekran kartı",
-      "Sunucu, masaüstü uygulama, modem ve tarayıcı"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 1,
-    topic: "Mobil Bilişim",
+    topic: "Mobil Ağ Nesilleri",
     importance: 4,
-    explanation: "Mobil bilişim; kablosuz iletişim, küresel altyapı ağları, cihazların küçülmesi ve mobil yazılım platformları üzerinde yükselir."
+    explanation: "1G sistemler analog ses iletimiyle çalışır."
   },
-
   {
-    q: "2G mobil ağların ayırt edici özelliği aşağıdakilerden hangisidir?",
+    q: "4G en çok hangi kullanımları güçlendirmiştir?",
     t: "mcq",
     o: [
-      "Ultra düşük gecikme ve IoT desteği",
-      "Sadece analog ses iletimi",
-      "HD video akışı ve bulut oyun",
-      "Dijital sinyalleşme, SMS ve MMS desteği",
-      "AR/VR için gigabit veri aktarımı"
+      "Sadece analog aramayı",
+      "Manuel operatörlü çağrıyı",
+      "Faks göndermeyi",
+      "HD video ve gerçek zamanlı servisleri",
+      "Sadece SMS göndermeyi"
     ],
     a: 3,
     difficulty: "easy",
     week: 1,
     topic: "Mobil Ağ Nesilleri",
     importance: 4,
-    explanation: "2G dönemi GSM tabanlı dijital sinyalleşme, SMS ve MMS gibi servislerle öne çıkar."
+    explanation: "4G/LTE; yüksek hızlı internet, HD video, bulut servisleri ve gerçek zamanlı uygulamaları yaygınlaştırmıştır."
   },
-
   {
-    q: "5G ağların ders içeriğinde vurgulanan temel katkısı hangisidir?",
+    q: "Motorola DynaTAC 8000X neyin örneğidir?",
     t: "mcq",
     o: [
-      "Ultra düşük gecikme, IoT entegrasyonu ve yüksek veri kapasitesi",
-      "Yalnızca analog ses iletişimi",
-      "Manuel operatörle arama yapılması",
-      "Sadece SMS ve MMS gönderimi",
-      "Fiziksel klavye kullanımının zorunlu olması"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "5G Teknolojisi",
-    importance: 4,
-    explanation: "5G; düşük gecikme, IoT/AR-VR desteği ve 1-20 Gbps aralığına çıkan veri kapasitesiyle anlatılır."
-  },
-
-  {
-    q: "Tarihteki ilk gerçek akıllı telefon hamlesi olarak verilen cihaz hangisidir?",
-    t: "mcq",
-    o: [
-      "T-Mobile G1",
-      "iPhone OS 1.0",
-      "Motorola DynaTAC 8000X",
-      "Windows Phone 7",
-      "IBM Simon"
+      "İlk Android cihaz",
+      "İlk iOS cihaz",
+      "İlk tablet bilgisayar",
+      "İlk Windows Phone cihazı",
+      "Erken dönem cep telefonu"
     ],
     a: 4,
     difficulty: "medium",
+    week: 1,
+    topic: "Mobil Cihaz Tarihi",
+    importance: 3,
+    explanation: "Motorola DynaTAC 8000X erken dönem taşınabilir cep telefonu örneklerinden biridir."
+  },
+  {
+    q: "2007 yılında mobil dünyada hangi olay öne çıkar?",
+    t: "mcq",
+    o: [
+      "iPhone'un duyurulması",
+      "Android'in Google tarafından satın alınması",
+      "Windows Phone 8'in çıkması",
+      "IBM Simon'ın tanıtılması",
+      "5G'nin yaygınlaşması"
+    ],
+    a: 0,
+    difficulty: "easy",
     week: 1,
     topic: "Akıllı Telefon Tarihi",
-    importance: 4,
-    explanation: "IBM Simon; dokunmatik ekran, faks, e-posta ve yüklenebilir uygulamalarla ilk gerçek akıllı telefon örneği olarak verilir."
-  },
-
-  {
-    q: "Mobil cihazlarda ARM tabanlı RISC mimarisinin tercih edilmesinin ana nedeni nedir?",
-    t: "mcq",
-    o: [
-      "Sadece masaüstü uygulamalarını çalıştırması",
-      "Donanım sensörlerini devre dışı bırakması",
-      "Düşük güç tüketimi ile yüksek performans arasında denge sağlaması",
-      "Veritabanı tablolarını otomatik oluşturması",
-      "İşletim sistemi güncellemesini engellemesi"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 1,
-    topic: "Donanım Mimarisi",
     importance: 5,
-    explanation: "ARM/RISC yaklaşımı mobil cihazlarda pil tüketimi ve performans arasında verimli bir denge kurmak için kullanılır."
+    explanation: "2007'de iPhone'un duyurulması modern dokunmatik akıllı telefon döneminin önemli kırılma noktasıdır."
   },
-
   {
-    q: "Process Killing kavramı mobil işletim sistemlerinde neyi ifade eder?",
+    q: "T-Mobile G1 hangi platformun ilk ticari cihazıdır?",
     t: "mcq",
     o: [
-      "Uygulamanın mağazadan silinmesini",
-      "Ön plandaki performansı korumak için arka plan uygulamalarının kapatılmasını",
-      "Kullanıcı arayüzünün yeniden tasarlanmasını",
-      "Sensörlerin fabrika ayarına dönmesini",
-      "Ağ bağlantısının şifrelenmesini"
+      "iOS",
+      "Android",
+      "Windows Phone",
+      "BlackBerry OS",
+      "Palm OS"
     ],
     a: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 1,
-    topic: "Bellek Yönetimi",
+    topic: "Android Tarihi",
     importance: 5,
-    explanation: "Kaynaklar kısıtlı olduğunda sistem, ön plandaki deneyimi korumak için arka plandaki süreçleri dondurabilir veya sonlandırabilir."
+    explanation: "T-Mobile G1, 2008'de çıkan ilk ticari Android cihazdır."
   },
-
   {
-    q: "İvmeölçer (accelerometer) temel olarak neyi ölçer?",
+    q: "Barometre hangi değeri ölçer?",
     t: "mcq",
     o: [
-      "Üç eksende ivmeyi",
-      "Ekranın piksel yoğunluğunu",
-      "Batarya sıcaklığını",
-      "İşlemci çekirdek sayısını",
-      "Kablosuz ağ şifresini"
+      "Manyetik alan",
+      "Dönüş hızı",
+      "Hava basıncı",
+      "Yakınlık",
+      "Ekran rengi"
     ],
-    a: 0,
+    a: 2,
     difficulty: "easy",
     week: 1,
     topic: "Sensörler",
     importance: 4,
-    explanation: "İvmeölçer üç eksendeki ivmeyi ölçer; ekran döndürme, adım sayma ve oyun kontrollerinde kullanılır."
+    explanation: "Barometre hava basıncını ölçer; yükseklik tahmini ve hava durumu gibi alanlarda kullanılabilir."
   },
-
   {
-    q: "Jiroskop (gyroscope) hangi kullanım alanıyla en doğrudan ilişkilidir?",
+    q: "Manyetometre hangi işlevle ilişkilidir?",
     t: "mcq",
     o: [
-      "Temassız ödeme",
-      "Otomatik ekran parlaklığı",
-      "Dosya sistemi yönetimi",
-      "Dönüş hızını algılama ve AR/VR deneyimleri",
-      "Veritabanı normalizasyonu"
+      "Batarya şarjı",
+      "Kamera çözünürlüğü",
+      "Ekran parlaklığı",
+      "Pusula yönü",
+      "Dosya sıkıştırma"
     ],
     a: 3,
     difficulty: "easy",
     week: 1,
     topic: "Sensörler",
     importance: 4,
-    explanation: "Jiroskop dönüş hızını ölçer; AR/VR, 360 derece içerik ve hassas oyun kontrollerinde önemlidir."
+    explanation: "Manyetometre dünyanın manyetik alanını algılar ve pusula işlevinde kullanılır."
   },
-
   {
-    q: "Yakınlık sensörünün (proximity) tipik görevi nedir?",
+    q: "Işık sensörü ne için kullanılır?",
     t: "mcq",
     o: [
-      "Uydu sinyaliyle konum bulmak",
-      "Hava basıncı ölçmek",
-      "Grafik motorunu hızlandırmak",
-      "Uygulama paketini imzalamak",
-      "Arama sırasında cihaz yüze yaklaştığında ekranı kapatmak"
+      "Konum bulmak",
+      "Titreşim ölçmek",
+      "Ağ paketi izlemek",
+      "Ses kaydetmek",
+      "Otomatik parlaklık ayarı"
     ],
     a: 4,
     difficulty: "easy",
     week: 1,
     topic: "Sensörler",
-    importance: 3,
-    explanation: "Yakınlık sensörü nesne yakınlığını algılar; telefon görüşmesinde ekranın kapanması bunun klasik örneğidir."
+    importance: 4,
+    explanation: "Işık sensörü ortam ışığını ölçerek ekran parlaklığının otomatik ayarlanmasına yardımcı olur."
   },
-
   {
-    q: "Android Application Framework katmanının görevi hangisidir?",
+    q: "Listener/Observer yapısı sensörlerde neden kullanılır?",
     t: "mcq",
     o: [
-      "Cihazın fiziksel ekran kablosunu yönetmek",
-      "Geliştiricilere Activity Manager, Window Manager ve bildirim gibi Java/Kotlin API servisleri sunmak",
-      "Sadece bootloader yazılımını çalıştırmak",
-      "Uygulamaları App Store'a göndermek",
-      "Donanım üreticisinin kamera sürücüsünü üretmek"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 1,
-    topic: "Android Katmanları",
-    importance: 5,
-    explanation: "Application Framework, geliştiricinin uygulama yazarken kullandığı temel Android servislerini API olarak sunar."
-  },
-
-  {
-    q: "Native geliştirme yaklaşımı için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "En yüksek performans ve en kapsamlı donanım erişimi sağlar, ancak maliyeti yüksektir",
-      "WebView içinde HTML, CSS ve JavaScript çalıştırır",
-      "Her zaman tek kod tabanı ile bütün platformlara çıkar",
-      "Donanım özelliklerine erişimi bilinçli olarak engeller",
-      "Sadece sunucu taraflı uygulamalar için kullanılır"
+      "Değişiklik olduğunda uygulamayı haberdar etmek için",
+      "Telefonu kapatmak için",
+      "Ekranı fiziksel olarak büyütmek için",
+      "APK dosyasını imzalamak için",
+      "Veritabanı tablosu silmek için"
     ],
     a: 0,
     difficulty: "medium",
     week: 1,
-    topic: "Geliştirme Yaklaşımları",
+    topic: "Sensör Programlama",
     importance: 5,
-    explanation: "Native geliştirme platformun resmi dilleriyle yapılır; performans ve donanım erişimi yüksektir fakat iki platform için maliyet artabilir."
+    explanation: "Sensör verileri olay tabanlı izlenir; veri değiştiğinde uygulama bilgilendirilir."
+  },
+  {
+    q: "Mobilde pil yönetimi neden kritiktir?",
+    t: "mcq",
+    o: [
+      "Masaüstü uygulamaları hızlandırdığı için",
+      "Cihaz sınırlı güç kaynağıyla çalıştığı için",
+      "Tüm uygulamalar kablolu olduğu için",
+      "Ekran her zaman kapalı olduğu için",
+      "Sensör kullanılmadığı için"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Donanım",
+    importance: 5,
+    explanation: "Mobil cihazlar batarya ile çalıştığı için uygulamanın enerji tüketimi doğrudan kullanıcı deneyimini etkiler."
   },
 
   // =========================================================
-  // ==== 2. HAFTA – Mobil İşletim Sistemleri Analizi (13) =========
+  // ==== 2. HAFTA – Mobil İşletim Sistemleri (13)
   // =========================================================
 
   {
-    q: "Symbian, BlackBerry OS ve Palm OS gibi erken mobil sistemlerin temel eksikliği neydi?",
+    q: "Symbian hangi dönemde öne çıkmıştır?",
     t: "mcq",
     o: [
-      "Hiçbir cihazda çalışmamaları",
-      "Sadece masaüstü bilgisayarlara kurulmaları",
-      "Modern sezgisel arayüz ve güçlü uygulama ekosistemi sunamamaları",
-      "Bulut bilişim zorunluluğu getirmeleri",
-      "Sadece 5G ağlarda çalışmaları"
+      "2020 sonrası",
+      "5G dönemi",
+      "2000'lerin başı",
+      "Windows 11 dönemi",
+      "Sadece 1980'ler"
     ],
     a: 2,
     difficulty: "medium",
     week: 2,
-    topic: "Mobil İşletim Sistemleri Tarihi",
-    importance: 4,
-    explanation: "Bu platformlar dönemin önemli sistemleri olsa da modern kullanıcı deneyimi ve uygulama ekosistemi beklentilerini karşılayamadı."
+    topic: "Mobil OS Tarihi",
+    importance: 3,
+    explanation: "Symbian, 2000'lerin başında önemli pazar payına sahip erken akıllı telefon işletim sistemlerinden biridir."
   },
-
   {
-    q: "Android'in tarihsel gelişimi için doğru eşleşme hangisidir?",
+    q: "Android'in temel stratejisi neydi?",
     t: "mcq",
     o: [
-      "2007'de Microsoft tarafından geliştirildi",
-      "2003'te Android Inc. olarak başladı, 2005'te Google tarafından satın alındı",
-      "2014'te Apple tarafından iOS yerine çıkarıldı",
-      "2020'de Windows NT çekirdeğine taşındı",
-      "1992'de IBM Simon ile birlikte duyuruldu"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 2,
-    topic: "Android Tarihi",
-    importance: 5,
-    explanation: "Ders içeriğinde Android'in 2003'te Android Inc. ile başladığı ve 2005'te Google tarafından satın alındığı belirtilir."
-  },
-
-  {
-    q: "Android'in Apache lisansı altında sunulmasının sonucu ne olmuştur?",
-    t: "mcq",
-    o: [
-      "Sadece Apple cihazlarında çalışması",
-      "Uygulama mağazasının kapanması",
-      "Windows Phone 7 cihazlarının güncellenmesi",
-      "Samsung, Xiaomi ve benzeri üreticilerce hızla benimsenmesi",
-      "Swift dilinin zorunlu hale gelmesi"
+      "Sadece Apple cihazlarında çalışmak",
+      "Kapalı donanım üretmek",
+      "Windows CE'yi sürdürmek",
+      "Açık ve esnek platform sunmak",
+      "Uygulama geliştirmeyi yasaklamak"
     ],
     a: 3,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 2,
     topic: "Android Ekosistemi",
-    importance: 4,
-    explanation: "Açık ve esnek lisans modeli, farklı donanım üreticilerinin Android'i benimsemesini kolaylaştırmıştır."
+    importance: 5,
+    explanation: "Google'ın Android stratejisi açık kaynaklı, esnek ve farklı üreticilere uyarlanabilir bir platform sunmaktı."
   },
-
   {
-    q: "iOS için kullanılan “kapalı bahçe” modeli en çok neyi anlatır?",
+    q: "iOS'in güçlü tarafı hangisidir?",
     t: "mcq",
     o: [
-      "Apple'ın donanım ve yazılım üzerinde tam kontrol kurduğu kapalı ekosistemi",
-      "Android'in açık kaynaklı lisans yapısını",
-      "Windows Phone'un NT çekirdeğine geçişini",
-      "Uygulamanın sadece web tarayıcıda çalışmasını",
-      "Veritabanı normalizasyonunu"
+      "Sınırsız üretici özelleştirmesi",
+      "Tamamen açık kaynak olması",
+      "Windows NT kullanması",
+      "Sadece düşük seviye cihazlara yönelik olması",
+      "Donanım-yazılım entegrasyonu"
     ],
-    a: 0,
+    a: 4,
     difficulty: "easy",
     week: 2,
     topic: "iOS Ekosistemi",
     importance: 5,
-    explanation: "iOS, Apple'ın donanım-yazılım bütünlüğünü kontrol ettiği kapalı ekosistem modeliyle açıklanır."
+    explanation: "iOS, Apple'ın donanım ve yazılımı birlikte kontrol etmesi sayesinde yüksek entegrasyon sağlar."
   },
-
   {
-    q: "Windows Phone 8'e geçişte geliştirici güvenini sarsan temel karar hangisidir?",
+    q: "Windows Phone 7 hangi yılda piyasaya sürülmüştür?",
     t: "mcq",
     o: [
-      "C# dilinin desteklenmesi",
-      "Canlı kutucukların kullanılması",
-      "Visual Studio entegrasyonu",
-      "UWP hedefinin duyurulması",
-      "Çekirdeğin Windows CE'den Windows NT'ye taşınması ve eski cihazların güncellenememesi"
+      "2010",
+      "2003",
+      "2005",
+      "2008",
+      "2025"
     ],
-    a: 4,
+    a: 0,
     difficulty: "medium",
     week: 2,
     topic: "Windows Phone",
-    importance: 4,
-    explanation: "Windows Phone 8 ile NT çekirdeğine geçiş, Windows Phone 7 cihazlarının güncelleme dışı kalmasına yol açmıştır."
+    importance: 3,
+    explanation: "Windows Phone 7, 2010 yılında Android ve iOS'e modern rakip olarak piyasaya sürülmüştür."
   },
-
   {
-    q: "Android HAL katmanı hangi amacı taşır?",
+    q: "Live Tiles hangi platformla ilişkilidir?",
     t: "mcq",
     o: [
-      "Kullanıcıya uygulama ikonlarını göstermek",
-      "App Store inceleme sürecini yönetmek",
-      "Donanım özelliklerine üst katmanların standart arayüzlerle erişmesini sağlamak",
-      "Swift kodunu makine koduna çevirmek",
-      "Sadece reklam gelirlerini yönetmek"
+      "Android",
+      "Windows Phone",
+      "iOS",
+      "Symbian",
+      "Palm OS"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "Windows Phone",
+    importance: 4,
+    explanation: "Canlı kutucuklar yani Live Tiles, Windows Phone'un Metro tasarım diliyle öne çıkan özelliğidir."
+  },
+  {
+    q: "Android'in en alt mimari katmanı hangisidir?",
+    t: "mcq",
+    o: [
+      "Application Framework",
+      "System Apps",
+      "Linux Kernel",
+      "UIKit",
+      "SwiftUI"
     ],
     a: 2,
-    difficulty: "hard",
+    difficulty: "medium",
     week: 2,
     topic: "Android Mimarisi",
     importance: 5,
-    explanation: "HAL, kamera, ses, Bluetooth gibi cihaz özellikleri için üst katmanlara standart erişim yüzeyi sağlar."
+    explanation: "Android'in en alt katmanı Linux çekirdeğidir; bellek, süreç, güvenlik ve sürücülerden sorumludur."
   },
-
   {
-    q: "iOS Core Services katmanında aşağıdakilerden hangisi yer alır?",
+    q: "Android'de yüksek performanslı yerel işler için hangi kütüphaneler kullanılır?",
     t: "mcq",
     o: [
-      "Sadece dokunmatik ekran hareketleri",
-      "Core Data, CloudKit ve Core Location gibi temel servisler",
-      "Android Binder IPC mekanizması",
-      "Silverlight ve XAML arayüzleri",
-      "APK paketleme araçları"
+      "Sadece JavaScript",
+      "Sadece CSS",
+      "Sadece XML",
+      "Native C/C++ Libraries",
+      "App Store Kit"
     ],
-    a: 1,
+    a: 3,
     difficulty: "medium",
+    week: 2,
+    topic: "Android Mimarisi",
+    importance: 4,
+    explanation: "Grafik, medya, SQLite gibi yüksek performans gerektiren işlerde Native C/C++ kütüphaneleri kullanılır."
+  },
+  {
+    q: "iOS çekirdeği hangi yapı üzerine kuruludur?",
+    t: "mcq",
+    o: [
+      "Linux",
+      "Windows NT",
+      "Dalvik",
+      "CLR",
+      "XNU"
+    ],
+    a: 4,
+    difficulty: "hard",
     week: 2,
     topic: "iOS Mimarisi",
     importance: 4,
-    explanation: "Core Services; veri yönetimi, ağ/bulut servisleri ve konum gibi UI dışı temel servisleri sağlar."
+    explanation: "iOS, Darwin tabanlı XNU çekirdeği üzerine kuruludur."
   },
-
   {
-    q: "UWP'nin Windows 10 Mobile ile hedeflediği temel fikir nedir?",
+    q: "Cocoa Touch katmanı neyi içerir?",
     t: "mcq",
     o: [
-      "Sadece Android uygulaması derlemek",
-      "iOS uygulamalarını SwiftUI ile yazmak",
-      "Telefonlarda arka plan servislerini tamamen kapatmak",
-      "Tek uygulama paketinin farklı Windows cihaz ailelerinde çalışması",
-      "Linux çekirdeğini mobil cihazlara taşımak"
+      "UIKit ve SwiftUI gibi UI framework'lerini",
+      "Android HAL sürücülerini",
+      "Windows NT dosya sistemini",
+      "ADB komutlarını",
+      "Gradle bağımlılıklarını"
     ],
-    a: 3,
+    a: 0,
     difficulty: "medium",
     week: 2,
-    topic: "Windows Ekosistemi",
+    topic: "iOS Katmanları",
+    importance: 4,
+    explanation: "Cocoa Touch, iOS'ta kullanıcı etkileşimi ve UI framework'leriyle ilişkili katmandır."
+  },
+  {
+    q: "WinRT'nin amacı nedir?",
+    t: "mcq",
+    o: [
+      "Android uygulaması derlemek",
+      "Windows cihazları arasında kod paylaşımını kolaylaştırmak",
+      "iOS sertifikası üretmek",
+      "Linux çekirdeğini değiştirmek",
+      "APK imzalamak"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Windows Mimarisi",
     importance: 3,
-    explanation: "UWP, PC, telefon ve Xbox gibi Windows cihaz aileleri için ortak uygulama modeli hedeflemiştir."
+    explanation: "WinRT, Windows telefon, tablet ve PC arasında ortak API/kod paylaşımı hedefiyle kullanılmıştır."
   },
-
   {
-    q: "Android ve iOS bellek yönetimi karşılaştırmasında doğru ifade hangisidir?",
+    q: "Android'de yürütme ortamı hangisidir?",
     t: "mcq",
     o: [
-      "Android GC kullanırken iOS ARC yaklaşımını benimser",
-      "iOS yalnızca Garbage Collection kullanır",
-      "Android bellek yönetimi yapmaz",
-      "ARC sadece Windows Phone için geçerlidir",
-      "GC nesneleri referans sıfırlandığı anda kesin olarak serbest bırakır"
-    ],
-    a: 0,
-    difficulty: "hard",
-    week: 2,
-    topic: "Bellek Yönetimi",
-    importance: 5,
-    explanation: "Android tarafında çöp toplama, iOS tarafında ise referans sayımı temelli ARC yaklaşımı öne çıkar."
-  },
-
-  {
-    q: "iOS çoklu görev modelinde arka plana geçen uygulama çoğunlukla hangi duruma alınır?",
-    t: "mcq",
-    o: [
-      "Kernel moduna",
-      "Yüksek performans moduna",
-      "Tam ekran oyun moduna",
-      "Root erişimine",
-      "Askıya alınmış (suspended) duruma"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 2,
-    topic: "Çoklu Görev",
-    importance: 4,
-    explanation: "iOS, pil ve kaynak yönetimi için arka plan uygulamalarını çoğu durumda askıya alır; sadece özel modlara sınırlı izin verir."
-  },
-
-  {
-    q: "Güncel Android geliştirme için önerilen birincil dil hangisidir?",
-    t: "mcq",
-    o: [
-      "Objective-C",
-      "C#",
-      "Kotlin",
-      "VB.NET",
-      "PHP"
+      "CLR",
+      "XNU",
+      "ART",
+      "UIKit",
+      "WinUI"
     ],
     a: 2,
     difficulty: "easy",
     week: 2,
-    topic: "Android Geliştirme Ekosistemi",
+    topic: "Android Runtime",
     importance: 5,
-    explanation: "Ders içeriğinde Kotlin; modern, güvenli ve Android geliştirme için önerilen birincil dil olarak verilir."
+    explanation: "ART, Android uygulamalarının çalıştırıldığı Android Runtime ortamıdır."
   },
-
   {
-    q: "iOS uygulaması geliştirmek için temel IDE ve çalışma ortamı hangi seçenekte doğru verilmiştir?",
+    q: "iOS'ta uygulamalar genellikle nasıl çalışır?",
     t: "mcq",
     o: [
-      "Android Studio ve Linux",
-      "Xcode ve macOS",
-      "Visual Studio Code ve Windows Phone 7",
-      "Eclipse ve Symbian",
-      "Flutter Doctor ve Chrome OS"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 2,
-    topic: "iOS Geliştirme Ekosistemi",
-    importance: 5,
-    explanation: "iOS geliştirme Apple'ın macOS üzerinde çalışan Xcode IDE'sine bağlıdır."
-  },
-
-  {
-    q: "Girişimlerin bazı durumlarda iOS-first stratejisi izlemesinin temel ekonomik nedeni nedir?",
-    t: "mcq",
-    o: [
-      "iOS cihazların hiç güncelleme almaması",
-      "Android'in uygulama mağazası bulunmaması",
-      "Windows Phone'un daha yüksek pazar payına sahip olması",
-      "iOS kullanıcılarının ücretli indirme ve uygulama içi satın almalara daha fazla harcama eğilimi",
-      "Swift dilinin sadece reklam tabanlı gelir üretmesi"
+      "Dalvik VM üzerinde",
+      "CLR üzerinde",
+      "Sadece tarayıcıda",
+      "Native makine kodu olarak",
+      "Sadece Java bytecode olarak"
     ],
     a: 3,
     difficulty: "medium",
     week: 2,
-    topic: "Gelir Modelleri",
+    topic: "iOS Çalışma Modeli",
     importance: 4,
-    explanation: "Ders içeriğinde iOS'un yüksek gelirli pazarlarda güçlü olduğu ve kullanıcıların IAP/ücretli indirmelerde daha fazla harcama eğiliminde olduğu belirtilir."
+    explanation: "iOS uygulamaları genel olarak native makine kodu olarak çalışır."
   },
-
-  // =========================================================
-  // ==== 3. HAFTA – SDK, IDE ve Geliştirme Ortamı (13) ============
-  // =========================================================
-
   {
-    q: "SDK ile API arasındaki temel fark hangisidir?",
+    q: "ATT hangi platformla ilişkilidir?",
     t: "mcq",
     o: [
-      "API derleyici içerir, SDK sadece ikon sağlar",
-      "SDK yalnızca veritabanı tablosudur",
-      "API, fiziksel cihazın bataryasıdır",
-      "SDK sadece tasarım renklerini belirler",
-      "API iletişim sözleşmesidir; SDK ise API dahil geliştirme, derleme, test ve dağıtım araçlarını kapsar"
+      "Windows Phone",
+      "Android 2.2",
+      "Symbian",
+      "BlackBerry OS",
+      "iOS"
     ],
     a: 4,
-    difficulty: "easy",
-    week: 3,
-    topic: "SDK ve API",
-    importance: 5,
-    explanation: "API yazılımlar arası iletişim kurallarını tanımlar; SDK ise bu API'leri de içeren tam araç setidir."
+    difficulty: "hard",
+    week: 2,
+    topic: "Gizlilik",
+    importance: 3,
+    explanation: "ATT, Apple'ın App Tracking Transparency özelliğidir ve kullanıcı izleme izinlerini yönetir."
   },
 
+  // =========================================================
+  // ==== 3. HAFTA – SDK, IDE, Android Araçları (13)
+  // =========================================================
+
   {
-    q: "Platform SDK'sı için doğru tanım hangisidir?",
+    q: "SDK'nın temel amacı nedir?",
     t: "mcq",
     o: [
-      "İşletim sistemi üreticisinin sağladığı, uygulamanın ilgili platformda çalışması için temel araç paketidir",
-      "Sadece reklam gösteren dış kütüphanedir",
-      "Veri tabanı normalizasyon kuralıdır",
-      "Kullanıcıya gösterilen tek bir butondur",
-      "Sadece oyun motoru sahnesidir"
+      "Geliştirme için gerekli araçları tek pakette sunmak",
+      "Sadece ekran parlaklığı ayarlamak",
+      "Telefon kamerası üretmek",
+      "Kullanıcı puanı yükseltmek",
+      "SIM kart yönetmek"
     ],
     a: 0,
     difficulty: "easy",
     week: 3,
-    topic: "SDK Türleri",
-    importance: 4,
-    explanation: "Platform SDK'ları Android için Google, iOS için Apple gibi üreticiler tarafından sağlanan temel geliştirme altyapılarıdır."
+    topic: "SDK",
+    importance: 5,
+    explanation: "SDK; kütüphane, API, dokümantasyon, derleme ve test araçlarını geliştiriciye sunar."
   },
-
   {
-    q: "SDK içindeki kütüphanelerin temel işlevi nedir?",
+    q: "API en kısa tanımıyla nedir?",
     t: "mcq",
     o: [
-      "Sadece terminal rengini değiştirmek",
-      "Donanım sürücülerini fiziksel olarak üretmek",
-      "Sık kullanılan görevler için test edilmiş yeniden kullanılabilir kod parçaları sunmak",
-      "Uygulamanın mağaza puanını garanti etmek",
-      "Telefonun ekran camını değiştirmek"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 3,
-    topic: "SDK Bileşenleri",
-    importance: 4,
-    explanation: "Kütüphaneler; kimlik doğrulama, veri yönetimi, ağ istekleri ve UI gibi sık görevlerde hazır kod sağlar."
-  },
-
-  {
-    q: "Derleyicinin (compiler) görevi aşağıdakilerden hangisidir?",
-    t: "mcq",
-    o: [
-      "Uygulama ikonlarını mağazada sıralamak",
-      "Yüksek seviyeli kaynak kodu makine koduna veya ara formata dönüştürmek",
-      "Kullanıcı yorumlarını analiz etmek",
-      "Veritabanı kayıtlarını otomatik silmek",
-      "Ekran parlaklığını ölçmek"
+      "Uygulama mağazası",
+      "Yazılımlar arası iletişim arayüzü",
+      "Ekran sensörü",
+      "Telefon kasası",
+      "Batarya sürücüsü"
     ],
     a: 1,
     difficulty: "easy",
     week: 3,
-    topic: "Derleyiciler",
+    topic: "API",
     importance: 5,
-    explanation: "Derleyici; Java, Kotlin, Swift gibi kaynak kodları hedef platformun anlayacağı makine koduna veya bytecode/Dex gibi ara biçimlere dönüştürür."
+    explanation: "API, yazılım bileşenlerinin birbiriyle nasıl iletişim kuracağını tanımlayan arayüzdür."
   },
-
   {
-    q: "ADB'nin Android geliştirme sürecindeki temel rolü nedir?",
+    q: "IDE'nin görevi nedir?",
     t: "mcq",
     o: [
-      "iOS uygulamasını App Store'a göndermek",
-      "Swift kodunu optimize etmek",
-      "Kamera lensini fiziksel olarak kontrol etmek",
-      "Geliştirme ortamı ile cihaz/emülatör arasında köprü kurmak",
-      "Veritabanı normal formunu hesaplamak"
+      "Sadece ağ bağlantısı kurmak",
+      "Telefonu şarj etmek",
+      "Kodlama, derleme ve hata ayıklamayı tek ortamda toplamak",
+      "Kamera çözünürlüğünü artırmak",
+      "Uygulama fiyatı belirlemek"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "IDE",
+    importance: 5,
+    explanation: "IDE; kod editörü, derleyici, hata ayıklayıcı ve proje araçlarını tek arayüzde sunar."
+  },
+  {
+    q: "Android Studio nedir?",
+    t: "mcq",
+    o: [
+      "iOS işletim sistemi",
+      "Mobil ağ protokolü",
+      "Veritabanı motoru",
+      "Android için resmi geliştirme ortamı",
+      "Telefon modeli"
     ],
     a: 3,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 3,
-    topic: "Android Platform Tools",
+    topic: "Android Studio",
     importance: 5,
-    explanation: "ADB; uygulama yükleme, shell erişimi ve hata ayıklama için bilgisayar ile Android cihaz/emülatör arasında komut satırı köprüsü kurar."
+    explanation: "Android Studio, Android uygulamaları geliştirmek için kullanılan resmi IDE'dir."
   },
-
   {
-    q: "Android SDK Build-Tools içinde D8/R8 araçlarının görevi nedir?",
+    q: "Xcode hangi platform için temel geliştirme aracıdır?",
     t: "mcq",
     o: [
-      "Sadece tasarım renklerini seçmek",
-      "Xcode simülatörünü başlatmak",
-      "APK'yı mağazada yorumlamak",
-      "Kullanıcı konumunu ölçmek",
-      "Java/Kotlin bytecode'unu Android'in anlayacağı Dex formatına dönüştürmek"
+      "Android",
+      "Windows Phone",
+      "Symbian",
+      "BlackBerry",
+      "iOS"
     ],
     a: 4,
+    difficulty: "easy",
+    week: 3,
+    topic: "Xcode",
+    importance: 5,
+    explanation: "Xcode, Apple ekosisteminde iOS ve diğer Apple platformları için temel IDE'dir."
+  },
+  {
+    q: "Platform-Tools paketinin en bilinen aracı hangisidir?",
+    t: "mcq",
+    o: [
+      "adb",
+      "SwiftUI",
+      "UIKit",
+      "CoreData",
+      "XAML"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 3,
+    topic: "Platform-Tools",
+    importance: 5,
+    explanation: "Android SDK Platform-Tools içinde en bilinen araç adb yani Android Debug Bridge'dir."
+  },
+  {
+    q: "fastboot neyle ilişkilidir?",
+    t: "mcq",
+    o: [
+      "iOS UI çizimi",
+      "Düşük seviyeli cihaz imajı işlemleri",
+      "Redux state yönetimi",
+      "Swift derleme",
+      "Media Query"
+    ],
+    a: 1,
     difficulty: "hard",
+    week: 3,
+    topic: "Platform-Tools",
+    importance: 3,
+    explanation: "fastboot, Android cihazlarda düşük seviyeli imaj yükleme ve bootloader işlemleriyle ilişkilidir."
+  },
+  {
+    q: "Build-Tools hangi işle ilgilenir?",
+    t: "mcq",
+    o: [
+      "Ekran parlaklığını ölçmekle",
+      "Sensörleri kapatmakla",
+      "Uygulamayı derleyip paketlemekle",
+      "Kullanıcı yorumu yazmakla",
+      "iPhone donanımı üretmekle"
+    ],
+    a: 2,
+    difficulty: "medium",
     week: 3,
     topic: "Build-Tools",
     importance: 5,
-    explanation: "D8/R8, Android derleme sürecinde bytecode'u Dex formatına dönüştürerek ART/Dalvik çalışma ortamına uygun hale getirir."
+    explanation: "Build-Tools, kaynak kodun derlenmesi ve uygulama paketine dönüştürülmesi sürecinde kullanılır."
   },
-
   {
-    q: "Android SDK Platforms paketinin kurulma nedeni nedir?",
+    q: "AAPT hangi işle yakından ilişkilidir?",
     t: "mcq",
     o: [
-      "Sadece emülatör temasını değiştirmek",
-      "Kullanıcı yorumlarını çekmek",
-      "Belirli Android sürümüne ait framework kütüphaneleri ve android.jar referanslarını sağlamak",
-      "Apple Developer üyeliği oluşturmak",
-      "Windows NT çekirdeğini güncellemek"
+      "GPS ölçümü",
+      "NFC ödeme",
+      "iOS sertifikası",
+      "Android kaynaklarını paketleme",
+      "Windows çekirdeği"
     ],
-    a: 2,
-    difficulty: "medium",
-    week: 3,
-    topic: "SDK Platforms",
-    importance: 5,
-    explanation: "Bir uygulamanın hedeflenen API seviyesinde derlenebilmesi için o sürüme ait framework kütüphaneleri sistemde bulunmalıdır."
-  },
-
-  {
-    q: "Google Play etiketli Android sistem imajının Google APIs imajına göre önemli farkı nedir?",
-    t: "mcq",
-    o: [
-      "Resmi Play Store uygulaması ve Google servislerini de içermesi",
-      "Sadece siyah ekran göstermesi",
-      "NDK'yı tamamen kaldırması",
-      "Java derleyicisini devre dışı bırakması",
-      "SwiftUI önizlemesi sunması"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 3,
-    topic: "Emülatör ve Sistem İmajları",
-    importance: 4,
-    explanation: "Google Play imajları, Play Store ve Google servisleriyle birlikte gelir; harita veya uygulama içi satın alma testleri için önemlidir."
-  },
-
-  {
-    q: "Android NDK en çok hangi durumda tercih edilir?",
-    t: "mcq",
-    o: [
-      "Sadece HTML sayfası görüntülemek için",
-      "C/C++ ile işlemci merkezli yüksek performans gerektiren yerel kod çalıştırmak için",
-      "Kullanıcı arayüzünü XML olmadan çizmek için",
-      "Uygulama mağazası açıklamasını yazmak için",
-      "Veritabanı ilişkilerini normalleştirmek için"
-    ],
-    a: 1,
+    a: 3,
     difficulty: "hard",
+    week: 3,
+    topic: "Android Araçları",
+    importance: 3,
+    explanation: "AAPT, Android kaynaklarının işlenmesi ve paketlenmesiyle ilişkili araçtır."
+  },
+  {
+    q: "NDK hangi dili projeye güçlü biçimde dahil eder?",
+    t: "mcq",
+    o: [
+      "HTML",
+      "CSS",
+      "SQL",
+      "Dart",
+      "C/C++"
+    ],
+    a: 4,
+    difficulty: "medium",
     week: 3,
     topic: "NDK",
     importance: 4,
-    explanation: "NDK, C/C++ kodlarının native olarak çalıştırılmasına imkan verir; oyun motoru, grafik veya sinyal işleme gibi alanlarda kullanılır."
+    explanation: "NDK, Android projelerinde C/C++ ile native kod yazma olanağı sağlar."
   },
-
   {
-    q: "ANDROID_HOME ortam değişkeni neyi göstermelidir?",
+    q: "sdkmanager ne için kullanılır?",
     t: "mcq",
     o: [
-      "Xcode DerivedData klasörünü",
-      "Uygulamanın ekran görüntüsü klasörünü",
-      "Telefonun IMEI numarasını",
-      "Android SDK'nın kök dizinini",
-      "Google Play yorum sayfasını"
+      "SDK paketlerini yönetmek için",
+      "UI ikonları çizmek için",
+      "Telefon görüşmesi yapmak için",
+      "Veritabanı normalleştirmek için",
+      "Batarya üretmek için"
     ],
-    a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "Ortam Değişkenleri",
-    importance: 5,
-    explanation: "ANDROID_HOME, terminal ve cross-platform araçların Android SDK araç zincirinin yerini bulabilmesi için SDK kök yolunu gösterir."
-  },
-
-  {
-    q: "sdkmanager --list komutu ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Cihazın pil sağlığını ölçmek",
-      "iOS simülatörünü donanıma dönüştürmek",
-      "Gradle önbelleğini silmek",
-      "Google Play'de uygulama yayınlamak",
-      "Kurulu ve indirilebilir SDK paketlerini listelemek"
-    ],
-    a: 4,
+    a: 0,
     difficulty: "medium",
     week: 3,
     topic: "sdkmanager",
     importance: 4,
-    explanation: "sdkmanager --list komutu yerel makinedeki ve indirilebilir durumdaki SDK paketlerini terminalde listeler."
+    explanation: "sdkmanager, Android SDK paketlerini listelemek, yüklemek ve güncellemek için kullanılır."
   },
-
   {
-    q: "build.gradle içinde yer alan Min SDK neyi ifade eder?",
+    q: "PATH değişkenine platform-tools eklenirse ne olur?",
     t: "mcq",
     o: [
-      "Uygulamanın çalışabileceği en eski Android sürümünü",
-      "Uygulamanın optimize edildiği en yüksek Android sürümünü",
-      "Uygulamanın hangi kütüphane kodlarıyla derleneceğini",
-      "Sadece uygulama ikonunun minimum boyutunu",
-      "Emülatörün kullanacağı ekran çözünürlüğünü"
+      "Telefon kamerası değişir",
+      "adb komutu terminalden bulunabilir",
+      "iOS uygulaması otomatik yayınlanır",
+      "APK boyutu sıfırlanır",
+      "Sensör verisi silinir"
     ],
-    a: 0,
-    difficulty: "hard",
-    week: 3,
-    topic: "API Seviyeleri",
-    importance: 5,
-    explanation: "Min SDK, uygulamanın desteklediği en eski Android işletim sistemi/API seviyesini belirtir."
-  },
-
-  {
-    q: "“SDK licenses have not been accepted” hatasında temel çözüm nedir?",
-    t: "mcq",
-    o: [
-      "Telefonun SIM kartını değiştirmek",
-      "Xcode Preview penceresini kapatmak",
-      "yes | sdkmanager --licenses komutuyla lisansları kabul etmek",
-      "Uygulamanın adını değiştirmek",
-      "Ekran parlaklığını düşürmek"
-    ],
-    a: 2,
+    a: 1,
     difficulty: "medium",
     week: 3,
-    topic: "Troubleshooting",
+    topic: "Ortam Değişkenleri",
     importance: 5,
-    explanation: "Gradle lisans onayı bulamadığında derleme durur; sdkmanager üzerinden lisansların kabul edilmesi gerekir."
+    explanation: "platform-tools PATH'e eklenirse adb gibi komutlar terminalden doğrudan çalıştırılabilir."
+  },
+  {
+    q: "Target SDK neyi belirtir?",
+    t: "mcq",
+    o: [
+      "En düşük desteklenen Android sürümünü",
+      "Telefonun RAM miktarını",
+      "Uygulamanın hedeflediği Android API seviyesini",
+      "Ekran oranını",
+      "Kullanıcı sayısını"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 3,
+    topic: "SDK Seviyeleri",
+    importance: 5,
+    explanation: "Target SDK, uygulamanın hangi Android API seviyesi için hedeflenip test edildiğini belirtir."
   },
 
   // =========================================================
-  // ==== 4. HAFTA – Mobil Arayüz Mimarisi (12) ====================
+  // ==== 4. HAFTA – Mobil Arayüz Mimarisi (12)
   // =========================================================
 
   {
-    q: "Mobil arayüz mimarisi en doğru şekilde neyi ifade eder?",
+    q: "UI hangi unsurları kapsar?",
     t: "mcq",
     o: [
-      "Sadece veritabanı kolon tiplerini",
-      "Telefonun batarya kapasitesini",
-      "Uygulama mağazası fiyatlandırmasını",
-      "Mobil UI'nin nasıl tasarlandığını, yapılandırıldığını ve yönetildiğini",
-      "Sadece işletim sistemi çekirdeğini"
+      "Sadece kernel",
+      "Sadece ağ paketi",
+      "Sadece batarya",
+      "Ekranlar, butonlar ve görsel bileşenler",
+      "Sadece mağaza hesabı"
     ],
     a: 3,
     difficulty: "easy",
     week: 4,
-    topic: "Mobil Arayüz Mimarisi",
+    topic: "UI",
     importance: 5,
-    explanation: "Mobil arayüz mimarisi; UI'nin tasarım, yapılandırma ve yönetim biçimini ele alır; sürdürülebilirlik, ölçeklenebilirlik ve UX'i etkiler."
+    explanation: "UI, kullanıcının uygulamayla etkileşime geçtiği ekran, buton ve görsel bileşenleri kapsar."
   },
-
   {
-    q: "UI ve UX ayrımı için doğru ifade hangisidir?",
+    q: "UX en çok neyle ilgilenir?",
     t: "mcq",
     o: [
-      "UI sadece sunucu belleğidir, UX sadece veritabanıdır",
-      "UI ve UX tamamen aynı kavramdır",
-      "UX yalnızca buton rengidir, UI yalnızca kullanıcı memnuniyetidir",
-      "UI sadece işletim sistemi çekirdeğidir",
-      "UI görsel/etkileşim bileşenleridir; UX kullanıcının yaşadığı deneyim ve memnuniyettir"
+      "Derleyici tipi",
+      "Batarya markası",
+      "Dosya uzantısı",
+      "SDK yolu",
+      "Kullanıcı memnuniyeti ve deneyimi"
     ],
     a: 4,
     difficulty: "easy",
     week: 4,
-    topic: "UI ve UX",
+    topic: "UX",
     importance: 5,
-    explanation: "UI ekran, buton ve görsel bileşenleri; UX ise kullanıcının uygulamayı kullanırken yaşadığı toplam deneyimi anlatır."
+    explanation: "UX, kullanıcının uygulamayı kullanırken yaşadığı deneyim ve memnuniyet düzeyiyle ilgilenir."
   },
-
   {
-    q: "Android manifest dosyasının kullanıcı deneyimi açısından rolü nedir?",
+    q: "Component örneği hangisidir?",
     t: "mcq",
     o: [
-      "Uygulama bileşenlerini beyan ederek Android OS'in uygulamayı sisteme nasıl entegre edeceğini anlamasını sağlamak",
-      "Kullanıcı şifresini düz metin saklamak",
-      "Ekran parlaklığını otomatik ayarlamak",
-      "Veritabanı tablolarını normalleştirmek",
-      "Sadece uygulama fiyatını belirlemek"
+      "Buton",
+      "Kernel",
+      "Bootloader",
+      "SDK lisansı",
+      "API seviyesi"
     ],
     a: 0,
-    difficulty: "medium",
-    week: 4,
-    topic: "Android Bileşenleri",
-    importance: 4,
-    explanation: "Etkinlik, hizmet, içerik sağlayıcı ve yayın alıcı gibi bileşenlerin çoğu manifestte bildirilir."
-  },
-
-  {
-    q: "Mobil bileşenlerde durumun yalnızca bellekte tutulmamasının nedeni nedir?",
-    t: "mcq",
-    o: [
-      "Veritabanı kullanmak yasak olduğu için",
-      "İşletim sistemi veya kullanıcı bileşenleri herhangi bir zamanda yok edebileceği için",
-      "UI bileşeni her zaman sunucuda çalıştığı için",
-      "Android'de hiçbir bileşen bulunmadığı için",
-      "Manifest dosyası kullanılamadığı için"
-    ],
-    a: 1,
-    difficulty: "hard",
-    week: 4,
-    topic: "Yaşam Döngüsü ve Durum",
-    importance: 5,
-    explanation: "Mobil OS kaynak yönetimi nedeniyle süreç veya bileşenleri sonlandırabilir; bu yüzden kritik durum sadece bellekte tutulmamalıdır."
-  },
-
-  {
-    q: "Ders içeriğine göre her uygulamada en az hangi iki katman bulunmalıdır?",
-    t: "mcq",
-    o: [
-      "Reklam katmanı ve mağaza katmanı",
-      "Kamera katmanı ve GPS katmanı",
-      "Kullanıcı arayüzü katmanı ve veri katmanı",
-      "Sadece domain katmanı ve test katmanı",
-      "Çekirdek katmanı ve bootloader katmanı"
-    ],
-    a: 2,
     difficulty: "easy",
     week: 4,
-    topic: "Ortak Mimari İlkeleri",
-    importance: 5,
-    explanation: "Temel mimaride UI katmanı uygulama verilerini gösterir; veri katmanı ise iş mantığı ve verilerle ilgilenir."
+    topic: "UI Component",
+    importance: 4,
+    explanation: "Buton, liste ve form gibi yapılar UI bileşeni yani component örneğidir."
   },
-
   {
-    q: "Repository sınıflarının temel sorumluluğu aşağıdakilerden hangisidir?",
+    q: "Android manifest dosyası neyi bildirir?",
     t: "mcq",
     o: [
-      "Sadece buton renklerini değiştirmek",
-      "Telefon donanımını üretmek",
-      "Uygulamanın logosunu çizmek",
-      "Veriyi uygulamanın geri kalanına sunmak, değişiklikleri merkezileştirmek ve veri kaynaklarını soyutlamak",
-      "Cihazın işletim sistemini güncellemek"
+      "Sadece ekran rengini",
+      "Uygulama bileşenlerini",
+      "Kullanıcı şifresini",
+      "Telefon fiyatını",
+      "Pil kapasitesini"
     ],
-    a: 3,
+    a: 1,
+    difficulty: "medium",
+    week: 4,
+    topic: "Android Manifest",
+    importance: 5,
+    explanation: "Manifest dosyası activity, service, receiver ve provider gibi uygulama bileşenlerini bildirir."
+  },
+  {
+    q: "Temel uygulama mimarisinde veri katmanı ne içerir?",
+    t: "mcq",
+    o: [
+      "Sadece ikonları",
+      "Sadece renkleri",
+      "İş mantığı ve veri işlemlerini",
+      "Sadece ekran çözünürlüğünü",
+      "Sadece bildirim sesini"
+    ],
+    a: 2,
     difficulty: "medium",
     week: 4,
     topic: "Veri Katmanı",
     importance: 5,
-    explanation: "Depo sınıfları veriyi gösterir, veri değişikliklerini merkezileştirir, kaynak çakışmalarını çözer ve veri kaynaklarını soyutlar."
+    explanation: "Veri katmanı, uygulamanın veriyi oluşturma, saklama ve değiştirme kurallarını yani iş mantığını içerir."
   },
-
   {
-    q: "Veri kaynağı sınıfı için doğru sorumluluk tanımı hangisidir?",
+    q: "Data Source sınıfı kaç veri kaynağıyla çalışmalıdır?",
     t: "mcq",
     o: [
-      "Birden fazla ekranın animasyonunu yönetmek",
-      "Tüm uygulama tasarımını çizmek",
-      "Kullanıcının mağaza yorumunu almak",
-      "ViewModel ile View arasında veri bağlamak",
-      "Dosya, ağ kaynağı veya yerel veritabanı gibi tek bir veri kaynağıyla çalışmak"
+      "Sınırsız",
+      "En az beş",
+      "Tüm ekranlarla",
+      "Tek bir veri kaynağıyla",
+      "Sadece ViewModel ile"
     ],
-    a: 4,
+    a: 3,
     difficulty: "medium",
     week: 4,
     topic: "Data Source",
     importance: 4,
-    explanation: "Her veri kaynağı sınıfının tek bir kaynağa odaklanması sorumluluk ayrımını güçlendirir."
+    explanation: "Her veri kaynağı sınıfı dosya, ağ veya yerel veritabanı gibi tek bir kaynakla çalışmalıdır."
   },
-
   {
-    q: "Alan adı (domain) katmanı hangi durumda eklenmelidir?",
+    q: "Use Case sınıfının temel özelliği nedir?",
     t: "mcq",
     o: [
-      "Karmaşık iş mantığını yönetmek veya birden fazla ViewModel tarafından kullanılan mantığı yeniden kullanmak gerektiğinde",
-      "Sadece uygulama ikonu değiştirileceğinde",
-      "Her zaman zorunlu olduğu için",
-      "Telefonun kamerası bozulduğunda",
-      "Uygulama mağazası hesabı açmak için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 4,
-    topic: "Domain Katmanı",
-    importance: 5,
-    explanation: "Domain katmanı isteğe bağlıdır; karmaşıklık veya yeniden kullanılabilir iş mantığı olduğunda kullanılır."
-  },
-
-  {
-    q: "MVC mimarisinde Controller'ın görevi nedir?",
-    t: "mcq",
-    o: [
-      "Veritabanı diskini biçimlendirmek",
-      "Model ve View arasında köprü olup kullanıcı etkileşimlerini yönetmek",
-      "Sadece uygulama paketini imzalamak",
-      "Telefonun GPS sinyalini yükseltmek",
-      "Bütün UI durumunu global saklamak"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 4,
-    topic: "MVC",
-    importance: 4,
-    explanation: "Controller kullanıcı etkileşimlerini alır, Model ile View arasındaki akışı koordine eder."
-  },
-
-  {
-    q: "MVVM mimarisinde ViewModel'in temel görevi nedir?",
-    t: "mcq",
-    o: [
-      "Cihaz çekirdeğini güncellemek",
-      "Uygulama mağazası gelirini hesaplamak",
-      "View ile Model arasındaki veri bağlamayı sağlamak",
-      "Sadece ağ paketlerini şifrelemek",
-      "Veritabanı dosyasını silmek"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "MVVM",
-    importance: 5,
-    explanation: "ViewModel, View ile Model arasında veri bağlama ve sunum mantığı görevini üstlenir."
-  },
-
-  {
-    q: "Clean Architecture'da Frameworks & Drivers katmanı neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Uygulamanın saf iş kurallarını",
-      "Kullanım senaryolarını",
-      "Entities nesnelerini",
-      "UI, veritabanı ve ağ gibi dış bağımlılıkları",
-      "Sadece sınav açıklamasını"
-    ],
-    a: 3,
-    difficulty: "hard",
-    week: 4,
-    topic: "Clean Architecture",
-    importance: 5,
-    explanation: "Frameworks & Drivers katmanı UI, veritabanı, ağ ve framework gibi dış dünya detaylarını kapsar."
-  },
-
-  {
-    q: "Responsive tasarımda kullanılan temel yaklaşımlar hangi seçenekte doğru verilmiştir?",
-    t: "mcq",
-    o: [
-      "Garbage Collection, ARC ve OOM Killer",
-      "ADB, fastboot ve logcat",
-      "Entity, Use Case ve Presenter",
-      "APK, IPA ve XIP",
-      "Flex Layouts, Media Queries ve Aspect Ratios"
+      "Sadece UI çizmesi",
+      "Tüm uygulamayı tek dosyada tutması",
+      "Veritabanını silmesi",
+      "APK imzalaması",
+      "Tek bir işlevden sorumlu olması"
     ],
     a: 4,
     difficulty: "medium",
     week: 4,
-    topic: "Responsive Tasarım",
+    topic: "Domain Katmanı",
+    importance: 5,
+    explanation: "Use Case sınıfları tek bir işlevi temsil etmeli ve özellikle tekrar kullanılan iş mantığını kapsamalıdır."
+  },
+  {
+    q: "MVC'de View neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "Kullanıcıya gösterilen arayüzü",
+      "Derleyiciyi",
+      "İşletim sistemi çekirdeğini",
+      "SDK yolunu",
+      "API seviyesini"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 4,
+    topic: "MVC",
     importance: 4,
-    explanation: "Responsive tasarım farklı ekranlara uyum için esnek yerleşimler, medya sorguları ve görsel oran korumayı kullanır."
+    explanation: "MVC'de View, kullanıcıya gösterilen arayüz kısmıdır."
+  },
+  {
+    q: "MVVM'nin avantajı nedir?",
+    t: "mcq",
+    o: [
+      "Kernel değiştirmesi",
+      "Veri bağlamayı desteklemesi",
+      "Sadece tek ekran çalışması",
+      "SDK kurulumunu kaldırması",
+      "Donanım üretmesi"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 4,
+    topic: "MVVM",
+    importance: 5,
+    explanation: "MVVM, ViewModel üzerinden View ile Model arasında veri bağlama yaklaşımını güçlendirir."
+  },
+  {
+    q: "Clean Architecture'da Use Cases neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "UI butonlarını",
+      "Veritabanı sürücüsünü",
+      "Uygulama iş mantığını",
+      "Telefon ekranını",
+      "SDK lisansını"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 4,
+    topic: "Clean Architecture",
+    importance: 5,
+    explanation: "Use Cases katmanı, uygulamaya özgü iş mantığını temsil eder."
+  },
+  {
+    q: "Asenkron işlem neden kullanılır?",
+    t: "mcq",
+    o: [
+      "Ekranı kilitlemek için",
+      "Uygulamayı kapatmak için",
+      "SDK'yı silmek için",
+      "UI'nin donmasını önlemek için",
+      "Manifesti kaldırmak için"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 4,
+    topic: "Performans",
+    importance: 5,
+    explanation: "Uzun süren işlemler arka planda yürütülürse UI donmaz ve kullanıcı deneyimi korunur."
+  },
+  {
+    q: "Declarative UI yaklaşımı neyi tanımlar?",
+    t: "mcq",
+    o: [
+      "Nasıl çizileceğini adım adım işlemeyi",
+      "Sadece veritabanı ilişkilerini",
+      "Telefonun çekirdeğini",
+      "APK imza anahtarını",
+      "Ekranda neyin gösterileceğini"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 4,
+    topic: "Declarative UI",
+    importance: 4,
+    explanation: "Declarative UI yaklaşımında geliştirici arayüzün hangi durumda ne göstereceğini tanımlar."
   }
 ];
