@@ -1,10 +1,10 @@
-// Mobil Programlama – Yeni PDF'lerden 50 Soruluk Vize/Final Testi (MCQ)
+// Mobil Programlama – 100 Aldırmaya Yönelik Öğretici Vize Testi (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 5. HAFTA – Mobil Ağ Yapıları (10) ===================
+  // ==== 5. HAFTA – Mobil Ağ Yapıları / Vize Kritik (10) =====
   // =========================================================
 
   {
@@ -12,324 +12,340 @@ window.questionBank = [
     t: "mcq",
     o: [
       "Hücresel ağlar",
-      "Kızılötesi ağlar",
-      "Sadece Bluetooth",
       "Sadece NFC",
-      "USB bağlantısı"
+      "Sadece USB",
+      "Kızılötesi",
+      "Yerel dosya sistemi"
     ],
     a: 0,
     difficulty: "easy",
     week: 5,
     topic: "Mobil Ağ Türleri",
     importance: 5,
-    explanation: "Hücresel ağlar, mobil cihazların en yaygın bağlantı yöntemidir."
+    explanation: "Vize ipucu: Mobil ağ türleri içinde en genel ve yaygın bağlantı hücresel ağdır. 2G, 3G, 4G ve 5G bu başlığın altındadır."
   },
+
   {
-    q: "Wi-Fi hangi ağ türüdür?",
+    q: "2G hangi hizmetlerle ilişkilidir?",
     t: "mcq",
     o: [
-      "Uydu tabanlı konum ağı",
-      "Kablosuz yerel alan ağı",
-      "Hücresel çekirdek ağı",
-      "Yakın alan ödeme ağı",
-      "Kablolu geniş alan ağı"
+      "Yüksek hızlı video akışı",
+      "Temel ses ve düşük hızlı veri",
+      "1 ms gecikme",
+      "mmWave bağlantı",
+      "OSMDroid harita"
     ],
     a: 1,
     difficulty: "easy",
     week: 5,
-    topic: "Wi-Fi",
-    importance: 4,
-    explanation: "Wi-Fi, kısa mesafede kullanılan kablosuz yerel alan ağıdır."
+    topic: "2G",
+    importance: 5,
+    explanation: "2G; GSM/EDGE ile temel sesli iletişim, SMS ve düşük hızlı veri hizmetleriyle bilinir. 4G/5G özellikleriyle karıştırma."
   },
+
   {
-    q: "NFC yaklaşık hangi mesafede çalışır?",
+    q: "3G'nin ayırt edici katkısı nedir?",
     t: "mcq",
     o: [
-      "1 kilometre",
-      "500 metre",
-      "10 cm",
-      "50 metre",
-      "10 kilometre"
+      "Sadece analog ses",
+      "10 cm iletişim",
+      "Mobil internetin yaygınlaşması",
+      "Çevrimdışı harita",
+      "Liste güncelleme"
     ],
     a: 2,
     difficulty: "easy",
     week: 5,
-    topic: "NFC",
-    importance: 4,
-    explanation: "NFC çok kısa mesafede, yaklaşık 10 cm civarında çalışan iletişim teknolojisidir."
+    topic: "3G",
+    importance: 5,
+    explanation: "3G; UMTS/HSPA ile daha yüksek veri hızı ve mobil internetin yaygınlaşması dönemidir."
   },
+
   {
-    q: "GPS ne için kullanılır?",
+    q: "4G LTE için doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Dosya sıkıştırmak",
-      "Video oynatmak",
-      "Ses kaydetmek",
-      "Konum belirlemek",
-      "Veritabanı silmek"
+      "Sadece SMS sağlar",
+      "Yaklaşık 10 cm çalışır",
+      "Sensör verisi üretir",
+      "Yüksek hızlı veri ve VoIP sağlar",
+      "Sadece Bluetooth'tur"
     ],
     a: 3,
-    difficulty: "easy",
-    week: 5,
-    topic: "GPS",
-    importance: 5,
-    explanation: "GPS, uydu üzerinden konum belirleme için kullanılır."
-  },
-  {
-    q: "Bluetooth'un temel kullanım alanı hangisidir?",
-    t: "mcq",
-    o: [
-      "Uzay haberleşmesi",
-      "Harita çizimi",
-      "REST API çağrısı",
-      "Sunucu barındırma",
-      "Yakın mesafe veri aktarımı"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 5,
-    topic: "Bluetooth",
-    importance: 4,
-    explanation: "Bluetooth, yakın mesafede düşük enerjiyle veri aktarımı sağlar."
-  },
-  {
-    q: "UE açılımı mobil ağlarda neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "User Equipment",
-      "Universal Engine",
-      "Unit Extension",
-      "Upload Environment",
-      "User Emulator"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 5,
-    topic: "Ağ Mimarisi",
-    importance: 5,
-    explanation: "UE, User Equipment yani telefon/tablet gibi son kullanıcı cihazını ifade eder."
-  },
-  {
-    q: "Baz istasyonu hangi görevi üstlenir?",
-    t: "mcq",
-    o: [
-      "Uygulama paketini imzalar",
-      "Mobil cihazların bağlandığı ilk ağ noktasıdır",
-      "Veritabanı tablolarını oluşturur",
-      "UI bileşenlerini çizer",
-      "Sensör verisini temizler"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 5,
-    topic: "Baz İstasyonu",
-    importance: 5,
-    explanation: "Baz istasyonu, hücresel ağlarda cihazların bağlandığı ilk noktadır."
-  },
-  {
-    q: "4G LTE'nin önemli avantajı hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece SMS desteği",
-      "Analog ses iletimi",
-      "Yüksek hız ve düşük gecikme",
-      "Sadece kısa mesafe iletişim",
-      "Çevrimdışı harita depolama"
-    ],
-    a: 2,
     difficulty: "medium",
     week: 5,
     topic: "4G LTE",
     importance: 5,
-    explanation: "4G LTE yüksek hızlı veri aktarımı ve düşük gecikme sunar."
+    explanation: "4G/LTE; yüksek hızlı veri, video akışı, VoIP ve düşük gecikmeyle öne çıkar."
   },
+
   {
-    q: "5G'deki Network Slicing neyi ifade eder?",
+    q: "5G'nin vizede en çok sorulabilecek özelliği hangisidir?",
     t: "mcq",
     o: [
-      "Ekranı bölmeyi",
-      "Veritabanını yedeklemeyi",
-      "Uygulamayı küçültmeyi",
-      "Sanal ağ dilimleri oluşturmayı",
-      "Bluetooth eşleştirmeyi"
+      "Sadece ses",
+      "Düşük hızlı veri",
+      "Kablolu bağlantı",
+      "Sadece SMS",
+      "Düşük gecikme ve yüksek hız"
     ],
-    a: 3,
-    difficulty: "hard",
+    a: 4,
+    difficulty: "easy",
     week: 5,
     topic: "5G",
-    importance: 4,
-    explanation: "Network Slicing, farklı kullanım senaryoları için sanal ağ dilimleri oluşturulmasıdır."
+    importance: 5,
+    explanation: "5G denince sınavda genelde yüksek hız, düşük gecikme ve çok sayıda cihaz bağlantısı beklenir."
   },
+
   {
-    q: "MQTT en çok hangi alanla ilişkilidir?",
+    q: "Wi-Fi'nin açılımı ders notunda hangi kavramla verilmiştir?",
+    t: "mcq",
+    o: [
+      "Kablosuz Yerel Alan Ağı",
+      "Küresel Konum Sistemi",
+      "Yakın Alan İletişimi",
+      "Çekirdek Ağ",
+      "Ağ Geçidi"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "Wi-Fi",
+    importance: 4,
+    explanation: "Wi-Fi, WLAN yani Kablosuz Yerel Alan Ağı olarak düşünülmelidir. Kısa mesafe, hızlı ve düşük maliyetli bağlantı sağlar."
+  },
+
+  {
+    q: "NFC'nin ayırt edici mesafe özelliği nedir?",
+    t: "mcq",
+    o: [
+      "1 km çalışır",
+      "Yaklaşık 10 cm çalışır",
+      "Sadece uydudan çalışır",
+      "Sadece kablolu çalışır",
+      "Sadece 5G ile çalışır"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "NFC",
+    importance: 5,
+    explanation: "NFC çok kısa mesafede çalışır. Mobil ödeme ve hızlı eşleştirme sorularında doğru cevap genellikle NFC'dir."
+  },
+
+  {
+    q: "Gateway'in temel görevi nedir?",
+    t: "mcq",
+    o: [
+      "Sensör dinlemek",
+      "Video oynatmak",
+      "Ağlar arasında geçiş sağlamak",
+      "Görev metni almak",
+      "Liste göstermek"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 5,
+    topic: "Ağ Mimarisi",
+    importance: 4,
+    explanation: "Gateway, mobil ağ ile internet veya başka ağlar arasında geçiş sağlar. Türkçesi ağ geçididir."
+  },
+
+  {
+    q: "WebSocket en çok hangi kullanım için uygundur?",
+    t: "mcq",
+    o: [
+      "Statik resim göstermek",
+      "Boş görev uyarmak",
+      "Harita izni almak",
+      "Anlık mesajlaşma",
+      "XML layout çizmek"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 5,
+    topic: "WebSocket",
+    importance: 5,
+    explanation: "Anlık iletişim, canlı veri ve oyun gibi gerçek zamanlı senaryolarda WebSocket sorulur."
+  },
+
+  {
+    q: "MQTT hangi alan için hafif protokoldür?",
     t: "mcq",
     o: [
       "Video düzenleme",
-      "UI tasarımı",
-      "Harita yakınlaştırma",
-      "Ses çalma",
+      "UI prototipleme",
+      "Konum izni",
+      "Resim yükleme",
       "IoT cihazları"
     ],
     a: 4,
     difficulty: "medium",
     week: 5,
-    topic: "Ağ Protokolleri",
+    topic: "MQTT",
     importance: 4,
-    explanation: "MQTT, IoT cihazları için hafif bir iletişim protokolüdür."
+    explanation: "MQTT, IoT cihazları için hafif mesajlaşma protokolüdür. Vizede 'hafif protokol' ifadesi MQTT'yi işaret eder."
   },
 
   // =========================================================
-  // ==== 8. HAFTA – Mobil Arayüz Geliştirme (8) ==============
+  // ==== 8. HAFTA – Mobil Arayüz / UI-UX Vize Kritik (8) =====
   // =========================================================
 
   {
-    q: "Mobil arayüz geliştirme neyi oluşturur?",
+    q: "Mobil arayüz, uygulamanın hangi yönüdür?",
     t: "mcq",
     o: [
-      "Kullanıcının gördüğü ekranları",
-      "Cihazın çekirdeğini",
-      "Baz istasyonunu",
-      "SIM kart belleğini",
-      "Sunucu donanımını"
+      "Kullanıcının gördüğü ve etkileştiği yüzü",
+      "Cihazın bataryası",
+      "Sunucu işlemcisi",
+      "GPS uydusu",
+      "Ağ geçidi"
     ],
     a: 0,
     difficulty: "easy",
     week: 8,
     topic: "Mobil Arayüz",
     importance: 5,
-    explanation: "Mobil arayüz geliştirme, kullanıcının gördüğü ve etkileşim kurduğu ekranların oluşturulmasıdır."
+    explanation: "Mobil arayüz, kullanıcının uygulamada gördüğü ekranlar ve etkileşim kurduğu bileşenlerden oluşur."
   },
+
   {
-    q: "UX sürecinde wireframe neyi ifade eder?",
+    q: "UX en kısa şekilde neyi ifade eder?",
     t: "mcq",
     o: [
-      "Uygulama mağazası kaydını",
-      "Tasarımın iskeletini",
-      "Veritabanı şemasını",
-      "APK imza dosyasını",
-      "Bluetooth bağlantısını"
+      "Sadece renk seçimi",
+      "Kullanıcı deneyimi",
+      "Veritabanı ilişkisi",
+      "Dosya yolu",
+      "Ağ protokolü"
     ],
     a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "UX",
+    importance: 5,
+    explanation: "UX, kullanıcının uygulamayı kullanırken yaşadığı deneyimdir. Güzel tasarım tek başına iyi UX anlamına gelmez."
+  },
+
+  {
+    q: "Wireframe ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Konum izni almak için",
+      "Video oynatmak için",
+      "Ekran iskeletini göstermek için",
+      "Sensör ölçmek için",
+      "APK imzalamak için"
+    ],
+    a: 2,
     difficulty: "medium",
     week: 8,
     topic: "Wireframe",
     importance: 5,
-    explanation: "Wireframe, ekran yerleşiminin temel iskeletini gösteren taslak yapıdır."
+    explanation: "Wireframe, ekranın kaba yerleşim planıdır. Renkten önce yapı ve akış düşünülür."
   },
+
   {
-    q: "Tutarlılık prensibi neyi önerir?",
+    q: "Prototip neyi temsil eder?",
     t: "mcq",
     o: [
-      "Her ekranda farklı yapı kullanmayı",
-      "Animasyonları tamamen kaldırmayı",
-      "Benzer ekranlarda benzer yapı kullanmayı",
-      "Sadece tek renk kullanmayı",
-      "Verileri bellekte saklamayı"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 8,
-    topic: "Tasarım Prensipleri",
-    importance: 5,
-    explanation: "Tutarlılık, uygulama ekranlarında benzer yapı ve davranışların korunmasını sağlar."
-  },
-  {
-    q: "Geri bildirim prensibi hangi örnekle açıklanır?",
-    t: "mcq",
-    o: [
-      "Uygulamayı kapatmak",
-      "Veriyi silmek",
-      "Kodu derlemek",
-      "Butona basınca animasyon göstermek",
-      "Ağ paketini yakalamak"
+      "Ham sensör verisini",
+      "Ağ geçidini",
+      "Boş görev uyarısını",
+      "Etkileşimli taslak ekranı",
+      "Konum doğruluğunu"
     ],
     a: 3,
-    difficulty: "easy",
+    difficulty: "medium",
     week: 8,
-    topic: "Geri Bildirim",
+    topic: "Prototip",
     importance: 4,
-    explanation: "Kullanıcı işlem yaptığında sistemin görsel/işitsel tepki vermesi geri bildirimdir."
+    explanation: "Prototip, kullanıcının akışı deneyebildiği etkileşimli taslaktır. Wireframe'den bir adım daha etkileşimlidir."
   },
+
   {
-    q: "TextField bileşeninin görevi nedir?",
+    q: "Hiyerarşi prensibi neyi amaçlar?",
     t: "mcq",
     o: [
-      "Harita çizmek",
-      "Ses oynatmak",
-      "Konum almak",
-      "Bildirim göndermek",
-      "Kullanıcıdan veri almak"
+      "Tüm bilgileri aynı göstermek",
+      "Verileri silmek",
+      "Pil tüketimini artırmak",
+      "Konumu kapatmak",
+      "Önemli bilgiyi daha görünür yapmak"
     ],
     a: 4,
     difficulty: "easy",
     week: 8,
-    topic: "UI Bileşenleri",
+    topic: "Tasarım Prensipleri",
     importance: 5,
-    explanation: "TextField, kullanıcıdan metin veya veri girişi almak için kullanılır."
+    explanation: "Hiyerarşi, kullanıcının önce neye bakacağını belirler. Sınavda 'önemli bilgi daha görünür' ifadesi hiyerarşidir."
   },
+
   {
-    q: "Card bileşeni genelde ne için kullanılır?",
+    q: "White Space ne işe yarar?",
     t: "mcq",
     o: [
-      "Bilgileri gruplamak için",
-      "GPS izni istemek için",
-      "Ses dosyası çalmak için",
-      "Ağ protokolü seçmek için",
-      "Harita döşemesi indirmek için"
+      "Bilgi yoğunluğunu azaltır",
+      "Sensörü başlatır",
+      "Video sıkıştırır",
+      "Harita çizer",
+      "Konum izni ister"
     ],
     a: 0,
-    difficulty: "easy",
-    week: 8,
-    topic: "UI Bileşenleri",
-    importance: 4,
-    explanation: "Card, arayüzde bilgileri düzenli ve gruplu göstermek için kullanılır."
-  },
-  {
-    q: "Safe Area hangi platformla özellikle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Android Room",
-      "iOS",
-      "TCP/IP",
-      "Bluetooth",
-      "OSMDroid"
-    ],
-    a: 1,
     difficulty: "medium",
     week: 8,
-    topic: "Yerleşim",
+    topic: "Görsel Tasarım",
     importance: 4,
-    explanation: "Safe Area, iOS’ta çentik ve alt bar gibi alanlara içerik taşmasını önler."
+    explanation: "White Space boşluk kullanımıdır. Arayüzü ferahlatır, okunabilirliği artırır."
   },
+
   {
-    q: "Figma ne için kullanılır?",
+    q: "Button bileşeni ne yapar?",
     t: "mcq",
     o: [
-      "Sensör dinlemek için",
-      "Konum izni almak için",
-      "UI/UX tasarım ve prototipleme için",
-      "REST API kurmak için",
-      "Bluetooth eşleştirmek için"
+      "Konum ölçer",
+      "Tıklanabilir eylem tetikler",
+      "Harita kaynağıdır",
+      "Ses dosyasıdır",
+      "Veri tabanıdır"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "UI Bileşeni",
+    importance: 5,
+    explanation: "Button, kullanıcı tıklayınca bir eylem başlatır. To-Do uygulamasında görev ekleme butonu buna örnektir."
+  },
+
+  {
+    q: "TextField hangi amaçla kullanılır?",
+    t: "mcq",
+    o: [
+      "Video oynatmak",
+      "GPS açmak",
+      "Kullanıcıdan veri almak",
+      "Marker eklemek",
+      "Sensör durdurmak"
     ],
     a: 2,
     difficulty: "easy",
     week: 8,
-    topic: "Prototipleme",
+    topic: "UI Bileşeni",
     importance: 5,
-    explanation: "Figma, UI/UX tasarım ve prototipleme için kullanılan popüler bir araçtır."
+    explanation: "TextField veya EditText, kullanıcının metin/veri girmesi için kullanılır."
   },
 
   // =========================================================
-  // ==== 10. HAFTA – Yer Bildirimi ve Harita Kullanımı (9) ====
+  // ==== 10. HAFTA – Konum ve Harita / Vize Kritik (12) ======
   // =========================================================
 
   {
-    q: "GPS doğruluk seviyesi genellikle kaç metredir?",
+    q: "GPS doğruluk aralığı ders notunda nasıl verilmiştir?",
     t: "mcq",
     o: [
       "1-10 km",
-      "500-1000 m",
-      "100-500 m",
+      "50-500 m",
+      "500 m-1 km",
       "5-50 m",
       "10-20 km"
     ],
@@ -338,541 +354,753 @@ window.questionBank = [
     week: 10,
     topic: "Konum Doğruluğu",
     importance: 5,
-    explanation: "Ders notuna göre GPS yüksek doğrulukta yaklaşık 5-50 metre aralığındadır."
+    explanation: "Yüksek doğruluk GPS ile sağlanır ve ders notunda 5-50 metre aralığı verilmiştir."
   },
+
   {
-    q: "IP tabanlı konum doğruluğu hangisidir?",
+    q: "IP tabanlı konum hangi doğruluk seviyesindedir?",
     t: "mcq",
     o: [
       "5-50 m",
       "10-20 m",
       "50-500 m",
-      "100 m",
+      "1 metre",
       "1-10 km"
     ],
     a: 4,
     difficulty: "medium",
     week: 10,
     topic: "Konum Doğruluğu",
-    importance: 4,
-    explanation: "IP tabanlı konum düşük doğruluk sunar ve yaklaşık 1-10 km aralığında olabilir."
+    importance: 5,
+    explanation: "IP tabanlı konum düşük doğruluktur. Ders notunda 1-10 km aralığı verilmiştir."
   },
+
   {
-    q: "ACCESS_FINE_LOCATION hangi izinle ilgilidir?",
+    q: "ACCESS_FINE_LOCATION ne sağlar?",
     t: "mcq",
     o: [
-      "Yüksek doğruluklu konum",
-      "Ses kaydı",
+      "Yüksek doğruluklu konum erişimi",
       "Video oynatma",
-      "Bluetooth eşleştirme",
-      "Dosya silme"
+      "Ses kaydı",
+      "Liste güncelleme",
+      "Boş görev uyarısı"
     ],
     a: 0,
     difficulty: "easy",
     week: 10,
     topic: "Android Konum İzinleri",
     importance: 5,
-    explanation: "ACCESS_FINE_LOCATION yüksek doğruluklu konum erişimi için kullanılır."
+    explanation: "FINE kelimesi 'hassas' anlamına gelir. ACCESS_FINE_LOCATION yüksek doğruluklu konum iznidir."
   },
+
   {
-    q: "ACCESS_COARSE_LOCATION hangi konumu ifade eder?",
+    q: "ACCESS_COARSE_LOCATION ne sağlar?",
     t: "mcq",
     o: [
-      "Arka plan kamera",
-      "Düşük/yaklaşık konum",
-      "Ses çalma",
-      "NFC ödeme",
-      "Video sıkıştırma"
+      "Arka plan video",
+      "Yaklaşık konum erişimi",
+      "Ses sıkıştırma",
+      "Marker başlığı",
+      "Bluetooth eşleştirme"
     ],
     a: 1,
     difficulty: "easy",
     week: 10,
     topic: "Android Konum İzinleri",
     importance: 5,
-    explanation: "ACCESS_COARSE_LOCATION yaklaşık/düşük doğruluklu konum erişimi sağlar."
+    explanation: "COARSE yaklaşık/kaba konumdur. FINE kadar hassas değildir."
   },
+
   {
-    q: "LocationRequest interval = 10000 ne anlama gelir?",
+    q: "ACCESS_BACKGROUND_LOCATION ne için kullanılır?",
     t: "mcq",
     o: [
-      "1 saniyede bir güncelleme",
-      "5 saniyede bir güncelleme",
-      "10 saniyede bir güncelleme",
-      "100 saniyede bir güncelleme",
-      "Konum kapalı"
+      "Sadece UI çizmek için",
+      "Video başlatmak için",
+      "Arka planda konum almak için",
+      "Toast göstermek için",
+      "Liste adaptörü kurmak için"
     ],
     a: 2,
+    difficulty: "medium",
+    week: 10,
+    topic: "Android Konum İzinleri",
+    importance: 5,
+    explanation: "BACKGROUND kelimesi arka planı gösterir. Uygulama önde değilken konum almak için kullanılır."
+  },
+
+  {
+    q: "LocationRequest interval = 10000 ne demektir?",
+    t: "mcq",
+    o: [
+      "1 saniyede bir",
+      "5 saniyede bir",
+      "100 saniyede bir",
+      "10 saniyede bir",
+      "Konum kapalı"
+    ],
+    a: 3,
     difficulty: "medium",
     week: 10,
     topic: "Konum Güncellemeleri",
     importance: 4,
-    explanation: "10000 milisaniye, 10 saniyede bir konum güncellemesi anlamına gelir."
+    explanation: "10000 milisaniye 10 saniyedir. Vizede milisaniye-saniye dönüşümü sorulabilir."
   },
+
   {
-    q: "Google Maps bağımlılığı hangi dosyaya eklenir?",
+    q: "fastestInterval = 5000 ne anlama gelir?",
     t: "mcq",
     o: [
-      "AndroidManifest.xml",
-      "strings.xml",
-      "colors.xml",
-      "build.gradle",
-      "activity_main.xml"
+      "50 saniye",
+      "10 saniye",
+      "1 dakika",
+      "Konum yok",
+      "En hızlı 5 saniye"
     ],
-    a: 3,
+    a: 4,
+    difficulty: "medium",
+    week: 10,
+    topic: "Konum Güncellemeleri",
+    importance: 4,
+    explanation: "5000 ms = 5 saniye. fastestInterval en hızlı güncelleme aralığıdır."
+  },
+
+  {
+    q: "PRIORITY_HIGH_ACCURACY neyi hedefler?",
+    t: "mcq",
+    o: [
+      "Yüksek doğruluklu konum",
+      "Düşük parlaklık",
+      "Video sıkıştırma",
+      "Liste silme",
+      "Boş metin kontrolü"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 10,
+    topic: "Konum Doğruluğu",
+    importance: 5,
+    explanation: "HIGH_ACCURACY yüksek doğruluk demektir. Genelde GPS gibi daha hassas kaynakları kullanır."
+  },
+
+  {
+    q: "removeLocationUpdates ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Marker ekler",
+      "Konum güncellemelerini durdurur",
+      "Video başlatır",
+      "Görev ekler",
+      "Sensör türü seçer"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 10,
+    topic: "Konum Güncellemeleri",
+    importance: 5,
+    explanation: "Konum güncellemelerini gereksiz çalıştırmak pil tüketir. Durdurmak için removeLocationUpdates kullanılır."
+  },
+
+  {
+    q: "SupportMapFragment ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Ses oynatmak",
+      "Görev listelemek",
+      "Google Maps haritası göstermek",
+      "Sensör ölçmek",
+      "NFC ödeme yapmak"
+    ],
+    a: 2,
     difficulty: "medium",
     week: 10,
     topic: "Google Maps",
     importance: 4,
-    explanation: "Google Maps veya OSMDroid gibi kütüphane bağımlılıkları Gradle dosyasına eklenir."
+    explanation: "Google Maps kullanımında harita XML içinde SupportMapFragment ile gösterilebilir."
   },
+
   {
-    q: "OSMDroid hangi amaçla kullanılır?",
+    q: "MarkerOptions().position(...) ne belirler?",
     t: "mcq",
     o: [
-      "Ses kaydı almak",
-      "Video sıkıştırmak",
-      "Sensör kalibre etmek",
-      "Bildirim göndermek",
-      "Android'de harita göstermek"
+      "Uygulama temasını",
+      "Ses seviyesini",
+      "Liste satırını",
+      "Marker konumunu",
+      "Pil seviyesini"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 10,
+    topic: "Marker",
+    importance: 5,
+    explanation: "position(...) marker'ın harita üzerinde hangi koordinata konacağını belirler."
+  },
+
+  {
+    q: "PolylineOptions ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Ses çalmak",
+      "Görev silmek",
+      "Boş metin kontrolü",
+      "Sensör hassasiyeti",
+      "Haritada çizgi çizmek"
     ],
     a: 4,
-    difficulty: "easy",
+    difficulty: "medium",
+    week: 10,
+    topic: "Polyline",
+    importance: 4,
+    explanation: "Polyline, harita üzerinde iki veya daha fazla nokta arasında çizgi çizmek için kullanılır."
+  },
+
+  // =========================================================
+  // ==== 10. HAFTA – OSMDroid / Harita Uygulaması (6) ========
+  // =========================================================
+
+  {
+    q: "OSMDroid bağımlılığı nereye eklenir?",
+    t: "mcq",
+    o: [
+      "build.gradle",
+      "AndroidManifest.xml",
+      "strings.xml",
+      "colors.xml",
+      "ic_launcher"
+    ],
+    a: 0,
+    difficulty: "medium",
     week: 10,
     topic: "OSMDroid",
     importance: 5,
-    explanation: "OSMDroid, Android uygulamalarında harita gösterimi için kullanılan bir kütüphanedir."
+    explanation: "Kütüphane bağımlılıkları dependencies bloğuna, yani build.gradle dosyasına eklenir."
   },
+
   {
-    q: "MapView hangi iş için kullanılır?",
+    q: "OSMDroid örneğinde MapView ne işe yarar?",
     t: "mcq",
     o: [
-      "Harita görünümü göstermek",
-      "Ses oynatmak",
-      "Görev silmek",
-      "SMS göndermek",
-      "Resim sıkıştırmak"
+      "Ses çalar",
+      "Harita görünümü sağlar",
+      "Görev siler",
+      "Sensör dinler",
+      "Video kaydeder"
     ],
-    a: 0,
+    a: 1,
     difficulty: "easy",
     week: 10,
     topic: "MapView",
     importance: 5,
-    explanation: "MapView, uygulama içinde harita görünümü göstermek için kullanılır."
+    explanation: "MapView, uygulama ekranında harita göstermek için kullanılan bileşendir."
   },
+
   {
-    q: "Marker neyi temsil eder?",
+    q: "MAPNIK neyle ilişkilidir?",
     t: "mcq",
     o: [
-      "Ses dosyasını",
-      "Haritadaki işaretli noktayı",
-      "Liste adaptörünü",
-      "Metin giriş alanını",
-      "Video oynatıcıyı"
+      "Ses kaynağı",
+      "Video formatı",
+      "OpenStreetMap harita kaynağı",
+      "Sensör tipi",
+      "Liste adaptörü"
     ],
-    a: 1,
+    a: 2,
+    difficulty: "medium",
+    week: 10,
+    topic: "MAPNIK",
+    importance: 4,
+    explanation: "OSMDroid örneğinde MAPNIK, OpenStreetMap tabanlı harita tile kaynağıdır."
+  },
+
+  {
+    q: "setMultiTouchControls(true) ne sağlar?",
+    t: "mcq",
+    o: [
+      "Konumu kapatır",
+      "Listeyi günceller",
+      "Görev ekler",
+      "Çoklu dokunma desteği verir",
+      "Video sıkıştırır"
+    ],
+    a: 3,
     difficulty: "easy",
     week: 10,
-    topic: "Marker",
+    topic: "MapView Ayarları",
+    importance: 4,
+    explanation: "Bu metot haritada parmak hareketleriyle gezinme/etkileşim için çoklu dokunmayı etkinleştirir."
+  },
+
+  {
+    q: "setBuiltInZoomControls(true) neyi açar?",
+    t: "mcq",
+    o: [
+      "Konum iznini",
+      "Ses kaydını",
+      "Görev girişini",
+      "Bluetooth'u",
+      "Zoom kontrollerini"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 10,
+    topic: "MapView Ayarları",
+    importance: 4,
+    explanation: "Built-in zoom controls, harita üzerinde yakınlaştırma/uzaklaştırma kontrollerini aktif eder."
+  },
+
+  {
+    q: "mapView.onPause() hangi durumda çağrılır?",
+    t: "mcq",
+    o: [
+      "Uygulama duraklatılırken",
+      "Görev eklenirken",
+      "Video başlarken",
+      "Sensör okunurken",
+      "Toast gösterilirken"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 10,
+    topic: "MapView Yaşam Döngüsü",
     importance: 5,
-    explanation: "Marker, harita üzerinde belirli bir noktayı işaretlemek için kullanılır."
+    explanation: "Harita bileşenleri Activity yaşam döngüsüne uyumlu yönetilmelidir. onPause sırasında mapView.onPause() çağrılır."
   },
 
   // =========================================================
-  // ==== 11. HAFTA – Çoklu Ortam Uygulamaları (8) ============
+  // ==== 11. HAFTA – Çoklu Ortam / Vize Kritik (7) ===========
   // =========================================================
 
   {
-    q: "Çoklu ortam hangi veri türlerini birleştirir?",
+    q: "Çoklu ortam hangi bileşenleri kapsar?",
     t: "mcq",
     o: [
       "Sadece metin",
+      "Metin, görsel, ses, video, animasyon",
       "Sadece konum",
-      "Metin, görsel, ses, video ve animasyon",
-      "Sadece ağ protokolü",
-      "Sadece veritabanı"
+      "Sadece sensör",
+      "Sadece veri tabanı"
     ],
-    a: 2,
+    a: 1,
     difficulty: "easy",
     week: 11,
     topic: "Çoklu Ortam",
     importance: 5,
-    explanation: "Çoklu ortam; metin, grafik/görsel, ses, video ve animasyon gibi veri türlerinin birleşimidir."
+    explanation: "Multimedya; metin, görsel, ses, video ve animasyonun birlikte kullanımını ifade eder."
   },
+
   {
-    q: "MediaPlayer Android'de ne için kullanılır?",
+    q: "Android'de ses oynatmak için hangi sınıf kullanılır?",
     t: "mcq",
     o: [
-      "Harita çizmek",
-      "Konum almak",
-      "Metin girmek",
-      "Ses oynatmak",
-      "Görev silmek"
+      "MapView",
+      "ArrayAdapter",
+      "MediaPlayer",
+      "SensorManager",
+      "Marker"
     ],
-    a: 3,
+    a: 2,
     difficulty: "easy",
     week: 11,
     topic: "MediaPlayer",
     importance: 5,
-    explanation: "MediaPlayer, Android'de ses dosyalarını oynatmak için kullanılır."
+    explanation: "MediaPlayer, Android'de ses çalma işlemlerinde temel sınıflardan biridir."
   },
+
   {
-    q: "VideoView hangi amaçla kullanılır?",
+    q: "VideoView ne için kullanılır?",
     t: "mcq",
     o: [
-      "Sensör okumak",
-      "REST API çağırmak",
-      "Görev listelemek",
-      "Yakınlık ölçmek",
-      "Video oynatmak"
+      "Sensör verisi okumak",
+      "Konum izni almak",
+      "Liste göstermek",
+      "Video oynatmak",
+      "Toast göstermek"
     ],
-    a: 4,
+    a: 3,
     difficulty: "easy",
     week: 11,
     topic: "VideoView",
     importance: 5,
-    explanation: "VideoView, Android uygulamalarında video oynatmak için kullanılan bileşendir."
+    explanation: "VideoView, Android tarafında video oynatmak için kullanılan arayüz bileşenidir."
   },
+
   {
-    q: "ExoPlayer hangi işte öne çıkar?",
-    t: "mcq",
-    o: [
-      "Gelişmiş video oynatma",
-      "Metin girişi",
-      "Konum izni",
-      "Liste silme",
-      "NFC ödeme"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 11,
-    topic: "ExoPlayer",
-    importance: 4,
-    explanation: "ExoPlayer, Android tarafında gelişmiş video oynatma için kullanılan popüler araçtır."
-  },
-  {
-    q: "AVFoundation hangi platformla ilişkilidir?",
+    q: "AVFoundation hangi platformda kullanılır?",
     t: "mcq",
     o: [
       "Android",
-      "iOS",
       "Windows Phone",
-      "Linux Kernel",
-      "Firebase"
+      "OSMDroid",
+      "Retrofit",
+      "iOS"
     ],
-    a: 1,
+    a: 4,
     difficulty: "easy",
     week: 11,
-    topic: "AVFoundation",
+    topic: "iOS Multimedya",
     importance: 5,
     explanation: "AVFoundation, iOS tarafında ses ve video işlemleri için kullanılan framework'tür."
   },
+
   {
     q: "Glide ve Picasso ne için kullanılır?",
     t: "mcq",
     o: [
-      "Harita işaretlemek",
-      "GPS doğruluğu ölçmek",
-      "Android'de resim yüklemek",
-      "Bluetooth eşleştirmek",
-      "Veri tabanı kurmak"
+      "Resim yükleme",
+      "GPS izni",
+      "Görev silme",
+      "NFC ödeme",
+      "WebSocket bağlantısı"
     ],
-    a: 2,
+    a: 0,
     difficulty: "medium",
     week: 11,
     topic: "Görsel Yükleme",
     importance: 4,
-    explanation: "Glide ve Picasso, Android uygulamalarında resim yükleme işlemleri için kullanılır."
+    explanation: "Android'de uzak veya yerel görselleri verimli yüklemek için Glide/Picasso gibi kütüphaneler kullanılır."
   },
+
   {
-    q: "FFmpeg hangi işlemlerle ilişkilidir?",
+    q: "Lazy loading neyi ifade eder?",
     t: "mcq",
     o: [
-      "Konum izni isteme",
-      "UI hizalama",
-      "Liste güncelleme",
-      "Dönüştürme ve sıkıştırma",
-      "Görev ekleme"
+      "Tüm içeriği başta yükleme",
+      "İçeriği gerektiğinde yükleme",
+      "Konumu kapatma",
+      "Sensörü silme",
+      "Videoyu bozma"
     ],
-    a: 3,
-    difficulty: "hard",
-    week: 11,
-    topic: "FFmpeg",
-    importance: 4,
-    explanation: "FFmpeg medya dönüştürme, sıkıştırma ve streaming işlemleriyle ilişkilidir."
-  },
-  {
-    q: "Lazy loading medya yönetiminde ne sağlar?",
-    t: "mcq",
-    o: [
-      "Tüm medyayı başta yükler",
-      "Konumu sürekli izler",
-      "Sensörü kapatır",
-      "Veritabanı oluşturur",
-      "İçeriği gerektiğinde yükler"
-    ],
-    a: 4,
+    a: 1,
     difficulty: "medium",
     week: 11,
     topic: "Performans",
     importance: 5,
-    explanation: "Lazy loading, medya veya içeriğin yalnızca ihtiyaç olduğunda yüklenmesini sağlar."
+    explanation: "Lazy loading, özellikle medya içeriklerinde performans için önemlidir. İçerik ihtiyaç oldukça yüklenir."
+  },
+
+  {
+    q: "FFmpeg hangi işlemlerle ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Konum izni",
+      "Liste silme",
+      "Medya dönüştürme ve sıkıştırma",
+      "Sensör doğruluğu",
+      "Marker başlığı"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 11,
+    topic: "FFmpeg",
+    importance: 4,
+    explanation: "FFmpeg; video/ses dönüştürme, sıkıştırma ve streaming gibi medya işlerinde kullanılır."
   },
 
   // =========================================================
-  // ==== 12. HAFTA – Sensör Uygulamaları (8) =================
+  // ==== 12. HAFTA – Sensörler / Vize Kritik (10) ============
   // =========================================================
 
   {
-    q: "Sensör nedir?",
+    q: "Sensör en kısa tanımıyla nedir?",
     t: "mcq",
     o: [
-      "Çevresel bilgiyi dijital veriye dönüştüren bileşen",
-      "Sadece uygulama teması",
-      "Ağ protokolü",
+      "Arayüz bileşeni",
+      "Harita kaynağı",
       "Liste adaptörü",
-      "Harita işaretleyici"
+      "Çevresel bilgiyi dijital veriye çeviren bileşen",
+      "Video oynatıcı"
     ],
-    a: 0,
+    a: 3,
     difficulty: "easy",
     week: 12,
     topic: "Sensör Tanımı",
     importance: 5,
-    explanation: "Sensörler çevresel bilgileri algılar ve dijital verilere dönüştürür."
+    explanation: "Sensör; hareket, ışık, konum, sıcaklık gibi çevresel bilgileri algılar ve dijital veriye dönüştürür."
   },
+
   {
     q: "Android'de sensörlere hangi sınıfla erişilir?",
     t: "mcq",
     o: [
-      "MediaPlayer",
-      "SensorManager",
-      "ArrayAdapter",
       "MapView",
-      "VideoView"
+      "MediaPlayer",
+      "ArrayAdapter",
+      "VideoView",
+      "SensorManager"
     ],
-    a: 1,
+    a: 4,
     difficulty: "easy",
     week: 12,
     topic: "SensorManager",
     importance: 5,
-    explanation: "Android'de sensörlere SensorManager sınıfı üzerinden erişilir."
+    explanation: "Android'de sensör işlemlerinin merkezi sınıfı SensorManager'dır."
   },
+
   {
-    q: "TYPE_ACCELEROMETER hangi sensörü ifade eder?",
+    q: "TYPE_ACCELEROMETER hangi sensördür?",
     t: "mcq",
     o: [
+      "İvmeölçer",
+      "Yakınlık sensörü",
       "Işık sensörü",
       "Barometre",
-      "İvmeölçer",
-      "GPS",
-      "Yakınlık sensörü"
+      "GPS"
     ],
-    a: 2,
+    a: 0,
     difficulty: "easy",
     week: 12,
     topic: "İvmeölçer",
     importance: 5,
-    explanation: "TYPE_ACCELEROMETER, ivmeölçer sensörünü ifade eder."
+    explanation: "Accelerometer = ivmeölçer. 3 eksende hız değişimini algılar."
   },
+
   {
-    q: "onSensorChanged ne zaman çalışır?",
+    q: "Gyroscope neyi algılar?",
     t: "mcq",
     o: [
-      "Uygulama silinince",
-      "Video başlayınca",
-      "Liste boşalınca",
-      "Sensör verisi değişince",
-      "Harita kapanınca"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 12,
-    topic: "SensorEventListener",
-    importance: 5,
-    explanation: "onSensorChanged, sensörden gelen değerler değiştiğinde tetiklenir."
-  },
-  {
-    q: "event.values[0] genellikle hangi ekseni verir?",
-    t: "mcq",
-    o: [
-      "Y ekseni",
-      "Z ekseni",
-      "Işık değeri",
-      "Konum değeri",
-      "X ekseni"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 12,
-    topic: "Sensör Verileri",
-    importance: 4,
-    explanation: "İvmeölçer örneğinde event.values[0] x eksenindeki değeri verir."
-  },
-  {
-    q: "registerListener ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Sensör dinlemeyi başlatmak için",
-      "Video dosyasını açmak için",
-      "Harita işaretlemek için",
-      "Görev silmek için",
-      "Metin temizlemek için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 12,
-    topic: "Sensör Dinleme",
-    importance: 5,
-    explanation: "registerListener, belirli bir sensörü dinlemeye başlamak için kullanılır."
-  },
-  {
-    q: "Sürekli sensör dinleme hangi riski artırır?",
-    t: "mcq",
-    o: [
-      "UI güzelliğini",
-      "Pil tüketimini",
-      "APK adını",
-      "Liste uzunluğunu",
-      "Harita başlığını"
+      "Işık seviyesi",
+      "Açısal dönüş",
+      "IP adresi",
+      "Harita kaynağı",
+      "Liste verisi"
     ],
     a: 1,
     difficulty: "easy",
     week: 12,
-    topic: "Güç Tüketimi",
+    topic: "Jiroskop",
     importance: 5,
-    explanation: "Sürekli sensör dinlemek bataryayı hızlı tüketebilir."
+    explanation: "Jiroskop açısal dönüşü algılar. Oyunlarda yön kontrolü ve VR uygulamalarında kullanılır."
   },
+
   {
-    q: "getDefaultSensor(...) != null kontrolü ne içindir?",
+    q: "Magnetometer hangi uygulamada önemlidir?",
     t: "mcq",
     o: [
-      "Konum doğruluğunu artırmak için",
-      "Video kalitesini seçmek için",
-      "Cihazda sensör var mı kontrol etmek için",
-      "Listeyi temizlemek için",
-      "Toast göstermek için"
+      "Video oynatıcı",
+      "Görev listesi",
+      "Dijital pusula",
+      "Toast mesajı",
+      "REST API"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 12,
+    topic: "Manyetometre",
+    importance: 5,
+    explanation: "Manyetometre dünyanın manyetik alanını algılar. Pusula sorularında doğru cevap manyetometredir."
+  },
+
+  {
+    q: "Proximity Sensor ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Ses dosyası çalar",
+      "Harita çizer",
+      "Video sıkıştırır",
+      "Yakınlık algılar",
+      "Görevleri saklar"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 12,
+    topic: "Yakınlık Sensörü",
+    importance: 5,
+    explanation: "Yakınlık sensörü, telefon yüze yaklaştığında ekranı kapatma gibi işlerde kullanılır."
+  },
+
+  {
+    q: "Light Sensor neyi ölçer?",
+    t: "mcq",
+    o: [
+      "Dönüş hızını",
+      "Manyetik alanı",
+      "Hava basıncını",
+      "Konumu",
+      "Ortam ışığını"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 12,
+    topic: "Işık Sensörü",
+    importance: 5,
+    explanation: "Light Sensor ortam ışığını ölçer. Otomatik ekran parlaklığı klasik örnektir."
+  },
+
+  {
+    q: "Barometer neyi ölçer?",
+    t: "mcq",
+    o: [
+      "Hava basıncını",
+      "Yakınlığı",
+      "Ses seviyesini",
+      "Liste sayısını",
+      "Video süresini"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Barometre",
+    importance: 4,
+    explanation: "Barometre hava basıncını ölçer; rakım ve hava durumu uygulamalarında kullanılabilir."
+  },
+
+  {
+    q: "onSensorChanged ne zaman çalışır?",
+    t: "mcq",
+    o: [
+      "Liste boşalınca",
+      "Sensör verisi değişince",
+      "Harita kapanınca",
+      "Video bitince",
+      "Toast kapanınca"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 12,
+    topic: "SensorEventListener",
+    importance: 5,
+    explanation: "SensorEventListener içindeki onSensorChanged, yeni sensör verisi geldiğinde tetiklenir."
+  },
+
+  {
+    q: "getDefaultSensor(...) != null kontrolü neyi sınar?",
+    t: "mcq",
+    o: [
+      "Video çözünürlüğünü",
+      "Konum hızını",
+      "Cihazda ilgili sensör var mı",
+      "Liste boş mu",
+      "Toast süresi kaç"
     ],
     a: 2,
     difficulty: "medium",
     week: 12,
     topic: "Cihaz Uyumluluğu",
     importance: 5,
-    explanation: "Her cihaz her sensörü desteklemez; bu kontrol sensörün varlığını sınamak için yapılır."
+    explanation: "Her cihaz her sensöre sahip değildir. Bu kontrol cihaz uyumluluğu için kritik bir sınav bilgisidir."
   },
 
   // =========================================================
-  // ==== 14. HAFTA – Proje Çalışması / To-Do App (7) =========
+  // ==== 14. HAFTA – To-Do App / Kod Mantığı (7) =============
   // =========================================================
 
   {
-    q: "To-Do App'in temel amacı nedir?",
+    q: "To-Do uygulamasında EditText ne işe yarar?",
     t: "mcq",
     o: [
-      "Harita göstermek",
-      "Video oynatmak",
-      "Sensör ölçmek",
-      "Görevleri listeleyip yönetmek",
-      "Ağ protokolü test etmek"
+      "Görevi listeler",
+      "Harita gösterir",
+      "Video oynatır",
+      "Görev metni alır",
+      "Sensör okur"
     ],
     a: 3,
     difficulty: "easy",
     week: 14,
     topic: "To-Do App",
     importance: 5,
-    explanation: "To-Do App, kullanıcının görevleri ekleyip listeleyebildiği basit görev takip uygulamasıdır."
+    explanation: "EditText, kullanıcının görev metnini yazdığı giriş alanıdır."
   },
+
   {
-    q: "EditText ne için kullanılır?",
+    q: "To-Do uygulamasında ListView ne yapar?",
     t: "mcq",
     o: [
-      "Görevleri listelemek için",
-      "Harita yakınlaştırmak için",
-      "Ses oynatmak için",
-      "Konum almak için",
-      "Görev metni girmek için"
+      "Ses çalar",
+      "Konum alır",
+      "Sensör ölçer",
+      "Boş metin kontrol eder",
+      "Görevleri listeler"
     ],
     a: 4,
     difficulty: "easy",
     week: 14,
-    topic: "EditText",
-    importance: 5,
-    explanation: "EditText, kullanıcının görev metni girmesi için kullanılır."
-  },
-  {
-    q: "ListView hangi görevi yapar?",
-    t: "mcq",
-    o: [
-      "Görevleri listeler",
-      "Ses çalar",
-      "GPS açar",
-      "Sensör dinler",
-      "Video sıkıştırır"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 14,
     topic: "ListView",
     importance: 5,
-    explanation: "ListView, eklenen görevlerin listelendiği UI bileşenidir."
+    explanation: "ListView, ArrayList'teki görevlerin ekranda liste halinde görünmesini sağlar."
   },
+
   {
-    q: "ArrayList<String> projede neyi tutar?",
+    q: "ArrayList<String> ne için kullanılır?",
     t: "mcq",
     o: [
-      "Harita noktalarını",
-      "Görevleri geçici olarak",
-      "Ses dosyalarını",
-      "Kamera görüntülerini",
-      "Kullanıcı izinlerini"
+      "Görevleri geçici tutmak",
+      "Harita çizmek",
+      "Video oynatmak",
+      "GPS izni istemek",
+      "Sensör tipi seçmek"
     ],
-    a: 1,
+    a: 0,
     difficulty: "medium",
     week: 14,
     topic: "ArrayList",
     importance: 5,
-    explanation: "ArrayList<String>, görevleri uygulama çalıştığı sürece bellekte geçici olarak tutar."
+    explanation: "Bu projede görevler kalıcı veritabanında değil, ArrayList<String> içinde geçici tutulur."
   },
+
   {
-    q: "ArrayAdapter'ın görevi nedir?",
+    q: "ArrayAdapter ne yapar?",
     t: "mcq",
     o: [
-      "Konum izni istemek",
-      "Video oynatmak",
-      "Liste verisi ile ListView arasında köprü olmak",
-      "Sensör hassasiyeti ayarlamak",
-      "Harita indirmek"
+      "Konum günceller",
+      "ArrayList ile ListView arasında köprü kurar",
+      "Video sıkıştırır",
+      "Sensör doğruluğu ölçer",
+      "Harita tile indirir"
     ],
-    a: 2,
+    a: 1,
     difficulty: "medium",
     week: 14,
     topic: "ArrayAdapter",
     importance: 5,
-    explanation: "ArrayAdapter, ArrayList içindeki veriyi ListView ile bağlar."
+    explanation: "ArrayAdapter, veri kaynağı ile ListView arasında bağlantı kurar. Sınavda 'köprü' kelimesi ArrayAdapter'ı işaret eder."
   },
+
   {
     q: "notifyDataSetChanged() ne işe yarar?",
     t: "mcq",
     o: [
-      "Haritayı yakınlaştırır",
+      "Konum izni ister",
+      "Video başlatır",
+      "Listeyi günceller",
       "Sensörü kapatır",
-      "Ses başlatır",
-      "Liste görünümünü günceller",
-      "Konum izni ister"
+      "Marker ekler"
     ],
-    a: 3,
+    a: 2,
     difficulty: "medium",
     week: 14,
     topic: "Liste Güncelleme",
     importance: 5,
-    explanation: "notifyDataSetChanged(), veri değiştiğinde ListView'ın güncellenmesini sağlar."
+    explanation: "Veri değiştiğinde ListView'ın ekranda yenilenmesi için notifyDataSetChanged() çağrılır."
   },
+
   {
-    q: "Boş görev girilirse kullanıcıya ne gösterilir?",
+    q: "To-Do uygulaması neden görevleri kalıcı saklamaz?",
     t: "mcq",
     o: [
-      "Marker",
+      "Button yoktur",
+      "ListView yoktur",
+      "EditText yoktur",
+      "Room DB veya SharedPreferences kullanılmaz",
+      "Toast çalışmaz"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 14,
+    topic: "Veri Kalıcılığı",
+    importance: 5,
+    explanation: "Görevler sadece bellekte tutulur. Room DB veya SharedPreferences olmadığı için uygulama kapanınca silinir."
+  },
+
+  {
+    q: "Boş görev girilirse hangi bileşenle uyarı verilir?",
+    t: "mcq",
+    o: [
       "MapView",
       "VideoView",
-      "MediaPlayer",
+      "SensorManager",
+      "ArrayAdapter",
       "Toast"
     ],
     a: 4,
@@ -880,6 +1108,6 @@ window.questionBank = [
     week: 14,
     topic: "Toast",
     importance: 5,
-    explanation: "Boş görev girildiğinde kullanıcıya Toast ile kısa uyarı gösterilir."
+    explanation: "Toast, kullanıcıya kısa uyarı mesajı göstermek için kullanılır. Boş görev uyarısı için uygundur."
   }
 ];
