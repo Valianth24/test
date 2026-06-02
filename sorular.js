@@ -1,875 +1,885 @@
-// Mobil Programlama – Vize Tarzı Kısa Bilgi Testi 2 (MCQ)
+// Mobil Programlama – Yeni PDF'lerden 50 Soruluk Vize/Final Testi (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 1. HAFTA – Mobil Giriş, Ağlar, Donanım, Sensörler (12)
+  // ==== 5. HAFTA – Mobil Ağ Yapıları (10) ===================
   // =========================================================
 
   {
-    q: "Mobil bilişim hangi temel fikre dayanır?",
+    q: "Mobil cihazların en yaygın bağlantı yöntemi hangisidir?",
     t: "mcq",
     o: [
-      "Zamandan ve mekândan bağımsız erişim",
-      "Sadece masaüstü kullanımı",
-      "Kablolu ağ zorunluluğu",
-      "Tek kullanıcı desteği",
-      "Sunucusuz çalışma"
+      "Hücresel ağlar",
+      "Kızılötesi ağlar",
+      "Sadece Bluetooth",
+      "Sadece NFC",
+      "USB bağlantısı"
     ],
     a: 0,
     difficulty: "easy",
-    week: 1,
-    topic: "Mobil Bilişim",
+    week: 5,
+    topic: "Mobil Ağ Türleri",
     importance: 5,
-    explanation: "Mobil bilişim, kullanıcının hareket hâlindeyken de bilgiye ve servislere erişebilmesini sağlar."
+    explanation: "Hücresel ağlar, mobil cihazların en yaygın bağlantı yöntemidir."
   },
   {
-    q: "0G sistemler en çok neyle ilişkilidir?",
+    q: "Wi-Fi hangi ağ türüdür?",
     t: "mcq",
     o: [
-      "5G internet",
-      "Radyo tabanlı araç telefonları",
-      "Mobil uygulama mağazaları",
-      "HD video akışı",
-      "Bulut oyun"
+      "Uydu tabanlı konum ağı",
+      "Kablosuz yerel alan ağı",
+      "Hücresel çekirdek ağı",
+      "Yakın alan ödeme ağı",
+      "Kablolu geniş alan ağı"
     ],
     a: 1,
     difficulty: "easy",
-    week: 1,
-    topic: "Mobil Ağ Tarihi",
-    importance: 3,
-    explanation: "0G dönemi radyo tabanlı, genellikle araç içi ve operatör destekli mobil iletişim sistemlerini ifade eder."
+    week: 5,
+    topic: "Wi-Fi",
+    importance: 4,
+    explanation: "Wi-Fi, kısa mesafede kullanılan kablosuz yerel alan ağıdır."
   },
   {
-    q: "1G ağlarda veri iletimi nasıldı?",
+    q: "NFC yaklaşık hangi mesafede çalışır?",
     t: "mcq",
     o: [
-      "Tamamen dijitaldi",
-      "Yalnızca Wi-Fi kullanırdı",
-      "Analogdu",
-      "Fiber tabanlıydı",
-      "Bulut tabanlıydı"
+      "1 kilometre",
+      "500 metre",
+      "10 cm",
+      "50 metre",
+      "10 kilometre"
     ],
     a: 2,
     difficulty: "easy",
-    week: 1,
-    topic: "Mobil Ağ Nesilleri",
+    week: 5,
+    topic: "NFC",
     importance: 4,
-    explanation: "1G sistemler analog ses iletimiyle çalışır."
+    explanation: "NFC çok kısa mesafede, yaklaşık 10 cm civarında çalışan iletişim teknolojisidir."
   },
   {
-    q: "4G en çok hangi kullanımları güçlendirmiştir?",
+    q: "GPS ne için kullanılır?",
     t: "mcq",
     o: [
-      "Sadece analog aramayı",
-      "Manuel operatörlü çağrıyı",
-      "Faks göndermeyi",
-      "HD video ve gerçek zamanlı servisleri",
-      "Sadece SMS göndermeyi"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Ağ Nesilleri",
-    importance: 4,
-    explanation: "4G/LTE; yüksek hızlı internet, HD video, bulut servisleri ve gerçek zamanlı uygulamaları yaygınlaştırmıştır."
-  },
-  {
-    q: "Motorola DynaTAC 8000X neyin örneğidir?",
-    t: "mcq",
-    o: [
-      "İlk Android cihaz",
-      "İlk iOS cihaz",
-      "İlk tablet bilgisayar",
-      "İlk Windows Phone cihazı",
-      "Erken dönem cep telefonu"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 1,
-    topic: "Mobil Cihaz Tarihi",
-    importance: 3,
-    explanation: "Motorola DynaTAC 8000X erken dönem taşınabilir cep telefonu örneklerinden biridir."
-  },
-  {
-    q: "2007 yılında mobil dünyada hangi olay öne çıkar?",
-    t: "mcq",
-    o: [
-      "iPhone'un duyurulması",
-      "Android'in Google tarafından satın alınması",
-      "Windows Phone 8'in çıkması",
-      "IBM Simon'ın tanıtılması",
-      "5G'nin yaygınlaşması"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "Akıllı Telefon Tarihi",
-    importance: 5,
-    explanation: "2007'de iPhone'un duyurulması modern dokunmatik akıllı telefon döneminin önemli kırılma noktasıdır."
-  },
-  {
-    q: "T-Mobile G1 hangi platformun ilk ticari cihazıdır?",
-    t: "mcq",
-    o: [
-      "iOS",
-      "Android",
-      "Windows Phone",
-      "BlackBerry OS",
-      "Palm OS"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Android Tarihi",
-    importance: 5,
-    explanation: "T-Mobile G1, 2008'de çıkan ilk ticari Android cihazdır."
-  },
-  {
-    q: "Barometre hangi değeri ölçer?",
-    t: "mcq",
-    o: [
-      "Manyetik alan",
-      "Dönüş hızı",
-      "Hava basıncı",
-      "Yakınlık",
-      "Ekran rengi"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Sensörler",
-    importance: 4,
-    explanation: "Barometre hava basıncını ölçer; yükseklik tahmini ve hava durumu gibi alanlarda kullanılabilir."
-  },
-  {
-    q: "Manyetometre hangi işlevle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Batarya şarjı",
-      "Kamera çözünürlüğü",
-      "Ekran parlaklığı",
-      "Pusula yönü",
-      "Dosya sıkıştırma"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 1,
-    topic: "Sensörler",
-    importance: 4,
-    explanation: "Manyetometre dünyanın manyetik alanını algılar ve pusula işlevinde kullanılır."
-  },
-  {
-    q: "Işık sensörü ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Konum bulmak",
-      "Titreşim ölçmek",
-      "Ağ paketi izlemek",
+      "Dosya sıkıştırmak",
+      "Video oynatmak",
       "Ses kaydetmek",
-      "Otomatik parlaklık ayarı"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 1,
-    topic: "Sensörler",
-    importance: 4,
-    explanation: "Işık sensörü ortam ışığını ölçerek ekran parlaklığının otomatik ayarlanmasına yardımcı olur."
-  },
-  {
-    q: "Listener/Observer yapısı sensörlerde neden kullanılır?",
-    t: "mcq",
-    o: [
-      "Değişiklik olduğunda uygulamayı haberdar etmek için",
-      "Telefonu kapatmak için",
-      "Ekranı fiziksel olarak büyütmek için",
-      "APK dosyasını imzalamak için",
-      "Veritabanı tablosu silmek için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 1,
-    topic: "Sensör Programlama",
-    importance: 5,
-    explanation: "Sensör verileri olay tabanlı izlenir; veri değiştiğinde uygulama bilgilendirilir."
-  },
-  {
-    q: "Mobilde pil yönetimi neden kritiktir?",
-    t: "mcq",
-    o: [
-      "Masaüstü uygulamaları hızlandırdığı için",
-      "Cihaz sınırlı güç kaynağıyla çalıştığı için",
-      "Tüm uygulamalar kablolu olduğu için",
-      "Ekran her zaman kapalı olduğu için",
-      "Sensör kullanılmadığı için"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Donanım",
-    importance: 5,
-    explanation: "Mobil cihazlar batarya ile çalıştığı için uygulamanın enerji tüketimi doğrudan kullanıcı deneyimini etkiler."
-  },
-
-  // =========================================================
-  // ==== 2. HAFTA – Mobil İşletim Sistemleri (13)
-  // =========================================================
-
-  {
-    q: "Symbian hangi dönemde öne çıkmıştır?",
-    t: "mcq",
-    o: [
-      "2020 sonrası",
-      "5G dönemi",
-      "2000'lerin başı",
-      "Windows 11 dönemi",
-      "Sadece 1980'ler"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 2,
-    topic: "Mobil OS Tarihi",
-    importance: 3,
-    explanation: "Symbian, 2000'lerin başında önemli pazar payına sahip erken akıllı telefon işletim sistemlerinden biridir."
-  },
-  {
-    q: "Android'in temel stratejisi neydi?",
-    t: "mcq",
-    o: [
-      "Sadece Apple cihazlarında çalışmak",
-      "Kapalı donanım üretmek",
-      "Windows CE'yi sürdürmek",
-      "Açık ve esnek platform sunmak",
-      "Uygulama geliştirmeyi yasaklamak"
+      "Konum belirlemek",
+      "Veritabanı silmek"
     ],
     a: 3,
     difficulty: "easy",
-    week: 2,
-    topic: "Android Ekosistemi",
+    week: 5,
+    topic: "GPS",
     importance: 5,
-    explanation: "Google'ın Android stratejisi açık kaynaklı, esnek ve farklı üreticilere uyarlanabilir bir platform sunmaktı."
+    explanation: "GPS, uydu üzerinden konum belirleme için kullanılır."
   },
   {
-    q: "iOS'in güçlü tarafı hangisidir?",
+    q: "Bluetooth'un temel kullanım alanı hangisidir?",
     t: "mcq",
     o: [
-      "Sınırsız üretici özelleştirmesi",
-      "Tamamen açık kaynak olması",
-      "Windows NT kullanması",
-      "Sadece düşük seviye cihazlara yönelik olması",
-      "Donanım-yazılım entegrasyonu"
+      "Uzay haberleşmesi",
+      "Harita çizimi",
+      "REST API çağrısı",
+      "Sunucu barındırma",
+      "Yakın mesafe veri aktarımı"
     ],
     a: 4,
     difficulty: "easy",
-    week: 2,
-    topic: "iOS Ekosistemi",
-    importance: 5,
-    explanation: "iOS, Apple'ın donanım ve yazılımı birlikte kontrol etmesi sayesinde yüksek entegrasyon sağlar."
+    week: 5,
+    topic: "Bluetooth",
+    importance: 4,
+    explanation: "Bluetooth, yakın mesafede düşük enerjiyle veri aktarımı sağlar."
   },
   {
-    q: "Windows Phone 7 hangi yılda piyasaya sürülmüştür?",
+    q: "UE açılımı mobil ağlarda neyi ifade eder?",
     t: "mcq",
     o: [
-      "2010",
-      "2003",
-      "2005",
-      "2008",
-      "2025"
+      "User Equipment",
+      "Universal Engine",
+      "Unit Extension",
+      "Upload Environment",
+      "User Emulator"
     ],
     a: 0,
     difficulty: "medium",
-    week: 2,
-    topic: "Windows Phone",
-    importance: 3,
-    explanation: "Windows Phone 7, 2010 yılında Android ve iOS'e modern rakip olarak piyasaya sürülmüştür."
+    week: 5,
+    topic: "Ağ Mimarisi",
+    importance: 5,
+    explanation: "UE, User Equipment yani telefon/tablet gibi son kullanıcı cihazını ifade eder."
   },
   {
-    q: "Live Tiles hangi platformla ilişkilidir?",
+    q: "Baz istasyonu hangi görevi üstlenir?",
     t: "mcq",
     o: [
-      "Android",
-      "Windows Phone",
+      "Uygulama paketini imzalar",
+      "Mobil cihazların bağlandığı ilk ağ noktasıdır",
+      "Veritabanı tablolarını oluşturur",
+      "UI bileşenlerini çizer",
+      "Sensör verisini temizler"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 5,
+    topic: "Baz İstasyonu",
+    importance: 5,
+    explanation: "Baz istasyonu, hücresel ağlarda cihazların bağlandığı ilk noktadır."
+  },
+  {
+    q: "4G LTE'nin önemli avantajı hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece SMS desteği",
+      "Analog ses iletimi",
+      "Yüksek hız ve düşük gecikme",
+      "Sadece kısa mesafe iletişim",
+      "Çevrimdışı harita depolama"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 5,
+    topic: "4G LTE",
+    importance: 5,
+    explanation: "4G LTE yüksek hızlı veri aktarımı ve düşük gecikme sunar."
+  },
+  {
+    q: "5G'deki Network Slicing neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Ekranı bölmeyi",
+      "Veritabanını yedeklemeyi",
+      "Uygulamayı küçültmeyi",
+      "Sanal ağ dilimleri oluşturmayı",
+      "Bluetooth eşleştirmeyi"
+    ],
+    a: 3,
+    difficulty: "hard",
+    week: 5,
+    topic: "5G",
+    importance: 4,
+    explanation: "Network Slicing, farklı kullanım senaryoları için sanal ağ dilimleri oluşturulmasıdır."
+  },
+  {
+    q: "MQTT en çok hangi alanla ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Video düzenleme",
+      "UI tasarımı",
+      "Harita yakınlaştırma",
+      "Ses çalma",
+      "IoT cihazları"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 5,
+    topic: "Ağ Protokolleri",
+    importance: 4,
+    explanation: "MQTT, IoT cihazları için hafif bir iletişim protokolüdür."
+  },
+
+  // =========================================================
+  // ==== 8. HAFTA – Mobil Arayüz Geliştirme (8) ==============
+  // =========================================================
+
+  {
+    q: "Mobil arayüz geliştirme neyi oluşturur?",
+    t: "mcq",
+    o: [
+      "Kullanıcının gördüğü ekranları",
+      "Cihazın çekirdeğini",
+      "Baz istasyonunu",
+      "SIM kart belleğini",
+      "Sunucu donanımını"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 8,
+    topic: "Mobil Arayüz",
+    importance: 5,
+    explanation: "Mobil arayüz geliştirme, kullanıcının gördüğü ve etkileşim kurduğu ekranların oluşturulmasıdır."
+  },
+  {
+    q: "UX sürecinde wireframe neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Uygulama mağazası kaydını",
+      "Tasarımın iskeletini",
+      "Veritabanı şemasını",
+      "APK imza dosyasını",
+      "Bluetooth bağlantısını"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 8,
+    topic: "Wireframe",
+    importance: 5,
+    explanation: "Wireframe, ekran yerleşiminin temel iskeletini gösteren taslak yapıdır."
+  },
+  {
+    q: "Tutarlılık prensibi neyi önerir?",
+    t: "mcq",
+    o: [
+      "Her ekranda farklı yapı kullanmayı",
+      "Animasyonları tamamen kaldırmayı",
+      "Benzer ekranlarda benzer yapı kullanmayı",
+      "Sadece tek renk kullanmayı",
+      "Verileri bellekte saklamayı"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 8,
+    topic: "Tasarım Prensipleri",
+    importance: 5,
+    explanation: "Tutarlılık, uygulama ekranlarında benzer yapı ve davranışların korunmasını sağlar."
+  },
+  {
+    q: "Geri bildirim prensibi hangi örnekle açıklanır?",
+    t: "mcq",
+    o: [
+      "Uygulamayı kapatmak",
+      "Veriyi silmek",
+      "Kodu derlemek",
+      "Butona basınca animasyon göstermek",
+      "Ağ paketini yakalamak"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 8,
+    topic: "Geri Bildirim",
+    importance: 4,
+    explanation: "Kullanıcı işlem yaptığında sistemin görsel/işitsel tepki vermesi geri bildirimdir."
+  },
+  {
+    q: "TextField bileşeninin görevi nedir?",
+    t: "mcq",
+    o: [
+      "Harita çizmek",
+      "Ses oynatmak",
+      "Konum almak",
+      "Bildirim göndermek",
+      "Kullanıcıdan veri almak"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 8,
+    topic: "UI Bileşenleri",
+    importance: 5,
+    explanation: "TextField, kullanıcıdan metin veya veri girişi almak için kullanılır."
+  },
+  {
+    q: "Card bileşeni genelde ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Bilgileri gruplamak için",
+      "GPS izni istemek için",
+      "Ses dosyası çalmak için",
+      "Ağ protokolü seçmek için",
+      "Harita döşemesi indirmek için"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 8,
+    topic: "UI Bileşenleri",
+    importance: 4,
+    explanation: "Card, arayüzde bilgileri düzenli ve gruplu göstermek için kullanılır."
+  },
+  {
+    q: "Safe Area hangi platformla özellikle ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Android Room",
       "iOS",
-      "Symbian",
-      "Palm OS"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 2,
-    topic: "Windows Phone",
-    importance: 4,
-    explanation: "Canlı kutucuklar yani Live Tiles, Windows Phone'un Metro tasarım diliyle öne çıkan özelliğidir."
-  },
-  {
-    q: "Android'in en alt mimari katmanı hangisidir?",
-    t: "mcq",
-    o: [
-      "Application Framework",
-      "System Apps",
-      "Linux Kernel",
-      "UIKit",
-      "SwiftUI"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 2,
-    topic: "Android Mimarisi",
-    importance: 5,
-    explanation: "Android'in en alt katmanı Linux çekirdeğidir; bellek, süreç, güvenlik ve sürücülerden sorumludur."
-  },
-  {
-    q: "Android'de yüksek performanslı yerel işler için hangi kütüphaneler kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece JavaScript",
-      "Sadece CSS",
-      "Sadece XML",
-      "Native C/C++ Libraries",
-      "App Store Kit"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "Android Mimarisi",
-    importance: 4,
-    explanation: "Grafik, medya, SQLite gibi yüksek performans gerektiren işlerde Native C/C++ kütüphaneleri kullanılır."
-  },
-  {
-    q: "iOS çekirdeği hangi yapı üzerine kuruludur?",
-    t: "mcq",
-    o: [
-      "Linux",
-      "Windows NT",
-      "Dalvik",
-      "CLR",
-      "XNU"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 2,
-    topic: "iOS Mimarisi",
-    importance: 4,
-    explanation: "iOS, Darwin tabanlı XNU çekirdeği üzerine kuruludur."
-  },
-  {
-    q: "Cocoa Touch katmanı neyi içerir?",
-    t: "mcq",
-    o: [
-      "UIKit ve SwiftUI gibi UI framework'lerini",
-      "Android HAL sürücülerini",
-      "Windows NT dosya sistemini",
-      "ADB komutlarını",
-      "Gradle bağımlılıklarını"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 2,
-    topic: "iOS Katmanları",
-    importance: 4,
-    explanation: "Cocoa Touch, iOS'ta kullanıcı etkileşimi ve UI framework'leriyle ilişkili katmandır."
-  },
-  {
-    q: "WinRT'nin amacı nedir?",
-    t: "mcq",
-    o: [
-      "Android uygulaması derlemek",
-      "Windows cihazları arasında kod paylaşımını kolaylaştırmak",
-      "iOS sertifikası üretmek",
-      "Linux çekirdeğini değiştirmek",
-      "APK imzalamak"
+      "TCP/IP",
+      "Bluetooth",
+      "OSMDroid"
     ],
     a: 1,
     difficulty: "medium",
-    week: 2,
-    topic: "Windows Mimarisi",
-    importance: 3,
-    explanation: "WinRT, Windows telefon, tablet ve PC arasında ortak API/kod paylaşımı hedefiyle kullanılmıştır."
+    week: 8,
+    topic: "Yerleşim",
+    importance: 4,
+    explanation: "Safe Area, iOS’ta çentik ve alt bar gibi alanlara içerik taşmasını önler."
   },
   {
-    q: "Android'de yürütme ortamı hangisidir?",
+    q: "Figma ne için kullanılır?",
     t: "mcq",
     o: [
-      "CLR",
-      "XNU",
-      "ART",
-      "UIKit",
-      "WinUI"
+      "Sensör dinlemek için",
+      "Konum izni almak için",
+      "UI/UX tasarım ve prototipleme için",
+      "REST API kurmak için",
+      "Bluetooth eşleştirmek için"
     ],
     a: 2,
     difficulty: "easy",
-    week: 2,
-    topic: "Android Runtime",
+    week: 8,
+    topic: "Prototipleme",
     importance: 5,
-    explanation: "ART, Android uygulamalarının çalıştırıldığı Android Runtime ortamıdır."
-  },
-  {
-    q: "iOS'ta uygulamalar genellikle nasıl çalışır?",
-    t: "mcq",
-    o: [
-      "Dalvik VM üzerinde",
-      "CLR üzerinde",
-      "Sadece tarayıcıda",
-      "Native makine kodu olarak",
-      "Sadece Java bytecode olarak"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "iOS Çalışma Modeli",
-    importance: 4,
-    explanation: "iOS uygulamaları genel olarak native makine kodu olarak çalışır."
-  },
-  {
-    q: "ATT hangi platformla ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Windows Phone",
-      "Android 2.2",
-      "Symbian",
-      "BlackBerry OS",
-      "iOS"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 2,
-    topic: "Gizlilik",
-    importance: 3,
-    explanation: "ATT, Apple'ın App Tracking Transparency özelliğidir ve kullanıcı izleme izinlerini yönetir."
+    explanation: "Figma, UI/UX tasarım ve prototipleme için kullanılan popüler bir araçtır."
   },
 
   // =========================================================
-  // ==== 3. HAFTA – SDK, IDE, Android Araçları (13)
+  // ==== 10. HAFTA – Yer Bildirimi ve Harita Kullanımı (9) ====
   // =========================================================
 
   {
-    q: "SDK'nın temel amacı nedir?",
+    q: "GPS doğruluk seviyesi genellikle kaç metredir?",
     t: "mcq",
     o: [
-      "Geliştirme için gerekli araçları tek pakette sunmak",
-      "Sadece ekran parlaklığı ayarlamak",
-      "Telefon kamerası üretmek",
-      "Kullanıcı puanı yükseltmek",
-      "SIM kart yönetmek"
+      "1-10 km",
+      "500-1000 m",
+      "100-500 m",
+      "5-50 m",
+      "10-20 km"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 10,
+    topic: "Konum Doğruluğu",
+    importance: 5,
+    explanation: "Ders notuna göre GPS yüksek doğrulukta yaklaşık 5-50 metre aralığındadır."
+  },
+  {
+    q: "IP tabanlı konum doğruluğu hangisidir?",
+    t: "mcq",
+    o: [
+      "5-50 m",
+      "10-20 m",
+      "50-500 m",
+      "100 m",
+      "1-10 km"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 10,
+    topic: "Konum Doğruluğu",
+    importance: 4,
+    explanation: "IP tabanlı konum düşük doğruluk sunar ve yaklaşık 1-10 km aralığında olabilir."
+  },
+  {
+    q: "ACCESS_FINE_LOCATION hangi izinle ilgilidir?",
+    t: "mcq",
+    o: [
+      "Yüksek doğruluklu konum",
+      "Ses kaydı",
+      "Video oynatma",
+      "Bluetooth eşleştirme",
+      "Dosya silme"
     ],
     a: 0,
     difficulty: "easy",
-    week: 3,
-    topic: "SDK",
+    week: 10,
+    topic: "Android Konum İzinleri",
     importance: 5,
-    explanation: "SDK; kütüphane, API, dokümantasyon, derleme ve test araçlarını geliştiriciye sunar."
+    explanation: "ACCESS_FINE_LOCATION yüksek doğruluklu konum erişimi için kullanılır."
   },
   {
-    q: "API en kısa tanımıyla nedir?",
+    q: "ACCESS_COARSE_LOCATION hangi konumu ifade eder?",
     t: "mcq",
     o: [
-      "Uygulama mağazası",
-      "Yazılımlar arası iletişim arayüzü",
-      "Ekran sensörü",
-      "Telefon kasası",
-      "Batarya sürücüsü"
+      "Arka plan kamera",
+      "Düşük/yaklaşık konum",
+      "Ses çalma",
+      "NFC ödeme",
+      "Video sıkıştırma"
     ],
     a: 1,
     difficulty: "easy",
-    week: 3,
-    topic: "API",
+    week: 10,
+    topic: "Android Konum İzinleri",
     importance: 5,
-    explanation: "API, yazılım bileşenlerinin birbiriyle nasıl iletişim kuracağını tanımlayan arayüzdür."
+    explanation: "ACCESS_COARSE_LOCATION yaklaşık/düşük doğruluklu konum erişimi sağlar."
   },
   {
-    q: "IDE'nin görevi nedir?",
+    q: "LocationRequest interval = 10000 ne anlama gelir?",
     t: "mcq",
     o: [
-      "Sadece ağ bağlantısı kurmak",
-      "Telefonu şarj etmek",
-      "Kodlama, derleme ve hata ayıklamayı tek ortamda toplamak",
-      "Kamera çözünürlüğünü artırmak",
-      "Uygulama fiyatı belirlemek"
+      "1 saniyede bir güncelleme",
+      "5 saniyede bir güncelleme",
+      "10 saniyede bir güncelleme",
+      "100 saniyede bir güncelleme",
+      "Konum kapalı"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 10,
+    topic: "Konum Güncellemeleri",
+    importance: 4,
+    explanation: "10000 milisaniye, 10 saniyede bir konum güncellemesi anlamına gelir."
+  },
+  {
+    q: "Google Maps bağımlılığı hangi dosyaya eklenir?",
+    t: "mcq",
+    o: [
+      "AndroidManifest.xml",
+      "strings.xml",
+      "colors.xml",
+      "build.gradle",
+      "activity_main.xml"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 10,
+    topic: "Google Maps",
+    importance: 4,
+    explanation: "Google Maps veya OSMDroid gibi kütüphane bağımlılıkları Gradle dosyasına eklenir."
+  },
+  {
+    q: "OSMDroid hangi amaçla kullanılır?",
+    t: "mcq",
+    o: [
+      "Ses kaydı almak",
+      "Video sıkıştırmak",
+      "Sensör kalibre etmek",
+      "Bildirim göndermek",
+      "Android'de harita göstermek"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 10,
+    topic: "OSMDroid",
+    importance: 5,
+    explanation: "OSMDroid, Android uygulamalarında harita gösterimi için kullanılan bir kütüphanedir."
+  },
+  {
+    q: "MapView hangi iş için kullanılır?",
+    t: "mcq",
+    o: [
+      "Harita görünümü göstermek",
+      "Ses oynatmak",
+      "Görev silmek",
+      "SMS göndermek",
+      "Resim sıkıştırmak"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 10,
+    topic: "MapView",
+    importance: 5,
+    explanation: "MapView, uygulama içinde harita görünümü göstermek için kullanılır."
+  },
+  {
+    q: "Marker neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "Ses dosyasını",
+      "Haritadaki işaretli noktayı",
+      "Liste adaptörünü",
+      "Metin giriş alanını",
+      "Video oynatıcıyı"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 10,
+    topic: "Marker",
+    importance: 5,
+    explanation: "Marker, harita üzerinde belirli bir noktayı işaretlemek için kullanılır."
+  },
+
+  // =========================================================
+  // ==== 11. HAFTA – Çoklu Ortam Uygulamaları (8) ============
+  // =========================================================
+
+  {
+    q: "Çoklu ortam hangi veri türlerini birleştirir?",
+    t: "mcq",
+    o: [
+      "Sadece metin",
+      "Sadece konum",
+      "Metin, görsel, ses, video ve animasyon",
+      "Sadece ağ protokolü",
+      "Sadece veritabanı"
     ],
     a: 2,
     difficulty: "easy",
-    week: 3,
-    topic: "IDE",
+    week: 11,
+    topic: "Çoklu Ortam",
     importance: 5,
-    explanation: "IDE; kod editörü, derleyici, hata ayıklayıcı ve proje araçlarını tek arayüzde sunar."
+    explanation: "Çoklu ortam; metin, grafik/görsel, ses, video ve animasyon gibi veri türlerinin birleşimidir."
   },
   {
-    q: "Android Studio nedir?",
+    q: "MediaPlayer Android'de ne için kullanılır?",
     t: "mcq",
     o: [
-      "iOS işletim sistemi",
-      "Mobil ağ protokolü",
-      "Veritabanı motoru",
-      "Android için resmi geliştirme ortamı",
-      "Telefon modeli"
+      "Harita çizmek",
+      "Konum almak",
+      "Metin girmek",
+      "Ses oynatmak",
+      "Görev silmek"
     ],
     a: 3,
     difficulty: "easy",
-    week: 3,
-    topic: "Android Studio",
+    week: 11,
+    topic: "MediaPlayer",
     importance: 5,
-    explanation: "Android Studio, Android uygulamaları geliştirmek için kullanılan resmi IDE'dir."
+    explanation: "MediaPlayer, Android'de ses dosyalarını oynatmak için kullanılır."
   },
   {
-    q: "Xcode hangi platform için temel geliştirme aracıdır?",
+    q: "VideoView hangi amaçla kullanılır?",
+    t: "mcq",
+    o: [
+      "Sensör okumak",
+      "REST API çağırmak",
+      "Görev listelemek",
+      "Yakınlık ölçmek",
+      "Video oynatmak"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 11,
+    topic: "VideoView",
+    importance: 5,
+    explanation: "VideoView, Android uygulamalarında video oynatmak için kullanılan bileşendir."
+  },
+  {
+    q: "ExoPlayer hangi işte öne çıkar?",
+    t: "mcq",
+    o: [
+      "Gelişmiş video oynatma",
+      "Metin girişi",
+      "Konum izni",
+      "Liste silme",
+      "NFC ödeme"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 11,
+    topic: "ExoPlayer",
+    importance: 4,
+    explanation: "ExoPlayer, Android tarafında gelişmiş video oynatma için kullanılan popüler araçtır."
+  },
+  {
+    q: "AVFoundation hangi platformla ilişkilidir?",
     t: "mcq",
     o: [
       "Android",
+      "iOS",
       "Windows Phone",
-      "Symbian",
-      "BlackBerry",
-      "iOS"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 3,
-    topic: "Xcode",
-    importance: 5,
-    explanation: "Xcode, Apple ekosisteminde iOS ve diğer Apple platformları için temel IDE'dir."
-  },
-  {
-    q: "Platform-Tools paketinin en bilinen aracı hangisidir?",
-    t: "mcq",
-    o: [
-      "adb",
-      "SwiftUI",
-      "UIKit",
-      "CoreData",
-      "XAML"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "Platform-Tools",
-    importance: 5,
-    explanation: "Android SDK Platform-Tools içinde en bilinen araç adb yani Android Debug Bridge'dir."
-  },
-  {
-    q: "fastboot neyle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "iOS UI çizimi",
-      "Düşük seviyeli cihaz imajı işlemleri",
-      "Redux state yönetimi",
-      "Swift derleme",
-      "Media Query"
+      "Linux Kernel",
+      "Firebase"
     ],
     a: 1,
-    difficulty: "hard",
-    week: 3,
-    topic: "Platform-Tools",
-    importance: 3,
-    explanation: "fastboot, Android cihazlarda düşük seviyeli imaj yükleme ve bootloader işlemleriyle ilişkilidir."
+    difficulty: "easy",
+    week: 11,
+    topic: "AVFoundation",
+    importance: 5,
+    explanation: "AVFoundation, iOS tarafında ses ve video işlemleri için kullanılan framework'tür."
   },
   {
-    q: "Build-Tools hangi işle ilgilenir?",
+    q: "Glide ve Picasso ne için kullanılır?",
     t: "mcq",
     o: [
-      "Ekran parlaklığını ölçmekle",
-      "Sensörleri kapatmakla",
-      "Uygulamayı derleyip paketlemekle",
-      "Kullanıcı yorumu yazmakla",
-      "iPhone donanımı üretmekle"
+      "Harita işaretlemek",
+      "GPS doğruluğu ölçmek",
+      "Android'de resim yüklemek",
+      "Bluetooth eşleştirmek",
+      "Veri tabanı kurmak"
     ],
     a: 2,
     difficulty: "medium",
-    week: 3,
-    topic: "Build-Tools",
-    importance: 5,
-    explanation: "Build-Tools, kaynak kodun derlenmesi ve uygulama paketine dönüştürülmesi sürecinde kullanılır."
+    week: 11,
+    topic: "Görsel Yükleme",
+    importance: 4,
+    explanation: "Glide ve Picasso, Android uygulamalarında resim yükleme işlemleri için kullanılır."
   },
   {
-    q: "AAPT hangi işle yakından ilişkilidir?",
+    q: "FFmpeg hangi işlemlerle ilişkilidir?",
     t: "mcq",
     o: [
-      "GPS ölçümü",
-      "NFC ödeme",
-      "iOS sertifikası",
-      "Android kaynaklarını paketleme",
-      "Windows çekirdeği"
+      "Konum izni isteme",
+      "UI hizalama",
+      "Liste güncelleme",
+      "Dönüştürme ve sıkıştırma",
+      "Görev ekleme"
     ],
     a: 3,
     difficulty: "hard",
-    week: 3,
-    topic: "Android Araçları",
-    importance: 3,
-    explanation: "AAPT, Android kaynaklarının işlenmesi ve paketlenmesiyle ilişkili araçtır."
+    week: 11,
+    topic: "FFmpeg",
+    importance: 4,
+    explanation: "FFmpeg medya dönüştürme, sıkıştırma ve streaming işlemleriyle ilişkilidir."
   },
   {
-    q: "NDK hangi dili projeye güçlü biçimde dahil eder?",
+    q: "Lazy loading medya yönetiminde ne sağlar?",
     t: "mcq",
     o: [
-      "HTML",
-      "CSS",
-      "SQL",
-      "Dart",
-      "C/C++"
+      "Tüm medyayı başta yükler",
+      "Konumu sürekli izler",
+      "Sensörü kapatır",
+      "Veritabanı oluşturur",
+      "İçeriği gerektiğinde yükler"
     ],
     a: 4,
     difficulty: "medium",
-    week: 3,
-    topic: "NDK",
-    importance: 4,
-    explanation: "NDK, Android projelerinde C/C++ ile native kod yazma olanağı sağlar."
-  },
-  {
-    q: "sdkmanager ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "SDK paketlerini yönetmek için",
-      "UI ikonları çizmek için",
-      "Telefon görüşmesi yapmak için",
-      "Veritabanı normalleştirmek için",
-      "Batarya üretmek için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 3,
-    topic: "sdkmanager",
-    importance: 4,
-    explanation: "sdkmanager, Android SDK paketlerini listelemek, yüklemek ve güncellemek için kullanılır."
-  },
-  {
-    q: "PATH değişkenine platform-tools eklenirse ne olur?",
-    t: "mcq",
-    o: [
-      "Telefon kamerası değişir",
-      "adb komutu terminalden bulunabilir",
-      "iOS uygulaması otomatik yayınlanır",
-      "APK boyutu sıfırlanır",
-      "Sensör verisi silinir"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 3,
-    topic: "Ortam Değişkenleri",
-    importance: 5,
-    explanation: "platform-tools PATH'e eklenirse adb gibi komutlar terminalden doğrudan çalıştırılabilir."
-  },
-  {
-    q: "Target SDK neyi belirtir?",
-    t: "mcq",
-    o: [
-      "En düşük desteklenen Android sürümünü",
-      "Telefonun RAM miktarını",
-      "Uygulamanın hedeflediği Android API seviyesini",
-      "Ekran oranını",
-      "Kullanıcı sayısını"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 3,
-    topic: "SDK Seviyeleri",
-    importance: 5,
-    explanation: "Target SDK, uygulamanın hangi Android API seviyesi için hedeflenip test edildiğini belirtir."
-  },
-
-  // =========================================================
-  // ==== 4. HAFTA – Mobil Arayüz Mimarisi (12)
-  // =========================================================
-
-  {
-    q: "UI hangi unsurları kapsar?",
-    t: "mcq",
-    o: [
-      "Sadece kernel",
-      "Sadece ağ paketi",
-      "Sadece batarya",
-      "Ekranlar, butonlar ve görsel bileşenler",
-      "Sadece mağaza hesabı"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 4,
-    topic: "UI",
-    importance: 5,
-    explanation: "UI, kullanıcının uygulamayla etkileşime geçtiği ekran, buton ve görsel bileşenleri kapsar."
-  },
-  {
-    q: "UX en çok neyle ilgilenir?",
-    t: "mcq",
-    o: [
-      "Derleyici tipi",
-      "Batarya markası",
-      "Dosya uzantısı",
-      "SDK yolu",
-      "Kullanıcı memnuniyeti ve deneyimi"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 4,
-    topic: "UX",
-    importance: 5,
-    explanation: "UX, kullanıcının uygulamayı kullanırken yaşadığı deneyim ve memnuniyet düzeyiyle ilgilenir."
-  },
-  {
-    q: "Component örneği hangisidir?",
-    t: "mcq",
-    o: [
-      "Buton",
-      "Kernel",
-      "Bootloader",
-      "SDK lisansı",
-      "API seviyesi"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "UI Component",
-    importance: 4,
-    explanation: "Buton, liste ve form gibi yapılar UI bileşeni yani component örneğidir."
-  },
-  {
-    q: "Android manifest dosyası neyi bildirir?",
-    t: "mcq",
-    o: [
-      "Sadece ekran rengini",
-      "Uygulama bileşenlerini",
-      "Kullanıcı şifresini",
-      "Telefon fiyatını",
-      "Pil kapasitesini"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 4,
-    topic: "Android Manifest",
-    importance: 5,
-    explanation: "Manifest dosyası activity, service, receiver ve provider gibi uygulama bileşenlerini bildirir."
-  },
-  {
-    q: "Temel uygulama mimarisinde veri katmanı ne içerir?",
-    t: "mcq",
-    o: [
-      "Sadece ikonları",
-      "Sadece renkleri",
-      "İş mantığı ve veri işlemlerini",
-      "Sadece ekran çözünürlüğünü",
-      "Sadece bildirim sesini"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "Veri Katmanı",
-    importance: 5,
-    explanation: "Veri katmanı, uygulamanın veriyi oluşturma, saklama ve değiştirme kurallarını yani iş mantığını içerir."
-  },
-  {
-    q: "Data Source sınıfı kaç veri kaynağıyla çalışmalıdır?",
-    t: "mcq",
-    o: [
-      "Sınırsız",
-      "En az beş",
-      "Tüm ekranlarla",
-      "Tek bir veri kaynağıyla",
-      "Sadece ViewModel ile"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
-    topic: "Data Source",
-    importance: 4,
-    explanation: "Her veri kaynağı sınıfı dosya, ağ veya yerel veritabanı gibi tek bir kaynakla çalışmalıdır."
-  },
-  {
-    q: "Use Case sınıfının temel özelliği nedir?",
-    t: "mcq",
-    o: [
-      "Sadece UI çizmesi",
-      "Tüm uygulamayı tek dosyada tutması",
-      "Veritabanını silmesi",
-      "APK imzalaması",
-      "Tek bir işlevden sorumlu olması"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 4,
-    topic: "Domain Katmanı",
-    importance: 5,
-    explanation: "Use Case sınıfları tek bir işlevi temsil etmeli ve özellikle tekrar kullanılan iş mantığını kapsamalıdır."
-  },
-  {
-    q: "MVC'de View neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Kullanıcıya gösterilen arayüzü",
-      "Derleyiciyi",
-      "İşletim sistemi çekirdeğini",
-      "SDK yolunu",
-      "API seviyesini"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "MVC",
-    importance: 4,
-    explanation: "MVC'de View, kullanıcıya gösterilen arayüz kısmıdır."
-  },
-  {
-    q: "MVVM'nin avantajı nedir?",
-    t: "mcq",
-    o: [
-      "Kernel değiştirmesi",
-      "Veri bağlamayı desteklemesi",
-      "Sadece tek ekran çalışması",
-      "SDK kurulumunu kaldırması",
-      "Donanım üretmesi"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 4,
-    topic: "MVVM",
-    importance: 5,
-    explanation: "MVVM, ViewModel üzerinden View ile Model arasında veri bağlama yaklaşımını güçlendirir."
-  },
-  {
-    q: "Clean Architecture'da Use Cases neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "UI butonlarını",
-      "Veritabanı sürücüsünü",
-      "Uygulama iş mantığını",
-      "Telefon ekranını",
-      "SDK lisansını"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 4,
-    topic: "Clean Architecture",
-    importance: 5,
-    explanation: "Use Cases katmanı, uygulamaya özgü iş mantığını temsil eder."
-  },
-  {
-    q: "Asenkron işlem neden kullanılır?",
-    t: "mcq",
-    o: [
-      "Ekranı kilitlemek için",
-      "Uygulamayı kapatmak için",
-      "SDK'yı silmek için",
-      "UI'nin donmasını önlemek için",
-      "Manifesti kaldırmak için"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
+    week: 11,
     topic: "Performans",
     importance: 5,
-    explanation: "Uzun süren işlemler arka planda yürütülürse UI donmaz ve kullanıcı deneyimi korunur."
+    explanation: "Lazy loading, medya veya içeriğin yalnızca ihtiyaç olduğunda yüklenmesini sağlar."
   },
+
+  // =========================================================
+  // ==== 12. HAFTA – Sensör Uygulamaları (8) =================
+  // =========================================================
+
   {
-    q: "Declarative UI yaklaşımı neyi tanımlar?",
+    q: "Sensör nedir?",
     t: "mcq",
     o: [
-      "Nasıl çizileceğini adım adım işlemeyi",
-      "Sadece veritabanı ilişkilerini",
-      "Telefonun çekirdeğini",
-      "APK imza anahtarını",
-      "Ekranda neyin gösterileceğini"
+      "Çevresel bilgiyi dijital veriye dönüştüren bileşen",
+      "Sadece uygulama teması",
+      "Ağ protokolü",
+      "Liste adaptörü",
+      "Harita işaretleyici"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Sensör Tanımı",
+    importance: 5,
+    explanation: "Sensörler çevresel bilgileri algılar ve dijital verilere dönüştürür."
+  },
+  {
+    q: "Android'de sensörlere hangi sınıfla erişilir?",
+    t: "mcq",
+    o: [
+      "MediaPlayer",
+      "SensorManager",
+      "ArrayAdapter",
+      "MapView",
+      "VideoView"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 12,
+    topic: "SensorManager",
+    importance: 5,
+    explanation: "Android'de sensörlere SensorManager sınıfı üzerinden erişilir."
+  },
+  {
+    q: "TYPE_ACCELEROMETER hangi sensörü ifade eder?",
+    t: "mcq",
+    o: [
+      "Işık sensörü",
+      "Barometre",
+      "İvmeölçer",
+      "GPS",
+      "Yakınlık sensörü"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 12,
+    topic: "İvmeölçer",
+    importance: 5,
+    explanation: "TYPE_ACCELEROMETER, ivmeölçer sensörünü ifade eder."
+  },
+  {
+    q: "onSensorChanged ne zaman çalışır?",
+    t: "mcq",
+    o: [
+      "Uygulama silinince",
+      "Video başlayınca",
+      "Liste boşalınca",
+      "Sensör verisi değişince",
+      "Harita kapanınca"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 12,
+    topic: "SensorEventListener",
+    importance: 5,
+    explanation: "onSensorChanged, sensörden gelen değerler değiştiğinde tetiklenir."
+  },
+  {
+    q: "event.values[0] genellikle hangi ekseni verir?",
+    t: "mcq",
+    o: [
+      "Y ekseni",
+      "Z ekseni",
+      "Işık değeri",
+      "Konum değeri",
+      "X ekseni"
     ],
     a: 4,
     difficulty: "medium",
-    week: 4,
-    topic: "Declarative UI",
+    week: 12,
+    topic: "Sensör Verileri",
     importance: 4,
-    explanation: "Declarative UI yaklaşımında geliştirici arayüzün hangi durumda ne göstereceğini tanımlar."
+    explanation: "İvmeölçer örneğinde event.values[0] x eksenindeki değeri verir."
+  },
+  {
+    q: "registerListener ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Sensör dinlemeyi başlatmak için",
+      "Video dosyasını açmak için",
+      "Harita işaretlemek için",
+      "Görev silmek için",
+      "Metin temizlemek için"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 12,
+    topic: "Sensör Dinleme",
+    importance: 5,
+    explanation: "registerListener, belirli bir sensörü dinlemeye başlamak için kullanılır."
+  },
+  {
+    q: "Sürekli sensör dinleme hangi riski artırır?",
+    t: "mcq",
+    o: [
+      "UI güzelliğini",
+      "Pil tüketimini",
+      "APK adını",
+      "Liste uzunluğunu",
+      "Harita başlığını"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 12,
+    topic: "Güç Tüketimi",
+    importance: 5,
+    explanation: "Sürekli sensör dinlemek bataryayı hızlı tüketebilir."
+  },
+  {
+    q: "getDefaultSensor(...) != null kontrolü ne içindir?",
+    t: "mcq",
+    o: [
+      "Konum doğruluğunu artırmak için",
+      "Video kalitesini seçmek için",
+      "Cihazda sensör var mı kontrol etmek için",
+      "Listeyi temizlemek için",
+      "Toast göstermek için"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 12,
+    topic: "Cihaz Uyumluluğu",
+    importance: 5,
+    explanation: "Her cihaz her sensörü desteklemez; bu kontrol sensörün varlığını sınamak için yapılır."
+  },
+
+  // =========================================================
+  // ==== 14. HAFTA – Proje Çalışması / To-Do App (7) =========
+  // =========================================================
+
+  {
+    q: "To-Do App'in temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Harita göstermek",
+      "Video oynatmak",
+      "Sensör ölçmek",
+      "Görevleri listeleyip yönetmek",
+      "Ağ protokolü test etmek"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 14,
+    topic: "To-Do App",
+    importance: 5,
+    explanation: "To-Do App, kullanıcının görevleri ekleyip listeleyebildiği basit görev takip uygulamasıdır."
+  },
+  {
+    q: "EditText ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Görevleri listelemek için",
+      "Harita yakınlaştırmak için",
+      "Ses oynatmak için",
+      "Konum almak için",
+      "Görev metni girmek için"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 14,
+    topic: "EditText",
+    importance: 5,
+    explanation: "EditText, kullanıcının görev metni girmesi için kullanılır."
+  },
+  {
+    q: "ListView hangi görevi yapar?",
+    t: "mcq",
+    o: [
+      "Görevleri listeler",
+      "Ses çalar",
+      "GPS açar",
+      "Sensör dinler",
+      "Video sıkıştırır"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "ListView",
+    importance: 5,
+    explanation: "ListView, eklenen görevlerin listelendiği UI bileşenidir."
+  },
+  {
+    q: "ArrayList<String> projede neyi tutar?",
+    t: "mcq",
+    o: [
+      "Harita noktalarını",
+      "Görevleri geçici olarak",
+      "Ses dosyalarını",
+      "Kamera görüntülerini",
+      "Kullanıcı izinlerini"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 14,
+    topic: "ArrayList",
+    importance: 5,
+    explanation: "ArrayList<String>, görevleri uygulama çalıştığı sürece bellekte geçici olarak tutar."
+  },
+  {
+    q: "ArrayAdapter'ın görevi nedir?",
+    t: "mcq",
+    o: [
+      "Konum izni istemek",
+      "Video oynatmak",
+      "Liste verisi ile ListView arasında köprü olmak",
+      "Sensör hassasiyeti ayarlamak",
+      "Harita indirmek"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 14,
+    topic: "ArrayAdapter",
+    importance: 5,
+    explanation: "ArrayAdapter, ArrayList içindeki veriyi ListView ile bağlar."
+  },
+  {
+    q: "notifyDataSetChanged() ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Haritayı yakınlaştırır",
+      "Sensörü kapatır",
+      "Ses başlatır",
+      "Liste görünümünü günceller",
+      "Konum izni ister"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 14,
+    topic: "Liste Güncelleme",
+    importance: 5,
+    explanation: "notifyDataSetChanged(), veri değiştiğinde ListView'ın güncellenmesini sağlar."
+  },
+  {
+    q: "Boş görev girilirse kullanıcıya ne gösterilir?",
+    t: "mcq",
+    o: [
+      "Marker",
+      "MapView",
+      "VideoView",
+      "MediaPlayer",
+      "Toast"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 14,
+    topic: "Toast",
+    importance: 5,
+    explanation: "Boş görev girildiğinde kullanıcıya Toast ile kısa uyarı gösterilir."
   }
 ];
