@@ -1,1113 +1,1923 @@
-// Mobil Programlama – 100 Aldırmaya Yönelik Öğretici Vize Testi (MCQ)
+// Veritabanı Yönetim Sistemleri – Kapsamlı 100 Soruluk Soru Bankası (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 5. HAFTA – Mobil Ağ Yapıları / Vize Kritik (10) =====
+  // ==== 2. HAFTA – Temel Veritabanı Kavramları (15) =========
   // =========================================================
 
   {
-    q: "Mobil cihazların en yaygın bağlantı yöntemi hangisidir?",
+    q: "Veritabanı en kısa tanımıyla nedir?",
     t: "mcq",
     o: [
-      "Hücresel ağlar",
-      "Sadece NFC",
-      "Sadece USB",
-      "Kızılötesi",
-      "Yerel dosya sistemi"
+      "Belirli bir amaca göre düzenlenmiş ilişkili veriler topluluğu",
+      "Sadece metin dosyası",
+      "Yalnızca tablo çizim programı",
+      "Sadece işlemci belleği",
+      "Bir yazıcı sürücüsü"
     ],
     a: 0,
     difficulty: "easy",
-    week: 5,
-    topic: "Mobil Ağ Türleri",
+    week: 2,
+    topic: "Veritabanı Tanımı",
     importance: 5,
-    explanation: "Vize ipucu: Mobil ağ türleri içinde en genel ve yaygın bağlantı hücresel ağdır. 2G, 3G, 4G ve 5G bu başlığın altındadır."
+    explanation: "Veritabanı, belirli bir amaca yönelik düzenlenmiş ve birbiriyle ilişkili verilerin sistematik yapısıdır."
   },
 
   {
-    q: "2G hangi hizmetlerle ilişkilidir?",
+    q: "Klasik dosya sisteminin temel sorunu hangisidir?",
     t: "mcq",
     o: [
-      "Yüksek hızlı video akışı",
-      "Temel ses ve düşük hızlı veri",
-      "1 ms gecikme",
-      "mmWave bağlantı",
-      "OSMDroid harita"
+      "SQL kullanması",
+      "Veri tekrarı ve tutarsızlık oluşturması",
+      "İlişkisel tablo kullanması",
+      "Anahtar zorunluluğu getirmesi",
+      "Veri bütünlüğünü otomatik sağlaması"
     ],
     a: 1,
     difficulty: "easy",
-    week: 5,
-    topic: "2G",
+    week: 2,
+    topic: "Klasik Dosya Sistemi",
     importance: 5,
-    explanation: "2G; GSM/EDGE ile temel sesli iletişim, SMS ve düşük hızlı veri hizmetleriyle bilinir. 4G/5G özellikleriyle karıştırma."
+    explanation: "Klasik dosya sisteminde aynı veri farklı yerlerde tutulabilir; bu da veri tekrarı ve tutarsızlığa yol açar."
   },
 
   {
-    q: "3G'nin ayırt edici katkısı nedir?",
+    q: "DBMS ne anlama gelir?",
     t: "mcq",
     o: [
-      "Sadece analog ses",
-      "10 cm iletişim",
-      "Mobil internetin yaygınlaşması",
-      "Çevrimdışı harita",
-      "Liste güncelleme"
+      "Data Backup Main System",
+      "Digital Base Memory Source",
+      "Database Management System",
+      "Direct Binary Machine Syntax",
+      "Dynamic Boot Management Service"
     ],
     a: 2,
     difficulty: "easy",
-    week: 5,
-    topic: "3G",
+    week: 2,
+    topic: "DBMS",
     importance: 5,
-    explanation: "3G; UMTS/HSPA ile daha yüksek veri hızı ve mobil internetin yaygınlaşması dönemidir."
+    explanation: "DBMS, Database Management System yani Veritabanı Yönetim Sistemi anlamına gelir."
   },
 
   {
-    q: "4G LTE için doğru ifade hangisidir?",
+    q: "Tablo kavramı neyi ifade eder?",
     t: "mcq",
     o: [
-      "Sadece SMS sağlar",
-      "Yaklaşık 10 cm çalışır",
-      "Sensör verisi üretir",
-      "Yüksek hızlı veri ve VoIP sağlar",
-      "Sadece Bluetooth'tur"
+      "Sadece dosya adını",
+      "Bir programlama dilini",
+      "Bir ağ protokolünü",
+      "Satır ve sütunlardan oluşan veri yapısını",
+      "İşletim sistemi çekirdeğini"
     ],
     a: 3,
-    difficulty: "medium",
-    week: 5,
-    topic: "4G LTE",
+    difficulty: "easy",
+    week: 2,
+    topic: "Tablo",
     importance: 5,
-    explanation: "4G/LTE; yüksek hızlı veri, video akışı, VoIP ve düşük gecikmeyle öne çıkar."
+    explanation: "Tablo, verilerin satır/kayıt ve sütun/alan yapısıyla saklandığı temel ilişkisel veritabanı birimidir."
   },
 
   {
-    q: "5G'nin vizede en çok sorulabilecek özelliği hangisidir?",
+    q: "Alan (field/column) neyi temsil eder?",
     t: "mcq",
     o: [
-      "Sadece ses",
-      "Düşük hızlı veri",
-      "Kablolu bağlantı",
-      "Sadece SMS",
-      "Düşük gecikme ve yüksek hız"
+      "Tablodaki tüm satırları",
+      "Veritabanı sunucusunu",
+      "Yedekleme dosyasını",
+      "SQL Server sürümünü",
+      "Belirli bir veri türünü taşıyan sütunu"
     ],
     a: 4,
     difficulty: "easy",
-    week: 5,
-    topic: "5G",
+    week: 2,
+    topic: "Alan",
     importance: 5,
-    explanation: "5G denince sınavda genelde yüksek hız, düşük gecikme ve çok sayıda cihaz bağlantısı beklenir."
+    explanation: "Alan ya da sütun, Ad, Soyad, Doğum Tarihi gibi belirli bir veri niteliğini temsil eder."
   },
 
   {
-    q: "Wi-Fi'nin açılımı ders notunda hangi kavramla verilmiştir?",
+    q: "Kayıt (record/row) nedir?",
     t: "mcq",
     o: [
-      "Kablosuz Yerel Alan Ağı",
-      "Küresel Konum Sistemi",
-      "Yakın Alan İletişimi",
-      "Çekirdek Ağ",
-      "Ağ Geçidi"
+      "Tablodaki bir varlığa ait tüm alan değerlerini içeren satır",
+      "Sadece bir sütun adı",
+      "Veritabanı motoru",
+      "Sadece yedekleme komutu",
+      "Sunucu bağlantı protokolü"
     ],
     a: 0,
     difficulty: "easy",
-    week: 5,
-    topic: "Wi-Fi",
-    importance: 4,
-    explanation: "Wi-Fi, WLAN yani Kablosuz Yerel Alan Ağı olarak düşünülmelidir. Kısa mesafe, hızlı ve düşük maliyetli bağlantı sağlar."
+    week: 2,
+    topic: "Kayıt",
+    importance: 5,
+    explanation: "Kayıt, bir öğrenci veya ürün gibi tek bir varlığa ait bilgilerin aynı satırda tutulmasıdır."
   },
 
   {
-    q: "NFC'nin ayırt edici mesafe özelliği nedir?",
+    q: "Veri tutarlılığı neden önemlidir?",
     t: "mcq",
     o: [
-      "1 km çalışır",
-      "Yaklaşık 10 cm çalışır",
-      "Sadece uydudan çalışır",
-      "Sadece kablolu çalışır",
-      "Sadece 5G ile çalışır"
+      "Veri tekrarını artırmak için",
+      "Aynı bilginin farklı yerlerde çelişmemesi için",
+      "Tablo sayısını sonsuz yapmak için",
+      "Sadece dosya boyutunu büyütmek için",
+      "SQL kullanımını engellemek için"
     ],
     a: 1,
-    difficulty: "easy",
-    week: 5,
-    topic: "NFC",
+    difficulty: "medium",
+    week: 2,
+    topic: "Veri Tutarlılığı",
     importance: 5,
-    explanation: "NFC çok kısa mesafede çalışır. Mobil ödeme ve hızlı eşleştirme sorularında doğru cevap genellikle NFC'dir."
+    explanation: "Veri tutarlılığı, aynı verinin farklı yerlerde farklı değerlerle tutulmasını engeller."
   },
 
   {
-    q: "Gateway'in temel görevi nedir?",
+    q: "Veri bağımsızlığı neyi ifade eder?",
     t: "mcq",
     o: [
-      "Sensör dinlemek",
-      "Video oynatmak",
-      "Ağlar arasında geçiş sağlamak",
-      "Görev metni almak",
-      "Liste göstermek"
+      "Verinin hiçbir yerde saklanmamasını",
+      "Tüm verilerin aynı dosyada tutulmasını",
+      "Fiziksel/mantıksal değişikliklerin uygulamayı en az etkilemesini",
+      "Her tablonun silinmesini",
+      "Sadece Excel kullanılmasını"
     ],
     a: 2,
     difficulty: "medium",
-    week: 5,
-    topic: "Ağ Mimarisi",
-    importance: 4,
-    explanation: "Gateway, mobil ağ ile internet veya başka ağlar arasında geçiş sağlar. Türkçesi ağ geçididir."
+    week: 2,
+    topic: "Veri Bağımsızlığı",
+    importance: 5,
+    explanation: "Veri bağımsızlığı, veritabanı yapısındaki değişikliklerin uygulama tarafını minimum etkilemesini sağlar."
   },
 
   {
-    q: "WebSocket en çok hangi kullanım için uygundur?",
+    q: "Veri soyutlama neden kullanılır?",
     t: "mcq",
     o: [
-      "Statik resim göstermek",
-      "Boş görev uyarmak",
-      "Harita izni almak",
-      "Anlık mesajlaşma",
-      "XML layout çizmek"
+      "Veriyi tamamen gizlemek için",
+      "SQL komutlarını kaldırmak için",
+      "Kayıt eklemeyi yasaklamak için",
+      "Kullanıcıya gereksiz teknik ayrıntıları göstermemek için",
+      "Tabloları dosyaya çevirmek için"
     ],
     a: 3,
     difficulty: "medium",
-    week: 5,
-    topic: "WebSocket",
-    importance: 5,
-    explanation: "Anlık iletişim, canlı veri ve oyun gibi gerçek zamanlı senaryolarda WebSocket sorulur."
+    week: 2,
+    topic: "Veri Soyutlama",
+    importance: 4,
+    explanation: "Veri soyutlama, kullanıcının verinin fiziksel saklanma ayrıntılarıyla uğraşmadan sistemi kullanmasını sağlar."
   },
 
   {
-    q: "MQTT hangi alan için hafif protokoldür?",
+    q: "İlişkisel veri modelinin temel saklama yapısı hangisidir?",
     t: "mcq",
     o: [
-      "Video düzenleme",
-      "UI prototipleme",
-      "Konum izni",
-      "Resim yükleme",
-      "IoT cihazları"
+      "Ağaç düğümleri",
+      "Graf kenarları",
+      "Sadece nesneler",
+      "Metin dosyaları",
+      "Tablolar"
     ],
     a: 4,
+    difficulty: "easy",
+    week: 2,
+    topic: "İlişkisel Model",
+    importance: 5,
+    explanation: "İlişkisel veri modelinde veriler tablolarda saklanır ve ilişkiler ortak sütunlar üzerinden kurulur."
+  },
+
+  {
+    q: "Hiyerarşik veri modeli hangi yapıya benzer?",
+    t: "mcq",
+    o: [
+      "Ağaç yapısına",
+      "Düz metin dosyasına",
+      "Rastgele listeye",
+      "Sadece web sayfasına",
+      "Tek satırlı tabloya"
+    ],
+    a: 0,
     difficulty: "medium",
-    week: 5,
-    topic: "MQTT",
+    week: 2,
+    topic: "Veri Modelleri",
     importance: 4,
-    explanation: "MQTT, IoT cihazları için hafif mesajlaşma protokolüdür. Vizede 'hafif protokol' ifadesi MQTT'yi işaret eder."
+    explanation: "Hiyerarşik modelde veriler üst-alt ilişkisiyle ağaç yapısında düzenlenir."
+  },
+
+  {
+    q: "Ağ veri modeli hangi ilişki yapısını daha esnek kurar?",
+    t: "mcq",
+    o: [
+      "Sadece birebir",
+      "Çoklu bağlantılı ilişkiler",
+      "Sadece tek tablo",
+      "Sadece dosya ilişkisi",
+      "Sadece metin ilişkisi"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Ağ Veri Modeli",
+    importance: 3,
+    explanation: "Ağ modeli, kayıtlar arasında daha karmaşık bağlantılar kurulmasına izin verir."
+  },
+
+  {
+    q: "Nesne yönelimli veri modeli hangi yapıyı temel alır?",
+    t: "mcq",
+    o: [
+      "Sadece satırları",
+      "Sadece sütunları",
+      "Veri ve metotları birlikte tutan nesneleri",
+      "Sadece SQL komutlarını",
+      "Yedekleme dosyalarını"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 2,
+    topic: "Nesne Yönelimli Model",
+    importance: 4,
+    explanation: "Nesne yönelimli modelde veri ve veri üzerinde çalışan metotlar nesne yapısında birleştirilir."
+  },
+
+  {
+    q: "Günümüzde en yaygın kullanılan veri modeli hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece hiyerarşik model",
+      "Sadece ağ modeli",
+      "Sadece nesnel model",
+      "İlişkisel model",
+      "Dosya sistemi modeli"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 2,
+    topic: "İlişkisel Model",
+    importance: 5,
+    explanation: "İlişkisel model; tablo yapısı, SQL desteği ve yapısal bağımsızlık nedeniyle en yaygın kullanılan modeldir."
+  },
+
+  {
+    q: "Klasik dosya sistemine göre veritabanının en büyük avantajı hangisidir?",
+    t: "mcq",
+    o: [
+      "Veri tekrarını artırması",
+      "Kullanıcı erişimini engellemesi",
+      "SQL desteğini kaldırması",
+      "Tüm verileri metin dosyasına çevirmesi",
+      "Veriyi daha tutarlı, güvenli ve yönetilebilir tutması"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 2,
+    topic: "Veritabanı Avantajları",
+    importance: 5,
+    explanation: "Veritabanı sistemleri veri tutarlılığı, güvenlik, erişim kontrolü ve sorgulama kolaylığı sağlar."
   },
 
   // =========================================================
-  // ==== 8. HAFTA – Mobil Arayüz / UI-UX Vize Kritik (8) =====
+  // ==== 4-5. HAFTA – İlişkisel Veritabanı, İlişkiler, Anahtarlar (15)
   // =========================================================
 
   {
-    q: "Mobil arayüz, uygulamanın hangi yönüdür?",
+    q: "İlişkisel veritabanında veriler nasıl saklanır?",
     t: "mcq",
     o: [
-      "Kullanıcının gördüğü ve etkileştiği yüzü",
-      "Cihazın bataryası",
-      "Sunucu işlemcisi",
-      "GPS uydusu",
-      "Ağ geçidi"
+      "Satır ve sütunlardan oluşan tablolarda",
+      "Yalnızca resim dosyalarında",
+      "Sadece ağaç düğümlerinde",
+      "RAM üzerinde geçici olarak",
+      "Sadece XML etiketlerinde"
     ],
     a: 0,
     difficulty: "easy",
-    week: 8,
-    topic: "Mobil Arayüz",
+    week: 4,
+    topic: "İlişkisel Veritabanı",
     importance: 5,
-    explanation: "Mobil arayüz, kullanıcının uygulamada gördüğü ekranlar ve etkileşim kurduğu bileşenlerden oluşur."
+    explanation: "İlişkisel veritabanının temel yapısı satır ve sütunlardan oluşan tablolardır."
   },
 
   {
-    q: "UX en kısa şekilde neyi ifade eder?",
+    q: "Primary Key ne işe yarar?",
     t: "mcq",
     o: [
-      "Sadece renk seçimi",
-      "Kullanıcı deneyimi",
-      "Veritabanı ilişkisi",
-      "Dosya yolu",
-      "Ağ protokolü"
+      "Tablodaki tüm verileri siler",
+      "Her kaydı benzersiz tanımlar",
+      "Sadece tablo adını değiştirir",
+      "Veri tekrarını zorunlu yapar",
+      "Yalnızca yedek alır"
     ],
     a: 1,
     difficulty: "easy",
-    week: 8,
-    topic: "UX",
+    week: 4,
+    topic: "Primary Key",
     importance: 5,
-    explanation: "UX, kullanıcının uygulamayı kullanırken yaşadığı deneyimdir. Güzel tasarım tek başına iyi UX anlamına gelmez."
+    explanation: "Primary Key, tablodaki her kaydı benzersiz biçimde tanımlayan alan veya alan grubudur."
   },
 
   {
-    q: "Wireframe ne için kullanılır?",
+    q: "Foreign Key neyi sağlar?",
     t: "mcq",
     o: [
-      "Konum izni almak için",
-      "Video oynatmak için",
-      "Ekran iskeletini göstermek için",
-      "Sensör ölçmek için",
-      "APK imzalamak için"
+      "Tabloyu tamamen silmeyi",
+      "Veritabanını kapatmayı",
+      "Başka tablonun birincil anahtarını referans almayı",
+      "Sadece metin biçimlendirmeyi",
+      "SQL Server kurulumunu"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 4,
+    topic: "Foreign Key",
+    importance: 5,
+    explanation: "Foreign Key, tablolar arasında ilişki kurmak için başka bir tablonun Primary Key alanını referans alır."
+  },
+
+  {
+    q: "Birebir ilişki için doğru örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "Bir öğretmenin birçok öğrencisi olması",
+      "Bir öğrencinin birçok derse girmesi",
+      "Bir kitabın birçok ödünç kaydı olması",
+      "Bir öğrencinin tek kimlik numarasına sahip olması",
+      "Bir siparişin birçok ürünü olması"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 4,
+    topic: "Birebir İlişki",
+    importance: 5,
+    explanation: "Birebir ilişkide bir kaydın karşı tarafta yalnızca bir karşılığı vardır."
+  },
+
+  {
+    q: "Bireçok ilişki için doğru örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "Bir öğrencinin tek kimliği olması",
+      "Bir dersin tek kodu olması",
+      "Bir tablonun tek adı olması",
+      "Bir kişinin tek doğum tarihi olması",
+      "Bir öğretmenin birden çok öğrencisi olması"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 4,
+    topic: "Bireçok İlişki",
+    importance: 5,
+    explanation: "Bireçok ilişkide bir tablodaki tek kayıt, diğer tabloda birden çok kayıtla ilişkili olabilir."
+  },
+
+  {
+    q: "Çoka çok ilişki genellikle nasıl modellenir?",
+    t: "mcq",
+    o: [
+      "Ara tablo kullanılarak",
+      "Tek sütun silinerek",
+      "Veritabanı kapatılarak",
+      "Sadece metin dosyasıyla",
+      "Primary key kaldırılarak"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "Çoka Çok İlişki",
+    importance: 5,
+    explanation: "Çoka çok ilişkiler doğrudan değil, genellikle junction/ara tablo ile modellenir."
+  },
+
+  {
+    q: "Öğrenci-Ders ilişkisinde DersKayit tablosunun görevi nedir?",
+    t: "mcq",
+    o: [
+      "Dersleri silmek",
+      "Öğrenci ve Ders arasındaki çoka çok ilişkiyi kurmak",
+      "Sadece öğrenci adını değiştirmek",
+      "Veritabanını yedeklemek",
+      "SQL Server kurmak"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 4,
+    topic: "Ara Tablo",
+    importance: 5,
+    explanation: "Bir öğrenci birçok derse, bir ders birçok öğrenciye ait olabileceği için ara tablo çoka çok ilişkiyi çözer."
+  },
+
+  {
+    q: "Veri bütünlüğü hangi araçlarla korunabilir?",
+    t: "mcq",
+    o: [
+      "Sadece tablo rengiyle",
+      "Sadece dosya adıyla",
+      "Primary Key ve Foreign Key ile",
+      "Yalnızca SELECT komutuyla",
+      "Sadece kullanıcı adıyla"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Veri Bütünlüğü",
+    importance: 5,
+    explanation: "PK ve FK kullanımı ilişkisel modelde veri bütünlüğünü korumanın temel yollarındandır."
+  },
+
+  {
+    q: "Normalizasyonun temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Tablo sayısını rastgele artırmak",
+      "SQL komutlarını kaldırmak",
+      "Veritabanını kapatmak",
+      "Veri tekrarını azaltıp yapıyı düzenlemek",
+      "Tüm kayıtları silmek"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 4,
+    topic: "Normalizasyon",
+    importance: 4,
+    explanation: "Normalizasyon, veri tekrarını azaltır ve veritabanı yapısını daha tutarlı hale getirir."
+  },
+
+  {
+    q: "İlişkisel cebir neyin temelini oluşturur?",
+    t: "mcq",
+    o: [
+      "Donanım kurulumunun",
+      "Ekran tasarımının",
+      "Yedekleme dosyalarının",
+      "İşletim sistemi çekirdeğinin",
+      "SQL sorgularının"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 4,
+    topic: "İlişkisel Cebir",
+    importance: 5,
+    explanation: "İlişkisel cebir işlemleri SQL sorgularının matematiksel temelini oluşturur."
+  },
+
+  {
+    q: "Selection işlemi ne yapar?",
+    t: "mcq",
+    o: [
+      "Koşulu sağlayan satırları seçer",
+      "Sadece tabloyu siler",
+      "Veritabanını kapatır",
+      "Kullanıcı parolasını değiştirir",
+      "Sadece yedek alır"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 4,
+    topic: "Selection",
+    importance: 5,
+    explanation: "Selection, belirli koşulu sağlayan satırları seçer; SQL'de WHERE ile ilişkilidir."
+  },
+
+  {
+    q: "Projection işlemi ne yapar?",
+    t: "mcq",
+    o: [
+      "Satırları siler",
+      "Belirli sütunları seçer",
+      "Tabloyu düşürür",
+      "Veri tabanını yedekler",
+      "Trigger oluşturur"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Projection",
+    importance: 5,
+    explanation: "Projection, belirli sütunları seçme işlemidir; SELECT Ad, Soyad gibi kullanılır."
+  },
+
+  {
+    q: "Join işlemi ne yapar?",
+    t: "mcq",
+    o: [
+      "Tek tabloyu siler",
+      "Sadece kullanıcı oluşturur",
+      "Tabloları ortak alan üzerinden birleştirir",
+      "Veritabanını şifreler",
+      "Sadece dosya taşır"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 4,
+    topic: "Join",
+    importance: 5,
+    explanation: "Join, iki veya daha fazla tabloyu ilişkili sütunlara göre birleştirir."
+  },
+
+  {
+    q: "Kartezyen çarpımı ne üretir?",
+    t: "mcq",
+    o: [
+      "Sadece ortak satırları",
+      "Sadece farklı satırları",
+      "Sadece birincil anahtarları",
+      "İki tablonun tüm olası satır kombinasyonlarını",
+      "Yalnızca indeksleri"
+    ],
+    a: 3,
+    difficulty: "hard",
+    week: 4,
+    topic: "Cartesian Product",
+    importance: 4,
+    explanation: "Kartezyen çarpımı, iki tablodaki kayıtların tüm olası eşleşmelerini üretir."
+  },
+
+  {
+    q: "Difference işlemi neyi bulur?",
+    t: "mcq",
+    o: [
+      "İki tablodaki tüm satırları",
+      "Sadece ortak satırları",
+      "Tüm olası kombinasyonları",
+      "Sadece sütun adlarını",
+      "Bir tabloda olup diğerinde olmayan satırları"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 4,
+    topic: "Difference",
+    importance: 4,
+    explanation: "Difference, bir ilişkide bulunup diğer ilişkide bulunmayan kayıtları bulur."
+  },
+
+  // =========================================================
+  // ==== 6. HAFTA – SQL Sorguları, DML, JOIN, Aggregate (15) ==
+  // =========================================================
+
+  {
+    q: "Tabloya yeni kayıt ekleyen SQL komutu hangisidir?",
+    t: "mcq",
+    o: [
+      "INSERT",
+      "SELECT",
+      "UPDATE",
+      "DELETE",
+      "DROP"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "INSERT",
+    importance: 5,
+    explanation: "INSERT komutu tabloya yeni kayıt eklemek için kullanılır."
+  },
+
+  {
+    q: "Veri güncellemek için hangi komut kullanılır?",
+    t: "mcq",
+    o: [
+      "CREATE",
+      "UPDATE",
+      "DROP",
+      "SELECT",
+      "TRUNCATE"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "UPDATE",
+    importance: 5,
+    explanation: "UPDATE komutu mevcut kayıtların değerlerini değiştirmek için kullanılır."
+  },
+
+  {
+    q: "Belirli kaydı silmek için hangi komut kullanılır?",
+    t: "mcq",
+    o: [
+      "SELECT",
+      "INSERT",
+      "DELETE",
+      "CREATE",
+      "ALTER"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 6,
+    topic: "DELETE",
+    importance: 5,
+    explanation: "DELETE FROM tablo WHERE koşul; belirli kayıtları silmek için kullanılır."
+  },
+
+  {
+    q: "SELECT * FROM Ogrenci; sorgusu ne yapar?",
+    t: "mcq",
+    o: [
+      "Tabloyu siler",
+      "Yeni kayıt ekler",
+      "Sadece tablo oluşturur",
+      "Ogrenci tablosundaki tüm kayıtları listeler",
+      "Veritabanını kapatır"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 6,
+    topic: "SELECT",
+    importance: 5,
+    explanation: "SELECT * tüm sütunları ve uygun tüm kayıtları listelemek için kullanılır."
+  },
+
+  {
+    q: "DELETE FROM Ogrenci; sorgusunda WHERE yoksa ne olur?",
+    t: "mcq",
+    o: [
+      "Hiçbir şey olmaz",
+      "Sadece ilk kayıt silinir",
+      "Sorgu otomatik SELECT olur",
+      "Yeni kayıt eklenir",
+      "Tablodaki tüm kayıtlar silinir"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 6,
+    topic: "DELETE",
+    importance: 5,
+    explanation: "DELETE komutunda WHERE kullanılmazsa tablodaki tüm kayıtlar silinebilir; bu yüzden dikkat edilmelidir."
+  },
+
+  {
+    q: "DROP TABLE Customers; komutu ne yapar?",
+    t: "mcq",
+    o: [
+      "Customers tablosunu siler",
+      "Customers tablosunu listeler",
+      "Yeni müşteri ekler",
+      "Sadece bir satırı günceller",
+      "Tabloyu yedekler"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 6,
+    topic: "DROP TABLE",
+    importance: 5,
+    explanation: "DROP TABLE tabloyu yapısıyla birlikte veritabanından kaldırır."
+  },
+
+  {
+    q: "SELECT TOP 3 * FROM Customers; ne yapar?",
+    t: "mcq",
+    o: [
+      "Tüm kayıtları siler",
+      "İlk 3 kaydı listeler",
+      "3 yeni tablo oluşturur",
+      "Sadece sütun adlarını değiştirir",
+      "Veritabanını kapatır"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "TOP",
+    importance: 4,
+    explanation: "TOP, SQL Server tarafında sonuç kümesinden belirli sayıda kayıt almak için kullanılır."
+  },
+
+  {
+    q: "MySQL'de ilk 3 kaydı almak için hangi ifade kullanılır?",
+    t: "mcq",
+    o: [
+      "TOP 3",
+      "FIRST 3",
+      "LIMIT 3",
+      "ONLY 3",
+      "COUNT 3"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 6,
+    topic: "LIMIT",
+    importance: 4,
+    explanation: "MySQL'de sonuç sayısını sınırlamak için LIMIT kullanılır."
+  },
+
+  {
+    q: "COUNT(ProductName) neyi döndürür?",
+    t: "mcq",
+    o: [
+      "Fiyat toplamını",
+      "Ortalama fiyatı",
+      "En küçük fiyatı",
+      "ProductName değerlerinin sayısını",
+      "Tarih farkını"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 6,
+    topic: "COUNT",
+    importance: 5,
+    explanation: "COUNT, belirtilen alan veya kayıt sayısını hesaplamak için kullanılır."
+  },
+
+  {
+    q: "SUM(Quantity) ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "En küçük değeri bulmak için",
+      "Metin uzunluğu bulmak için",
+      "Kayıt silmek için",
+      "Tablo oluşturmak için",
+      "Miktarların toplamını bulmak için"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 6,
+    topic: "SUM",
+    importance: 5,
+    explanation: "SUM sayısal değerleri toplar; örneğin sipariş miktarlarının toplamı."
+  },
+
+  {
+    q: "AVG(Price) neyi hesaplar?",
+    t: "mcq",
+    o: [
+      "Fiyat ortalamasını",
+      "Fiyat toplamını siler",
+      "Tabloyu oluşturur",
+      "En yeni kaydı getirir",
+      "Sütun adını değiştirir"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "AVG",
+    importance: 5,
+    explanation: "AVG, sayısal değerlerin ortalamasını hesaplar."
+  },
+
+  {
+    q: "GROUP BY ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Tabloyu tamamen silmek için",
+      "Kayıtları belirli sütuna göre gruplamak için",
+      "Yeni veritabanı kurmak için",
+      "Sadece bağlantı açmak için",
+      "Şifre değiştirmek için"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "GROUP BY",
+    importance: 5,
+    explanation: "GROUP BY, kayıtları kategori/alan bazında gruplamak ve aggregate fonksiyonlarla analiz etmek için kullanılır."
+  },
+
+  {
+    q: "INNER JOIN ne döndürür?",
+    t: "mcq",
+    o: [
+      "Sadece sol tablonun tüm kayıtlarını",
+      "Sadece sağ tablonun tüm kayıtlarını",
+      "İki tabloda eşleşen kayıtları",
+      "Hiçbir kayıt döndürmez",
+      "Sadece tablo adlarını"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 6,
+    topic: "INNER JOIN",
+    importance: 5,
+    explanation: "INNER JOIN, iki tabloda eşleşen değerlere sahip kayıtları getirir."
+  },
+
+  {
+    q: "LEFT JOIN ne yapar?",
+    t: "mcq",
+    o: [
+      "Sadece sağ tablodaki kayıtları getirir",
+      "Tüm veritabanını siler",
+      "Sadece eşleşmeyenleri getirir",
+      "Sol tablonun tüm kayıtlarını ve sağdan eşleşenleri getirir",
+      "Sadece indeks oluşturur"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 6,
+    topic: "LEFT JOIN",
+    importance: 5,
+    explanation: "LEFT JOIN, sol tablodaki tüm kayıtları ve sağ tablodaki eşleşen kayıtları getirir."
+  },
+
+  {
+    q: "UNION operatörü ne yapar?",
+    t: "mcq",
+    o: [
+      "Tabloyu siler",
+      "Kayıt günceller",
+      "Sadece tek satır getirir",
+      "Yedekleme yapar",
+      "Birden fazla SELECT sonucunu birleştirir"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 6,
+    topic: "UNION",
+    importance: 4,
+    explanation: "UNION, iki veya daha fazla SELECT sorgusunun sonuç kümesini birleştirir."
+  },
+
+  // =========================================================
+  // ==== 7-8. HAFTA – SQL Server, SSMS, Veritabanı Yönetimi (10)
+  // =========================================================
+
+  {
+    q: "SQL Server hangi firma tarafından geliştirilmiştir?",
+    t: "mcq",
+    o: [
+      "Microsoft",
+      "Oracle",
+      "Google",
+      "IBM",
+      "Apple"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "SQL Server",
+    importance: 5,
+    explanation: "SQL Server, Microsoft tarafından geliştirilen ilişkisel veritabanı yönetim sistemidir."
+  },
+
+  {
+    q: "SQL Server ne tür bir sistemdir?",
+    t: "mcq",
+    o: [
+      "Metin editörü",
+      "İlişkisel veritabanı yönetim sistemi",
+      "Mobil işletim sistemi",
+      "Grafik çizim aracı",
+      "Dosya sıkıştırıcı"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 7,
+    topic: "SQL Server",
+    importance: 5,
+    explanation: "SQL Server, veri yönetimi, işlem ve analiz için kullanılan bir RDBMS sistemidir."
+  },
+
+  {
+    q: "SQL Server hangi özel sorgu dilini kullanır?",
+    t: "mcq",
+    o: [
+      "PL/SQL",
+      "PL/pgSQL",
+      "T-SQL",
+      "SQLite",
+      "Snowflake SQL"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 7,
+    topic: "T-SQL",
+    importance: 5,
+    explanation: "SQL Server, Transact-SQL yani T-SQL adlı SQL genişlemesini kullanır."
+  },
+
+  {
+    q: "SSMS ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Mobil uygulama yayınlamak için",
+      "Sadece resim düzenlemek için",
+      "Video sıkıştırmak için",
+      "SQL Server yönetmek ve sorgu çalıştırmak için",
+      "Sadece dosya silmek için"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 7,
+    topic: "SSMS",
+    importance: 5,
+    explanation: "SQL Server Management Studio; veritabanı oluşturma, yönetme, sorgu çalıştırma ve yedekleme işlemlerinde kullanılır."
+  },
+
+  {
+    q: "SQL Server Express Edition için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece büyük kurumsal sistemler içindir",
+      "Bulut tabanlı Azure sürümüdür",
+      "Tüm özellikleri üretim için sınırsız sunar",
+      "Sadece web uygulamalarına özeldir",
+      "Ücretsiz ve sınırlı özelliklere sahip sürümdür"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 7,
+    topic: "SQL Server Sürümleri",
+    importance: 4,
+    explanation: "Express Edition ücretsizdir ve küçük işletmeler/geliştiriciler için sınırlı özellikler sunar."
+  },
+
+  {
+    q: "SQL Server Enterprise Edition hangi kullanım için uygundur?",
+    t: "mcq",
+    o: [
+      "Büyük işletmeler ve gelişmiş ölçeklenebilirlik için",
+      "Sadece kişisel not tutmak için",
+      "Sadece mobil arayüz çizmek için",
+      "Sadece dosya kopyalamak için",
+      "Sadece ücretsiz eğitim için"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 7,
+    topic: "SQL Server Sürümleri",
+    importance: 4,
+    explanation: "Enterprise Edition, büyük işletmeler için gelişmiş güvenlik, erişilebilirlik ve ölçeklenebilirlik sağlar."
+  },
+
+  {
+    q: "SQL Server Developer Edition için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece son kullanıcı raporu içindir",
+      "Geliştirme ve test amaçlı kullanılır",
+      "Yalnızca web hosting içindir",
+      "Sadece Azure üzerinde çalışır",
+      "Hiçbir Enterprise özelliği içermez"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 7,
+    topic: "SQL Server Sürümleri",
+    importance: 4,
+    explanation: "Developer Edition, Enterprise özelliklerine sahip olsa da geliştirme ve test için kullanılır."
+  },
+
+  {
+    q: "Veritabanını değiştirmek için hangi komut kullanılır?",
+    t: "mcq",
+    o: [
+      "DROP DATABASE",
+      "BACKUP DATABASE",
+      "ALTER DATABASE",
+      "SELECT DATABASE",
+      "INSERT DATABASE"
     ],
     a: 2,
     difficulty: "medium",
     week: 8,
-    topic: "Wireframe",
+    topic: "ALTER DATABASE",
     importance: 5,
-    explanation: "Wireframe, ekranın kaba yerleşim planıdır. Renkten önce yapı ve akış düşünülür."
+    explanation: "Var olan bir veritabanının özelliklerini değiştirmek için ALTER DATABASE kullanılır."
   },
 
   {
-    q: "Prototip neyi temsil eder?",
+    q: "Veritabanını silmek için hangi komut kullanılır?",
     t: "mcq",
     o: [
-      "Ham sensör verisini",
-      "Ağ geçidini",
-      "Boş görev uyarısını",
-      "Etkileşimli taslak ekranı",
-      "Konum doğruluğunu"
+      "ALTER DATABASE",
+      "BACKUP DATABASE",
+      "CREATE DATABASE",
+      "DROP DATABASE",
+      "ATTACH DATABASE"
     ],
     a: 3,
     difficulty: "medium",
     week: 8,
-    topic: "Prototip",
-    importance: 4,
-    explanation: "Prototip, kullanıcının akışı deneyebildiği etkileşimli taslaktır. Wireframe'den bir adım daha etkileşimlidir."
+    topic: "DROP DATABASE",
+    importance: 5,
+    explanation: "DROP DATABASE, veritabanını silmek için kullanılır; bağlantıların kapatılması gerekebilir."
   },
 
   {
-    q: "Hiyerarşi prensibi neyi amaçlar?",
+    q: "BACKUP DATABASE komutu ne için kullanılır?",
     t: "mcq",
     o: [
-      "Tüm bilgileri aynı göstermek",
-      "Verileri silmek",
-      "Pil tüketimini artırmak",
-      "Konumu kapatmak",
-      "Önemli bilgiyi daha görünür yapmak"
+      "Veritabanını silmek için",
+      "Sadece kayıt eklemek için",
+      "Tablo adını değiştirmek için",
+      "Sorgu sonucunu sıralamak için",
+      "Veritabanını yedeklemek için"
     ],
     a: 4,
-    difficulty: "easy",
-    week: 8,
-    topic: "Tasarım Prensipleri",
-    importance: 5,
-    explanation: "Hiyerarşi, kullanıcının önce neye bakacağını belirler. Sınavda 'önemli bilgi daha görünür' ifadesi hiyerarşidir."
-  },
-
-  {
-    q: "White Space ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Bilgi yoğunluğunu azaltır",
-      "Sensörü başlatır",
-      "Video sıkıştırır",
-      "Harita çizer",
-      "Konum izni ister"
-    ],
-    a: 0,
     difficulty: "medium",
     week: 8,
-    topic: "Görsel Tasarım",
-    importance: 4,
-    explanation: "White Space boşluk kullanımıdır. Arayüzü ferahlatır, okunabilirliği artırır."
-  },
-
-  {
-    q: "Button bileşeni ne yapar?",
-    t: "mcq",
-    o: [
-      "Konum ölçer",
-      "Tıklanabilir eylem tetikler",
-      "Harita kaynağıdır",
-      "Ses dosyasıdır",
-      "Veri tabanıdır"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 8,
-    topic: "UI Bileşeni",
+    topic: "Yedekleme",
     importance: 5,
-    explanation: "Button, kullanıcı tıklayınca bir eylem başlatır. To-Do uygulamasında görev ekleme butonu buna örnektir."
-  },
-
-  {
-    q: "TextField hangi amaçla kullanılır?",
-    t: "mcq",
-    o: [
-      "Video oynatmak",
-      "GPS açmak",
-      "Kullanıcıdan veri almak",
-      "Marker eklemek",
-      "Sensör durdurmak"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 8,
-    topic: "UI Bileşeni",
-    importance: 5,
-    explanation: "TextField veya EditText, kullanıcının metin/veri girmesi için kullanılır."
+    explanation: "BACKUP DATABASE, veri kaybını önlemek amacıyla veritabanı yedeği almak için kullanılır."
   },
 
   // =========================================================
-  // ==== 10. HAFTA – Konum ve Harita / Vize Kritik (12) ======
+  // ==== 10. HAFTA – T-SQL, DML, Operatörler, Fonksiyonlar (15)
   // =========================================================
 
   {
-    q: "GPS doğruluk aralığı ders notunda nasıl verilmiştir?",
+    q: "T-SQL neyin kısaltmasıdır?",
     t: "mcq",
     o: [
-      "1-10 km",
-      "50-500 m",
-      "500 m-1 km",
-      "5-50 m",
-      "10-20 km"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 10,
-    topic: "Konum Doğruluğu",
-    importance: 5,
-    explanation: "Yüksek doğruluk GPS ile sağlanır ve ders notunda 5-50 metre aralığı verilmiştir."
-  },
-
-  {
-    q: "IP tabanlı konum hangi doğruluk seviyesindedir?",
-    t: "mcq",
-    o: [
-      "5-50 m",
-      "10-20 m",
-      "50-500 m",
-      "1 metre",
-      "1-10 km"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 10,
-    topic: "Konum Doğruluğu",
-    importance: 5,
-    explanation: "IP tabanlı konum düşük doğruluktur. Ders notunda 1-10 km aralığı verilmiştir."
-  },
-
-  {
-    q: "ACCESS_FINE_LOCATION ne sağlar?",
-    t: "mcq",
-    o: [
-      "Yüksek doğruluklu konum erişimi",
-      "Video oynatma",
-      "Ses kaydı",
-      "Liste güncelleme",
-      "Boş görev uyarısı"
+      "Transact-SQL",
+      "Table-SQL",
+      "Text-SQL",
+      "Trigger-SQL",
+      "Temporary-SQL"
     ],
     a: 0,
     difficulty: "easy",
     week: 10,
-    topic: "Android Konum İzinleri",
+    topic: "T-SQL",
     importance: 5,
-    explanation: "FINE kelimesi 'hassas' anlamına gelir. ACCESS_FINE_LOCATION yüksek doğruluklu konum iznidir."
+    explanation: "T-SQL, Transact-SQL anlamına gelir ve SQL Server için geliştirilmiş SQL uzantısıdır."
   },
 
   {
-    q: "ACCESS_COARSE_LOCATION ne sağlar?",
+    q: "T-SQL standart SQL'e ek olarak ne sunar?",
     t: "mcq",
     o: [
-      "Arka plan video",
-      "Yaklaşık konum erişimi",
-      "Ses sıkıştırma",
-      "Marker başlığı",
-      "Bluetooth eşleştirme"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 10,
-    topic: "Android Konum İzinleri",
-    importance: 5,
-    explanation: "COARSE yaklaşık/kaba konumdur. FINE kadar hassas değildir."
-  },
-
-  {
-    q: "ACCESS_BACKGROUND_LOCATION ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece UI çizmek için",
-      "Video başlatmak için",
-      "Arka planda konum almak için",
-      "Toast göstermek için",
-      "Liste adaptörü kurmak için"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 10,
-    topic: "Android Konum İzinleri",
-    importance: 5,
-    explanation: "BACKGROUND kelimesi arka planı gösterir. Uygulama önde değilken konum almak için kullanılır."
-  },
-
-  {
-    q: "LocationRequest interval = 10000 ne demektir?",
-    t: "mcq",
-    o: [
-      "1 saniyede bir",
-      "5 saniyede bir",
-      "100 saniyede bir",
-      "10 saniyede bir",
-      "Konum kapalı"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 10,
-    topic: "Konum Güncellemeleri",
-    importance: 4,
-    explanation: "10000 milisaniye 10 saniyedir. Vizede milisaniye-saniye dönüşümü sorulabilir."
-  },
-
-  {
-    q: "fastestInterval = 5000 ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "50 saniye",
-      "10 saniye",
-      "1 dakika",
-      "Konum yok",
-      "En hızlı 5 saniye"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 10,
-    topic: "Konum Güncellemeleri",
-    importance: 4,
-    explanation: "5000 ms = 5 saniye. fastestInterval en hızlı güncelleme aralığıdır."
-  },
-
-  {
-    q: "PRIORITY_HIGH_ACCURACY neyi hedefler?",
-    t: "mcq",
-    o: [
-      "Yüksek doğruluklu konum",
-      "Düşük parlaklık",
-      "Video sıkıştırma",
-      "Liste silme",
-      "Boş metin kontrolü"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 10,
-    topic: "Konum Doğruluğu",
-    importance: 5,
-    explanation: "HIGH_ACCURACY yüksek doğruluk demektir. Genelde GPS gibi daha hassas kaynakları kullanır."
-  },
-
-  {
-    q: "removeLocationUpdates ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Marker ekler",
-      "Konum güncellemelerini durdurur",
-      "Video başlatır",
-      "Görev ekler",
-      "Sensör türü seçer"
+      "Sadece tablo silme",
+      "Değişken, prosedür ve hata yakalama gibi yapılar",
+      "Yalnızca HTML desteği",
+      "Sadece resim depolama",
+      "SQL kullanımını engelleme"
     ],
     a: 1,
     difficulty: "medium",
     week: 10,
-    topic: "Konum Güncellemeleri",
+    topic: "T-SQL Özellikleri",
     importance: 5,
-    explanation: "Konum güncellemelerini gereksiz çalıştırmak pil tüketir. Durdurmak için removeLocationUpdates kullanılır."
+    explanation: "T-SQL, standart SQL'e ek olarak değişken, prosedür, koşul ve hata yakalama gibi programlama özellikleri sunar."
   },
 
   {
-    q: "SupportMapFragment ne için kullanılır?",
+    q: "MERGE komutu hangi işlemi destekler?",
     t: "mcq",
     o: [
-      "Ses oynatmak",
-      "Görev listelemek",
-      "Google Maps haritası göstermek",
-      "Sensör ölçmek",
-      "NFC ödeme yapmak"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 10,
-    topic: "Google Maps",
-    importance: 4,
-    explanation: "Google Maps kullanımında harita XML içinde SupportMapFragment ile gösterilebilir."
-  },
-
-  {
-    q: "MarkerOptions().position(...) ne belirler?",
-    t: "mcq",
-    o: [
-      "Uygulama temasını",
-      "Ses seviyesini",
-      "Liste satırını",
-      "Marker konumunu",
-      "Pil seviyesini"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 10,
-    topic: "Marker",
-    importance: 5,
-    explanation: "position(...) marker'ın harita üzerinde hangi koordinata konacağını belirler."
-  },
-
-  {
-    q: "PolylineOptions ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Ses çalmak",
-      "Görev silmek",
-      "Boş metin kontrolü",
-      "Sensör hassasiyeti",
-      "Haritada çizgi çizmek"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 10,
-    topic: "Polyline",
-    importance: 4,
-    explanation: "Polyline, harita üzerinde iki veya daha fazla nokta arasında çizgi çizmek için kullanılır."
-  },
-
-  // =========================================================
-  // ==== 10. HAFTA – OSMDroid / Harita Uygulaması (6) ========
-  // =========================================================
-
-  {
-    q: "OSMDroid bağımlılığı nereye eklenir?",
-    t: "mcq",
-    o: [
-      "build.gradle",
-      "AndroidManifest.xml",
-      "strings.xml",
-      "colors.xml",
-      "ic_launcher"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 10,
-    topic: "OSMDroid",
-    importance: 5,
-    explanation: "Kütüphane bağımlılıkları dependencies bloğuna, yani build.gradle dosyasına eklenir."
-  },
-
-  {
-    q: "OSMDroid örneğinde MapView ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Ses çalar",
-      "Harita görünümü sağlar",
-      "Görev siler",
-      "Sensör dinler",
-      "Video kaydeder"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 10,
-    topic: "MapView",
-    importance: 5,
-    explanation: "MapView, uygulama ekranında harita göstermek için kullanılan bileşendir."
-  },
-
-  {
-    q: "MAPNIK neyle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Ses kaynağı",
-      "Video formatı",
-      "OpenStreetMap harita kaynağı",
-      "Sensör tipi",
-      "Liste adaptörü"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 10,
-    topic: "MAPNIK",
-    importance: 4,
-    explanation: "OSMDroid örneğinde MAPNIK, OpenStreetMap tabanlı harita tile kaynağıdır."
-  },
-
-  {
-    q: "setMultiTouchControls(true) ne sağlar?",
-    t: "mcq",
-    o: [
-      "Konumu kapatır",
-      "Listeyi günceller",
-      "Görev ekler",
-      "Çoklu dokunma desteği verir",
-      "Video sıkıştırır"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 10,
-    topic: "MapView Ayarları",
-    importance: 4,
-    explanation: "Bu metot haritada parmak hareketleriyle gezinme/etkileşim için çoklu dokunmayı etkinleştirir."
-  },
-
-  {
-    q: "setBuiltInZoomControls(true) neyi açar?",
-    t: "mcq",
-    o: [
-      "Konum iznini",
-      "Ses kaydını",
-      "Görev girişini",
-      "Bluetooth'u",
-      "Zoom kontrollerini"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 10,
-    topic: "MapView Ayarları",
-    importance: 4,
-    explanation: "Built-in zoom controls, harita üzerinde yakınlaştırma/uzaklaştırma kontrollerini aktif eder."
-  },
-
-  {
-    q: "mapView.onPause() hangi durumda çağrılır?",
-    t: "mcq",
-    o: [
-      "Uygulama duraklatılırken",
-      "Görev eklenirken",
-      "Video başlarken",
-      "Sensör okunurken",
-      "Toast gösterilirken"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 10,
-    topic: "MapView Yaşam Döngüsü",
-    importance: 5,
-    explanation: "Harita bileşenleri Activity yaşam döngüsüne uyumlu yönetilmelidir. onPause sırasında mapView.onPause() çağrılır."
-  },
-
-  // =========================================================
-  // ==== 11. HAFTA – Çoklu Ortam / Vize Kritik (7) ===========
-  // =========================================================
-
-  {
-    q: "Çoklu ortam hangi bileşenleri kapsar?",
-    t: "mcq",
-    o: [
-      "Sadece metin",
-      "Metin, görsel, ses, video, animasyon",
-      "Sadece konum",
-      "Sadece sensör",
-      "Sadece veri tabanı"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 11,
-    topic: "Çoklu Ortam",
-    importance: 5,
-    explanation: "Multimedya; metin, görsel, ses, video ve animasyonun birlikte kullanımını ifade eder."
-  },
-
-  {
-    q: "Android'de ses oynatmak için hangi sınıf kullanılır?",
-    t: "mcq",
-    o: [
-      "MapView",
-      "ArrayAdapter",
-      "MediaPlayer",
-      "SensorManager",
-      "Marker"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 11,
-    topic: "MediaPlayer",
-    importance: 5,
-    explanation: "MediaPlayer, Android'de ses çalma işlemlerinde temel sınıflardan biridir."
-  },
-
-  {
-    q: "VideoView ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Sensör verisi okumak",
-      "Konum izni almak",
-      "Liste göstermek",
-      "Video oynatmak",
-      "Toast göstermek"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 11,
-    topic: "VideoView",
-    importance: 5,
-    explanation: "VideoView, Android tarafında video oynatmak için kullanılan arayüz bileşenidir."
-  },
-
-  {
-    q: "AVFoundation hangi platformda kullanılır?",
-    t: "mcq",
-    o: [
-      "Android",
-      "Windows Phone",
-      "OSMDroid",
-      "Retrofit",
-      "iOS"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 11,
-    topic: "iOS Multimedya",
-    importance: 5,
-    explanation: "AVFoundation, iOS tarafında ses ve video işlemleri için kullanılan framework'tür."
-  },
-
-  {
-    q: "Glide ve Picasso ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Resim yükleme",
-      "GPS izni",
-      "Görev silme",
-      "NFC ödeme",
-      "WebSocket bağlantısı"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 11,
-    topic: "Görsel Yükleme",
-    importance: 4,
-    explanation: "Android'de uzak veya yerel görselleri verimli yüklemek için Glide/Picasso gibi kütüphaneler kullanılır."
-  },
-
-  {
-    q: "Lazy loading neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Tüm içeriği başta yükleme",
-      "İçeriği gerektiğinde yükleme",
-      "Konumu kapatma",
-      "Sensörü silme",
-      "Videoyu bozma"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 11,
-    topic: "Performans",
-    importance: 5,
-    explanation: "Lazy loading, özellikle medya içeriklerinde performans için önemlidir. İçerik ihtiyaç oldukça yüklenir."
-  },
-
-  {
-    q: "FFmpeg hangi işlemlerle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Konum izni",
-      "Liste silme",
-      "Medya dönüştürme ve sıkıştırma",
-      "Sensör doğruluğu",
-      "Marker başlığı"
+      "Sadece tablo silme",
+      "Sadece yedekleme",
+      "Koşula göre ekleme veya güncelleme",
+      "Sadece SELECT çalıştırma",
+      "Veritabanı kapatma"
     ],
     a: 2,
     difficulty: "hard",
-    week: 11,
-    topic: "FFmpeg",
+    week: 10,
+    topic: "MERGE",
     importance: 4,
-    explanation: "FFmpeg; video/ses dönüştürme, sıkıştırma ve streaming gibi medya işlerinde kullanılır."
+    explanation: "MERGE, eşleşme varsa UPDATE, eşleşme yoksa INSERT gibi koşullu işlemler yapabilir."
   },
 
-  // =========================================================
-  // ==== 12. HAFTA – Sensörler / Vize Kritik (10) ============
-  // =========================================================
-
   {
-    q: "Sensör en kısa tanımıyla nedir?",
+    q: "BETWEEN operatörü ne için kullanılır?",
     t: "mcq",
     o: [
-      "Arayüz bileşeni",
-      "Harita kaynağı",
-      "Liste adaptörü",
-      "Çevresel bilgiyi dijital veriye çeviren bileşen",
-      "Video oynatıcı"
+      "Metin değiştirmek için",
+      "Tablo oluşturmak için",
+      "Sadece kayıt silmek için",
+      "Bir aralıktaki değerleri seçmek için",
+      "Veritabanını kapatmak için"
     ],
     a: 3,
     difficulty: "easy",
-    week: 12,
-    topic: "Sensör Tanımı",
+    week: 10,
+    topic: "BETWEEN",
     importance: 5,
-    explanation: "Sensör; hareket, ışık, konum, sıcaklık gibi çevresel bilgileri algılar ve dijital veriye dönüştürür."
+    explanation: "BETWEEN, örneğin Yas BETWEEN 18 AND 22 gibi aralık sorgularında kullanılır."
   },
 
   {
-    q: "Android'de sensörlere hangi sınıfla erişilir?",
+    q: "IN operatörü hangi amaçla kullanılır?",
     t: "mcq",
     o: [
-      "MapView",
-      "MediaPlayer",
-      "ArrayAdapter",
-      "VideoView",
-      "SensorManager"
+      "Tüm tabloyu silmek için",
+      "Veri tabanını yedeklemek için",
+      "Sadece tarih almak için",
+      "Metin uzunluğu ölçmek için",
+      "Belirli değer kümesi içinde aramak için"
     ],
     a: 4,
     difficulty: "easy",
-    week: 12,
-    topic: "SensorManager",
+    week: 10,
+    topic: "IN",
     importance: 5,
-    explanation: "Android'de sensör işlemlerinin merkezi sınıfı SensorManager'dır."
+    explanation: "IN, örneğin BolumID IN (1,3,5) gibi belirli değerler kümesindeki kayıtları seçer."
   },
 
   {
-    q: "TYPE_ACCELEROMETER hangi sensördür?",
+    q: "LIKE 'A%' ifadesi neyi getirir?",
     t: "mcq",
     o: [
-      "İvmeölçer",
-      "Yakınlık sensörü",
-      "Işık sensörü",
-      "Barometre",
-      "GPS"
+      "A ile başlayan değerleri",
+      "A ile biten değerleri",
+      "İçinde A olmayanları",
+      "Sadece boş kayıtları",
+      "Tablo adlarını"
     ],
     a: 0,
     difficulty: "easy",
-    week: 12,
-    topic: "İvmeölçer",
+    week: 10,
+    topic: "LIKE",
     importance: 5,
-    explanation: "Accelerometer = ivmeölçer. 3 eksende hız değişimini algılar."
+    explanation: "LIKE 'A%' ifadesi A harfi ile başlayan metinleri eşleştirir."
   },
 
   {
-    q: "Gyroscope neyi algılar?",
+    q: "LIKE '%e' ifadesi neyi getirir?",
     t: "mcq",
     o: [
-      "Işık seviyesi",
-      "Açısal dönüş",
-      "IP adresi",
-      "Harita kaynağı",
-      "Liste verisi"
+      "e ile başlayanları",
+      "e ile bitenleri",
+      "İçinde e olmayanları",
+      "Sadece sayıları",
+      "Tüm tabloları"
     ],
     a: 1,
     difficulty: "easy",
-    week: 12,
-    topic: "Jiroskop",
+    week: 10,
+    topic: "LIKE",
     importance: 5,
-    explanation: "Jiroskop açısal dönüşü algılar. Oyunlarda yön kontrolü ve VR uygulamalarında kullanılır."
+    explanation: "Yüzde işareti başta olursa sondaki karakter aranır; '%e' e ile bitenleri getirir."
   },
 
   {
-    q: "Magnetometer hangi uygulamada önemlidir?",
+    q: "LEN('Anıl Kuş') fonksiyonu ne döndürür?",
     t: "mcq",
     o: [
-      "Video oynatıcı",
-      "Görev listesi",
-      "Dijital pusula",
-      "Toast mesajı",
-      "REST API"
+      "Metni büyütür",
+      "Metni küçültür",
+      "Metnin uzunluğunu",
+      "Tarihi",
+      "Tablo sayısını"
     ],
     a: 2,
     difficulty: "easy",
-    week: 12,
-    topic: "Manyetometre",
-    importance: 5,
-    explanation: "Manyetometre dünyanın manyetik alanını algılar. Pusula sorularında doğru cevap manyetometredir."
-  },
-
-  {
-    q: "Proximity Sensor ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Ses dosyası çalar",
-      "Harita çizer",
-      "Video sıkıştırır",
-      "Yakınlık algılar",
-      "Görevleri saklar"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 12,
-    topic: "Yakınlık Sensörü",
-    importance: 5,
-    explanation: "Yakınlık sensörü, telefon yüze yaklaştığında ekranı kapatma gibi işlerde kullanılır."
-  },
-
-  {
-    q: "Light Sensor neyi ölçer?",
-    t: "mcq",
-    o: [
-      "Dönüş hızını",
-      "Manyetik alanı",
-      "Hava basıncını",
-      "Konumu",
-      "Ortam ışığını"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 12,
-    topic: "Işık Sensörü",
-    importance: 5,
-    explanation: "Light Sensor ortam ışığını ölçer. Otomatik ekran parlaklığı klasik örnektir."
-  },
-
-  {
-    q: "Barometer neyi ölçer?",
-    t: "mcq",
-    o: [
-      "Hava basıncını",
-      "Yakınlığı",
-      "Ses seviyesini",
-      "Liste sayısını",
-      "Video süresini"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 12,
-    topic: "Barometre",
+    week: 10,
+    topic: "LEN",
     importance: 4,
-    explanation: "Barometre hava basıncını ölçer; rakım ve hava durumu uygulamalarında kullanılabilir."
+    explanation: "LEN fonksiyonu verilen metnin karakter uzunluğunu döndürür."
   },
 
   {
-    q: "onSensorChanged ne zaman çalışır?",
+    q: "LOWER('ANIL') ne döndürür?",
     t: "mcq",
     o: [
-      "Liste boşalınca",
-      "Sensör verisi değişince",
-      "Harita kapanınca",
-      "Video bitince",
-      "Toast kapanınca"
+      "ANIL",
+      "Anil",
+      "Boş değer",
+      "anil",
+      "Metin uzunluğu"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 10,
+    topic: "LOWER",
+    importance: 4,
+    explanation: "LOWER fonksiyonu metni küçük harfe dönüştürür."
+  },
+
+  {
+    q: "UPPER('anıl') ne döndürür?",
+    t: "mcq",
+    o: [
+      "anıl",
+      "Anıl",
+      "Metin uzunluğu",
+      "Tarih",
+      "ANIL"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 10,
+    topic: "UPPER",
+    importance: 4,
+    explanation: "UPPER fonksiyonu metni büyük harfe dönüştürür."
+  },
+
+  {
+    q: "LEFT('Merhaba', 3) sonucu nedir?",
+    t: "mcq",
+    o: [
+      "Mer",
+      "aba",
+      "erh",
+      "Merhaba",
+      "3"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 10,
+    topic: "LEFT",
+    importance: 4,
+    explanation: "LEFT metnin sol tarafından belirtilen sayıda karakter alır."
+  },
+
+  {
+    q: "RIGHT('Merhaba', 2) sonucu nedir?",
+    t: "mcq",
+    o: [
+      "Me",
+      "ba",
+      "er",
+      "Mer",
+      "ha"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 10,
+    topic: "RIGHT",
+    importance: 4,
+    explanation: "RIGHT metnin sağ tarafından belirtilen sayıda karakter alır."
+  },
+
+  {
+    q: "SUBSTRING('Merhaba', 2, 3) örneğinde amaç nedir?",
+    t: "mcq",
+    o: [
+      "Tarihi almak",
+      "Tablo silmek",
+      "Metnin belirli bölümünü almak",
+      "Kayıt eklemek",
+      "Veritabanı yedeklemek"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 10,
+    topic: "SUBSTRING",
+    importance: 4,
+    explanation: "SUBSTRING, metnin belirli başlangıç konumundan belirli uzunlukta parça alır."
+  },
+
+  {
+    q: "GETDATE() fonksiyonu ne döndürür?",
+    t: "mcq",
+    o: [
+      "Tablo adını",
+      "Kullanıcı adını",
+      "En küçük fiyatı",
+      "Geçerli tarih ve saati",
+      "Kayıt sayısını"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 10,
+    topic: "GETDATE",
+    importance: 5,
+    explanation: "GETDATE(), sistemin geçerli tarih ve saat bilgisini döndürür."
+  },
+
+  {
+    q: "DATEADD(DAY, 7, GETDATE()) ne yapar?",
+    t: "mcq",
+    o: [
+      "Bugünden 7 gün öncesini verir",
+      "Tabloyu siler",
+      "Ay bilgisini alır",
+      "Yıl bilgisini alır",
+      "Bugüne 7 gün ekler"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 10,
+    topic: "DATEADD",
+    importance: 4,
+    explanation: "DATEADD belirtilen tarih değerine istenen miktarda zaman ekler."
+  },
+
+  // =========================================================
+  // ==== 12-13. HAFTA – SQL Türleri, View, Trigger (20) ======
+  // =========================================================
+
+  {
+    q: "Standard SQL hangi kuruluşa dayalı standarttır?",
+    t: "mcq",
+    o: [
+      "ANSI/ISO",
+      "Sadece Microsoft",
+      "Sadece Oracle",
+      "Sadece Google",
+      "Sadece IBM"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Standard SQL",
+    importance: 5,
+    explanation: "Standard SQL, ANSI/ISO standardı olarak tüm RDBMS sistemleri için temel SQL komutlarını içerir."
+  },
+
+  {
+    q: "T-SQL hangi platformla ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Oracle Database",
+      "Microsoft SQL Server",
+      "PostgreSQL",
+      "MySQL",
+      "SQLite"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 12,
+    topic: "T-SQL",
+    importance: 5,
+    explanation: "T-SQL, Microsoft SQL Server ve Azure SQL ile ilişkilidir."
+  },
+
+  {
+    q: "PL/SQL hangi veritabanı ile ilişkilidir?",
+    t: "mcq",
+    o: [
+      "SQL Server",
+      "MySQL",
+      "Oracle Database",
+      "SQLite",
+      "Snowflake"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 12,
+    topic: "PL/SQL",
+    importance: 5,
+    explanation: "PL/SQL, Oracle Database için geliştirilmiş prosedürel SQL dilidir."
+  },
+
+  {
+    q: "PL/pgSQL hangi sistemin prosedürel dilidir?",
+    t: "mcq",
+    o: [
+      "Oracle",
+      "MySQL",
+      "SQL Server",
+      "PostgreSQL",
+      "SQLite"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 12,
+    topic: "PL/pgSQL",
+    importance: 5,
+    explanation: "PL/pgSQL, PostgreSQL'e özel prosedürel SQL dilidir."
+  },
+
+  {
+    q: "MySQL SQL için öne çıkan özelliklerden biri hangisidir?",
+    t: "mcq",
+    o: [
+      "TRY...CATCH",
+      "WITH SCHEMABINDING",
+      "SQL Server Agent",
+      "Oracle Package",
+      "AUTO_INCREMENT"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 12,
+    topic: "MySQL SQL",
+    importance: 5,
+    explanation: "MySQL SQL tarafında LIMIT, AUTO_INCREMENT, REPLACE INTO gibi özellikler öne çıkar."
+  },
+
+  {
+    q: "SQLite için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Küçük sistemler için uygun gömülü SQL yorumlayıcısıdır",
+      "Yalnızca SQL Server'da çalışır",
+      "Sadece büyük veri ambarıdır",
+      "Sadece bulut hizmetidir",
+      "Sadece Oracle içindir"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 12,
+    topic: "SQLite",
+    importance: 4,
+    explanation: "SQLite gömülü, hafif ve küçük sistemler için uygun bir SQL yorumlayıcısıdır."
+  },
+
+  {
+    q: "View nedir?",
+    t: "mcq",
+    o: [
+      "Fiziksel tablo dosyası",
+      "SELECT sorgusuna dayalı sanal tablo",
+      "Sadece indeks dosyası",
+      "Yedekleme yöntemi",
+      "Sunucu bağlantısı"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 12,
+    topic: "View",
+    importance: 5,
+    explanation: "View fiziksel olarak veri tutmaz; arkasında bir SELECT sorgusunun sonucunu tablo gibi gösterir."
+  },
+
+  {
+    q: "View kullanım amaçlarından biri hangisidir?",
+    t: "mcq",
+    o: [
+      "Tabloyu tamamen yok etmek",
+      "Sunucu kapatmak",
+      "Karmaşık sorguları sadeleştirmek",
+      "Tüm izinleri kaldırmak",
+      "Veritabanını bozmak"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 12,
+    topic: "View Kullanımı",
+    importance: 5,
+    explanation: "View; karmaşık sorguları sadeleştirme, güvenlik, raporlama ve veri soyutlama için kullanılır."
+  },
+
+  {
+    q: "CREATE VIEW komutunun temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Tablo silmek",
+      "Kayıt güncellemek",
+      "Veritabanı yedeklemek",
+      "Görünüm oluşturmak",
+      "Trigger silmek"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 12,
+    topic: "CREATE VIEW",
+    importance: 5,
+    explanation: "CREATE VIEW, SELECT sorgusuna dayalı sanal tablo/görünüm oluşturur."
+  },
+
+  {
+    q: "WITH CHECK OPTION neyi zorunlu kılar?",
+    t: "mcq",
+    o: [
+      "View tanımını gizlemeyi",
+      "Tablo yapısını kilitlemeyi",
+      "Tüm kayıtları silmeyi",
+      "Veritabanını yedeklemeyi",
+      "View koşuluna uyan veri ekleme/güncellemeyi"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 12,
+    topic: "WITH CHECK OPTION",
+    importance: 5,
+    explanation: "WITH CHECK OPTION, view üzerinden yapılan INSERT/UPDATE işlemlerinin view koşullarını ihlal etmesini engeller."
+  },
+
+  {
+    q: "WITH ENCRYPTION ne işe yarar?",
+    t: "mcq",
+    o: [
+      "View tanımını gizler",
+      "Tablodaki tüm kayıtları siler",
+      "Sadece veri ekler",
+      "Sorguyu yavaşlatır",
+      "Foreign key oluşturur"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 12,
+    topic: "WITH ENCRYPTION",
+    importance: 5,
+    explanation: "WITH ENCRYPTION, view tanımının sp_helptext gibi araçlarla görüntülenmesini engeller."
+  },
+
+  {
+    q: "WITH SCHEMABINDING ne sağlar?",
+    t: "mcq",
+    o: [
+      "View içeriğini otomatik siler",
+      "View'in bağlı olduğu tabloda yapısal değişikliği engeller",
+      "Her sorguyu SELECT'e çevirir",
+      "SQL Server'ı kapatır",
+      "Sadece veri ekler"
     ],
     a: 1,
     difficulty: "medium",
     week: 12,
-    topic: "SensorEventListener",
+    topic: "WITH SCHEMABINDING",
     importance: 5,
-    explanation: "SensorEventListener içindeki onSensorChanged, yeni sensör verisi geldiğinde tetiklenir."
+    explanation: "WITH SCHEMABINDING, görünümün dayandığı tablolarda kolon silme/isim değiştirme gibi değişiklikleri engelleyebilir."
   },
 
   {
-    q: "getDefaultSensor(...) != null kontrolü neyi sınar?",
+    q: "WITH SCHEMABINDING kullanılırken hangi kural geçerlidir?",
     t: "mcq",
     o: [
-      "Video çözünürlüğünü",
-      "Konum hızını",
-      "Cihazda ilgili sensör var mı",
-      "Liste boş mu",
-      "Toast süresi kaç"
+      "SELECT * zorunludur",
+      "Tablo adı hiç yazılmaz",
+      "Tablolar schema.tablo adıyla yazılmalıdır",
+      "WHERE kullanılamaz",
+      "JOIN yasaktır"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 12,
+    topic: "SCHEMABINDING Kuralı",
+    importance: 5,
+    explanation: "SCHEMABINDING ile view içinde kullanılan tablolar tam adlarıyla yazılmalı ve SELECT * kullanılmamalıdır."
+  },
+
+  {
+    q: "WITH ENCRYPTION ve WITH SCHEMABINDING hangi sistemde desteklenir?",
+    t: "mcq",
+    o: [
+      "MySQL",
+      "PostgreSQL",
+      "Oracle PL/SQL",
+      "SQL Server T-SQL",
+      "SQLite"
+    ],
+    a: 3,
+    difficulty: "hard",
+    week: 13,
+    topic: "View Karşılaştırması",
+    importance: 5,
+    explanation: "Ders notuna göre WITH ENCRYPTION ve WITH SCHEMABINDING özellikleri SQL Server/T-SQL tarafında desteklenir."
+  },
+
+  {
+    q: "WITH CHECK OPTION hangi platformlarda desteklenir?",
+    t: "mcq",
+    o: [
+      "Sadece Oracle",
+      "Sadece SQLite",
+      "Sadece MongoDB",
+      "Sadece Python",
+      "SQL Server, MySQL ve PostgreSQL"
+    ],
+    a: 4,
+    difficulty: "hard",
+    week: 13,
+    topic: "WITH CHECK OPTION",
+    importance: 5,
+    explanation: "Ders notunda WITH CHECK OPTION'ın SQL Server, MySQL ve PostgreSQL tarafından desteklendiği; Oracle'da yerel destek olmadığı belirtilir."
+  },
+
+  {
+    q: "PostgreSQL'de trigger oluştururken tipik sıra nasıldır?",
+    t: "mcq",
+    o: [
+      "Önce fonksiyon, sonra trigger tanımlanır",
+      "Önce view, sonra tablo silinir",
+      "Önce backup, sonra drop yapılır",
+      "Sadece ALTER kullanılır",
+      "Sadece SELECT yazılır"
+    ],
+    a: 0,
+    difficulty: "hard",
+    week: 13,
+    topic: "Trigger Karşılaştırması",
+    importance: 5,
+    explanation: "PostgreSQL'de trigger mantığı genellikle önce trigger fonksiyonu, sonra CREATE TRIGGER şeklindedir."
+  },
+
+  {
+    q: "Trigger'ın temel kullanım amacı nedir?",
+    t: "mcq",
+    o: [
+      "Sadece tablo adı değiştirmek",
+      "Belirli olay olduğunda otomatik işlem çalıştırmak",
+      "Veritabanını kapatmak",
+      "Sadece rapor görüntülemek",
+      "Sorgu sonucunu renklendirmek"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 13,
+    topic: "Trigger",
+    importance: 5,
+    explanation: "Trigger, INSERT/UPDATE/DELETE gibi olaylar olduğunda otomatik çalışan veritabanı nesnesidir."
+  },
+
+  {
+    q: "Stok azaldığında uyarı logu oluşturma hangi nesneye örnektir?",
+    t: "mcq",
+    o: [
+      "Sadece View",
+      "Sadece SELECT",
+      "Trigger",
+      "Primary Key",
+      "Projection"
     ],
     a: 2,
     difficulty: "medium",
-    week: 12,
-    topic: "Cihaz Uyumluluğu",
+    week: 13,
+    topic: "Trigger Senaryosu",
     importance: 5,
-    explanation: "Her cihaz her sensöre sahip değildir. Bu kontrol cihaz uyumluluğu için kritik bir sınav bilgisidir."
+    explanation: "Bir ürün satıldığında stok kritik seviyeye düşerse otomatik log eklemek trigger senaryosudur."
   },
 
-  // =========================================================
-  // ==== 14. HAFTA – To-Do App / Kod Mantığı (7) =============
-  // =========================================================
-
   {
-    q: "To-Do uygulamasında EditText ne işe yarar?",
+    q: "Fiyat değişikliğinde eski ve yeni fiyatı loglama hangi tablolarla ilişkilidir?",
     t: "mcq",
     o: [
-      "Görevi listeler",
-      "Harita gösterir",
-      "Video oynatır",
-      "Görev metni alır",
-      "Sensör okur"
+      "Sadece master tablosu",
+      "Sadece View",
+      "Sadece SELECT sonucu",
+      "inserted ve deleted mantığı",
+      "Sadece yedekleme dosyası"
     ],
     a: 3,
-    difficulty: "easy",
-    week: 14,
-    topic: "To-Do App",
+    difficulty: "hard",
+    week: 13,
+    topic: "Trigger Loglama",
     importance: 5,
-    explanation: "EditText, kullanıcının görev metnini yazdığı giriş alanıdır."
+    explanation: "SQL Server trigger örneğinde inserted yeni değerleri, deleted eski değerleri temsil eder."
   },
 
   {
-    q: "To-Do uygulamasında ListView ne yapar?",
+    q: "AktifSiparisler view örneğinde hangi durum filtrelenmiştir?",
     t: "mcq",
     o: [
-      "Ses çalar",
-      "Konum alır",
-      "Sensör ölçer",
-      "Boş metin kontrol eder",
-      "Görevleri listeler"
+      "İptal edildi",
+      "Teslim edildi",
+      "Silindi",
+      "Arşivlendi",
+      "Hazırlanıyor"
     ],
     a: 4,
+    difficulty: "medium",
+    week: 13,
+    topic: "View Senaryosu",
+    importance: 4,
+    explanation: "AktifSiparisler örneğinde Durum = 'Hazırlanıyor' koşulu ile aktif siparişler listelenir."
+  },
+
+  // =========================================================
+  // ==== 14. HAFTA – Kütüphane Otomasyon Sistemi (10) ========
+  // =========================================================
+
+  {
+    q: "Kütüphane otomasyon projesinin temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Kitap, üye ve ödünç/iade işlemlerini yönetmek",
+      "Sadece resim depolamak",
+      "Mobil arayüz çizmek",
+      "Ağ bağlantısı test etmek",
+      "Video oynatmak"
+    ],
+    a: 0,
     difficulty: "easy",
     week: 14,
-    topic: "ListView",
+    topic: "Kütüphane Otomasyonu",
     importance: 5,
-    explanation: "ListView, ArrayList'teki görevlerin ekranda liste halinde görünmesini sağlar."
+    explanation: "Proje; kitapların, üyelerin ve ödünç alma/iade işlemlerinin veritabanı ile yönetilmesini hedefler."
   },
 
   {
-    q: "ArrayList<String> ne için kullanılır?",
+    q: "Kütüphane projesinde kullanılacak VTYS hangisidir?",
     t: "mcq",
     o: [
-      "Görevleri geçici tutmak",
-      "Harita çizmek",
-      "Video oynatmak",
-      "GPS izni istemek",
-      "Sensör tipi seçmek"
+      "SQLite",
+      "MySQL",
+      "MongoDB",
+      "Excel",
+      "Access Forms"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 14,
+    topic: "MySQL",
+    importance: 5,
+    explanation: "14. hafta projesi MySQL versiyonu olarak verilmiştir."
+  },
+
+  {
+    q: "Kütüphane projesinde temel varlıklardan biri hangisidir?",
+    t: "mcq",
+    o: [
+      "SepetRengi",
+      "SunucuLogosu",
+      "Kitaplar",
+      "EkranKartı",
+      "Bluetooth"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 14,
+    topic: "Entity",
+    importance: 5,
+    explanation: "Kitaplar, Üyeler ve Ödünç İşlemleri projenin temel varlıklarıdır."
+  },
+
+  {
+    q: "Kitaplar tablosunda KitapID alanı nasıl tanımlanmıştır?",
+    t: "mcq",
+    o: [
+      "Foreign Key",
+      "View",
+      "Trigger",
+      "AUTO_INCREMENT PRIMARY KEY",
+      "CHECK OPTION"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 14,
+    topic: "Kitaplar Tablosu",
+    importance: 5,
+    explanation: "KitapID, Kitaplar tablosunda otomatik artan birincil anahtar olarak kullanılır."
+  },
+
+  {
+    q: "Uyeler tablosunda Eposta alanı hangi kısıta sahiptir?",
+    t: "mcq",
+    o: [
+      "PRIMARY KEY",
+      "FOREIGN KEY",
+      "NOT NULL sadece",
+      "CHECK OPTION",
+      "UNIQUE"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 14,
+    topic: "Uyeler Tablosu",
+    importance: 4,
+    explanation: "Eposta alanı UNIQUE olarak tanımlanmıştır; aynı e-posta tekrar edemez."
+  },
+
+  {
+    q: "OduncIslemleri tablosunun birincil anahtarı hangisidir?",
+    t: "mcq",
+    o: [
+      "OduncID",
+      "KitapID",
+      "UyeID",
+      "IadeTarihi",
+      "Telefon"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "OduncIslemleri",
+    importance: 5,
+    explanation: "OduncID, ödünç işlem kayıtlarını benzersiz tanımlayan primary key alanıdır."
+  },
+
+  {
+    q: "OduncIslemleri tablosundaki KitapID neyi referans alır?",
+    t: "mcq",
+    o: [
+      "Uyeler(UyeID)",
+      "Kitaplar(KitapID)",
+      "OduncIslemleri(OduncID)",
+      "Yazar(YazarID)",
+      "Telefon(TelefonID)"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 14,
+    topic: "Foreign Key",
+    importance: 5,
+    explanation: "OduncIslemleri.KitapID, Kitaplar tablosundaki KitapID alanını foreign key olarak referans alır."
+  },
+
+  {
+    q: "ON DELETE CASCADE ne sağlar?",
+    t: "mcq",
+    o: [
+      "Kayıtları şifreler",
+      "View oluşturur",
+      "Ana kayıt silinirse bağlı kayıtların da silinmesini sağlar",
+      "Sadece stok artırır",
+      "Tabloyu yedekler"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 14,
+    topic: "ON DELETE CASCADE",
+    importance: 5,
+    explanation: "ON DELETE CASCADE, ana tablodaki kayıt silindiğinde ona bağlı child kayıtların da silinmesini sağlar."
+  },
+
+  {
+    q: "OduncAl stored procedure ne yapar?",
+    t: "mcq",
+    o: [
+      "Sadece tüm kitapları listeler",
+      "Sadece üyeleri siler",
+      "View tanımını gizler",
+      "Kitap ödünç alır ve stok adedini azaltır",
+      "Veritabanını siler"
+    ],
+    a: 3,
+    difficulty: "hard",
+    week: 14,
+    topic: "Stored Procedure",
+    importance: 5,
+    explanation: "OduncAl prosedürü, stok varsa ödünç kaydı ekler ve ilgili kitabın StokAdedi değerini bir azaltır."
+  },
+
+  {
+    q: "trg_IadeEdildi trigger'ı ne yapar?",
+    t: "mcq",
+    o: [
+      "Kitap stoğunu azaltır",
+      "Üyeyi siler",
+      "View oluşturur",
+      "Veritabanını yedekler",
+      "Kitap iade edilince StokAdedi'ni artırır"
+    ],
+    a: 4,
+    difficulty: "hard",
+    week: 14,
+    topic: "Trigger",
+    importance: 5,
+    explanation: "IadeTarihi NULL'dan dolu değere döndüğünde trigger ilgili kitabın stok adedini artırır."
+  },
+
+  {
+    q: "AktifOduncIslemleriView hangi kayıtları gösterir?",
+    t: "mcq",
+    o: [
+      "Henüz iade edilmemiş ödünç kitapları",
+      "Tüm silinen üyeleri",
+      "Sadece stokta olmayan kitapları",
+      "Tüm yedekleri",
+      "Sadece eski fiyatları"
     ],
     a: 0,
     difficulty: "medium",
     week: 14,
-    topic: "ArrayList",
+    topic: "View",
     importance: 5,
-    explanation: "Bu projede görevler kalıcı veritabanında değil, ArrayList<String> içinde geçici tutulur."
+    explanation: "AktifOduncIslemleriView, IadeTarihi NULL olan yani henüz iade edilmemiş işlemleri gösterir."
   },
 
   {
-    q: "ArrayAdapter ne yapar?",
+    q: "Stokta olan kitapları listelemek için hangi koşul kullanılır?",
     t: "mcq",
     o: [
-      "Konum günceller",
-      "ArrayList ile ListView arasında köprü kurar",
-      "Video sıkıştırır",
-      "Sensör doğruluğu ölçer",
-      "Harita tile indirir"
+      "StokAdedi = 0",
+      "StokAdedi > 0",
+      "IadeTarihi IS NOT NULL",
+      "UyeID IS NULL",
+      "ISBN IS NULL"
     ],
     a: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 14,
-    topic: "ArrayAdapter",
+    topic: "SELECT Sorgusu",
     importance: 5,
-    explanation: "ArrayAdapter, veri kaynağı ile ListView arasında bağlantı kurar. Sınavda 'köprü' kelimesi ArrayAdapter'ı işaret eder."
+    explanation: "Stokta olan kitaplar için StokAdedi > 0 koşulu kullanılır."
   },
 
   {
-    q: "notifyDataSetChanged() ne işe yarar?",
+    q: "Her kitabın kaç kez ödünç alındığını bulmak için hangi fonksiyon kullanılır?",
     t: "mcq",
     o: [
-      "Konum izni ister",
-      "Video başlatır",
-      "Listeyi günceller",
-      "Sensörü kapatır",
-      "Marker ekler"
+      "AVG",
+      "SUM",
+      "COUNT",
+      "LOWER",
+      "GETDATE"
     ],
     a: 2,
     difficulty: "medium",
     week: 14,
-    topic: "Liste Güncelleme",
+    topic: "COUNT",
     importance: 5,
-    explanation: "Veri değiştiğinde ListView'ın ekranda yenilenmesi için notifyDataSetChanged() çağrılır."
+    explanation: "Her kitabın ödünç alınma sayısını bulmak için COUNT(OduncID) gibi sayma fonksiyonu kullanılır."
   },
 
   {
-    q: "To-Do uygulaması neden görevleri kalıcı saklamaz?",
+    q: "Yayın yılına göre ortalama stok hesaplamak için hangi ifade gerekir?",
     t: "mcq",
     o: [
-      "Button yoktur",
-      "ListView yoktur",
-      "EditText yoktur",
-      "Room DB veya SharedPreferences kullanılmaz",
-      "Toast çalışmaz"
+      "DELETE",
+      "DROP",
+      "INSERT",
+      "GROUP BY YayinYili",
+      "WITH ENCRYPTION"
     ],
     a: 3,
     difficulty: "medium",
     week: 14,
-    topic: "Veri Kalıcılığı",
+    topic: "GROUP BY",
     importance: 5,
-    explanation: "Görevler sadece bellekte tutulur. Room DB veya SharedPreferences olmadığı için uygulama kapanınca silinir."
+    explanation: "Yayın yılı bazında ortalama stok için kayıtlar YayinYili alanına göre gruplanır."
   },
 
   {
-    q: "Boş görev girilirse hangi bileşenle uyarı verilir?",
+    q: "HAVING AVG(StokAdedi) > 2 ne işe yarar?",
     t: "mcq",
     o: [
-      "MapView",
-      "VideoView",
-      "SensorManager",
-      "ArrayAdapter",
-      "Toast"
+      "Tabloyu siler",
+      "Tüm verileri günceller",
+      "Yeni veritabanı oluşturur",
+      "View tanımını gizler",
+      "Grupların ortalama stok şartını filtreler"
     ],
     a: 4,
-    difficulty: "easy",
+    difficulty: "hard",
     week: 14,
-    topic: "Toast",
+    topic: "HAVING",
     importance: 5,
-    explanation: "Toast, kullanıcıya kısa uyarı mesajı göstermek için kullanılır. Boş görev uyarısı için uygundur."
+    explanation: "HAVING, GROUP BY sonrası oluşan gruplar üzerinde koşul uygulamak için kullanılır."
   }
 ];
