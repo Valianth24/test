@@ -1,602 +1,602 @@
-// Veritabanı Yönetim Sistemleri – Kapsamlı 100 Soruluk Soru Bankası (MCQ)
+// Veritabanı Yönetim Sistemleri – Çıkmış Final Tarzı 100 Soruluk Test (MCQ)
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 2. HAFTA – Temel Veritabanı Kavramları (15) =========
+  // ==== 2. HAFTA – Temel Kavramlar ve Dosya Sistemi (15) ====
   // =========================================================
 
   {
-    q: "Veritabanı en kısa tanımıyla nedir?",
+    q: "Klasik dosya sisteminde veri tekrarının en önemli sonucu nedir?",
     t: "mcq",
     o: [
-      "Belirli bir amaca göre düzenlenmiş ilişkili veriler topluluğu",
-      "Sadece metin dosyası",
-      "Yalnızca tablo çizim programı",
-      "Sadece işlemci belleği",
-      "Bir yazıcı sürücüsü"
+      "Veri tutarsızlığı oluşması",
+      "SQL sorgularının hızlanması",
+      "Primary Key oluşması",
+      "JOIN işleminin otomatikleşmesi",
+      "Veri güvenliğinin artması"
     ],
     a: 0,
-    difficulty: "easy",
-    week: 2,
-    topic: "Veritabanı Tanımı",
-    importance: 5,
-    explanation: "Veritabanı, belirli bir amaca yönelik düzenlenmiş ve birbiriyle ilişkili verilerin sistematik yapısıdır."
-  },
-
-  {
-    q: "Klasik dosya sisteminin temel sorunu hangisidir?",
-    t: "mcq",
-    o: [
-      "SQL kullanması",
-      "Veri tekrarı ve tutarsızlık oluşturması",
-      "İlişkisel tablo kullanması",
-      "Anahtar zorunluluğu getirmesi",
-      "Veri bütünlüğünü otomatik sağlaması"
-    ],
-    a: 1,
     difficulty: "easy",
     week: 2,
     topic: "Klasik Dosya Sistemi",
     importance: 5,
-    explanation: "Klasik dosya sisteminde aynı veri farklı yerlerde tutulabilir; bu da veri tekrarı ve tutarsızlığa yol açar."
+    explanation: "Aynı veri farklı dosyalarda tekrarlandığında biri güncellenip diğeri eski kalabilir; bu da tutarsızlık oluşturur."
   },
 
   {
-    q: "DBMS ne anlama gelir?",
+    q: "DBMS'nin Türkçe karşılığı hangisidir?",
     t: "mcq",
     o: [
-      "Data Backup Main System",
-      "Digital Base Memory Source",
-      "Database Management System",
-      "Direct Binary Machine Syntax",
-      "Dynamic Boot Management Service"
+      "Veri Bağlama Model Sistemi",
+      "Veritabanı Yönetim Sistemi",
+      "Dosya Biçimlendirme Sistemi",
+      "Dinamik Bellek Saklama",
+      "Dijital Bilgi Modülü"
     ],
-    a: 2,
+    a: 1,
     difficulty: "easy",
     week: 2,
     topic: "DBMS",
     importance: 5,
-    explanation: "DBMS, Database Management System yani Veritabanı Yönetim Sistemi anlamına gelir."
+    explanation: "DBMS, Database Management System; Türkçesi Veritabanı Yönetim Sistemi’dir."
   },
 
   {
-    q: "Tablo kavramı neyi ifade eder?",
+    q: "Aşağıdakilerden hangisi veritabanı sisteminin klasik dosya sistemine göre avantajıdır?",
     t: "mcq",
     o: [
-      "Sadece dosya adını",
-      "Bir programlama dilini",
-      "Bir ağ protokolünü",
-      "Satır ve sütunlardan oluşan veri yapısını",
-      "İşletim sistemi çekirdeğini"
+      "Veri tekrarını artırması",
+      "Yetkisiz erişimi kolaylaştırması",
+      "Veri güvenliği ve tutarlılığı sağlaması",
+      "Sorgulamayı engellemesi",
+      "Tüm veriyi tek metin dosyasına zorlaması"
     ],
-    a: 3,
+    a: 2,
     difficulty: "easy",
     week: 2,
-    topic: "Tablo",
+    topic: "Veritabanı Avantajları",
     importance: 5,
-    explanation: "Tablo, verilerin satır/kayıt ve sütun/alan yapısıyla saklandığı temel ilişkisel veritabanı birimidir."
+    explanation: "Veritabanı sistemi; güvenlik, tutarlılık, hızlı erişim ve çok kullanıcılı çalışma avantajı sağlar."
   },
 
   {
-    q: "Alan (field/column) neyi temsil eder?",
+    q: "Tablodaki dikey yapılar ne olarak adlandırılır?",
     t: "mcq",
     o: [
-      "Tablodaki tüm satırları",
-      "Veritabanı sunucusunu",
-      "Yedekleme dosyasını",
-      "SQL Server sürümünü",
-      "Belirli bir veri türünü taşıyan sütunu"
+      "Kayıt",
+      "Satır",
+      "Tuple",
+      "Alan/Sütun",
+      "Veritabanı"
     ],
-    a: 4,
+    a: 3,
     difficulty: "easy",
     week: 2,
     topic: "Alan",
     importance: 5,
-    explanation: "Alan ya da sütun, Ad, Soyad, Doğum Tarihi gibi belirli bir veri niteliğini temsil eder."
+    explanation: "Tablodaki dikey yapılar alan veya sütun olarak adlandırılır."
   },
 
   {
-    q: "Kayıt (record/row) nedir?",
+    q: "Tablodaki yatay yapılar neyi temsil eder?",
     t: "mcq",
     o: [
-      "Tablodaki bir varlığa ait tüm alan değerlerini içeren satır",
-      "Sadece bir sütun adı",
-      "Veritabanı motoru",
-      "Sadece yedekleme komutu",
-      "Sunucu bağlantı protokolü"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 2,
-    topic: "Kayıt",
-    importance: 5,
-    explanation: "Kayıt, bir öğrenci veya ürün gibi tek bir varlığa ait bilgilerin aynı satırda tutulmasıdır."
-  },
-
-  {
-    q: "Veri tutarlılığı neden önemlidir?",
-    t: "mcq",
-    o: [
-      "Veri tekrarını artırmak için",
-      "Aynı bilginin farklı yerlerde çelişmemesi için",
-      "Tablo sayısını sonsuz yapmak için",
-      "Sadece dosya boyutunu büyütmek için",
-      "SQL kullanımını engellemek için"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 2,
-    topic: "Veri Tutarlılığı",
-    importance: 5,
-    explanation: "Veri tutarlılığı, aynı verinin farklı yerlerde farklı değerlerle tutulmasını engeller."
-  },
-
-  {
-    q: "Veri bağımsızlığı neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Verinin hiçbir yerde saklanmamasını",
-      "Tüm verilerin aynı dosyada tutulmasını",
-      "Fiziksel/mantıksal değişikliklerin uygulamayı en az etkilemesini",
-      "Her tablonun silinmesini",
-      "Sadece Excel kullanılmasını"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 2,
-    topic: "Veri Bağımsızlığı",
-    importance: 5,
-    explanation: "Veri bağımsızlığı, veritabanı yapısındaki değişikliklerin uygulama tarafını minimum etkilemesini sağlar."
-  },
-
-  {
-    q: "Veri soyutlama neden kullanılır?",
-    t: "mcq",
-    o: [
-      "Veriyi tamamen gizlemek için",
-      "SQL komutlarını kaldırmak için",
-      "Kayıt eklemeyi yasaklamak için",
-      "Kullanıcıya gereksiz teknik ayrıntıları göstermemek için",
-      "Tabloları dosyaya çevirmek için"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "Veri Soyutlama",
-    importance: 4,
-    explanation: "Veri soyutlama, kullanıcının verinin fiziksel saklanma ayrıntılarıyla uğraşmadan sistemi kullanmasını sağlar."
-  },
-
-  {
-    q: "İlişkisel veri modelinin temel saklama yapısı hangisidir?",
-    t: "mcq",
-    o: [
-      "Ağaç düğümleri",
-      "Graf kenarları",
-      "Sadece nesneler",
-      "Metin dosyaları",
-      "Tablolar"
+      "Sadece kolon adını",
+      "Veri tipini",
+      "Foreign Key kuralını",
+      "Veritabanı motorunu",
+      "Kayıt/Satır"
     ],
     a: 4,
     difficulty: "easy",
     week: 2,
-    topic: "İlişkisel Model",
+    topic: "Kayıt",
     importance: 5,
-    explanation: "İlişkisel veri modelinde veriler tablolarda saklanır ve ilişkiler ortak sütunlar üzerinden kurulur."
+    explanation: "Her yatay satır bir kaydı temsil eder; örneğin bir öğrencinin tüm bilgileri tek satırda tutulur."
+  },
+
+  {
+    q: "Veri soyutlama en çok neyi sağlar?",
+    t: "mcq",
+    o: [
+      "Kullanıcının fiziksel saklama ayrıntılarıyla uğraşmamasını",
+      "Tüm tabloların silinmesini",
+      "Veri tekrarının artmasını",
+      "SQL komutlarının kaldırılmasını",
+      "Dosya sistemine dönüşü"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Veri Soyutlama",
+    importance: 4,
+    explanation: "Veri soyutlama, kullanıcıya gereksiz teknik detayları göstermeden veriye erişim sağlar."
+  },
+
+  {
+    q: "Veri bağımsızlığı ne demektir?",
+    t: "mcq",
+    o: [
+      "Verinin hiç saklanmaması",
+      "Veritabanı yapısındaki değişikliklerin uygulamayı en az etkilemesi",
+      "Tüm verilerin tek dosyada tutulması",
+      "Her tablonun ilişkisiz olması",
+      "SQL'in kullanılmaması"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Veri Bağımsızlığı",
+    importance: 5,
+    explanation: "Veri bağımsızlığı, fiziksel veya mantıksal değişikliklerin uygulama tarafını mümkün olduğunca az etkilemesidir."
   },
 
   {
     q: "Hiyerarşik veri modeli hangi yapıya benzer?",
     t: "mcq",
     o: [
-      "Ağaç yapısına",
-      "Düz metin dosyasına",
-      "Rastgele listeye",
-      "Sadece web sayfasına",
-      "Tek satırlı tabloya"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 2,
-    topic: "Veri Modelleri",
-    importance: 4,
-    explanation: "Hiyerarşik modelde veriler üst-alt ilişkisiyle ağaç yapısında düzenlenir."
-  },
-
-  {
-    q: "Ağ veri modeli hangi ilişki yapısını daha esnek kurar?",
-    t: "mcq",
-    o: [
-      "Sadece birebir",
-      "Çoklu bağlantılı ilişkiler",
-      "Sadece tek tablo",
-      "Sadece dosya ilişkisi",
-      "Sadece metin ilişkisi"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 2,
-    topic: "Ağ Veri Modeli",
-    importance: 3,
-    explanation: "Ağ modeli, kayıtlar arasında daha karmaşık bağlantılar kurulmasına izin verir."
-  },
-
-  {
-    q: "Nesne yönelimli veri modeli hangi yapıyı temel alır?",
-    t: "mcq",
-    o: [
-      "Sadece satırları",
-      "Sadece sütunları",
-      "Veri ve metotları birlikte tutan nesneleri",
-      "Sadece SQL komutlarını",
-      "Yedekleme dosyalarını"
+      "Düz liste",
+      "Rastgele dosya",
+      "Ağaç yapısı",
+      "Sadece tablo",
+      "Kuyruk yapısı"
     ],
     a: 2,
     difficulty: "medium",
     week: 2,
-    topic: "Nesne Yönelimli Model",
+    topic: "Veri Modelleri",
     importance: 4,
-    explanation: "Nesne yönelimli modelde veri ve veri üzerinde çalışan metotlar nesne yapısında birleştirilir."
+    explanation: "Hiyerarşik modelde üst-alt ilişkisi bulunur; yapı ağaç düzenine benzer."
   },
 
   {
     q: "Günümüzde en yaygın kullanılan veri modeli hangisidir?",
     t: "mcq",
     o: [
-      "Sadece hiyerarşik model",
-      "Sadece ağ modeli",
-      "Sadece nesnel model",
+      "Hiyerarşik model",
+      "Ağ modeli",
+      "Dosya modeli",
       "İlişkisel model",
-      "Dosya sistemi modeli"
+      "Tek satırlı model"
     ],
     a: 3,
     difficulty: "easy",
     week: 2,
     topic: "İlişkisel Model",
     importance: 5,
-    explanation: "İlişkisel model; tablo yapısı, SQL desteği ve yapısal bağımsızlık nedeniyle en yaygın kullanılan modeldir."
+    explanation: "İlişkisel model tablo yapısı, SQL desteği ve esnekliği nedeniyle en yaygın modeldir."
   },
 
   {
-    q: "Klasik dosya sistemine göre veritabanının en büyük avantajı hangisidir?",
+    q: "İlişkisel modelde veriler temel olarak nerede saklanır?",
     t: "mcq",
     o: [
-      "Veri tekrarını artırması",
-      "Kullanıcı erişimini engellemesi",
-      "SQL desteğini kaldırması",
-      "Tüm verileri metin dosyasına çevirmesi",
-      "Veriyi daha tutarlı, güvenli ve yönetilebilir tutması"
+      "Ağaç düğümlerinde",
+      "Sadece metin dosyalarında",
+      "Graf kenarlarında",
+      "Form ekranlarında",
+      "Tablolarda"
     ],
     a: 4,
     difficulty: "easy",
     week: 2,
-    topic: "Veritabanı Avantajları",
+    topic: "İlişkisel Model",
     importance: 5,
-    explanation: "Veritabanı sistemleri veri tutarlılığı, güvenlik, erişim kontrolü ve sorgulama kolaylığı sağlar."
+    explanation: "İlişkisel modelde veriler satır ve sütunlardan oluşan tablolarda saklanır."
   },
 
-  // =========================================================
-  // ==== 4-5. HAFTA – İlişkisel Veritabanı, İlişkiler, Anahtarlar (15)
-  // =========================================================
-
   {
-    q: "İlişkisel veritabanında veriler nasıl saklanır?",
+    q: "Bir okul otomasyonu için klasik dosya sistemi neden yetersiz kalır?",
     t: "mcq",
     o: [
-      "Satır ve sütunlardan oluşan tablolarda",
-      "Yalnızca resim dosyalarında",
-      "Sadece ağaç düğümlerinde",
-      "RAM üzerinde geçici olarak",
-      "Sadece XML etiketlerinde"
+      "Çok kullanıcı, güvenlik ve tutarlılık sorunları oluşturacağı için",
+      "Hiç veri saklamadığı için",
+      "SQL'i zorunlu yaptığı için",
+      "Tablo ilişkilerini otomatik kurduğu için",
+      "Veri tekrarını tamamen önlediği için"
     ],
     a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "İlişkisel Veritabanı",
-    importance: 5,
-    explanation: "İlişkisel veritabanının temel yapısı satır ve sütunlardan oluşan tablolardır."
+    difficulty: "medium",
+    week: 2,
+    topic: "Dosya Sistemi Karşılaştırması",
+    importance: 4,
+    explanation: "Okul otomasyonu gibi sistemlerde çok kullanıcı, güvenlik, hızlı sorgulama ve veri tutarlılığı gerekir."
   },
 
   {
-    q: "Primary Key ne işe yarar?",
+    q: "Alan ve kayıt arasındaki fark için doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Tablodaki tüm verileri siler",
-      "Her kaydı benzersiz tanımlar",
-      "Sadece tablo adını değiştirir",
-      "Veri tekrarını zorunlu yapar",
-      "Yalnızca yedek alır"
+      "Alan satırdır, kayıt sütundur",
+      "Alan sütundur, kayıt satırdır",
+      "İkisi de veritabanıdır",
+      "Alan tabloyu siler, kayıt tabloyu açar",
+      "Kayıt sadece veri tipidir"
     ],
     a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "Alan-Kayıt Farkı",
+    importance: 5,
+    explanation: "Alan/sütun verinin niteliğini, kayıt/satır ise tek varlığa ait değerler bütününü gösterir."
+  },
+
+  {
+    q: "Veri tutarlılığı hangi durumda bozulur?",
+    t: "mcq",
+    o: [
+      "Primary Key kullanıldığında",
+      "Veri tek merkezden yönetildiğinde",
+      "Aynı bilgi farklı yerlerde farklı tutulduğunda",
+      "Foreign Key tanımlandığında",
+      "Normalizasyon yapıldığında"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 2,
+    topic: "Veri Tutarlılığı",
+    importance: 5,
+    explanation: "Aynı verinin farklı kopyalarında farklı değerler bulunması veri tutarsızlığıdır."
+  },
+
+  {
+    q: "Nesne yönelimli veri modeli neyi birlikte tutar?",
+    t: "mcq",
+    o: [
+      "Tablo ve view dosyasını",
+      "Satır ve SQL Server sürümünü",
+      "Kullanıcı adı ve şifreyi",
+      "Veri ve metotları",
+      "Yedek ve log dosyasını"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 2,
+    topic: "Nesnel Veri Modeli",
+    importance: 3,
+    explanation: "Nesne yönelimli modelde veri ve o veri üzerinde çalışan davranış/metotlar birlikte ele alınır."
+  },
+
+  {
+    q: "Veritabanında 'varlık' kavramına en uygun örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece renk",
+      "Sadece boşluk",
+      "Sadece noktalama",
+      "Sadece dosya yolu",
+      "Öğrenci"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 2,
+    topic: "Varlık",
+    importance: 4,
+    explanation: "Öğrenci, ürün, müşteri veya kitap gibi gerçek dünyadaki nesneler varlık olarak modellenebilir."
+  },
+
+  // =========================================================
+  // ==== 4-5. HAFTA – İlişkiler, Anahtarlar, İlişkisel Cebir (15)
+  // =========================================================
+
+  {
+    q: "Primary Key'in temel görevi nedir?",
+    t: "mcq",
+    o: [
+      "Kaydı benzersiz tanımlamak",
+      "Tabloyu silmek",
+      "Sorguyu yedeklemek",
+      "Veri tekrarını zorunlu yapmak",
+      "Tüm alanları NULL yapmak"
+    ],
+    a: 0,
     difficulty: "easy",
     week: 4,
     topic: "Primary Key",
     importance: 5,
-    explanation: "Primary Key, tablodaki her kaydı benzersiz biçimde tanımlayan alan veya alan grubudur."
+    explanation: "Primary Key, tablodaki her kaydın benzersiz biçimde tanımlanmasını sağlar."
   },
 
   {
-    q: "Foreign Key neyi sağlar?",
+    q: "Foreign Key'in temel görevi nedir?",
     t: "mcq",
     o: [
-      "Tabloyu tamamen silmeyi",
-      "Veritabanını kapatmayı",
-      "Başka tablonun birincil anahtarını referans almayı",
-      "Sadece metin biçimlendirmeyi",
-      "SQL Server kurulumunu"
+      "Veritabanını kapatmak",
+      "Tablolar arasında ilişki kurmak",
+      "Tüm kayıtları silmek",
+      "Alan adlarını gizlemek",
+      "View tanımını şifrelemek"
     ],
-    a: 2,
+    a: 1,
     difficulty: "easy",
     week: 4,
     topic: "Foreign Key",
     importance: 5,
-    explanation: "Foreign Key, tablolar arasında ilişki kurmak için başka bir tablonun Primary Key alanını referans alır."
+    explanation: "Foreign Key başka bir tablonun Primary Key alanını referans alarak ilişki kurar."
   },
 
   {
-    q: "Birebir ilişki için doğru örnek hangisidir?",
+    q: "Bir müşteri birden fazla sipariş verebiliyorsa ilişki türü nedir?",
     t: "mcq",
     o: [
-      "Bir öğretmenin birçok öğrencisi olması",
-      "Bir öğrencinin birçok derse girmesi",
-      "Bir kitabın birçok ödünç kaydı olması",
-      "Bir öğrencinin tek kimlik numarasına sahip olması",
-      "Bir siparişin birçok ürünü olması"
+      "Birebir",
+      "Çoka çok",
+      "Bireçok",
+      "İlişkisiz",
+      "Kartezyen"
     ],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
-    topic: "Birebir İlişki",
-    importance: 5,
-    explanation: "Birebir ilişkide bir kaydın karşı tarafta yalnızca bir karşılığı vardır."
-  },
-
-  {
-    q: "Bireçok ilişki için doğru örnek hangisidir?",
-    t: "mcq",
-    o: [
-      "Bir öğrencinin tek kimliği olması",
-      "Bir dersin tek kodu olması",
-      "Bir tablonun tek adı olması",
-      "Bir kişinin tek doğum tarihi olması",
-      "Bir öğretmenin birden çok öğrencisi olması"
-    ],
-    a: 4,
+    a: 2,
     difficulty: "easy",
     week: 4,
     topic: "Bireçok İlişki",
     importance: 5,
-    explanation: "Bireçok ilişkide bir tablodaki tek kayıt, diğer tabloda birden çok kayıtla ilişkili olabilir."
+    explanation: "Bir müşteri birçok sipariş verebilir; bu 1-N yani bireçok ilişkidir."
   },
 
   {
-    q: "Çoka çok ilişki genellikle nasıl modellenir?",
+    q: "Çoka çok ilişki genellikle hangi yapıyla çözülür?",
     t: "mcq",
     o: [
-      "Ara tablo kullanılarak",
       "Tek sütun silinerek",
-      "Veritabanı kapatılarak",
-      "Sadece metin dosyasıyla",
-      "Primary key kaldırılarak"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 4,
-    topic: "Çoka Çok İlişki",
-    importance: 5,
-    explanation: "Çoka çok ilişkiler doğrudan değil, genellikle junction/ara tablo ile modellenir."
-  },
-
-  {
-    q: "Öğrenci-Ders ilişkisinde DersKayit tablosunun görevi nedir?",
-    t: "mcq",
-    o: [
-      "Dersleri silmek",
-      "Öğrenci ve Ders arasındaki çoka çok ilişkiyi kurmak",
-      "Sadece öğrenci adını değiştirmek",
-      "Veritabanını yedeklemek",
-      "SQL Server kurmak"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 4,
-    topic: "Ara Tablo",
-    importance: 5,
-    explanation: "Bir öğrenci birçok derse, bir ders birçok öğrenciye ait olabileceği için ara tablo çoka çok ilişkiyi çözer."
-  },
-
-  {
-    q: "Veri bütünlüğü hangi araçlarla korunabilir?",
-    t: "mcq",
-    o: [
-      "Sadece tablo rengiyle",
-      "Sadece dosya adıyla",
-      "Primary Key ve Foreign Key ile",
-      "Yalnızca SELECT komutuyla",
-      "Sadece kullanıcı adıyla"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "Veri Bütünlüğü",
-    importance: 5,
-    explanation: "PK ve FK kullanımı ilişkisel modelde veri bütünlüğünü korumanın temel yollarındandır."
-  },
-
-  {
-    q: "Normalizasyonun temel amacı nedir?",
-    t: "mcq",
-    o: [
-      "Tablo sayısını rastgele artırmak",
-      "SQL komutlarını kaldırmak",
-      "Veritabanını kapatmak",
-      "Veri tekrarını azaltıp yapıyı düzenlemek",
-      "Tüm kayıtları silmek"
+      "Tablo adı değiştirilerek",
+      "WHERE kaldırılarak",
+      "Ara tablo kullanılarak",
+      "View şifrelenerek"
     ],
     a: 3,
     difficulty: "medium",
     week: 4,
-    topic: "Normalizasyon",
-    importance: 4,
-    explanation: "Normalizasyon, veri tekrarını azaltır ve veritabanı yapısını daha tutarlı hale getirir."
+    topic: "Çoka Çok İlişki",
+    importance: 5,
+    explanation: "M-N ilişkilerde iki tablo arasına genellikle junction/ara tablo eklenir."
   },
 
   {
-    q: "İlişkisel cebir neyin temelini oluşturur?",
+    q: "Bir öğrencinin yalnızca bir kimlik numarası olması hangi ilişkiye örnektir?",
     t: "mcq",
     o: [
-      "Donanım kurulumunun",
-      "Ekran tasarımının",
-      "Yedekleme dosyalarının",
-      "İşletim sistemi çekirdeğinin",
-      "SQL sorgularının"
+      "Bireçok",
+      "Çoka çok",
+      "Kartezyen",
+      "Join",
+      "Birebir"
     ],
     a: 4,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 4,
-    topic: "İlişkisel Cebir",
-    importance: 5,
-    explanation: "İlişkisel cebir işlemleri SQL sorgularının matematiksel temelini oluşturur."
+    topic: "Birebir İlişki",
+    importance: 4,
+    explanation: "Bir öğrencinin tek kimlik numarası olması 1-1 ilişkiye örnektir."
   },
 
   {
-    q: "Selection işlemi ne yapar?",
+    q: "İlişkisel cebirde selection işlemi ne yapar?",
     t: "mcq",
     o: [
-      "Koşulu sağlayan satırları seçer",
-      "Sadece tabloyu siler",
-      "Veritabanını kapatır",
-      "Kullanıcı parolasını değiştirir",
-      "Sadece yedek alır"
+      "Koşula uyan satırları seçer",
+      "Sadece sütun adlarını değiştirir",
+      "Tabloları siler",
+      "Veritabanını yedekler",
+      "View tanımını gizler"
     ],
     a: 0,
     difficulty: "easy",
     week: 4,
     topic: "Selection",
     importance: 5,
-    explanation: "Selection, belirli koşulu sağlayan satırları seçer; SQL'de WHERE ile ilişkilidir."
+    explanation: "Selection satır filtreleme işlemidir; SQL'de WHERE ile ilişkilidir."
   },
 
   {
-    q: "Projection işlemi ne yapar?",
+    q: "İlişkisel cebirde projection işlemi ne yapar?",
     t: "mcq",
     o: [
       "Satırları siler",
       "Belirli sütunları seçer",
       "Tabloyu düşürür",
-      "Veri tabanını yedekler",
-      "Trigger oluşturur"
+      "Veritabanını kapatır",
+      "Trigger çalıştırır"
     ],
     a: 1,
     difficulty: "easy",
     week: 4,
     topic: "Projection",
     importance: 5,
-    explanation: "Projection, belirli sütunları seçme işlemidir; SELECT Ad, Soyad gibi kullanılır."
+    explanation: "Projection sütun seçme işlemidir; SELECT ad, soyad gibi düşünülebilir."
   },
 
   {
-    q: "Join işlemi ne yapar?",
+    q: "JOIN işleminin amacı nedir?",
     t: "mcq",
     o: [
-      "Tek tabloyu siler",
-      "Sadece kullanıcı oluşturur",
-      "Tabloları ortak alan üzerinden birleştirir",
-      "Veritabanını şifreler",
-      "Sadece dosya taşır"
+      "Tek tabloyu silmek",
+      "Yedek almak",
+      "Tabloları ortak alan üzerinden birleştirmek",
+      "Alanları şifrelemek",
+      "Tüm ilişkileri kaldırmak"
     ],
     a: 2,
     difficulty: "easy",
     week: 4,
-    topic: "Join",
+    topic: "JOIN",
     importance: 5,
-    explanation: "Join, iki veya daha fazla tabloyu ilişkili sütunlara göre birleştirir."
+    explanation: "JOIN, ilişkili tabloları ortak alanlara göre birleştirerek birlikte sorgulamayı sağlar."
   },
 
   {
-    q: "Kartezyen çarpımı ne üretir?",
+    q: "Kartezyen çarpımın sonucu nedir?",
     t: "mcq",
     o: [
-      "Sadece ortak satırları",
-      "Sadece farklı satırları",
-      "Sadece birincil anahtarları",
-      "İki tablonun tüm olası satır kombinasyonlarını",
-      "Yalnızca indeksleri"
+      "Sadece ortak satırlar",
+      "Sadece farklı satırlar",
+      "Sadece birincil anahtarlar",
+      "Tüm olası satır kombinasyonları",
+      "Sadece NULL kayıtlar"
     ],
     a: 3,
-    difficulty: "hard",
+    difficulty: "medium",
     week: 4,
-    topic: "Cartesian Product",
+    topic: "Kartezyen Çarpım",
     importance: 4,
-    explanation: "Kartezyen çarpımı, iki tablodaki kayıtların tüm olası eşleşmelerini üretir."
+    explanation: "Kartezyen çarpım iki tablodaki kayıtların tüm olası eşleşmelerini üretir."
   },
 
   {
-    q: "Difference işlemi neyi bulur?",
+    q: "Union işlemi ne yapar?",
     t: "mcq",
     o: [
-      "İki tablodaki tüm satırları",
-      "Sadece ortak satırları",
-      "Tüm olası kombinasyonları",
-      "Sadece sütun adlarını",
-      "Bir tabloda olup diğerinde olmayan satırları"
+      "Tabloyu siler",
+      "Tek kaydı günceller",
+      "Sadece indeks oluşturur",
+      "View tanımını gizler",
+      "İki sorgu sonucunu birleştirir"
     ],
     a: 4,
     difficulty: "medium",
     week: 4,
+    topic: "UNION",
+    importance: 5,
+    explanation: "UNION, uyumlu iki SELECT sonucunu birleştirir."
+  },
+
+  {
+    q: "Intersection işlemi neyi bulur?",
+    t: "mcq",
+    o: [
+      "İki kümedeki ortak satırları",
+      "Sadece ilk satırı",
+      "Tüm olası kombinasyonları",
+      "Birincil anahtarı silmeyi",
+      "Tabloyu yedeklemeyi"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "Intersection",
+    importance: 4,
+    explanation: "Intersection, iki sonuç kümesinde ortak bulunan kayıtları verir."
+  },
+
+  {
+    q: "Difference işlemi neyi döndürür?",
+    t: "mcq",
+    o: [
+      "Ortak kayıtları",
+      "Bir tabloda olup diğerinde olmayan kayıtları",
+      "Tüm kayıt kombinasyonlarını",
+      "Sadece sütun adlarını",
+      "Yedek dosyasını"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 4,
     topic: "Difference",
     importance: 4,
-    explanation: "Difference, bir ilişkide bulunup diğer ilişkide bulunmayan kayıtları bulur."
+    explanation: "Difference, ilk kümede olup ikinci kümede bulunmayan kayıtları verir."
+  },
+
+  {
+    q: "Normalizasyonun ana amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Tüm tabloları silmek",
+      "Sorgu yazmayı yasaklamak",
+      "Veri tekrarını azaltmak",
+      "Primary Key kaldırmak",
+      "SQL Server kurmak"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Normalizasyon",
+    importance: 5,
+    explanation: "Normalizasyon, veri tekrarını azaltır ve veritabanı yapısını daha tutarlı hale getirir."
+  },
+
+  {
+    q: "İlişkisel veritabanında veri bütünlüğünü en çok hangi yapılar destekler?",
+    t: "mcq",
+    o: [
+      "Renkler ve fontlar",
+      "Dosya uzantıları",
+      "Yazıcı ayarları",
+      "Primary Key ve Foreign Key",
+      "Sadece ekran kartı"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "Veri Bütünlüğü",
+    importance: 5,
+    explanation: "Primary Key ve Foreign Key tablolar arası bütünlüğü ve benzersizliği korur."
+  },
+
+  {
+    q: "Bağıntı (relation) ilişkisel modelde en çok neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Sunucu donanımını",
+      "Yedek dosyasını",
+      "Şifreleme anahtarını",
+      "İşletim sistemi sürecini",
+      "Tabloyu"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 4,
+    topic: "Relation",
+    importance: 4,
+    explanation: "İlişkisel modelde relation çoğunlukla tablo kavramına karşılık gelir."
   },
 
   // =========================================================
-  // ==== 6. HAFTA – SQL Sorguları, DML, JOIN, Aggregate (15) ==
+  // ==== 6. HAFTA – SQL DML, SELECT, JOIN, GROUP BY (20) ======
   // =========================================================
 
   {
-    q: "Tabloya yeni kayıt ekleyen SQL komutu hangisidir?",
+    q: "Tabloya yeni kayıt ekleyen komut hangisidir?",
     t: "mcq",
     o: [
       "INSERT",
-      "SELECT",
       "UPDATE",
       "DELETE",
-      "DROP"
+      "DROP",
+      "SELECT"
     ],
     a: 0,
     difficulty: "easy",
     week: 6,
     topic: "INSERT",
     importance: 5,
-    explanation: "INSERT komutu tabloya yeni kayıt eklemek için kullanılır."
+    explanation: "INSERT tabloya yeni kayıt eklemek için kullanılır."
   },
 
   {
-    q: "Veri güncellemek için hangi komut kullanılır?",
+    q: "Mevcut veriyi değiştiren SQL komutu hangisidir?",
     t: "mcq",
     o: [
       "CREATE",
       "UPDATE",
-      "DROP",
       "SELECT",
-      "TRUNCATE"
+      "DROP",
+      "BACKUP"
     ],
     a: 1,
     difficulty: "easy",
     week: 6,
     topic: "UPDATE",
     importance: 5,
-    explanation: "UPDATE komutu mevcut kayıtların değerlerini değiştirmek için kullanılır."
+    explanation: "UPDATE mevcut kayıtların değerlerini değiştirmek için kullanılır."
   },
 
   {
     q: "Belirli kaydı silmek için hangi komut kullanılır?",
     t: "mcq",
     o: [
-      "SELECT",
       "INSERT",
+      "SELECT",
       "DELETE",
       "CREATE",
       "ALTER"
@@ -606,7 +606,7 @@ window.questionBank = [
     week: 6,
     topic: "DELETE",
     importance: 5,
-    explanation: "DELETE FROM tablo WHERE koşul; belirli kayıtları silmek için kullanılır."
+    explanation: "DELETE FROM tablo WHERE koşul; belirli kayıtları siler."
   },
 
   {
@@ -615,218 +615,308 @@ window.questionBank = [
     o: [
       "Tabloyu siler",
       "Yeni kayıt ekler",
-      "Sadece tablo oluşturur",
-      "Ogrenci tablosundaki tüm kayıtları listeler",
-      "Veritabanını kapatır"
+      "Veriyi günceller",
+      "Ogrenci tablosundaki tüm alanları listeler",
+      "Veritabanını yedekler"
     ],
     a: 3,
     difficulty: "easy",
     week: 6,
     topic: "SELECT",
     importance: 5,
-    explanation: "SELECT * tüm sütunları ve uygun tüm kayıtları listelemek için kullanılır."
+    explanation: "SELECT * tablodaki tüm sütunları getirir."
   },
 
   {
-    q: "DELETE FROM Ogrenci; sorgusunda WHERE yoksa ne olur?",
+    q: "UPDATE Ogrenci SET notu = 100; sorgusunda WHERE yoksa ne olur?",
     t: "mcq",
     o: [
-      "Hiçbir şey olmaz",
-      "Sadece ilk kayıt silinir",
-      "Sorgu otomatik SELECT olur",
-      "Yeni kayıt eklenir",
-      "Tablodaki tüm kayıtlar silinir"
+      "Sadece ilk kayıt güncellenir",
+      "Hiçbir kayıt etkilenmez",
+      "Sorgu SELECT'e dönüşür",
+      "Tablo silinir",
+      "Tüm kayıtların notu 100 olur"
     ],
     a: 4,
     difficulty: "medium",
     week: 6,
-    topic: "DELETE",
+    topic: "UPDATE WHERE",
     importance: 5,
-    explanation: "DELETE komutunda WHERE kullanılmazsa tablodaki tüm kayıtlar silinebilir; bu yüzden dikkat edilmelidir."
+    explanation: "UPDATE sorgusunda WHERE yoksa tablodaki tüm kayıtlar etkilenebilir."
   },
 
   {
-    q: "DROP TABLE Customers; komutu ne yapar?",
+    q: "DELETE FROM Ogrenci WHERE id = 5; sorgusu ne yapar?",
     t: "mcq",
     o: [
-      "Customers tablosunu siler",
-      "Customers tablosunu listeler",
-      "Yeni müşteri ekler",
-      "Sadece bir satırı günceller",
-      "Tabloyu yedekler"
+      "id'si 5 olan kaydı siler",
+      "Tüm tabloyu siler",
+      "Yeni kayıt ekler",
+      "Veritabanını kapatır",
+      "id alanını değiştirir"
     ],
     a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "DELETE",
+    importance: 5,
+    explanation: "WHERE id = 5 koşulu nedeniyle sadece id değeri 5 olan kayıt silinir."
+  },
+
+  {
+    q: "Notu 50'den küçük öğrencileri listelemek için hangi koşul kullanılır?",
+    t: "mcq",
+    o: [
+      "WHERE not > 50",
+      "WHERE not < 50",
+      "WHERE not = NULL",
+      "GROUP BY not",
+      "ORDER BY id"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "WHERE",
+    importance: 5,
+    explanation: "50'den küçük değerler için WHERE not < 50 koşulu kullanılır."
+  },
+
+  {
+    q: "DROP TABLE Ogrenci; komutu ne yapar?",
+    t: "mcq",
+    o: [
+      "Sadece kayıt ekler",
+      "Sadece kayıt günceller",
+      "Ogrenci tablosunu yapısıyla birlikte siler",
+      "Tüm kayıtları listeler",
+      "Sadece tabloyu yedekler"
+    ],
+    a: 2,
     difficulty: "medium",
     week: 6,
     topic: "DROP TABLE",
     importance: 5,
-    explanation: "DROP TABLE tabloyu yapısıyla birlikte veritabanından kaldırır."
+    explanation: "DROP TABLE, tabloyu veritabanından tamamen kaldırır."
   },
 
   {
-    q: "SELECT TOP 3 * FROM Customers; ne yapar?",
+    q: "SELECT TOP 5 * FROM Urunler; sorgusu ne yapar?",
     t: "mcq",
     o: [
-      "Tüm kayıtları siler",
-      "İlk 3 kaydı listeler",
-      "3 yeni tablo oluşturur",
-      "Sadece sütun adlarını değiştirir",
-      "Veritabanını kapatır"
+      "Tüm ürünleri siler",
+      "Ürün tablosunu oluşturur",
+      "Ürün adını değiştirir",
+      "İlk 5 kaydı listeler",
+      "5 yeni kayıt ekler"
     ],
-    a: 1,
+    a: 3,
     difficulty: "medium",
     week: 6,
     topic: "TOP",
     importance: 4,
-    explanation: "TOP, SQL Server tarafında sonuç kümesinden belirli sayıda kayıt almak için kullanılır."
+    explanation: "TOP, SQL Server'da sonuç kümesinden belirli sayıda kayıt almak için kullanılır."
   },
 
   {
-    q: "MySQL'de ilk 3 kaydı almak için hangi ifade kullanılır?",
+    q: "MySQL'de sonuç sayısını sınırlamak için hangi ifade kullanılır?",
     t: "mcq",
     o: [
-      "TOP 3",
-      "FIRST 3",
-      "LIMIT 3",
-      "ONLY 3",
-      "COUNT 3"
+      "TOP",
+      "FIRST",
+      "ONLY",
+      "TAKE",
+      "LIMIT"
     ],
-    a: 2,
+    a: 4,
     difficulty: "medium",
     week: 6,
     topic: "LIMIT",
     importance: 4,
-    explanation: "MySQL'de sonuç sayısını sınırlamak için LIMIT kullanılır."
+    explanation: "MySQL'de LIMIT, dönecek kayıt sayısını sınırlar."
   },
 
   {
-    q: "COUNT(ProductName) neyi döndürür?",
+    q: "COUNT(*) fonksiyonu ne yapar?",
     t: "mcq",
     o: [
-      "Fiyat toplamını",
-      "Ortalama fiyatı",
-      "En küçük fiyatı",
-      "ProductName değerlerinin sayısını",
-      "Tarih farkını"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 6,
-    topic: "COUNT",
-    importance: 5,
-    explanation: "COUNT, belirtilen alan veya kayıt sayısını hesaplamak için kullanılır."
-  },
-
-  {
-    q: "SUM(Quantity) ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "En küçük değeri bulmak için",
-      "Metin uzunluğu bulmak için",
-      "Kayıt silmek için",
-      "Tablo oluşturmak için",
-      "Miktarların toplamını bulmak için"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 6,
-    topic: "SUM",
-    importance: 5,
-    explanation: "SUM sayısal değerleri toplar; örneğin sipariş miktarlarının toplamı."
-  },
-
-  {
-    q: "AVG(Price) neyi hesaplar?",
-    t: "mcq",
-    o: [
-      "Fiyat ortalamasını",
-      "Fiyat toplamını siler",
-      "Tabloyu oluşturur",
-      "En yeni kaydı getirir",
-      "Sütun adını değiştirir"
+      "Kayıt sayısını hesaplar",
+      "Metni büyütür",
+      "Tarih ekler",
+      "Tabloyu siler",
+      "Veritabanını yedekler"
     ],
     a: 0,
     difficulty: "easy",
     week: 6,
-    topic: "AVG",
+    topic: "COUNT",
     importance: 5,
-    explanation: "AVG, sayısal değerlerin ortalamasını hesaplar."
+    explanation: "COUNT, kayıt sayısını hesaplamak için kullanılır."
   },
 
   {
-    q: "GROUP BY ne için kullanılır?",
+    q: "AVG(maas) fonksiyonu neyi hesaplar?",
     t: "mcq",
     o: [
-      "Tabloyu tamamen silmek için",
-      "Kayıtları belirli sütuna göre gruplamak için",
-      "Yeni veritabanı kurmak için",
-      "Sadece bağlantı açmak için",
-      "Şifre değiştirmek için"
+      "Maaş toplamını",
+      "Maaş ortalamasını",
+      "En yüksek maaşı",
+      "En düşük maaşı",
+      "Kayıt tarihini"
     ],
     a: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 6,
-    topic: "GROUP BY",
+    topic: "AVG",
     importance: 5,
-    explanation: "GROUP BY, kayıtları kategori/alan bazında gruplamak ve aggregate fonksiyonlarla analiz etmek için kullanılır."
+    explanation: "AVG, sayısal bir alanın ortalama değerini hesaplar."
   },
 
   {
-    q: "INNER JOIN ne döndürür?",
+    q: "SUM(StokAdedi) ne işe yarar?",
     t: "mcq",
     o: [
-      "Sadece sol tablonun tüm kayıtlarını",
-      "Sadece sağ tablonun tüm kayıtlarını",
-      "İki tabloda eşleşen kayıtları",
-      "Hiçbir kayıt döndürmez",
-      "Sadece tablo adlarını"
+      "Stok adını değiştirir",
+      "Stok kayıtlarını siler",
+      "Stok adetlerinin toplamını hesaplar",
+      "Stok tablosunu oluşturur",
+      "Stok alanını NULL yapar"
     ],
     a: 2,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 6,
-    topic: "INNER JOIN",
+    topic: "SUM",
     importance: 5,
-    explanation: "INNER JOIN, iki tabloda eşleşen değerlere sahip kayıtları getirir."
+    explanation: "SUM, sayısal değerleri toplamak için kullanılır."
   },
 
   {
-    q: "LEFT JOIN ne yapar?",
+    q: "GROUP BY hangi amaçla kullanılır?",
     t: "mcq",
     o: [
-      "Sadece sağ tablodaki kayıtları getirir",
-      "Tüm veritabanını siler",
-      "Sadece eşleşmeyenleri getirir",
-      "Sol tablonun tüm kayıtlarını ve sağdan eşleşenleri getirir",
-      "Sadece indeks oluşturur"
+      "Tabloyu silmek",
+      "Yeni kayıt eklemek",
+      "Veritabanını kapatmak",
+      "Kayıtları belirli alana göre gruplamak",
+      "Sadece şifre değiştirmek"
     ],
     a: 3,
     difficulty: "medium",
     week: 6,
-    topic: "LEFT JOIN",
+    topic: "GROUP BY",
     importance: 5,
-    explanation: "LEFT JOIN, sol tablodaki tüm kayıtları ve sağ tablodaki eşleşen kayıtları getirir."
+    explanation: "GROUP BY, kayıtları belirli alanlara göre gruplayıp aggregate fonksiyonlarla analiz yapmayı sağlar."
   },
 
   {
-    q: "UNION operatörü ne yapar?",
+    q: "HAVING ne zaman kullanılır?",
     t: "mcq",
     o: [
-      "Tabloyu siler",
-      "Kayıt günceller",
-      "Sadece tek satır getirir",
-      "Yedekleme yapar",
-      "Birden fazla SELECT sonucunu birleştirir"
+      "Tablo oluştururken",
+      "Kayıt eklerken",
+      "Veritabanı silerken",
+      "Sadece string küçültürken",
+      "GROUP BY sonrası grupları filtrelerken"
     ],
     a: 4,
     difficulty: "medium",
     week: 6,
+    topic: "HAVING",
+    importance: 5,
+    explanation: "HAVING, gruplama sonrası aggregate sonuçlara koşul uygulamak için kullanılır."
+  },
+
+  {
+    q: "WHERE ile HAVING arasındaki en doğru fark hangisidir?",
+    t: "mcq",
+    o: [
+      "WHERE satırları, HAVING grupları filtreler",
+      "WHERE sadece tablo siler",
+      "HAVING sadece kayıt ekler",
+      "İkisi tamamen aynıdır",
+      "WHERE sadece view oluşturur"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 6,
+    topic: "WHERE-HAVING",
+    importance: 5,
+    explanation: "WHERE gruplama öncesi satırları, HAVING gruplama sonrası grupları filtreler."
+  },
+
+  {
+    q: "INNER JOIN hangi kayıtları getirir?",
+    t: "mcq",
+    o: [
+      "Sadece sol tablodaki tüm kayıtları",
+      "İki tabloda eşleşen kayıtları",
+      "Sadece sağ tablodaki tüm kayıtları",
+      "Hiç eşleşmeyen kayıtları",
+      "Tablo adlarını"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "INNER JOIN",
+    importance: 5,
+    explanation: "INNER JOIN, iki tabloda join koşuluna uyan eşleşmiş kayıtları getirir."
+  },
+
+  {
+    q: "LEFT JOIN için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece sağ tablodaki kayıtları getirir",
+      "Sadece ortak kayıtları getirir",
+      "Sol tablodaki tüm kayıtları ve sağdan eşleşenleri getirir",
+      "Tabloları siler",
+      "Sadece indeks oluşturur"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 6,
+    topic: "LEFT JOIN",
+    importance: 5,
+    explanation: "LEFT JOIN, sol tabloyu korur; sağ tabloda eşleşme yoksa sağ taraf NULL olabilir."
+  },
+
+  {
+    q: "AS anahtar kelimesi ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Tablo silmek için",
+      "Kayıt eklemek için",
+      "Veritabanı kapatmak için",
+      "Takma ad vermek için",
+      "Primary Key kaldırmak için"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 6,
+    topic: "Alias",
+    importance: 4,
+    explanation: "AS, sütun veya tabloya takma ad vermek için kullanılır."
+  },
+
+  {
+    q: "UNION kullanırken dikkat edilmesi gereken temel şart nedir?",
+    t: "mcq",
+    o: [
+      "Sorgular mutlaka DELETE olmalıdır",
+      "Her sorgu farklı veritabanında olmalıdır",
+      "Tüm alanlar PRIMARY KEY olmalıdır",
+      "Sadece tek tablo kullanılmalıdır",
+      "SELECT sonuçlarının sütun yapıları uyumlu olmalıdır"
+    ],
+    a: 4,
+    difficulty: "hard",
+    week: 6,
     topic: "UNION",
     importance: 4,
-    explanation: "UNION, iki veya daha fazla SELECT sorgusunun sonuç kümesini birleştirir."
+    explanation: "UNION ile birleştirilecek SELECT sorgularında sütun sayısı ve türleri uyumlu olmalıdır."
   },
 
   // =========================================================
-  // ==== 7-8. HAFTA – SQL Server, SSMS, Veritabanı Yönetimi (10)
+  // ==== 7-8. HAFTA – SQL Server ve SSMS (10) ================
   // =========================================================
 
   {
@@ -848,75 +938,75 @@ window.questionBank = [
   },
 
   {
-    q: "SQL Server ne tür bir sistemdir?",
+    q: "SQL Server hangi tür sistemdir?",
     t: "mcq",
     o: [
-      "Metin editörü",
+      "Grafik tasarım aracı",
       "İlişkisel veritabanı yönetim sistemi",
       "Mobil işletim sistemi",
-      "Grafik çizim aracı",
-      "Dosya sıkıştırıcı"
+      "Web tarayıcısı",
+      "Dosya sıkıştırma programı"
     ],
     a: 1,
     difficulty: "easy",
     week: 7,
     topic: "SQL Server",
     importance: 5,
-    explanation: "SQL Server, veri yönetimi, işlem ve analiz için kullanılan bir RDBMS sistemidir."
+    explanation: "SQL Server veri yönetimi, işlem, analiz, güvenlik ve yedekleme için kullanılan RDBMS sistemidir."
   },
 
   {
-    q: "SQL Server hangi özel sorgu dilini kullanır?",
+    q: "SQL Server'ın özel sorgu dili hangisidir?",
     t: "mcq",
     o: [
       "PL/SQL",
-      "PL/pgSQL",
+      "MySQL SQL",
       "T-SQL",
-      "SQLite",
-      "Snowflake SQL"
+      "SQLite SQL",
+      "BigQuery SQL"
     ],
     a: 2,
     difficulty: "easy",
     week: 7,
     topic: "T-SQL",
     importance: 5,
-    explanation: "SQL Server, Transact-SQL yani T-SQL adlı SQL genişlemesini kullanır."
+    explanation: "SQL Server, Transact-SQL yani T-SQL kullanır."
   },
 
   {
     q: "SSMS ne için kullanılır?",
     t: "mcq",
     o: [
-      "Mobil uygulama yayınlamak için",
-      "Sadece resim düzenlemek için",
-      "Video sıkıştırmak için",
+      "Mobil oyun yapmak için",
+      "Video düzenlemek için",
+      "Resim çizmek için",
       "SQL Server yönetmek ve sorgu çalıştırmak için",
-      "Sadece dosya silmek için"
+      "Ağ kablosu test etmek için"
     ],
     a: 3,
     difficulty: "easy",
     week: 7,
     topic: "SSMS",
     importance: 5,
-    explanation: "SQL Server Management Studio; veritabanı oluşturma, yönetme, sorgu çalıştırma ve yedekleme işlemlerinde kullanılır."
+    explanation: "SSMS, SQL Server veritabanlarını yönetmek ve T-SQL sorguları çalıştırmak için kullanılan grafiksel araçtır."
   },
 
   {
     q: "SQL Server Express Edition için doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Sadece büyük kurumsal sistemler içindir",
-      "Bulut tabanlı Azure sürümüdür",
-      "Tüm özellikleri üretim için sınırsız sunar",
-      "Sadece web uygulamalarına özeldir",
-      "Ücretsiz ve sınırlı özelliklere sahip sürümdür"
+      "Sadece büyük bankalar içindir",
+      "Tamamen sınırsız kurumsal sürümdür",
+      "Yalnızca bulut sistemidir",
+      "Sadece Oracle ile çalışır",
+      "Ücretsiz ve sınırlı özellikli sürümdür"
     ],
     a: 4,
     difficulty: "medium",
     week: 7,
     topic: "SQL Server Sürümleri",
     importance: 4,
-    explanation: "Express Edition ücretsizdir ve küçük işletmeler/geliştiriciler için sınırlı özellikler sunar."
+    explanation: "Express Edition ücretsizdir; küçük işletmeler ve geliştiriciler için sınırlı özelliklerle sunulur."
   },
 
   {
@@ -924,219 +1014,219 @@ window.questionBank = [
     t: "mcq",
     o: [
       "Büyük işletmeler ve gelişmiş ölçeklenebilirlik için",
-      "Sadece kişisel not tutmak için",
-      "Sadece mobil arayüz çizmek için",
-      "Sadece dosya kopyalamak için",
-      "Sadece ücretsiz eğitim için"
+      "Sadece öğrencilerin not defteri için",
+      "Sadece metin editörü olarak",
+      "Yalnızca dosya sıkıştırmak için",
+      "Sadece offline resim düzenlemek için"
     ],
     a: 0,
     difficulty: "medium",
     week: 7,
     topic: "SQL Server Sürümleri",
     importance: 4,
-    explanation: "Enterprise Edition, büyük işletmeler için gelişmiş güvenlik, erişilebilirlik ve ölçeklenebilirlik sağlar."
+    explanation: "Enterprise Edition büyük işletmelere yönelik gelişmiş güvenlik, analiz ve ölçeklenebilirlik özellikleri sunar."
   },
 
   {
-    q: "SQL Server Developer Edition için doğru ifade hangisidir?",
+    q: "SQL Server Developer Edition ne amaçla kullanılır?",
     t: "mcq",
     o: [
-      "Sadece son kullanıcı raporu içindir",
-      "Geliştirme ve test amaçlı kullanılır",
-      "Yalnızca web hosting içindir",
-      "Sadece Azure üzerinde çalışır",
-      "Hiçbir Enterprise özelliği içermez"
+      "Son kullanıcı muhasebesi",
+      "Geliştirme ve test",
+      "Sadece web hosting",
+      "Sadece backup dosyası açma",
+      "Mobil uygulama yayınlama"
     ],
     a: 1,
     difficulty: "medium",
     week: 7,
-    topic: "SQL Server Sürümleri",
+    topic: "Developer Edition",
     importance: 4,
-    explanation: "Developer Edition, Enterprise özelliklerine sahip olsa da geliştirme ve test için kullanılır."
+    explanation: "Developer Edition, geliştirme ve test amaçlı kullanılır; üretim ortamı için tasarlanmamıştır."
   },
 
   {
-    q: "Veritabanını değiştirmek için hangi komut kullanılır?",
+    q: "ALTER DATABASE komutu ne için kullanılır?",
     t: "mcq",
     o: [
-      "DROP DATABASE",
-      "BACKUP DATABASE",
-      "ALTER DATABASE",
-      "SELECT DATABASE",
-      "INSERT DATABASE"
+      "Yeni kayıt eklemek için",
+      "Tablo sorgulamak için",
+      "Var olan veritabanını değiştirmek için",
+      "Sadece kayıt silmek için",
+      "View tanımını gizlemek için"
     ],
     a: 2,
     difficulty: "medium",
     week: 8,
     topic: "ALTER DATABASE",
     importance: 5,
-    explanation: "Var olan bir veritabanının özelliklerini değiştirmek için ALTER DATABASE kullanılır."
+    explanation: "ALTER DATABASE, mevcut bir veritabanının ayarlarını veya özelliklerini değiştirmek için kullanılır."
   },
 
   {
-    q: "Veritabanını silmek için hangi komut kullanılır?",
+    q: "DROP DATABASE komutu ne yapar?",
     t: "mcq",
     o: [
-      "ALTER DATABASE",
-      "BACKUP DATABASE",
-      "CREATE DATABASE",
-      "DROP DATABASE",
-      "ATTACH DATABASE"
+      "Veritabanı yedeği alır",
+      "Yeni veritabanı oluşturur",
+      "Sorgu sonucunu sıralar",
+      "Veritabanını siler",
+      "Kayıt ekler"
     ],
     a: 3,
     difficulty: "medium",
     week: 8,
     topic: "DROP DATABASE",
     importance: 5,
-    explanation: "DROP DATABASE, veritabanını silmek için kullanılır; bağlantıların kapatılması gerekebilir."
+    explanation: "DROP DATABASE veritabanını siler; silmeden önce bağlantıların sonlandırılması gerekebilir."
   },
 
   {
-    q: "BACKUP DATABASE komutu ne için kullanılır?",
+    q: "BACKUP DATABASE komutu hangi amaçla kullanılır?",
     t: "mcq",
     o: [
-      "Veritabanını silmek için",
-      "Sadece kayıt eklemek için",
-      "Tablo adını değiştirmek için",
-      "Sorgu sonucunu sıralamak için",
-      "Veritabanını yedeklemek için"
+      "Tablo silmek",
+      "Kayıt güncellemek",
+      "View oluşturmak",
+      "Trigger kapatmak",
+      "Veritabanını yedeklemek"
     ],
     a: 4,
     difficulty: "medium",
     week: 8,
-    topic: "Yedekleme",
+    topic: "Backup",
     importance: 5,
-    explanation: "BACKUP DATABASE, veri kaybını önlemek amacıyla veritabanı yedeği almak için kullanılır."
+    explanation: "BACKUP DATABASE veri kaybına karşı veritabanı yedeği almak için kullanılır."
   },
 
   // =========================================================
-  // ==== 10. HAFTA – T-SQL, DML, Operatörler, Fonksiyonlar (15)
+  // ==== 10. HAFTA – T-SQL, Operatörler ve Fonksiyonlar (15) =
   // =========================================================
 
   {
-    q: "T-SQL neyin kısaltmasıdır?",
+    q: "T-SQL açılımı nedir?",
     t: "mcq",
     o: [
       "Transact-SQL",
       "Table-SQL",
+      "Temporary-SQL",
       "Text-SQL",
-      "Trigger-SQL",
-      "Temporary-SQL"
+      "Trigger-SQL"
     ],
     a: 0,
     difficulty: "easy",
     week: 10,
     topic: "T-SQL",
     importance: 5,
-    explanation: "T-SQL, Transact-SQL anlamına gelir ve SQL Server için geliştirilmiş SQL uzantısıdır."
+    explanation: "T-SQL, Transact-SQL anlamına gelir."
   },
 
   {
-    q: "T-SQL standart SQL'e ek olarak ne sunar?",
+    q: "T-SQL hangi sisteme özgü SQL uzantısıdır?",
     t: "mcq",
     o: [
-      "Sadece tablo silme",
-      "Değişken, prosedür ve hata yakalama gibi yapılar",
-      "Yalnızca HTML desteği",
-      "Sadece resim depolama",
-      "SQL kullanımını engelleme"
+      "Oracle",
+      "Microsoft SQL Server",
+      "MySQL",
+      "SQLite",
+      "MongoDB"
     ],
     a: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 10,
-    topic: "T-SQL Özellikleri",
+    topic: "T-SQL",
     importance: 5,
-    explanation: "T-SQL, standart SQL'e ek olarak değişken, prosedür, koşul ve hata yakalama gibi programlama özellikleri sunar."
+    explanation: "T-SQL, Microsoft SQL Server için geliştirilmiş SQL uzantısıdır."
   },
 
   {
-    q: "MERGE komutu hangi işlemi destekler?",
+    q: "MERGE komutunun temel amacı nedir?",
     t: "mcq",
     o: [
-      "Sadece tablo silme",
-      "Sadece yedekleme",
-      "Koşula göre ekleme veya güncelleme",
-      "Sadece SELECT çalıştırma",
-      "Veritabanı kapatma"
+      "Sadece tablo silmek",
+      "Sadece veri listelemek",
+      "Koşula göre ekleme veya güncelleme yapmak",
+      "View şifrelemek",
+      "Veritabanını yedeklemek"
     ],
     a: 2,
     difficulty: "hard",
     week: 10,
     topic: "MERGE",
     importance: 4,
-    explanation: "MERGE, eşleşme varsa UPDATE, eşleşme yoksa INSERT gibi koşullu işlemler yapabilir."
+    explanation: "MERGE eşleşme varsa UPDATE, yoksa INSERT gibi koşullu veri işlemlerinde kullanılır."
   },
 
   {
     q: "BETWEEN operatörü ne için kullanılır?",
     t: "mcq",
     o: [
-      "Metin değiştirmek için",
-      "Tablo oluşturmak için",
-      "Sadece kayıt silmek için",
-      "Bir aralıktaki değerleri seçmek için",
-      "Veritabanını kapatmak için"
+      "Tabloyu silmek için",
+      "Metni büyütmek için",
+      "Sadece yedek almak için",
+      "Aralık sorgusu yapmak için",
+      "Primary Key oluşturmak için"
     ],
     a: 3,
     difficulty: "easy",
     week: 10,
     topic: "BETWEEN",
     importance: 5,
-    explanation: "BETWEEN, örneğin Yas BETWEEN 18 AND 22 gibi aralık sorgularında kullanılır."
+    explanation: "BETWEEN iki değer arasındaki kayıtları seçmek için kullanılır."
   },
 
   {
-    q: "IN operatörü hangi amaçla kullanılır?",
+    q: "IN operatörü neyi kontrol eder?",
     t: "mcq",
     o: [
-      "Tüm tabloyu silmek için",
-      "Veri tabanını yedeklemek için",
-      "Sadece tarih almak için",
-      "Metin uzunluğu ölçmek için",
-      "Belirli değer kümesi içinde aramak için"
+      "Metnin uzunluğunu",
+      "Tablonun varlığını",
+      "Veritabanı adını",
+      "Tarihin yılını",
+      "Değerin belirtilen kümede olup olmadığını"
     ],
     a: 4,
     difficulty: "easy",
     week: 10,
     topic: "IN",
     importance: 5,
-    explanation: "IN, örneğin BolumID IN (1,3,5) gibi belirli değerler kümesindeki kayıtları seçer."
+    explanation: "IN, bir alan değerinin verilen değerler listesinde olup olmadığını kontrol eder."
   },
 
   {
-    q: "LIKE 'A%' ifadesi neyi getirir?",
+    q: "LIKE 'A%' ifadesi hangi kayıtları getirir?",
     t: "mcq",
     o: [
-      "A ile başlayan değerleri",
-      "A ile biten değerleri",
+      "A ile başlayanları",
+      "A ile bitenleri",
       "İçinde A olmayanları",
-      "Sadece boş kayıtları",
-      "Tablo adlarını"
+      "Sadece boş değerleri",
+      "Tüm sayısal değerleri"
     ],
     a: 0,
     difficulty: "easy",
     week: 10,
     topic: "LIKE",
     importance: 5,
-    explanation: "LIKE 'A%' ifadesi A harfi ile başlayan metinleri eşleştirir."
+    explanation: "LIKE 'A%' ifadesi A harfiyle başlayan metinleri seçer."
   },
 
   {
-    q: "LIKE '%e' ifadesi neyi getirir?",
+    q: "LIKE '%e' ifadesi hangi kayıtları getirir?",
     t: "mcq",
     o: [
       "e ile başlayanları",
       "e ile bitenleri",
       "İçinde e olmayanları",
-      "Sadece sayıları",
-      "Tüm tabloları"
+      "Sadece NULL değerleri",
+      "Sadece sayıları"
     ],
     a: 1,
     difficulty: "easy",
     week: 10,
     topic: "LIKE",
     importance: 5,
-    explanation: "Yüzde işareti başta olursa sondaki karakter aranır; '%e' e ile bitenleri getirir."
+    explanation: "LIKE '%e' ifadesi e harfiyle biten değerleri getirir."
   },
 
   {
@@ -1145,8 +1235,8 @@ window.questionBank = [
     o: [
       "Metni büyütür",
       "Metni küçültür",
-      "Metnin uzunluğunu",
-      "Tarihi",
+      "Metnin karakter uzunluğunu",
+      "Bugünün tarihini",
       "Tablo sayısını"
     ],
     a: 2,
@@ -1154,18 +1244,18 @@ window.questionBank = [
     week: 10,
     topic: "LEN",
     importance: 4,
-    explanation: "LEN fonksiyonu verilen metnin karakter uzunluğunu döndürür."
+    explanation: "LEN, verilen metnin uzunluğunu döndürür."
   },
 
   {
-    q: "LOWER('ANIL') ne döndürür?",
+    q: "LOWER('ANIL') sonucu nedir?",
     t: "mcq",
     o: [
       "ANIL",
       "Anil",
-      "Boş değer",
+      "NULL",
       "anil",
-      "Metin uzunluğu"
+      "4"
     ],
     a: 3,
     difficulty: "easy",
@@ -1176,21 +1266,21 @@ window.questionBank = [
   },
 
   {
-    q: "UPPER('anıl') ne döndürür?",
+    q: "UPPER('anıl') fonksiyonu ne yapar?",
     t: "mcq",
     o: [
-      "anıl",
-      "Anıl",
-      "Metin uzunluğu",
-      "Tarih",
-      "ANIL"
+      "Metni siler",
+      "Metni küçültür",
+      "Metni sayıya çevirir",
+      "Metni tarihe çevirir",
+      "Metni büyük harfe çevirir"
     ],
     a: 4,
     difficulty: "easy",
     week: 10,
     topic: "UPPER",
     importance: 4,
-    explanation: "UPPER fonksiyonu metni büyük harfe dönüştürür."
+    explanation: "UPPER, metni büyük harfe dönüştürür."
   },
 
   {
@@ -1208,7 +1298,7 @@ window.questionBank = [
     week: 10,
     topic: "LEFT",
     importance: 4,
-    explanation: "LEFT metnin sol tarafından belirtilen sayıda karakter alır."
+    explanation: "LEFT, metnin solundan belirtilen sayıda karakter alır."
   },
 
   {
@@ -1226,25 +1316,25 @@ window.questionBank = [
     week: 10,
     topic: "RIGHT",
     importance: 4,
-    explanation: "RIGHT metnin sağ tarafından belirtilen sayıda karakter alır."
+    explanation: "RIGHT, metnin sağından belirtilen sayıda karakter alır."
   },
 
   {
-    q: "SUBSTRING('Merhaba', 2, 3) örneğinde amaç nedir?",
+    q: "SUBSTRING('Merhaba', 2, 3) ne yapar?",
     t: "mcq",
     o: [
-      "Tarihi almak",
-      "Tablo silmek",
-      "Metnin belirli bölümünü almak",
-      "Kayıt eklemek",
-      "Veritabanı yedeklemek"
+      "Tabloyu siler",
+      "Metni büyütür",
+      "Metnin belirli bölümünü alır",
+      "Tarihi döndürür",
+      "Kayıt sayar"
     ],
     a: 2,
     difficulty: "medium",
     week: 10,
     topic: "SUBSTRING",
     importance: 4,
-    explanation: "SUBSTRING, metnin belirli başlangıç konumundan belirli uzunlukta parça alır."
+    explanation: "SUBSTRING, metinden belirli başlangıç noktasından belirli uzunlukta parça alır."
   },
 
   {
@@ -1253,7 +1343,7 @@ window.questionBank = [
     o: [
       "Tablo adını",
       "Kullanıcı adını",
-      "En küçük fiyatı",
+      "En düşük değeri",
       "Geçerli tarih ve saati",
       "Kayıt sayısını"
     ],
@@ -1262,7 +1352,7 @@ window.questionBank = [
     week: 10,
     topic: "GETDATE",
     importance: 5,
-    explanation: "GETDATE(), sistemin geçerli tarih ve saat bilgisini döndürür."
+    explanation: "GETDATE, SQL Server'da mevcut tarih ve saat bilgisini döndürür."
   },
 
   {
@@ -1271,8 +1361,8 @@ window.questionBank = [
     o: [
       "Bugünden 7 gün öncesini verir",
       "Tabloyu siler",
-      "Ay bilgisini alır",
-      "Yıl bilgisini alır",
+      "Sadece ay bilgisini verir",
+      "Kayıt ekler",
       "Bugüne 7 gün ekler"
     ],
     a: 4,
@@ -1284,43 +1374,25 @@ window.questionBank = [
   },
 
   // =========================================================
-  // ==== 12-13. HAFTA – SQL Türleri, View, Trigger (20) ======
+  // ==== 12-13. HAFTA – SQL Türleri, View, Trigger (15) ======
   // =========================================================
 
   {
-    q: "Standard SQL hangi kuruluşa dayalı standarttır?",
+    q: "Standard SQL hangi temele dayanır?",
     t: "mcq",
     o: [
-      "ANSI/ISO",
-      "Sadece Microsoft",
-      "Sadece Oracle",
-      "Sadece Google",
-      "Sadece IBM"
+      "ANSI/ISO standardına",
+      "Sadece Microsoft'a",
+      "Sadece Oracle'a",
+      "Sadece MySQL'e",
+      "Sadece SQLite'a"
     ],
     a: 0,
     difficulty: "easy",
     week: 12,
     topic: "Standard SQL",
     importance: 5,
-    explanation: "Standard SQL, ANSI/ISO standardı olarak tüm RDBMS sistemleri için temel SQL komutlarını içerir."
-  },
-
-  {
-    q: "T-SQL hangi platformla ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Oracle Database",
-      "Microsoft SQL Server",
-      "PostgreSQL",
-      "MySQL",
-      "SQLite"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 12,
-    topic: "T-SQL",
-    importance: 5,
-    explanation: "T-SQL, Microsoft SQL Server ve Azure SQL ile ilişkilidir."
+    explanation: "Standard SQL, ANSI/ISO standardı olarak temel SQL komutlarını kapsar."
   },
 
   {
@@ -1328,12 +1400,12 @@ window.questionBank = [
     t: "mcq",
     o: [
       "SQL Server",
-      "MySQL",
       "Oracle Database",
-      "SQLite",
-      "Snowflake"
+      "PostgreSQL",
+      "MySQL",
+      "SQLite"
     ],
-    a: 2,
+    a: 1,
     difficulty: "easy",
     week: 12,
     topic: "PL/SQL",
@@ -1342,16 +1414,16 @@ window.questionBank = [
   },
 
   {
-    q: "PL/pgSQL hangi sistemin prosedürel dilidir?",
+    q: "PL/pgSQL hangi sisteme aittir?",
     t: "mcq",
     o: [
       "Oracle",
-      "MySQL",
       "SQL Server",
       "PostgreSQL",
-      "SQLite"
+      "MySQL",
+      "Snowflake"
     ],
-    a: 3,
+    a: 2,
     difficulty: "easy",
     week: 12,
     topic: "PL/pgSQL",
@@ -1360,232 +1432,196 @@ window.questionBank = [
   },
 
   {
-    q: "MySQL SQL için öne çıkan özelliklerden biri hangisidir?",
+    q: "MySQL SQL için öne çıkan özellik hangisidir?",
     t: "mcq",
     o: [
       "TRY...CATCH",
       "WITH SCHEMABINDING",
-      "SQL Server Agent",
       "Oracle Package",
-      "AUTO_INCREMENT"
+      "AUTO_INCREMENT",
+      "T-SQL TOP"
     ],
-    a: 4,
+    a: 3,
     difficulty: "medium",
     week: 12,
     topic: "MySQL SQL",
     importance: 5,
-    explanation: "MySQL SQL tarafında LIMIT, AUTO_INCREMENT, REPLACE INTO gibi özellikler öne çıkar."
+    explanation: "MySQL'de AUTO_INCREMENT, LIMIT ve REPLACE INTO gibi özellikler öne çıkar."
   },
 
   {
     q: "SQLite için doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Küçük sistemler için uygun gömülü SQL yorumlayıcısıdır",
-      "Yalnızca SQL Server'da çalışır",
       "Sadece büyük veri ambarıdır",
-      "Sadece bulut hizmetidir",
-      "Sadece Oracle içindir"
+      "Sadece SQL Server içinde çalışır",
+      "Oracle prosedür dilidir",
+      "Sadece bulut sistemidir",
+      "Gömülü ve küçük sistemler için uygundur"
     ],
-    a: 0,
+    a: 4,
     difficulty: "medium",
     week: 12,
     topic: "SQLite",
     importance: 4,
-    explanation: "SQLite gömülü, hafif ve küçük sistemler için uygun bir SQL yorumlayıcısıdır."
+    explanation: "SQLite, gömülü ve hafif yapısıyla küçük sistemler için uygundur."
   },
 
   {
-    q: "View nedir?",
+    q: "View en kısa tanımıyla nedir?",
     t: "mcq",
     o: [
-      "Fiziksel tablo dosyası",
       "SELECT sorgusuna dayalı sanal tablo",
-      "Sadece indeks dosyası",
-      "Yedekleme yöntemi",
-      "Sunucu bağlantısı"
+      "Fiziksel yedek dosyası",
+      "Sunucu donanımı",
+      "Primary Key türü",
+      "Veri tipi"
     ],
-    a: 1,
+    a: 0,
     difficulty: "easy",
     week: 12,
     topic: "View",
     importance: 5,
-    explanation: "View fiziksel olarak veri tutmaz; arkasında bir SELECT sorgusunun sonucunu tablo gibi gösterir."
+    explanation: "View fiziksel olarak veri tutmaz; bir SELECT sorgusunun sonucunu tablo gibi gösterir."
   },
 
   {
     q: "View kullanım amaçlarından biri hangisidir?",
     t: "mcq",
     o: [
-      "Tabloyu tamamen yok etmek",
-      "Sunucu kapatmak",
+      "Tabloyu zorla silmek",
       "Karmaşık sorguları sadeleştirmek",
-      "Tüm izinleri kaldırmak",
-      "Veritabanını bozmak"
+      "Veritabanını kapatmak",
+      "RAM'i temizlemek",
+      "SQL'i engellemek"
     ],
-    a: 2,
+    a: 1,
     difficulty: "easy",
     week: 12,
     topic: "View Kullanımı",
     importance: 5,
-    explanation: "View; karmaşık sorguları sadeleştirme, güvenlik, raporlama ve veri soyutlama için kullanılır."
+    explanation: "View karmaşık sorguları tek isim altında sadeleştirebilir."
   },
 
   {
-    q: "CREATE VIEW komutunun temel amacı nedir?",
+    q: "WITH CHECK OPTION neyi sağlar?",
     t: "mcq",
     o: [
-      "Tablo silmek",
-      "Kayıt güncellemek",
-      "Veritabanı yedeklemek",
-      "Görünüm oluşturmak",
-      "Trigger silmek"
+      "View tanımını gizler",
+      "Tabloyu siler",
+      "View koşuluna uymayan INSERT/UPDATE işlemini engeller",
+      "Veritabanını yedekler",
+      "Sadece kayıt sayar"
     ],
-    a: 3,
-    difficulty: "easy",
-    week: 12,
-    topic: "CREATE VIEW",
-    importance: 5,
-    explanation: "CREATE VIEW, SELECT sorgusuna dayalı sanal tablo/görünüm oluşturur."
-  },
-
-  {
-    q: "WITH CHECK OPTION neyi zorunlu kılar?",
-    t: "mcq",
-    o: [
-      "View tanımını gizlemeyi",
-      "Tablo yapısını kilitlemeyi",
-      "Tüm kayıtları silmeyi",
-      "Veritabanını yedeklemeyi",
-      "View koşuluna uyan veri ekleme/güncellemeyi"
-    ],
-    a: 4,
+    a: 2,
     difficulty: "medium",
     week: 12,
     topic: "WITH CHECK OPTION",
     importance: 5,
-    explanation: "WITH CHECK OPTION, view üzerinden yapılan INSERT/UPDATE işlemlerinin view koşullarını ihlal etmesini engeller."
+    explanation: "WITH CHECK OPTION, görünüm koşullarının dışına çıkan veri ekleme/güncelleme işlemlerini engeller."
   },
 
   {
     q: "WITH ENCRYPTION ne işe yarar?",
     t: "mcq",
     o: [
+      "View koşulu kontrol eder",
+      "Foreign Key oluşturur",
+      "Stok artırır",
       "View tanımını gizler",
-      "Tablodaki tüm kayıtları siler",
-      "Sadece veri ekler",
-      "Sorguyu yavaşlatır",
-      "Foreign key oluşturur"
+      "Tablo ilişkisi kurar"
     ],
-    a: 0,
+    a: 3,
     difficulty: "medium",
     week: 12,
     topic: "WITH ENCRYPTION",
     importance: 5,
-    explanation: "WITH ENCRYPTION, view tanımının sp_helptext gibi araçlarla görüntülenmesini engeller."
+    explanation: "WITH ENCRYPTION, SQL Server'da view tanımının görüntülenmesini engeller."
   },
 
   {
-    q: "WITH SCHEMABINDING ne sağlar?",
+    q: "WITH SCHEMABINDING neyi korur?",
     t: "mcq",
     o: [
-      "View içeriğini otomatik siler",
-      "View'in bağlı olduğu tabloda yapısal değişikliği engeller",
-      "Her sorguyu SELECT'e çevirir",
-      "SQL Server'ı kapatır",
-      "Sadece veri ekler"
+      "Kullanıcı şifresini",
+      "Yedek dosyasını",
+      "Rapor çıktısını",
+      "Veri tabanı adını",
+      "View'in bağlı olduğu tablo yapısını"
     ],
-    a: 1,
+    a: 4,
     difficulty: "medium",
     week: 12,
     topic: "WITH SCHEMABINDING",
     importance: 5,
-    explanation: "WITH SCHEMABINDING, görünümün dayandığı tablolarda kolon silme/isim değiştirme gibi değişiklikleri engelleyebilir."
+    explanation: "SCHEMABINDING, view'in bağlı olduğu tabloda yapısal değişiklik yapılmasını engelleyebilir."
   },
 
   {
-    q: "WITH SCHEMABINDING kullanılırken hangi kural geçerlidir?",
+    q: "WITH ENCRYPTION ve WITH SCHEMABINDING hangi platformda desteklenir?",
     t: "mcq",
     o: [
-      "SELECT * zorunludur",
-      "Tablo adı hiç yazılmaz",
-      "Tablolar schema.tablo adıyla yazılmalıdır",
-      "WHERE kullanılamaz",
-      "JOIN yasaktır"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 12,
-    topic: "SCHEMABINDING Kuralı",
-    importance: 5,
-    explanation: "SCHEMABINDING ile view içinde kullanılan tablolar tam adlarıyla yazılmalı ve SELECT * kullanılmamalıdır."
-  },
-
-  {
-    q: "WITH ENCRYPTION ve WITH SCHEMABINDING hangi sistemde desteklenir?",
-    t: "mcq",
-    o: [
+      "SQL Server",
       "MySQL",
       "PostgreSQL",
-      "Oracle PL/SQL",
-      "SQL Server T-SQL",
+      "Oracle",
       "SQLite"
-    ],
-    a: 3,
-    difficulty: "hard",
-    week: 13,
-    topic: "View Karşılaştırması",
-    importance: 5,
-    explanation: "Ders notuna göre WITH ENCRYPTION ve WITH SCHEMABINDING özellikleri SQL Server/T-SQL tarafında desteklenir."
-  },
-
-  {
-    q: "WITH CHECK OPTION hangi platformlarda desteklenir?",
-    t: "mcq",
-    o: [
-      "Sadece Oracle",
-      "Sadece SQLite",
-      "Sadece MongoDB",
-      "Sadece Python",
-      "SQL Server, MySQL ve PostgreSQL"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 13,
-    topic: "WITH CHECK OPTION",
-    importance: 5,
-    explanation: "Ders notunda WITH CHECK OPTION'ın SQL Server, MySQL ve PostgreSQL tarafından desteklendiği; Oracle'da yerel destek olmadığı belirtilir."
-  },
-
-  {
-    q: "PostgreSQL'de trigger oluştururken tipik sıra nasıldır?",
-    t: "mcq",
-    o: [
-      "Önce fonksiyon, sonra trigger tanımlanır",
-      "Önce view, sonra tablo silinir",
-      "Önce backup, sonra drop yapılır",
-      "Sadece ALTER kullanılır",
-      "Sadece SELECT yazılır"
     ],
     a: 0,
     difficulty: "hard",
     week: 13,
-    topic: "Trigger Karşılaştırması",
+    topic: "View Karşılaştırması",
     importance: 5,
-    explanation: "PostgreSQL'de trigger mantığı genellikle önce trigger fonksiyonu, sonra CREATE TRIGGER şeklindedir."
+    explanation: "PDF'ye göre bu iki özellik SQL Server / T-SQL tarafında desteklenir."
   },
 
   {
-    q: "Trigger'ın temel kullanım amacı nedir?",
+    q: "WITH CHECK OPTION hangi sistemlerde desteklenir?",
     t: "mcq",
     o: [
-      "Sadece tablo adı değiştirmek",
-      "Belirli olay olduğunda otomatik işlem çalıştırmak",
-      "Veritabanını kapatmak",
-      "Sadece rapor görüntülemek",
-      "Sorgu sonucunu renklendirmek"
+      "Sadece Oracle",
+      "SQL Server, MySQL ve PostgreSQL",
+      "Sadece SQLite",
+      "Sadece MongoDB",
+      "Sadece Excel"
     ],
     a: 1,
+    difficulty: "hard",
+    week: 13,
+    topic: "WITH CHECK OPTION",
+    importance: 5,
+    explanation: "Ders notunda WITH CHECK OPTION'ın SQL Server, MySQL ve PostgreSQL tarafından desteklendiği belirtilir."
+  },
+
+  {
+    q: "PostgreSQL'de trigger oluşturma sırası genelde nasıldır?",
+    t: "mcq",
+    o: [
+      "Önce tablo silinir",
+      "Önce view şifrelenir",
+      "Önce fonksiyon, sonra trigger oluşturulur",
+      "Sadece SELECT yazılır",
+      "Önce backup alınır"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 13,
+    topic: "PostgreSQL Trigger",
+    importance: 5,
+    explanation: "PostgreSQL'de trigger için önce trigger fonksiyonu, ardından CREATE TRIGGER tanımı yapılır."
+  },
+
+  {
+    q: "Trigger'ın temel mantığı nedir?",
+    t: "mcq",
+    o: [
+      "Sadece veri listelemek",
+      "Sadece tablo adını değiştirmek",
+      "Sadece yedek dosyası almak",
+      "Belirli olay gerçekleşince otomatik işlem çalıştırmak",
+      "Sadece view tanımını gizlemek"
+    ],
+    a: 3,
     difficulty: "medium",
     week: 13,
     topic: "Trigger",
@@ -1594,110 +1630,56 @@ window.questionBank = [
   },
 
   {
-    q: "Stok azaldığında uyarı logu oluşturma hangi nesneye örnektir?",
+    q: "SQL Server trigger içinde inserted tablosu neyi temsil eder?",
     t: "mcq",
     o: [
-      "Sadece View",
-      "Sadece SELECT",
-      "Trigger",
-      "Primary Key",
-      "Projection"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 13,
-    topic: "Trigger Senaryosu",
-    importance: 5,
-    explanation: "Bir ürün satıldığında stok kritik seviyeye düşerse otomatik log eklemek trigger senaryosudur."
-  },
-
-  {
-    q: "Fiyat değişikliğinde eski ve yeni fiyatı loglama hangi tablolarla ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Sadece master tablosu",
-      "Sadece View",
-      "Sadece SELECT sonucu",
-      "inserted ve deleted mantığı",
-      "Sadece yedekleme dosyası"
-    ],
-    a: 3,
-    difficulty: "hard",
-    week: 13,
-    topic: "Trigger Loglama",
-    importance: 5,
-    explanation: "SQL Server trigger örneğinde inserted yeni değerleri, deleted eski değerleri temsil eder."
-  },
-
-  {
-    q: "AktifSiparisler view örneğinde hangi durum filtrelenmiştir?",
-    t: "mcq",
-    o: [
-      "İptal edildi",
-      "Teslim edildi",
-      "Silindi",
-      "Arşivlendi",
-      "Hazırlanıyor"
+      "Eski değerleri",
+      "Silinen tabloyu",
+      "Yedek dosyasını",
+      "View koşulunu",
+      "Yeni değerleri"
     ],
     a: 4,
-    difficulty: "medium",
+    difficulty: "hard",
     week: 13,
-    topic: "View Senaryosu",
-    importance: 4,
-    explanation: "AktifSiparisler örneğinde Durum = 'Hazırlanıyor' koşulu ile aktif siparişler listelenir."
+    topic: "inserted",
+    importance: 5,
+    explanation: "inserted, INSERT veya UPDATE sonrası oluşan yeni değerleri temsil eder."
   },
 
   // =========================================================
-  // ==== 14. HAFTA – Kütüphane Otomasyon Sistemi (10) ========
+  // ==== 14. HAFTA – Kütüphane Otomasyon Projesi (10) ========
   // =========================================================
 
   {
-    q: "Kütüphane otomasyon projesinin temel amacı nedir?",
+    q: "Kütüphane otomasyon projesinde kullanılan VTYS hangisidir?",
     t: "mcq",
     o: [
-      "Kitap, üye ve ödünç/iade işlemlerini yönetmek",
-      "Sadece resim depolamak",
-      "Mobil arayüz çizmek",
-      "Ağ bağlantısı test etmek",
-      "Video oynatmak"
+      "MySQL",
+      "MongoDB",
+      "SQLite yalnızca",
+      "Excel",
+      "Access sadece form"
     ],
     a: 0,
     difficulty: "easy",
     week: 14,
     topic: "Kütüphane Otomasyonu",
     importance: 5,
-    explanation: "Proje; kitapların, üyelerin ve ödünç alma/iade işlemlerinin veritabanı ile yönetilmesini hedefler."
-  },
-
-  {
-    q: "Kütüphane projesinde kullanılacak VTYS hangisidir?",
-    t: "mcq",
-    o: [
-      "SQLite",
-      "MySQL",
-      "MongoDB",
-      "Excel",
-      "Access Forms"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 14,
-    topic: "MySQL",
-    importance: 5,
     explanation: "14. hafta projesi MySQL versiyonu olarak verilmiştir."
   },
 
   {
-    q: "Kütüphane projesinde temel varlıklardan biri hangisidir?",
+    q: "Kütüphane otomasyonundaki temel varlıklardan biri hangisidir?",
     t: "mcq",
     o: [
-      "SepetRengi",
-      "SunucuLogosu",
-      "Kitaplar",
       "EkranKartı",
-      "Bluetooth"
+      "Kitaplar",
+      "Bluetooth",
+      "RenkPaleti",
+      "SunucuLogo"
     ],
-    a: 2,
+    a: 1,
     difficulty: "easy",
     week: 14,
     topic: "Entity",
@@ -1706,21 +1688,21 @@ window.questionBank = [
   },
 
   {
-    q: "Kitaplar tablosunda KitapID alanı nasıl tanımlanmıştır?",
+    q: "Kitaplar tablosunda KitapID nasıl tanımlanmıştır?",
     t: "mcq",
     o: [
+      "Sadece VARCHAR",
       "Foreign Key",
-      "View",
-      "Trigger",
       "AUTO_INCREMENT PRIMARY KEY",
-      "CHECK OPTION"
+      "WITH CHECK OPTION",
+      "View"
     ],
-    a: 3,
+    a: 2,
     difficulty: "medium",
     week: 14,
     topic: "Kitaplar Tablosu",
     importance: 5,
-    explanation: "KitapID, Kitaplar tablosunda otomatik artan birincil anahtar olarak kullanılır."
+    explanation: "KitapID, otomatik artan birincil anahtar olarak tanımlanır."
   },
 
   {
@@ -1729,124 +1711,106 @@ window.questionBank = [
     o: [
       "PRIMARY KEY",
       "FOREIGN KEY",
-      "NOT NULL sadece",
       "CHECK OPTION",
-      "UNIQUE"
+      "UNIQUE",
+      "SCHEMABINDING"
     ],
-    a: 4,
+    a: 3,
     difficulty: "medium",
     week: 14,
     topic: "Uyeler Tablosu",
     importance: 4,
-    explanation: "Eposta alanı UNIQUE olarak tanımlanmıştır; aynı e-posta tekrar edemez."
+    explanation: "Eposta alanı UNIQUE olduğu için aynı e-posta değeri tekrar edemez."
   },
 
   {
-    q: "OduncIslemleri tablosunun birincil anahtarı hangisidir?",
+    q: "OduncIslemleri tablosunda KitapID hangi görevdedir?",
     t: "mcq",
     o: [
-      "OduncID",
-      "KitapID",
-      "UyeID",
-      "IadeTarihi",
-      "Telefon"
+      "View adı",
+      "Trigger adı",
+      "Sadece metin açıklaması",
+      "Backup dosyası",
+      "Foreign Key"
     ],
-    a: 0,
-    difficulty: "easy",
-    week: 14,
-    topic: "OduncIslemleri",
-    importance: 5,
-    explanation: "OduncID, ödünç işlem kayıtlarını benzersiz tanımlayan primary key alanıdır."
-  },
-
-  {
-    q: "OduncIslemleri tablosundaki KitapID neyi referans alır?",
-    t: "mcq",
-    o: [
-      "Uyeler(UyeID)",
-      "Kitaplar(KitapID)",
-      "OduncIslemleri(OduncID)",
-      "Yazar(YazarID)",
-      "Telefon(TelefonID)"
-    ],
-    a: 1,
+    a: 4,
     difficulty: "medium",
     week: 14,
     topic: "Foreign Key",
     importance: 5,
-    explanation: "OduncIslemleri.KitapID, Kitaplar tablosundaki KitapID alanını foreign key olarak referans alır."
+    explanation: "OduncIslemleri.KitapID, Kitaplar.KitapID alanını referans alan Foreign Key'dir."
   },
 
   {
-    q: "ON DELETE CASCADE ne sağlar?",
+    q: "ON DELETE CASCADE ne anlama gelir?",
     t: "mcq",
     o: [
-      "Kayıtları şifreler",
-      "View oluşturur",
-      "Ana kayıt silinirse bağlı kayıtların da silinmesini sağlar",
-      "Sadece stok artırır",
-      "Tabloyu yedekler"
+      "Ana kayıt silinirse bağlı kayıtların da silinmesi",
+      "Kayıtların şifrelenmesi",
+      "Sadece SELECT çalışması",
+      "View koşulunun korunması",
+      "Stok adedinin artması"
     ],
-    a: 2,
+    a: 0,
     difficulty: "hard",
     week: 14,
     topic: "ON DELETE CASCADE",
     importance: 5,
-    explanation: "ON DELETE CASCADE, ana tablodaki kayıt silindiğinde ona bağlı child kayıtların da silinmesini sağlar."
+    explanation: "ON DELETE CASCADE, parent kayıt silindiğinde child kayıtların da otomatik silinmesini sağlar."
   },
 
   {
     q: "OduncAl stored procedure ne yapar?",
     t: "mcq",
     o: [
-      "Sadece tüm kitapları listeler",
-      "Sadece üyeleri siler",
-      "View tanımını gizler",
-      "Kitap ödünç alır ve stok adedini azaltır",
-      "Veritabanını siler"
+      "Tüm üyeleri siler",
+      "Ödünç kaydı ekler ve kitap stok adedini azaltır",
+      "Sadece view tanımını gizler",
+      "Veritabanını siler",
+      "Kitap adlarını büyütür"
     ],
-    a: 3,
+    a: 1,
     difficulty: "hard",
     week: 14,
     topic: "Stored Procedure",
     importance: 5,
-    explanation: "OduncAl prosedürü, stok varsa ödünç kaydı ekler ve ilgili kitabın StokAdedi değerini bir azaltır."
+    explanation: "OduncAl prosedürü stok varsa ödünç işlemi ekler ve ilgili kitabın stok adedini bir azaltır."
   },
 
   {
-    q: "trg_IadeEdildi trigger'ı ne yapar?",
+    q: "trg_IadeEdildi trigger'ı hangi durumda çalışır?",
     t: "mcq",
     o: [
-      "Kitap stoğunu azaltır",
-      "Üyeyi siler",
-      "View oluşturur",
-      "Veritabanını yedekler",
-      "Kitap iade edilince StokAdedi'ni artırır"
+      "Kitap eklendiğinde",
+      "Üye silindiğinde",
+      "IadeTarihi NULL'dan dolu değere değiştiğinde",
+      "View oluşturulduğunda",
+      "Backup alındığında"
     ],
-    a: 4,
+    a: 2,
     difficulty: "hard",
     week: 14,
     topic: "Trigger",
     importance: 5,
-    explanation: "IadeTarihi NULL'dan dolu değere döndüğünde trigger ilgili kitabın stok adedini artırır."
+    explanation: "Kitap iade edildiğinde IadeTarihi güncellenir; trigger ilgili kitabın StokAdedi değerini artırır."
   },
 
   {
     q: "AktifOduncIslemleriView hangi kayıtları gösterir?",
     t: "mcq",
     o: [
-      "Henüz iade edilmemiş ödünç kitapları",
-      "Tüm silinen üyeleri",
-      "Sadece stokta olmayan kitapları",
-      "Tüm yedekleri",
-      "Sadece eski fiyatları"
+      "Silinmiş üyeleri",
+      "Stokta olmayan kitapları",
+      "Tüm üyeleri",
+      "Henüz iade edilmemiş ödünç işlemlerini",
+      "Tüm yedekleri"
     ],
-    a: 0,
+    a: 3,
     difficulty: "medium",
     week: 14,
     topic: "View",
     importance: 5,
-    explanation: "AktifOduncIslemleriView, IadeTarihi NULL olan yani henüz iade edilmemiş işlemleri gösterir."
+    explanation: "Bu view, IadeTarihi IS NULL olan yani henüz iade edilmemiş kitapları gösterir."
   },
 
   {
@@ -1854,70 +1818,16 @@ window.questionBank = [
     t: "mcq",
     o: [
       "StokAdedi = 0",
-      "StokAdedi > 0",
-      "IadeTarihi IS NOT NULL",
+      "IadeTarihi IS NULL",
       "UyeID IS NULL",
-      "ISBN IS NULL"
+      "ISBN IS NULL",
+      "StokAdedi > 0"
     ],
-    a: 1,
+    a: 4,
     difficulty: "easy",
     week: 14,
     topic: "SELECT Sorgusu",
     importance: 5,
-    explanation: "Stokta olan kitaplar için StokAdedi > 0 koşulu kullanılır."
-  },
-
-  {
-    q: "Her kitabın kaç kez ödünç alındığını bulmak için hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: [
-      "AVG",
-      "SUM",
-      "COUNT",
-      "LOWER",
-      "GETDATE"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 14,
-    topic: "COUNT",
-    importance: 5,
-    explanation: "Her kitabın ödünç alınma sayısını bulmak için COUNT(OduncID) gibi sayma fonksiyonu kullanılır."
-  },
-
-  {
-    q: "Yayın yılına göre ortalama stok hesaplamak için hangi ifade gerekir?",
-    t: "mcq",
-    o: [
-      "DELETE",
-      "DROP",
-      "INSERT",
-      "GROUP BY YayinYili",
-      "WITH ENCRYPTION"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 14,
-    topic: "GROUP BY",
-    importance: 5,
-    explanation: "Yayın yılı bazında ortalama stok için kayıtlar YayinYili alanına göre gruplanır."
-  },
-
-  {
-    q: "HAVING AVG(StokAdedi) > 2 ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Tabloyu siler",
-      "Tüm verileri günceller",
-      "Yeni veritabanı oluşturur",
-      "View tanımını gizler",
-      "Grupların ortalama stok şartını filtreler"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 14,
-    topic: "HAVING",
-    importance: 5,
-    explanation: "HAVING, GROUP BY sonrası oluşan gruplar üzerinde koşul uygulamak için kullanılır."
+    explanation: "Stokta bulunan kitapları görmek için StokAdedi > 0 koşulu kullanılır."
   }
 ];
