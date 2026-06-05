@@ -1,7 +1,4 @@
-// Internet Programlama – 100 Soruluk Soru Bankası
-// Konular: 3-14. hafta ders notları
-// Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
-// Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
+
 
 window.questionBank = [
   // =========================================================
