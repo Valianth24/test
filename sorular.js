@@ -1,2026 +1,1807 @@
-// Görsel Programlama – Final Tipi 100 Soruluk Kapsamlı Soru Bankası
-// Dağılım: 40 soru yeni PDF'lerden + 60 soru önceki haftalardan
+// Nesne Yönelimli Programlama – Final Tipi 100 Soruluk Soru Bankası
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== YENİ PDFLER – HAFTA 11: DİZİLER / WINDOWS FORMS (14)
+  // ==== 1. BÖLÜM – OOP TEMEL KAVRAMLAR (1-20) ===============
   // =========================================================
 
   {
-    q: "Kullanıcıdan 10,20,30,40,50 şeklinde alınan veriyi sayılara ayırmak için en uygun ilk işlem hangisidir?",
+    q: "Nesne yönelimli programlama en kısa tanımıyla nedir?",
     t: "mcq",
     o: [
-      "Metni virgüle göre parçalara ayırmak",
-      "Formu kapatmak",
-      "Label'ı temizlemek",
-      "Button rengini değiştirmek",
-      "MessageBox'ı gizlemek"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 11,
-    topic: "Diziler ve Split",
-    importance: 5,
-    explanation: "TextBox'tan gelen veri başlangıçta tek bir string metindir. 10,20,30 gibi değerleri ayrı ayrı işlemek için önce virgül karakterine göre parçalamak gerekir. C#'ta bunun için genellikle Split(',') kullanılır; sonra her parça sayıya dönüştürülür."
-  },
-
-  {
-    q: "Dizilerle ortalama hesaplama uygulamasında txtSayilar kontrolünün görevi nedir?",
-    t: "mcq",
-    o: [
-      "Sonucu göstermek",
-      "Kullanıcıdan virgülle ayrılmış sayıları almak",
-      "Programı kapatmak",
-      "Diziyi otomatik sıralamak",
-      "Hata mesajı göstermek"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 11,
-    topic: "TextBox ile Veri Alma",
-    importance: 5,
-    explanation: "txtSayilar bir TextBox'tır. TextBox'ın temel görevi kullanıcıdan veri almaktır. Bu uygulamada kullanıcı 10,20,30,40,50 gibi sayıları txtSayilar içine yazar; program da bu metni okuyup diziye aktarır."
-  },
-
-  {
-    q: "Dizinin ortalamasını hesaplamak için hangi işlem mantığı doğrudur?",
-    t: "mcq",
-    o: [
-      "Sadece ilk elemanı almak",
-      "Sadece son elemanı almak",
-      "Elemanları toplayıp eleman sayısına bölmek",
-      "Tüm elemanları silmek",
-      "Sayıları metin olarak birleştirmek"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 11,
-    topic: "Ortalama Hesaplama",
-    importance: 5,
-    explanation: "Ortalama, toplam / eleman sayısı formülüyle bulunur. Örneğin 10,20,30,40,50 sayılarının toplamı 150'dir; 5 eleman olduğu için 150 / 5 = 30 olur. Bu yüzden beklenen çıktı Ortalama: 30.00 şeklindedir."
-  },
-
-  {
-    q: "Dizilerle ortalama hesaplama uygulamasında lblSonuc ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Kullanıcıdan sayı almak için",
-      "Virgülleri silmek için",
-      "Diziyi oluşturmak için",
-      "Hesaplanan ortalamayı göstermek için",
-      "Uygulamayı derlemek için"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 11,
-    topic: "Label ile Sonuç Gösterme",
-    importance: 5,
-    explanation: "Label, kullanıcıya bilgi veya sonuç göstermek için kullanılır. Bu uygulamada ortalama hesaplandıktan sonra lblSonuc.Text değerine Ortalama: 30.00 gibi bir metin atanır. TextBox veri almak için, Label sonuç göstermek için kullanılır."
-  },
-
-  {
-    q: "Kullanıcı 12,45,7,33,89,2,67,10 girerse en büyük sayı kaçtır?",
-    t: "mcq",
-    o: [
-      "2",
-      "7",
-      "45",
-      "67",
-      "89"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 11,
-    topic: "En Büyük Sayıyı Bulma",
-    importance: 5,
-    explanation: "Dizideki her sayı tek tek karşılaştırılır. 89, verilen listedeki tüm sayılardan büyüktür. Bu nedenle lblEnBuyuk üzerinde 'En Büyük: 89' yazmalıdır."
-  },
-
-  {
-    q: "Kullanıcı 12,45,7,33,89,2,67,10 girerse en küçük sayı kaçtır?",
-    t: "mcq",
-    o: [
-      "2",
-      "7",
-      "10",
-      "12",
-      "33"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 11,
-    topic: "En Küçük Sayıyı Bulma",
-    importance: 5,
-    explanation: "En küçük değeri bulmak için dizideki her eleman karşılaştırılır. Bu listedeki en küçük sayı 2'dir. Program bunu lblEnKucuk üzerinde göstermelidir."
-  },
-
-  {
-    q: "En büyük ve en küçük sayıyı bulma uygulamasında kullanıcı verisi nasıl alınır?",
-    t: "mcq",
-    o: [
-      "Label üzerinden",
-      "Virgülle ayrılmış metin olarak TextBox üzerinden",
-      "Sadece MessageBox başlığından",
-      "Program dosya adından",
-      "Button'ın renginden"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 11,
-    topic: "TextBox Girdisi",
-    importance: 5,
-    explanation: "Kullanıcı sayıları tek tek farklı kutulara değil, virgülle ayrılmış şekilde tek TextBox'a yazar. Program bu metni parçalara ayırır, her parçayı sayıya çevirir ve dizi içinde işler."
-  },
-
-  {
-    q: "Tek ve çift sayıları ayırma uygulamasında çift sayıyı belirleyen temel koşul hangisidir?",
-    t: "mcq",
-    o: [
-      "sayi > 0",
-      "sayi < 0",
-      "sayi % 2 == 0",
-      "sayi == 1",
-      "sayi.ToString() == \"çift\""
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 11,
-    topic: "Mod Alma",
-    importance: 5,
-    explanation: "% operatörü bölümden kalanı verir. Bir sayı 2'ye bölündüğünde kalan 0 ise sayı çifttir. Bu nedenle sayi % 2 == 0 koşulu çift sayıları bulmak için kullanılır."
-  },
-
-  {
-    q: "Tek sayıyı belirlemek için hangi koşul kullanılabilir?",
-    t: "mcq",
-    o: [
-      "sayi == 0",
-      "sayi > 100",
-      "sayi < 10",
-      "sayi % 2 != 0",
-      "sayi / 2 == 0"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 11,
-    topic: "Tek Sayı Kontrolü",
-    importance: 5,
-    explanation: "Bir sayı 2'ye bölündüğünde kalan 0 değilse o sayı tektir. Örneğin 5 % 2 sonucu 1'dir; bu yüzden 5 tek sayıdır. Bu mantık tek-çift ayırma sorularının temelidir."
-  },
-
-  {
-    q: "Tek ve çift ayırma uygulamasında çift sayılar hangi kontrol üzerinde listelenmelidir?",
-    t: "mcq",
-    o: [
-      "lblSonuc",
-      "txtSayilar",
-      "btnAyir",
-      "Form1",
-      "lstCiftSayilar"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 11,
-    topic: "ListBox Kullanımı",
-    importance: 5,
-    explanation: "PDF'deki form tasarımında çift sayıların gösterileceği ListBox'ın adı lstCiftSayilar olarak verilmiştir. ListBox, birden fazla değeri liste halinde göstermek için kullanılır."
-  },
-
-  {
-    q: "1,2,3,4,5,6,7,8,9,10 girdisi için lstTekSayilar içinde hangi değerler yer almalıdır?",
-    t: "mcq",
-    o: [
-      "1, 3, 5, 7, 9",
-      "2, 4, 6, 8, 10",
-      "1, 2, 3, 4, 5",
-      "6, 7, 8, 9, 10",
-      "Sadece 10"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 11,
-    topic: "Tek Sayılar",
-    importance: 5,
-    explanation: "Tek sayılar 2'ye tam bölünmeyen sayılardır. 1, 3, 5, 7 ve 9 sayılarında 2'ye bölümden kalan 1 olduğu için bunlar tek sayılardır."
-  },
-
-  {
-    q: "1,2,3,4,5,6,7,8,9,10 girdisi için lstCiftSayilar içinde hangi değerler yer almalıdır?",
-    t: "mcq",
-    o: [
-      "1, 3, 5, 7, 9",
-      "2, 4, 6, 8, 10",
-      "1, 2, 3, 4, 5",
-      "Sadece 1",
-      "Sadece 9"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 11,
-    topic: "Çift Sayılar",
-    importance: 5,
-    explanation: "Çift sayılar 2'ye tam bölünen sayılardır. 2, 4, 6, 8 ve 10 sayılarında 2'ye bölümden kalan 0 olduğu için bu değerler çift sayı listesine eklenir."
-  },
-
-  {
-    q: "Bir TextBox'a girilen 5 sayıyı diziye aktarmanın temel nedeni nedir?",
-    t: "mcq",
-    o: [
-      "Formu renklendirmek",
-      "Button'ı gizlemek",
-      "Birden fazla sayıyı düzenli biçimde işleyebilmek",
-      "Programı kapatmak",
-      "MessageBox başlığını değiştirmek"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 11,
-    topic: "Dizi Mantığı",
-    importance: 5,
-    explanation: "Dizi, birden fazla değeri tek yapı altında saklar. Ortalama, en büyük/en küçük bulma ve tek-çift ayırma gibi işlemler için sayıları tek tek bağımsız değişkenlerde tutmak yerine diziye almak daha düzenlidir."
-  },
-
-  {
-    q: "btnHesapla kontrolünün temel görevi nedir?",
-    t: "mcq",
-    o: [
-      "Sayıları elle sıralamak",
-      "Label'ı kalıcı olarak silmek",
-      "TextBox'a otomatik rastgele yazı yazmak",
-      "Kullanıcı tıklayınca hesaplama işlemini başlatmak",
-      "Formun kod dosyasını silmek"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 11,
-    topic: "Button Click",
-    importance: 5,
-    explanation: "Button, kullanıcı etkileşimini başlatan kontroldür. Kullanıcı btnHesapla'ya tıkladığında Click olayı çalışır ve içine yazılan ortalama, en büyük/en küçük veya tek-çift ayırma kodları yürütülür."
-  },
-
-  // =========================================================
-  // ==== YENİ PDFLER – HAFTA 12: WINDOWS FORMS HATA YAKALAMA (13)
-  // =========================================================
-
-  {
-    q: "try bloğunun temel görevi nedir?",
-    t: "mcq",
-    o: [
-      "Hata oluşabilecek kodları kontrollü şekilde çalıştırmak",
-      "Programı kesinlikle kapatmak",
-      "Sadece Label rengini değiştirmek",
-      "Sadece Button oluşturmak",
-      "Diziyi sıralamak"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 12,
-    topic: "try Bloğu",
-    importance: 5,
-    explanation: "try bloğu hata oluşma ihtimali olan kodların yazıldığı bölümdür. Örneğin TextBox'tan sayı dönüştürme veya bir sayıyı başka sayıya bölme işlemleri hata üretebilir. Bu işlemler try içine alınırsa hata oluştuğunda program doğrudan çökmez, ilgili catch bloğuna geçer."
-  },
-
-  {
-    q: "catch bloğunun temel görevi nedir?",
-    t: "mcq",
-    o: [
-      "Hata üretmek",
-      "Oluşan hatayı yakalayıp uygun işlem yapmak",
-      "Programı derlemek",
-      "TextBox'a veri girmek",
-      "ProgressBar'ı artırmak"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 12,
-    topic: "catch Bloğu",
-    importance: 5,
-    explanation: "catch bloğu, try içinde oluşan hatayı yakalar. Örneğin kullanıcı sıfıra bölme yaparsa DivideByZeroException catch bloğu çalışır. Böylece kullanıcıya anlaşılır bir hata mesajı gösterilir ve program kontrolsüz şekilde kapanmaz."
-  },
-
-  {
-    q: "finally bloğunun en doğru tanımı hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece hata olursa çalışan blok",
-      "Sadece hata olmazsa çalışan blok",
-      "Hata olsa da olmasa da çalışan blok",
-      "Sadece TextBox içeriğini okuyan blok",
-      "Sadece dizileri sıralayan blok"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 12,
-    topic: "finally Bloğu",
-    importance: 5,
-    explanation: "finally bloğu hata oluşsa da oluşmasa da en sonda çalışır. Bu yüzden temizlik, kapanış mesajı veya işlem tamamlandı bildirimi için uygundur. PDF örneğinde finally içinde 'Bölme işlemi tamamlandı.' mantığı verilmiştir."
-  },
-
-  {
-    q: "Convert.ToInt32(txtSayi1.Text) kodu ne yapar?",
-    t: "mcq",
-    o: [
-      "TextBox'ı siler",
-      "Label'a renk verir",
-      "Button'ı tıklar",
-      "txtSayi1 içindeki metni tam sayıya çevirmeye çalışır",
-      "Formu kapatır"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 12,
-    topic: "Tip Dönüşümü",
-    importance: 5,
-    explanation: "TextBox içeriği her zaman metin olarak gelir. Bölme işlemi yapabilmek için bu metnin tam sayıya çevrilmesi gerekir. Convert.ToInt32 dönüşüm yapar; kullanıcı abc gibi geçersiz bir şey girerse FormatException oluşabilir."
-  },
-
-  {
-    q: "txtSayi2.Text değeri 0 ise sayi1 / sayi2 işleminde hangi hata beklenir?",
-    t: "mcq",
-    o: [
-      "FormatException",
-      "NullReferenceException",
-      "IndexOutOfRangeException",
-      "StackOverflowException",
-      "DivideByZeroException"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 12,
-    topic: "DivideByZeroException",
-    importance: 5,
-    explanation: "Bir sayı sıfıra bölünemez. sayi2 değeri 0 olduğunda sayi1 / sayi2 işlemi DivideByZeroException üretir. Bu hata özel olarak yakalanırsa kullanıcıya 'Bir sayı sıfıra bölünemez!' gibi anlaşılır mesaj verilir."
-  },
-
-  {
-    q: "Kullanıcı txtSayi1 alanına abc yazarsa en olası hata hangisidir?",
-    t: "mcq",
-    o: [
-      "FormatException",
-      "DivideByZeroException",
-      "OverflowException",
-      "FileNotFoundException",
-      "ArgumentNullException"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 12,
-    topic: "FormatException",
-    importance: 5,
-    explanation: "abc bir tam sayı biçiminde değildir. Convert.ToInt32 veya int.Parse bu değeri sayıya çeviremez. Bu durumda FormatException oluşur ve kullanıcıya 'Lütfen geçerli bir sayı giriniz!' mesajı göstermek doğru olur."
-  },
-
-  {
-    q: "Windows Forms hata yakalama örneğinde lblSonuc.Text = 'Sonuç: ' + sonuc.ToString(); satırı ne yapar?",
-    t: "mcq",
-    o: [
-      "Sonucu dosyaya kaydeder",
-      "Bölme sonucunu Label üzerinde gösterir",
-      "txtSayi1'i siler",
-      "Programı kapatır",
-      "Sıfıra bölme hatası üretir"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 12,
-    topic: "Label ile Sonuç",
-    importance: 5,
-    explanation: "lblSonuc bir Label'dır. sonuc değişkenindeki bölme sonucu ToString ile metne çevrilir ve Label'ın Text özelliğine atanır. Böylece kullanıcı sonucu form üzerinde görür."
-  },
-
-  {
-    q: "MessageBoxIcon.Error hangi amaçla kullanılır?",
-    t: "mcq",
-    o: [
-      "Başarılı işlem simgesi göstermek için",
-      "Bilgi simgesi göstermek için",
-      "Hata simgesi göstermek için",
-      "Listeye eleman eklemek için",
-      "Sayıları bölmek için"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 12,
-    topic: "MessageBoxIcon",
-    importance: 4,
-    explanation: "MessageBoxIcon.Error, MessageBox penceresinde hata simgesi gösterir. Kullanıcı sıfıra bölme veya beklenmeyen hata yaptığında bu simge daha ciddi bir hata olduğunu belirtmek için kullanılır."
-  },
-
-  {
-    q: "MessageBoxIcon.Warning hangi durumda daha uygundur?",
-    t: "mcq",
-    o: [
-      "Program başarıyla bittiğinde",
-      "Kullanıcı geçersiz veri girdiğinde",
-      "Sonuç doğru hesaplandığında",
-      "Dizi sıralandığında",
-      "Button oluşturulduğunda"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 12,
-    topic: "Uyarı Mesajı",
-    importance: 4,
-    explanation: "Warning, kullanıcıya uyarı vermek için uygundur. PDF örneğinde FormatException için 'Lütfen geçerli bir sayı giriniz!' mesajında MessageBoxIcon.Warning kullanılmıştır. Bu, kullanıcının girişini düzeltmesi gerektiğini anlatır."
-  },
-
-  {
-    q: "catch (Exception ex) bloğu neden kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece sıfıra bölmeyi yakalamak için",
-      "Sadece format hatasını yakalamak için",
-      "Sadece sonucu hesaplamak için",
-      "Sadece Label'a yazı yazmak için",
-      "Özel catch blokları dışında kalan beklenmeyen hataları yakalamak için"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 12,
-    topic: "Genel Exception",
-    importance: 5,
-    explanation: "Exception genel hata sınıfıdır. DivideByZeroException ve FormatException gibi özel hatalar ayrı yakalandıktan sonra, beklenmeyen diğer hataları yakalamak için catch (Exception ex) kullanılır. ex.Message ile hatanın açıklaması alınabilir."
-  },
-
-  {
-    q: "Hata yakalama kodlarında özel catch blokları genel Exception catch bloğundan önce neden yazılır?",
-    t: "mcq",
-    o: [
-      "Özel hataları kendi mesajlarıyla yakalayabilmek için",
-      "Programı yavaşlatmak için",
-      "Label'ı otomatik gizlemek için",
-      "Button Click olayını silmek için",
-      "finally bloğunu iptal etmek için"
-    ],
-    a: 0,
-    difficulty: "hard",
-    week: 12,
-    topic: "Catch Sırası",
-    importance: 5,
-    explanation: "Genel Exception bütün hataları kapsayabilir. Eğer en başa yazılırsa özel hatalar ona takılır ve DivideByZeroException veya FormatException için özel mesaj gösterilemez. Bu yüzden önce özel catch, en sona genel catch yazılır."
-  },
-
-  {
-    q: "btnBol_Click metodu ne zaman çalışır?",
-    t: "mcq",
-    o: [
-      "Form tasarımda açılınca",
-      "Kullanıcı Böl butonuna tıklayınca",
-      "Bilgisayar kapanınca",
-      "TextBox boşken otomatik",
-      "Label görünmez olunca"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 12,
-    topic: "Button Click Olayı",
-    importance: 5,
-    explanation: "btnBol_Click, btnBol adlı butonun Click olay metodudur. Kullanıcı butona tıkladığında bu metot çalışır; sayılar TextBox'lardan alınır, bölme yapılır ve hata varsa catch blokları devreye girer."
-  },
-
-  {
-    q: "Bölme uygulamasında iki adet TextBox kullanılmasının nedeni nedir?",
-    t: "mcq",
-    o: [
-      "Sonucu iki kez göstermek",
-      "İki ayrı Label oluşturmak",
-      "Bölünecek iki sayıyı kullanıcıdan almak",
-      "Hata mesajını renklendirmek",
-      "finally bloğunu çalıştırmak"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 12,
-    topic: "Form Tasarımı",
-    importance: 5,
-    explanation: "Bölme işlemi için iki sayıya ihtiyaç vardır: sayi1 ve sayi2. Bu nedenle formda txtSayi1 ve txtSayi2 olmak üzere iki TextBox bulunur. Kullanıcı bu kutulara değer girer."
-  },
-
-  // =========================================================
-  // ==== YENİ PDFLER – HAFTA 13-14: CONSOLE TRY/CATCH (13) ===
-  // =========================================================
-
-  {
-    q: "Konsol uygulamasında kullanıcı ikinci sayıya 0 girerse hangi mesaj beklenir?",
-    t: "mcq",
-    o: [
-      "Geçersiz giriş!",
-      "İşlem tamamlandı.",
-      "Sonuç: 0",
-      "Sıfıra bölme hatası!",
-      "Program başlamadı."
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 13,
-    topic: "Sıfıra Bölme Hatası",
-    importance: 5,
-    explanation: "İkinci sayı bölen durumundadır. Bölen 0 olduğunda bölme işlemi matematiksel olarak yapılamaz. Bu yüzden program DivideByZeroException yakalamalı ve kullanıcıya 'Sıfıra bölme hatası!' mesajı vermelidir."
-  },
-
-  {
-    q: "Her durumda en son 'Program sona erdi.' mesajının gösterilmesi için hangi blok kullanılmalıdır?",
-    t: "mcq",
-    o: [
-      "try",
-      "catch",
-      "if",
-      "else",
-      "finally"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 13,
-    topic: "finally",
-    importance: 5,
-    explanation: "finally bloğu hata olsa da olmasa da çalışır. Bu nedenle programın sonunda mutlaka gösterilmesi istenen mesajlar finally içine yazılabilir. PDF'deki örnekte 'Program sona erdi.' mesajı bu mantığa uygundur."
-  },
-
-  {
-    q: "Kullanıcıdan alınan metni int'e dönüştürmeye çalışırken abc girilirse hangi hata yakalanmalıdır?",
-    t: "mcq",
-    o: [
-      "FormatException",
-      "DivideByZeroException",
-      "IndexOutOfRangeException",
-      "NullReferenceException",
-      "ArithmeticException"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 14,
-    topic: "FormatException",
-    importance: 5,
-    explanation: "abc sayısal biçimde değildir. int.Parse veya Convert.ToInt32 bu değeri tam sayıya dönüştüremez. Bu durumda FormatException yakalanmalı ve 'Geçersiz giriş! Lütfen bir sayı girin.' mesajı gösterilmelidir."
-  },
-
-  {
-    q: "Convert.ToInt32() veya int.Parse() hangi amaçla kullanılır?",
-    t: "mcq",
-    o: [
-      "Sayıyı metne çevirmek için",
-      "Metinsel girdiyi tam sayıya çevirmek için",
-      "Ekrana resim çizmek için",
-      "Programı kapatmak için",
-      "Diziyi temizlemek için"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 14,
-    topic: "Dönüştürme",
-    importance: 5,
-    explanation: "Kullanıcıdan gelen veri çoğu zaman string biçimindedir. Matematiksel işlem yapabilmek için bu metin int gibi sayısal tipe dönüştürülmelidir. Convert.ToInt32 ve int.Parse bu dönüşüm için kullanılabilir."
-  },
-
-  {
-    q: "Bir sayı girin: 42 girdisi için doğru çıktı mantığı hangisidir?",
-    t: "mcq",
-    o: [
-      "Geçersiz giriş mesajı verilir",
-      "Sıfıra bölme hatası verilir",
-      "Girdiğiniz sayı: 42 ve ardından İşlem tamamlandı gösterilir",
-      "Program sona erdi yazılmaz",
-      "catch bloğu mutlaka çalışır"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 14,
-    topic: "Geçerli Girdi",
-    importance: 5,
-    explanation: "42 geçerli bir tam sayıdır. Dönüştürme başarılı olur, program 'Girdiğiniz sayı: 42' mesajını verir. Hata olmasa bile finally çalışacağı için en son 'İşlem tamamlandı.' mesajı gösterilir."
-  },
-
-  {
-    q: "Bir sayı girin: abc girdisi için doğru çıktı mantığı hangisidir?",
-    t: "mcq",
-    o: [
-      "Girdiğiniz sayı: abc yazılır",
-      "Sonuç: 0 yazılır",
-      "Sıfıra bölme hatası verilir",
-      "Geçersiz giriş mesajı ve ardından İşlem tamamlandı gösterilir",
-      "Program hiçbir şey yazmaz"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 14,
-    topic: "Geçersiz Girdi",
-    importance: 5,
-    explanation: "abc tam sayıya çevrilemez, bu yüzden FormatException oluşur. catch (FormatException) bloğu 'Geçersiz giriş! Lütfen bir sayı girin.' mesajını verir. finally bloğu da her durumda çalışarak 'İşlem tamamlandı.' mesajını gösterir."
-  },
-
-  {
-    q: "try-catch-finally yapısında genel hata mesajında ex.Message kullanımı ne sağlar?",
-    t: "mcq",
-    o: [
-      "Programı hızlandırır",
-      "Label rengini değiştirir",
-      "Diziyi sıralar",
-      "Button'ı gizler",
-      "Yakalanan hatanın açıklamasını kullanıcıya veya geliştiriciye gösterir"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 13,
-    topic: "Exception Mesajı",
-    importance: 5,
-    explanation: "ex.Message, oluşan hataya ait açıklama metnini verir. Genel catch bloğunda 'Bir hata oluştu: ' + ex.Message gibi kullanım, hatanın nedenini daha anlaşılır hale getirir. Bu özellikle beklenmeyen hataları takip etmekte kullanışlıdır."
-  },
-
-  {
-    q: "Sıfıra bölme hatasını özel olarak yakalamak neden önemlidir?",
-    t: "mcq",
-    o: [
-      "Kullanıcıya daha anlaşılır ve özel hata mesajı verebilmek için",
-      "Programın daha çok hata üretmesi için",
-      "TextBox'ı silmek için",
-      "Diziyi ters çevirmek için",
-      "Formun başlığını değiştirmek için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 13,
-    topic: "Özel Hata Yakalama",
-    importance: 5,
-    explanation: "Sıfıra bölme çok özel ve sık karşılaşılan bir hatadır. Genel 'Bir hata oluştu' mesajı yerine 'Sıfıra bölme hatası!' demek kullanıcı için daha açıklayıcıdır. Bu yüzden DivideByZeroException ayrı catch bloğunda yakalanır."
-  },
-
-  {
-    q: "FormatException hangi durumda oluşur?",
-    t: "mcq",
-    o: [
-      "Bir sayı sıfıra bölününce",
-      "Beklenen biçime uymayan veri dönüştürülmeye çalışılınca",
-      "finally bloğu çalışınca",
-      "Label'a sonuç yazılınca",
-      "Button'a tıklanınca"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 14,
-    topic: "FormatException",
-    importance: 5,
-    explanation: "FormatException, veri beklenen biçimde olmadığında oluşur. Örneğin int.Parse('abc') çalıştırılırsa abc sayı olmadığı için dönüşüm yapılamaz. Bu hata, kullanıcı giriş kontrollerinde çok sık karşımıza çıkar."
-  },
-
-  {
-    q: "finally bloğu için aşağıdakilerden hangisi doğrudur?",
-    t: "mcq",
-    o: [
-      "Sadece FormatException olursa çalışır",
-      "Sadece DivideByZeroException olursa çalışır",
-      "Hata olsa da olmasa da çalışır",
-      "Sadece try başarısızsa çalışmaz",
-      "Sadece Button içinde kullanılır"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 13,
-    topic: "finally Mantığı",
-    importance: 5,
-    explanation: "finally bloğunun ana özelliği her durumda çalışmasıdır. Hata oluşursa catch çalışır, sonra finally çalışır. Hata oluşmazsa try tamamlanır, yine finally çalışır. Bu yüzden kapanış mesajları için uygundur."
-  },
-
-  {
-    q: "Bir C# programında kullanıcıdan iki tam sayı alıp bölme işlemi yapılacaksa hangi durum mutlaka kontrol edilmelidir?",
-    t: "mcq",
-    o: [
-      "Label rengi",
-      "Form boyutu",
-      "Button adı",
-      "İkinci sayının sıfır olup olmadığı",
-      "Toolbox konumu"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 13,
-    topic: "Bölme Güvenliği",
-    importance: 5,
-    explanation: "Bölme işleminde ikinci sayı bölen olduğu için sıfır olamaz. Eğer sıfır olursa DivideByZeroException oluşur. Bu yüzden bölme uygulamalarında sıfıra bölme kontrolü finalde çok çıkabilecek bir mantıktır."
-  },
-
-  {
-    q: "try-catch yapısı kullanılmazsa hatalı kullanıcı girişi programda neye yol açabilir?",
-    t: "mcq",
-    o: [
-      "Programın daha güzel görünmesine",
-      "Formun otomatik büyümesine",
-      "Dizinin otomatik dolmasına",
-      "Button'ın otomatik tıklanmasına",
-      "Programın kontrolsüz şekilde hata verip durmasına"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 14,
-    topic: "Hata Yönetimi Önemi",
-    importance: 5,
-    explanation: "Kullanıcı her zaman doğru veri girmeyebilir. try-catch yoksa abc gibi geçersiz giriş veya sıfıra bölme gibi durumlarda program hata verip durabilir. try-catch, bu hataları kontrollü şekilde yönetmek için kullanılır."
-  },
-
-  {
-    q: "Genel catch bloğu hangi durumda devreye girer?",
-    t: "mcq",
-    o: [
-      "Özel catch bloklarının yakalamadığı farklı bir hata oluşursa",
-      "Hiç hata oluşmazsa",
-      "finally çalışmadan önce her zaman",
-      "Sadece kullanıcı doğru sayı girerse",
-      "Program tasarım ekranındayken"
-    ],
-    a: 0,
-    difficulty: "hard",
-    week: 13,
-    topic: "Genel catch",
-    importance: 5,
-    explanation: "catch (Exception ex) genel hata yakalama bloğudur. Özel olarak yakalanmayan beklenmeyen hataları yakalar. Bu blok genellikle en sona yazılır; çünkü Exception en genel hata sınıfıdır."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – TEMEL GÖRSEL PROGRAMLAMA (12) =====
-  // =========================================================
-
-  {
-    q: "Görsel programlama nedir?",
-    t: "mcq",
-    o: [
-      "Sadece komut satırından işlem yapmak",
-      "Grafiksel öğeler ve arayüzler kullanarak program geliştirmek",
-      "Sadece veritabanı sorgusu yazmak",
-      "Sadece donanım tasarlamak",
-      "Sadece dosya sıkıştırmak"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Görsel Programlama Tanımı",
-    importance: 5,
-    explanation: "Görsel programlama, programı yalnızca yazılı komutlarla değil, form, buton, metin kutusu, blok veya grafiksel bileşenlerle geliştirme yaklaşımıdır. Kullanıcı arayüzü daha anlaşılır ve etkileşimli hale gelir."
-  },
-
-  {
-    q: "Visual Studio hangi amaçla kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece resim düzenlemek",
-      "Sadece müzik çalmak",
-      "Yazılım geliştirmek",
-      "Sadece internet hızını ölçmek",
-      "Sadece dosya silmek"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Visual Studio",
-    importance: 5,
-    explanation: "Visual Studio, Microsoft tarafından geliştirilen bir yazılım geliştirme ortamıdır. Windows Forms, konsol uygulaması, web uygulaması gibi farklı proje türlerinde kod yazmayı ve arayüz tasarlamayı sağlar."
-  },
-
-  {
-    q: "Windows Forms'ta pencere yapısına ne ad verilir?",
-    t: "mcq",
-    o: [
-      "Toolbox",
-      "Label",
-      "Button",
-      "Form",
-      "Class Library"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 1,
-    topic: "Form",
-    importance: 5,
-    explanation: "Windows Forms uygulamasında kullanıcıya görünen ana pencere Form olarak adlandırılır. Kontroller bu Form üzerine eklenir. Form, görsel programlamada arayüzün temel taşıdır."
-  },
-
-  {
-    q: "Toolbox'ın görevi nedir?",
-    t: "mcq",
-    o: [
-      "Programı çalıştırmak",
-      "Hataları otomatik düzeltmek",
-      "Kodları silmek",
-      "Veritabanı yedeği almak",
-      "Forma eklenecek hazır kontrol nesnelerini sunmak"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 1,
-    topic: "Toolbox",
-    importance: 5,
-    explanation: "Toolbox, Button, TextBox, Label, ComboBox gibi hazır kontrollerin bulunduğu bölümdür. Programcı bu kontrolleri forma sürükleyip bırakarak arayüz oluşturur."
-  },
-
-  {
-    q: "Label kontrolünün temel görevi nedir?",
-    t: "mcq",
-    o: [
-      "Kullanıcıya bilgi göstermek",
-      "Dosya seçtirmek",
-      "Kullanıcıdan uzun metin almak",
-      "Döngü oluşturmak",
-      "Programı kapatmak"
+      "Yazılımı sınıflar ve nesneler etrafında tasarlama yaklaşımı",
+      "Sadece ekrana yazı yazdırma yöntemi",
+      "Sadece veritabanı sorgusu yazma yöntemi",
+      "Sadece makine dilinde kod yazma yöntemi",
+      "Sadece dosya sıkıştırma tekniği"
     ],
     a: 0,
     difficulty: "easy",
     week: 1,
-    topic: "Label",
+    topic: "OOP Tanımı",
     importance: 5,
-    explanation: "Label, form üzerinde kullanıcıya sabit bilgi veya hesaplama sonucu göstermek için kullanılır. Kullanıcı Label içeriğini doğrudan yazıp değiştirmez; programcı Text özelliğiyle değeri ayarlar."
+    explanation: "OOP, gerçek dünyadaki varlıkları programda nesne ve sınıf olarak modelleme yaklaşımıdır. Örneğin Araba, Öğrenci veya Kitap birer sınıf olarak tasarlanabilir; bu sınıflardan oluşturulan somut örnekler ise nesnedir."
   },
 
   {
-    q: "TextBox kontrolü ne için kullanılır?",
+    q: "OOP'nin temel dört ilkesi hangisidir?",
     t: "mcq",
     o: [
-      "Sadece sonuç göstermek",
-      "Kullanıcıdan veri almak",
-      "Sadece resim göstermek",
-      "Sadece ilerleme çubuğu oluşturmak",
-      "Sadece formu kapatmak"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "TextBox",
-    importance: 5,
-    explanation: "TextBox, kullanıcıdan veri almak için kullanılır. Ad, soyad, şifre, vize notu, final notu gibi değerler TextBox içine yazılır. Program bu değeri TextBox.Text özelliğiyle okur."
-  },
-
-  {
-    q: "Button kontrolünün en sık kullanılan olayı hangisidir?",
-    t: "mcq",
-    o: [
-      "Load",
-      "Visible",
-      "Click",
-      "ForeColor",
-      "Maximum"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Button",
-    importance: 5,
-    explanation: "Button'ın en sık kullanılan olayı Click'tir. Kullanıcı butona tıkladığında Click olayına yazılmış kodlar çalışır. Hesapla, Kaydet, Sil gibi işlemler genellikle Button Click içinde yapılır."
-  },
-
-  {
-    q: "Label1.Text = 'Sonuç'; kodu ne yapar?",
-    t: "mcq",
-    o: [
-      "Label'ı siler",
-      "Label rengini değiştirir",
-      "Programı kapatır",
-      "Label üzerinde Sonuç yazısını gösterir",
-      "Yeni form oluşturur"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 1,
-    topic: "Text Özelliği",
-    importance: 5,
-    explanation: "Text özelliği, kontrol üzerinde görünen yazıyı belirler. Label1.Text = 'Sonuç' ifadesi Label üzerinde Sonuç metninin görünmesini sağlar."
-  },
-
-  {
-    q: "TextBox1.Text = 'Deneme'; ifadesinde çift tırnak neden kullanılır?",
-    t: "mcq",
-    o: [
-      "Sayısal işlem yapılacağını göstermek için",
-      "Button oluşturmak için",
-      "Döngü başlatmak için",
-      "Formu kapatmak için",
-      "Metin/string değer belirtmek için"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 1,
-    topic: "String Kullanımı",
-    importance: 4,
-    explanation: "C# dilinde metinsel değerler çift tırnak içinde yazılır. 'Deneme' bir metindir, yani string değerdir. TextBox'ın Text özelliği de metin tuttuğu için çift tırnak kullanılır."
-  },
-
-  {
-    q: "MessageBox.Show('Merhaba'); komutu ne yapar?",
-    t: "mcq",
-    o: [
-      "Kullanıcıya mesaj kutusu gösterir",
-      "TextBox'ı temizler",
-      "Button'ı gizler",
-      "Dizi oluşturur",
-      "Formu otomatik siler"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "MessageBox",
-    importance: 5,
-    explanation: "MessageBox.Show kullanıcıya küçük bir mesaj penceresi gösterir. Hata, bilgi, uyarı veya işlem sonucu göstermek için kullanılır. Örneğin hatalı girişlerde kullanıcıyı uyarmak için uygundur."
-  },
-
-  {
-    q: "Form üzerine kontrol eklemek için genellikle hangi yöntem kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece bilgisayarı yeniden başlatmak",
-      "Toolbox'tan sürükle-bırak yapmak",
-      "Veritabanı silmek",
-      "Programı kapatmak",
-      "Ekran kartını değiştirmek"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Arayüz Tasarımı",
-    importance: 5,
-    explanation: "Windows Forms'ta arayüz tasarlarken Toolbox açılır, istenen kontrol seçilir ve forma sürüklenip bırakılır. Bu, görsel programlamanın temel pratiklerinden biridir."
-  },
-
-  {
-    q: "Bir görsel program genel olarak hangi iki ana parçadan oluşur?",
-    t: "mcq",
-    o: [
-      "Klavye ve fare",
-      "RAM ve disk",
-      "Arayüz kısmı ve kod kısmı",
-      "Internet ve modem",
-      "Ses ve video"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Program Yapısı",
-    importance: 5,
-    explanation: "Arayüz kısmı kullanıcının gördüğü Form ve kontrollerden oluşur. Kod kısmı ise bu kontrollerin ne yapacağını belirler. Örneğin Button arayüzdür, Button_Click içine yazılan hesaplama kod kısmıdır."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – VERİ TİPLERİ / OPERATÖRLER (10) ===
-  // =========================================================
-
-  {
-    q: "Veri tipi neyi belirler?",
-    t: "mcq",
-    o: [
-      "Formun rengini",
-      "Button'ın konumunu",
-      "Programın klasörünü",
-      "Bir değişkenin tutacağı veri türünü",
-      "MessageBox başlığını"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 2,
-    topic: "Veri Tipleri",
-    importance: 5,
-    explanation: "Veri tipi, bir değişkenin hangi tür değer saklayacağını belirtir. int tam sayı, double ondalıklı sayı, string metin, bool doğru/yanlış değeri tutar. Yanlış veri tipi seçimi hatalara neden olabilir."
-  },
-
-  {
-    q: "Boolean veri tipi hangi değerleri tutar?",
-    t: "mcq",
-    o: [
-      "Sadece metin",
-      "Sadece ondalıklı sayı",
-      "Sadece resim",
-      "Sadece tarih",
-      "True veya False"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 2,
-    topic: "Boolean",
-    importance: 5,
-    explanation: "Boolean mantıksal veri tipidir. Yalnızca true veya false değerlerini tutar. If koşullarında ve seçim kontrollerinde sık kullanılır."
-  },
-
-  {
-    q: "String veri tipi hangi tür veriyi tutar?",
-    t: "mcq",
-    o: [
-      "Metin",
-      "Sadece tam sayı",
-      "Sadece doğru/yanlış",
-      "Sadece görsel",
-      "Sadece döngü"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 2,
-    topic: "String",
-    importance: 5,
-    explanation: "String metin veri tipidir. Kullanıcı adı, soyad, açıklama, adres gibi yazılar string olarak saklanır. Çift tırnak içindeki değerler string kabul edilir."
-  },
-
-  {
-    q: "Integer veri tipi ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Metin tutmak için",
-      "Tam sayı tutmak için",
-      "Resim göstermek için",
-      "Form oluşturmak için",
-      "Dosya seçmek için"
+      "SELECT, INSERT, UPDATE, DELETE",
+      "Kapsülleme, kalıtım, soyutlama, çok biçimlilik",
+      "Form, Button, Label, TextBox",
+      "HTML, CSS, JavaScript, SQL",
+      "Try, Catch, Finally, Throw"
     ],
     a: 1,
     difficulty: "easy",
     week: 2,
-    topic: "Integer",
+    topic: "OOP İlkeleri",
     importance: 5,
-    explanation: "Integer yani int tam sayı tutar. 5, 10, 42 gibi ondalıksız sayılar int olabilir. Vize ve final notları tam sayı alınacaksa int kullanılabilir."
+    explanation: "OOP'nin sınavda en çok sorulan dört ilkesi kapsülleme, kalıtım, soyutlama ve çok biçimliliktir. Bu dört kavram OOP'nin temelini oluşturur."
   },
 
   {
-    q: "Aritmetik operatörlerden hangisi çarpma işlemini yapar?",
+    q: "Sınıf (class) kavramı neyi ifade eder?",
     t: "mcq",
     o: [
-      "+",
-      "-",
-      "*",
-      "==",
-      "&&"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 2,
-    topic: "Aritmetik Operatörler",
-    importance: 5,
-    explanation: "* operatörü çarpma işlemi yapar. Aritmetik operatörler sayısal işlemler içindir: + toplama, - çıkarma, * çarpma, / bölme."
-  },
-
-  {
-    q: "== operatörü ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Değer atamak için",
-      "Metin birleştirmek için",
-      "Döngü başlatmak için",
-      "Eşitlik karşılaştırması yapmak için",
-      "Formu kapatmak için"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "Karşılaştırma Operatörü",
-    importance: 5,
-    explanation: "== iki değerin eşit olup olmadığını kontrol eder. = atama operatörüdür, == karşılaştırma operatörüdür. Bu fark sınavda çok karıştırılır."
-  },
-
-  {
-    q: "&& operatörü hangi mantığı temsil eder?",
-    t: "mcq",
-    o: [
-      "VEYA",
-      "DEĞİL",
-      "Toplama",
-      "Bölme",
-      "VE"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 2,
-    topic: "Mantıksal Operatör",
-    importance: 5,
-    explanation: "&& mantıksal VE anlamına gelir. Sonucun true olması için iki koşulun da doğru olması gerekir. Örneğin not >= 50 && devamsizlik < 5 gibi."
-  },
-
-  {
-    q: "|| operatörü hangi mantığı temsil eder?",
-    t: "mcq",
-    o: [
-      "VEYA",
-      "VE",
-      "Eşittir",
-      "Çarpma",
-      "Bölme"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 2,
-    topic: "OR Operatörü",
-    importance: 5,
-    explanation: "|| mantıksal VEYA anlamına gelir. Koşullardan en az biri doğruysa sonuç true olur. Örneğin kullanıcı admin veya öğretmen ise giriş izni verilebilir."
-  },
-
-  {
-    q: "TextBox'tan alınan sayı ile işlem yapmadan önce ne yapılmalıdır?",
-    t: "mcq",
-    o: [
-      "Form kapatılmalıdır",
-      "TextBox.Text sayısal tipe dönüştürülmelidir",
-      "Button silinmelidir",
-      "Label gizlenmelidir",
-      "Döngü sonsuz yapılmalıdır"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 2,
-    topic: "Tip Dönüşümü",
-    importance: 5,
-    explanation: "TextBox.Text string döndürür. Matematiksel işlem yapmak için int.Parse, Convert.ToInt32 veya double.Parse gibi yöntemlerle sayısal tipe çevrilmelidir. Aksi halde doğru hesaplama yapılamaz."
-  },
-
-  {
-    q: "Liste veya Array yapısı ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Sadece formu renklendirir",
-      "Sadece programı kapatır",
-      "Birden fazla değeri saklar",
-      "Sadece hata mesajı verir",
-      "Sadece Button oluşturur"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 2,
-    topic: "Liste / Array",
-    importance: 5,
-    explanation: "Array veya liste birden fazla veriyi tek yapı altında saklamayı sağlar. Örneğin 5 notu veya 10 sayıyı ayrı ayrı değişkenlerde tutmak yerine dizi içinde tutmak daha düzenlidir."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – GİRİŞ/ÇIKIŞ VE SEÇİM KONTROLLERİ (10)
-  // =========================================================
-
-  {
-    q: "Input yani giriş işlemi ne demektir?",
-    t: "mcq",
-    o: [
-      "Programın kullanıcıya sonuç göstermesi",
-      "Programın kapanması",
-      "Kullanıcıdan programa veri alınması",
-      "Formun silinmesi",
-      "Label renginin değişmesi"
+      "Bellekte oluşturulmuş gerçek nesneyi",
+      "Programın hatasını",
+      "Nesnelerin özellik ve davranışlarını tanımlayan şablonu",
+      "Sadece konsol ekranını",
+      "Sadece veritabanı bağlantısını"
     ],
     a: 2,
     difficulty: "easy",
     week: 3,
-    topic: "Input",
+    topic: "Class",
     importance: 5,
-    explanation: "Input, kullanıcının programa veri vermesidir. Örneğin TextBox'a sayı yazmak, ComboBox'tan şehir seçmek, RadioButton seçmek giriş işlemidir."
+    explanation: "Sınıf, nesnenin planıdır. Örneğin Araba sınıfında marka, model, hız gibi özellikler; Hizlan(), Dur() gibi metotlar bulunabilir. Ancak sınıf tek başına somut nesne değildir."
   },
 
   {
-    q: "Output yani çıkış işlemi ne demektir?",
+    q: "Nesne (object) ne demektir?",
     t: "mcq",
     o: [
-      "Kullanıcıdan veri almak",
-      "Programın kullanıcıya bilgi veya sonuç göstermesi",
-      "Programın dosya yolunu silmesi",
-      "Sadece Button oluşturması",
-      "Veri tipini değiştirmesi"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "Output",
-    importance: 5,
-    explanation: "Output, programın kullanıcıya bilgi sunmasıdır. Label üzerinde sonuç göstermek veya MessageBox ile uyarı vermek çıkış işlemidir."
-  },
-
-  {
-    q: "CheckBox kontrolü ne zaman uygundur?",
-    t: "mcq",
-    o: [
-      "Sadece tek seçenek seçilecekse",
-      "Bir veya birden fazla seçenek işaretlenebilecekse",
-      "Sadece sayı girilecekse",
-      "Sadece sonuç gösterilecekse",
-      "Program kapatılacaksa"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 3,
-    topic: "CheckBox",
-    importance: 5,
-    explanation: "CheckBox, kullanıcının birden fazla seçeneği aynı anda seçebilmesine uygundur. Örneğin ilgi alanları spor, müzik, kitap gibi seçeneklerden birkaçı seçilebilir."
-  },
-
-  {
-    q: "RadioButton kontrolünün temel özelliği nedir?",
-    t: "mcq",
-    o: [
-      "Metin girişi almak",
-      "Sadece resim göstermek",
-      "Bir seçenek grubundan yalnızca birini seçtirmek",
-      "Dizi oluşturmak",
-      "Dosya kaydetmek"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 3,
-    topic: "RadioButton",
-    importance: 5,
-    explanation: "RadioButton, bir grup seçenekten yalnızca birinin seçilmesi gereken durumlarda kullanılır. Örneğin cinsiyet, ödeme yöntemi veya sınıf seçimi gibi tek seçimli alanlarda uygundur."
-  },
-
-  {
-    q: "ComboBox hangi amaçla kullanılır?",
-    t: "mcq",
-    o: [
-      "Hata yakalamak",
-      "Kod derlemek",
-      "Form kapatmak",
-      "Açılır listeden seçim yaptırmak",
-      "MessageBox göstermek"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "ComboBox",
-    importance: 5,
-    explanation: "ComboBox, açılır liste şeklinde seçenek sunar. Kullanıcı listeden bir seçenek seçer. Örneğin ülke, şehir, bölüm veya sınıf seçimi için kullanılabilir."
-  },
-
-  {
-    q: "FileDialog ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Button'a renk vermek",
-      "TextBox'ı silmek",
-      "Döngü oluşturmak",
-      "Label'a sonuç yazmak",
-      "Kullanıcıya dosya seçtirmek veya kaydettirmek"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "FileDialog",
-    importance: 4,
-    explanation: "FileDialog, kullanıcının bilgisayardan dosya seçmesini veya dosya kaydetmesini sağlar. Dosya açma ve kaydetme işlemlerinde kullanılır."
-  },
-
-  {
-    q: "Hatalı girişte kullanıcıya uyarı vermek için en uygun yapı hangisidir?",
-    t: "mcq",
-    o: [
-      "MessageBox.Show",
-      "int[]",
-      "for",
-      "ProgressBar.Maximum",
-      "Toolbox"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "Uyarı Mesajı",
-    importance: 5,
-    explanation: "MessageBox.Show kullanıcıya uyarı, hata veya bilgi mesajı göstermek için kullanılır. Hatalı girişlerde kullanıcıyı bilgilendirmek için çok uygundur."
-  },
-
-  {
-    q: "Kullanıcıdan metin almak için en uygun kontrol hangisidir?",
-    t: "mcq",
-    o: [
-      "Label",
-      "TextBox",
-      "ProgressBar",
-      "PictureBox",
-      "Timer"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "Veri Girişi",
-    importance: 5,
-    explanation: "TextBox kullanıcıdan metin veya sayı girişi almak için kullanılan temel kontroldür. Label bilgi göstermek için kullanılır; TextBox veri almak için kullanılır."
-  },
-
-  {
-    q: "Bir hesaplama sonucunu ekranda kalıcı biçimde göstermek için hangi kontrol uygundur?",
-    t: "mcq",
-    o: [
-      "FileDialog",
-      "Timer",
-      "Label",
-      "RadioButton",
-      "CheckBox"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "Sonuç Gösterme",
-    importance: 5,
-    explanation: "Label hesaplanan sonucu form üzerinde göstermek için uygundur. Örneğin lblSonuc.Text = 'Ortalama: 75' şeklinde sonuç yazdırılabilir."
-  },
-
-  {
-    q: "Kullanıcının sadece bir ödeme yöntemi seçmesi gerekiyorsa hangi kontrol daha uygundur?",
-    t: "mcq",
-    o: [
-      "CheckBox",
-      "TextBox",
-      "ListBox",
-      "RadioButton",
-      "ProgressBar"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "Tek Seçim",
-    importance: 4,
-    explanation: "RadioButton, birden fazla seçenekten yalnızca birini seçtirmek için uygundur. Bir ödeme yöntemi seçilecekse aynı grup içinde RadioButton kullanılabilir."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – KARAR YAPILARI VE BLOK ARAÇLAR (10)
-  // =========================================================
-
-  {
-    q: "If-Else yapısı ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece metin yazmak için",
-      "Sadece dizi oluşturmak için",
-      "Sadece form çizmek için",
-      "Sadece dosya seçmek için",
-      "Koşula göre farklı işlemler yaptırmak için"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 4,
-    topic: "If-Else",
-    importance: 5,
-    explanation: "If-Else karar yapısıdır. Koşul doğruysa if bloğu, yanlışsa else bloğu çalışır. Örneğin ortalama >= 50 ise geçti, değilse kaldı yazdırılır."
-  },
-
-  {
-    q: "if (ortalama >= 50) koşulu neyi kontrol eder?",
-    t: "mcq",
-    o: [
-      "Ortalamanın 50 veya daha büyük olup olmadığını",
-      "Ortalamanın metin olup olmadığını",
-      "Formun açık olup olmadığını",
-      "Button'ın rengini",
-      "Dizinin boş olup olmadığını"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "Koşul Kontrolü",
-    importance: 5,
-    explanation: ">= operatörü büyük eşittir anlamına gelir. Bu koşul, ortalama 50 veya üzerindeyse true olur. Öğrencinin geçip kalma durumunu belirlemek için kullanılır."
-  },
-
-  {
-    q: "Else bloğu ne zaman çalışır?",
-    t: "mcq",
-    o: [
-      "Her zaman",
-      "If koşulu yanlış olduğunda",
-      "Sadece program açılırken",
-      "Sadece dizi doluyken",
-      "Sadece MessageBox kapanınca"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 4,
-    topic: "Else",
-    importance: 5,
-    explanation: "Else bloğu, if koşulu false olduğunda çalışır. Yani koşul sağlanmazsa alternatif işlem yapılır. Geçti/kaldı örneğinde ortalama 50'den küçükse else kısmı çalışabilir."
-  },
-
-  {
-    q: "Görsel programlama araçlarından Scratch'in temel özelliği nedir?",
-    t: "mcq",
-    o: [
-      "Sadece veritabanı yönetmek",
-      "Sadece kodu makine diline çevirmek",
-      "Sürükle-bırak bloklarla programlama yapmak",
-      "Sadece Windows kurmak",
-      "Sadece dosya sıkıştırmak"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 4,
-    topic: "Scratch",
-    importance: 4,
-    explanation: "Scratch, sürükle-bırak bloklarla programlama öğretir. Kod yazmayı yeni öğrenenler için algoritma mantığını görsel hale getirir."
-  },
-
-  {
-    q: "Blockly nasıl bir araçtır?",
-    t: "mcq",
-    o: [
-      "Sadece resim editörü",
-      "Sadece işletim sistemi",
-      "Sadece klavye uygulaması",
-      "Blokları birleştirerek program yazmayı sağlayan araç",
-      "Sadece veritabanı sunucusu"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
-    topic: "Blockly",
-    importance: 4,
-    explanation: "Blockly, blok tabanlı açık kaynaklı bir görsel programlama aracıdır. Kullanıcı blokları birleştirerek program akışı oluşturur. Kod yazmayı kolaylaştırır."
-  },
-
-  {
-    q: "App Inventor hangi tür uygulamalar için kullanılır?",
-    t: "mcq",
-    o: [
-      "Sadece masaüstü BIOS ayarı",
-      "Sadece SQL sorgusu",
-      "Sadece ses düzenleme",
-      "Sadece ekran kartı testi",
-      "Mobil uygulama geliştirme"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 4,
-    topic: "App Inventor",
-    importance: 4,
-    explanation: "App Inventor, blok tabanlı olarak mobil uygulama geliştirmeyi sağlayan bir araçtır. Özellikle yeni başlayanlar için mobil programlama mantığını görsel hale getirir."
-  },
-
-  {
-    q: "Değişkenler ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Değerleri saklamak için",
-      "Sadece programı silmek için",
-      "Sadece form rengini değiştirmek için",
-      "Sadece dosya seçmek için",
-      "Sadece MessageBox başlığı yapmak için"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "Değişken",
-    importance: 5,
-    explanation: "Değişken, program içinde bir değeri saklamak için kullanılır. Örneğin vize, final, ortalama gibi değerler değişkenlerde tutulabilir."
-  },
-
-  {
-    q: "Görsel programlamada 'bağlantı kurma' neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Sadece internet bağlanmasını",
-      "Blokların program akışına göre birbirine bağlanmasını",
-      "Formun kapatılmasını",
-      "Dizinin silinmesini",
-      "Label'ın kırmızı yapılmasını"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 4,
-    topic: "Program Akışı",
-    importance: 4,
-    explanation: "Görsel programlamada bloklar doğru sırayla birbirine bağlanır. Bu bağlantılar programın hangi adımda ne yapacağını belirler. Yani program akışı oluşturulur."
-  },
-
-  {
-    q: "Koşul ifadeleri programda ne sağlar?",
-    t: "mcq",
-    o: [
-      "Programın hiç karar vermemesini",
-      "Sadece tüm işlemlerin tekrar etmesini",
-      "Belirli koşullara göre işlem seçmeyi",
-      "Sadece arka plan resmi eklemeyi",
-      "Sadece programı derlemeyi"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "Conditionals",
-    importance: 5,
-    explanation: "Koşul ifadeleri belirli bir durum doğruysa bir işlemi, yanlışsa başka bir işlemi yaptırır. If-Else bunun en temel örneğidir."
-  },
-
-  {
-    q: "Atama blokları veya atama işlemleri ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Formu kapatmak için",
-      "Button'a tıklamak için",
-      "Döngüyü tamamen yasaklamak için",
-      "Bir değişkene değer vermek veya değerini değiştirmek için",
-      "MessageBox simgesini değiştirmek için"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
-    topic: "Atama",
-    importance: 5,
-    explanation: "Atama işlemi bir değişkene değer vermektir. Örneğin ortalama = 70; ifadesi ortalama değişkenine 70 değerini atar. Program içinde veriler bu şekilde güncellenir."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – DÖNGÜLER (10) =====================
-  // =========================================================
-
-  {
-    q: "Döngü nedir?",
-    t: "mcq",
-    o: [
-      "Sadece mesaj kutusu",
+      "Sadece kod satırı",
+      "Sadece metot adı",
       "Sadece veri tipi",
-      "Sadece arayüz rengi",
-      "Sadece kullanıcı girişi",
-      "Bir kod bloğunu belirli şart veya sayı boyunca tekrar çalıştıran yapı"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 6,
-    topic: "Döngü Tanımı",
-    importance: 5,
-    explanation: "Döngüler tekrar eden işlemleri kolaylaştırır. Aynı kodu birçok kez yazmak yerine for, while veya do-while ile tekrar ettirilir. Bu hem kodu kısaltır hem de daha düzenli hale getirir."
-  },
-
-  {
-    q: "For döngüsü hangi durumda daha uygundur?",
-    t: "mcq",
-    o: [
-      "Tekrar sayısı belli olduğunda",
-      "Hata yakalamak gerektiğinde",
-      "Dosya seçmek gerektiğinde",
-      "Sadece Label göstermek gerektiğinde",
-      "Program kapatılacağında"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "For Döngüsü",
-    importance: 5,
-    explanation: "For döngüsü, tekrar sayısı baştan biliniyorsa uygundur. Örneğin 1'den 10'a kadar yazdırmak veya 5 sayı üzerinde işlem yapmak için for kullanılabilir."
-  },
-
-  {
-    q: "While döngüsü hangi mantıkla çalışır?",
-    t: "mcq",
-    o: [
-      "Hiç koşul kontrol etmez",
-      "Şart doğru olduğu sürece çalışır",
-      "Sadece bir kez çalışır",
-      "Sadece form tasarlar",
-      "Sadece hata yakalar"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 6,
-    topic: "While Döngüsü",
-    importance: 5,
-    explanation: "While döngüsü önce koşulu kontrol eder. Koşul true olduğu sürece döngü bloğu çalışmaya devam eder. Koşul false olduğunda döngü biter."
-  },
-
-  {
-    q: "Do-While döngüsünün ayırt edici özelliği nedir?",
-    t: "mcq",
-    o: [
-      "Hiç çalışmaması",
-      "Sadece hata vermesi",
-      "En az bir kez çalışması",
-      "Sadece Label oluşturması",
-      "Sadece dosya açması"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 6,
-    topic: "Do-While",
-    importance: 5,
-    explanation: "Do-While döngüsünde kod bloğu önce çalışır, koşul sonra kontrol edilir. Bu yüzden koşul yanlış olsa bile döngü en az bir kez çalışır."
-  },
-
-  {
-    q: "while(true) yapısında çıkış şartı yazılmazsa ne olur?",
-    t: "mcq",
-    o: [
-      "Program otomatik kapanır",
-      "Dizi otomatik dolar",
-      "Button otomatik silinir",
-      "Sonsuz döngü oluşabilir",
-      "Label otomatik temizlenir"
+      "Sınıftan oluşturulan somut örnek",
+      "Sadece hata mesajı"
     ],
     a: 3,
-    difficulty: "medium",
-    week: 6,
-    topic: "Sonsuz Döngü",
+    difficulty: "easy",
+    week: 3,
+    topic: "Object",
     importance: 5,
-    explanation: "while(true) koşulu her zaman doğru olduğu için döngü kendiliğinden bitmez. İçeride break veya başka çıkış şartı yoksa sonsuz döngü oluşur ve program donabilir."
+    explanation: "Nesne, sınıftan üretilen gerçek örnektir. Araba sınıfı bir şablonsa, Toyota Corolla veya BMW gibi belirli özelliklere sahip örnekler nesnedir."
   },
 
   {
-    q: "for (int i = 0; i < 10; i++) döngüsünde i++ ne yapar?",
+    q: "Bir sınıfta davranışları temsil eden yapılar ne olarak adlandırılır?",
     t: "mcq",
     o: [
-      "i değerini sıfırlar",
-      "Döngüyü siler",
-      "Formu kapatır",
-      "TextBox'a yazı yazar",
-      "Her turdan sonra i değerini 1 artırır"
+      "Field",
+      "Namespace",
+      "Constructor",
+      "Property",
+      "Method"
     ],
     a: 4,
-    difficulty: "medium",
-    week: 6,
-    topic: "Sayaç Artışı",
+    difficulty: "easy",
+    week: 3,
+    topic: "Method",
     importance: 5,
-    explanation: "i++ sayaç değişkenini her turdan sonra 1 artırır. Böylece i değeri 0,1,2... şeklinde ilerler. i < 10 koşulu false olduğunda döngü biter."
+    explanation: "Metotlar, nesnenin yapabileceği işlemleri temsil eder. Örneğin Araba sınıfında Hizlan(), FrenYap(), Dur() gibi işlemler metottur."
   },
 
   {
-    q: "ListBox'a 1'den 10'a kadar eleman eklemek için en uygun yapı hangisidir?",
+    q: "Bir sınıfta nesnenin verilerini tutan yapılar genel olarak neyi temsil eder?",
     t: "mcq",
     o: [
-      "for döngüsü",
-      "Sadece if",
-      "Sadece MessageBox",
-      "Sadece FileDialog",
-      "Sadece Label"
+      "Özellikleri / alanları",
+      "Sadece program hatalarını",
+      "Sadece döngüleri",
+      "Sadece namespace'i",
+      "Sadece yorum satırlarını"
     ],
     a: 0,
     difficulty: "easy",
-    week: 6,
-    topic: "ListBox Döngü",
+    week: 3,
+    topic: "Attributes",
     importance: 5,
-    explanation: "1'den 10'a kadar tekrar sayısı belli olduğu için for döngüsü uygundur. Her turda listBox1.Items.Add(...) ile listeye yeni eleman eklenebilir."
+    explanation: "Özellikler veya alanlar, nesnenin sahip olduğu verileri tutar. Örneğin Öğrenci sınıfında ad, yaş, notOrtalaması gibi alanlar nesnenin özellikleridir."
   },
 
   {
-    q: "ProgressBar.Value neyi temsil eder?",
+    q: "C# dilinde sınıftan nesne oluştururken genellikle hangi anahtar kelime kullanılır?",
     t: "mcq",
     o: [
-      "TextBox içeriğini",
-      "ProgressBar'ın mevcut ilerleme değerini",
-      "Button adını",
-      "Form başlığını",
-      "Döngü türünü"
+      "delete",
+      "new",
+      "void",
+      "base",
+      "static"
     ],
     a: 1,
-    difficulty: "medium",
-    week: 6,
-    topic: "ProgressBar",
-    importance: 4,
-    explanation: "ProgressBar.Value ilerlemenin mevcut seviyesini temsil eder. Maximum ise ulaşılabilecek en yüksek değerdir. Value artırıldıkça ilerleme çubuğu dolar."
+    difficulty: "easy",
+    week: 3,
+    topic: "Nesne Oluşturma",
+    importance: 5,
+    explanation: "new anahtar kelimesi sınıftan nesne oluşturmak için kullanılır. Örneğin Araba a = new Araba(); ifadesinde Araba sınıfından a nesnesi oluşturulur."
   },
 
   {
-    q: "Thread.Sleep(100) genel olarak ne yapar?",
+    q: "Aşağıdakilerden hangisi sınıf–nesne ilişkisini en doğru anlatır?",
     t: "mcq",
     o: [
-      "Programı derler",
-      "Diziyi sıralar",
-      "Çalışan işlemi kısa süre bekletir",
-      "TextBox'ı siler",
-      "MessageBox başlığını değiştirir"
+      "Nesne plan, sınıf gerçek örnektir",
+      "Sınıf ve nesne aynı şeydir",
+      "Sınıf plan, nesne bu plandan üretilen örnektir",
+      "Sınıf sadece hata yakalamadır",
+      "Nesne sadece veritabanıdır"
     ],
     a: 2,
     difficulty: "medium",
-    week: 6,
-    topic: "Thread.Sleep",
+    week: 3,
+    topic: "Class vs Object",
+    importance: 5,
+    explanation: "Sınıf, nesneleri üretmek için kullanılan şablondur. Nesne ise bu şablondan oluşturulan somut örnektir. Sınavda 'şablon' kelimesi çoğunlukla class cevabını gösterir."
+  },
+
+  {
+    q: "C# dilinde sınıf tanımlamak için hangi anahtar kelime kullanılır?",
+    t: "mcq",
+    o: [
+      "object",
+      "method",
+      "new",
+      "class",
+      "return"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 3,
+    topic: "Class Keyword",
+    importance: 5,
+    explanation: "C# dilinde sınıf tanımlamak için class anahtar kelimesi kullanılır. Örneğin class Araba { } ifadesi Araba adında bir sınıf tanımlar."
+  },
+
+  {
+    q: "OOP'nin büyük projelerde tercih edilmesinin en önemli nedenlerinden biri hangisidir?",
+    t: "mcq",
+    o: [
+      "Kodun tamamen rastgele yazılmasını sağlaması",
+      "Sadece makine dili kullanması",
+      "Kodun bakımını zorlaştırması",
+      "Her şeyi tek fonksiyona toplaması",
+      "Modülerlik ve bakım kolaylığı sağlaması"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 1,
+    topic: "OOP Avantajları",
+    importance: 5,
+    explanation: "OOP, büyük yazılımları küçük ve anlamlı parçalara böler. Her sınıf kendi görevinden sorumlu olur. Bu da bakım, geliştirme ve ekip çalışmasını kolaylaştırır."
+  },
+
+  {
+    q: "Programlama dili ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Bilgisayara ne yapılacağını anlatmayı sağlar",
+      "Sadece ekrana resim koyar",
+      "Sadece bilgisayarı kapatır",
+      "Sadece donanımı temizler",
+      "Sadece dosya adını değiştirir"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Programlama Dili",
+    importance: 4,
+    explanation: "Programlama dili, geliştiricinin bilgisayara hangi verilerle hangi işlemleri yapacağını anlatmasını sağlar. Algoritma programlama diliyle bilgisayara aktarılır."
+  },
+
+  {
+    q: "Makine dili hangi özelliklerle tanımlanır?",
+    t: "mcq",
+    o: [
+      "İnsan diline çok yakın olması",
+      "0 ve 1'lerden oluşan en düşük seviyeli dil olması",
+      "Sadece görsel tasarım dili olması",
+      "Sadece sınıf oluşturması",
+      "Sadece web sayfası yazması"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 1,
+    topic: "Makine Dili",
     importance: 3,
-    explanation: "Thread.Sleep(100), çalışan iş parçacığını 100 milisaniye bekletir. ProgressBar örneğinde ilerlemenin gözle görülmesi için kullanılabilir. Ancak yanlış kullanılırsa arayüz geçici olarak donabilir."
+    explanation: "Makine dili işlemcinin doğrudan anlayabildiği 0 ve 1 tabanlı dildir. İnsanlar için okunması zordur ama donanıma en yakın seviyededir."
   },
 
   {
-    q: "Döngülerin programlamadaki en önemli faydası nedir?",
+    q: "Nesne yönelimli dillere hangisi örnek verilebilir?",
     t: "mcq",
     o: [
-      "Programı bozması",
-      "Kod tekrarını artırması",
-      "Hata yakalamayı engellemesi",
-      "Tekrar eden işleri kısa ve düzenli yazmayı sağlaması",
-      "Her zaman sonsuz çalışması"
+      "HTML",
+      "CSS",
+      "C#",
+      "SQL SELECT",
+      "TXT"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "OOP Dilleri",
+    importance: 4,
+    explanation: "C#, Java ve C++ nesne yönelimli programlamayı destekleyen dillerdendir. Bu dillerde sınıf, nesne, kalıtım ve çok biçimlilik gibi yapılar kullanılabilir."
+  },
+
+  {
+    q: "Bir program geliştirme sürecinde analiz aşamasının temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Programı rastgele yazmak",
+      "Sadece kodu silmek",
+      "Sadece ekran rengini seçmek",
+      "Problemi ve ihtiyaçları anlamak",
+      "Sadece exe dosyası oluşturmak"
     ],
     a: 3,
+    difficulty: "medium",
+    week: 1,
+    topic: "Program Geliştirme",
+    importance: 3,
+    explanation: "Analiz aşamasında problem anlaşılır, kullanıcının ihtiyacı belirlenir. Kodlama bundan sonra gelir. İyi analiz yapılmazsa doğru program yazmak zorlaşır."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi programlama dillerinin genel ilkelerinden biridir?",
+    t: "mcq",
+    o: [
+      "Rastgelelik",
+      "Gereksiz karmaşıklık",
+      "Kod tekrarını artırma",
+      "Veriyi bozma",
+      "Soyutlama"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 1,
+    topic: "Programlama İlkeleri",
+    importance: 4,
+    explanation: "Soyutlama, gereksiz ayrıntıları gizleyip gerekli bilgileri öne çıkarma ilkesidir. OOP'nin de temel ilkelerinden biridir."
+  },
+
+  {
+    q: "OOP'de gerçek dünya nesnelerini modellemek ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Gerçek varlıkları sınıf ve nesne yapılarıyla temsil etmek",
+      "Sadece metin dosyası oluşturmak",
+      "Sadece bilgisayarı kapatmak",
+      "Sadece veri silmek",
+      "Sadece grafik çizmek"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Modelleme",
+    importance: 5,
+    explanation: "OOP'de gerçek dünyadaki araba, insan, öğrenci, kitap gibi varlıklar sınıflarla modellenir. Bu sınıflardan oluşturulan nesneler program içinde kullanılır."
+  },
+
+  {
+    q: "OOP'de veri ve davranışların bir arada tutulması hangi yaklaşımı anlatır?",
+    t: "mcq",
+    o: [
+      "Sadece SQL",
+      "Nesne yaklaşımı",
+      "Makine dili",
+      "Dosya sıkıştırma",
+      "Konsol temizleme"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "Data + Behavior",
+    importance: 5,
+    explanation: "OOP'de veri ve davranış birlikte düşünülür. Örneğin Araba sınıfında hem marka/hız gibi veriler hem de Hizlan() gibi davranışlar bulunur."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi OOP'nin bakım kolaylığı sağlamasına örnektir?",
+    t: "mcq",
+    o: [
+      "Tüm kodu tek satıra yazmak",
+      "Tüm sınıfları silmek",
+      "Değişikliğin sadece ilgili sınıfta yapılabilmesi",
+      "Verileri rastgele dağıtmak",
+      "Her metodu aynı işi yapacak şekilde yazmak"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 3,
+    topic: "Bakım Kolaylığı",
+    importance: 5,
+    explanation: "OOP'de görevler sınıflara bölündüğü için değişiklik çoğunlukla ilgili sınıfta yapılır. Bu, büyük projelerde hata riskini ve bakım maliyetini azaltır."
+  },
+
+  {
+    q: "Bir sınıftan birden fazla nesne oluşturulabilmesi neyi gösterir?",
+    t: "mcq",
+    o: [
+      "Sınıfın sadece bir kez kullanılabileceğini",
+      "Nesnenin sınıftan bağımsız olduğunu",
+      "Metotların çalışmayacağını",
+      "Sınıfın şablon gibi tekrar kullanılabildiğini",
+      "Programın çalışmayacağını"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 3,
+    topic: "Nesne Üretimi",
+    importance: 5,
+    explanation: "Bir sınıf plan gibi olduğu için aynı plandan çok sayıda nesne oluşturulabilir. Her nesne aynı özelliklere sahip olur ama değerleri farklı olabilir."
+  },
+
+  {
+    q: "Araba sınıfında Marka, Model, Hiz alanları; Hizlan() metodu varsa en doğru yorum hangisidir?",
+    t: "mcq",
+    o: [
+      "Marka ve Model metottur, Hizlan alanıdır",
+      "Sınıf kullanılamaz",
+      "Hizlan bir veritabanıdır",
+      "Marka sadece constructor'dır",
+      "Marka/Model/Hiz özellik, Hizlan davranıştır"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 3,
+    topic: "Özellik ve Metot",
+    importance: 5,
+    explanation: "Sınıfta veriyi tutan yapılar özellik/alan, işlem yapan yapılar metottur. Marka, Model, Hiz veri; Hizlan() ise davranıştır."
+  },
+
+  // =========================================================
+  // ==== 2. BÖLÜM – KAPSÜLLEME, SOYUTLAMA, ERİŞİM (21-40) ====
+  // =========================================================
+
+  {
+    q: "Kapsülleme (encapsulation) en doğru şekilde neyi sağlar?",
+    t: "mcq",
+    o: [
+      "Veriyi sınıf içinde koruyup kontrollü erişim sağlamayı",
+      "Tüm verileri public yapmayı",
+      "Sınıfları tamamen silmeyi",
+      "Kalıtımı yasaklamayı",
+      "Metotların çalışmasını engellemeyi"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Encapsulation",
+    importance: 5,
+    explanation: "Kapsülleme, sınıfın iç verilerini dışarıdan doğrudan erişime kapatıp metot veya property aracılığıyla kontrollü erişim sağlar. Bu, veri güvenliği için önemlidir."
+  },
+
+  {
+    q: "private erişim belirleyicisi ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Her yerden erişilebilir",
+      "Sadece tanımlandığı sınıf içinden erişilebilir",
+      "Sadece alt sınıflardan erişilebilir",
+      "Sadece namespace dışından erişilebilir",
+      "Her zaman static olur"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Private",
+    importance: 5,
+    explanation: "private üyeye yalnızca tanımlandığı sınıf içinden erişilebilir. Kapsülleme yaparken alanlar genellikle private yapılır."
+  },
+
+  {
+    q: "public erişim belirleyicisi için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece aynı metot içinde erişilir",
+      "Sadece constructor içinde çalışır",
+      "Her yerden erişilebilir",
+      "Sadece yıkıcı fonksiyonda kullanılır",
+      "Sadece abstract sınıfta geçerlidir"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 5,
+    topic: "Public",
+    importance: 5,
+    explanation: "public üyeler sınıf dışından da erişilebilir. Ancak her şeyi public yapmak kapsülleme açısından doğru değildir; kritik veriler kontrollü açılmalıdır."
+  },
+
+  {
+    q: "protected erişim belirleyicisi en çok hangi durumda kullanılır?",
+    t: "mcq",
+    o: [
+      "Her yerden tamamen serbest erişim için",
+      "Sadece veritabanı silmek için",
+      "Sadece private alan oluşturmak için",
+      "Sınıf içinden ve alt sınıflardan erişim için",
+      "Metodu overload etmek için"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 5,
+    topic: "Protected",
+    importance: 5,
+    explanation: "protected üye sınıfın kendi içinde ve o sınıftan türeyen alt sınıflar içinde kullanılabilir. Kalıtım konularında sık sorulur."
+  },
+
+  {
+    q: "Kapsülleme için en uygun örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "Tüm alanları public yapmak",
+      "Veriyi doğrudan dışarı açmak",
+      "Metotları hiç kullanmamak",
+      "Sınıfı hiç oluşturmamak",
+      "private alanı public metot/property ile kontrollü kullanmak"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 4,
+    topic: "Kapsülleme Örneği",
+    importance: 5,
+    explanation: "Kapsülleme mantığında veri doğrudan dışarı açılmaz. Örneğin private int yas; alanına negatif değer girilmesini engellemek için SetYas veya property içinde kontrol yapılır."
+  },
+
+  {
+    q: "Soyutlama (abstraction) en kısa tanımıyla nedir?",
+    t: "mcq",
+    o: [
+      "Gereksiz ayrıntıları gizleyip gerekli bilgileri sunmak",
+      "Tüm metotları silmek",
+      "Tüm alanları public yapmak",
+      "Sınıftan nesne üretmeyi engellemek",
+      "Programı makine diline çevirmek"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Abstraction",
+    importance: 5,
+    explanation: "Soyutlama, karmaşık yapının sadece gerekli kısmını kullanıcıya göstermektir. Örneğin araba kullanırken motorun tüm iç detaylarını bilmeden gaz/fren kullanırız."
+  },
+
+  {
+    q: "Veri soyutlamasına en uygun örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "Yaş alanına -10 değerini doğrudan vermek",
+      "Yaş değerini property/metot ile kontrol ederek atamak",
+      "Tüm sınıfları kaldırmak",
+      "Metotları hiç çağırmamak",
+      "Constructor yazmamak"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 1,
+    topic: "Veri Soyutlama",
+    importance: 5,
+    explanation: "Veri soyutlaması, verinin doğru ve kontrollü kullanılmasını sağlar. Yaş alanına negatif değer atanmasını engellemek bunun tipik örneğidir."
+  },
+
+  {
+    q: "Kontrol soyutlaması hangi yapılarla ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Sadece veritabanı tabloları",
+      "Sadece dosya isimleri",
+      "Fonksiyon, metot veya alt programlar",
+      "Sadece renk seçimi",
+      "Sadece namespace"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 1,
+    topic: "Kontrol Soyutlama",
+    importance: 4,
+    explanation: "Kontrol soyutlaması, belirli işlemleri fonksiyon veya metot gibi yapılarla düzenlemektir. Yaş kontrolünü ayrı metotta yapmak buna örnektir."
+  },
+
+  {
+    q: "Bir sınıfın iç verilerini gizlemesi ve sadece belirli metotlarla eriştirmesi hangi OOP ilkesidir?",
+    t: "mcq",
+    o: [
+      "Kalıtım",
+      "Çok biçimlilik",
+      "Overloading",
+      "Kapsülleme",
+      "Yıkıcı fonksiyon"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 2,
+    topic: "Encapsulation",
+    importance: 5,
+    explanation: "Veriyi gizleme ve kontrollü erişim kapsüllemedir. Özellikle private alan + public property/metot yapısı sınavda sık sorulur."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi kapsüllemenin avantajıdır?",
+    t: "mcq",
+    o: [
+      "Veri güvenliğini azaltır",
+      "Yanlış veri girişini kolaylaştırır",
+      "Kod tekrarını artırır",
+      "Sınıf kullanımını yasaklar",
+      "Veriye kontrollü erişim sağlar"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 4,
+    topic: "Kapsülleme Avantajı",
+    importance: 5,
+    explanation: "Kapsülleme sayesinde sınıf içindeki veri rastgele değiştirilemez. Programcı verinin nasıl okunup yazılacağını kontrol eder."
+  },
+
+  {
+    q: "Property kullanımının temel amacı nedir?",
+    t: "mcq",
+    o: [
+      "Alanlara kontrollü okuma/yazma sağlamak",
+      "Programı kapatmak",
+      "Tüm metotları silmek",
+      "Sınıfı abstract yapmak",
+      "Sadece namespace değiştirmek"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "Property",
+    importance: 5,
+    explanation: "Property, private alanlara kontrollü erişim için kullanılır. get ile okuma, set ile yazma yapılır ve gerekirse set içinde kontrol eklenir."
+  },
+
+  {
+    q: "Aşağıdaki alan tanımı kapsülleme açısından neden uygundur? private string kartNumarasi;",
+    t: "mcq",
+    o: [
+      "Çünkü dışarıdan doğrudan değiştirilemez",
+      "Çünkü herkes erişebilir",
+      "Çünkü metot değildir",
+      "Çünkü sınıfı yok eder",
+      "Çünkü constructor'dır"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Private Field",
+    importance: 5,
+    explanation: "private alan dışarıdan doğrudan erişilemez. Kart numarası gibi hassas veriler bu şekilde korunmalı ve kontrollü metotlarla kullanılmalıdır."
+  },
+
+  {
+    q: "Kapsülleme ihlaline en uygun örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "private alan kullanmak",
+      "Property içinde kontrol yapmak",
+      "Hassas alanları public yapıp doğrudan değiştirmek",
+      "Metotla erişim sağlamak",
+      "Veri doğrulaması yapmak"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Kapsülleme İhlali",
+    importance: 5,
+    explanation: "Hassas verileri public yapmak, dışarıdan kontrolsüz değişiklik yapılmasına neden olur. Bu kapsülleme mantığına aykırıdır."
+  },
+
+  {
+    q: "Bir sınıfta sadece gerekli metotların kullanıcıya sunulması, detayların gizlenmesi hangi ilkeyle ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Overload",
+      "Constructor",
+      "Destructor",
+      "Soyutlama",
+      "Boxing"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 2,
+    topic: "Soyutlama",
+    importance: 5,
+    explanation: "Soyutlama, kullanıcının gereksiz iç detaylarla uğraşmadan gerekli işlevleri kullanmasını sağlar. Bu, karmaşıklığı azaltır."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi erişim belirleyicidir?",
+    t: "mcq",
+    o: [
+      "Console",
+      "WriteLine",
+      "return",
+      "foreach",
+      "public"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 5,
+    topic: "Access Modifier",
+    importance: 5,
+    explanation: "public, private ve protected erişim belirleyicilerdir. Üyelere nereden erişileceğini belirlerler."
+  },
+
+  {
+    q: "Bir sınıfta alanların private, metotların public yapılması genelde hangi amaca hizmet eder?",
+    t: "mcq",
+    o: [
+      "Veriyi koruyup davranışları dışarı açmaya",
+      "Programı bozarak test etmeye",
+      "Sınıfı kullanılamaz yapmaya",
+      "Metotları gizlemeye",
+      "Kalıtımı tamamen engellemeye"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "OOP Tasarımı",
+    importance: 5,
+    explanation: "Bu yaklaşım OOP tasarımında yaygındır. Veri doğrudan korunur, kullanıcı ise sınıfın sunduğu metotlarla güvenli işlem yapar."
+  },
+
+  {
+    q: "Soyut sınıfın doğrudan nesnesi neden oluşturulamaz?",
+    t: "mcq",
+    o: [
+      "Çünkü her zaman static olmak zorundadır",
+      "Çünkü eksik/genel davranışları temsil eder ve alt sınıflar tarafından tamamlanmalıdır",
+      "Çünkü public alan içeremez",
+      "Çünkü metot içeremez",
+      "Çünkü sadece veritabanıdır"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "Abstract Class",
+    importance: 5,
+    explanation: "Abstract sınıf genel bir taslaktır. İçinde alt sınıfların tamamlaması gereken soyut metotlar olabilir; bu yüzden doğrudan new ile nesne oluşturulamaz."
+  },
+
+  {
+    q: "Interface hangi görevi üstlenir?",
+    t: "mcq",
+    o: [
+      "Sadece veri saklar",
+      "Sadece nesneyi yok eder",
+      "Bir sınıfın uygulaması gereken metotları tanımlar",
+      "Constructor'ın yerine geçer",
+      "Sadece private alan üretir"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 3,
+    topic: "Interface",
+    importance: 5,
+    explanation: "Interface, sınıfa 'şu metotları uygulamak zorundasın' diyen bir sözleşme gibidir. Metotların nasıl yapılacağını değil, hangi metotların olması gerektiğini belirtir."
+  },
+
+  {
+    q: "Interface içinde tanımlanan metot için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Mutlaka gövdesi olmak zorundadır",
+      "Sadece private olabilir",
+      "Hiçbir sınıf tarafından uygulanamaz",
+      "Sınıf tarafından uygulanması gereken imzayı belirtir",
+      "Sadece constructor olabilir"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 3,
+    topic: "Interface Method",
+    importance: 5,
+    explanation: "Interface metotları genellikle sadece imza olarak tanımlanır. Bu interface'i kullanan sınıf, metodu kendi içinde yazar."
+  },
+
+  {
+    q: "Soyutlama ile kapsülleme arasındaki fark için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "İkisi tamamen aynıdır",
+      "Soyutlama sadece veritabanıdır",
+      "Kapsülleme sadece inheritance demektir",
+      "Soyutlama gereksiz detayı gizler; kapsülleme veriye erişimi kontrol eder",
+      "İkisi de OOP dışı kavramdır"
+    ],
+    a: 4,
+    difficulty: "hard",
+    week: 4,
+    topic: "Abstraction vs Encapsulation",
+    importance: 5,
+    explanation: "Soyutlama kullanıcıya gerekli kısmı gösterir, kapsülleme verinin dışarıdan kontrolsüz değişmesini engeller. İkisi benzer görünse de amaçları farklıdır."
+  },
+
+  // =========================================================
+  // ==== 3. BÖLÜM – KALITIM / MİRAS ALMA (41-55) =============
+  // =========================================================
+
+  {
+    q: "Kalıtım (inheritance) nedir?",
+    t: "mcq",
+    o: [
+      "Bir sınıfın başka bir sınıftan özellik ve metot devralması",
+      "Bir metodu aynı sınıfta tekrar yazmak",
+      "Nesneyi bellekten silmek",
+      "Veritabanı oluşturmak",
+      "Sadece hata yakalamak"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "Inheritance",
+    importance: 5,
+    explanation: "Kalıtım, alt sınıfın üst sınıftaki özellik ve metotları kullanabilmesidir. Örneğin Kedi sınıfı Hayvan sınıfından türeyebilir."
+  },
+
+  {
+    q: "Base class ne demektir?",
+    t: "mcq",
+    o: [
+      "Alt sınıf",
+      "Kendisinden başka sınıf türetilen üst sınıf",
+      "Yıkıcı fonksiyon",
+      "Interface metodu",
+      "Nesne dizisi"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "Base Class",
+    importance: 5,
+    explanation: "Base class, kendisinden alt sınıflar üretilen üst sınıftır. Parent class veya super class olarak da adlandırılır."
+  },
+
+  {
+    q: "Derived class ne demektir?",
+    t: "mcq",
+    o: [
+      "Sadece constructor",
+      "Sadece private field",
+      "Başka bir sınıftan türeyen alt sınıf",
+      "Veritabanı tablosu",
+      "Dönüş tipi"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 5,
+    topic: "Derived Class",
+    importance: 5,
+    explanation: "Derived class, bir üst sınıftan türetilen alt sınıftır. Child class veya subclass olarak da geçebilir."
+  },
+
+  {
+    q: "C# dilinde kalıtım hangi sembol ile gösterilir?",
+    t: "mcq",
+    o: [
+      ".",
+      "->",
+      "=",
+      ":",
+      "::"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 5,
+    topic: "Inheritance Syntax",
+    importance: 5,
+    explanation: "C# dilinde class Kedi : Hayvan ifadesi Kedi sınıfının Hayvan sınıfından türediğini gösterir. İki nokta üst üste kalıtım için kullanılır."
+  },
+
+  {
+    q: "class Kedi : Hayvan ifadesinde Hayvan neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "Alt sınıfı",
+      "Nesne adını",
+      "Yıkıcı fonksiyonu",
+      "Metot adını",
+      "Üst sınıfı"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 5,
+    topic: "Inheritance Syntax",
+    importance: 5,
+    explanation: "class Kedi : Hayvan ifadesinde Kedi alt sınıf, Hayvan üst sınıftır. Kedi, Hayvan sınıfındaki public/protected üyeleri kullanabilir."
+  },
+
+  {
+    q: "Kalıtımın temel avantajı hangisidir?",
+    t: "mcq",
+    o: [
+      "Kod tekrarını azaltması",
+      "Tüm sınıfları private yapması",
+      "Programı çalışmaz hale getirmesi",
+      "Metot kullanımını yasaklaması",
+      "Nesne oluşturmayı engellemesi"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "Inheritance Advantage",
+    importance: 5,
+    explanation: "Kalıtım sayesinde ortak özellikler üst sınıfta yazılır ve alt sınıflar bu kodu tekrar yazmadan kullanır. Böylece kod tekrarı azalır."
+  },
+
+  {
+    q: "Alt sınıf, üst sınıfın hangi üyelerine doğrudan erişebilir?",
+    t: "mcq",
+    o: [
+      "Sadece private üyelere",
+      "public ve protected üyelere",
+      "Sadece destructor'a",
+      "Sadece namespace'e",
+      "Hiçbir üyeye erişemez"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 5,
+    topic: "Access in Inheritance",
+    importance: 5,
+    explanation: "Alt sınıf, üst sınıfın public ve protected üyelerine erişebilir. private üyeler yalnızca tanımlandığı sınıf içinde kullanılabilir."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi kalıtım örneğidir?",
+    t: "mcq",
+    o: [
+      "class Araba { }",
+      "int x = 5;",
+      "class Kedi : Hayvan { }",
+      "Console.WriteLine();",
+      "string ad;"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 5,
+    topic: "Inheritance Example",
+    importance: 5,
+    explanation: "class Kedi : Hayvan ifadesi kalıtım örneğidir. Kedi, Hayvan sınıfından türetilmiştir."
+  },
+
+  {
+    q: "Base class içindeki ortak metotlar neden üst sınıfta tanımlanır?",
+    t: "mcq",
+    o: [
+      "Alt sınıflar kullanamasın diye",
+      "Program hata versin diye",
+      "Her alt sınıfta tekrar yazmak için",
+      "Kod tekrarını azaltmak için",
+      "Sınıf oluşturmayı engellemek için"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 5,
+    topic: "Reuse",
+    importance: 5,
+    explanation: "Ortak davranış üst sınıfta yazılırsa alt sınıflar tekrar yazmadan kullanır. Örneğin Hayvan sınıfındaki SesCikar() metodu Kedi tarafından kullanılabilir."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi is-a ilişkisine örnektir?",
+    t: "mcq",
+    o: [
+      "Araba motor sahibidir",
+      "Kitap sayfa sahibidir",
+      "Öğrenci not sahibidir",
+      "Ev kapı sahibidir",
+      "Kedi bir Hayvandır"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 5,
+    topic: "is-a",
+    importance: 5,
+    explanation: "Kalıtım is-a ilişkisiyle açıklanır. Kedi bir Hayvandır ifadesi doğru bir kalıtım ilişkisidir. Bu yüzden Kedi sınıfı Hayvan sınıfından türeyebilir."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi kalıtım için yanlış bir kullanımdır?",
+    t: "mcq",
+    o: [
+      "Ortak özellikleri üst sınıfa koymak",
+      "Alt sınıfta özel davranış eklemek",
+      "Kedi sınıfını Hayvan'dan türetmek",
+      "Her farklı nesne arasında zorla kalıtım kurmak",
+      "Kod tekrarını azaltmak"
+    ],
+    a: 3,
+    difficulty: "hard",
+    week: 5,
+    topic: "Kalıtım Tasarımı",
+    importance: 4,
+    explanation: "Kalıtım sadece mantıklı is-a ilişkilerinde kullanılmalıdır. Her sınıfı birbirinden türetmek doğru değildir; bazen composition daha uygundur."
+  },
+
+  {
+    q: "base anahtar kelimesi ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Alt sınıfı silmek için",
+      "Nesneyi yok etmek için",
+      "Üst sınıf üyesine/metoduna erişmek için",
+      "Interface oluşturmak için",
+      "Metodu overload etmek için"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 6,
+    topic: "base Keyword",
+    importance: 5,
+    explanation: "base, alt sınıftan üst sınıfın metot veya constructor'ına erişmek için kullanılır. Örneğin base.SesCikar() üst sınıftaki metodu çağırır."
+  },
+
+  {
+    q: "Kedi sınıfı Hayvan sınıfından türediğinde Kedi nesnesi için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Hayvan sınıfındaki hiçbir metodu kullanamaz",
+      "Sadece private alanları kullanır",
+      "Kalıtım çalışmaz",
+      "Hayvan sınıfının public/protected üyelerini kullanabilir",
+      "Nesne oluşturulamaz"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 5,
+    topic: "Derived Object",
+    importance: 5,
+    explanation: "Alt sınıf nesnesi, kendi üyelerini ve üst sınıftan gelen erişilebilir üyeleri kullanabilir. Bu yüzden Kedi nesnesi hem Miyav() hem de SesCikar() çağırabilir."
+  },
+
+  {
+    q: "Miras alma ile yeniden kullanılabilirlik arasındaki ilişki nedir?",
+    t: "mcq",
+    o: [
+      "Kalıtım kodun tekrar kullanılmasını engeller",
+      "Kalıtım sadece hata üretir",
+      "Kalıtım sadece veritabanı içindir",
+      "Kalıtım metotları tamamen siler",
+      "Üst sınıftaki ortak kod alt sınıflarca tekrar kullanılabilir"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 5,
+    topic: "Reusability",
+    importance: 5,
+    explanation: "Kalıtımın en büyük faydalarından biri yeniden kullanılabilirliktir. Üst sınıftaki kod alt sınıflarda tekrar yazılmadan kullanılabilir."
+  },
+
+  {
+    q: "Kalıtımda private üyelere neden doğrudan erişilemez?",
+    t: "mcq",
+    o: [
+      "Private yalnızca tanımlandığı sınıf içinde geçerli olduğu için",
+      "Private her yerden erişilebilir olduğu için",
+      "Private sadece constructor olduğu için",
+      "Private sadece interface olduğu için",
+      "Private static zorunlu olduğu için"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 5,
+    topic: "Private in Inheritance",
+    importance: 5,
+    explanation: "private erişim belirleyicisi en kısıtlayıcı erişimdir. Alt sınıf bile private üyeye doğrudan erişemez; erişim gerekiyorsa protected veya public metot/property kullanılabilir."
+  },
+
+  // =========================================================
+  // ==== 4. BÖLÜM – POLYMORPHISM, VIRTUAL, OVERRIDE (56-75) ==
+  // =========================================================
+
+  {
+    q: "Çok biçimlilik (polymorphism) nedir?",
+    t: "mcq",
+    o: [
+      "Sadece tek sınıf yazmak",
+      "Aynı isimli davranışın farklı sınıflarda farklı çalışabilmesi",
+      "Nesneyi silmek",
+      "Veritabanı oluşturmak",
+      "Sadece constructor çağırmak"
+    ],
+    a: 1,
     difficulty: "easy",
     week: 6,
-    topic: "Döngü Avantajı",
+    topic: "Polymorphism",
     importance: 5,
-    explanation: "Döngüler tekrar eden işlemleri tek bir yapı içinde yönetir. Örneğin 100 kez aynı işlemi yapmak için 100 satır yazmak yerine bir döngü kullanılır. Bu kodun okunabilirliğini artırır."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – FONKSİYONLAR (10) ================
-  // =========================================================
-
-  {
-    q: "Fonksiyon veya metot nedir?",
-    t: "mcq",
-    o: [
-      "Sadece form rengi",
-      "Sadece TextBox adı",
-      "Sadece dizi elemanı",
-      "Sadece hata mesajı",
-      "Belirli bir işi yapan tekrar kullanılabilir kod bloğu"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 8,
-    topic: "Fonksiyon Tanımı",
-    importance: 5,
-    explanation: "Fonksiyon, belirli bir görevi yerine getiren kod bloğudur. Aynı işi tekrar tekrar yazmak yerine fonksiyon olarak tanımlanır ve gerektiğinde çağrılır. Kod tekrarını azaltır."
+    explanation: "Polymorphism, aynı mesajın farklı nesnelerde farklı sonuç üretmesidir. Örneğin Ciz() metodu Daire'de daire, Kare'de kare çizebilir."
   },
 
   {
-    q: "void anahtar kelimesi ne anlama gelir?",
+    q: "Overloading hangi çok biçimlilik türüne örnektir?",
     t: "mcq",
     o: [
-      "Fonksiyonun geriye değer döndürmediğini",
-      "Fonksiyonun mutlaka sayı döndürdüğünü",
-      "Fonksiyonun sadece dizi olduğunu",
-      "Fonksiyonun hata olduğunu",
-      "Fonksiyonun form olduğunu"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 8,
-    topic: "void",
-    importance: 5,
-    explanation: "void, fonksiyonun geriye değer döndürmediğini belirtir. Örneğin ekrana mesaj yazdıran veya Label değerini değiştiren fonksiyonlar void olabilir."
-  },
-
-  {
-    q: "return ifadesinin görevi nedir?",
-    t: "mcq",
-    o: [
-      "Programı kapatmak",
-      "Fonksiyondan değer döndürmek",
-      "TextBox silmek",
-      "Döngüyü sonsuz yapmak",
-      "Formu küçültmek"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 8,
-    topic: "return",
-    importance: 5,
-    explanation: "return, fonksiyonun ürettiği sonucu çağıran yere geri gönderir. Örneğin KareAl fonksiyonu sayının karesini hesaplayıp return ile sonucu döndürür."
-  },
-
-  {
-    q: "int KareAl(int sayi) fonksiyonunda sayi nedir?",
-    t: "mcq",
-    o: [
-      "Form adı",
-      "Button olayı",
-      "Parametre",
-      "MessageBox",
-      "Döngü türü"
+      "Çalışma zamanı çok biçimliliği",
+      "Yıkıcı fonksiyon",
+      "Derleme zamanı çok biçimliliği",
+      "Veritabanı çok biçimliliği",
+      "Interface mirası"
     ],
     a: 2,
     difficulty: "medium",
     week: 8,
-    topic: "Parametre",
+    topic: "Overloading",
     importance: 5,
-    explanation: "sayi, fonksiyona dışarıdan gönderilen parametredir. Fonksiyon bu değeri kullanarak işlem yapar. Örneğin KareAl(5) çağrılırsa sayi parametresi 5 olur."
+    explanation: "Overloading, aynı isimde metotların farklı parametrelerle tanımlanmasıdır. Hangi metodun çalışacağı derleme zamanında belirlenir."
   },
 
   {
-    q: "Parametresiz fonksiyon için doğru ifade hangisidir?",
+    q: "Overriding hangi durumda gerçekleşir?",
     t: "mcq",
     o: [
-      "Mutlaka dışarıdan değer alır",
-      "Asla çalışmaz",
-      "Sadece hata üretir",
-      "Dışarıdan değer almadan çalışabilir",
-      "Sadece Button olabilir"
+      "Aynı sınıfta aynı isimli farklı parametreli metot yazınca",
+      "Constructor parametresiz olunca",
+      "Destructor çağrılınca",
+      "Alt sınıfın üst sınıftaki virtual metodu override etmesiyle",
+      "Private alan public olunca"
     ],
     a: 3,
-    difficulty: "easy",
-    week: 8,
-    topic: "Parametresiz Fonksiyon",
+    difficulty: "medium",
+    week: 6,
+    topic: "Overriding",
     importance: 5,
-    explanation: "Parametresiz fonksiyonun parantez içinde aldığı değer yoktur. Örneğin RastgeleSayi() dışarıdan değer almadan kendi içinde sayı üretebilir."
+    explanation: "Overriding, kalıtım ilişkisi içinde alt sınıfın üst sınıftaki virtual metodu kendi ihtiyacına göre yeniden yazmasıdır."
   },
 
   {
-    q: "Fonksiyonların avantajlarından biri hangisidir?",
+    q: "Üst sınıftaki bir metodun alt sınıfta override edilebilmesi için genellikle hangi anahtar kelime gerekir?",
     t: "mcq",
     o: [
-      "Kod tekrarını artırır",
-      "Programı anlaşılmaz yapar",
-      "Döngüleri yok eder",
-      "Butonları siler",
-      "Kod tekrarını azaltır"
+      "private",
+      "static",
+      "sealed",
+      "new",
+      "virtual"
     ],
     a: 4,
-    difficulty: "easy",
-    week: 8,
-    topic: "Fonksiyon Avantajı",
+    difficulty: "medium",
+    week: 6,
+    topic: "Virtual",
     importance: 5,
-    explanation: "Fonksiyonlar aynı işlemi tek bir yerde tanımlamayı sağlar. Bu sayede kod tekrarı azalır, bakım kolaylaşır ve program daha okunabilir olur."
+    explanation: "C# dilinde üst sınıftaki metot virtual olarak tanımlanırsa alt sınıfta override edilebilir. Bu, çalışma zamanı çok biçimliliğinin temelidir."
   },
 
   {
-    q: "Fonksiyonlar çağrıldığında parametreler bellekte genellikle nerede tutulur?",
+    q: "Alt sınıfta üst sınıftaki virtual metodu yeniden yazmak için hangi anahtar kelime kullanılır?",
     t: "mcq",
     o: [
-      "Stack üzerinde",
-      "Toolbox içinde",
-      "Form başlığında",
-      "MessageBox içinde",
-      "Label renginde"
+      "override",
+      "new",
+      "base",
+      "class",
+      "return"
     ],
     a: 0,
-    difficulty: "hard",
-    week: 8,
-    topic: "Stack",
-    importance: 4,
-    explanation: "PDF'de fonksiyon çağrıldığında parametrelerin stack yani yığın üzerinde tutulduğu belirtilir. Stack, fonksiyon çağrıları ve yerel değişkenlerin yönetildiği bellek alanıdır."
+    difficulty: "easy",
+    week: 6,
+    topic: "Override",
+    importance: 5,
+    explanation: "override, üst sınıftaki virtual metodu alt sınıfta yeniden yazmak için kullanılır. Örneğin public override void Hizlan() { ... }."
   },
 
   {
-    q: "void Degistir(int x) { x = 10; } örneğinde ana değişken neden etkilenmez?",
+    q: "Aşağıdaki kodda hangi çıktı beklenir? Arac arac = new Araba(); arac.Hizlan(); Araba sınıfı Hizlan metodunu override etmişse.",
     t: "mcq",
     o: [
-      "Fonksiyon hiç çalışmadığı için",
-      "Değer tipli parametre kopya olarak gönderildiği için",
-      "x string olduğu için",
-      "return olmadığı için program kapanır",
-      "Label kullanılmadığı için"
+      "Araç hızlanıyor.",
+      "Araba hızlanıyor.",
+      "Hata verir",
+      "Hiçbir şey yazmaz",
+      "Constructor çağrılmaz"
     ],
     a: 1,
-    difficulty: "hard",
-    week: 8,
-    topic: "Değer Tipli Parametre",
+    difficulty: "medium",
+    week: 6,
+    topic: "Runtime Polymorphism",
     importance: 5,
-    explanation: "int değer tipidir. Fonksiyona gönderildiğinde değerin kopyası gider. Fonksiyon içinde x değişse bile ana fonksiyondaki asıl değişken değişmez. Bu, değer tipli parametrelerin temel mantığıdır."
+    explanation: "Referans tipi Arac olsa bile nesnenin gerçek tipi Araba'dır. Metot virtual/override ise çalışma zamanında Araba sınıfındaki metot çalışır."
   },
 
   {
-    q: "OrtalamaHesapla fonksiyonu ne için kullanılır?",
+    q: "Metot overloading için doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Formu kapatmak için",
-      "TextBox silmek için",
-      "Vize ve final notlarından ortalama hesaplamak için",
-      "Döngü oluşturmak için",
-      "Dosya seçmek için"
+      "Mutlaka kalıtım gerekir",
+      "Sadece private metotlarda olur",
+      "Aynı isimli metotların farklı parametrelerle tanımlanmasıdır",
+      "Sadece destructor için geçerlidir",
+      "Metot adı farklı olmak zorundadır"
     ],
     a: 2,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 8,
-    topic: "Not Hesaplama Fonksiyonu",
+    topic: "Method Overloading",
     importance: 5,
-    explanation: "OrtalamaHesapla fonksiyonu, vize ve final gibi notları alıp ortalama sonucunu hesaplamak için yazılır. Böylece hesaplama kodu tek yerde toplanır ve buton tıklama olayında sadece fonksiyon çağrılır."
+    explanation: "Overloading'de metot adı aynıdır ama parametre sayısı, sırası veya türü farklıdır. Örneğin Topla(int,int) ve Topla(double,double)."
   },
 
   {
-    q: "Fonksiyonlar Windows Forms'ta genellikle nasıl tetiklenir?",
+    q: "Aşağıdakilerden hangisi overload örneğidir?",
     t: "mcq",
     o: [
-      "Sadece bilgisayar açılınca",
-      "Sadece dosya silinince",
-      "Sadece ekran kapanınca",
-      "Buton tıklama gibi olaylarla",
-      "Sadece internet bağlanınca"
+      "void Topla(int a, int b) ve void Cikar(int a, int b)",
+      "class Kedi : Hayvan",
+      "public override void SesCikar()",
+      "int Topla(int a, int b) ve double Topla(double a, double b)",
+      "private string ad;"
     ],
     a: 3,
     difficulty: "medium",
     week: 8,
-    topic: "Fonksiyon Çağırma",
+    topic: "Overload Example",
     importance: 5,
-    explanation: "Windows Forms'ta kullanıcı bir butona tıkladığında Click olayı çalışır. Bu olay içinde fonksiyon çağrılabilir. Örneğin btnHesapla_Click içinde OrtalamaHesapla fonksiyonu çağrılır."
-  },
-
-  // =========================================================
-  // ==== ÖNCEKİ HAFTALAR – FİNAL TİPİ SENARYO/KOD (8) ========
-  // =========================================================
-
-  {
-    q: "Vize ve final notu TextBox'tan alınıp sonuç Label'da gösterilecekse en doğru kontrol eşleşmesi hangisidir?",
-    t: "mcq",
-    o: [
-      "TextBox veri alır, Label sonuç gösterir",
-      "Label veri alır, TextBox sonuç gösterir",
-      "Button veri saklar, Form sonuç hesaplar",
-      "ProgressBar sayı girer, Toolbox sonuç gösterir",
-      "FileDialog ortalama hesaplar"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 8,
-    topic: "Windows Forms Senaryosu",
-    importance: 5,
-    explanation: "TextBox kullanıcıdan veri almak için, Label kullanıcıya sonuç göstermek için kullanılır. Button ise hesaplama işlemini başlatır. Bu üçlü Windows Forms sınavlarında çok sık çıkar."
+    explanation: "İki metodun adı Topla'dır ama parametre türleri farklıdır. Bu overload örneğidir. Kalıtım gerekmez."
   },
 
   {
-    q: "DurumBelirle fonksiyonu 'Geçti' veya 'Kaldı' döndürecekse en uygun dönüş tipi hangisidir?",
+    q: "Overload ile override arasındaki temel fark nedir?",
     t: "mcq",
     o: [
-      "int",
-      "string",
-      "Button",
-      "Form",
-      "ProgressBar"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 8,
-    topic: "Fonksiyon Dönüş Tipi",
-    importance: 5,
-    explanation: "Geçti ve Kaldı metinsel ifadelerdir. Metin döndüren fonksiyonun dönüş tipi string olmalıdır. int sayı, void değer döndürmeme anlamına gelir."
-  },
-
-  {
-    q: "Bir ortalama hesaplama uygulamasında hatalı giriş yapılırsa ne yapılmalıdır?",
-    t: "mcq",
-    o: [
-      "Program sessizce kapanmalıdır",
-      "Yanlış veri doğru kabul edilmelidir",
-      "Kullanıcı MessageBox ile uyarılmalıdır",
-      "Label kalıcı olarak silinmelidir",
-      "Button yok edilmelidir"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 8,
-    topic: "Hatalı Giriş",
-    importance: 5,
-    explanation: "Kullanıcı sayı yerine harf girebilir veya boş bırakabilir. Böyle durumlarda programın çökmesi yerine kullanıcıya anlaşılır uyarı verilmelidir. MessageBox bu iş için uygundur."
-  },
-
-  {
-    q: "btnHesapla_Click bloğunun temel görevi nedir?",
-    t: "mcq",
-    o: [
-      "Formu tasarım moduna almak",
-      "Toolbox açmak",
-      "Programı kurmak",
-      "Hesapla butonuna basıldığında çalışacak kodları barındırmak",
-      "Sadece dosya seçmek"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 8,
-    topic: "Button Click",
-    importance: 5,
-    explanation: "btnHesapla_Click bir olay metodudur. Kullanıcı Hesapla butonuna tıkladığında bu blok çalışır. TextBox'tan veriler burada okunabilir, fonksiyon çağrılabilir ve sonuç Label'a yazılabilir."
-  },
-
-  {
-    q: "double OrtalamaHesapla(double vize, double final) yapısında double dönüş tipi neden uygundur?",
-    t: "mcq",
-    o: [
-      "Çünkü fonksiyon hiç değer döndürmez",
-      "Çünkü sonuç sadece metin olmalıdır",
-      "Çünkü fonksiyon Button döndürür",
-      "Çünkü vize ve final silinir",
-      "Çünkü ortalama ondalıklı çıkabilir"
+      "Overload sadece yıkıcı fonksiyondur",
+      "Override aynı sınıfta olur, overload kalıtım ister",
+      "İkisi tamamen aynıdır",
+      "Overload hiçbir parametre kullanmaz",
+      "Overload aynı sınıfta farklı parametrelerle; override kalıtımda metodu yeniden yazmayla ilgilidir"
     ],
     a: 4,
     difficulty: "hard",
     week: 8,
-    topic: "Ortalama Fonksiyonu",
+    topic: "Overload vs Override",
     importance: 5,
-    explanation: "Ortalama hesabında sonuç 74.5 gibi ondalıklı olabilir. Bu nedenle double uygun bir sayısal dönüş tipidir. int kullanılırsa ondalıklı kısım kaybedilebilir."
+    explanation: "Overload: aynı isim, farklı parametre. Override: üst sınıftaki virtual metodu alt sınıfta yeniden yazma. Finalde en çok karıştırılan ayrımdır."
   },
 
   {
-    q: "BMI hesabında boy ve kilo TextBox'tan geliyorsa neden double.Parse kullanılabilir?",
+    q: "Abstract metot için doğru ifade hangisidir?",
     t: "mcq",
     o: [
-      "Ondalıklı sayı dönüşümü gerektiği için",
-      "Label'ı gizlemek için",
-      "Button'ı silmek için",
-      "Formu kapatmak için",
-      "Diziyi sıralamak için"
+      "Gövdesi yoktur ve alt sınıfta uygulanmalıdır",
+      "Her zaman private olmalıdır",
+      "Sadece constructor içinde yazılır",
+      "Sadece static olabilir",
+      "Alt sınıfta kullanılamaz"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 6,
+    topic: "Abstract Method",
+    importance: 5,
+    explanation: "Abstract metot gövdesiz tanımlanır. Alt sınıf bu metodu override ederek kendi uygulamasını yazmak zorundadır."
+  },
+
+  {
+    q: "abstract class Sekil { public abstract void Ciz(); } için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Sekil sınıfından doğrudan nesne oluşturulabilir",
+      "Ciz metodu alt sınıflarca uygulanmalıdır",
+      "Ciz metodu private olmak zorundadır",
+      "Sekil sınıfı interface değildir ama hiç metot içeremez",
+      "Kodda kalıtım yoktur"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "Abstract Class",
+    importance: 5,
+    explanation: "Abstract sınıftaki abstract metot alt sınıflarca override edilmelidir. Örneğin Daire sınıfı Ciz() metodunu kendi şekilde yazar."
+  },
+
+  {
+    q: "Interface ile abstract class arasındaki temel farklardan biri hangisidir?",
+    t: "mcq",
+    o: [
+      "Interface hiçbir sınıf tarafından kullanılamaz",
+      "Abstract class sadece veritabanı içindir",
+      "Interface bir sınıfa uygulanması gereken metot sözleşmesi verir",
+      "Abstract class içinde hiç metot olamaz",
+      "Interface constructor olmak zorundadır"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 6,
+    topic: "Interface vs Abstract",
+    importance: 5,
+    explanation: "Interface, sınıfın uygulaması gereken metotları tanımlayan bir sözleşme gibidir. Abstract class ise ortak temel davranış ve soyut metotları birlikte taşıyabilir."
+  },
+
+  {
+    q: "interface ICalisabilir { void Calis(); } kodu ne anlatır?",
+    t: "mcq",
+    o: [
+      "Calis metodu hemen çalışır",
+      "ICalisabilir bir nesnedir",
+      "Calis private alandır",
+      "Bu interface'i kullanan sınıf Calis metodunu yazmalıdır",
+      "Calis bir destructor'dır"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 6,
+    topic: "Interface Kullanımı",
+    importance: 5,
+    explanation: "Interface içinde metot imzası vardır. Robot : ICalisabilir yazılırsa Robot sınıfı Calis() metodunu uygulamalıdır."
+  },
+
+  {
+    q: "Çalışma zamanı çok biçimliliği en çok hangi yapılarla ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Sadece overload",
+      "Sadece field",
+      "Sadece private değişken",
+      "Sadece constructor overloading",
+      "virtual ve override"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 6,
+    topic: "Runtime Polymorphism",
+    importance: 5,
+    explanation: "Çalışma zamanı çok biçimliliğinde hangi metodun çalışacağı nesnenin gerçek tipine göre belirlenir. C#'ta virtual/override bu işin temelidir."
+  },
+
+  {
+    q: "Derleme zamanı çok biçimliliği için en uygun örnek hangisidir?",
+    t: "mcq",
+    o: [
+      "Metot overloading",
+      "Metot overriding",
+      "Abstract metot",
+      "Virtual metot",
+      "Base referansla alt sınıf çağırma"
     ],
     a: 0,
     difficulty: "medium",
     week: 8,
-    topic: "BMI Hesaplama",
-    importance: 4,
-    explanation: "Boy ve kilo ondalıklı olabilir. Örneğin boy 1.75 olarak girilebilir. Bu yüzden TextBox.Text değerini double'a çevirmek BMI gibi hesaplamalarda daha uygundur."
+    topic: "Compile-time Polymorphism",
+    importance: 5,
+    explanation: "Overloading'de hangi metodun çağrılacağı parametrelerden derleme zamanında anlaşılır. Bu yüzden compile-time polymorphism örneğidir."
   },
 
   {
-    q: "if (bmi < 18.5) sonuc = 'Zayıf'; satırı ne yapar?",
+    q: "public virtual void SesCikar() ifadesindeki virtual ne sağlar?",
     t: "mcq",
     o: [
-      "BMI değerini siler",
-      "BMI 18.5'ten küçükse sonucu Zayıf yapar",
-      "Formu kapatır",
-      "Diziyi oluşturur",
-      "Button'a tıklar"
+      "Metodun private olmasını",
+      "Alt sınıfta override edilebilmesini",
+      "Sınıfın sealed olmasını",
+      "Metodun constructor olmasını",
+      "Metodun silinmesini"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "Virtual Keyword",
+    importance: 5,
+    explanation: "virtual, üst sınıftaki metodun alt sınıfta yeniden yazılabileceğini belirtir. Alt sınıf override ile kendi davranışını verir."
+  },
+
+  {
+    q: "public override void SesCikar() ifadesi ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Yeni bir sınıf oluşturur",
+      "Nesneyi yok eder",
+      "Üst sınıftaki virtual metodu yeniden yazar",
+      "Metodu overload eder",
+      "Interface siler"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 6,
+    topic: "Override Keyword",
+    importance: 5,
+    explanation: "override, üst sınıftaki virtual metodu alt sınıfta yeniden tanımlamak için kullanılır. Bu, runtime polymorphism sağlar."
+  },
+
+  {
+    q: "Şekil, Daire, Kare örneği çok biçimliliği nasıl açıklar?",
+    t: "mcq",
+    o: [
+      "Tüm sınıflar aynı çıktıyı vermek zorundadır",
+      "Metotlar hiç çalışmaz",
+      "Kalıtım yasaktır",
+      "Aynı Ciz mesajına farklı şekillerin farklı cevap vermesiyle",
+      "Sadece constructor çalışmasıyla"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 1,
+    topic: "Polymorphism Example",
+    importance: 5,
+    explanation: "Daire, Kare ve Üçgen sınıfları aynı Ciz() metoduna sahip olabilir ama her biri farklı çizim yapar. Bu çok biçimliliktir."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi interface kullanımının avantajıdır?",
+    t: "mcq",
+    o: [
+      "Sınıfların hiçbir kurala uymamasını sağlamak",
+      "Metotların çalışmasını engellemek",
+      "Kalıtımı tamamen kaldırmak",
+      "Constructor yazmayı yasaklamak",
+      "Sınıflara ortak bir standart/sözleşme kazandırmak"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 3,
+    topic: "Interface Advantage",
+    importance: 5,
+    explanation: "Interface, farklı sınıfların ortak metotları uygulamasını zorunlu kılar. Böylece kod daha düzenli ve standart hale gelir."
+  },
+
+  {
+    q: "Nesne dizileri ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Birden fazla nesneyi aynı dizi içinde saklamaya",
+      "Sadece tek sayı tutmaya",
+      "Sadece hata yakalamaya",
+      "Sadece constructor silmeye",
+      "Sadece interface kapatmaya"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 3,
+    topic: "Object Arrays",
+    importance: 4,
+    explanation: "Nesne dizileri birden fazla nesneyi düzenli şekilde saklamak için kullanılır. Örneğin Ogrenci[] ogrenciler = new Ogrenci[2];"
+  },
+
+  // =========================================================
+  // ==== 5. BÖLÜM – CONSTRUCTOR / DESTRUCTOR / EF (76-100) ===
+  // =========================================================
+
+  {
+    q: "Constructor nedir?",
+    t: "mcq",
+    o: [
+      "Nesne yok olunca çalışan metot",
+      "Nesne oluşturulduğunda otomatik çalışan özel metot",
+      "Sadece hata yakalayan blok",
+      "Sadece interface tanımı",
+      "Sadece veritabanı sorgusu"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 9,
+    topic: "Constructor",
+    importance: 5,
+    explanation: "Constructor, nesne oluşturulduğunda otomatik çalışan özel fonksiyondur. Genellikle nesnenin ilk değerlerini atamak için kullanılır."
+  },
+
+  {
+    q: "Constructor için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Mutlaka int döndürür",
+      "Mutlaka private olmak zorundadır",
+      "Sınıf adıyla aynı isme sahiptir ve dönüş tipi yazılmaz",
+      "Sadece interface içinde olur",
+      "Yalnızca nesne yok olunca çalışır"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 9,
+    topic: "Constructor Özellikleri",
+    importance: 5,
+    explanation: "Constructor'ın adı sınıf adıyla aynıdır ve dönüş tipi yoktur. Örneğin class Car için constructor Car() şeklindedir."
+  },
+
+  {
+    q: "Parametreli constructor ne sağlar?",
+    t: "mcq",
+    o: [
+      "Nesne oluşturmayı engeller",
+      "Sınıfı interface yapar",
+      "Metodu virtual yapar",
+      "Nesne oluşturulurken başlangıç değerleri verilmesini sağlar",
+      "Destructor'ı iptal eder"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 9,
+    topic: "Parametreli Constructor",
+    importance: 5,
+    explanation: "Parametreli constructor, nesne oluşturulurken dışarıdan değer alır. Örneğin new Ogrenci(\"Ali\", 20, 3.8) ile nesnenin ilk bilgileri atanabilir."
+  },
+
+  {
+    q: "Constructor overloading ne demektir?",
+    t: "mcq",
+    o: [
+      "Constructor'ın hiç yazılmaması",
+      "Destructor'ın parametre alması",
+      "Metotların silinmesi",
+      "Sınıfın nesne oluşturamaması",
+      "Aynı sınıfta farklı parametrelerle birden fazla constructor tanımlanması"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 9,
+    topic: "Constructor Overloading",
+    importance: 5,
+    explanation: "Constructor overloading, aynı sınıfta farklı parametre listelerine sahip birden fazla constructor yazmaktır. Böylece nesneler farklı yollarla başlatılabilir."
+  },
+
+  {
+    q: "Destructor nedir?",
+    t: "mcq",
+    o: [
+      "Nesne yok edilirken otomatik çalışan özel fonksiyon",
+      "Nesne oluşturulurken çalışan fonksiyon",
+      "Sınıfı kalıtımla genişleten yapı",
+      "Metodu overload eden yapı",
+      "Veritabanı bağlamı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 9,
+    topic: "Destructor",
+    importance: 5,
+    explanation: "Destructor, nesne bellekten silinirken veya kapsam dışı kalırken çalışan özel fonksiyondur. Temizlik ve kaynak serbest bırakma işlerinde kullanılır."
+  },
+
+  {
+    q: "C++ tarzı destructor yazımında sınıf adının önüne hangi sembol gelir?",
+    t: "mcq",
+    o: [
+      "#",
+      "~",
+      "@",
+      "$",
+      "!"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 9,
+    topic: "Destructor Syntax",
+    importance: 5,
+    explanation: "Destructor sınıf adıyla aynı isme sahiptir ancak başında ~ sembolü bulunur. Örneğin Car sınıfının destructor'ı ~Car() şeklindedir."
+  },
+
+  {
+    q: "Destructor için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Birden fazla overload edilebilir",
+      "Parametre alır",
+      "Genellikle parametre almaz ve sınıfta tek tane olur",
+      "Sınıftan nesne oluşturur",
+      "Mutlaka int döndürür"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 9,
+    topic: "Destructor Özellikleri",
+    importance: 5,
+    explanation: "Destructor genellikle parametre almaz, dönüş tipi yoktur ve overload edilmez. Sınıf için tek destructor bulunur."
+  },
+
+  {
+    q: "Yıkıcı fonksiyonun temel amacı hangisidir?",
+    t: "mcq",
+    o: [
+      "Nesnenin ilk değerlerini atamak",
+      "Sınıfı kalıtımla genişletmek",
+      "Metodu overload etmek",
+      "Kaynakları serbest bırakmak ve temizlik yapmak",
+      "Interface oluşturmak"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 9,
+    topic: "Destructor Purpose",
+    importance: 5,
+    explanation: "Destructor, nesne yok edilmeden önce bellek, dosya, bağlantı gibi kaynakları serbest bırakmak için kullanılabilir."
+  },
+
+  {
+    q: "Öğrenci sınıfında constructor'ın isim, yaş, notOrtalaması alması neyi sağlar?",
+    t: "mcq",
+    o: [
+      "Nesnenin yok edilmesini",
+      "Metodun override edilmesini",
+      "Interface uygulanmasını",
+      "Sınıfın abstract olmasını",
+      "Öğrenci nesnesinin başlangıç bilgilerinin atanmasını"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 9,
+    topic: "Constructor Senaryosu",
+    importance: 5,
+    explanation: "Constructor parametreleri, nesne oluşurken değerleri doğrudan alanlara atamak için kullanılır. Böylece nesne eksik veya boş başlamaz."
+  },
+
+  {
+    q: "displayInfo() gibi bir metot genellikle ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Nesne bilgilerini ekrana yazdırmak için",
+      "Nesneyi bellekten silmek için",
+      "Sınıfı interface yapmak için",
+      "Metodu overload etmek için",
+      "Veritabanını silmek için"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 9,
+    topic: "displayInfo",
+    importance: 4,
+    explanation: "displayInfo() metodu, nesnenin bilgilerini kullanıcıya göstermek için kullanılır. Araba model/yıl/fiyat veya öğrenci isim/yaş/ortalama gibi bilgiler yazdırılabilir."
+  },
+
+  {
+    q: "Entity Framework nedir?",
+    t: "mcq",
+    o: [
+      "Sadece grafik çizim aracı",
+      "Microsoft tarafından geliştirilen ORM aracıdır",
+      "Sadece dosya sıkıştırıcıdır",
+      "Sadece makine dili derleyicisidir",
+      "Sadece interface türüdür"
     ],
     a: 1,
     difficulty: "medium",
-    week: 8,
-    topic: "BMI If",
-    importance: 4,
-    explanation: "Bu satır bir koşul kontrolüdür. bmi değeri 18.5'ten küçükse sonuc değişkenine Zayıf metni atanır. Bu, if yapısının karar verme amacıyla kullanımına örnektir."
+    week: 11,
+    topic: "Entity Framework",
+    importance: 5,
+    explanation: "Entity Framework, nesneler ile veritabanı tabloları arasında köprü kuran ORM aracıdır. Veritabanı işlemlerini sınıflar ve nesneler üzerinden yapmayı sağlar."
   },
 
   {
-    q: "Kodun okunabilirliğini artırmak için ortalama ve durum belirleme işlemlerini ayrı fonksiyonlara bölmek hangi avantajı sağlar?",
+    q: "ORM ne anlama gelir?",
     t: "mcq",
     o: [
-      "Programı daha karışık yapar",
-      "Kod tekrarını artırır",
-      "Modülerlik ve bakım kolaylığı sağlar",
-      "Hataları gizler",
-      "Butonları çalışmaz hale getirir"
+      "Object Random Method",
+      "Only Read Memory",
+      "Object Relational Mapping",
+      "Open Runtime Model",
+      "Output Record Manager"
     ],
     a: 2,
-    difficulty: "hard",
-    week: 8,
-    topic: "Modülerlik",
+    difficulty: "medium",
+    week: 11,
+    topic: "ORM",
     importance: 5,
-    explanation: "Her işi ayrı fonksiyona bölmek programı daha anlaşılır yapar. OrtalamaHesapla sadece ortalama hesaplar, DurumBelirle sadece geçti/kaldı durumunu verir. Bu yaklaşım kod tekrarını azaltır ve bakım kolaylığı sağlar."
+    explanation: "ORM, Object Relational Mapping demektir. Nesne yönelimli kod ile ilişkisel veritabanı arasındaki eşleştirmeyi sağlar."
+  },
+
+  {
+    q: "Entity Framework'te entity sınıfları genellikle neye karşılık gelir?",
+    t: "mcq",
+    o: [
+      "Sadece konsol ekranına",
+      "Sadece hata mesajına",
+      "Sadece constructor'a",
+      "Veritabanı tablolarına",
+      "Destructor'a"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 11,
+    topic: "Entity",
+    importance: 5,
+    explanation: "EF mantığında sınıflar veritabanı tablolarını temsil eder. Örneğin Book sınıfı veritabanında Books tablosuna karşılık gelebilir."
+  },
+
+  {
+    q: "Entity Framework'te sınıf özellikleri (properties) genellikle neye karşılık gelir?",
+    t: "mcq",
+    o: [
+      "Veritabanı satırlarına",
+      "Metot gövdelerine",
+      "Constructor parametrelerine",
+      "Namespace adlarına",
+      "Veritabanı sütunlarına"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 11,
+    topic: "EF Mapping",
+    importance: 5,
+    explanation: "EF'de entity sınıfındaki property'ler veritabanındaki kolonlara karşılık gelir. Book sınıfında Title, Author, PublishedYear sütun gibi düşünülebilir."
+  },
+
+  {
+    q: "DbContext ne için kullanılır?",
+    t: "mcq",
+    o: [
+      "Veritabanı işlemlerini yönetmek için",
+      "Metodu overload etmek için",
+      "Nesneyi yok etmek için",
+      "Sadece ekrana yazı yazmak için",
+      "Sadece abstract sınıf oluşturmak için"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 11,
+    topic: "DbContext",
+    importance: 5,
+    explanation: "DbContext, Entity Framework'te veritabanı ile uygulama arasındaki ana yönetim sınıfıdır. Ekleme, listeleme, silme gibi işlemler DbContext üzerinden yapılır."
+  },
+
+  {
+    q: "DbSet<Book> Books ifadesi neyi temsil eder?",
+    t: "mcq",
+    o: [
+      "Tek bir string değişkeni",
+      "Book kayıtlarının veritabanı kümesini/tablosunu",
+      "Destructor metodunu",
+      "Sadece console çıktısını",
+      "Interface imzasını"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 11,
+    topic: "DbSet",
+    importance: 5,
+    explanation: "DbSet<Book>, Book nesnelerinin veritabanında temsil edildiği koleksiyondur. Kitap ekleme, listeleme ve silme bu DbSet üzerinden yapılabilir."
+  },
+
+  {
+    q: "Code First yaklaşımı ne demektir?",
+    t: "mcq",
+    o: [
+      "Önce veritabanı elle kurulur, sonra sınıf üretilir",
+      "Önce model çizilir, sonra kod silinir",
+      "Önce kod/sınıflar yazılır, veritabanı bu modele göre oluşturulur",
+      "Önce destructor çalıştırılır",
+      "Önce interface kapatılır"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 11,
+    topic: "Code First",
+    importance: 5,
+    explanation: "Code First yaklaşımında önce C# sınıfları yazılır. EF bu sınıflara göre veritabanı yapısını oluşturur."
+  },
+
+  {
+    q: "Database First yaklaşımı neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Önce kod yazılır",
+      "Önce interface yazılır",
+      "Önce constructor silinir",
+      "Var olan veritabanından sınıfların oluşturulmasını",
+      "Metotların overload edilmesini"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 11,
+    topic: "Database First",
+    importance: 4,
+    explanation: "Database First yaklaşımında önce hazır bir veritabanı vardır. EF bu veritabanı yapısından sınıfları oluşturur."
+  },
+
+  {
+    q: "Book sınıfında BookId, Title, Author, PublishedYear alanları hangi senaryoya uygundur?",
+    t: "mcq",
+    o: [
+      "Hayvan sesi çıkarma",
+      "Araç hızlandırma",
+      "Şekil çizme",
+      "Constructor yok etme",
+      "Kitaplık sistemi için kitap bilgisi tutma"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 11,
+    topic: "Book Entity",
+    importance: 5,
+    explanation: "BookId, Title, Author ve PublishedYear bir kitabı tanımlayan bilgilerdir. Bu yüzden Book sınıfı kitaplık/kütüphane sistemi için entity olarak uygundur."
+  },
+
+  {
+    q: "Entity Framework ile kitap ekleme işleminde temel mantık hangisidir?",
+    t: "mcq",
+    o: [
+      "Book nesnesi oluşturup DbSet'e eklemek ve değişiklikleri kaydetmek",
+      "Book sınıfını abstract yapmak",
+      "Constructor'ı silmek",
+      "Interface'i kapatmak",
+      "Destructor'ı overload etmek"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 11,
+    topic: "EF Add",
+    importance: 5,
+    explanation: "EF ile ekleme işleminde önce yeni Book nesnesi oluşturulur. Sonra context.Books.Add(book) ve SaveChanges() mantığıyla veritabanına kaydedilir."
+  },
+
+  {
+    q: "Entity Framework'te SaveChanges() ne işe yarar?",
+    t: "mcq",
+    o: [
+      "Sadece nesne oluşturur",
+      "Yapılan ekleme/silme/güncelleme değişikliklerini veritabanına kaydeder",
+      "Metodu override eder",
+      "Constructor'ı çağırır",
+      "Interface oluşturur"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 11,
+    topic: "SaveChanges",
+    importance: 5,
+    explanation: "EF'de Add, Remove veya Update gibi işlemler bellekte takip edilir. SaveChanges() çağrılınca bu değişiklikler gerçek veritabanına uygulanır."
+  },
+
+  {
+    q: "Entity Framework'te kitap silme için genellikle hangi bilgi kullanılır?",
+    t: "mcq",
+    o: [
+      "Kitabın rengi",
+      "Constructor sayısı",
+      "BookId",
+      "Destructor adı",
+      "Interface sayısı"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 11,
+    topic: "EF Delete",
+    importance: 5,
+    explanation: "PDF'deki kitaplık senaryosunda kitap silme işlemi ID'ye göre yapılır. BookId, kitabı benzersiz tanımladığı için silmede kullanılır."
+  },
+
+  {
+    q: "EF'nin OOP ile ilişkisi için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "OOP'yi tamamen gereksiz yapar",
+      "Sadece destructor çalıştırır",
+      "Sadece console temizler",
+      "Veritabanı işlemlerini nesneler üzerinden yönetmeyi sağlar",
+      "Sadece metot overload eder"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 11,
+    topic: "EF ve OOP",
+    importance: 5,
+    explanation: "Entity Framework, veritabanı tablolarını sınıflar ve nesnelerle temsil eder. Böylece OOP mantığı veritabanı işlemlerinde de kullanılabilir."
+  },
+
+  {
+    q: "Aşağıdakilerden hangisi EF kullanım yöntemlerinden biridir?",
+    t: "mcq",
+    o: [
+      "Destructor First",
+      "Override First",
+      "Interface First",
+      "Private First",
+      "Code First"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 11,
+    topic: "EF Yaklaşımları",
+    importance: 5,
+    explanation: "Entity Framework kullanım yöntemleri arasında Code First, Database First ve Model First bulunur. Code First, koddan veritabanı üretme yaklaşımıdır."
   }
 ];
