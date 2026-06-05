@@ -1,6 +1,3 @@
-// Görsel Programlama – Final Tipi Öğretici 60 Soruluk Soru Bankası (MCQ)
-// Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
-// Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
