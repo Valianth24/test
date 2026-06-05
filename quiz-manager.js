@@ -15,7 +15,7 @@ const QuizManager = {
     eventListenersAttached: false
   },
 
-  // ✅ sorular.js geç yüklenirse diye kısa bekleme
+  // ✅ Eski sistemdeki gibi sorular.js geç yüklenirse kısa bekleme
   waitForQuestionBank(timeoutMs = 2500) {
     return new Promise((resolve) => {
       const start = Date.now();
@@ -32,45 +32,18 @@ const QuizManager = {
     });
   },
 
-  // ✅ DOĞRU CEVAP INDEX'İNİ BULUR
-  // Bizim soru formatımız:
-  // a: 0 => A doğru
-  // a: 1 => B doğru
-  // a: 2 => C doğru
-  // a: 3 => D doğru
-  // a: 4 => E doğru
+  // ✅ Hem eski AI formatını hem yeni index formatını güvenli okur
   getCorrectAnswerIndex(question) {
     if (!question || !Array.isArray(question.o)) return -1;
 
-    // Ana format: a sayı ise direkt doğru şık index'i kabul edilir.
+    // Normal sistem formatı: a = 0,1,2,3,4
     if (typeof question.a === 'number') {
-      return question.a >= 0 && question.a < question.o.length ? question.a : -1;
+      return question.a;
     }
 
-    // Bazı AI/custom testlerde a string gelebilir: "0", "1", "A", "B", ya da cevap metni gibi.
+    // Bazı AI testlerde a yanlışlıkla doğru cevap metni olarak gelirse
     if (typeof question.a === 'string') {
-      const answer = question.a.trim();
-
-      // "0", "1", "2", "3", "4" gibi gelirse
-      if (/^\d+$/.test(answer)) {
-        const numericIndex = Number(answer);
-        return numericIndex >= 0 && numericIndex < question.o.length ? numericIndex : -1;
-      }
-
-      // "A", "B", "C", "D", "E" gibi gelirse
-      const letters = ['A', 'B', 'C', 'D', 'E'];
-      const letterIndex = letters.indexOf(answer.toUpperCase());
-
-      if (letterIndex !== -1 && letterIndex < question.o.length) {
-        return letterIndex;
-      }
-
-      // Cevap direkt seçenek metni olarak gelirse
-      const textIndex = question.o.findIndex(opt =>
-        String(opt).trim().toLowerCase() === answer.toLowerCase()
-      );
-
-      return textIndex;
+      return question.o.findIndex(opt => opt === question.a);
     }
 
     return -1;
@@ -79,7 +52,6 @@ const QuizManager = {
   loadAIGeneratedTest() {
     try {
       const aiTest = localStorage.getItem('testify_generated_test');
-
       if (!aiTest) {
         console.log('ℹ️ AI testi bulunamadı');
         return null;
@@ -95,7 +67,6 @@ const QuizManager = {
 
       console.log('✅ AI testi yüklendi:', testData.title);
       console.log('📊 Soru sayısı:', testData.questions.length);
-
       return testData;
     } catch (error) {
       console.error('❌ AI test yükleme hatası:', error);
@@ -138,7 +109,6 @@ const QuizManager = {
         console.log('📚 Varsayılan sorular (sorular.js) kullanılıyor');
 
         const ok = await this.waitForQuestionBank(2500);
-
         if (!ok) {
           Utils.showToast('Soru bankası yüklenemedi! (sorular.js yüklenmemiş olabilir)', 'error');
           console.error('questionBank bulunamadı veya dolmadı!', window.questionBank);
@@ -180,9 +150,7 @@ const QuizManager = {
       const testSelection = document.getElementById('testSelection');
       const quizPage = document.getElementById('quizPage');
 
-      if (!testSelection || !quizPage) {
-        throw new Error('Quiz sayfaları bulunamadı');
-      }
+      if (!testSelection || !quizPage) throw new Error('Quiz sayfaları bulunamadı');
 
       testSelection.classList.remove('active');
       quizPage.classList.add('active');
@@ -207,18 +175,12 @@ const QuizManager = {
     }
 
     const optionsList = document.getElementById('optionsList');
-
-    if (optionsList) {
-      optionsList.innerHTML = '';
-    }
+    if (optionsList) optionsList.innerHTML = '';
   },
 
   showExitButton() {
     const exitBtn = document.getElementById('exitQuizBtn');
-
-    if (exitBtn) {
-      exitBtn.style.display = this.state.isReviewing ? 'none' : 'inline-flex';
-    }
+    if (exitBtn) exitBtn.style.display = this.state.isReviewing ? 'none' : 'inline-flex';
   },
 
   saveState() {
@@ -239,17 +201,12 @@ const QuizManager = {
   },
 
   startTimer() {
-    if (this.state.timerInterval) {
-      clearInterval(this.state.timerInterval);
-    }
+    if (this.state.timerInterval) clearInterval(this.state.timerInterval);
 
     this.state.timerInterval = setInterval(() => {
       this.state.elapsedSeconds++;
       this.updateTimerDisplay();
-
-      if (this.state.elapsedSeconds % 10 === 0) {
-        this.saveState();
-      }
+      if (this.state.elapsedSeconds % 10 === 0) this.saveState();
     }, 1000);
   },
 
@@ -263,49 +220,30 @@ const QuizManager = {
 
   updateTimerDisplay() {
     const timerEl = document.getElementById('quizTimer');
-
-    if (timerEl) {
-      timerEl.textContent = Utils.formatTime(this.state.elapsedSeconds);
-    }
+    if (timerEl) timerEl.textContent = Utils.formatTime(this.state.elapsedSeconds);
   },
 
   displayQuestion() {
     try {
       const question = this.state.questions[this.state.currentIndex];
-
-      if (!question) {
-        throw new Error('Soru bulunamadı');
-      }
+      if (!question) throw new Error('Soru bulunamadı');
 
       const currentQuestionEl = document.getElementById('currentQuestion');
       const totalQuestionsEl = document.getElementById('totalQuestionsQuiz');
 
-      if (currentQuestionEl) {
-        currentQuestionEl.textContent = this.state.currentIndex + 1;
-      }
-
-      if (totalQuestionsEl) {
-        totalQuestionsEl.textContent = this.state.questions.length;
-      }
+      if (currentQuestionEl) currentQuestionEl.textContent = this.state.currentIndex + 1;
+      if (totalQuestionsEl) totalQuestionsEl.textContent = this.state.questions.length;
 
       const progress = ((this.state.currentIndex + 1) / this.state.questions.length) * 100;
       const progressFill = document.getElementById('progressFill');
-
       if (progressFill) {
         progressFill.style.width = progress + '%';
-
         const progressBar = progressFill.parentElement;
-
-        if (progressBar) {
-          progressBar.setAttribute('aria-valuenow', Math.round(progress));
-        }
+        if (progressBar) progressBar.setAttribute('aria-valuenow', Math.round(progress));
       }
 
       const questionTextEl = document.getElementById('questionText');
-
-      if (questionTextEl) {
-        questionTextEl.textContent = question.q;
-      }
+      if (questionTextEl) questionTextEl.textContent = question.q;
 
       this.displayOptions(question);
       this.updateButtons();
@@ -317,30 +255,21 @@ const QuizManager = {
 
   displayOptions(question) {
     const optionsList = document.getElementById('optionsList');
-
     if (!optionsList) return;
 
     optionsList.innerHTML = '';
-
-    if (!question || !Array.isArray(question.o)) {
-      Utils.showToast('Soru seçenekleri hatalı', 'error');
-      console.error('Hatalı soru formatı:', question);
-      return;
-    }
-
     const letters = ['A', 'B', 'C', 'D', 'E'];
-    const correctIndex = this.getCorrectAnswerIndex(question);
+
+    const correctAnswerIndex = this.getCorrectAnswerIndex(question);
 
     question.o.forEach((option, index) => {
       const optionDiv = document.createElement('div');
-
       optionDiv.className = 'option-item';
       optionDiv.setAttribute('role', 'radio');
       optionDiv.setAttribute('aria-checked', 'false');
       optionDiv.setAttribute('tabindex', '0');
 
       const isSelected = this.state.answers[this.state.currentIndex] === index;
-
       if (isSelected) {
         optionDiv.classList.add('selected');
         optionDiv.setAttribute('aria-checked', 'true');
@@ -349,27 +278,17 @@ const QuizManager = {
       if (this.state.isReviewing) {
         optionDiv.classList.add('disabled');
 
-        const isCorrect = index === correctIndex;
-
-        if (isCorrect) {
-          optionDiv.classList.add('correct');
-        }
-
-        if (isSelected && !isCorrect) {
-          optionDiv.classList.add('incorrect');
-        }
+        if (index === correctAnswerIndex) optionDiv.classList.add('correct');
+        if (isSelected && index !== correctAnswerIndex) optionDiv.classList.add('incorrect');
       }
 
       optionDiv.innerHTML = `
-        <span class="option-letter">${letters[index] || ''}</span>
+        <span class="option-letter">${letters[index]}</span>
         <span>${Utils.sanitizeHTML(option)}</span>
       `;
 
       if (!this.state.isReviewing) {
-        optionDiv.addEventListener('click', () => {
-          this.selectOption(index);
-        });
-
+        optionDiv.addEventListener('click', () => this.selectOption(index));
         optionDiv.addEventListener('keypress', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -383,7 +302,6 @@ const QuizManager = {
 
     if (this.state.isReviewing && question.explanation) {
       const explanationDiv = document.createElement('div');
-
       explanationDiv.className = 'question-explanation';
       explanationDiv.innerHTML = `
         <div class="explanation-header">
@@ -392,7 +310,6 @@ const QuizManager = {
         </div>
         <p>${Utils.sanitizeHTML(question.explanation)}</p>
       `;
-
       optionsList.appendChild(explanationDiv);
     }
   },
@@ -402,13 +319,8 @@ const QuizManager = {
 
     try {
       const question = this.state.questions[this.state.currentIndex];
-
-      if (!question) {
-        throw new Error('Soru bulunamadı');
-      }
-
-      const correctIndex = this.getCorrectAnswerIndex(question);
-      const isCorrect = index === correctIndex;
+      const correctAnswerIndex = this.getCorrectAnswerIndex(question);
+      const isCorrect = index === correctAnswerIndex;
 
       this.state.answers[this.state.currentIndex] = index;
 
@@ -416,13 +328,8 @@ const QuizManager = {
         item.classList.add('disabled');
         item.style.pointerEvents = 'none';
 
-        if (idx === correctIndex) {
-          item.classList.add('correct');
-        }
-
-        if (idx === index && !isCorrect) {
-          item.classList.add('incorrect');
-        }
+        if (idx === correctAnswerIndex) item.classList.add('correct');
+        if (idx === index && !isCorrect) item.classList.add('incorrect');
 
         if (idx === index) {
           item.classList.add('selected');
@@ -442,29 +349,21 @@ const QuizManager = {
 
   showExplanation(question, isCorrect) {
     const oldExplanation = document.querySelector('.question-explanation');
-
-    if (oldExplanation) {
-      oldExplanation.remove();
-    }
-
+    if (oldExplanation) oldExplanation.remove();
     if (!question.explanation) return;
 
     const optionsList = document.getElementById('optionsList');
-
     if (!optionsList) return;
 
     const explanationDiv = document.createElement('div');
-
     explanationDiv.className = 'question-explanation';
     explanationDiv.style.cssText =
       'margin-top: 20px; padding: 15px; background: var(--bg-tertiary); border-left: 4px solid var(--info); border-radius: 8px; animation: slideIn 0.3s ease-out;';
 
     const statusIcon = isCorrect ? '✅' : '❌';
-
     const statusText = isCorrect
       ? (window.t ? t('quiz.correct', 'Doğru!') : 'Doğru!')
       : (window.t ? t('quiz.wrong', 'Yanlış!') : 'Yanlış!');
-
     const statusColor = isCorrect ? 'var(--success)' : 'var(--danger)';
 
     explanationDiv.innerHTML = `
@@ -494,7 +393,6 @@ const QuizManager = {
 
     if (prevBtn) {
       prevBtn.disabled = isFirstQuestion;
-
       if (!isFirstQuestion || this.state.isReviewing) {
         prevBtn.style.display = 'inline-flex';
         prevBtn.style.opacity = isFirstQuestion ? '0.5' : '1';
@@ -506,9 +404,7 @@ const QuizManager = {
     if (nextBtn) {
       if (this.state.isReviewing) {
         nextBtn.style.display = isLastQuestion ? 'none' : 'inline-flex';
-
         const nextText = window.t ? t('quiz.next', 'Sonraki') : 'Sonraki';
-
         nextBtn.innerHTML = `${nextText} →`;
       } else {
         nextBtn.style.display = isLastQuestion ? 'none' : 'inline-flex';
@@ -550,12 +446,10 @@ const QuizManager = {
           : `${unanswered} soru cevaplanmadı. Testi bitirmek istediğinizden emin misiniz?`;
 
         const confirmed = await Utils.confirm(confirmMsg);
-
         if (!confirmed) return;
       }
 
       this.stopTimer();
-
       const results = this.calculateResults();
 
       if (window.StorageManager) {
@@ -564,7 +458,6 @@ const QuizManager = {
       }
 
       localStorage.removeItem('testify_generated_test');
-
       this.showResults(results);
     } catch (error) {
       console.error('Quiz bitirme hatası:', error);
@@ -580,18 +473,14 @@ const QuizManager = {
       const userAnswer = this.state.answers[index];
 
       if (userAnswer !== null) {
-        const correctIndex = this.getCorrectAnswerIndex(question);
+        const correctAnswerIndex = this.getCorrectAnswerIndex(question);
 
-        if (userAnswer === correctIndex) {
-          correct++;
-        } else {
-          wrong++;
-        }
+        if (userAnswer === correctAnswerIndex) correct++;
+        else wrong++;
       }
     });
 
     const unanswered = this.state.questions.length - (correct + wrong);
-
     const successRate = this.state.questions.length > 0
       ? Math.round((correct / this.state.questions.length) * 100)
       : 0;
@@ -613,10 +502,7 @@ const QuizManager = {
     try {
       const quizPage = document.getElementById('quizPage');
       const resultsPage = document.getElementById('resultsPage');
-
-      if (!quizPage || !resultsPage) {
-        throw new Error('Sonuç sayfası bulunamadı');
-      }
+      if (!quizPage || !resultsPage) throw new Error('Sonuç sayfası bulunamadı');
 
       quizPage.classList.remove('active');
       resultsPage.classList.add('active');
@@ -627,40 +513,19 @@ const QuizManager = {
       const successPercent = document.getElementById('successPercent');
       const totalTimeResult = document.getElementById('totalTimeResult');
 
-      if (finalScore) {
-        finalScore.textContent = `${results.correctAnswers}/${results.totalQuestions}`;
-      }
-
-      if (correctAnswers) {
-        correctAnswers.textContent = results.correctAnswers;
-      }
-
-      if (wrongAnswers) {
-        wrongAnswers.textContent = results.wrongAnswers;
-      }
-
-      if (successPercent) {
-        successPercent.textContent = results.successRate + '%';
-      }
-
-      if (totalTimeResult) {
-        totalTimeResult.textContent = Utils.formatTime(results.time);
-      }
+      if (finalScore) finalScore.textContent = `${results.correctAnswers}/${results.totalQuestions}`;
+      if (correctAnswers) correctAnswers.textContent = results.correctAnswers;
+      if (wrongAnswers) wrongAnswers.textContent = results.wrongAnswers;
+      if (successPercent) successPercent.textContent = results.successRate + '%';
+      if (totalTimeResult) totalTimeResult.textContent = Utils.formatTime(results.time);
 
       const resultsIcon = document.querySelector('.results-icon');
-
       if (resultsIcon) {
-        if (results.successRate >= 90) {
-          resultsIcon.textContent = '🏆';
-        } else if (results.successRate >= 75) {
-          resultsIcon.textContent = '🎉';
-        } else if (results.successRate >= 60) {
-          resultsIcon.textContent = '👏';
-        } else if (results.successRate >= 40) {
-          resultsIcon.textContent = '💪';
-        } else {
-          resultsIcon.textContent = '📚';
-        }
+        if (results.successRate >= 90) resultsIcon.textContent = '🏆';
+        else if (results.successRate >= 75) resultsIcon.textContent = '🎉';
+        else if (results.successRate >= 60) resultsIcon.textContent = '👏';
+        else if (results.successRate >= 40) resultsIcon.textContent = '💪';
+        else resultsIcon.textContent = '📚';
       }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -677,10 +542,7 @@ const QuizManager = {
 
       const resultsPage = document.getElementById('resultsPage');
       const quizPage = document.getElementById('quizPage');
-
-      if (!resultsPage || !quizPage) {
-        throw new Error('Quiz sayfası bulunamadı');
-      }
+      if (!resultsPage || !quizPage) throw new Error('Quiz sayfası bulunamadı');
 
       resultsPage.classList.remove('active');
       quizPage.classList.add('active');
@@ -691,24 +553,15 @@ const QuizManager = {
       const nextBtn = document.getElementById('nextBtn');
       const submitBtn = document.getElementById('submitBtn');
 
-      if (prevBtn) {
-        prevBtn.style.display = 'inline-flex';
-      }
-
-      if (nextBtn) {
-        nextBtn.style.display = 'inline-flex';
-      }
-
-      if (submitBtn) {
-        submitBtn.style.display = 'none';
-      }
+      if (prevBtn) prevBtn.style.display = 'inline-flex';
+      if (nextBtn) nextBtn.style.display = 'inline-flex';
+      if (submitBtn) submitBtn.style.display = 'none';
 
       this.showExitButton();
 
       const reviewMsg = window.t
         ? t('quiz.reviewMode', 'İnceleme modu - Açıklamaları okuyabilirsiniz')
         : 'İnceleme modu - Açıklamaları okuyabilirsiniz';
-
       Utils.showToast(reviewMsg, 'info');
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -726,17 +579,9 @@ const QuizManager = {
       const quizPage = document.getElementById('quizPage');
       const testSelection = document.getElementById('testSelection');
 
-      if (resultsPage) {
-        resultsPage.classList.remove('active');
-      }
-
-      if (quizPage) {
-        quizPage.classList.remove('active');
-      }
-
-      if (testSelection) {
-        testSelection.classList.add('active');
-      }
+      if (resultsPage) resultsPage.classList.remove('active');
+      if (quizPage) quizPage.classList.remove('active');
+      if (testSelection) testSelection.classList.add('active');
 
       this.state = {
         currentMode: null,
@@ -753,7 +598,6 @@ const QuizManager = {
       };
 
       localStorage.removeItem('testify_generated_test');
-
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
       console.error('Yeni quiz başlatma hatası:', error);
@@ -772,7 +616,6 @@ const QuizManager = {
       : 'Testi bırakmak istediğine emin misin?\n\nİlerleme kaydedilmeyecek!';
 
     const confirmed = await Utils.confirm(confirmMsg);
-
     if (!confirmed) return;
 
     try {
@@ -781,25 +624,15 @@ const QuizManager = {
 
       this.cleanupPreviousQuiz();
 
-      if (window.StorageManager) {
-        StorageManager.clearQuizState();
-      }
+      if (window.StorageManager) StorageManager.clearQuizState();
 
       const quizPage = document.getElementById('quizPage');
       const resultsPage = document.getElementById('resultsPage');
       const testSelection = document.getElementById('testSelection');
 
-      if (quizPage) {
-        quizPage.classList.remove('active');
-      }
-
-      if (resultsPage) {
-        resultsPage.classList.remove('active');
-      }
-
-      if (testSelection) {
-        testSelection.classList.add('active');
-      }
+      if (quizPage) quizPage.classList.remove('active');
+      if (resultsPage) resultsPage.classList.remove('active');
+      if (testSelection) testSelection.classList.add('active');
 
       this.state = {
         currentMode: null,
@@ -837,15 +670,12 @@ const QuizManager = {
     console.log('🔧 Quiz event listener\'lar kuruluyor...');
 
     const testOptions = document.querySelector('.test-options');
-
     if (testOptions) {
       const modes = ['practice', 'exam', 'ai', 'custom'];
       const cards = testOptions.querySelectorAll('.test-option-card');
 
       cards.forEach((card, index) => {
         const mode = modes[index];
-
-        if (!mode) return;
 
         card.addEventListener('click', (e) => {
           e.preventDefault();
@@ -860,8 +690,6 @@ const QuizManager = {
           }
         });
       });
-    } else {
-      console.warn('⚠️ .test-options bulunamadı');
     }
 
     const prevBtn = document.getElementById('prevBtn');
@@ -871,47 +699,12 @@ const QuizManager = {
     const newQuizBtn = document.getElementById('newQuizBtn');
     const exitQuizBtn = document.getElementById('exitQuizBtn');
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.previousQuestion();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.nextQuestion();
-      });
-    }
-
-    if (submitBtn) {
-      submitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.finishQuiz();
-      });
-    }
-
-    if (reviewBtn) {
-      reviewBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.reviewAnswers();
-      });
-    }
-
-    if (newQuizBtn) {
-      newQuizBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.newQuiz();
-      });
-    }
-
-    if (exitQuizBtn) {
-      exitQuizBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.exitQuiz();
-      });
-    }
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); this.previousQuestion(); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); this.nextQuestion(); });
+    if (submitBtn) submitBtn.addEventListener('click', (e) => { e.preventDefault(); this.finishQuiz(); });
+    if (reviewBtn) reviewBtn.addEventListener('click', (e) => { e.preventDefault(); this.reviewAnswers(); });
+    if (newQuizBtn) newQuizBtn.addEventListener('click', (e) => { e.preventDefault(); this.newQuiz(); });
+    if (exitQuizBtn) exitQuizBtn.addEventListener('click', (e) => { e.preventDefault(); this.exitQuiz(); });
 
     this.state.eventListenersAttached = true;
     console.log('✅ Quiz event listener\'lar kuruldu');
