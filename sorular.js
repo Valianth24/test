@@ -1,1807 +1,1166 @@
-// Nesne Yönelimli Programlama – Final Tipi 100 Soruluk Soru Bankası
+// Internet Programlama – 100 Soruluk Soru Bankası
+// Konular: 3-14. hafta ders notları
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== 1. BÖLÜM – OOP TEMEL KAVRAMLAR (1-20) ===============
+  // ==== 3. HAFTA – KOŞUL YAPILARI (8) ======================
   // =========================================================
 
   {
-    q: "Nesne yönelimli programlama en kısa tanımıyla nedir?",
+    q: "Sadece bir koşul doğruysa çalışacak en temel yapı hangisidir?",
     t: "mcq",
-    o: [
-      "Yazılımı sınıflar ve nesneler etrafında tasarlama yaklaşımı",
-      "Sadece ekrana yazı yazdırma yöntemi",
-      "Sadece veritabanı sorgusu yazma yöntemi",
-      "Sadece makine dilinde kod yazma yöntemi",
-      "Sadece dosya sıkıştırma tekniği"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "OOP Tanımı",
-    importance: 5,
-    explanation: "OOP, gerçek dünyadaki varlıkları programda nesne ve sınıf olarak modelleme yaklaşımıdır. Örneğin Araba, Öğrenci veya Kitap birer sınıf olarak tasarlanabilir; bu sınıflardan oluşturulan somut örnekler ise nesnedir."
-  },
-
-  {
-    q: "OOP'nin temel dört ilkesi hangisidir?",
-    t: "mcq",
-    o: [
-      "SELECT, INSERT, UPDATE, DELETE",
-      "Kapsülleme, kalıtım, soyutlama, çok biçimlilik",
-      "Form, Button, Label, TextBox",
-      "HTML, CSS, JavaScript, SQL",
-      "Try, Catch, Finally, Throw"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 2,
-    topic: "OOP İlkeleri",
-    importance: 5,
-    explanation: "OOP'nin sınavda en çok sorulan dört ilkesi kapsülleme, kalıtım, soyutlama ve çok biçimliliktir. Bu dört kavram OOP'nin temelini oluşturur."
-  },
-
-  {
-    q: "Sınıf (class) kavramı neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Bellekte oluşturulmuş gerçek nesneyi",
-      "Programın hatasını",
-      "Nesnelerin özellik ve davranışlarını tanımlayan şablonu",
-      "Sadece konsol ekranını",
-      "Sadece veritabanı bağlantısını"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "Class",
-    importance: 5,
-    explanation: "Sınıf, nesnenin planıdır. Örneğin Araba sınıfında marka, model, hız gibi özellikler; Hizlan(), Dur() gibi metotlar bulunabilir. Ancak sınıf tek başına somut nesne değildir."
-  },
-
-  {
-    q: "Nesne (object) ne demektir?",
-    t: "mcq",
-    o: [
-      "Sadece kod satırı",
-      "Sadece metot adı",
-      "Sadece veri tipi",
-      "Sınıftan oluşturulan somut örnek",
-      "Sadece hata mesajı"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "Object",
-    importance: 5,
-    explanation: "Nesne, sınıftan üretilen gerçek örnektir. Araba sınıfı bir şablonsa, Toyota Corolla veya BMW gibi belirli özelliklere sahip örnekler nesnedir."
-  },
-
-  {
-    q: "Bir sınıfta davranışları temsil eden yapılar ne olarak adlandırılır?",
-    t: "mcq",
-    o: [
-      "Field",
-      "Namespace",
-      "Constructor",
-      "Property",
-      "Method"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 3,
-    topic: "Method",
-    importance: 5,
-    explanation: "Metotlar, nesnenin yapabileceği işlemleri temsil eder. Örneğin Araba sınıfında Hizlan(), FrenYap(), Dur() gibi işlemler metottur."
-  },
-
-  {
-    q: "Bir sınıfta nesnenin verilerini tutan yapılar genel olarak neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Özellikleri / alanları",
-      "Sadece program hatalarını",
-      "Sadece döngüleri",
-      "Sadece namespace'i",
-      "Sadece yorum satırlarını"
-    ],
+    o: ["if", "else", "switch", "for", "while"],
     a: 0,
     difficulty: "easy",
     week: 3,
-    topic: "Attributes",
+    topic: "If Yapısı",
     importance: 5,
-    explanation: "Özellikler veya alanlar, nesnenin sahip olduğu verileri tutar. Örneğin Öğrenci sınıfında ad, yaş, notOrtalaması gibi alanlar nesnenin özellikleridir."
+    explanation: "if yapısı, bir koşulu kontrol eder. Koşul doğruysa ilgili kod çalışır. Koşul, programın karar vermesi için kontrol edilen ifadedir."
   },
-
   {
-    q: "C# dilinde sınıftan nesne oluştururken genellikle hangi anahtar kelime kullanılır?",
+    q: "Bir koşul doğruysa bir işlem, yanlışsa başka işlem yaptıran yapı hangisidir?",
     t: "mcq",
-    o: [
-      "delete",
-      "new",
-      "void",
-      "base",
-      "static"
-    ],
+    o: ["if", "if-else", "switch-case", "foreach", "do-while"],
     a: 1,
     difficulty: "easy",
     week: 3,
-    topic: "Nesne Oluşturma",
+    topic: "If-Else",
     importance: 5,
-    explanation: "new anahtar kelimesi sınıftan nesne oluşturmak için kullanılır. Örneğin Araba a = new Araba(); ifadesinde Araba sınıfından a nesnesi oluşturulur."
+    explanation: "if-else yapısı iki yönlü karar vermeyi sağlar. Şart doğruysa ilk blok, yanlışsa else bloğu çalışır. Bu yapı program akışını kontrol etmek için çok kullanılır."
   },
-
   {
-    q: "Aşağıdakilerden hangisi sınıf–nesne ilişkisini en doğru anlatır?",
+    q: "Birden fazla koşulu sıralı biçimde kontrol etmek için en uygun yapı hangisidir?",
     t: "mcq",
-    o: [
-      "Nesne plan, sınıf gerçek örnektir",
-      "Sınıf ve nesne aynı şeydir",
-      "Sınıf plan, nesne bu plandan üretilen örnektir",
-      "Sınıf sadece hata yakalamadır",
-      "Nesne sadece veritabanıdır"
-    ],
+    o: ["if", "else", "if-elseif-else", "switch", "while"],
     a: 2,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 3,
-    topic: "Class vs Object",
+    topic: "If-Elseif-Else",
     importance: 5,
-    explanation: "Sınıf, nesneleri üretmek için kullanılan şablondur. Nesne ise bu şablondan oluşturulan somut örnektir. Sınavda 'şablon' kelimesi çoğunlukla class cevabını gösterir."
+    explanation: "if-elseif-else yapısı birden fazla olasılığı sırayla kontrol eder. İlk doğru koşul bulunduğunda onun kodu çalışır. Böylece çoklu karar mekanizması kurulmuş olur."
   },
-
   {
-    q: "C# dilinde sınıf tanımlamak için hangi anahtar kelime kullanılır?",
+    q: "Aynı değişkenin farklı sabit değerlerini kontrol etmek için en uygun yapı hangisidir?",
     t: "mcq",
-    o: [
-      "object",
-      "method",
-      "new",
-      "class",
-      "return"
-    ],
+    o: ["if", "elseif", "while", "switch-case", "for"],
     a: 3,
     difficulty: "easy",
     week: 3,
-    topic: "Class Keyword",
+    topic: "Switch-Case",
     importance: 5,
-    explanation: "C# dilinde sınıf tanımlamak için class anahtar kelimesi kullanılır. Örneğin class Araba { } ifadesi Araba adında bir sınıf tanımlar."
+    explanation: "switch-case yapısı, bir değişkenin farklı değerlerine göre işlem yapmak için kullanılır. Özellikle çok sayıda if-elseif yazmak yerine daha düzenli bir çözüm sunar."
   },
-
   {
-    q: "OOP'nin büyük projelerde tercih edilmesinin en önemli nedenlerinden biri hangisidir?",
+    q: "Koşul yapılarında kontrol edilen ifade genellikle hangi tür sonuç üretir?",
     t: "mcq",
-    o: [
-      "Kodun tamamen rastgele yazılmasını sağlaması",
-      "Sadece makine dili kullanması",
-      "Kodun bakımını zorlaştırması",
-      "Her şeyi tek fonksiyona toplaması",
-      "Modülerlik ve bakım kolaylığı sağlaması"
-    ],
+    o: ["Metin", "Dizi", "Nesne", "Dosya", "true / false"],
     a: 4,
-    difficulty: "medium",
-    week: 1,
-    topic: "OOP Avantajları",
-    importance: 5,
-    explanation: "OOP, büyük yazılımları küçük ve anlamlı parçalara böler. Her sınıf kendi görevinden sorumlu olur. Bu da bakım, geliştirme ve ekip çalışmasını kolaylaştırır."
-  },
-
-  {
-    q: "Programlama dili ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Bilgisayara ne yapılacağını anlatmayı sağlar",
-      "Sadece ekrana resim koyar",
-      "Sadece bilgisayarı kapatır",
-      "Sadece donanımı temizler",
-      "Sadece dosya adını değiştirir"
-    ],
-    a: 0,
     difficulty: "easy",
-    week: 1,
-    topic: "Programlama Dili",
+    week: 3,
+    topic: "Boolean Mantığı",
+    importance: 5,
+    explanation: "Koşullar çoğunlukla true ya da false üretir. Boolean, iki değerli mantıksal veri türüdür. Program bu sonuca göre hangi kodun çalışacağına karar verir."
+  },
+  {
+    q: "Tek yönlü karar mekanizması olarak bilinen yapı hangisidir?",
+    t: "mcq",
+    o: ["if", "if-else", "switch", "for", "foreach"],
+    a: 0,
+    difficulty: "medium",
+    week: 3,
+    topic: "Karar Mekanizması",
     importance: 4,
-    explanation: "Programlama dili, geliştiricinin bilgisayara hangi verilerle hangi işlemleri yapacağını anlatmasını sağlar. Algoritma programlama diliyle bilgisayara aktarılır."
+    explanation: "if yapısı tek yönlüdür. Yani koşul doğruysa işlem yapılır, yanlışsa genelde hiçbir şey yapılmaz. Bu yüzden en basit karar yapısıdır."
   },
-
   {
-    q: "Makine dili hangi özelliklerle tanımlanır?",
+    q: "switch-case yapısında bir case bloğunun sonunda genellikle hangi ifade kullanılır?",
     t: "mcq",
-    o: [
-      "İnsan diline çok yakın olması",
-      "0 ve 1'lerden oluşan en düşük seviyeli dil olması",
-      "Sadece görsel tasarım dili olması",
-      "Sadece sınıf oluşturması",
-      "Sadece web sayfası yazması"
-    ],
+    o: ["return", "break", "exit", "die", "echo"],
     a: 1,
     difficulty: "medium",
-    week: 1,
-    topic: "Makine Dili",
+    week: 3,
+    topic: "Switch-Case",
+    importance: 5,
+    explanation: "break, switch yapısında eşleşen case çalıştıktan sonra diğer case'lere geçilmesini engeller. Kullanılmazsa istenmeyen biçimde alttaki case'ler de çalışabilir."
+  },
+  {
+    q: "Hiçbir case eşleşmezse switch yapısında hangi bölüm çalışır?",
+    t: "mcq",
+    o: ["if", "break", "default", "else", "return"],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "Switch Default",
+    importance: 4,
+    explanation: "default bölümü, hiçbir case değeri uyuşmadığında çalışan yedek kısımdır. Bu, else mantığına benzer ama switch yapısı içinde kullanılır."
+  },
+
+  // =========================================================
+  // ==== 4. HAFTA – DÖNGÜLER (8) =============================
+  // =========================================================
+
+  {
+    q: "Belirli sayıda tekrar yapacak işlemler için en uygun döngü hangisidir?",
+    t: "mcq",
+    o: ["while", "foreach", "do-while", "for", "switch"],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "For Döngüsü",
+    importance: 5,
+    explanation: "for döngüsü, başlangıç, koşul ve artış/azalış bölümleriyle belirli sayıda tekrar yapar. Sayaç mantığıyla çalışan işlemlerde çok kullanılır."
+  },
+  {
+    q: "Koşul doğru olduğu sürece çalışan döngü hangisidir?",
+    t: "mcq",
+    o: ["for", "foreach", "if", "switch", "while"],
+    a: 4,
+    difficulty: "easy",
+    week: 4,
+    topic: "While Döngüsü",
+    importance: 5,
+    explanation: "while döngüsü, verilen şart doğru olduğu sürece çalışır. Koşul her turda tekrar kontrol edilir. Bu yüzden koşul yanlış olduğunda döngü sona erer."
+  },
+  {
+    q: "Koşul yanlış olsa bile en az bir kez çalışan döngü hangisidir?",
+    t: "mcq",
+    o: ["do-while", "for", "while", "switch", "if"],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "Do-While",
+    importance: 5,
+    explanation: "do-while döngüsünde önce kod çalışır, sonra koşul kontrol edilir. Bu nedenle en az bir kez çalışması garanti edilir."
+  },
+  {
+    q: "Diziler üzerinde sırayla dolaşmak için en uygun döngü hangisidir?",
+    t: "mcq",
+    o: ["if", "foreach", "switch", "do", "case"],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Foreach",
+    importance: 5,
+    explanation: "foreach, dizi elemanlarını tek tek dolaşmak için kullanılır. Dizi, birden fazla veriyi tek değişken altında tutan yapıdır. Bu yüzden foreach özellikle dizi işlemlerinde çok pratiktir."
+  },
+  {
+    q: "Bir döngünün içinde başka bir döngü kullanmaya ne denir?",
+    t: "mcq",
+    o: ["Çift koşul", "Dallanma", "İç içe döngü", "Sabit döngü", "Mantıksal blok"],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "İç İçe Döngü",
+    importance: 4,
+    explanation: "İç içe döngü, bir döngünün içinde başka bir döngü bulunmasıdır. Tablo oluşturma, matris gezme ve çok boyutlu veri işlemlerinde sık kullanılır."
+  },
+  {
+    q: "Döngüyü tamamen sonlandıran ifade hangisidir?",
+    t: "mcq",
+    o: ["continue", "pass", "next", "break", "stop"],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "Break",
+    importance: 5,
+    explanation: "break, bulunduğu döngüyü tamamen bitirir. Yani döngü kalan turlara devam etmez. Özellikle bir koşul sağlandığında döngüden çıkmak için kullanılır."
+  },
+  {
+    q: "Döngüde mevcut turu atlayıp bir sonraki tura geçiren ifade hangisidir?",
+    t: "mcq",
+    o: ["break", "return", "skip", "pass", "continue"],
+    a: 4,
+    difficulty: "easy",
+    week: 4,
+    topic: "Continue",
+    importance: 5,
+    explanation: "continue, döngüyü bitirmez; yalnızca o anki turu atlar. Sonraki tekrar adımına geçer. Bu, bazı değerleri işlem dışı bırakmak için kullanışlıdır."
+  },
+  {
+    q: "Yanlış koşul yazımı nedeniyle hiç bitmeyen döngüye ne denir?",
+    t: "mcq",
+    o: ["Sonsuz döngü", "Dış döngü", "İç döngü", "Statik döngü", "Mantık bloğu"],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "Sonsuz Döngü",
+    importance: 4,
+    explanation: "Sonsuz döngü, çıkış şartı olmadığı için sürekli çalışan döngüdür. Bu durum programın kilitlenmesine veya gereksiz kaynak tüketimine yol açabilir."
+  },
+
+  // =========================================================
+  // ==== 5. HAFTA – STRING FONKSİYONLARI (8) ================
+  // =========================================================
+
+  {
+    q: "Bir metnin karakter sayısını bulmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["substr()", "strlen()", "strpos()", "trim()", "explode()"],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "strlen",
+    importance: 5,
+    explanation: "strlen(), bir string içindeki karakter sayısını döndürür. String, metin veri türüdür. Boşluklar da karakter olarak sayılır."
+  },
+  {
+    q: "Türkçe gibi çok baytlı karakterlerde daha doğru uzunluk hesabı için hangi fonksiyon tercih edilir?",
+    t: "mcq",
+    o: ["strlen()", "str_word_count()", "mb_strlen()", "substr()", "ucfirst()"],
+    a: 2,
+    difficulty: "medium",
+    week: 5,
+    topic: "mb_strlen",
+    importance: 5,
+    explanation: "mb_strlen(), çok baytlı karakterlerle doğru çalışır. Çok baytlı karakter, bellekte birden fazla byte yer kaplayan karakterdir. Türkçe karakterlerde bu önemlidir."
+  },
+  {
+    q: "Bir metni tamamen büyük harfe çevirmek için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["strtolower()", "ucfirst()", "trim()", "strtoupper()", "substr()"],
+    a: 3,
+    difficulty: "easy",
+    week: 5,
+    topic: "strtoupper",
+    importance: 4,
+    explanation: "strtoupper(), metindeki harfleri büyük harfe çevirir. Metin dönüştürme işlemleri form verisi düzenleme ve kullanıcı çıktıları hazırlamada sık kullanılır."
+  },
+  {
+    q: "Bir metni tamamen küçük harfe çevirmek için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["ucfirst()", "str_replace()", "explode()", "implode()", "strtolower()"],
+    a: 4,
+    difficulty: "easy",
+    week: 5,
+    topic: "strtolower",
+    importance: 4,
+    explanation: "strtolower(), metindeki harfleri küçük harfe dönüştürür. Bu işlem özellikle karşılaştırmalarda veya standartlaştırma gerektiğinde yararlıdır."
+  },
+  {
+    q: "Bir metnin başındaki ve sonundaki boşlukları temizlemek için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["trim()", "strlen()", "substr()", "strpos()", "strcmp()"],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "trim",
+    importance: 5,
+    explanation: "trim(), metnin başındaki ve sonundaki gereksiz boşlukları siler. Kullanıcıdan gelen verileri temizlemek için çok önemlidir."
+  },
+  {
+    q: "Bir metnin belirli bölümünü almak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["strpos()", "substr()", "trim()", "explode()", "strrev()"],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "substr",
+    importance: 5,
+    explanation: "substr(), string içinden belirli konumdan başlayarak parça alır. Bu işleme alt metin çıkarma denir."
+  },
+  {
+    q: "Bir metin içinde aranan ifadenin konumunu bulmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["substr()", "strlen()", "strpos()", "trim()", "explode()"],
+    a: 2,
+    difficulty: "easy",
+    week: 5,
+    topic: "strpos",
+    importance: 5,
+    explanation: "strpos(), aranan ifadenin metin içinde ilk geçtiği konumu verir. Konum, karakter dizisi içindeki başlangıç indeksidir."
+  },
+  {
+    q: "Bir metindeki ifadeyi başka bir ifadeyle değiştirmek için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["strpos()", "substr()", "trim()", "str_replace()", "explode()"],
+    a: 3,
+    difficulty: "easy",
+    week: 5,
+    topic: "str_replace",
+    importance: 5,
+    explanation: "str_replace(), belirli metinleri başka metinlerle değiştirir. Örneğin bir isimdeki hatalı karakterleri düzeltmek için kullanılabilir."
+  },
+
+  // =========================================================
+  // ==== 6. HAFTA – GET, POST, SUPERGLOBALS (8) ==============
+  // =========================================================
+
+  {
+    q: "Verileri URL üzerinden gönderen HTTP yöntemi hangisidir?",
+    t: "mcq",
+    o: ["PUT", "PATCH", "DELETE", "REQUEST", "GET"],
+    a: 4,
+    difficulty: "easy",
+    week: 6,
+    topic: "GET",
+    importance: 5,
+    explanation: "GET yöntemi verileri URL üzerinden taşır. Bu nedenle adres çubuğunda görülebilir. Küçük ve hassas olmayan verilerde kullanılması daha uygundur."
+  },
+  {
+    q: "Verileri HTTP isteğinin gövdesi ile gönderen yöntem hangisidir?",
+    t: "mcq",
+    o: ["POST", "GET", "LINK", "HEAD", "TRACE"],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "POST",
+    importance: 5,
+    explanation: "POST yöntemi veriyi URL yerine body kısmında gönderir. Body, HTTP isteğinin veri taşıyan bölümüdür. Daha büyük ve daha hassas veriler için uygundur."
+  },
+  {
+    q: "GET yöntemi ile gelen verilere PHP'de hangi süper global dizi ile erişilir?",
+    t: "mcq",
+    o: ["$_POST", "$_GET", "$_SERVER", "$_FILES", "$_SESSION"],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "$_GET",
+    importance: 5,
+    explanation: "$_GET, URL üzerinden gelen verileri tutan süper global dizidir. Süper global, PHP'nin her yerinden erişilebilen özel değişken yapısıdır."
+  },
+  {
+    q: "POST yöntemi ile gelen verilere PHP'de hangi süper global dizi ile erişilir?",
+    t: "mcq",
+    o: ["$_GET", "$_COOKIE", "$_POST", "$_SESSION", "$_FILES"],
+    a: 2,
+    difficulty: "easy",
+    week: 6,
+    topic: "$_POST",
+    importance: 5,
+    explanation: "$_POST, form gibi kaynaklardan POST ile gelen verileri alır. Özellikle kullanıcı girişi ve kayıt formlarında sık kullanılır."
+  },
+  {
+    q: "Hem $_GET hem $_POST hem de $_COOKIE verilerini birlikte içerebilen yapı hangisidir?",
+    t: "mcq",
+    o: ["$_SERVER", "$_SESSION", "$_FILES", "$_REQUEST", "$_ENV"],
+    a: 3,
+    difficulty: "medium",
+    week: 6,
+    topic: "$_REQUEST",
+    importance: 4,
+    explanation: "$_REQUEST, farklı kaynaklardan gelen verileri tek yapı altında sunabilir. Ancak hangi yöntemle geldiğini ayırt etmek zorlaşabileceği için dikkatli kullanılmalıdır."
+  },
+  {
+    q: "Şifre gibi hassas veriler için hangi yöntem tercih edilmelidir?",
+    t: "mcq",
+    o: ["GET", "REQUEST", "COOKIE", "LINK", "POST"],
+    a: 4,
+    difficulty: "easy",
+    week: 6,
+    topic: "Güvenlik",
+    importance: 5,
+    explanation: "POST, hassas veriler için GET'e göre daha uygundur çünkü veri URL'de görünmez. Yine de bu tek başına tam güvenlik anlamına gelmez; ek güvenlik önlemleri de gerekir."
+  },
+  {
+    q: "Bir bağlantıya soru işareti ve parametrelerle veri eklenmesi genellikle hangi yöntemle ilişkilidir?",
+    t: "mcq",
+    o: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "URL Parametreleri",
+    importance: 4,
+    explanation: "GET verileri query string denen URL parametre yapısı ile taşır. Query string, adresin sonuna eklenen anahtar=değer çiftlerinden oluşur."
+  },
+  {
+    q: "GET yönteminde çok uzun veri gönderilirse yaşanabilecek temel sorun hangisidir?",
+    t: "mcq",
+    o: ["Sunucu kapanır", "URL uzunluk sınırı aşılabilir", "MySQL silinir", "PHP durur", "Tarayıcı kapanır"],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "GET Sınırları",
+    importance: 4,
+    explanation: "GET ile veri URL'de taşındığı için uzunluk sınırı problemi olabilir. Uzun verilerde veri kaybı veya isteğin hatalı çalışması yaşanabilir."
+  },
+
+  // =========================================================
+  // ==== 7. HAFTA – DOSYA YÜKLEME (8) ========================
+  // =========================================================
+
+  {
+    q: "PHP'de yüklenen dosya bilgilerine hangi süper global dizi ile erişilir?",
+    t: "mcq",
+    o: ["$_POST", "$_GET", "$_FILES", "$_REQUEST", "$_SESSION"],
+    a: 2,
+    difficulty: "easy",
+    week: 7,
+    topic: "$_FILES",
+    importance: 5,
+    explanation: "$_FILES, kullanıcı tarafından yüklenen dosyaların bilgilerini tutar. Dosya adı, geçici yol, boyut ve hata kodu gibi alanlar içerir."
+  },
+  {
+    q: "HTML formunda dosya yükleme yapılabilmesi için enctype değeri ne olmalıdır?",
+    t: "mcq",
+    o: ["text/plain", "application/json", "urlencoded", "multipart/form-data", "file/data"],
+    a: 3,
+    difficulty: "easy",
+    week: 7,
+    topic: "enctype",
+    importance: 5,
+    explanation: "multipart/form-data, formda dosya gönderimi için gerekli kodlamadır. Bu değer olmazsa dosya içeriği sunucuya doğru iletilmez."
+  },
+  {
+    q: "Geçici dizine alınan dosyayı kalıcı konuma taşımak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["move_file()", "upload_file()", "file_put_contents()", "copy()", "move_uploaded_file()"],
+    a: 4,
+    difficulty: "easy",
+    week: 7,
+    topic: "move_uploaded_file",
+    importance: 5,
+    explanation: "move_uploaded_file(), yüklenen dosyayı geçici konumdan geliştiricinin belirlediği klasöre taşır. Kalıcı konum, dosyanın daha sonra da kullanılabileceği hedef klasördür."
+  },
+  {
+    q: "$_FILES dizisindeki error alanında 0 değeri ne anlama gelir?",
+    t: "mcq",
+    o: ["Dosya bozuk", "Sunucu kapalı", "Dosya silinmiş", "Yükleme başarılı", "Dosya okunamadı"],
+    a: 3,
+    difficulty: "medium",
+    week: 7,
+    topic: "Hata Kodları",
+    importance: 5,
+    explanation: "error alanında 0 olması, yani UPLOAD_ERR_OK, yükleme işleminin başarılı olduğu anlamına gelir. Hata kodları, dosya yükleme sürecinde ne olduğunu anlamak için kullanılır."
+  },
+  {
+    q: "$_FILES['file']['tmp_name'] alanı neyi ifade eder?",
+    t: "mcq",
+    o: ["Son kaydedilen klasör", "Kalıcı dosya adı", "Tarayıcı türü", "Boyut bilgisi", "Geçici dosya yolu"],
+    a: 4,
+    difficulty: "medium",
+    week: 7,
+    topic: "tmp_name",
+    importance: 4,
+    explanation: "tmp_name, yüklenen dosyanın sunucuda geçici olarak tutulduğu yolu gösterir. Dosya kalıcı hale getirilecekse bu yoldan alınarak taşınır."
+  },
+  {
+    q: "Bir klasörün var olup olmadığını kontrol etmek için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["is_dir()", "mkdir()", "file()", "fopen()", "chmod()"],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "is_dir",
+    importance: 4,
+    explanation: "is_dir(), verilen yolun bir klasör olup olmadığını kontrol eder. Dosya yüklemeden önce hedef klasörün varlığı bu şekilde test edilir."
+  },
+  {
+    q: "Yeni bir klasör oluşturmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["is_dir()", "mkdir()", "rename()", "unlink()", "copy()"],
+    a: 1,
+    difficulty: "easy",
+    week: 7,
+    topic: "mkdir",
+    importance: 4,
+    explanation: "mkdir(), yeni klasör oluşturur. Klasör, dosyaların tutulduğu dizin yapısıdır. Dosya yükleme sistemlerinde uploads klasörü oluşturmak için kullanılır."
+  },
+  {
+    q: "Dosya yükleme işleminde güvenlik için en önemli kontrollerden biri hangisidir?",
+    t: "mcq",
+    o: ["Monitör çözünürlüğünü kontrol etmek", "IP adresini yazdırmak", "Dosya türü ve boyutunu doğrulamak", "URL kısaltmak", "Cookie temizlemek"],
+    a: 2,
+    difficulty: "medium",
+    week: 7,
+    topic: "Upload Güvenliği",
+    importance: 5,
+    explanation: "Dosya türü ve boyut kontrolü, zararlı veya aşırı büyük dosyaların sunucuya yüklenmesini engeller. Doğrulama, gelen verinin beklenen kurallara uygun olup olmadığını test etme işlemidir."
+  },
+
+  // =========================================================
+  // ==== 8. HAFTA – SESSION YÖNETİMİ (8) =====================
+  // =========================================================
+
+  {
+    q: "HTTP protokolünün durumsuz (stateless) olması ne anlama gelir?",
+    t: "mcq",
+    o: ["Her isteğin birbirinden bağımsız kabul edilmesi", "Her isteğin dosya indirmesi", "Her isteğin şifrelenmesi", "Her isteğin saklanması", "Her isteğin yönlendirilmesi"],
+    a: 0,
+    difficulty: "medium",
+    week: 8,
+    topic: "HTTP Stateless",
+    importance: 5,
+    explanation: "Stateless, yani durumsuz, her HTTP isteğinin bağımsız değerlendirilmesi demektir. Sunucu önceki isteği doğal olarak hatırlamaz. Bu yüzden oturum mekanizmalarına ihtiyaç duyulur."
+  },
+  {
+    q: "PHP'de oturum başlatmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["session_destroy()", "session_start()", "session_id()", "setcookie()", "start_session()"],
+    a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "session_start",
+    importance: 5,
+    explanation: "session_start(), PHP oturumunu başlatır. Oturum başlamadan $_SESSION verilerine sağlıklı biçimde erişilemez."
+  },
+  {
+    q: "Oturum verilerine erişmek için hangi süper global kullanılır?",
+    t: "mcq",
+    o: ["$_POST", "$_GET", "$_SESSION", "$_COOKIE", "$_FILES"],
+    a: 2,
+    difficulty: "easy",
+    week: 8,
+    topic: "$_SESSION",
+    importance: 5,
+    explanation: "$_SESSION, oturum boyunca saklanan verileri tutar. Örneğin kullanıcının giriş yapıp yapmadığı bilgisi burada tutulabilir."
+  },
+  {
+    q: "Session ID en doğru şekilde neyi ifade eder?",
+    t: "mcq",
+    o: ["Veritabanı tablosu", "Form adı", "Sunucu adı", "Kullanıcı oturumuna ait benzersiz kimlik", "Dosya uzantısı"],
+    a: 3,
+    difficulty: "medium",
+    week: 8,
+    topic: "Session ID",
+    importance: 4,
+    explanation: "Session ID, her kullanıcı oturumu için üretilen benzersiz kimliktir. Benzersiz, başka bir oturumla karışmayan tekil değer demektir."
+  },
+  {
+    q: "Bir oturumu tamamen sonlandırmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["session_start()", "session_id()", "unset()", "destroy()", "session_destroy()"],
+    a: 4,
+    difficulty: "easy",
+    week: 8,
+    topic: "session_destroy",
+    importance: 5,
+    explanation: "session_destroy(), aktif oturumu sonlandırır. Kullanıcı çıkış yaparken sık kullanılır. Böylece sunucudaki oturum bilgileri temizlenir."
+  },
+  {
+    q: "Session ile cookie arasındaki temel fark hangisidir?",
+    t: "mcq",
+    o: ["Session sunucuda, cookie istemci tarafında tutulur", "İkisi de sadece sunucuda tutulur", "İkisi de sadece veritabanında tutulur", "Session sadece resim saklar", "Cookie sadece şifre saklar"],
+    a: 0,
+    difficulty: "medium",
+    week: 8,
+    topic: "Session ve Cookie",
+    importance: 5,
+    explanation: "Session verileri sunucu tarafında, cookie verileri ise tarayıcıda tutulur. İstemci, hizmet alan taraf yani kullanıcının tarayıcısıdır."
+  },
+  {
+    q: "Kullanıcının giriş yapıp yapmadığını sayfalar arasında takip etmek için en uygun yapı hangisidir?",
+    t: "mcq",
+    o: ["$_FILES", "$_SESSION", "$_SERVER", "$_ENV", "$_GLOBALS"],
+    a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "Oturum Kullanımı",
+    importance: 5,
+    explanation: "Giriş bilgisini takip etmek için session kullanılır. Çünkü oturum verisi sayfalar arası taşınabilir ve sunucu tarafında tutulduğu için daha güvenlidir."
+  },
+  {
+    q: "Alışveriş sepeti gibi geçici kullanıcı verilerini tutmak için en uygun yaklaşım hangisidir?",
+    t: "mcq",
+    o: ["URL içine yazmak", "Dosya adına eklemek", "Session kullanmak", "Tablo adını değiştirmek", "PHP dosyasını silmek"],
+    a: 2,
+    difficulty: "easy",
+    week: 8,
+    topic: "Session Kullanım Alanı",
+    importance: 4,
+    explanation: "Alışveriş sepeti gibi geçici veriler session içinde tutulabilir. Geçici veri, oturum süresince gerekli olan ama kalıcı veritabanına her an yazılması gerekmeyen bilgidir."
+  },
+
+  // =========================================================
+  // ==== 9. HAFTA – ADMİN PANELİ (8) =========================
+  // =========================================================
+
+  {
+    q: "Admin paneli en doğru şekilde neyi ifade eder?",
+    t: "mcq",
+    o: ["Sadece resim galerisi", "Sadece kullanıcı profili", "Dosya klasörü", "Yönetici işlemlerinin yapıldığı kontrol arayüzü", "Yalnızca stil dosyası"],
+    a: 3,
+    difficulty: "easy",
+    week: 9,
+    topic: "Admin Paneli",
+    importance: 5,
+    explanation: "Admin paneli, yetkili kullanıcıların sistemi yönetmek için kullandığı arayüzdür. Arayüz, kullanıcı ile sistem arasında etkileşim sağlayan ekran yapısıdır."
+  },
+  {
+    q: "Admin kullanıcı şifrelerinin güvenli saklanması için en doğru yöntem hangisidir?",
+    t: "mcq",
+    o: ["Düz metin olarak saklamak", "Excel dosyasına yazmak", "HTML içine gömmek", "Cookie içinde tutmak", "Hash'lenmiş olarak saklamak"],
+    a: 4,
+    difficulty: "easy",
+    week: 9,
+    topic: "Şifre Güvenliği",
+    importance: 5,
+    explanation: "Hash, verinin tek yönlü matematiksel dönüşümüdür. Şifreler hash'lenmiş tutulursa doğrudan okunamaz. Bu, güvenliği artırır."
+  },
+  {
+    q: "PHP'de MySQL bağlantısı için derste tercih edilen yapı hangisidir?",
+    t: "mcq",
+    o: ["mysqli", "session", "cookie", "fopen", "strlen"],
+    a: 0,
+    difficulty: "easy",
+    week: 9,
+    topic: "mysqli",
+    importance: 5,
+    explanation: "mysqli, PHP ile MySQL veritabanı arasında bağlantı ve sorgu işlemleri yapmak için kullanılan bir kütüphanedir. Kütüphane, hazır fonksiyonlar sunan kod paketidir."
+  },
+  {
+    q: "Hash'lenmiş parolayı doğrulamak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["password_hash()", "password_verify()", "md5()", "check_pass()", "verify_hash()"],
+    a: 1,
+    difficulty: "medium",
+    week: 9,
+    topic: "password_verify",
+    importance: 5,
+    explanation: "password_verify(), düz metin parolayı kayıtlı hash ile karşılaştırır. Doğruysa true döndürür. Böylece şifre çözülmeden güvenli kontrol yapılmış olur."
+  },
+  {
+    q: "Kullanıcı giriş yaptıktan sonra durum bilgisini saklamak için en uygun yapı hangisidir?",
+    t: "mcq",
+    o: ["$_POST", "$_GET", "$_SESSION", "$_FILES", "$_REQUEST"],
+    a: 2,
+    difficulty: "easy",
+    week: 9,
+    topic: "Login Durumu",
+    importance: 5,
+    explanation: "Giriş yapan kullanıcının bilgisi genellikle $_SESSION içinde tutulur. Böylece başka sayfalarda kullanıcının yetkili olup olmadığı anlaşılabilir."
+  },
+  {
+    q: "db.php dosyasının temel amacı genellikle nedir?",
+    t: "mcq",
+    o: ["Resim çizmek", "CSS yazmak", "Form tasarlamak", "Ortak veritabanı bağlantısını merkezi hale getirmek", "Tarayıcı geçmişi silmek"],
+    a: 3,
+    difficulty: "medium",
+    week: 9,
+    topic: "db.php",
+    importance: 4,
+    explanation: "db.php gibi dosyalar ortak bağlantı kodlarını tek yerde toplar. Merkezi yapı, aynı kodu tekrar tekrar yazmamak ve bakım kolaylığı sağlamak için kullanılır."
+  },
+  {
+    q: "Kullanıcı çıkış yaptığında yapılması gereken temel işlem hangisidir?",
+    t: "mcq",
+    o: ["Veritabanını silmek", "Sunucuyu kapatmak", "Tüm tabloları boşaltmak", "Şifreyi ekrana yazdırmak", "Oturumu sonlandırmak"],
+    a: 4,
+    difficulty: "easy",
+    week: 9,
+    topic: "Logout",
+    importance: 5,
+    explanation: "Çıkış işleminde oturum sonlandırılır. Böylece kullanıcıya ait yetki bilgileri temizlenir ve başka biri aynı tarayıcıdan sisteme yetkisiz erişemez."
+  },
+  {
+    q: "SQL Injection riskini azaltmada en doğru yaklaşım hangisidir?",
+    t: "mcq",
+    o: ["Prepared statement kullanmak", "Şifreyi büyük yazmak", "URL kısaltmak", "Formu gizlemek", "Tarayıcıyı yenilemek"],
+    a: 0,
+    difficulty: "medium",
+    week: 9,
+    topic: "Prepared Statements",
+    importance: 5,
+    explanation: "Prepared statement, SQL sorgusu ile kullanıcı verisini ayrı işler. Böylece kötü niyetli girişlerin sorgu yapısını bozması zorlaşır."
+  },
+
+  // =========================================================
+  // ==== 10. HAFTA – VERİTABANI TEMELLERİ (8) ================
+  // =========================================================
+
+  {
+    q: "Veritabanı en doğru şekilde nasıl tanımlanır?",
+    t: "mcq",
+    o: ["Geçici RAM alanı", "Verilerin düzenli şekilde saklandığı ve yönetildiği sistem", "Sadece resim klasörü", "Metin editörü", "Tarayıcı geçmişi"],
+    a: 1,
+    difficulty: "easy",
+    week: 10,
+    topic: "Veritabanı",
+    importance: 5,
+    explanation: "Veritabanı, bilgilerin düzenli şekilde tutulduğu sistemdir. Düzenli yapı sayesinde veri ekleme, arama, güncelleme ve silme işlemleri kolaylaşır."
+  },
+  {
+    q: "DBMS kısaltmasının açılımı nedir?",
+    t: "mcq",
+    o: ["Data Backup Management System", "Dynamic Base Model Script", "Database Management System", "Digital Binary Main Server", "Data Branch Mapping Service"],
+    a: 2,
+    difficulty: "easy",
+    week: 10,
+    topic: "DBMS",
+    importance: 5,
+    explanation: "DBMS, Database Management System yani Veritabanı Yönetim Sistemi demektir. Bu yazılımlar veritabanı ile kullanıcı ya da uygulama arasındaki işlemleri yönetir."
+  },
+  {
+    q: "PHP'de veritabanı bağlantısı için derste belirtilen iki temel yöntem hangileridir?",
+    t: "mcq",
+    o: ["HTTP ve FTP", "Session ve Cookie", "GET ve POST", "mysqli ve PDO", "HTML ve CSS"],
+    a: 3,
+    difficulty: "easy",
+    week: 10,
+    topic: "Bağlantı Yöntemleri",
+    importance: 5,
+    explanation: "mysqli ve PDO, PHP'de veritabanı bağlantısı kurmak için yaygın kullanılan iki yöntemdir. PDO farklı veritabanı türleriyle daha esnek çalışma imkânı sunabilir."
+  },
+  {
+    q: "SQL'de yeni bir tablo oluşturmak için hangi komut kullanılır?",
+    t: "mcq",
+    o: ["ADD TABLE", "MAKE TABLE", "NEW TABLE", "INSERT TABLE", "CREATE TABLE"],
+    a: 4,
+    difficulty: "easy",
+    week: 10,
+    topic: "CREATE TABLE",
+    importance: 5,
+    explanation: "CREATE TABLE, veritabanında yeni tablo oluşturur. Tablo, satır ve sütunlardan oluşan veri yapısıdır."
+  },
+  {
+    q: "PRIMARY KEY neyi ifade eder?",
+    t: "mcq",
+    o: ["Tablodaki her kayıt için benzersiz ve boş olamayan ana alan", "Sadece metin alanı", "Geçici değişken", "Yedek anahtar", "Dosya adı"],
+    a: 0,
+    difficulty: "easy",
+    week: 10,
+    topic: "Primary Key",
+    importance: 5,
+    explanation: "PRIMARY KEY, her kaydı benzersiz tanımlayan alandır. Benzersiz demek aynı değerin tekrar etmemesi demektir."
+  },
+  {
+    q: "AUTO_INCREMENT özelliği ne işe yarar?",
+    t: "mcq",
+    o: ["Metni küçültür", "Her yeni kayıt için değeri otomatik artırır", "Tabloyu siler", "Şifreyi çözer", "Kayıtları sıralar"],
+    a: 1,
+    difficulty: "easy",
+    week: 10,
+    topic: "AUTO_INCREMENT",
+    importance: 5,
+    explanation: "AUTO_INCREMENT, genellikle id alanında kullanılır ve her yeni kayıt eklendiğinde değeri otomatik artırır. Böylece geliştirici elle numara vermek zorunda kalmaz."
+  },
+  {
+    q: "VARCHAR veri tipi en uygun olarak ne için kullanılır?",
+    t: "mcq",
+    o: ["Kesirli sayı", "Tarih", "Değişken uzunlukta metin", "Resim", "Boolean"],
+    a: 2,
+    difficulty: "easy",
+    week: 10,
+    topic: "VARCHAR",
+    importance: 5,
+    explanation: "VARCHAR, değişken uzunlukta metin saklamak için kullanılır. Örneğin ad veya soyad gibi veriler için uygundur."
+  },
+  {
+    q: "INT veri tipi ne tür veri saklar?",
+    t: "mcq",
+    o: ["Yalnızca harf", "Yalnızca tarih", "Yalnızca resim", "Tam sayı", "Yalnızca URL"],
+    a: 3,
+    difficulty: "easy",
+    week: 10,
+    topic: "INT",
+    importance: 5,
+    explanation: "INT veri tipi tam sayı saklar. Yaş, adet veya id gibi sayısal ama ondalıksız veriler için uygundur."
+  },
+
+  // =========================================================
+  // ==== 11. HAFTA – VERİTABANI OLUŞTURMA / INSERT (8) =======
+  // =========================================================
+
+  {
+    q: "Yeni veritabanı oluşturmak için kullanılan SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["MAKE DATABASE", "NEW DATABASE", "INSERT DATABASE", "BUILD DATABASE", "CREATE DATABASE"],
+    a: 4,
+    difficulty: "easy",
+    week: 11,
+    topic: "CREATE DATABASE",
+    importance: 5,
+    explanation: "CREATE DATABASE komutu yeni bir veritabanı oluşturur. Veritabanı, tabloların tutulduğu ana yapıdır."
+  },
+  {
+    q: "Yeni kayıt eklemek için kullanılan SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["INSERT INTO", "ADD ROW", "CREATE ROW", "PUT DATA", "NEW RECORD"],
+    a: 0,
+    difficulty: "easy",
+    week: 11,
+    topic: "INSERT INTO",
+    importance: 5,
+    explanation: "INSERT INTO, tabloya yeni kayıt eklemek için kullanılır. Kayıt, tablodaki bir satır anlamına gelir."
+  },
+  {
+    q: "Prepared statement mantığında SQL sorgusunu hazırlayan fonksiyon hangisidir?",
+    t: "mcq",
+    o: ["execute()", "prepare()", "query()", "connect()", "select()"],
+    a: 1,
+    difficulty: "medium",
+    week: 11,
+    topic: "prepare",
+    importance: 5,
+    explanation: "prepare(), sorgu yapısını önceden hazırlar. Sonra kullanıcı verileri güvenli şekilde bu sorguya bağlanır."
+  },
+  {
+    q: "Prepared statement içindeki ? işaretleri neyi ifade eder?",
+    t: "mcq",
+    o: ["Hata kodu", "Sabit değer", "Yer tutucu", "Veritabanı adı", "Tablo başlığı"],
+    a: 2,
+    difficulty: "medium",
+    week: 11,
+    topic: "Placeholder",
+    importance: 5,
+    explanation: "Yer tutucu, sorguda daha sonra gerçek değerle doldurulacak boş alan demektir. Bu yapı SQL injection riskini azaltır."
+  },
+  {
+    q: "PHP'de prepared statement içinde değişkenleri sorguya bağlamak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["prepare()", "query()", "fetch()", "bind_param()", "close()"],
+    a: 3,
+    difficulty: "medium",
+    week: 11,
+    topic: "bind_param",
+    importance: 5,
+    explanation: "bind_param(), değişkenleri prepared statement içindeki yer tutuculara bağlar. Böylece veri ve sorgu ayrı işlenmiş olur."
+  },
+  {
+    q: "\"ssi\" tür dizilimi genelde neyi ifade eder?",
+    t: "mcq",
+    o: ["string, string, string", "integer, integer, integer", "string, integer, string", "double, string, integer", "string, string, integer"],
+    a: 4,
+    difficulty: "hard",
+    week: 11,
+    topic: "Parametre Türleri",
+    importance: 4,
+    explanation: "bind_param içinde s string, i integer anlamına gelir. Bu yüzden ssi ifadesi iki metin ve bir tam sayı verisi bağlanacağını gösterir."
+  },
+  {
+    q: "Prepared statement hazırlandıktan sonra sorguyu çalıştırmak için hangi işlem yapılır?",
+    t: "mcq",
+    o: ["execute()", "bind_result()", "store_result()", "fetch()", "close()"],
+    a: 0,
+    difficulty: "medium",
+    week: 11,
+    topic: "execute",
+    importance: 5,
+    explanation: "execute(), hazırlanmış sorgunun veritabanında çalıştırılmasını sağlar. Hazırlama ve çalıştırma adımlarının ayrılması güvenlik ve düzen sağlar."
+  },
+  {
+    q: "Tablodaki kayıtları listelemek için en temel SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["INSERT", "SELECT", "DELETE", "DROP", "ALTER"],
+    a: 1,
+    difficulty: "easy",
+    week: 11,
+    topic: "SELECT",
+    importance: 5,
+    explanation: "SELECT, veritabanından veri çekmek için kullanılır. Listeleme, arama ve raporlama gibi birçok işlem bu komutla yapılır."
+  },
+
+  // =========================================================
+  // ==== 12. HAFTA – KAYIT/LİSTELEME/ARAMA (9) ===============
+  // =========================================================
+
+  {
+    q: "HTML formunda verilerin gönderileceği PHP dosyasını belirleyen özellik hangisidir?",
+    t: "mcq",
+    o: ["name", "method", "action", "type", "value"],
+    a: 2,
+    difficulty: "easy",
+    week: 12,
+    topic: "Form Action",
+    importance: 5,
+    explanation: "action özelliği, form gönderildiğinde isteğin hangi dosyaya gideceğini belirler. Örneğin kaydet.php gibi bir dosya burada yazılır."
+  },
+  {
+    q: "Form verilerini kayıt amacıyla gönderirken genellikle hangi method kullanılır?",
+    t: "mcq",
+    o: ["GET", "REQUEST", "PUT", "POST", "TRACE"],
+    a: 3,
+    difficulty: "easy",
+    week: 12,
+    topic: "Form Method",
+    importance: 5,
+    explanation: "POST yöntemi form verilerini body kısmında gönderir. Bu yüzden kayıt işlemlerinde çok tercih edilir."
+  },
+  {
+    q: "Formdan gelen verileri PHP tarafında almak için en uygun süper global hangisidir?",
+    t: "mcq",
+    o: ["$_GET", "$_FILES", "$_REQUEST", "$_SERVER", "$_POST"],
+    a: 4,
+    difficulty: "easy",
+    week: 12,
+    topic: "Form Verisi Alma",
+    importance: 5,
+    explanation: "Form POST ile gönderildiyse veriler $_POST içinde yer alır. Her form alanının name değeri anahtar olarak kullanılır."
+  },
+  {
+    q: "Formdan alınan verileri veritabanına eklemek için en temel SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["INSERT INTO", "UPDATE", "DELETE", "SELECT", "ALTER"],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Kayıt İşlemi",
+    importance: 5,
+    explanation: "INSERT INTO, yeni verileri tabloya ekler. Kullanıcı formu doldurduğunda bu komutla kayıt yapılır."
+  },
+  {
+    q: "prepare() kullanımının temel amacı hangisidir?",
+    t: "mcq",
+    o: ["Sayfayı renklendirmek", "Sorguyu daha güvenli hale getirmek", "Dosya yüklemek", "Session açmak", "Cookie silmek"],
+    a: 1,
+    difficulty: "easy",
+    week: 12,
+    topic: "prepare Güvenliği",
+    importance: 5,
+    explanation: "prepare(), kullanıcı verisini sorgudan ayırır. Böylece sorgunun zararlı girişlerle bozulma ihtimali azalır."
+  },
+  {
+    q: "Kötü niyetli kullanıcının sorguya zararlı veri ekleyerek SQL yapısını bozmasına ne denir?",
+    t: "mcq",
+    o: ["XSS", "CSRF", "SQL Injection", "Session Hijacking", "Flood"],
+    a: 2,
+    difficulty: "medium",
+    week: 12,
+    topic: "SQL Injection",
+    importance: 5,
+    explanation: "SQL Injection, kullanıcı girdisinin sorguya zararlı biçimde karışmasıdır. Bu ciddi bir güvenlik açığıdır."
+  },
+  {
+    q: "Form elemanlarında veriyi temsil eden anahtar değer hangi özellik ile verilir?",
+    t: "mcq",
+    o: ["id", "class", "style", "name", "src"],
+    a: 3,
+    difficulty: "easy",
+    week: 12,
+    topic: "name Özelliği",
+    importance: 5,
+    explanation: "name özelliği, form verisinin PHP tarafında hangi anahtar adıyla geleceğini belirler. Örneğin <input name='ad'> gönderildiğinde $_POST['ad'] ile erişilir."
+  },
+  {
+    q: "Kayıtları ekrana getirmek için en temel SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["UPDATE", "DELETE", "ALTER", "DROP", "SELECT"],
+    a: 4,
+    difficulty: "easy",
+    week: 12,
+    topic: "Listeleme",
+    importance: 5,
+    explanation: "SELECT komutu verileri çekmek için kullanılır. Listeleme işlemi, tablodaki kayıtların kullanıcıya gösterilmesidir."
+  },
+  {
+    q: "Arama işlemlerinde sonuçları sınırlamak için genellikle hangi SQL bölümü kullanılır?",
+    t: "mcq",
+    o: ["WHERE", "TABLE", "ORDER", "GROUP", "INDEX"],
+    a: 0,
+    difficulty: "medium",
+    week: 12,
+    topic: "Arama",
+    importance: 5,
+    explanation: "WHERE, sorguda hangi kayıtların seçileceğini belirleyen koşul bölümüdür. Arama, filtreleme ve belirli kayıtları bulmada temel rol oynar."
+  },
+
+  // =========================================================
+  // ==== 13. HAFTA – GÜNCELLEME / SİLME (9) ==================
+  // =========================================================
+
+  {
+    q: "Var olan bir kaydı değiştirmek için kullanılan SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["INSERT", "UPDATE", "DELETE", "SELECT", "ALTER"],
+    a: 1,
+    difficulty: "easy",
+    week: 13,
+    topic: "UPDATE",
+    importance: 5,
+    explanation: "UPDATE komutu, mevcut kaydın alanlarını değiştirmek için kullanılır. Güncelleme, var olan verinin yeni değerlerle değiştirilmesidir."
+  },
+  {
+    q: "Var olan bir kaydı tamamen kaldırmak için kullanılan SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["UPDATE", "INSERT", "DELETE", "DROP", "ALTER"],
+    a: 2,
+    difficulty: "easy",
+    week: 13,
+    topic: "DELETE",
+    importance: 5,
+    explanation: "DELETE komutu seçilen kayıtları siler. Silme işlemi geri alınamayabileceği için dikkatli yapılmalıdır."
+  },
+  {
+    q: "Güncellenecek kaydın URL'den gelen id ile seçilmesi hangi amaçla yapılır?",
+    t: "mcq",
+    o: ["Sayfa rengini ayarlamak", "Sunucuyu kapatmak", "Hangi kaydın düzenleneceğini belirlemek", "Cookie silmek", "Dosya yüklemek"],
+    a: 2,
+    difficulty: "medium",
+    week: 13,
+    topic: "ID ile Seçim",
+    importance: 5,
+    explanation: "id değeri, hangi kaydın düzenleneceğini veya silineceğini ayırt etmek için kullanılır. id genellikle benzersiz anahtar alanıdır."
+  },
+  {
+    q: "Güncelleme ve silme işlemlerinde prepared statement kullanılmasının temel nedeni nedir?",
+    t: "mcq",
+    o: ["Formu kısaltmak", "Resim yüklemek", "Session açmak", "SQL Injection riskini azaltmak", "Tabloyu büyütmek"],
+    a: 3,
+    difficulty: "medium",
+    week: 13,
+    topic: "Güvenlik",
+    importance: 5,
+    explanation: "Prepared statement, kullanıcı girdisinin sorgu yapısını bozmasını engeller. Bu, özellikle update ve delete gibi kritik işlemlerde çok önemlidir."
+  },
+  {
+    q: "DELETE komutunun WHERE olmadan kullanılması ne gibi bir risk doğurur?",
+    t: "mcq",
+    o: ["Sadece bir kaydı siler", "Bağlantıyı keser", "Sorguyu hızlandırır", "Dosya oluşturur", "Tüm kayıtları silebilir"],
+    a: 4,
+    difficulty: "hard",
+    week: 13,
+    topic: "DELETE Riski",
+    importance: 5,
+    explanation: "WHERE olmadan DELETE kullanılırsa tablo içindeki tüm kayıtlar silinebilir. WHERE bölümü hedef kayıtları sınırlamak için kullanılır."
+  },
+  {
+    q: "Kullanıcının mevcut bilgileri düzenleyebilmesi için form alanlarının eski verilerle doldurulmasına ne denir?",
+    t: "mcq",
+    o: ["Ön doldurma", "Bağlama", "Temizleme", "Hashleme", "Şifreleme"],
+    a: 0,
+    difficulty: "medium",
+    week: 13,
+    topic: "Form Ön Doldurma",
+    importance: 4,
+    explanation: "Ön doldurma, düzenleme ekranında mevcut verilerin form içine yerleştirilmesidir. Böylece kullanıcı tüm verileri baştan girmek zorunda kalmaz."
+  },
+  {
+    q: "UPDATE sorgusunda hangi kayıtların değişeceğini belirlemek için genellikle hangi bölüm kullanılır?",
+    t: "mcq",
+    o: ["ORDER BY", "WHERE", "GROUP BY", "HAVING", "LIMIT"],
+    a: 1,
+    difficulty: "easy",
+    week: 13,
+    topic: "WHERE",
+    importance: 5,
+    explanation: "WHERE, hangi kayıtların etkileneceğini belirler. Güncellemede yanlış kayıtların değişmesini önlemek için kritik öneme sahiptir."
+  },
+  {
+    q: "Silme işleminden önce kullanıcıdan onay almak neden faydalıdır?",
+    t: "mcq",
+    o: ["Kodları yavaşlatır", "Renkleri düzeltir", "Yanlışlıkla veri silinmesini azaltır", "Tablo adını değiştirir", "Sunucuyu yeniden başlatır"],
+    a: 2,
+    difficulty: "medium",
+    week: 13,
+    topic: "Silme Onayı",
+    importance: 4,
+    explanation: "Silme işlemleri geri dönüşü zor olabileceği için kullanıcıdan onay almak veri kaybını azaltır. Bu, kullanılabilirlik ve güvenlik açısından iyi bir uygulamadır."
+  },
+  {
+    q: "Güncelleme veya silme sonrası kullanıcıyı başka sayfaya yönlendirme işlemi niçin yapılır?",
+    t: "mcq",
+    o: ["RAM temizlemek için", "Şifre üretmek için", "Dosya yüklemek için", "İşlem sonucunu daha düzenli göstermek için", "MAC adresi almak için"],
+    a: 3,
+    difficulty: "medium",
+    week: 13,
+    topic: "Yönlendirme",
     importance: 3,
-    explanation: "Makine dili işlemcinin doğrudan anlayabildiği 0 ve 1 tabanlı dildir. İnsanlar için okunması zordur ama donanıma en yakın seviyededir."
+    explanation: "İşlem sonrası yönlendirme, kullanıcı deneyimini düzenler ve sayfanın yeniden gönderilmesi gibi sorunları azaltabilir. Kullanıcı deneyimi, kullanıcının sistemi rahat kullanabilmesidir."
   },
 
+  // =========================================================
+  // ==== 14. HAFTA – DOSYA / KLASÖR İŞLEMLERİ (10) ===========
+  // =========================================================
+
   {
-    q: "Nesne yönelimli dillere hangisi örnek verilebilir?",
+    q: "PHP'de dosya açmak için en temel fonksiyon hangisidir?",
     t: "mcq",
-    o: [
-      "HTML",
-      "CSS",
-      "C#",
-      "SQL SELECT",
-      "TXT"
-    ],
+    o: ["fopen()", "fread()", "fwrite()", "file()", "unlink()"],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "fopen",
+    importance: 5,
+    explanation: "fopen(), dosyayı belirtilen modda açar. Mod, dosyanın okunacağı mı yazılacağı mı gibi çalışma biçimini belirler."
+  },
+  {
+    q: "'r' modu ne için kullanılır?",
+    t: "mcq",
+    o: ["Dosyaya ekleme yapmak", "Dosyayı okuma modunda açmak", "Dosyayı silmek", "Yeni klasör açmak", "Dosya adını değiştirmek"],
+    a: 1,
+    difficulty: "easy",
+    week: 14,
+    topic: "Dosya Modları",
+    importance: 5,
+    explanation: "'r' modu, dosyayı yalnızca okumak için açar. Dosya yoksa işlem başarısız olur."
+  },
+  {
+    q: "'w' modu ile dosya açılırsa ne olur?",
+    t: "mcq",
+    o: ["Dosya sadece okunur", "Dosya olduğu gibi kalır", "Dosya yazmak için açılır ve varsa içeriği sıfırlanır", "Dosya şifrelenir", "Dosya kopyalanır"],
     a: 2,
     difficulty: "easy",
-    week: 1,
-    topic: "OOP Dilleri",
+    week: 14,
+    topic: "w Modu",
+    importance: 5,
+    explanation: "'w' modu yazma içindir. Dosya varsa içeriği silinir, yoksa yeni dosya oluşturulur. Bu yüzden dikkatli kullanılmalıdır."
+  },
+  {
+    q: "'a' modu ne işe yarar?",
+    t: "mcq",
+    o: ["Dosyayı siler", "Sadece okur", "İçeriği sıfırlar", "Dosyanın sonuna ekleme yapar", "Klasör oluşturur"],
+    a: 3,
+    difficulty: "easy",
+    week: 14,
+    topic: "a Modu",
+    importance: 5,
+    explanation: "'a' modu append yani ekleme modudur. Dosyanın mevcut içeriğini silmeden sonuna yeni veri ekler."
+  },
+  {
+    q: "Dosyadan veri okumak için kullanılan fonksiyon hangisidir?",
+    t: "mcq",
+    o: ["fopen()", "fclose()", "file_put_contents()", "mkdir()", "fread()"],
+    a: 4,
+    difficulty: "easy",
+    week: 14,
+    topic: "fread",
+    importance: 5,
+    explanation: "fread(), açık bir dosyadan belirli miktarda veri okur. Okuma işlemi için dosyanın önce fopen ile açılmış olması gerekir."
+  },
+  {
+    q: "Dosyaya veri yazmak için kullanılan fonksiyon hangisidir?",
+    t: "mcq",
+    o: ["fwrite()", "fread()", "fclose()", "unlink()", "file()"],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "fwrite",
+    importance: 5,
+    explanation: "fwrite(), açık dosyaya veri yazar. Yazılan veri byte cinsinden değerlendirilebilir; byte, veri depolamada temel ölçü birimidir."
+  },
+  {
+    q: "Dosya sonuna gelinip gelinmediğini kontrol etmek için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["eof()", "feof()", "fend()", "endfile()", "is_end()"],
+    a: 1,
+    difficulty: "medium",
+    week: 14,
+    topic: "feof",
     importance: 4,
-    explanation: "C#, Java ve C++ nesne yönelimli programlamayı destekleyen dillerdendir. Bu dillerde sınıf, nesne, kalıtım ve çok biçimlilik gibi yapılar kullanılabilir."
+    explanation: "feof(), file end of file kontrolü yapar. Özellikle while döngüsü ile dosya okurken son satıra gelinip gelinmediğini anlamada kullanılır."
   },
-
   {
-    q: "Bir program geliştirme sürecinde analiz aşamasının temel amacı nedir?",
+    q: "Tüm dosya içeriğini tek seferde string olarak okumak için hangi fonksiyon kullanılır?",
     t: "mcq",
-    o: [
-      "Programı rastgele yazmak",
-      "Sadece kodu silmek",
-      "Sadece ekran rengini seçmek",
-      "Problemi ve ihtiyaçları anlamak",
-      "Sadece exe dosyası oluşturmak"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 1,
-    topic: "Program Geliştirme",
-    importance: 3,
-    explanation: "Analiz aşamasında problem anlaşılır, kullanıcının ihtiyacı belirlenir. Kodlama bundan sonra gelir. İyi analiz yapılmazsa doğru program yazmak zorlaşır."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi programlama dillerinin genel ilkelerinden biridir?",
-    t: "mcq",
-    o: [
-      "Rastgelelik",
-      "Gereksiz karmaşıklık",
-      "Kod tekrarını artırma",
-      "Veriyi bozma",
-      "Soyutlama"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 1,
-    topic: "Programlama İlkeleri",
-    importance: 4,
-    explanation: "Soyutlama, gereksiz ayrıntıları gizleyip gerekli bilgileri öne çıkarma ilkesidir. OOP'nin de temel ilkelerinden biridir."
-  },
-
-  {
-    q: "OOP'de gerçek dünya nesnelerini modellemek ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Gerçek varlıkları sınıf ve nesne yapılarıyla temsil etmek",
-      "Sadece metin dosyası oluşturmak",
-      "Sadece bilgisayarı kapatmak",
-      "Sadece veri silmek",
-      "Sadece grafik çizmek"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 2,
-    topic: "Modelleme",
-    importance: 5,
-    explanation: "OOP'de gerçek dünyadaki araba, insan, öğrenci, kitap gibi varlıklar sınıflarla modellenir. Bu sınıflardan oluşturulan nesneler program içinde kullanılır."
-  },
-
-  {
-    q: "OOP'de veri ve davranışların bir arada tutulması hangi yaklaşımı anlatır?",
-    t: "mcq",
-    o: [
-      "Sadece SQL",
-      "Nesne yaklaşımı",
-      "Makine dili",
-      "Dosya sıkıştırma",
-      "Konsol temizleme"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 2,
-    topic: "Data + Behavior",
-    importance: 5,
-    explanation: "OOP'de veri ve davranış birlikte düşünülür. Örneğin Araba sınıfında hem marka/hız gibi veriler hem de Hizlan() gibi davranışlar bulunur."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi OOP'nin bakım kolaylığı sağlamasına örnektir?",
-    t: "mcq",
-    o: [
-      "Tüm kodu tek satıra yazmak",
-      "Tüm sınıfları silmek",
-      "Değişikliğin sadece ilgili sınıfta yapılabilmesi",
-      "Verileri rastgele dağıtmak",
-      "Her metodu aynı işi yapacak şekilde yazmak"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 3,
-    topic: "Bakım Kolaylığı",
-    importance: 5,
-    explanation: "OOP'de görevler sınıflara bölündüğü için değişiklik çoğunlukla ilgili sınıfta yapılır. Bu, büyük projelerde hata riskini ve bakım maliyetini azaltır."
-  },
-
-  {
-    q: "Bir sınıftan birden fazla nesne oluşturulabilmesi neyi gösterir?",
-    t: "mcq",
-    o: [
-      "Sınıfın sadece bir kez kullanılabileceğini",
-      "Nesnenin sınıftan bağımsız olduğunu",
-      "Metotların çalışmayacağını",
-      "Sınıfın şablon gibi tekrar kullanılabildiğini",
-      "Programın çalışmayacağını"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "Nesne Üretimi",
-    importance: 5,
-    explanation: "Bir sınıf plan gibi olduğu için aynı plandan çok sayıda nesne oluşturulabilir. Her nesne aynı özelliklere sahip olur ama değerleri farklı olabilir."
-  },
-
-  {
-    q: "Araba sınıfında Marka, Model, Hiz alanları; Hizlan() metodu varsa en doğru yorum hangisidir?",
-    t: "mcq",
-    o: [
-      "Marka ve Model metottur, Hizlan alanıdır",
-      "Sınıf kullanılamaz",
-      "Hizlan bir veritabanıdır",
-      "Marka sadece constructor'dır",
-      "Marka/Model/Hiz özellik, Hizlan davranıştır"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "Özellik ve Metot",
-    importance: 5,
-    explanation: "Sınıfta veriyi tutan yapılar özellik/alan, işlem yapan yapılar metottur. Marka, Model, Hiz veri; Hizlan() ise davranıştır."
-  },
-
-  // =========================================================
-  // ==== 2. BÖLÜM – KAPSÜLLEME, SOYUTLAMA, ERİŞİM (21-40) ====
-  // =========================================================
-
-  {
-    q: "Kapsülleme (encapsulation) en doğru şekilde neyi sağlar?",
-    t: "mcq",
-    o: [
-      "Veriyi sınıf içinde koruyup kontrollü erişim sağlamayı",
-      "Tüm verileri public yapmayı",
-      "Sınıfları tamamen silmeyi",
-      "Kalıtımı yasaklamayı",
-      "Metotların çalışmasını engellemeyi"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 2,
-    topic: "Encapsulation",
-    importance: 5,
-    explanation: "Kapsülleme, sınıfın iç verilerini dışarıdan doğrudan erişime kapatıp metot veya property aracılığıyla kontrollü erişim sağlar. Bu, veri güvenliği için önemlidir."
-  },
-
-  {
-    q: "private erişim belirleyicisi ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Her yerden erişilebilir",
-      "Sadece tanımlandığı sınıf içinden erişilebilir",
-      "Sadece alt sınıflardan erişilebilir",
-      "Sadece namespace dışından erişilebilir",
-      "Her zaman static olur"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 4,
-    topic: "Private",
-    importance: 5,
-    explanation: "private üyeye yalnızca tanımlandığı sınıf içinden erişilebilir. Kapsülleme yaparken alanlar genellikle private yapılır."
-  },
-
-  {
-    q: "public erişim belirleyicisi için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece aynı metot içinde erişilir",
-      "Sadece constructor içinde çalışır",
-      "Her yerden erişilebilir",
-      "Sadece yıkıcı fonksiyonda kullanılır",
-      "Sadece abstract sınıfta geçerlidir"
-    ],
+    o: ["file()", "fread()", "file_get_contents()", "fopen()", "fclose()"],
     a: 2,
     difficulty: "easy",
-    week: 5,
-    topic: "Public",
+    week: 14,
+    topic: "file_get_contents",
     importance: 5,
-    explanation: "public üyeler sınıf dışından da erişilebilir. Ancak her şeyi public yapmak kapsülleme açısından doğru değildir; kritik veriler kontrollü açılmalıdır."
+    explanation: "file_get_contents(), tüm dosya içeriğini tek seferde alır. Küçük ve orta boy dosyalarda pratik bir çözümdür."
   },
-
   {
-    q: "protected erişim belirleyicisi en çok hangi durumda kullanılır?",
+    q: "Tek fonksiyonla dosyaya veri yazmak için hangi yapı kullanılır?",
     t: "mcq",
-    o: [
-      "Her yerden tamamen serbest erişim için",
-      "Sadece veritabanı silmek için",
-      "Sadece private alan oluşturmak için",
-      "Sınıf içinden ve alt sınıflardan erişim için",
-      "Metodu overload etmek için"
-    ],
+    o: ["fwrite()", "fopen()", "fread()", "file_put_contents()", "print_r()"],
     a: 3,
-    difficulty: "medium",
-    week: 5,
-    topic: "Protected",
+    difficulty: "easy",
+    week: 14,
+    topic: "file_put_contents",
     importance: 5,
-    explanation: "protected üye sınıfın kendi içinde ve o sınıftan türeyen alt sınıflar içinde kullanılabilir. Kalıtım konularında sık sorulur."
+    explanation: "file_put_contents(), dosya açma-kapama işlemlerini tek adımda kolaylaştırarak veri yazar. Basit yazma işlemlerinde çok kullanışlıdır."
   },
-
   {
-    q: "Kapsülleme için en uygun örnek hangisidir?",
+    q: "file_put_contents içinde dosyanın sonuna ekleme yapmak için hangi sabit kullanılır?",
     t: "mcq",
-    o: [
-      "Tüm alanları public yapmak",
-      "Veriyi doğrudan dışarı açmak",
-      "Metotları hiç kullanmamak",
-      "Sınıfı hiç oluşturmamak",
-      "private alanı public metot/property ile kontrollü kullanmak"
-    ],
+    o: ["FILE_END", "APPEND_FILE", "PUT_APPEND", "ADD_MODE", "FILE_APPEND"],
     a: 4,
     difficulty: "medium",
-    week: 4,
-    topic: "Kapsülleme Örneği",
+    week: 14,
+    topic: "FILE_APPEND",
     importance: 5,
-    explanation: "Kapsülleme mantığında veri doğrudan dışarı açılmaz. Örneğin private int yas; alanına negatif değer girilmesini engellemek için SetYas veya property içinde kontrol yapılır."
-  },
-
-  {
-    q: "Soyutlama (abstraction) en kısa tanımıyla nedir?",
-    t: "mcq",
-    o: [
-      "Gereksiz ayrıntıları gizleyip gerekli bilgileri sunmak",
-      "Tüm metotları silmek",
-      "Tüm alanları public yapmak",
-      "Sınıftan nesne üretmeyi engellemek",
-      "Programı makine diline çevirmek"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "Abstraction",
-    importance: 5,
-    explanation: "Soyutlama, karmaşık yapının sadece gerekli kısmını kullanıcıya göstermektir. Örneğin araba kullanırken motorun tüm iç detaylarını bilmeden gaz/fren kullanırız."
-  },
-
-  {
-    q: "Veri soyutlamasına en uygun örnek hangisidir?",
-    t: "mcq",
-    o: [
-      "Yaş alanına -10 değerini doğrudan vermek",
-      "Yaş değerini property/metot ile kontrol ederek atamak",
-      "Tüm sınıfları kaldırmak",
-      "Metotları hiç çağırmamak",
-      "Constructor yazmamak"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 1,
-    topic: "Veri Soyutlama",
-    importance: 5,
-    explanation: "Veri soyutlaması, verinin doğru ve kontrollü kullanılmasını sağlar. Yaş alanına negatif değer atanmasını engellemek bunun tipik örneğidir."
-  },
-
-  {
-    q: "Kontrol soyutlaması hangi yapılarla ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Sadece veritabanı tabloları",
-      "Sadece dosya isimleri",
-      "Fonksiyon, metot veya alt programlar",
-      "Sadece renk seçimi",
-      "Sadece namespace"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 1,
-    topic: "Kontrol Soyutlama",
-    importance: 4,
-    explanation: "Kontrol soyutlaması, belirli işlemleri fonksiyon veya metot gibi yapılarla düzenlemektir. Yaş kontrolünü ayrı metotta yapmak buna örnektir."
-  },
-
-  {
-    q: "Bir sınıfın iç verilerini gizlemesi ve sadece belirli metotlarla eriştirmesi hangi OOP ilkesidir?",
-    t: "mcq",
-    o: [
-      "Kalıtım",
-      "Çok biçimlilik",
-      "Overloading",
-      "Kapsülleme",
-      "Yıkıcı fonksiyon"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 2,
-    topic: "Encapsulation",
-    importance: 5,
-    explanation: "Veriyi gizleme ve kontrollü erişim kapsüllemedir. Özellikle private alan + public property/metot yapısı sınavda sık sorulur."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi kapsüllemenin avantajıdır?",
-    t: "mcq",
-    o: [
-      "Veri güvenliğini azaltır",
-      "Yanlış veri girişini kolaylaştırır",
-      "Kod tekrarını artırır",
-      "Sınıf kullanımını yasaklar",
-      "Veriye kontrollü erişim sağlar"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 4,
-    topic: "Kapsülleme Avantajı",
-    importance: 5,
-    explanation: "Kapsülleme sayesinde sınıf içindeki veri rastgele değiştirilemez. Programcı verinin nasıl okunup yazılacağını kontrol eder."
-  },
-
-  {
-    q: "Property kullanımının temel amacı nedir?",
-    t: "mcq",
-    o: [
-      "Alanlara kontrollü okuma/yazma sağlamak",
-      "Programı kapatmak",
-      "Tüm metotları silmek",
-      "Sınıfı abstract yapmak",
-      "Sadece namespace değiştirmek"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 4,
-    topic: "Property",
-    importance: 5,
-    explanation: "Property, private alanlara kontrollü erişim için kullanılır. get ile okuma, set ile yazma yapılır ve gerekirse set içinde kontrol eklenir."
-  },
-
-  {
-    q: "Aşağıdaki alan tanımı kapsülleme açısından neden uygundur? private string kartNumarasi;",
-    t: "mcq",
-    o: [
-      "Çünkü dışarıdan doğrudan değiştirilemez",
-      "Çünkü herkes erişebilir",
-      "Çünkü metot değildir",
-      "Çünkü sınıfı yok eder",
-      "Çünkü constructor'dır"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 2,
-    topic: "Private Field",
-    importance: 5,
-    explanation: "private alan dışarıdan doğrudan erişilemez. Kart numarası gibi hassas veriler bu şekilde korunmalı ve kontrollü metotlarla kullanılmalıdır."
-  },
-
-  {
-    q: "Kapsülleme ihlaline en uygun örnek hangisidir?",
-    t: "mcq",
-    o: [
-      "private alan kullanmak",
-      "Property içinde kontrol yapmak",
-      "Hassas alanları public yapıp doğrudan değiştirmek",
-      "Metotla erişim sağlamak",
-      "Veri doğrulaması yapmak"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "Kapsülleme İhlali",
-    importance: 5,
-    explanation: "Hassas verileri public yapmak, dışarıdan kontrolsüz değişiklik yapılmasına neden olur. Bu kapsülleme mantığına aykırıdır."
-  },
-
-  {
-    q: "Bir sınıfta sadece gerekli metotların kullanıcıya sunulması, detayların gizlenmesi hangi ilkeyle ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Overload",
-      "Constructor",
-      "Destructor",
-      "Soyutlama",
-      "Boxing"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "Soyutlama",
-    importance: 5,
-    explanation: "Soyutlama, kullanıcının gereksiz iç detaylarla uğraşmadan gerekli işlevleri kullanmasını sağlar. Bu, karmaşıklığı azaltır."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi erişim belirleyicidir?",
-    t: "mcq",
-    o: [
-      "Console",
-      "WriteLine",
-      "return",
-      "foreach",
-      "public"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 5,
-    topic: "Access Modifier",
-    importance: 5,
-    explanation: "public, private ve protected erişim belirleyicilerdir. Üyelere nereden erişileceğini belirlerler."
-  },
-
-  {
-    q: "Bir sınıfta alanların private, metotların public yapılması genelde hangi amaca hizmet eder?",
-    t: "mcq",
-    o: [
-      "Veriyi koruyup davranışları dışarı açmaya",
-      "Programı bozarak test etmeye",
-      "Sınıfı kullanılamaz yapmaya",
-      "Metotları gizlemeye",
-      "Kalıtımı tamamen engellemeye"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 4,
-    topic: "OOP Tasarımı",
-    importance: 5,
-    explanation: "Bu yaklaşım OOP tasarımında yaygındır. Veri doğrudan korunur, kullanıcı ise sınıfın sunduğu metotlarla güvenli işlem yapar."
-  },
-
-  {
-    q: "Soyut sınıfın doğrudan nesnesi neden oluşturulamaz?",
-    t: "mcq",
-    o: [
-      "Çünkü her zaman static olmak zorundadır",
-      "Çünkü eksik/genel davranışları temsil eder ve alt sınıflar tarafından tamamlanmalıdır",
-      "Çünkü public alan içeremez",
-      "Çünkü metot içeremez",
-      "Çünkü sadece veritabanıdır"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 6,
-    topic: "Abstract Class",
-    importance: 5,
-    explanation: "Abstract sınıf genel bir taslaktır. İçinde alt sınıfların tamamlaması gereken soyut metotlar olabilir; bu yüzden doğrudan new ile nesne oluşturulamaz."
-  },
-
-  {
-    q: "Interface hangi görevi üstlenir?",
-    t: "mcq",
-    o: [
-      "Sadece veri saklar",
-      "Sadece nesneyi yok eder",
-      "Bir sınıfın uygulaması gereken metotları tanımlar",
-      "Constructor'ın yerine geçer",
-      "Sadece private alan üretir"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 3,
-    topic: "Interface",
-    importance: 5,
-    explanation: "Interface, sınıfa 'şu metotları uygulamak zorundasın' diyen bir sözleşme gibidir. Metotların nasıl yapılacağını değil, hangi metotların olması gerektiğini belirtir."
-  },
-
-  {
-    q: "Interface içinde tanımlanan metot için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Mutlaka gövdesi olmak zorundadır",
-      "Sadece private olabilir",
-      "Hiçbir sınıf tarafından uygulanamaz",
-      "Sınıf tarafından uygulanması gereken imzayı belirtir",
-      "Sadece constructor olabilir"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "Interface Method",
-    importance: 5,
-    explanation: "Interface metotları genellikle sadece imza olarak tanımlanır. Bu interface'i kullanan sınıf, metodu kendi içinde yazar."
-  },
-
-  {
-    q: "Soyutlama ile kapsülleme arasındaki fark için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "İkisi tamamen aynıdır",
-      "Soyutlama sadece veritabanıdır",
-      "Kapsülleme sadece inheritance demektir",
-      "Soyutlama gereksiz detayı gizler; kapsülleme veriye erişimi kontrol eder",
-      "İkisi de OOP dışı kavramdır"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 4,
-    topic: "Abstraction vs Encapsulation",
-    importance: 5,
-    explanation: "Soyutlama kullanıcıya gerekli kısmı gösterir, kapsülleme verinin dışarıdan kontrolsüz değişmesini engeller. İkisi benzer görünse de amaçları farklıdır."
-  },
-
-  // =========================================================
-  // ==== 3. BÖLÜM – KALITIM / MİRAS ALMA (41-55) =============
-  // =========================================================
-
-  {
-    q: "Kalıtım (inheritance) nedir?",
-    t: "mcq",
-    o: [
-      "Bir sınıfın başka bir sınıftan özellik ve metot devralması",
-      "Bir metodu aynı sınıfta tekrar yazmak",
-      "Nesneyi bellekten silmek",
-      "Veritabanı oluşturmak",
-      "Sadece hata yakalamak"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "Inheritance",
-    importance: 5,
-    explanation: "Kalıtım, alt sınıfın üst sınıftaki özellik ve metotları kullanabilmesidir. Örneğin Kedi sınıfı Hayvan sınıfından türeyebilir."
-  },
-
-  {
-    q: "Base class ne demektir?",
-    t: "mcq",
-    o: [
-      "Alt sınıf",
-      "Kendisinden başka sınıf türetilen üst sınıf",
-      "Yıkıcı fonksiyon",
-      "Interface metodu",
-      "Nesne dizisi"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 5,
-    topic: "Base Class",
-    importance: 5,
-    explanation: "Base class, kendisinden alt sınıflar üretilen üst sınıftır. Parent class veya super class olarak da adlandırılır."
-  },
-
-  {
-    q: "Derived class ne demektir?",
-    t: "mcq",
-    o: [
-      "Sadece constructor",
-      "Sadece private field",
-      "Başka bir sınıftan türeyen alt sınıf",
-      "Veritabanı tablosu",
-      "Dönüş tipi"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 5,
-    topic: "Derived Class",
-    importance: 5,
-    explanation: "Derived class, bir üst sınıftan türetilen alt sınıftır. Child class veya subclass olarak da geçebilir."
-  },
-
-  {
-    q: "C# dilinde kalıtım hangi sembol ile gösterilir?",
-    t: "mcq",
-    o: [
-      ".",
-      "->",
-      "=",
-      ":",
-      "::"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 5,
-    topic: "Inheritance Syntax",
-    importance: 5,
-    explanation: "C# dilinde class Kedi : Hayvan ifadesi Kedi sınıfının Hayvan sınıfından türediğini gösterir. İki nokta üst üste kalıtım için kullanılır."
-  },
-
-  {
-    q: "class Kedi : Hayvan ifadesinde Hayvan neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Alt sınıfı",
-      "Nesne adını",
-      "Yıkıcı fonksiyonu",
-      "Metot adını",
-      "Üst sınıfı"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 5,
-    topic: "Inheritance Syntax",
-    importance: 5,
-    explanation: "class Kedi : Hayvan ifadesinde Kedi alt sınıf, Hayvan üst sınıftır. Kedi, Hayvan sınıfındaki public/protected üyeleri kullanabilir."
-  },
-
-  {
-    q: "Kalıtımın temel avantajı hangisidir?",
-    t: "mcq",
-    o: [
-      "Kod tekrarını azaltması",
-      "Tüm sınıfları private yapması",
-      "Programı çalışmaz hale getirmesi",
-      "Metot kullanımını yasaklaması",
-      "Nesne oluşturmayı engellemesi"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "Inheritance Advantage",
-    importance: 5,
-    explanation: "Kalıtım sayesinde ortak özellikler üst sınıfta yazılır ve alt sınıflar bu kodu tekrar yazmadan kullanır. Böylece kod tekrarı azalır."
-  },
-
-  {
-    q: "Alt sınıf, üst sınıfın hangi üyelerine doğrudan erişebilir?",
-    t: "mcq",
-    o: [
-      "Sadece private üyelere",
-      "public ve protected üyelere",
-      "Sadece destructor'a",
-      "Sadece namespace'e",
-      "Hiçbir üyeye erişemez"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 5,
-    topic: "Access in Inheritance",
-    importance: 5,
-    explanation: "Alt sınıf, üst sınıfın public ve protected üyelerine erişebilir. private üyeler yalnızca tanımlandığı sınıf içinde kullanılabilir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi kalıtım örneğidir?",
-    t: "mcq",
-    o: [
-      "class Araba { }",
-      "int x = 5;",
-      "class Kedi : Hayvan { }",
-      "Console.WriteLine();",
-      "string ad;"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 5,
-    topic: "Inheritance Example",
-    importance: 5,
-    explanation: "class Kedi : Hayvan ifadesi kalıtım örneğidir. Kedi, Hayvan sınıfından türetilmiştir."
-  },
-
-  {
-    q: "Base class içindeki ortak metotlar neden üst sınıfta tanımlanır?",
-    t: "mcq",
-    o: [
-      "Alt sınıflar kullanamasın diye",
-      "Program hata versin diye",
-      "Her alt sınıfta tekrar yazmak için",
-      "Kod tekrarını azaltmak için",
-      "Sınıf oluşturmayı engellemek için"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 5,
-    topic: "Reuse",
-    importance: 5,
-    explanation: "Ortak davranış üst sınıfta yazılırsa alt sınıflar tekrar yazmadan kullanır. Örneğin Hayvan sınıfındaki SesCikar() metodu Kedi tarafından kullanılabilir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi is-a ilişkisine örnektir?",
-    t: "mcq",
-    o: [
-      "Araba motor sahibidir",
-      "Kitap sayfa sahibidir",
-      "Öğrenci not sahibidir",
-      "Ev kapı sahibidir",
-      "Kedi bir Hayvandır"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 5,
-    topic: "is-a",
-    importance: 5,
-    explanation: "Kalıtım is-a ilişkisiyle açıklanır. Kedi bir Hayvandır ifadesi doğru bir kalıtım ilişkisidir. Bu yüzden Kedi sınıfı Hayvan sınıfından türeyebilir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi kalıtım için yanlış bir kullanımdır?",
-    t: "mcq",
-    o: [
-      "Ortak özellikleri üst sınıfa koymak",
-      "Alt sınıfta özel davranış eklemek",
-      "Kedi sınıfını Hayvan'dan türetmek",
-      "Her farklı nesne arasında zorla kalıtım kurmak",
-      "Kod tekrarını azaltmak"
-    ],
-    a: 3,
-    difficulty: "hard",
-    week: 5,
-    topic: "Kalıtım Tasarımı",
-    importance: 4,
-    explanation: "Kalıtım sadece mantıklı is-a ilişkilerinde kullanılmalıdır. Her sınıfı birbirinden türetmek doğru değildir; bazen composition daha uygundur."
-  },
-
-  {
-    q: "base anahtar kelimesi ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Alt sınıfı silmek için",
-      "Nesneyi yok etmek için",
-      "Üst sınıf üyesine/metoduna erişmek için",
-      "Interface oluşturmak için",
-      "Metodu overload etmek için"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 6,
-    topic: "base Keyword",
-    importance: 5,
-    explanation: "base, alt sınıftan üst sınıfın metot veya constructor'ına erişmek için kullanılır. Örneğin base.SesCikar() üst sınıftaki metodu çağırır."
-  },
-
-  {
-    q: "Kedi sınıfı Hayvan sınıfından türediğinde Kedi nesnesi için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Hayvan sınıfındaki hiçbir metodu kullanamaz",
-      "Sadece private alanları kullanır",
-      "Kalıtım çalışmaz",
-      "Hayvan sınıfının public/protected üyelerini kullanabilir",
-      "Nesne oluşturulamaz"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 5,
-    topic: "Derived Object",
-    importance: 5,
-    explanation: "Alt sınıf nesnesi, kendi üyelerini ve üst sınıftan gelen erişilebilir üyeleri kullanabilir. Bu yüzden Kedi nesnesi hem Miyav() hem de SesCikar() çağırabilir."
-  },
-
-  {
-    q: "Miras alma ile yeniden kullanılabilirlik arasındaki ilişki nedir?",
-    t: "mcq",
-    o: [
-      "Kalıtım kodun tekrar kullanılmasını engeller",
-      "Kalıtım sadece hata üretir",
-      "Kalıtım sadece veritabanı içindir",
-      "Kalıtım metotları tamamen siler",
-      "Üst sınıftaki ortak kod alt sınıflarca tekrar kullanılabilir"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 5,
-    topic: "Reusability",
-    importance: 5,
-    explanation: "Kalıtımın en büyük faydalarından biri yeniden kullanılabilirliktir. Üst sınıftaki kod alt sınıflarda tekrar yazılmadan kullanılabilir."
-  },
-
-  {
-    q: "Kalıtımda private üyelere neden doğrudan erişilemez?",
-    t: "mcq",
-    o: [
-      "Private yalnızca tanımlandığı sınıf içinde geçerli olduğu için",
-      "Private her yerden erişilebilir olduğu için",
-      "Private sadece constructor olduğu için",
-      "Private sadece interface olduğu için",
-      "Private static zorunlu olduğu için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 5,
-    topic: "Private in Inheritance",
-    importance: 5,
-    explanation: "private erişim belirleyicisi en kısıtlayıcı erişimdir. Alt sınıf bile private üyeye doğrudan erişemez; erişim gerekiyorsa protected veya public metot/property kullanılabilir."
-  },
-
-  // =========================================================
-  // ==== 4. BÖLÜM – POLYMORPHISM, VIRTUAL, OVERRIDE (56-75) ==
-  // =========================================================
-
-  {
-    q: "Çok biçimlilik (polymorphism) nedir?",
-    t: "mcq",
-    o: [
-      "Sadece tek sınıf yazmak",
-      "Aynı isimli davranışın farklı sınıflarda farklı çalışabilmesi",
-      "Nesneyi silmek",
-      "Veritabanı oluşturmak",
-      "Sadece constructor çağırmak"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 6,
-    topic: "Polymorphism",
-    importance: 5,
-    explanation: "Polymorphism, aynı mesajın farklı nesnelerde farklı sonuç üretmesidir. Örneğin Ciz() metodu Daire'de daire, Kare'de kare çizebilir."
-  },
-
-  {
-    q: "Overloading hangi çok biçimlilik türüne örnektir?",
-    t: "mcq",
-    o: [
-      "Çalışma zamanı çok biçimliliği",
-      "Yıkıcı fonksiyon",
-      "Derleme zamanı çok biçimliliği",
-      "Veritabanı çok biçimliliği",
-      "Interface mirası"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 8,
-    topic: "Overloading",
-    importance: 5,
-    explanation: "Overloading, aynı isimde metotların farklı parametrelerle tanımlanmasıdır. Hangi metodun çalışacağı derleme zamanında belirlenir."
-  },
-
-  {
-    q: "Overriding hangi durumda gerçekleşir?",
-    t: "mcq",
-    o: [
-      "Aynı sınıfta aynı isimli farklı parametreli metot yazınca",
-      "Constructor parametresiz olunca",
-      "Destructor çağrılınca",
-      "Alt sınıfın üst sınıftaki virtual metodu override etmesiyle",
-      "Private alan public olunca"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 6,
-    topic: "Overriding",
-    importance: 5,
-    explanation: "Overriding, kalıtım ilişkisi içinde alt sınıfın üst sınıftaki virtual metodu kendi ihtiyacına göre yeniden yazmasıdır."
-  },
-
-  {
-    q: "Üst sınıftaki bir metodun alt sınıfta override edilebilmesi için genellikle hangi anahtar kelime gerekir?",
-    t: "mcq",
-    o: [
-      "private",
-      "static",
-      "sealed",
-      "new",
-      "virtual"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 6,
-    topic: "Virtual",
-    importance: 5,
-    explanation: "C# dilinde üst sınıftaki metot virtual olarak tanımlanırsa alt sınıfta override edilebilir. Bu, çalışma zamanı çok biçimliliğinin temelidir."
-  },
-
-  {
-    q: "Alt sınıfta üst sınıftaki virtual metodu yeniden yazmak için hangi anahtar kelime kullanılır?",
-    t: "mcq",
-    o: [
-      "override",
-      "new",
-      "base",
-      "class",
-      "return"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "Override",
-    importance: 5,
-    explanation: "override, üst sınıftaki virtual metodu alt sınıfta yeniden yazmak için kullanılır. Örneğin public override void Hizlan() { ... }."
-  },
-
-  {
-    q: "Aşağıdaki kodda hangi çıktı beklenir? Arac arac = new Araba(); arac.Hizlan(); Araba sınıfı Hizlan metodunu override etmişse.",
-    t: "mcq",
-    o: [
-      "Araç hızlanıyor.",
-      "Araba hızlanıyor.",
-      "Hata verir",
-      "Hiçbir şey yazmaz",
-      "Constructor çağrılmaz"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 6,
-    topic: "Runtime Polymorphism",
-    importance: 5,
-    explanation: "Referans tipi Arac olsa bile nesnenin gerçek tipi Araba'dır. Metot virtual/override ise çalışma zamanında Araba sınıfındaki metot çalışır."
-  },
-
-  {
-    q: "Metot overloading için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Mutlaka kalıtım gerekir",
-      "Sadece private metotlarda olur",
-      "Aynı isimli metotların farklı parametrelerle tanımlanmasıdır",
-      "Sadece destructor için geçerlidir",
-      "Metot adı farklı olmak zorundadır"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 8,
-    topic: "Method Overloading",
-    importance: 5,
-    explanation: "Overloading'de metot adı aynıdır ama parametre sayısı, sırası veya türü farklıdır. Örneğin Topla(int,int) ve Topla(double,double)."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi overload örneğidir?",
-    t: "mcq",
-    o: [
-      "void Topla(int a, int b) ve void Cikar(int a, int b)",
-      "class Kedi : Hayvan",
-      "public override void SesCikar()",
-      "int Topla(int a, int b) ve double Topla(double a, double b)",
-      "private string ad;"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 8,
-    topic: "Overload Example",
-    importance: 5,
-    explanation: "İki metodun adı Topla'dır ama parametre türleri farklıdır. Bu overload örneğidir. Kalıtım gerekmez."
-  },
-
-  {
-    q: "Overload ile override arasındaki temel fark nedir?",
-    t: "mcq",
-    o: [
-      "Overload sadece yıkıcı fonksiyondur",
-      "Override aynı sınıfta olur, overload kalıtım ister",
-      "İkisi tamamen aynıdır",
-      "Overload hiçbir parametre kullanmaz",
-      "Overload aynı sınıfta farklı parametrelerle; override kalıtımda metodu yeniden yazmayla ilgilidir"
-    ],
-    a: 4,
-    difficulty: "hard",
-    week: 8,
-    topic: "Overload vs Override",
-    importance: 5,
-    explanation: "Overload: aynı isim, farklı parametre. Override: üst sınıftaki virtual metodu alt sınıfta yeniden yazma. Finalde en çok karıştırılan ayrımdır."
-  },
-
-  {
-    q: "Abstract metot için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Gövdesi yoktur ve alt sınıfta uygulanmalıdır",
-      "Her zaman private olmalıdır",
-      "Sadece constructor içinde yazılır",
-      "Sadece static olabilir",
-      "Alt sınıfta kullanılamaz"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 6,
-    topic: "Abstract Method",
-    importance: 5,
-    explanation: "Abstract metot gövdesiz tanımlanır. Alt sınıf bu metodu override ederek kendi uygulamasını yazmak zorundadır."
-  },
-
-  {
-    q: "abstract class Sekil { public abstract void Ciz(); } için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Sekil sınıfından doğrudan nesne oluşturulabilir",
-      "Ciz metodu alt sınıflarca uygulanmalıdır",
-      "Ciz metodu private olmak zorundadır",
-      "Sekil sınıfı interface değildir ama hiç metot içeremez",
-      "Kodda kalıtım yoktur"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 6,
-    topic: "Abstract Class",
-    importance: 5,
-    explanation: "Abstract sınıftaki abstract metot alt sınıflarca override edilmelidir. Örneğin Daire sınıfı Ciz() metodunu kendi şekilde yazar."
-  },
-
-  {
-    q: "Interface ile abstract class arasındaki temel farklardan biri hangisidir?",
-    t: "mcq",
-    o: [
-      "Interface hiçbir sınıf tarafından kullanılamaz",
-      "Abstract class sadece veritabanı içindir",
-      "Interface bir sınıfa uygulanması gereken metot sözleşmesi verir",
-      "Abstract class içinde hiç metot olamaz",
-      "Interface constructor olmak zorundadır"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 6,
-    topic: "Interface vs Abstract",
-    importance: 5,
-    explanation: "Interface, sınıfın uygulaması gereken metotları tanımlayan bir sözleşme gibidir. Abstract class ise ortak temel davranış ve soyut metotları birlikte taşıyabilir."
-  },
-
-  {
-    q: "interface ICalisabilir { void Calis(); } kodu ne anlatır?",
-    t: "mcq",
-    o: [
-      "Calis metodu hemen çalışır",
-      "ICalisabilir bir nesnedir",
-      "Calis private alandır",
-      "Bu interface'i kullanan sınıf Calis metodunu yazmalıdır",
-      "Calis bir destructor'dır"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 6,
-    topic: "Interface Kullanımı",
-    importance: 5,
-    explanation: "Interface içinde metot imzası vardır. Robot : ICalisabilir yazılırsa Robot sınıfı Calis() metodunu uygulamalıdır."
-  },
-
-  {
-    q: "Çalışma zamanı çok biçimliliği en çok hangi yapılarla ilişkilidir?",
-    t: "mcq",
-    o: [
-      "Sadece overload",
-      "Sadece field",
-      "Sadece private değişken",
-      "Sadece constructor overloading",
-      "virtual ve override"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 6,
-    topic: "Runtime Polymorphism",
-    importance: 5,
-    explanation: "Çalışma zamanı çok biçimliliğinde hangi metodun çalışacağı nesnenin gerçek tipine göre belirlenir. C#'ta virtual/override bu işin temelidir."
-  },
-
-  {
-    q: "Derleme zamanı çok biçimliliği için en uygun örnek hangisidir?",
-    t: "mcq",
-    o: [
-      "Metot overloading",
-      "Metot overriding",
-      "Abstract metot",
-      "Virtual metot",
-      "Base referansla alt sınıf çağırma"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 8,
-    topic: "Compile-time Polymorphism",
-    importance: 5,
-    explanation: "Overloading'de hangi metodun çağrılacağı parametrelerden derleme zamanında anlaşılır. Bu yüzden compile-time polymorphism örneğidir."
-  },
-
-  {
-    q: "public virtual void SesCikar() ifadesindeki virtual ne sağlar?",
-    t: "mcq",
-    o: [
-      "Metodun private olmasını",
-      "Alt sınıfta override edilebilmesini",
-      "Sınıfın sealed olmasını",
-      "Metodun constructor olmasını",
-      "Metodun silinmesini"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 6,
-    topic: "Virtual Keyword",
-    importance: 5,
-    explanation: "virtual, üst sınıftaki metodun alt sınıfta yeniden yazılabileceğini belirtir. Alt sınıf override ile kendi davranışını verir."
-  },
-
-  {
-    q: "public override void SesCikar() ifadesi ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Yeni bir sınıf oluşturur",
-      "Nesneyi yok eder",
-      "Üst sınıftaki virtual metodu yeniden yazar",
-      "Metodu overload eder",
-      "Interface siler"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 6,
-    topic: "Override Keyword",
-    importance: 5,
-    explanation: "override, üst sınıftaki virtual metodu alt sınıfta yeniden tanımlamak için kullanılır. Bu, runtime polymorphism sağlar."
-  },
-
-  {
-    q: "Şekil, Daire, Kare örneği çok biçimliliği nasıl açıklar?",
-    t: "mcq",
-    o: [
-      "Tüm sınıflar aynı çıktıyı vermek zorundadır",
-      "Metotlar hiç çalışmaz",
-      "Kalıtım yasaktır",
-      "Aynı Ciz mesajına farklı şekillerin farklı cevap vermesiyle",
-      "Sadece constructor çalışmasıyla"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 1,
-    topic: "Polymorphism Example",
-    importance: 5,
-    explanation: "Daire, Kare ve Üçgen sınıfları aynı Ciz() metoduna sahip olabilir ama her biri farklı çizim yapar. Bu çok biçimliliktir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi interface kullanımının avantajıdır?",
-    t: "mcq",
-    o: [
-      "Sınıfların hiçbir kurala uymamasını sağlamak",
-      "Metotların çalışmasını engellemek",
-      "Kalıtımı tamamen kaldırmak",
-      "Constructor yazmayı yasaklamak",
-      "Sınıflara ortak bir standart/sözleşme kazandırmak"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "Interface Advantage",
-    importance: 5,
-    explanation: "Interface, farklı sınıfların ortak metotları uygulamasını zorunlu kılar. Böylece kod daha düzenli ve standart hale gelir."
-  },
-
-  {
-    q: "Nesne dizileri ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Birden fazla nesneyi aynı dizi içinde saklamaya",
-      "Sadece tek sayı tutmaya",
-      "Sadece hata yakalamaya",
-      "Sadece constructor silmeye",
-      "Sadece interface kapatmaya"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "Object Arrays",
-    importance: 4,
-    explanation: "Nesne dizileri birden fazla nesneyi düzenli şekilde saklamak için kullanılır. Örneğin Ogrenci[] ogrenciler = new Ogrenci[2];"
-  },
-
-  // =========================================================
-  // ==== 5. BÖLÜM – CONSTRUCTOR / DESTRUCTOR / EF (76-100) ===
-  // =========================================================
-
-  {
-    q: "Constructor nedir?",
-    t: "mcq",
-    o: [
-      "Nesne yok olunca çalışan metot",
-      "Nesne oluşturulduğunda otomatik çalışan özel metot",
-      "Sadece hata yakalayan blok",
-      "Sadece interface tanımı",
-      "Sadece veritabanı sorgusu"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 9,
-    topic: "Constructor",
-    importance: 5,
-    explanation: "Constructor, nesne oluşturulduğunda otomatik çalışan özel fonksiyondur. Genellikle nesnenin ilk değerlerini atamak için kullanılır."
-  },
-
-  {
-    q: "Constructor için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Mutlaka int döndürür",
-      "Mutlaka private olmak zorundadır",
-      "Sınıf adıyla aynı isme sahiptir ve dönüş tipi yazılmaz",
-      "Sadece interface içinde olur",
-      "Yalnızca nesne yok olunca çalışır"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 9,
-    topic: "Constructor Özellikleri",
-    importance: 5,
-    explanation: "Constructor'ın adı sınıf adıyla aynıdır ve dönüş tipi yoktur. Örneğin class Car için constructor Car() şeklindedir."
-  },
-
-  {
-    q: "Parametreli constructor ne sağlar?",
-    t: "mcq",
-    o: [
-      "Nesne oluşturmayı engeller",
-      "Sınıfı interface yapar",
-      "Metodu virtual yapar",
-      "Nesne oluşturulurken başlangıç değerleri verilmesini sağlar",
-      "Destructor'ı iptal eder"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 9,
-    topic: "Parametreli Constructor",
-    importance: 5,
-    explanation: "Parametreli constructor, nesne oluşturulurken dışarıdan değer alır. Örneğin new Ogrenci(\"Ali\", 20, 3.8) ile nesnenin ilk bilgileri atanabilir."
-  },
-
-  {
-    q: "Constructor overloading ne demektir?",
-    t: "mcq",
-    o: [
-      "Constructor'ın hiç yazılmaması",
-      "Destructor'ın parametre alması",
-      "Metotların silinmesi",
-      "Sınıfın nesne oluşturamaması",
-      "Aynı sınıfta farklı parametrelerle birden fazla constructor tanımlanması"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 9,
-    topic: "Constructor Overloading",
-    importance: 5,
-    explanation: "Constructor overloading, aynı sınıfta farklı parametre listelerine sahip birden fazla constructor yazmaktır. Böylece nesneler farklı yollarla başlatılabilir."
-  },
-
-  {
-    q: "Destructor nedir?",
-    t: "mcq",
-    o: [
-      "Nesne yok edilirken otomatik çalışan özel fonksiyon",
-      "Nesne oluşturulurken çalışan fonksiyon",
-      "Sınıfı kalıtımla genişleten yapı",
-      "Metodu overload eden yapı",
-      "Veritabanı bağlamı"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 9,
-    topic: "Destructor",
-    importance: 5,
-    explanation: "Destructor, nesne bellekten silinirken veya kapsam dışı kalırken çalışan özel fonksiyondur. Temizlik ve kaynak serbest bırakma işlerinde kullanılır."
-  },
-
-  {
-    q: "C++ tarzı destructor yazımında sınıf adının önüne hangi sembol gelir?",
-    t: "mcq",
-    o: [
-      "#",
-      "~",
-      "@",
-      "$",
-      "!"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 9,
-    topic: "Destructor Syntax",
-    importance: 5,
-    explanation: "Destructor sınıf adıyla aynı isme sahiptir ancak başında ~ sembolü bulunur. Örneğin Car sınıfının destructor'ı ~Car() şeklindedir."
-  },
-
-  {
-    q: "Destructor için doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "Birden fazla overload edilebilir",
-      "Parametre alır",
-      "Genellikle parametre almaz ve sınıfta tek tane olur",
-      "Sınıftan nesne oluşturur",
-      "Mutlaka int döndürür"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 9,
-    topic: "Destructor Özellikleri",
-    importance: 5,
-    explanation: "Destructor genellikle parametre almaz, dönüş tipi yoktur ve overload edilmez. Sınıf için tek destructor bulunur."
-  },
-
-  {
-    q: "Yıkıcı fonksiyonun temel amacı hangisidir?",
-    t: "mcq",
-    o: [
-      "Nesnenin ilk değerlerini atamak",
-      "Sınıfı kalıtımla genişletmek",
-      "Metodu overload etmek",
-      "Kaynakları serbest bırakmak ve temizlik yapmak",
-      "Interface oluşturmak"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 9,
-    topic: "Destructor Purpose",
-    importance: 5,
-    explanation: "Destructor, nesne yok edilmeden önce bellek, dosya, bağlantı gibi kaynakları serbest bırakmak için kullanılabilir."
-  },
-
-  {
-    q: "Öğrenci sınıfında constructor'ın isim, yaş, notOrtalaması alması neyi sağlar?",
-    t: "mcq",
-    o: [
-      "Nesnenin yok edilmesini",
-      "Metodun override edilmesini",
-      "Interface uygulanmasını",
-      "Sınıfın abstract olmasını",
-      "Öğrenci nesnesinin başlangıç bilgilerinin atanmasını"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 9,
-    topic: "Constructor Senaryosu",
-    importance: 5,
-    explanation: "Constructor parametreleri, nesne oluşurken değerleri doğrudan alanlara atamak için kullanılır. Böylece nesne eksik veya boş başlamaz."
-  },
-
-  {
-    q: "displayInfo() gibi bir metot genellikle ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Nesne bilgilerini ekrana yazdırmak için",
-      "Nesneyi bellekten silmek için",
-      "Sınıfı interface yapmak için",
-      "Metodu overload etmek için",
-      "Veritabanını silmek için"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 9,
-    topic: "displayInfo",
-    importance: 4,
-    explanation: "displayInfo() metodu, nesnenin bilgilerini kullanıcıya göstermek için kullanılır. Araba model/yıl/fiyat veya öğrenci isim/yaş/ortalama gibi bilgiler yazdırılabilir."
-  },
-
-  {
-    q: "Entity Framework nedir?",
-    t: "mcq",
-    o: [
-      "Sadece grafik çizim aracı",
-      "Microsoft tarafından geliştirilen ORM aracıdır",
-      "Sadece dosya sıkıştırıcıdır",
-      "Sadece makine dili derleyicisidir",
-      "Sadece interface türüdür"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 11,
-    topic: "Entity Framework",
-    importance: 5,
-    explanation: "Entity Framework, nesneler ile veritabanı tabloları arasında köprü kuran ORM aracıdır. Veritabanı işlemlerini sınıflar ve nesneler üzerinden yapmayı sağlar."
-  },
-
-  {
-    q: "ORM ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Object Random Method",
-      "Only Read Memory",
-      "Object Relational Mapping",
-      "Open Runtime Model",
-      "Output Record Manager"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 11,
-    topic: "ORM",
-    importance: 5,
-    explanation: "ORM, Object Relational Mapping demektir. Nesne yönelimli kod ile ilişkisel veritabanı arasındaki eşleştirmeyi sağlar."
-  },
-
-  {
-    q: "Entity Framework'te entity sınıfları genellikle neye karşılık gelir?",
-    t: "mcq",
-    o: [
-      "Sadece konsol ekranına",
-      "Sadece hata mesajına",
-      "Sadece constructor'a",
-      "Veritabanı tablolarına",
-      "Destructor'a"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 11,
-    topic: "Entity",
-    importance: 5,
-    explanation: "EF mantığında sınıflar veritabanı tablolarını temsil eder. Örneğin Book sınıfı veritabanında Books tablosuna karşılık gelebilir."
-  },
-
-  {
-    q: "Entity Framework'te sınıf özellikleri (properties) genellikle neye karşılık gelir?",
-    t: "mcq",
-    o: [
-      "Veritabanı satırlarına",
-      "Metot gövdelerine",
-      "Constructor parametrelerine",
-      "Namespace adlarına",
-      "Veritabanı sütunlarına"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 11,
-    topic: "EF Mapping",
-    importance: 5,
-    explanation: "EF'de entity sınıfındaki property'ler veritabanındaki kolonlara karşılık gelir. Book sınıfında Title, Author, PublishedYear sütun gibi düşünülebilir."
-  },
-
-  {
-    q: "DbContext ne için kullanılır?",
-    t: "mcq",
-    o: [
-      "Veritabanı işlemlerini yönetmek için",
-      "Metodu overload etmek için",
-      "Nesneyi yok etmek için",
-      "Sadece ekrana yazı yazmak için",
-      "Sadece abstract sınıf oluşturmak için"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 11,
-    topic: "DbContext",
-    importance: 5,
-    explanation: "DbContext, Entity Framework'te veritabanı ile uygulama arasındaki ana yönetim sınıfıdır. Ekleme, listeleme, silme gibi işlemler DbContext üzerinden yapılır."
-  },
-
-  {
-    q: "DbSet<Book> Books ifadesi neyi temsil eder?",
-    t: "mcq",
-    o: [
-      "Tek bir string değişkeni",
-      "Book kayıtlarının veritabanı kümesini/tablosunu",
-      "Destructor metodunu",
-      "Sadece console çıktısını",
-      "Interface imzasını"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 11,
-    topic: "DbSet",
-    importance: 5,
-    explanation: "DbSet<Book>, Book nesnelerinin veritabanında temsil edildiği koleksiyondur. Kitap ekleme, listeleme ve silme bu DbSet üzerinden yapılabilir."
-  },
-
-  {
-    q: "Code First yaklaşımı ne demektir?",
-    t: "mcq",
-    o: [
-      "Önce veritabanı elle kurulur, sonra sınıf üretilir",
-      "Önce model çizilir, sonra kod silinir",
-      "Önce kod/sınıflar yazılır, veritabanı bu modele göre oluşturulur",
-      "Önce destructor çalıştırılır",
-      "Önce interface kapatılır"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 11,
-    topic: "Code First",
-    importance: 5,
-    explanation: "Code First yaklaşımında önce C# sınıfları yazılır. EF bu sınıflara göre veritabanı yapısını oluşturur."
-  },
-
-  {
-    q: "Database First yaklaşımı neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Önce kod yazılır",
-      "Önce interface yazılır",
-      "Önce constructor silinir",
-      "Var olan veritabanından sınıfların oluşturulmasını",
-      "Metotların overload edilmesini"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 11,
-    topic: "Database First",
-    importance: 4,
-    explanation: "Database First yaklaşımında önce hazır bir veritabanı vardır. EF bu veritabanı yapısından sınıfları oluşturur."
-  },
-
-  {
-    q: "Book sınıfında BookId, Title, Author, PublishedYear alanları hangi senaryoya uygundur?",
-    t: "mcq",
-    o: [
-      "Hayvan sesi çıkarma",
-      "Araç hızlandırma",
-      "Şekil çizme",
-      "Constructor yok etme",
-      "Kitaplık sistemi için kitap bilgisi tutma"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 11,
-    topic: "Book Entity",
-    importance: 5,
-    explanation: "BookId, Title, Author ve PublishedYear bir kitabı tanımlayan bilgilerdir. Bu yüzden Book sınıfı kitaplık/kütüphane sistemi için entity olarak uygundur."
-  },
-
-  {
-    q: "Entity Framework ile kitap ekleme işleminde temel mantık hangisidir?",
-    t: "mcq",
-    o: [
-      "Book nesnesi oluşturup DbSet'e eklemek ve değişiklikleri kaydetmek",
-      "Book sınıfını abstract yapmak",
-      "Constructor'ı silmek",
-      "Interface'i kapatmak",
-      "Destructor'ı overload etmek"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 11,
-    topic: "EF Add",
-    importance: 5,
-    explanation: "EF ile ekleme işleminde önce yeni Book nesnesi oluşturulur. Sonra context.Books.Add(book) ve SaveChanges() mantığıyla veritabanına kaydedilir."
-  },
-
-  {
-    q: "Entity Framework'te SaveChanges() ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Sadece nesne oluşturur",
-      "Yapılan ekleme/silme/güncelleme değişikliklerini veritabanına kaydeder",
-      "Metodu override eder",
-      "Constructor'ı çağırır",
-      "Interface oluşturur"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 11,
-    topic: "SaveChanges",
-    importance: 5,
-    explanation: "EF'de Add, Remove veya Update gibi işlemler bellekte takip edilir. SaveChanges() çağrılınca bu değişiklikler gerçek veritabanına uygulanır."
-  },
-
-  {
-    q: "Entity Framework'te kitap silme için genellikle hangi bilgi kullanılır?",
-    t: "mcq",
-    o: [
-      "Kitabın rengi",
-      "Constructor sayısı",
-      "BookId",
-      "Destructor adı",
-      "Interface sayısı"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 11,
-    topic: "EF Delete",
-    importance: 5,
-    explanation: "PDF'deki kitaplık senaryosunda kitap silme işlemi ID'ye göre yapılır. BookId, kitabı benzersiz tanımladığı için silmede kullanılır."
-  },
-
-  {
-    q: "EF'nin OOP ile ilişkisi için en doğru ifade hangisidir?",
-    t: "mcq",
-    o: [
-      "OOP'yi tamamen gereksiz yapar",
-      "Sadece destructor çalıştırır",
-      "Sadece console temizler",
-      "Veritabanı işlemlerini nesneler üzerinden yönetmeyi sağlar",
-      "Sadece metot overload eder"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 11,
-    topic: "EF ve OOP",
-    importance: 5,
-    explanation: "Entity Framework, veritabanı tablolarını sınıflar ve nesnelerle temsil eder. Böylece OOP mantığı veritabanı işlemlerinde de kullanılabilir."
-  },
-
-  {
-    q: "Aşağıdakilerden hangisi EF kullanım yöntemlerinden biridir?",
-    t: "mcq",
-    o: [
-      "Destructor First",
-      "Override First",
-      "Interface First",
-      "Private First",
-      "Code First"
-    ],
-    a: 4,
-    difficulty: "easy",
-    week: 11,
-    topic: "EF Yaklaşımları",
-    importance: 5,
-    explanation: "Entity Framework kullanım yöntemleri arasında Code First, Database First ve Model First bulunur. Code First, koddan veritabanı üretme yaklaşımıdır."
+    explanation: "FILE_APPEND sabiti, mevcut içeriği silmeden dosyanın sonuna veri eklenmesini sağlar. Sabit, programda anlamı önceden tanımlanmış özel değerdir."
   }
 ];
