@@ -1,882 +1,922 @@
 window.questionBank = [
   {
-    q: "Windows Forms'ta bir kontrolün ekranda görünüp görünmeyeceğini belirleyen özellik hangisidir?",
+    q: "Veri yapısı en doğru şekilde nasıl tanımlanır?",
     t: "mcq",
-    o: ["Visible", "Text", "Name", "Items", "Interval"],
+    o: [
+      "Verileri bilgisayarda düzenli saklama ve yönetme yöntemi",
+      "Sadece ekrana yazı yazdıran komut",
+      "Sadece internet bağlantısı sağlayan cihaz",
+      "Programın renk ve tema ayarları",
+      "Sadece klavyeden veri girme işlemi"
+    ],
     a: 0,
     difficulty: "easy",
     week: 1,
-    topic: "Kontrol Özellikleri",
+    topic: "Veri Yapılarına Giriş",
     importance: 5,
-    explanation: "Visible, bir kontrolün görünür olup olmadığını belirler. true görünür, false gizli anlamına gelir."
+    explanation: "Veri yapısı, verilerin bilgisayarda nasıl saklanacağını ve nasıl yönetileceğini belirleyen yapıdır. Örneğin dizi, bağlı liste, stack, queue, ağaç ve graf birer veri yapısıdır. Amaç veriye daha hızlı ulaşmak, ekleme-silme işlemlerini düzenli yapmak ve belleği verimli kullanmaktır."
   },
   {
-    q: "Windows Forms'ta bir kontrolü kod içinde tanımak için kullanılan kimlik/ad özelliği hangisidir?",
+    q: "Algoritma kavramı aşağıdakilerden hangisini ifade eder?",
     t: "mcq",
-    o: ["Text", "Name", "BackColor", "Font", "Enabled"],
+    o: [
+      "Bilgisayardaki fiziksel bellek yuvasını",
+      "Bir problemi çözmek için izlenen adım adım işlem yolunu",
+      "Sadece verileri saklayan tabloyu",
+      "Sadece grafik çizen programı",
+      "Bilgisayarın ekran kartını"
+    ],
     a: 1,
     difficulty: "easy",
     week: 1,
-    topic: "Name Özelliği",
+    topic: "Algoritma Mantığı",
     importance: 5,
-    explanation: "Name, kontrolün kod tarafındaki adıdır. Örneğin txtAd, btnKaydet gibi isimler kodda bu kontrolü çağırmak için kullanılır."
+    explanation: "Algoritma, bir problemi çözmek için takip edilen adım adım yoldur. Mesela bir dizide sayı aramak için ilk elemandan başla, kontrol et, değilse sıradakine geç şeklinde ilerlemek bir algoritmadır. Veri yapısı veriyi nasıl sakladığımızı, algoritma ise o veriyle ne yaptığımızı anlatır."
   },
   {
-    q: "TextBox içindeki yazı değiştiğinde çalışan olay genellikle hangisidir?",
+    q: "Aşağıdakilerden hangisi lineer veri yapısına örnektir?",
     t: "mcq",
-    o: ["Click", "Load", "TextChanged", "Tick", "Shown"],
+    o: ["Graf", "Ağaç", "Dizi", "B ağacı", "İkili arama ağacı"],
     a: 2,
-    difficulty: "medium",
-    week: 3,
-    topic: "TextChanged Olayı",
-    importance: 4,
-    explanation: "TextChanged, TextBox içindeki metin değiştiğinde tetiklenir. Anlık arama veya karakter sayma işlemlerinde kullanılabilir."
+    difficulty: "easy",
+    week: 1,
+    topic: "Lineer Veri Yapıları",
+    importance: 5,
+    explanation: "Lineer veri yapılarında elemanlar sıra halinde düşünülür. Dizi, bağlı liste, stack ve queue lineer veri yapılarıdır. Ağaç ve graf ise dallanma veya bağlantı yapısı içerdiği için lineer olmayan veri yapılarıdır."
   },
   {
-    q: "Bir form ilk açılırken çalışan olay hangisidir?",
+    q: "Aşağıdakilerden hangisi lineer olmayan veri yapısına örnektir?",
     t: "mcq",
-    o: ["Click", "Tick", "KeyDown", "Load", "Clear"],
+    o: ["Dizi", "Stack", "Queue", "Ağaç", "Bağlı liste"],
     a: 3,
     difficulty: "easy",
     week: 1,
-    topic: "Form Load",
+    topic: "Lineer Olmayan Veri Yapıları",
     importance: 5,
-    explanation: "Form Load olayı, form ekrana yüklenirken çalışır. Başlangıç değerleri genellikle burada atanır."
+    explanation: "Ağaç, verileri üst-alt ilişkiyle saklayan hiyerarşik bir yapıdır. Bu yüzden lineer değildir. Lineer yapılarda elemanlar bir sıra gibi ilerlerken, ağaçta dallanma vardır. Graf da lineer olmayan veri yapısına örnektir."
   },
   {
-    q: "Bir kontrolün kullanıcı tarafından tıklanabilir/aktif olup olmadığını belirleyen özellik hangisidir?",
+    q: "Dizi veri yapısının en temel özelliği hangisidir?",
     t: "mcq",
-    o: ["Text", "Name", "Items", "Visible", "Enabled"],
-    a: 4,
-    difficulty: "medium",
-    week: 1,
-    topic: "Enabled Özelliği",
-    importance: 4,
-    explanation: "Enabled false yapılırsa kontrol pasif olur ve kullanıcı onunla işlem yapamaz. Visible gizler, Enabled pasifleştirir."
-  },
-  {
-    q: "Birden fazla seçeneğin aynı anda işaretlenebilmesi için hangi kontrol daha uygundur?",
-    t: "mcq",
-    o: ["CheckBox", "RadioButton", "Label", "TextBox", "Timer"],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "CheckBox",
-    importance: 5,
-    explanation: "CheckBox, birden fazla seçeneğin aynı anda seçilebildiği durumlar için uygundur. Örneğin hobiler seçimi."
-  },
-  {
-    q: "Açılır liste şeklinde seçim yaptırmak için hangi kontrol kullanılır?",
-    t: "mcq",
-    o: ["Label", "ComboBox", "PictureBox", "Timer", "Panel"],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "ComboBox",
-    importance: 5,
-    explanation: "ComboBox, kullanıcıya açılır liste sunar. İl, bölüm, kategori gibi seçenekler için kullanılır."
-  },
-  {
-    q: "Form üzerinde resim göstermek için hangi kontrol kullanılır?",
-    t: "mcq",
-    o: ["TextBox", "Label", "PictureBox", "Button", "ListBox"],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "PictureBox",
-    importance: 4,
-    explanation: "PictureBox, form üzerinde resim göstermeye yarayan kontroldür. Logo veya fotoğraf göstermek için kullanılabilir."
-  },
-  {
-    q: "Kullanıcıya dosya seçtirmek için kullanılan dialog hangisidir?",
-    t: "mcq",
-    o: ["SaveFileDialog", "ColorDialog", "FontDialog", "OpenFileDialog", "PrintDialog"],
-    a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "OpenFileDialog",
-    importance: 4,
-    explanation: "OpenFileDialog, kullanıcının bilgisayardan dosya seçmesini sağlar. SaveFileDialog ise kaydetme yeri seçtirir."
-  },
-  {
-    q: "Renk seçtirmek için kullanılan hazır dialog hangisidir?",
-    t: "mcq",
-    o: ["OpenFileDialog", "SaveFileDialog", "FontDialog", "PrintDialog", "ColorDialog"],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "ColorDialog",
-    importance: 3,
-    explanation: "ColorDialog, kullanıcıya renk seçme penceresi açar. Seçilen renk form veya kontrol renginde kullanılabilir."
-  },
-  {
-    q: "TextBox'tan alınan ondalıklı sayı için en uygun dönüştürme örneği hangisidir?",
-    t: "mcq",
-    o: ["Convert.ToDouble(txtSayi.Text)", "txtSayi.Clear()", "txtSayi.Visible", "txtSayi.Items.Add()", "txtSayi.Tick"],
-    a: 0,
-    difficulty: "medium",
-    week: 3,
-    topic: "Veri Dönüştürme",
-    importance: 5,
-    explanation: "TextBox.Text metin olarak gelir. Ondalıklı sayı işlemi yapılacaksa Convert.ToDouble ile double tipine çevrilir."
-  },
-  {
-    q: "C#'ta ekrana sonuç yazdırmadan önce sayısal değeri metne çevirmek için genellikle hangi metot kullanılır?",
-    t: "mcq",
-    o: ["ToInt32()", "ToString()", "Clear()", "Add()", "ShowDialog()"],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "ToString",
-    importance: 5,
-    explanation: "ToString(), bir değeri metne çevirir. Label.Text gibi metin bekleyen alanlarda sayıları göstermek için kullanılır."
-  },
-  {
-    q: "Bir sayının karekökünü almak için hangi Math metodu kullanılır?",
-    t: "mcq",
-    o: ["Math.Pow()", "Math.Abs()", "Math.Sqrt()", "Math.Round()", "Math.Min()"],
+    o: [
+      "Elemanların düğümler halinde dağınık tutulması",
+      "Her elemanın sonraki elemanın adresini tutması",
+      "Aynı türden verilerin bellekte ardışık saklanması",
+      "Son giren elemanın ilk çıkması",
+      "İlk giren elemanın ilk çıkması"
+    ],
     a: 2,
     difficulty: "easy",
     week: 2,
-    topic: "Math Fonksiyonları",
-    importance: 4,
-    explanation: "Math.Sqrt(), karekök alır. Örneğin Math.Sqrt(9) sonucu 3 olur."
-  },
-  {
-    q: "Bir sayının negatif olsa bile pozitif uzaklığını bulmak için hangi metot kullanılır?",
-    t: "mcq",
-    o: ["Math.Sqrt()", "Math.Pow()", "Math.Round()", "Math.Abs()", "Math.Max()"],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "Math Abs",
-    importance: 4,
-    explanation: "Math.Abs(), mutlak değer alır. Örneğin Math.Abs(-5) sonucu 5 olur."
-  },
-  {
-    q: "Dizideki eleman sayısını bulmak için C#'ta genellikle hangi özellik kullanılır?",
-    t: "mcq",
-    o: ["Text", "Visible", "Name", "Enabled", "Length"],
-    a: 4,
-    difficulty: "medium",
-    week: 11,
     topic: "Diziler",
     importance: 5,
-    explanation: "Length, dizinin kaç eleman içerdiğini verir. Ortalama hesaplarken toplamı Length değerine böleriz."
+    explanation: "Dizi, aynı türden verilerin bellekte yan yana tutulduğu veri yapısıdır. Örneğin [10, 20, 30] bir sayı dizisidir. Dizide elemanlara indeks ile ulaşılır. Bu yüzden indeks biliniyorsa istenen elemana hızlı erişilir."
   },
   {
-    q: "Bir sayının çift olup olmadığını kontrol etmek için en uygun ifade hangisidir?",
+    q: "Dizilerde bir elemana indeks ile erişmek neden hızlıdır?",
     t: "mcq",
-    o: ["sayi % 2 == 0", "sayi + 2 == 0", "sayi / 2 == 0", "sayi * 2 == 0", "sayi == true"],
+    o: [
+      "Çünkü dizi elemanları bellekte ardışık tutulur",
+      "Çünkü dizilerde sadece bir eleman bulunur",
+      "Çünkü dizilerde hiç silme yapılamaz",
+      "Çünkü diziler sadece metin saklar",
+      "Çünkü diziler kuyruk mantığıyla çalışır"
+    ],
     a: 0,
     difficulty: "easy",
-    week: 11,
-    topic: "Tek Çift Kontrolü",
+    week: 2,
+    topic: "Dizilerde Erişim",
     importance: 5,
-    explanation: "% kalan operatörüdür. Bir sayı 2'ye bölününce kalan 0 ise sayı çifttir."
+    explanation: "Dizide elemanlar bellekte yan yana tutulur. Bu yüzden bilgisayar, indeks numarasını kullanarak doğrudan ilgili elemana gidebilir. Örneğin dizi[3] denildiğinde üçüncü indeksteki elemana direkt erişilir. Bu erişim genellikle O(1) kabul edilir."
   },
   {
-    q: "Geriye tam sayı döndüren bir metot hangi dönüş tipiyle tanımlanır?",
+    q: "Dizilerde ortaya eleman ekleme veya ortadan eleman silme işlemi neden maliyetlidir?",
     t: "mcq",
-    o: ["void", "int", "string", "bool", "object"],
+    o: [
+      "Çünkü elemanların kaydırılması gerekebilir",
+      "Çünkü diziler veri tutamaz",
+      "Çünkü dizilerde indeks yoktur",
+      "Çünkü diziler sadece stack olarak çalışır",
+      "Çünkü diziler graf bağlantısı ister"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Dizi Dezavantajları",
+    importance: 5,
+    explanation: "Dizide elemanlar yan yana durduğu için ortaya yeni eleman eklenirse arkadaki elemanların sağa kaydırılması gerekir. Ortadan eleman silinirse boşluğu kapatmak için elemanlar sola kaydırılır. Bu yüzden ekleme ve silme işlemleri dizide her zaman çok kolay değildir."
+  },
+  {
+    q: "Bağlı liste veri yapısı en doğru şekilde nasıl açıklanır?",
+    t: "mcq",
+    o: [
+      "Elemanların düğümler halinde tutulduğu ve her düğümün sonraki düğümü gösterdiği yapı",
+      "Elemanların bellekte kesinlikle yan yana tutulduğu yapı",
+      "Sadece son giren ilk çıkar mantığıyla çalışan yapı",
+      "Sadece ilk giren ilk çıkar mantığıyla çalışan yapı",
+      "Sadece sayıları küçükten büyüğe sıralayan yapı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 3,
+    topic: "Bağlı Liste",
+    importance: 5,
+    explanation: "Bağlı liste, düğümlerden oluşur. Her düğümün içinde veri ve bir sonraki düğümün adresi bulunur. Bu yüzden elemanların bellekte yan yana olması gerekmez. Bir elemandan diğerine bağlantı adresi sayesinde gidilir."
+  },
+  {
+    q: "Bağlı listede belirli bir elemana ulaşmak neden diziye göre daha yavaş olabilir?",
+    t: "mcq",
+    o: [
+      "Çünkü bağlı listede baştan başlayıp düğümler arasında sırayla ilerlemek gerekir",
+      "Çünkü bağlı listede hiç veri bulunmaz",
+      "Çünkü bağlı liste sadece tek eleman saklar",
+      "Çünkü bağlı liste sadece sıralı verilerle çalışır",
+      "Çünkü bağlı liste otomatik olarak silinir"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 3,
+    topic: "Bağlı Listede Erişim",
+    importance: 5,
+    explanation: "Dizide indeks ile doğrudan elemana gidilebilir. Bağlı listede ise 5. elemana ulaşmak için 1. düğümden başlanır, sonra 2., sonra 3. düğüm diye ilerlenir. Çünkü her düğüm sadece bir sonraki düğümün adresini bilir. Bu yüzden erişim genellikle O(n) olur."
+  },
+  {
+    q: "Sürekli ekleme ve silme yapılacak bir yapıda bağlı listenin diziye göre avantajı nedir?",
+    t: "mcq",
+    o: [
+      "Bağlı liste dinamik büyüyebilir ve bağlantılar değiştirilerek ekleme-silme yapılabilir",
+      "Bağlı liste her zaman tek eleman tutar",
+      "Bağlı liste indeksle O(1) erişim sağlar",
+      "Bağlı liste hiçbir zaman bellek kullanmaz",
+      "Bağlı liste sadece sabit boyutludur"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 3,
+    topic: "Dizi ve Bağlı Liste Farkı",
+    importance: 5,
+    explanation: "Bağlı liste dinamik bir yapıdır. Eleman eklemek veya silmek için çoğu zaman bağlantı adreslerini güncellemek yeterlidir. Dizide ise özellikle ortada ekleme-silme yapılırken elemanların kaydırılması gerekebilir. Bu yüzden ekleme-silme ağırlıklı durumlarda bağlı liste avantajlı olabilir."
+  },
+  {
+    q: "Stack veri yapısı hangi mantıkla çalışır?",
+    t: "mcq",
+    o: [
+      "FIFO yani ilk giren ilk çıkar",
+      "LIFO yani son giren ilk çıkar",
+      "Her zaman küçük değer sola gider",
+      "Her zaman büyük değer sona gider",
+      "Her düğüm en fazla iki çocuk alır"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack",
+    importance: 5,
+    explanation: "Stack, tabak yığını gibi çalışır. En son koyduğun tabak en üsttedir ve ilk onu alırsın. Bu yüzden stack LIFO yani Last In First Out mantığıyla çalışır. Türkçesi son giren ilk çıkar demektir."
+  },
+  {
+    q: "Stack veri yapısında eleman ekleme işlemi hangisidir?",
+    t: "mcq",
+    o: ["Push", "Pop", "Dequeue", "Enqueue", "Search"],
+    a: 0,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack İşlemleri",
+    importance: 5,
+    explanation: "Stack'e eleman ekleme işlemine push denir. Mesela stack içine önce 10, sonra 20 eklenirse 20 en üstte olur. Stack'ten eleman çıkarma işlemine ise pop denir."
+  },
+  {
+    q: "Stack veri yapısında eleman çıkarma işlemi hangisidir?",
+    t: "mcq",
+    o: ["Enqueue", "Dequeue", "Pop", "Front", "Rear"],
+    a: 2,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack İşlemleri",
+    importance: 5,
+    explanation: "Stack'te eleman çıkarma işlemine pop denir. Stack son giren ilk çıkar mantığıyla çalışır. Örneğin stack [10, 20, 30] şeklindeyse pop yapıldığında çıkan eleman 30 olur."
+  },
+  {
+    q: "Stack veri yapısında en üstteki elemana bakıp onu çıkarmayan işlem hangisidir?",
+    t: "mcq",
+    o: ["Push", "Pop", "Peek", "Dequeue", "Enqueue"],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Peek İşlemi",
+    importance: 4,
+    explanation: "Peek veya Top işlemi, stack'in en üstündeki elemana bakmayı sağlar ama o elemanı çıkarmaz. Pop ise en üstteki elemanı çıkarır. Bu fark sınavlarda karıştırılabilir."
+  },
+  {
+    q: "Aşağıdakilerden hangisi stack kullanımına en uygun örnektir?",
+    t: "mcq",
+    o: [
+      "Geri al yani Undo işlemi",
+      "Banka müşteri sırası",
+      "Yazıcı kuyruğu",
+      "Market kasa sırası",
+      "Otobüs durağı sırası"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack Kullanım Alanları",
+    importance: 5,
+    explanation: "Undo işleminde en son yapılan işlem ilk geri alınır. Bu tam olarak stack mantığıdır. Çünkü stack son giren ilk çıkar mantığıyla çalışır. Fonksiyon çağrıları ve parantez kontrolü de stack kullanımına örnektir."
+  },
+  {
+    q: "Queue veri yapısı hangi mantıkla çalışır?",
+    t: "mcq",
+    o: [
+      "LIFO yani son giren ilk çıkar",
+      "FIFO yani ilk giren ilk çıkar",
+      "Sol küçük sağ büyük",
+      "Yan yana karşılaştırma",
+      "Pivot seçme"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue",
+    importance: 5,
+    explanation: "Queue yani kuyruk, banka sırası gibi çalışır. İlk gelen kişi önce işlem yapar. Bu yüzden queue FIFO yani First In First Out mantığıyla çalışır. Türkçesi ilk giren ilk çıkar demektir."
+  },
+  {
+    q: "Queue veri yapısında eleman ekleme işlemi hangisidir?",
+    t: "mcq",
+    o: ["Push", "Pop", "Peek", "Enqueue", "DFS"],
+    a: 3,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue İşlemleri",
+    importance: 5,
+    explanation: "Queue'ya eleman ekleme işlemine enqueue denir. Eleman kuyruğun sonuna eklenir. Kuyruktan eleman çıkarma işlemine ise dequeue denir."
+  },
+  {
+    q: "Queue veri yapısında eleman çıkarma işlemi hangisidir?",
+    t: "mcq",
+    o: ["Dequeue", "Push", "Pop", "Peek", "Insert"],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue İşlemleri",
+    importance: 5,
+    explanation: "Queue'da eleman çıkarma işlemine dequeue denir. Queue ilk giren ilk çıkar mantığıyla çalıştığı için en önce eklenen eleman önce çıkarılır. Örneğin queue [10, 20, 30] ise dequeue sonucu çıkan eleman 10 olur."
+  },
+  {
+    q: "Stack ve Queue arasındaki temel fark hangisidir?",
+    t: "mcq",
+    o: [
+      "Stack son gireni önce çıkarır, Queue ilk gireni önce çıkarır",
+      "Stack ilk gireni önce çıkarır, Queue son gireni önce çıkarır",
+      "Stack ve Queue tamamen aynıdır",
+      "Stack sadece ağaçlarda, Queue sadece dizilerde kullanılır",
+      "Stack'te ekleme yoktur, Queue'da çıkarma yoktur"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "Stack Queue Farkı",
+    importance: 5,
+    explanation: "Stack LIFO çalışır: son giren ilk çıkar. Queue FIFO çalışır: ilk giren ilk çıkar. Bunu tabak yığını ve banka sırası gibi düşünebilirsin. Tabak yığında son koyulan önce alınır, banka sırasında ilk gelen önce işlem yapar."
+  },
+  {
+    q: "Ağaç veri yapısı hangi tür ilişkiyi temsil etmek için uygundur?",
+    t: "mcq",
+    o: [
+      "Hiyerarşik yani üst-alt ilişkileri",
+      "Sadece yan yana duran verileri",
+      "Sadece son giren ilk çıkar ilişkisini",
+      "Sadece ilk giren ilk çıkar ilişkisini",
+      "Sadece rastgele sayıları"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "Ağaç Veri Yapısı",
+    importance: 5,
+    explanation: "Ağaç veri yapısı üst-alt ilişkisini göstermek için kullanılır. Örneğin klasör yapısı, aile ağacı, şirket organizasyon şeması ve karar ağaçları buna örnektir. En üstte kök bulunur, aşağı doğru dallar oluşur."
+  },
+  {
+    q: "Ağaç veri yapısında kök yani root ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Ağacın en üstteki başlangıç düğümü",
+      "Ağacın en alttaki son düğümü",
+      "Hiç çocuğu olmayan düğüm",
+      "Her zaman en küçük sayı",
+      "İki düğüm arasındaki bağlantı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "Kök Düğüm",
+    importance: 5,
+    explanation: "Kök, ağacın en üstündeki başlangıç düğümüdür. Ağaçtaki diğer düğümlere kökten ulaşılır. Kök her zaman en küçük veya en büyük değer olmak zorunda değildir; sadece başlangıç noktasıdır."
+  },
+  {
+    q: "Ağaç veri yapısında yaprak yani leaf ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Ağacın başlangıç düğümü",
+      "Altında çocuğu olmayan düğüm",
+      "Her zaman en büyük değer",
+      "İki düğüm arasındaki çizgi",
+      "Ağacı dengeleyen işlem"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "Yaprak Düğüm",
+    importance: 5,
+    explanation: "Yaprak düğüm, altında başka düğüm bulunmayan düğümdür. Gerçek ağaçta yapraklar dalların ucundadır. Veri yapısında da yaprak düğümler ağacın uç noktalarıdır."
+  },
+  {
+    q: "Ağaç veri yapısında edge yani kenar neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Düğümün içinde saklanan veriyi",
+      "İki düğüm arasındaki bağlantıyı",
+      "Ağacın en üst düğümünü",
+      "Hiç çocuğu olmayan düğümü",
+      "Stack'ten eleman çıkarmayı"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "Kenar Kavramı",
+    importance: 4,
+    explanation: "Kenar, iki düğüm arasındaki bağlantıdır. Ağaçta kök ile çocuk düğüm arasındaki çizgi bir kenardır. Graf konusunda da kenar iki düğüm arasındaki bağlantı anlamına gelir."
+  },
+  {
+    q: "İkili ağaç yani Binary Tree en doğru şekilde nasıl tanımlanır?",
+    t: "mcq",
+    o: [
+      "Her düğümün en fazla iki çocuğu olduğu ağaç",
+      "Her düğümün en az üç çocuğu olduğu ağaç",
+      "Sadece tek eleman tutan dizi",
+      "İlk giren ilk çıkar mantığıyla çalışan yapı",
+      "Son giren ilk çıkar mantığıyla çalışan yapı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "İkili Ağaç",
+    importance: 5,
+    explanation: "İkili ağaçta her düğümün en fazla iki çocuğu olabilir. Bu çocuklar genellikle sol çocuk ve sağ çocuk olarak adlandırılır. Bir düğümün 0, 1 veya 2 çocuğu olabilir; 3 çocuğu olamaz."
+  },
+  {
+    q: "İkili arama ağacında yani BST'de küçük değerler nereye yerleştirilir?",
+    t: "mcq",
+    o: [
+      "Sol alt ağaca",
+      "Sağ alt ağaca",
+      "Kökün üstüne",
+      "Queue'nun sonuna",
+      "Stack'in en altına"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 8,
+    topic: "BST Kuralı",
+    importance: 5,
+    explanation: "BST yani ikili arama ağacında temel kural şudur: küçük değerler sol tarafa, büyük değerler sağ tarafa gider. Örneğin kök 50 ise 30 sola yerleşir çünkü 30, 50'den küçüktür."
+  },
+  {
+    q: "İkili arama ağacında yani BST'de büyük değerler nereye yerleştirilir?",
+    t: "mcq",
+    o: [
+      "Sol alt ağaca",
+      "Kökün üstüne",
+      "Queue'nun başına",
+      "Sağ alt ağaca",
+      "Stack'in altına"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 8,
+    topic: "BST Kuralı",
+    importance: 5,
+    explanation: "BST'de büyük değerler sağ alt ağaca yerleştirilir. Örneğin kök 50 ise 70 sağ tarafa gider çünkü 70, 50'den büyüktür. Bu kural arama işlemini hızlandırır."
+  },
+  {
+    q: "BST'de arama işlemi neden hızlı olabilir?",
+    t: "mcq",
+    o: [
+      "Çünkü her adımda yanlış taraf elenebilir",
+      "Çünkü hiç karşılaştırma yapılmaz",
+      "Çünkü tüm düğümler rastgele silinir",
+      "Çünkü sadece son eklenen elemana bakılır",
+      "Çünkü veriler bellekte mutlaka yan yana tutulur"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 8,
+    topic: "BST Arama Mantığı",
+    importance: 5,
+    explanation: "BST'de aranan değer kökle karşılaştırılır. Aranan değer küçükse sola, büyükse sağa gidilir. Böylece her adımda ağacın bir tarafı elenir. Ağaç dengeliyse arama ortalama O(log n) olabilir."
+  },
+  {
+    q: "BST'de inorder dolaşma sırası hangisidir?",
+    t: "mcq",
+    o: [
+      "Kök - Sol - Sağ",
+      "Sol - Kök - Sağ",
+      "Sol - Sağ - Kök",
+      "Sağ - Kök - Sol",
+      "Kök - Sağ - Sol"
+    ],
     a: 1,
     difficulty: "medium",
     week: 8,
-    topic: "Metotlar",
+    topic: "Inorder Traversal",
     importance: 5,
-    explanation: "Metot geriye tam sayı döndürecekse dönüş tipi int olmalıdır. void ise değer döndürmeyen metotlar için kullanılır."
+    explanation: "Inorder dolaşma sırası Sol - Kök - Sağ şeklindedir. BST üzerinde inorder dolaşma yapılırsa değerler küçükten büyüğe sıralı şekilde elde edilir. Bu yüzden inorder traversal finalde çok sorulabilir."
   },
   {
-    q: "try-catch yapısında beklenmeyen tüm hataları genel olarak yakalamak için hangi sınıf kullanılır?",
+    q: "BST'de preorder dolaşma sırası hangisidir?",
     t: "mcq",
-    o: ["FormatException", "DivideByZeroException", "Exception", "Timer", "DialogResult"],
+    o: [
+      "Kök - Sol - Sağ",
+      "Sol - Kök - Sağ",
+      "Sol - Sağ - Kök",
+      "Sağ - Sol - Kök",
+      "Sol - Kök - Sağ - Kök"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 8,
+    topic: "Preorder Traversal",
+    importance: 4,
+    explanation: "Preorder dolaşma sırası Kök - Sol - Sağ şeklindedir. Yani önce düğümün kendisi gezilir, sonra sol alt ağaç, sonra sağ alt ağaç gezilir."
+  },
+  {
+    q: "BST'de postorder dolaşma sırası hangisidir?",
+    t: "mcq",
+    o: [
+      "Kök - Sol - Sağ",
+      "Sol - Kök - Sağ",
+      "Sol - Sağ - Kök",
+      "Kök - Sağ - Sol",
+      "Sağ - Kök - Sol"
+    ],
     a: 2,
+    difficulty: "medium",
+    week: 8,
+    topic: "Postorder Traversal",
+    importance: 4,
+    explanation: "Postorder dolaşma sırası Sol - Sağ - Kök şeklindedir. Yani kök en son gezilir. Ağaç silme gibi işlemlerde önce çocukları işlemek gerektiği için postorder mantığı önemlidir."
+  },
+  {
+    q: "AVL ağacı ne işe yarar?",
+    t: "mcq",
+    o: [
+      "BST'yi dengede tutarak arama, ekleme ve silmeyi verimli hale getirir",
+      "Stack'i FIFO yapar",
+      "Queue'yu LIFO yapar",
+      "Dizideki indeksleri siler",
+      "Grafı tamamen rastgele hale getirir"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 9,
+    topic: "AVL Ağacı",
+    importance: 5,
+    explanation: "AVL ağacı, kendini dengede tutan bir ikili arama ağacıdır. Normal BST tek tarafa uzarsa arama yavaşlayabilir. AVL ağacı rotasyonlarla dengeyi korur ve işlemlerin O(log n) seviyesinde kalmasını hedefler."
+  },
+  {
+    q: "AVL ağacında denge bozulursa hangi işlem yapılır?",
+    t: "mcq",
+    o: [
+      "Rotasyon",
+      "Dequeue",
+      "Pop",
+      "Enqueue",
+      "Linear Search"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 9,
+    topic: "AVL Rotasyon",
+    importance: 5,
+    explanation: "AVL ağacında sol ve sağ alt ağaçların yükseklik farkı fazla olursa denge bozulur. Bu durumda rotasyon yapılır. Rotasyon, ağacı yeniden dengeli hale getiren döndürme işlemidir."
+  },
+  {
+    q: "AVL ağacında denge faktörü genellikle hangi değerler arasında olmalıdır?",
+    t: "mcq",
+    o: [
+      "-1, 0, 1",
+      "5, 6, 7",
+      "10, 20, 30",
+      "Sadece 100",
+      "Sadece -10"
+    ],
+    a: 0,
+    difficulty: "hard",
+    week: 9,
+    topic: "AVL Denge Faktörü",
+    importance: 4,
+    explanation: "AVL ağacında her düğüm için sol ve sağ alt ağaçların yükseklik farkı kontrol edilir. Denge faktörü genellikle -1, 0 veya 1 olmalıdır. Bu aralık dışına çıkarsa ağaç dengesiz kabul edilir ve rotasyon gerekebilir."
+  },
+  {
+    q: "B ağacı genellikle hangi amaçla kullanılır?",
+    t: "mcq",
+    o: [
+      "Büyük verilerde ve disk tabanlı sistemlerde hızlı arama yapmak için",
+      "Stack'ten eleman çıkarmak için",
+      "Sadece küçük dizileri yazdırmak için",
+      "Sadece kuyruktaki ilk elemanı silmek için",
+      "Sadece grafın düğüm derecesini bulmak için"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 9,
+    topic: "B Ağacı",
+    importance: 4,
+    explanation: "B ağacı, büyük veri kümelerinde ve disk tabanlı sistemlerde kullanılan dengeli, çok dallı bir ağaç yapısıdır. Veritabanı indeksleme ve dosya sistemlerinde tercih edilir çünkü daha az disk erişimiyle hızlı arama yapılmasına yardım eder."
+  },
+  {
+    q: "Max Heap yapısında kökte hangi eleman bulunur?",
+    t: "mcq",
+    o: [
+      "En büyük eleman",
+      "En küçük eleman",
+      "En son eklenen eleman",
+      "İlk eklenen eleman",
+      "Rastgele bir eleman"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 7,
+    topic: "Heap",
+    importance: 4,
+    explanation: "Max Heap yapısında her düğüm çocuklarından büyük veya eşit kabul edilir. Bu yüzden en büyük eleman her zaman kökte bulunur. Min Heap'te ise en küçük eleman köktedir."
+  },
+  {
+    q: "Min Heap yapısında kökte hangi eleman bulunur?",
+    t: "mcq",
+    o: [
+      "En büyük eleman",
+      "En küçük eleman",
+      "Her zaman son eklenen eleman",
+      "Her zaman ilk silinen eleman",
+      "Her zaman ortadaki eleman"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 7,
+    topic: "Heap",
+    importance: 4,
+    explanation: "Min Heap yapısında her düğüm çocuklarından küçük veya eşit kabul edilir. Bu yüzden en küçük eleman kökte yer alır. Öncelikli kuyruklarda heap mantığı sık kullanılır."
+  },
+  {
+    q: "Linear Search yani doğrusal arama nasıl çalışır?",
+    t: "mcq",
+    o: [
+      "Elemanları baştan sona tek tek kontrol eder",
+      "Veriyi her adımda ikiye böler",
+      "Her zaman en küçük elemanı seçer",
+      "Yan yana elemanları yer değiştirir",
+      "Önce kökü sonra sol tarafı gezer"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Linear Search",
+    importance: 5,
+    explanation: "Linear Search en basit arama yöntemidir. Aranan değer bulunana kadar elemanlar baştan sona tek tek kontrol edilir. Veri sıralı olmak zorunda değildir. En kötü durumda tüm elemanlara bakılması gerekir, bu yüzden karmaşıklığı O(n)'dir."
+  },
+  {
+    q: "Binary Search yani ikili arama için en önemli şart hangisidir?",
+    t: "mcq",
+    o: [
+      "Verinin sıralı olması",
+      "Verinin mutlaka stack içinde olması",
+      "Verinin mutlaka graf olması",
+      "Verinin tamamen rastgele olması",
+      "Verinin sadece metinlerden oluşması"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Binary Search",
+    importance: 5,
+    explanation: "Binary Search sıralı veride çalışır. Ortadaki elemana bakar, aranan değer küçükse sol yarıya, büyükse sağ yarıya geçer. Veri sıralı değilse hangi tarafa gidileceği bilinemeyeceği için binary search doğru çalışmaz."
+  },
+  {
+    q: "Binary Search neden Linear Search'e göre daha hızlıdır?",
+    t: "mcq",
+    o: [
+      "Çünkü her adımda arama alanını yaklaşık yarıya indirir",
+      "Çünkü hiç karşılaştırma yapmaz",
+      "Çünkü sadece ilk elemana bakar",
+      "Çünkü verileri rastgele siler",
+      "Çünkü sadece bağlı listede çalışır"
+    ],
+    a: 0,
     difficulty: "medium",
     week: 12,
-    topic: "Hata Yakalama",
+    topic: "Binary Search Mantığı",
     importance: 5,
-    explanation: "Exception genel hata sınıfıdır. Özel hata türleri yakalanmadığında genel hatalar için kullanılabilir."
+    explanation: "Binary Search her adımda arama alanını ikiye böler. Örneğin 100 elemanda arama yaparken tek tek 100 elemana bakmak yerine her adımda yarısını eler. Bu yüzden karmaşıklığı O(log n)'dir. Ancak veri sıralı olmalıdır."
   },
   {
-    q: "Timer kontrolünde belirli süre doldukça çalışan olay hangisidir?",
+    q: "Jump Search hangi veri türünde daha anlamlıdır?",
     t: "mcq",
-    o: ["Click", "Load", "TextChanged", "Tick", "Closed"],
-    a: 3,
+    o: [
+      "Sıralı dizilerde",
+      "Sırasız stack yapısında",
+      "Rastgele graf yapısında",
+      "Sadece ağaç kökünde",
+      "Sadece tek elemanlı listede"
+    ],
+    a: 0,
     difficulty: "medium",
-    week: 3,
-    topic: "Timer",
-    importance: 4,
-    explanation: "Timer aktifken Interval süresi doldukça Tick olayı çalışır. Sayaç ve süre işlemlerinde kullanılır."
-  },
-  {
-    q: "Kullanıcının MessageBox üzerindeki Evet/Hayır seçimini kontrol etmek için kullanılan dönüş tipi genellikle hangisidir?",
-    t: "mcq",
-    o: ["int", "string", "bool only", "double", "DialogResult"],
-    a: 4,
-    difficulty: "hard",
-    week: 3,
-    topic: "DialogResult",
+    week: 12,
+    topic: "Jump Search",
     importance: 3,
-    explanation: "DialogResult, MessageBox gibi pencerelerden dönen sonucu temsil eder. Kullanıcı Yes, No, OK gibi seçimler yapabilir."
+    explanation: "Jump Search sıralı dizilerde belirli bloklar halinde sıçrayarak arama yapar. Örneğin belirli aralıklarla ileri atlar, aranan değerin bulunabileceği bloğu tespit edince o blok içinde doğrusal arama yapar."
   },
   {
-    q: "Flutter'da kullanıcı arayüzünü tarif eden ve ekrana döndüren temel metot hangisidir?",
+    q: "Bubble Sort algoritmasının temel mantığı hangisidir?",
     t: "mcq",
-    o: ["build()", "main()", "runApp()", "dispose()", "pub get"],
+    o: [
+      "Yan yana elemanları karşılaştırıp büyük olanı sona doğru taşımak",
+      "Her zaman ortadaki elemanı seçmek",
+      "Kökten başlayıp sola gitmek",
+      "İlk giren elemanı ilk çıkarmak",
+      "Son giren elemanı ilk çıkarmak"
+    ],
     a: 0,
     difficulty: "easy",
-    week: 3,
-    topic: "Flutter build",
+    week: 10,
+    topic: "Bubble Sort",
     importance: 5,
-    explanation: "build(), widget'ın ekranda ne göstereceğini tarif eder. Flutter arayüzü build metodunun döndürdüğü widget ağacına göre oluşturur."
+    explanation: "Bubble Sort yan yana duran iki elemanı karşılaştırır. Eğer soldaki eleman sağdakinden büyükse yer değiştirir. Böylece büyük elemanlar her turda dizinin sonuna doğru gider. Basittir ama büyük veri için yavaştır."
   },
   {
-    q: "Flutter'da uygulamanın en üst widget'ını çalıştırmak için main içinde hangi fonksiyon çağrılır?",
+    q: "Selection Sort algoritmasının temel mantığı hangisidir?",
     t: "mcq",
-    o: ["setState()", "runApp()", "build()", "Navigator.pop()", "dispose()"],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "runApp",
-    importance: 5,
-    explanation: "runApp(), Flutter uygulamasını başlatır. Genellikle main() içinde ana widget ile birlikte kullanılır."
-  },
-  {
-    q: "Flutter'da değişmeyen arayüzler için kullanılan widget sınıfı hangisidir?",
-    t: "mcq",
-    o: ["StatefulWidget", "MaterialApp", "StatelessWidget", "Scaffold", "Navigator"],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "StatelessWidget",
-    importance: 5,
-    explanation: "StatelessWidget değişebilir state tutmaz. Ekrandaki bilgi çalışma sırasında değişmeyecekse kullanılır."
-  },
-  {
-    q: "Flutter'da sayaç gibi ekrandaki değeri değişen yapılarda hangi widget sınıfı kullanılır?",
-    t: "mcq",
-    o: ["StatelessWidget", "Scaffold", "Text", "StatefulWidget", "Icon"],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "StatefulWidget",
-    importance: 5,
-    explanation: "StatefulWidget, değişebilir state yani durum bilgisi olan ekranlarda kullanılır. Sayaç, form ve liste ekleme buna örnektir."
-  },
-  {
-    q: "Flutter'da StatefulWidget içinde ekranı yenilemek için hangi metot kullanılır?",
-    t: "mcq",
-    o: ["print()", "main()", "runApp()", "buildOnly()", "setState()"],
-    a: 4,
-    difficulty: "easy",
-    week: 3,
-    topic: "setState",
-    importance: 5,
-    explanation: "setState(), veri değiştiğinde Flutter'a ekranı yeniden çizmesini söyler. State değişti ama setState yoksa ekranda değişim görünmeyebilir."
-  },
-  {
-    q: "Flutter'da bir sayfanın üst başlık çubuğunu oluşturmak için hangi widget kullanılır?",
-    t: "mcq",
-    o: ["AppBar", "Body", "Column", "TextField", "ListTile"],
+    o: [
+      "Her turda en küçük elemanı seçip doğru konuma yerleştirmek",
+      "Yan yana elemanları sadece bir kez karşılaştırmak",
+      "Veriyi her adımda ikiye bölmek",
+      "Queue'dan eleman çıkarmak",
+      "Stack'e eleman eklemek"
+    ],
     a: 0,
     difficulty: "easy",
-    week: 3,
-    topic: "AppBar",
-    importance: 5,
-    explanation: "AppBar, sayfanın üst kısmındaki başlık çubuğudur. Başlık, menü ve ikonlar burada gösterilebilir."
-  },
-  {
-    q: "Flutter'da sayfanın temel Material iskeletini kuran widget hangisidir?",
-    t: "mcq",
-    o: ["Text", "Scaffold", "Padding", "Icon", "Image"],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "Scaffold",
-    importance: 5,
-    explanation: "Scaffold, sayfanın iskeletidir. AppBar, body, drawer ve floatingActionButton gibi alanları barındırabilir."
-  },
-  {
-    q: "Flutter'da widget'ları alt alta yerleştirmek için hangi widget kullanılır?",
-    t: "mcq",
-    o: ["Row", "Stack", "Column", "MaterialApp", "Navigator"],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "Column",
-    importance: 5,
-    explanation: "Column, children listesindeki widget'ları dikey biçimde alt alta dizer."
-  },
-  {
-    q: "Flutter'da widget'ları yan yana yerleştirmek için hangi widget kullanılır?",
-    t: "mcq",
-    o: ["Column", "Stack", "Container", "Row", "Scaffold"],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "Row",
-    importance: 5,
-    explanation: "Row, widget'ları yatay yönde yan yana dizer. Column ise alt alta dizer."
-  },
-  {
-    q: "Flutter'da widget'ların boş alanı orantılı paylaşması için hangi widget sık kullanılır?",
-    t: "mcq",
-    o: ["Text", "Icon", "Image", "SnackBar", "Expanded"],
-    a: 4,
-    difficulty: "medium",
-    week: 4,
-    topic: "Expanded",
-    importance: 4,
-    explanation: "Expanded, Row veya Column içindeki widget'ın kullanılabilir boş alanı doldurmasını sağlar. Responsive yerleşimlerde sık kullanılır."
-  },
-  {
-    q: "Flutter'da kullanıcıdan metin girişi almak için hangi widget kullanılır?",
-    t: "mcq",
-    o: ["TextField", "Text", "Icon", "AppBar", "Image"],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "TextField",
-    importance: 5,
-    explanation: "TextField, kullanıcıdan yazı almak için kullanılır. İsim, şifre, görev veya arama metni almak için uygundur."
-  },
-  {
-    q: "TextField içindeki yazıyı kontrol etmek ve okumak için hangi yapı kullanılır?",
-    t: "mcq",
-    o: ["Navigator", "TextEditingController", "AppBar", "Scaffold", "MaterialApp"],
-    a: 1,
-    difficulty: "medium",
-    week: 5,
-    topic: "TextEditingController",
-    importance: 5,
-    explanation: "TextEditingController, TextField içindeki yazıyı okumak, değiştirmek ve kontrol etmek için kullanılır."
-  },
-  {
-    q: "TextEditingController gibi kaynakları temizlemek için StatefulWidget içinde genellikle hangi metot kullanılır?",
-    t: "mcq",
-    o: ["build()", "runApp()", "dispose()", "main()", "push()"],
-    a: 2,
-    difficulty: "hard",
-    week: 5,
-    topic: "dispose",
-    importance: 4,
-    explanation: "dispose(), widget artık kullanılmayacakken kaynakları temizlemek için çalışır. Controller gibi nesneler burada temizlenebilir."
-  },
-  {
-    q: "Flutter'da çok sayıda veriyi performanslı listelemek için hangi yapı yaygın kullanılır?",
-    t: "mcq",
-    o: ["Text.only", "Column.only", "Container.all", "ListView.builder", "MaterialApp.body"],
-    a: 3,
-    difficulty: "medium",
-    week: 5,
-    topic: "ListView.builder",
-    importance: 5,
-    explanation: "ListView.builder, liste elemanlarını ihtiyaç oldukça üretir. Çok sayıda veri gösterirken performans açısından daha uygundur."
-  },
-  {
-    q: "Flutter'da sayfalar arasında ileri geçiş yapmak için genellikle hangi Navigator metodu kullanılır?",
-    t: "mcq",
-    o: ["pop()", "dispose()", "setState()", "build()", "push()"],
-    a: 4,
-    difficulty: "medium",
-    week: 5,
-    topic: "Navigator push",
-    importance: 5,
-    explanation: "Navigator.push(), yeni bir sayfayı ekran yığınına ekler ve kullanıcıyı o sayfaya götürür. Geri dönüş için pop() kullanılır."
-  },
-  {
-    q: "Flutter'da önceki sayfaya geri dönmek için hangi Navigator metodu kullanılır?",
-    t: "mcq",
-    o: ["Navigator.pop(context)", "Navigator.run(context)", "Navigator.build(context)", "Navigator.state(context)", "Navigator.reload(context)"],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "Navigator pop",
-    importance: 5,
-    explanation: "Navigator.pop(context), mevcut sayfayı kapatır ve önceki sayfaya döner."
-  },
-  {
-    q: "Flutter projesinde paket ve asset tanımlamaları hangi dosyada yapılır?",
-    t: "mcq",
-    o: ["main.dart", "pubspec.yaml", "index.html", "database.sql", "style.css"],
-    a: 1,
-    difficulty: "easy",
-    week: 6,
-    topic: "pubspec.yaml",
-    importance: 5,
-    explanation: "pubspec.yaml, Flutter projesinin yapılandırma dosyasıdır. Paketler, assetler, fontlar ve sürüm bilgileri burada tanımlanır."
-  },
-  {
-    q: "pubspec.yaml dosyasına yeni paket eklendikten sonra bağımlılıkları indirmek için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["flutter clean only", "dart print", "flutter pub get", "flutter delete", "flutter stop"],
-    a: 2,
-    difficulty: "medium",
-    week: 6,
-    topic: "flutter pub get",
-    importance: 5,
-    explanation: "flutter pub get, pubspec.yaml içindeki paketleri indirir ve projeye hazırlar."
-  },
-  {
-    q: "Flutter'da kullanıcıya kısa süreli alt uyarı mesajı göstermek için hangi widget kullanılır?",
-    t: "mcq",
-    o: ["AppBar", "Column", "Container", "SnackBar", "MaterialApp"],
-    a: 3,
-    difficulty: "medium",
-    week: 7,
-    topic: "SnackBar",
-    importance: 4,
-    explanation: "SnackBar, kullanıcıya kısa bilgi mesajı göstermek için kullanılır. Örneğin 'Görev eklendi' mesajı."
-  },
-  {
-    q: "Flutter'da ekran ölçüsü gibi cihaz bilgilerini almak için hangi yapı kullanılır?",
-    t: "mcq",
-    o: ["Text", "Icon", "Button", "Navigator", "MediaQuery"],
-    a: 4,
-    difficulty: "medium",
-    week: 8,
-    topic: "MediaQuery",
-    importance: 4,
-    explanation: "MediaQuery, ekran genişliği, yüksekliği ve cihaz bilgilerini almak için kullanılır. Responsive tasarımda önemlidir."
-  },
-  {
-    q: "PHP kodları genellikle hangi yapı içinde yazılır?",
-    t: "mcq",
-    o: ["PHP açılış ve kapanış etiketi", "HTML kapanış etiketi", "CSS bloğu", "SQL tablo etiketi", "Script type etiketi"],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "PHP Temel Sözdizimi",
-    importance: 5,
-    explanation: "PHP kodları PHP açılış ve kapanış etiketi arasında yazılır. Sunucu bu aradaki kodları PHP olarak yorumlar."
-  },
-  {
-    q: "PHP'de değişkenler hangi sembol ile başlar?",
-    t: "mcq",
-    o: ["#", "$", "@", "&", "%"],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "PHP Değişken",
-    importance: 5,
-    explanation: "PHP'de değişkenler $ işareti ile başlar. Örneğin $ad, $yas, $sonuc gibi."
-  },
-  {
-    q: "PHP'de ekrana yazı yazdırmak için en sık kullanılan ifade hangisidir?",
-    t: "mcq",
-    o: ["input", "select", "echo", "where", "mkdir"],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "echo",
-    importance: 5,
-    explanation: "echo, PHP'de ekrana metin veya değişken değeri yazdırmak için kullanılır."
-  },
-  {
-    q: "PHP'de aynı değişkenin farklı sabit değerlerine göre işlem yapmak için en uygun yapı hangisidir?",
-    t: "mcq",
-    o: ["for", "while", "foreach", "switch-case", "include"],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "switch-case",
-    importance: 5,
-    explanation: "switch-case, bir değişkenin farklı değerlerine göre işlem yapmayı sağlar. Menü seçimlerinde sık kullanılır."
-  },
-  {
-    q: "PHP'de bir dizinin elemanlarını tek tek gezmek için en uygun döngü hangisidir?",
-    t: "mcq",
-    o: ["if", "else", "switch", "echo", "foreach"],
-    a: 4,
-    difficulty: "easy",
-    week: 4,
-    topic: "foreach",
-    importance: 5,
-    explanation: "foreach, dizi elemanlarını sırayla dolaşmak için kullanılır. Her eleman üzerinde işlem yapılmasını kolaylaştırır."
-  },
-  {
-    q: "PHP'de bir metindeki belirli karakter aralığını almak için hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["substr()", "strlen()", "trim()", "strtolower()", "explode()"],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "substr",
-    importance: 5,
-    explanation: "substr(), string içinden belirli başlangıç ve uzunluğa göre parça alır. Alt metin çıkarmak için kullanılır."
-  },
-  {
-    q: "PHP'de bir metindeki kelimeyi başka bir kelimeyle değiştirmek için hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["strlen()", "str_replace()", "substr()", "trim()", "mb_strlen()"],
-    a: 1,
-    difficulty: "easy",
-    week: 5,
-    topic: "str_replace",
-    importance: 5,
-    explanation: "str_replace(), bir metindeki aranan ifadeyi yeni ifadeyle değiştirir."
-  },
-  {
-    q: "PHP'de metni diziye bölmek için genellikle hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["implode()", "trim()", "explode()", "strlen()", "ucfirst()"],
-    a: 2,
-    difficulty: "medium",
-    week: 5,
-    topic: "explode",
-    importance: 4,
-    explanation: "explode(), belirli ayırıcıya göre metni parçalara böler ve dizi döndürür. Örneğin virgülle ayrılmış sayıları ayırmak için kullanılır."
-  },
-  {
-    q: "HTML formunda PHP tarafında okunacak alan adını belirleyen özellik hangisidir?",
-    t: "mcq",
-    o: ["id", "class", "style", "name", "src"],
-    a: 3,
-    difficulty: "easy",
-    week: 6,
-    topic: "Form name",
-    importance: 5,
-    explanation: "name özelliği, form verisinin PHP tarafında hangi anahtarla geleceğini belirler. Örneğin name='ad' için $_POST['ad'] kullanılır."
-  },
-  {
-    q: "HTML formunda verinin gönderileceği PHP dosyasını belirleyen özellik hangisidir?",
-    t: "mcq",
-    o: ["name", "method", "type", "value", "action"],
-    a: 4,
-    difficulty: "easy",
-    week: 6,
-    topic: "Form action",
-    importance: 5,
-    explanation: "action, form gönderildiğinde isteğin hangi PHP dosyasına gideceğini belirtir."
-  },
-  {
-    q: "Şifre gibi URL'de görünmemesi gereken form verileri için hangi yöntem daha uygundur?",
-    t: "mcq",
-    o: ["POST", "GET", "REQUEST", "LINK", "TRACE"],
-    a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "POST",
-    importance: 5,
-    explanation: "POST, veriyi URL'de göstermez; HTTP isteğinin gövdesinde taşır. Bu yüzden formlar ve hassas veriler için GET'e göre daha uygundur."
-  },
-  {
-    q: "PHP'de dosya yükleme işleminde geçici dosya yolunu veren $_FILES alanı hangisidir?",
-    t: "mcq",
-    o: ["name", "tmp_name", "type", "size", "error"],
-    a: 1,
-    difficulty: "medium",
-    week: 7,
-    topic: "tmp_name",
-    importance: 5,
-    explanation: "tmp_name, yüklenen dosyanın sunucuda geçici olarak tutulduğu yolu verir. Dosya kalıcı klasöre buradan taşınır."
-  },
-  {
-    q: "PHP dosya yükleme işleminde dosya boyutu hangi $_FILES alanından okunur?",
-    t: "mcq",
-    o: ["name", "type", "size", "tmp_name", "error"],
-    a: 2,
-    difficulty: "easy",
-    week: 7,
-    topic: "Dosya Boyutu",
-    importance: 4,
-    explanation: "size, yüklenen dosyanın boyut bilgisini verir. Dosya boyutu kontrolü güvenlik için önemlidir."
-  },
-  {
-    q: "Oturum kullanmadan önce PHP dosyasının başında hangi fonksiyon çağrılmalıdır?",
-    t: "mcq",
-    o: ["session_destroy()", "setcookie()", "mysqli_connect()", "session_start()", "password_hash()"],
-    a: 3,
-    difficulty: "easy",
-    week: 8,
-    topic: "session_start",
-    importance: 5,
-    explanation: "session_start(), oturumu başlatır. $_SESSION değişkeniyle sağlıklı çalışmak için sayfanın başında çağrılır."
-  },
-  {
-    q: "PHP'de tarayıcıda saklanan küçük verilere erişmek için hangi süper global kullanılır?",
-    t: "mcq",
-    o: ["$_GET", "$_POST", "$_SESSION", "$_FILES", "$_COOKIE"],
-    a: 4,
-    difficulty: "medium",
-    week: 8,
-    topic: "Cookie",
-    importance: 4,
-    explanation: "$_COOKIE, tarayıcıda saklanan çerez verilerine erişir. Session genelde sunucuda tutulur, cookie istemci tarafındadır."
-  },
-  {
-    q: "PHP'de oturumu tamamen bitirmek için hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["session_destroy()", "session_start()", "session_id()", "setcookie()", "header()"],
-    a: 0,
-    difficulty: "easy",
-    week: 8,
-    topic: "session_destroy",
-    importance: 5,
-    explanation: "session_destroy(), aktif oturumu sonlandırır. Çıkış/logout işleminde kullanılır."
-  },
-  {
-    q: "PHP'de MySQL bağlantısı için kullanılan geliştirilmiş eklenti hangisidir?",
-    t: "mcq",
-    o: ["PDO only", "mysqli", "session", "cookie", "strlen"],
-    a: 1,
-    difficulty: "easy",
-    week: 9,
-    topic: "mysqli",
-    importance: 5,
-    explanation: "mysqli, PHP ile MySQL veritabanı arasında bağlantı ve sorgu işlemleri yapmak için kullanılan eklentidir."
-  },
-  {
-    q: "Prepared statement içinde sorguyu çalıştıran metot hangisidir?",
-    t: "mcq",
-    o: ["prepare()", "bind_param()", "execute()", "fetch_only()", "connect()"],
-    a: 2,
-    difficulty: "medium",
     week: 11,
-    topic: "execute",
+    topic: "Selection Sort",
     importance: 5,
-    explanation: "execute(), daha önce prepare ile hazırlanmış sorguyu çalıştırır. prepare hazırlar, bind_param veri bağlar, execute çalıştırır."
+    explanation: "Selection Sort, sıralanmamış bölümdeki en küçük elemanı bulur ve dizinin başındaki doğru konuma yerleştirir. Adı seçmeli sıralamadır çünkü her turda uygun eleman seçilir. Tüm durumlarda genellikle O(n²) çalışır."
   },
   {
-    q: "SQL'de mevcut bir kaydı değiştirmek için hangi komut kullanılır?",
+    q: "Insertion Sort algoritması hangi günlük örneğe benzetilebilir?",
     t: "mcq",
-    o: ["INSERT", "SELECT", "DELETE", "UPDATE", "CREATE"],
-    a: 3,
+    o: [
+      "Eldeki kartları sırayla doğru yere yerleştirmeye",
+      "Banka sırasına",
+      "Tabak yığınına",
+      "Şehir haritasına",
+      "Telefon kablosuna"
+    ],
+    a: 0,
     difficulty: "easy",
     week: 13,
-    topic: "UPDATE",
+    topic: "Insertion Sort",
     importance: 5,
-    explanation: "UPDATE, var olan kaydın değerlerini değiştirmek için kullanılır. Genellikle WHERE ile hedef kayıt seçilir."
+    explanation: "Insertion Sort, eldeki iskambil kartlarını sıralamaya benzer. Her yeni eleman, daha önce sıralanmış bölüm içinde doğru yere yerleştirilir. Küçük veya neredeyse sıralı verilerde kullanışlı olabilir."
   },
   {
-    q: "file_put_contents() ile dosya sonuna ekleme yapmak için hangi sabit kullanılır?",
+    q: "Bubble Sort, Selection Sort ve Insertion Sort için genel olarak hangi karmaşıklık sık görülür?",
     t: "mcq",
-    o: ["FILE_START", "FILE_WRITE", "FILE_READ", "FILE_END", "FILE_APPEND"],
-    a: 4,
+    o: ["O(1)", "O(log n)", "O(n)", "O(n²)", "O(0)"],
+    a: 3,
+    difficulty: "medium",
+    week: 13,
+    topic: "Sıralama Karmaşıklığı",
+    importance: 5,
+    explanation: "Bubble Sort, Selection Sort ve Insertion Sort temel sıralama algoritmalarıdır. Genellikle iç içe karşılaştırma veya tekrar eden geçişler yaptıkları için ortalama veya kötü durumda O(n²) karmaşıklığa sahiptirler. Bu yüzden büyük veri kümelerinde verimsiz olabilirler."
+  },
+  {
+    q: "Merge Sort hangi temel yaklaşımla çalışır?",
+    t: "mcq",
+    o: [
+      "Böl ve fethet",
+      "Son giren ilk çıkar",
+      "İlk giren ilk çıkar",
+      "Sol küçük sağ büyük",
+      "Yan yana tek karşılaştırma"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 13,
+    topic: "Merge Sort",
+    importance: 4,
+    explanation: "Merge Sort, böl ve fethet mantığıyla çalışır. Dizi küçük parçalara bölünür, sonra bu parçalar sıralı şekilde birleştirilir. Temel sıralamalara göre büyük verilerde daha verimli olabilir."
+  },
+  {
+    q: "Quick Sort algoritmasında kullanılan temel kavram hangisidir?",
+    t: "mcq",
+    o: ["Pivot", "Front", "Rear", "Root only", "Leaf only"],
+    a: 0,
+    difficulty: "medium",
+    week: 13,
+    topic: "Quick Sort",
+    importance: 4,
+    explanation: "Quick Sort, pivot adı verilen bir eleman seçer. Elemanları pivotun küçükleri ve büyükleri olarak ayırır. Sonra bu parçaları tekrar sıralar. Ortalama durumda oldukça hızlı bir sıralama algoritmasıdır."
+  },
+  {
+    q: "Graf veri yapısı en doğru şekilde nasıl tanımlanır?",
+    t: "mcq",
+    o: [
+      "Düğümlerden ve bu düğümler arasındaki kenarlardan oluşan yapı",
+      "Sadece yan yana duran sayı dizisi",
+      "Son girenin ilk çıktığı yapı",
+      "İlk girenin ilk çıktığı yapı",
+      "Sadece kökü olan ama bağlantısı olmayan yapı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "Graf",
+    importance: 5,
+    explanation: "Graf, düğümlerden ve bu düğümleri birbirine bağlayan kenarlardan oluşur. Şehirler düğüm, şehirler arasındaki yollar kenar olarak düşünülebilir. Sosyal ağlarda kişiler düğüm, arkadaşlık ilişkileri kenar olabilir."
+  },
+  {
+    q: "Graf yapısında düğüm yani vertex neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Graf üzerindeki nokta veya varlık",
+      "İki nokta arasındaki bağlantı",
+      "Stack'ten eleman çıkarma işlemi",
+      "Queue'ya eleman ekleme işlemi",
+      "Dizinin indeks numarası"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "Graf Düğümü",
+    importance: 5,
+    explanation: "Düğüm, graf üzerindeki nokta veya varlıktır. Örneğin şehir haritasında şehirler düğümdür. Sosyal ağda kişiler düğümdür. Düğümleri birbirine bağlayan çizgilere ise kenar denir."
+  },
+  {
+    q: "Graf yapısında kenar yani edge neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "İki düğüm arasındaki bağlantı",
+      "Grafın en üst düğümü",
+      "Hiç çocuğu olmayan düğüm",
+      "Dizinin ilk elemanı",
+      "Stack'in en üst elemanı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 14,
+    topic: "Graf Kenarı",
+    importance: 5,
+    explanation: "Kenar, iki düğüm arasındaki bağlantıdır. Şehir örneğinde şehirler arasındaki yol kenardır. Sosyal ağ örneğinde iki kişi arasındaki arkadaşlık ilişkisi kenar gibi düşünülebilir."
+  },
+  {
+    q: "Graf yapısında komşu düğüm ne demektir?",
+    t: "mcq",
+    o: [
+      "Bir düğüme doğrudan kenarla bağlı olan düğüm",
+      "Her zaman grafın en uzak düğümü",
+      "Hiç bağlantısı olmayan düğüm",
+      "Stack'te en üstteki düğüm",
+      "Dizideki son eleman"
+    ],
+    a: 0,
     difficulty: "medium",
     week: 14,
-    topic: "FILE_APPEND",
+    topic: "Komşu Düğüm",
     importance: 5,
-    explanation: "FILE_APPEND, mevcut dosya içeriğini silmeden dosyanın sonuna ekleme yapılmasını sağlar."
+    explanation: "Komşu düğüm, bir düğüme doğrudan bağlı olan düğümdür. Örneğin A ile B arasında çizgi varsa B, A'nın komşusudur. BFS ve DFS anlatılırken komşu kavramı çok önemlidir."
   },
   {
-    q: "İlişkisel veritabanında veriler temel olarak hangi yapıda saklanır?",
+    q: "Graf yapısında düğüm derecesi neyi ifade eder?",
     t: "mcq",
-    o: ["Tablo", "Resim", "Video", "CSS dosyası", "Tarayıcı geçmişi"],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "İlişkisel Veritabanı",
-    importance: 5,
-    explanation: "İlişkisel veritabanında veriler satır ve sütunlardan oluşan tablolar içinde saklanır."
-  },
-  {
-    q: "Bir tabloda yatay kayıt satırına genellikle ne denir?",
-    t: "mcq",
-    o: ["Sütun", "Satır/Kayıt", "Veritabanı", "İndeks", "Şema"],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Satır Kayıt",
-    importance: 5,
-    explanation: "Satır veya kayıt, tablodaki tek bir veri örneğini temsil eder. Örneğin bir öğrenci bilgisi bir satır olabilir."
-  },
-  {
-    q: "Bir tabloda aynı tür bilgileri tutan dikey alana ne denir?",
-    t: "mcq",
-    o: ["Kayıt", "Satır", "Sütun/Alan", "Backup", "Transaction"],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Sütun Alan",
-    importance: 5,
-    explanation: "Sütun, tablodaki aynı tür bilgileri tutar. Örneğin ad, soyad, yaş birer sütundur."
-  },
-  {
-    q: "SQL Server'da otomatik artan sayı üretmek için kullanılan özellik hangisidir?",
-    t: "mcq",
-    o: ["VARCHAR", "NOT NULL", "FOREIGN KEY", "IDENTITY", "ORDER BY"],
-    a: 3,
-    difficulty: "medium",
-    week: 2,
-    topic: "IDENTITY",
-    importance: 5,
-    explanation: "IDENTITY, SQL Server'da genellikle id alanının otomatik artmasını sağlar. MySQL'deki AUTO_INCREMENT mantığına benzer."
-  },
-  {
-    q: "Bir alana boş değer girilmesini engelleyen kısıt hangisidir?",
-    t: "mcq",
-    o: ["PRIMARY KEY only", "ORDER BY", "GROUP BY", "SELECT", "NOT NULL"],
-    a: 4,
-    difficulty: "easy",
-    week: 2,
-    topic: "NOT NULL",
-    importance: 5,
-    explanation: "NOT NULL, ilgili sütunun boş bırakılmasını engeller. Veri bütünlüğünü korur."
-  },
-  {
-    q: "Bir sütundaki değerlerin tekrar etmesini engelleyen kısıt hangisidir?",
-    t: "mcq",
-    o: ["UNIQUE", "WHERE", "FROM", "JOIN", "BACKUP"],
+    o: [
+      "Bir düğümün bağlantı veya komşu sayısını",
+      "Grafın toplam renk sayısını",
+      "Dizinin uzunluğunu",
+      "Stack'teki son elemanı",
+      "Queue'daki ilk elemanı"
+    ],
     a: 0,
     difficulty: "medium",
-    week: 2,
-    topic: "UNIQUE",
-    importance: 4,
-    explanation: "UNIQUE kısıtı, bir sütundaki değerlerin tekrarlanmasını engeller. Örneğin e-posta alanında kullanılabilir."
-  },
-  {
-    q: "Bir sütuna değer girilmediğinde otomatik atanacak değeri belirleyen kısıt hangisidir?",
-    t: "mcq",
-    o: ["CHECK", "DEFAULT", "ORDER BY", "HAVING", "JOIN"],
-    a: 1,
-    difficulty: "medium",
-    week: 2,
-    topic: "DEFAULT",
-    importance: 4,
-    explanation: "DEFAULT, kullanıcı değer girmezse kullanılacak varsayılan değeri belirler."
-  },
-  {
-    q: "Bir sütundaki değerin belirli şartı sağlamasını zorunlu kılan kısıt hangisidir?",
-    t: "mcq",
-    o: ["SELECT", "INSERT", "CHECK", "BACKUP", "VIEW"],
-    a: 2,
-    difficulty: "medium",
-    week: 2,
-    topic: "CHECK",
-    importance: 4,
-    explanation: "CHECK kısıtı, değerlerin belirli kurala uymasını sağlar. Örneğin yaş >= 18 şartı verilebilir."
-  },
-  {
-    q: "SQL'de tablo yapısını değiştirmek için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["SELECT", "INSERT", "DELETE", "ALTER TABLE", "ORDER BY"],
-    a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "ALTER TABLE",
-    importance: 4,
-    explanation: "ALTER TABLE, mevcut tablonun yapısını değiştirmek için kullanılır. Yeni sütun ekleme veya sütun değiştirme işlemleri yapılabilir."
-  },
-  {
-    q: "SQL'de tabloyu tamamen silmek için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["DELETE ROW", "SELECT", "UPDATE", "WHERE", "DROP TABLE"],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "DROP TABLE",
+    week: 14,
+    topic: "Düğüm Derecesi",
     importance: 5,
-    explanation: "DROP TABLE, tabloyu yapısıyla birlikte siler. DELETE ise tablodaki kayıtları siler, tablo yapısını silmez."
+    explanation: "Düğüm derecesi, bir düğümün kaç bağlantısı olduğunu gösterir. Eğer A düğümü B ve C düğümlerine bağlıysa A'nın derecesi 2'dir. Yani derece, düğümün komşu sayısı gibi düşünülebilir."
   },
   {
-    q: "SELECT * FROM Ogrenciler ifadesindeki * ne anlama gelir?",
+    q: "Komşuluk matrisi neyi gösterir?",
     t: "mcq",
-    o: ["Tüm sütunları getir", "Sadece ilk satırı getir", "Tabloyu sil", "Veritabanı oluştur", "Kayıt ekle"],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "SELECT",
-    importance: 5,
-    explanation: "* işareti tüm sütunları seçmek için kullanılır. SELECT * FROM Ogrenciler tüm alanları getirir."
-  },
-  {
-    q: "SQL'de sadece farklı/tekrarsız değerleri getirmek için hangi ifade kullanılır?",
-    t: "mcq",
-    o: ["ORDER BY", "DISTINCT", "JOIN", "DELETE", "DROP"],
-    a: 1,
-    difficulty: "medium",
-    week: 4,
-    topic: "DISTINCT",
-    importance: 4,
-    explanation: "DISTINCT, tekrar eden değerleri tekilleştirir. Örneğin aynı şehir adlarını bir kez göstermek için kullanılır."
-  },
-  {
-    q: "SQL'de belirli bir metin desenine göre arama yapmak için hangi operatör kullanılır?",
-    t: "mcq",
-    o: ["INTO", "DROP", "LIKE", "CREATE", "DEFAULT"],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "LIKE",
-    importance: 5,
-    explanation: "LIKE, metin desenine göre arama yapar. Örneğin Ad LIKE 'A%' A ile başlayan adları getirir."
-  },
-  {
-    q: "SQL'de birden fazla olası değerden herhangi birine eşit olan kayıtları seçmek için hangi operatör kullanılır?",
-    t: "mcq",
-    o: ["LIKE", "JOIN", "ORDER", "IN", "DROP"],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
-    topic: "IN",
-    importance: 4,
-    explanation: "IN, bir değerin verilen liste içindeki değerlerden biri olup olmadığını kontrol eder."
-  },
-  {
-    q: "SQL'de iki değer aralığındaki kayıtları seçmek için hangi operatör kullanılır?",
-    t: "mcq",
-    o: ["LIKE", "IN", "JOIN", "CREATE", "BETWEEN"],
-    a: 4,
-    difficulty: "medium",
-    week: 4,
-    topic: "BETWEEN",
-    importance: 4,
-    explanation: "BETWEEN, iki değer arasındaki kayıtları seçer. Örneğin yas BETWEEN 18 AND 25."
-  },
-  {
-    q: "INNER JOIN ne yapar?",
-    t: "mcq",
-    o: ["İki tabloda eşleşen kayıtları getirir", "Sol tablonun tüm kayıtlarını koşulsuz getirir", "Tabloyu siler", "Yedek alır", "Sütun ekler"],
+    o: [
+      "Graf düğümleri arasında bağlantı olup olmadığını 0 ve 1 ile gösterir",
+      "Stack'teki elemanların en üstten alta sırasını gösterir",
+      "Queue'daki elemanların bekleme süresini gösterir",
+      "Dizinin sadece ilk elemanını gösterir",
+      "BST'deki sadece kök düğümü gösterir"
+    ],
     a: 0,
     difficulty: "medium",
-    week: 5,
-    topic: "INNER JOIN",
+    week: 14,
+    topic: "Komşuluk Matrisi",
     importance: 5,
-    explanation: "INNER JOIN, iki tabloda eşleşen kayıtları getirir. Eşleşmeyen kayıtlar sonuçta yer almaz."
+    explanation: "Komşuluk matrisi, graf bağlantılarını tablo şeklinde gösterir. İki düğüm arasında bağlantı varsa 1, bağlantı yoksa 0 yazılır. Bu yöntem özellikle küçük graflarda bağlantıları düzenli göstermek için kullanılır."
   },
   {
-    q: "COUNT() fonksiyonu ne işe yarar?",
+    q: "Basit graf hangi özelliğe sahiptir?",
     t: "mcq",
-    o: ["Ortalama alır", "Kayıt sayısını bulur", "En büyük değeri bulur", "Tabloyu siler", "Metin birleştirir"],
-    a: 1,
-    difficulty: "easy",
-    week: 5,
-    topic: "COUNT",
-    importance: 5,
-    explanation: "COUNT(), kayıt sayısını verir. Örneğin SELECT COUNT(*) FROM Ogrenciler toplam öğrenci sayısını döndürür."
-  },
-  {
-    q: "AVG() fonksiyonu ne işe yarar?",
-    t: "mcq",
-    o: ["Toplam alır", "En küçük değeri bulur", "Ortalama hesaplar", "Sıralama yapar", "Silme yapar"],
-    a: 2,
-    difficulty: "easy",
-    week: 5,
-    topic: "AVG",
-    importance: 5,
-    explanation: "AVG(), sayısal değerlerin ortalamasını hesaplar. Not ortalaması gibi işlemlerde kullanılır."
-  },
-  {
-    q: "GROUP BY ne için kullanılır?",
-    t: "mcq",
-    o: ["Tablo silmek için", "Kayıt eklemek için", "Alan adı değiştirmek için", "Kayıtları gruplamak için", "Veritabanı kapatmak için"],
-    a: 3,
+    o: [
+      "Paralel kenarı ve döngüsü olmayan yönsüz graf olması",
+      "Her düğümün kendisine bağlı olması",
+      "Her iki düğüm arasında birden fazla kenar bulunması",
+      "Sadece stack ile çalışması",
+      "Sadece queue ile çalışması"
+    ],
+    a: 0,
     difficulty: "medium",
-    week: 5,
-    topic: "GROUP BY",
-    importance: 5,
-    explanation: "GROUP BY, kayıtları belirli sütuna göre gruplar. Örneğin bölümlere göre öğrenci sayısı almak için kullanılır."
+    week: 14,
+    topic: "Graf Türleri",
+    importance: 4,
+    explanation: "Basit graf, paralel kenarı ve döngüsü olmayan graf türüdür. Paralel kenar, aynı iki düğüm arasında birden fazla bağlantı olmasıdır. Döngü ise bir kenarın başladığı ve bittiği düğümün aynı olmasıdır."
   },
   {
-    q: "GROUP BY sonrası gruplara koşul uygulamak için hangi ifade kullanılır?",
+    q: "Graf üzerinde BFS algoritması hangi veri yapısını kullanır?",
     t: "mcq",
-    o: ["WHERE only", "ORDER ONLY", "JOIN ONLY", "DROP", "HAVING"],
-    a: 4,
+    o: ["Stack", "Queue", "Dizi indeksini", "AVL rotasyonunu", "Selection Sort'u"],
+    a: 1,
+    difficulty: "medium",
+    week: 14,
+    topic: "BFS",
+    importance: 5,
+    explanation: "BFS, Queue yani kuyruk kullanır. Çünkü BFS yakından uzağa doğru arama yapar. Önce başlangıç noktasına doğrudan bağlı olan düğümler ele alınır, sonra onların bağlı olduğu düğümlere geçilir. Bu sıra mantığı FIFO yani kuyruk mantığına uygundur."
+  },
+  {
+    q: "Graf üzerinde DFS algoritması hangi veri yapısını kullanır?",
+    t: "mcq",
+    o: ["Stack", "Queue", "Bubble Sort", "B ağacı", "Komşuluk matrisi"],
+    a: 0,
+    difficulty: "medium",
+    week: 14,
+    topic: "DFS",
+    importance: 5,
+    explanation: "DFS, Stack yani yığın mantığını kullanır. DFS bir yoldan gidebildiği kadar derine gider, yol bitince geri döner. Bu geri dönme mantığı stack yapısına uygundur. Stack son gidilen yerden geri dönmeyi kolaylaştırır."
+  },
+  {
+    q: "BFS algoritmasının sıfırdan en anlaşılır açıklaması hangisidir?",
+    t: "mcq",
+    o: [
+      "Başlangıç noktasına yakın olanları önce kontrol edip sonra daha uzaklara geçer",
+      "Her zaman en büyük elemanı köke taşır",
+      "Son giren elemanı ilk çıkarır",
+      "Diziyi yan yana karşılaştırarak sıralar",
+      "Küçük değerleri sola büyük değerleri sağa koyar"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 14,
+    topic: "BFS Mantığı",
+    importance: 5,
+    explanation: "BFS'yi yakından uzağa arama gibi düşünebilirsin. Bir noktadan başlar, önce o noktaya doğrudan bağlı olanları kontrol eder, sonra onların bağlı olduklarına geçer. Bu yüzden genişlik öncelikli arama denir ve Queue kullanır."
+  },
+  {
+    q: "DFS algoritmasının sıfırdan en anlaşılır açıklaması hangisidir?",
+    t: "mcq",
+    o: [
+      "Bir yoldan gidebildiği kadar derine gidip yol bitince geri döner",
+      "İlk gelen elemanı ilk çıkarır",
+      "Her zaman yan yana iki elemanı karşılaştırır",
+      "Her zaman en küçük elemanı seçer",
+      "Sadece dizide indeksle arama yapar"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 14,
+    topic: "DFS Mantığı",
+    importance: 5,
+    explanation: "DFS'yi labirentte bir yola girip sonuna kadar gitmek gibi düşünebilirsin. Yol bitince geri döner ve başka yola girer. Bu yüzden derinlik öncelikli arama denir. Geri dönme mantığı nedeniyle Stack kullanır."
+  },
+  {
+    q: "BFS ve DFS arasındaki temel fark hangisidir?",
+    t: "mcq",
+    o: [
+      "BFS yakından uzağa gider ve Queue kullanır; DFS bir yoldan derine gider ve Stack kullanır",
+      "BFS Stack kullanır, DFS Queue kullanır",
+      "BFS sadece dizileri sıralar, DFS sadece sayıları toplar",
+      "BFS sadece AVL'de, DFS sadece B ağacında kullanılır",
+      "BFS ve DFS arasında hiçbir fark yoktur"
+    ],
+    a: 0,
     difficulty: "hard",
-    week: 5,
-    topic: "HAVING",
-    importance: 4,
-    explanation: "HAVING, gruplandırılmış sonuçlar üzerinde koşul uygulamak için kullanılır. WHERE satırlara, HAVING gruplara uygulanır."
+    week: 14,
+    topic: "BFS DFS Farkı",
+    importance: 5,
+    explanation: "BFS genişlik öncelikli aramadır; yakın düğümlerden başlayarak ilerler ve Queue kullanır. DFS derinlik öncelikli aramadır; bir yoldan sonuna kadar gider ve geri döner, bu yüzden Stack kullanır. Finalde en sık sorulabilecek farklardan biridir."
   }
 ];
