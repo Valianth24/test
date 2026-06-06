@@ -1,906 +1,612 @@
-// 4 Ders Final Seti – 80 Soruluk Soru Bankası
-// Dersler: Görsel Programlama, Mobil Programlama, İnternet Programlama, Veritabanı Yönetim Sistemleri
+// Mobil Programlama – Flutter / BTK Akademi Odaklı 30 Soruluk Final Soru Bankası
+// Konu: Flutter, Dart, Widget, State, setState, MaterialApp, Scaffold, To-Do mantığı
 // Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
 // Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
 
 window.questionBank = [
   // =========================================================
-  // ==== GÖRSEL PROGRAMLAMA – 20 FİNAL SORUSU ================
+  // ==== FLUTTER TEMELLERİ / BTK AKADEMİ FİNAL SETİ (30) ====
   // =========================================================
 
   {
-    q: "Windows Forms uygulamasında kullanıcıya bilgi göstermek için en uygun kontrol hangisidir?",
+    q: "Flutter en doğru şekilde nedir?",
     t: "mcq",
-    o: ["Label", "TextBox", "Button", "Timer", "OpenFileDialog"],
+    o: [
+      "Tek kod tabanıyla mobil, web ve masaüstü uygulama geliştirmeyi sağlayan framework",
+      "Sadece veritabanı yönetmek için kullanılan sistem",
+      "Sadece Android cihazlarda çalışan işletim sistemi",
+      "Sadece resim düzenleme programı",
+      "Sadece internet protokolü"
+    ],
     a: 0,
     difficulty: "easy",
     week: 1,
-    topic: "Görsel Programlama / Kontroller",
+    topic: "Flutter Temelleri",
     importance: 5,
-    explanation: "Label, kullanıcıya yazı veya sonuç göstermek için kullanılır. TextBox veri almak, Button işlem başlatmak içindir."
+    explanation: "Flutter, Google tarafından geliştirilen açık kaynaklı bir framework'tür. Framework, uygulama geliştirmek için hazır yapı ve araçlar sunan çatıdır. Flutter ile tek koddan Android, iOS, web ve masaüstü çıktısı alınabilir."
   },
   {
-    q: "Kullanıcıdan metin veya sayı girişi almak için hangi Windows Forms kontrolü kullanılır?",
+    q: "Flutter uygulamaları geliştirmek için kullanılan programlama dili hangisidir?",
     t: "mcq",
-    o: ["Label", "TextBox", "PictureBox", "ProgressBar", "Panel"],
+    o: [
+      "Kotlin",
+      "Dart",
+      "PHP",
+      "SQL",
+      "HTML"
+    ],
     a: 1,
     difficulty: "easy",
     week: 1,
-    topic: "Görsel Programlama / TextBox",
+    topic: "Dart Dili",
     importance: 5,
-    explanation: "TextBox, kullanıcının klavyeden veri girdiği kutudur. Sayı da girilebilir ama işlem yapmadan önce genellikle dönüştürmek gerekir."
+    explanation: "Flutter bir framework'tür; Flutter içinde kod yazmak için Dart dili kullanılır. Yani Flutter araçtır, Dart ise o araçla yazdığımız programlama dilidir."
   },
   {
-    q: "Button kontrolünde kullanıcı tıkladığında çalışan olay hangisidir?",
+    q: "Flutter'da ekranda görünen arayüz parçalarına genel olarak ne denir?",
     t: "mcq",
-    o: ["Load", "TextChanged", "Click", "SelectedIndexChanged", "Tick"],
+    o: [
+      "Database",
+      "Compiler",
+      "Widget",
+      "Server",
+      "Router"
+    ],
     a: 2,
     difficulty: "easy",
     week: 1,
-    topic: "Görsel Programlama / Olaylar",
+    topic: "Widget Mantığı",
     importance: 5,
-    explanation: "Click olayı, butona tıklanınca çalışır. Olay, kullanıcının yaptığı hareket sonucunda çalışan kod bölümüdür."
+    explanation: "Flutter'da arayüz widget'lardan oluşur. Widget, ekrandaki yazı, buton, kutu, liste veya sayfa iskeleti gibi arayüz parçasıdır."
   },
   {
-    q: "C# dilinde tam sayı saklamak için hangi veri tipi kullanılır?",
+    q: "Flutter uygulamasında programın başlangıç noktası hangi fonksiyondur?",
     t: "mcq",
-    o: ["string", "bool", "double", "int", "char"],
+    o: [
+      "build()",
+      "setState()",
+      "initState()",
+      "main()",
+      "dispose()"
+    ],
+    a: 3,
+    difficulty: "easy",
+    week: 1,
+    topic: "main Fonksiyonu",
+    importance: 5,
+    explanation: "main() fonksiyonu Dart ve Flutter uygulamasının başlangıç noktasıdır. Program ilk olarak main() içinden çalışmaya başlar."
+  },
+  {
+    q: "Flutter uygulamasını ekrana başlatmak için genellikle hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: [
+      "print()",
+      "startApp()",
+      "openApp()",
+      "buildApp()",
+      "runApp()"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 1,
+    topic: "runApp",
+    importance: 5,
+    explanation: "runApp(), Flutter uygulamasını başlatır ve verilen ana widget'ı ekrana yerleştirir. Genellikle main() fonksiyonu içinde kullanılır."
+  },
+
+  {
+    q: "Flutter'da Material Design tabanlı uygulamanın ana yapısını kuran widget hangisidir?",
+    t: "mcq",
+    o: [
+      "MaterialApp",
+      "TextField",
+      "Column",
+      "Icon",
+      "Image"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "MaterialApp",
+    importance: 5,
+    explanation: "MaterialApp, Flutter uygulamasının ana Material Design yapısını kurar. Tema, ana sayfa, sayfa yönlendirme gibi temel uygulama ayarları burada başlar."
+  },
+  {
+    q: "Flutter'da bir sayfanın temel iskeletini oluşturan widget hangisidir?",
+    t: "mcq",
+    o: [
+      "Text",
+      "Scaffold",
+      "Padding",
+      "Icon",
+      "Row"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "Scaffold",
+    importance: 5,
+    explanation: "Scaffold, bir sayfanın temel iskeletidir. İçinde AppBar, body, drawer, floatingActionButton gibi alanlar bulunabilir."
+  },
+  {
+    q: "Scaffold içinde sayfanın ana içerik bölümünü belirtmek için hangi özellik kullanılır?",
+    t: "mcq",
+    o: [
+      "title",
+      "icon",
+      "body",
+      "theme",
+      "route"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 2,
+    topic: "Scaffold Body",
+    importance: 5,
+    explanation: "body, Scaffold içindeki ana içerik alanıdır. Ekranda gösterilecek asıl widget'lar genellikle body içine yazılır."
+  },
+  {
+    q: "Flutter'da üst başlık çubuğu oluşturmak için hangi widget kullanılır?",
+    t: "mcq",
+    o: [
+      "Container",
+      "ListView",
+      "TextField",
+      "AppBar",
+      "Navigator"
+    ],
     a: 3,
     difficulty: "easy",
     week: 2,
-    topic: "Görsel Programlama / Veri Tipleri",
+    topic: "AppBar",
     importance: 5,
-    explanation: "int, tam sayı veri tipidir. 10, 25, -3 gibi ondalıksız sayıları saklar."
+    explanation: "AppBar, uygulamanın üst kısmındaki başlık çubuğudur. Sayfa başlığı, ikonlar ve menü işlemleri burada gösterilebilir."
   },
   {
-    q: "C# dilinde doğru/yanlış değer tutan veri tipi hangisidir?",
+    q: "Flutter'da ekranda yazı göstermek için hangi widget kullanılır?",
     t: "mcq",
-    o: ["string", "int", "float", "char", "bool"],
+    o: [
+      "Row",
+      "Column",
+      "Stack",
+      "Container",
+      "Text"
+    ],
     a: 4,
     difficulty: "easy",
     week: 2,
-    topic: "Görsel Programlama / Boolean",
+    topic: "Text Widget",
     importance: 5,
-    explanation: "bool veri tipi true veya false değerini tutar. Koşul yapılarında çok kullanılır."
+    explanation: "Text widget'ı ekranda yazı göstermek için kullanılır. Örneğin Text('Merhaba') ekrana Merhaba yazdırır."
   },
+
   {
-    q: "C# dilinde '=' operatörü ne işe yarar?",
+    q: "Widget'ları yatay yani yan yana dizmek için hangi Flutter widget'ı kullanılır?",
     t: "mcq",
-    o: ["Atama yapar", "Eşit mi diye karşılaştırır", "Bölme yapar", "Metni siler", "Döngüyü durdurur"],
+    o: [
+      "Row",
+      "Column",
+      "Stack",
+      "Scaffold",
+      "MaterialApp"
+    ],
     a: 0,
     difficulty: "easy",
-    week: 2,
-    topic: "Görsel Programlama / Operatörler",
+    week: 3,
+    topic: "Row",
     importance: 5,
-    explanation: "'=' atama operatörüdür. Örneğin x = 5; ifadesi x değişkenine 5 değerini verir."
+    explanation: "Row, çocuk widget'ları yatay yönde yani yan yana dizer. Row kelime olarak satır anlamına gelir."
   },
   {
-    q: "C# dilinde '==' operatörü ne için kullanılır?",
+    q: "Widget'ları dikey yani alt alta dizmek için hangi Flutter widget'ı kullanılır?",
     t: "mcq",
-    o: ["Değer atamak için", "Eşitlik karşılaştırması yapmak için", "Çarpma yapmak için", "Dosya açmak için", "Form kapatmak için"],
+    o: [
+      "Row",
+      "Column",
+      "Stack",
+      "Container",
+      "Icon"
+    ],
     a: 1,
     difficulty: "easy",
-    week: 2,
-    topic: "Görsel Programlama / Karşılaştırma",
-    importance: 5,
-    explanation: "'==' iki değerin eşit olup olmadığını kontrol eder. Sonuç true veya false olur."
-  },
-  {
-    q: "MessageBox.Show() metodu ne işe yarar?",
-    t: "mcq",
-    o: ["Dosya siler", "Form rengini değiştirir", "Ekrana mesaj kutusu çıkarır", "Dizi oluşturur", "Veritabanı açar"],
-    a: 2,
-    difficulty: "easy",
     week: 3,
-    topic: "Görsel Programlama / MessageBox",
+    topic: "Column",
     importance: 5,
-    explanation: "MessageBox.Show(), kullanıcıya küçük bir mesaj penceresi gösterir. Uyarı, bilgi veya hata mesajlarında kullanılır."
+    explanation: "Column, çocuk widget'ları dikey yönde yani alt alta dizer. Form ekranları ve menülerde çok sık kullanılır."
   },
   {
-    q: "Bir öğrencinin notu 50 ve üzeriyse 'Geçti', değilse 'Kaldı' yazdırmak için en uygun yapı hangisidir?",
+    q: "Widget'ları üst üste bindirerek yerleştirmek için hangi widget kullanılır?",
     t: "mcq",
-    o: ["for", "while", "foreach", "if-else", "try-finally"],
+    o: [
+      "Row",
+      "Column",
+      "Stack",
+      "Text",
+      "Scaffold"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 3,
+    topic: "Stack",
+    importance: 4,
+    explanation: "Stack, widget'ları üst üste yerleştirir. Örneğin bir resmin üstüne yazı koymak için kullanılabilir."
+  },
+  {
+    q: "Flutter'da genişlik, yükseklik, renk ve boşluk gibi ayarlar verilebilen kutu yapısı hangisidir?",
+    t: "mcq",
+    o: [
+      "Text",
+      "Icon",
+      "Navigator",
+      "Container",
+      "MaterialApp"
+    ],
     a: 3,
     difficulty: "easy",
+    week: 3,
+    topic: "Container",
+    importance: 5,
+    explanation: "Container, kutu gibi düşünülebilir. İçine başka widget alabilir; renk, genişlik, yükseklik, padding ve margin gibi ayarlar verilebilir."
+  },
+  {
+    q: "Bir widget'ın etrafına iç boşluk vermek için genellikle hangi widget kullanılır?",
+    t: "mcq",
+    o: [
+      "Text",
+      "Image",
+      "Navigator",
+      "ListView",
+      "Padding"
+    ],
+    a: 4,
+    difficulty: "easy",
+    week: 3,
+    topic: "Padding",
+    importance: 4,
+    explanation: "Padding, içindeki widget'ın etrafına boşluk verir. Örneğin yazının kenarlara yapışmasını engeller."
+  },
+
+  {
+    q: "Çalışma sırasında değişmeyen ekrana sahip widget türü hangisidir?",
+    t: "mcq",
+    o: [
+      "StatelessWidget",
+      "StatefulWidget",
+      "setState",
+      "Navigator",
+      "TextField"
+    ],
+    a: 0,
+    difficulty: "medium",
     week: 4,
-    topic: "Görsel Programlama / if-else",
+    topic: "StatelessWidget",
     importance: 5,
-    explanation: "İki ihtimal varsa if-else kullanılır. Koşul doğruysa if, yanlışsa else bloğu çalışır."
+    explanation: "StatelessWidget, değişebilir durumu olmayan widget'tır. Ekrandaki bilgi çalışma sırasında değişmeyecekse kullanılır."
   },
   {
-    q: "Aynı değişkenin 1, 2, 3 gibi farklı sabit değerlerine göre işlem yapılacaksa hangi yapı uygundur?",
+    q: "Sayaç artması veya butona basınca ekranın değişmesi gibi durumlarda hangi widget türü kullanılır?",
     t: "mcq",
-    o: ["if only", "for", "while", "try-catch", "switch-case"],
-    a: 4,
-    difficulty: "medium",
-    week: 5,
-    topic: "Görsel Programlama / switch-case",
-    importance: 5,
-    explanation: "switch-case, aynı değişkenin farklı sabit değerlerine göre işlem yaptırır. Menü seçimlerinde çok kullanılır."
-  },
-  {
-    q: "Kaç kez çalışacağı belli olan tekrar işlemlerinde hangi döngü daha uygundur?",
-    t: "mcq",
-    o: ["for", "while", "do-while", "switch", "try"],
-    a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "Görsel Programlama / for",
-    importance: 5,
-    explanation: "for döngüsü başlangıç, koşul ve artış bölümleriyle belirli sayıda tekrar yapar."
-  },
-  {
-    q: "Koşul doğru olduğu sürece çalışan döngü hangisidir?",
-    t: "mcq",
-    o: ["switch", "while", "if", "catch", "return"],
-    a: 1,
-    difficulty: "easy",
-    week: 6,
-    topic: "Görsel Programlama / while",
-    importance: 5,
-    explanation: "while döngüsü koşul doğru olduğu sürece çalışır. Koşul baştan yanlışsa hiç çalışmayabilir."
-  },
-  {
-    q: "Bir dizi veya koleksiyonun elemanlarını tek tek gezmek için hangi döngü kullanılır?",
-    t: "mcq",
-    o: ["if", "switch", "foreach", "try", "case"],
-    a: 2,
-    difficulty: "easy",
-    week: 7,
-    topic: "Görsel Programlama / foreach",
-    importance: 5,
-    explanation: "foreach, dizi veya liste içindeki elemanları sırayla dolaşmak için kullanılır."
-  },
-  {
-    q: "Geriye değer döndürmeyen metot hangi anahtar kelimeyle tanımlanır?",
-    t: "mcq",
-    o: ["int", "string", "return", "void", "bool"],
-    a: 3,
-    difficulty: "medium",
-    week: 8,
-    topic: "Görsel Programlama / Metotlar",
-    importance: 5,
-    explanation: "void, metodun geriye değer döndürmediğini gösterir. Sadece işlem yapar."
-  },
-  {
-    q: "Bir metodun dışarıdan aldığı değerlere ne denir?",
-    t: "mcq",
-    o: ["Değişken tipi", "Form", "Kontrol", "Olay", "Parametre"],
-    a: 4,
-    difficulty: "medium",
-    week: 8,
-    topic: "Görsel Programlama / Parametre",
-    importance: 5,
-    explanation: "Parametre, metoda dışarıdan gönderilen değerdir. Örneğin Topla(int a, int b) metodunda a ve b parametredir."
-  },
-  {
-    q: "Aynı türden birden fazla veriyi tek isim altında saklayan yapı hangisidir?",
-    t: "mcq",
-    o: ["Dizi", "Button", "Label", "Form", "Exception"],
-    a: 0,
-    difficulty: "easy",
-    week: 11,
-    topic: "Görsel Programlama / Diziler",
-    importance: 5,
-    explanation: "Dizi, aynı türden birden fazla veriyi tek isim altında tutar. Örneğin int[] sayilar = {1,2,3};"
-  },
-  {
-    q: "C# Windows Forms'ta sıfıra bölme hatasını yakalamak için hangi özel hata sınıfı kullanılır?",
-    t: "mcq",
-    o: ["FormatException", "DivideByZeroException", "FileNotFoundException", "IndexOutOfRangeException", "NullReferenceException"],
+    o: [
+      "StatelessWidget",
+      "StatefulWidget",
+      "MaterialApp",
+      "AppBar",
+      "Icon"
+    ],
     a: 1,
     difficulty: "medium",
-    week: 12,
-    topic: "Görsel Programlama / Hata Yakalama",
-    importance: 5,
-    explanation: "DivideByZeroException, bir sayının sıfıra bölünmesi durumunda oluşan hatadır."
-  },
-  {
-    q: "Kullanıcı sayı yerine harf girerse ve sayıya çevrilemezse genellikle hangi hata oluşur?",
-    t: "mcq",
-    o: ["DivideByZeroException", "IOException", "FormatException", "OverflowException", "ArgumentException"],
-    a: 2,
-    difficulty: "medium",
-    week: 12,
-    topic: "Görsel Programlama / FormatException",
-    importance: 5,
-    explanation: "FormatException, veri beklenen biçime çevrilemediğinde oluşur. Örneğin 'abc' değerini int'e çevirmek hata verir."
-  },
-  {
-    q: "try-catch-finally yapısında hata olsa da olmasa da çalışan blok hangisidir?",
-    t: "mcq",
-    o: ["try", "catch", "throw", "finally", "return"],
-    a: 3,
-    difficulty: "easy",
-    week: 13,
-    topic: "Görsel Programlama / finally",
-    importance: 5,
-    explanation: "finally bloğu her durumda çalışır. Dosya kapatma veya işlem sonu mesajı verme için kullanılabilir."
-  },
-  {
-    q: "ListBox içindeki tüm elemanları temizlemek için kullanılan ifade hangisidir?",
-    t: "mcq",
-    o: ["listBox1.Items.Add();", "listBox1.Text.Clear();", "listBox1.SelectedIndex = 0;", "listBox1.Hide();", "listBox1.Items.Clear();"],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "Görsel Programlama / ListBox",
-    importance: 4,
-    explanation: "Items.Clear(), ListBox içindeki bütün elemanları temizler. Items, listedeki eleman koleksiyonudur."
-  },
-
-  // =========================================================
-  // ==== MOBİL PROGRAMLAMA – 20 FİNAL SORUSU =================
-  // =========================================================
-
-  {
-    q: "Mobil programlama en doğru şekilde neyi ifade eder?",
-    t: "mcq",
-    o: ["Taşınabilir cihazlar için uygulama geliştirmeyi", "Sadece masaüstü program yazmayı", "Sadece veritabanı kurmayı", "Sadece web sayfası renklendirmeyi", "Sadece ağ kablosu kurmayı"],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Programlama / Giriş",
-    importance: 5,
-    explanation: "Mobil programlama, telefon, tablet ve giyilebilir cihaz gibi taşınabilir cihazlarda çalışan uygulamalar geliştirmektir."
-  },
-  {
-    q: "Mobil cihazlarda düşük güç tüketimi ve verimlilik için yaygın kullanılan işlemci mimarisi hangisidir?",
-    t: "mcq",
-    o: ["x86 Server", "ARM/RISC", "CISC only", "Mainframe", "Quantum"],
-    a: 1,
-    difficulty: "medium",
-    week: 1,
-    topic: "Mobil Programlama / Donanım",
-    importance: 5,
-    explanation: "ARM tabanlı RISC mimarisi, düşük güç tüketimi ve iyi performans dengesi nedeniyle mobil cihazlarda yaygındır."
-  },
-  {
-    q: "1992 yılında tanıtılan ve ilk gerçek akıllı telefon hamlesi kabul edilen cihaz hangisidir?",
-    t: "mcq",
-    o: ["iPhone", "T-Mobile G1", "IBM Simon", "Nokia 3310", "Motorola Razr"],
-    a: 2,
-    difficulty: "medium",
-    week: 1,
-    topic: "Mobil Programlama / Tarihçe",
-    importance: 4,
-    explanation: "IBM Simon; dokunmatik ekran, e-posta, faks ve uygulama özellikleriyle ilk gerçek akıllı telefon hamlesi olarak kabul edilir."
-  },
-  {
-    q: "5G teknolojisinin en belirgin özelliklerinden biri hangisidir?",
-    t: "mcq",
-    o: ["Sadece analog ses", "Sadece SMS", "Sadece MMS", "Ultra düşük gecikme", "Sadece kablolu bağlantı"],
-    a: 3,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Programlama / 5G",
-    importance: 5,
-    explanation: "5G; yüksek hız, düşük gecikme, IoT, AR/VR ve çok sayıda cihaz bağlantısı ile öne çıkar."
-  },
-  {
-    q: "Android için resmi/yerel geliştirmede en yaygın kullanılan diller hangileridir?",
-    t: "mcq",
-    o: ["Swift ve Objective-C", "PHP ve SQL", "HTML ve CSS", "Ruby ve Perl", "Kotlin ve Java"],
-    a: 4,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Programlama / Native",
-    importance: 5,
-    explanation: "Android native geliştirmede Kotlin ve Java kullanılır. Native, platformun resmi araçlarıyla geliştirme demektir."
-  },
-  {
-    q: "iOS için native geliştirmede kullanılan temel modern dil hangisidir?",
-    t: "mcq",
-    o: ["Swift", "Kotlin", "PHP", "SQL", "C# Windows Forms"],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Programlama / iOS",
-    importance: 5,
-    explanation: "Swift, Apple ekosisteminde iOS/macOS uygulama geliştirmek için kullanılan modern dildir."
-  },
-  {
-    q: "Tek kod tabanıyla Android ve iOS uygulaması geliştirme yaklaşımı hangisidir?",
-    t: "mcq",
-    o: ["Native", "Cross-platform", "Kernel mode", "Database first", "Console app"],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Programlama / Cross-platform",
-    importance: 5,
-    explanation: "Cross-platform, tek kod tabanından birden fazla platforma uygulama çıkarmaya çalışır. Flutter ve React Native örnektir."
-  },
-  {
-    q: "HTML, CSS ve JavaScript ile geliştirilip WebView içinde çalışan mobil uygulama yaklaşımı hangisidir?",
-    t: "mcq",
-    o: ["Native", "SDK", "Hybrid", "Emulator", "Gradle"],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Mobil Programlama / Hybrid",
-    importance: 5,
-    explanation: "Hybrid uygulama web teknolojileriyle yapılır ve mobil cihazda WebView adlı yerel kapsayıcı içinde çalışır."
-  },
-  {
-    q: "SDK açılımı hangisidir?",
-    t: "mcq",
-    o: ["System Data Kernel", "Software Design Key", "Secure Device Kit", "Software Development Kit", "Server Debug Kernel"],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "Mobil Programlama / SDK",
-    importance: 5,
-    explanation: "SDK, Software Development Kit demektir. Geliştirme araçları, API’ler, kütüphaneler, emülatör ve dokümantasyon içerir."
-  },
-  {
-    q: "API en doğru şekilde neyi ifade eder?",
-    t: "mcq",
-    o: ["Uygulamanın mağaza ikonu", "Sadece fiziksel cihaz", "Sadece ekran tasarımı", "Sadece RAM alanı", "Yazılımların iletişim kurmasını sağlayan arayüz/sözleşme"],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "Mobil Programlama / API",
-    importance: 5,
-    explanation: "API, Application Programming Interface demektir. Yazılımların birbirleriyle hangi kurallarla konuşacağını belirler."
-  },
-  {
-    q: "Android Studio hangi tür yazılımdır?",
-    t: "mcq",
-    o: ["IDE", "Veritabanı motoru", "Mobil işletim sistemi", "Ağ protokolü", "Dosya sıkıştırıcı"],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "Mobil Programlama / Android Studio",
-    importance: 5,
-    explanation: "Android Studio bir IDE’dir. Kod yazma, derleme, hata ayıklama ve emülatör çalıştırma gibi araçları bir arada sunar."
-  },
-  {
-    q: "Android Activity yaşam döngüsünde uygulama ilk oluşturulduğunda çalışan metot hangisidir?",
-    t: "mcq",
-    o: ["onPause()", "onCreate()", "onDestroy()", "onStop()", "onRestart()"],
-    a: 1,
-    difficulty: "medium",
-    week: 1,
-    topic: "Mobil Programlama / Activity Lifecycle",
-    importance: 5,
-    explanation: "onCreate(), Activity ilk oluşturulduğunda çalışır. Arayüz genellikle burada hazırlanır."
-  },
-  {
-    q: "Android'de uygulama ön planda ve kullanıcıyla etkileşimdeyken hangi yaşam döngüsü metodu aktif durumdadır?",
-    t: "mcq",
-    o: ["onStop()", "onDestroy()", "onResume()", "onCreate()", "onPause()"],
-    a: 2,
-    difficulty: "medium",
-    week: 1,
-    topic: "Mobil Programlama / onResume",
-    importance: 5,
-    explanation: "onResume(), uygulamanın ön planda olduğu ve kullanıcı etkileşimine hazır olduğu durumdur."
-  },
-  {
-    q: "Android'de kullanıcıya görünen ekranı temsil eden bileşen hangisidir?",
-    t: "mcq",
-    o: ["Service", "Broadcast Receiver", "Content Provider", "Activity", "Manifest"],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "Mobil Programlama / Android Bileşenleri",
-    importance: 5,
-    explanation: "Activity, Android uygulamasında kullanıcıya gösterilen ekranı temsil eder."
-  },
-  {
-    q: "Android'de arka planda çalışan işlemler için kullanılan bileşen hangisidir?",
-    t: "mcq",
-    o: ["Activity", "Intent", "View", "Layout", "Service"],
-    a: 4,
-    difficulty: "easy",
-    week: 3,
-    topic: "Mobil Programlama / Service",
-    importance: 5,
-    explanation: "Service, kullanıcı arayüzü olmadan arka planda çalışan işlemler için kullanılır."
-  },
-  {
-    q: "Ekran döndürme, adım sayma ve hareket algılama için kullanılan sensör hangisidir?",
-    t: "mcq",
-    o: ["İvmeölçer", "Barometre", "Işık sensörü", "NFC", "Mikrofon"],
-    a: 0,
-    difficulty: "easy",
-    week: 12,
-    topic: "Mobil Programlama / Sensörler",
-    importance: 5,
-    explanation: "İvmeölçer, cihazın 3 eksendeki ivmesini ölçer. Ekran yönü ve hareket algılamada kullanılır."
-  },
-  {
-    q: "Dönüş hareketini ve açısal hızı algılayan sensör hangisidir?",
-    t: "mcq",
-    o: ["GPS", "Jiroskop", "Yakınlık sensörü", "Işık sensörü", "Barometre"],
-    a: 1,
-    difficulty: "medium",
-    week: 12,
-    topic: "Mobil Programlama / Jiroskop",
-    importance: 4,
-    explanation: "Jiroskop, cihazın dönüş hareketlerini algılar. Oyun, AR/VR ve kamera stabilizasyonunda kullanılır."
-  },
-  {
-    q: "Android'de hassas konum izni hangisidir?",
-    t: "mcq",
-    o: ["ACCESS_WIFI_STATE", "INTERNET", "ACCESS_FINE_LOCATION", "VIBRATE", "CAMERA"],
-    a: 2,
-    difficulty: "medium",
-    week: 10,
-    topic: "Mobil Programlama / Konum İzinleri",
-    importance: 5,
-    explanation: "ACCESS_FINE_LOCATION, GPS gibi hassas konum kaynaklarına erişmek için kullanılır."
-  },
-  {
-    q: "Android uygulamasını Google Play'e yüklemek için modern dağıtım paketi genellikle hangisidir?",
-    t: "mcq",
-    o: ["ZIP", "EXE", "DLL", "AAB", "DOCX"],
-    a: 3,
-    difficulty: "medium",
-    week: 14,
-    topic: "Mobil Programlama / Yayınlama",
-    importance: 5,
-    explanation: "AAB, Android App Bundle demektir. Google Play'e modern Android uygulama dağıtımında kullanılır."
-  },
-  {
-    q: "To-Do uygulamasında görevleri listelemek için kullanılan Android arayüz bileşeni hangisidir?",
-    t: "mcq",
-    o: ["Toast", "Button", "EditText", "ImageView", "ListView"],
-    a: 4,
-    difficulty: "easy",
-    week: 14,
-    topic: "Mobil Programlama / To-Do App",
-    importance: 4,
-    explanation: "ListView, verileri liste halinde göstermek için kullanılır. To-Do uygulamasında görevler burada gösterilebilir."
-  },
-
-  // =========================================================
-  // ==== İNTERNET PROGRAMLAMA – 20 FİNAL SORUSU ==============
-  // =========================================================
-
-  {
-    q: "PHP'de tek bir koşul doğruysa kod çalıştırmak için hangi yapı kullanılır?",
-    t: "mcq",
-    o: ["if", "for", "while", "echo", "switch only"],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "İnternet Programlama / if",
-    importance: 5,
-    explanation: "if, koşul doğruysa içindeki kodu çalıştırır. Koşul yanlışsa çalıştırmaz."
-  },
-  {
-    q: "PHP'de koşul yanlış olduğunda çalışacak alternatif blok hangisidir?",
-    t: "mcq",
-    o: ["case", "else", "break", "default", "foreach"],
-    a: 1,
-    difficulty: "easy",
-    week: 3,
-    topic: "İnternet Programlama / else",
-    importance: 5,
-    explanation: "else, if koşulu yanlışsa çalışır. İki ihtimalli durumlarda kullanılır."
-  },
-  {
-    q: "PHP'de kaç kez çalışacağı belli olan tekrar işlemlerinde hangi döngü tercih edilir?",
-    t: "mcq",
-    o: ["while", "switch", "for", "if", "include"],
-    a: 2,
-    difficulty: "easy",
     week: 4,
-    topic: "İnternet Programlama / for",
+    topic: "StatefulWidget",
     importance: 5,
-    explanation: "for döngüsü, belirli sayıda tekrar yapılacaksa uygundur."
+    explanation: "StatefulWidget, değişebilir state yani durum bilgisi olan widget'tır. Sayaç, form, listeye ekleme gibi değişen ekranlarda kullanılır."
   },
   {
-    q: "PHP'de koşul doğru olduğu sürece çalışan döngü hangisidir?",
+    q: "Flutter'da değişen veriyi ekrana yeniden yansıtmak için hangi metot kullanılır?",
     t: "mcq",
-    o: ["for", "switch", "case", "while", "echo"],
-    a: 3,
-    difficulty: "easy",
+    o: [
+      "runApp()",
+      "print()",
+      "setState()",
+      "main()",
+      "pop()"
+    ],
+    a: 2,
+    difficulty: "medium",
     week: 4,
-    topic: "İnternet Programlama / while",
+    topic: "setState",
     importance: 5,
-    explanation: "while, koşul doğru olduğu sürece çalışır. Koşul yanlış olduğunda döngü biter."
+    explanation: "setState(), StatefulWidget içinde veri değiştiğinde Flutter'a ekranı yeniden çizmesini söyler. Veri değişti ama setState çağrılmazsa ekran güncellenmeyebilir."
   },
   {
-    q: "PHP'de bir metnin uzunluğunu bulmak için hangi fonksiyon kullanılır?",
+    q: "Flutter'da state kavramı en doğru şekilde neyi ifade eder?",
     t: "mcq",
-    o: ["trim()", "substr()", "strpos()", "str_replace()", "strlen()"],
+    o: [
+      "Uygulamanın mağaza açıklaması",
+      "Sadece uygulama ikonu",
+      "Sadece internet bağlantısı",
+      "Uygulamanın o anki değişebilir durum bilgisi",
+      "Sadece cihaz modeli"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 4,
+    topic: "State",
+    importance: 5,
+    explanation: "State, uygulamanın o anki durum bilgisidir. Örneğin sayaç değeri, seçili kutu, yazılan metin veya liste elemanları state olabilir."
+  },
+  {
+    q: "Flutter'da widget ağacını oluşturan ve arayüzü döndüren temel metot hangisidir?",
+    t: "mcq",
+    o: [
+      "main()",
+      "runApp()",
+      "dispose()",
+      "push()",
+      "build()"
+    ],
     a: 4,
-    difficulty: "easy",
-    week: 5,
-    topic: "İnternet Programlama / strlen",
+    difficulty: "medium",
+    week: 4,
+    topic: "build Metodu",
     importance: 5,
-    explanation: "strlen(), string yani metin uzunluğunu verir. Boşluklar da karakter sayılır."
+    explanation: "build() metodu, ekranda hangi widget'ların görüneceğini tarif eder. Flutter arayüzü bu metottan dönen widget ağacına göre oluşturur."
   },
+
   {
-    q: "PHP'de metnin başındaki ve sonundaki boşlukları temizleyen fonksiyon hangisidir?",
+    q: "Kullanıcıdan yazı girişi almak için Flutter'da hangi widget kullanılır?",
     t: "mcq",
-    o: ["trim()", "strlen()", "substr()", "strpos()", "explode()"],
+    o: [
+      "TextField",
+      "Text",
+      "Icon",
+      "AppBar",
+      "Image"
+    ],
     a: 0,
     difficulty: "easy",
     week: 5,
-    topic: "İnternet Programlama / trim",
+    topic: "TextField",
     importance: 5,
-    explanation: "trim(), metnin başındaki ve sonundaki boşlukları siler. Form verilerini temizlerken kullanılır."
+    explanation: "TextField, kullanıcıdan metin almak için kullanılır. Örneğin görev ekleme, isim girme veya arama kutusu için kullanılır."
   },
   {
-    q: "HTTP'de verileri URL üzerinde taşıyan yöntem hangisidir?",
+    q: "Flutter'da butona basıldığında çalışacak kod genellikle hangi özellik içine yazılır?",
     t: "mcq",
-    o: ["POST", "GET", "FILES", "SESSION", "COOKIE"],
+    o: [
+      "child",
+      "onPressed",
+      "title",
+      "body",
+      "theme"
+    ],
     a: 1,
     difficulty: "easy",
-    week: 6,
-    topic: "İnternet Programlama / GET",
+    week: 5,
+    topic: "Button onPressed",
     importance: 5,
-    explanation: "GET, verileri URL parametresi olarak gönderir. Bu yüzden adres çubuğunda görünür."
+    explanation: "onPressed, butona basıldığında çalışacak fonksiyonu belirtir. Örneğin kaydetme, silme veya sayaç artırma işlemi burada yapılır."
   },
   {
-    q: "HTTP'de veriyi istek gövdesinde taşıyan ve formlarda sık kullanılan yöntem hangisidir?",
+    q: "Flutter'da çok sayıda veriyi liste halinde göstermek için hangi widget kullanılır?",
     t: "mcq",
-    o: ["GET", "COOKIE", "POST", "SERVER", "REQUEST"],
+    o: [
+      "Text",
+      "Container",
+      "ListView",
+      "AppBar",
+      "Padding"
+    ],
     a: 2,
     difficulty: "easy",
-    week: 6,
-    topic: "İnternet Programlama / POST",
+    week: 5,
+    topic: "ListView",
     importance: 5,
-    explanation: "POST, veriyi URL yerine HTTP body içinde gönderir. Şifre ve form işlemlerinde GET'e göre daha uygundur."
+    explanation: "ListView, verileri liste halinde göstermek için kullanılır. Görev listesi, ürün listesi veya mesaj listesi buna örnektir."
   },
   {
-    q: "PHP'de GET yöntemiyle gelen veriler hangi süper global dizide tutulur?",
+    q: "Flutter'da sayfalar arasında geçiş yapmak için kullanılan yapı hangisidir?",
     t: "mcq",
-    o: ["$_POST", "$_FILES", "$_SESSION", "$_GET", "$_COOKIE"],
-    a: 3,
-    difficulty: "easy",
-    week: 6,
-    topic: "İnternet Programlama / $_GET",
-    importance: 5,
-    explanation: "$_GET, URL üzerinden gelen verileri tutar. Örneğin sayfa.php?id=5 için $_GET['id'] kullanılabilir."
-  },
-  {
-    q: "PHP'de dosya yükleme bilgileri hangi süper global dizide tutulur?",
-    t: "mcq",
-    o: ["$_GET", "$_POST", "$_SESSION", "$_COOKIE", "$_FILES"],
-    a: 4,
-    difficulty: "easy",
-    week: 7,
-    topic: "İnternet Programlama / $_FILES",
-    importance: 5,
-    explanation: "$_FILES, yüklenen dosyanın adı, geçici yolu, boyutu ve hata kodu gibi bilgileri tutar."
-  },
-  {
-    q: "Dosya yükleme formunda bulunması gereken enctype değeri hangisidir?",
-    t: "mcq",
-    o: ["multipart/form-data", "text/plain", "application/json", "urlencoded-only", "file/input"],
-    a: 0,
-    difficulty: "easy",
-    week: 7,
-    topic: "İnternet Programlama / Dosya Yükleme",
-    importance: 5,
-    explanation: "Dosya yüklemek için formda enctype='multipart/form-data' olmalıdır. Aksi halde dosya düzgün gönderilmez."
-  },
-  {
-    q: "PHP'de yüklenen dosyayı geçici konumdan kalıcı klasöre taşımak için hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["copy_file()", "move_uploaded_file()", "file_put_contents()", "mkdir()", "rename_only()"],
-    a: 1,
-    difficulty: "easy",
-    week: 7,
-    topic: "İnternet Programlama / move_uploaded_file",
-    importance: 5,
-    explanation: "move_uploaded_file(), yüklenen dosyayı tmp_name geçici yolundan hedef klasöre taşır."
-  },
-  {
-    q: "PHP'de oturum başlatmak için hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["session_destroy()", "setcookie()", "session_start()", "session_close()", "start_cookie()"],
-    a: 2,
-    difficulty: "easy",
-    week: 8,
-    topic: "İnternet Programlama / Session",
-    importance: 5,
-    explanation: "session_start(), oturum mekanizmasını başlatır. $_SESSION kullanmadan önce çağrılmalıdır."
-  },
-  {
-    q: "PHP'de oturum bilgileri hangi süper global dizide tutulur?",
-    t: "mcq",
-    o: ["$_GET", "$_POST", "$_FILES", "$_SESSION", "$_SERVER"],
-    a: 3,
-    difficulty: "easy",
-    week: 8,
-    topic: "İnternet Programlama / $_SESSION",
-    importance: 5,
-    explanation: "$_SESSION, kullanıcıya ait oturum verilerini sunucu tarafında tutar."
-  },
-  {
-    q: "Şifreleri güvenli saklamak için PHP'de hangi fonksiyon kullanılır?",
-    t: "mcq",
-    o: ["strlen()", "trim()", "md5_text()", "echo()", "password_hash()"],
-    a: 4,
-    difficulty: "medium",
-    week: 9,
-    topic: "İnternet Programlama / password_hash",
-    importance: 5,
-    explanation: "password_hash(), şifreyi güvenli hash değerine dönüştürür. Şifreler düz metin saklanmamalıdır."
-  },
-  {
-    q: "Hash'lenmiş şifreyi kontrol etmek için hangi PHP fonksiyonu kullanılır?",
-    t: "mcq",
-    o: ["password_verify()", "password_hash()", "trim()", "session_start()", "mysqli_connect()"],
-    a: 0,
-    difficulty: "medium",
-    week: 9,
-    topic: "İnternet Programlama / password_verify",
-    importance: 5,
-    explanation: "password_verify(), kullanıcının girdiği şifreyi kayıtlı hash ile karşılaştırır."
-  },
-  {
-    q: "Veritabanına yeni kayıt eklemek için kullanılan SQL komutu hangisidir?",
-    t: "mcq",
-    o: ["SELECT", "INSERT INTO", "UPDATE", "DELETE", "DROP"],
-    a: 1,
-    difficulty: "easy",
-    week: 11,
-    topic: "İnternet Programlama / INSERT",
-    importance: 5,
-    explanation: "INSERT INTO, tabloya yeni kayıt ekler. CRUD işlemlerinde Create karşılığıdır."
-  },
-  {
-    q: "Veritabanından veri çekmek için kullanılan SQL komutu hangisidir?",
-    t: "mcq",
-    o: ["INSERT", "DELETE", "SELECT", "UPDATE", "CREATE"],
-    a: 2,
-    difficulty: "easy",
-    week: 11,
-    topic: "İnternet Programlama / SELECT",
-    importance: 5,
-    explanation: "SELECT, veritabanından veri okumak veya listelemek için kullanılır."
-  },
-  {
-    q: "SQL Injection riskini azaltmak için hangi yöntem tercih edilmelidir?",
-    t: "mcq",
-    o: ["URL uzatmak", "Şifreyi ekrana yazdırmak", "GET kullanmak", "Prepared statement kullanmak", "Dosya adını büyütmek"],
+    o: [
+      "Column",
+      "Text",
+      "Container",
+      "Navigator",
+      "Padding"
+    ],
     a: 3,
     difficulty: "medium",
-    week: 13,
-    topic: "İnternet Programlama / SQL Injection",
+    week: 5,
+    topic: "Navigator",
     importance: 5,
-    explanation: "Prepared statement, kullanıcı verisi ile SQL sorgusunu ayırır. Bu, SQL Injection saldırı riskini azaltır."
+    explanation: "Navigator, sayfalar arası geçişi yönetir. Yeni sayfaya gitmek için push, geri dönmek için pop kullanılır."
   },
   {
-    q: "PHP'de dosyaya tek fonksiyonla veri yazmak için hangisi kullanılır?",
+    q: "Navigator ile önceki sayfaya geri dönmek için hangi metot kullanılır?",
     t: "mcq",
-    o: ["fopen()", "fread()", "feof()", "mkdir()", "file_put_contents()"],
-    a: 4,
-    difficulty: "easy",
-    week: 14,
-    topic: "İnternet Programlama / Dosya İşlemleri",
-    importance: 5,
-    explanation: "file_put_contents(), dosyaya veri yazmayı tek fonksiyonla kolaylaştırır."
-  },
-
-  // =========================================================
-  // ==== VERİTABANI YÖNETİM SİSTEMLERİ – 20 FİNAL SORUSU =====
-  // =========================================================
-
-  {
-    q: "Veritabanı en doğru şekilde neyi ifade eder?",
-    t: "mcq",
-    o: ["Verilerin düzenli saklandığı ve yönetildiği yapı", "Sadece klavye kısayolu", "Sadece resim dosyası", "Sadece işletim sistemi", "Sadece web tarayıcısı"],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "Veritabanı Yönetim Sistemleri / Temel Kavram",
-    importance: 5,
-    explanation: "Veritabanı, verilerin düzenli biçimde saklandığı, arandığı, güncellendiği ve yönetildiği sistemdir."
-  },
-  {
-    q: "DBMS açılımı hangisidir?",
-    t: "mcq",
-    o: ["Data Backup Main Server", "Database Management System", "Digital Base Memory Script", "Dynamic Binary Model System", "Database Mapping Service"],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Veritabanı Yönetim Sistemleri / DBMS",
-    importance: 5,
-    explanation: "DBMS, Database Management System demektir. Türkçesi Veritabanı Yönetim Sistemi'dir."
-  },
-  {
-    q: "SQL Server hangi tür sistemdir?",
-    t: "mcq",
-    o: ["Kelime işlemci", "E-posta istemcisi", "İlişkisel veritabanı yönetim sistemi", "Grafik editörü", "Mobil işletim sistemi"],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Veritabanı Yönetim Sistemleri / SQL Server",
-    importance: 5,
-    explanation: "SQL Server, Microsoft tarafından geliştirilen ilişkisel veritabanı yönetim sistemidir."
-  },
-  {
-    q: "SQL Server'ın kullandığı SQL genişletmesi hangisidir?",
-    t: "mcq",
-    o: ["HTML", "CSS", "PHP", "T-SQL", "XML"],
-    a: 3,
-    difficulty: "medium",
-    week: 1,
-    topic: "Veritabanı Yönetim Sistemleri / T-SQL",
-    importance: 5,
-    explanation: "T-SQL, Transact-SQL demektir. SQL Server'ın SQL üzerine eklediği gelişmiş yapılardır."
-  },
-  {
-    q: "SQL Server güvenlik yapılandırmasında Mixed Mode ne anlama gelir?",
-    t: "mcq",
-    o: ["Sadece Windows kullanıcıları giriş yapabilir", "Sadece tablo sahipleri giriş yapabilir", "Hiç kullanıcı giremez", "Sadece yedekten giriş yapılır", "Hem Windows hem SQL Server kullanıcıları giriş yapabilir"],
-    a: 4,
-    difficulty: "medium",
-    week: 1,
-    topic: "Veritabanı Yönetim Sistemleri / SQL Server Güvenlik",
-    importance: 4,
-    explanation: "Mixed Mode, hem Windows Authentication hem de SQL Server Authentication kullanılabildiği anlamına gelir."
-  },
-  {
-    q: "Tablodaki her kaydı benzersiz tanımlayan alan hangisidir?",
-    t: "mcq",
-    o: ["Primary Key", "Foreign Key", "VARCHAR", "ORDER BY", "JOIN"],
-    a: 0,
-    difficulty: "easy",
-    week: 2,
-    topic: "Veritabanı Yönetim Sistemleri / Primary Key",
-    importance: 5,
-    explanation: "Primary Key, tablodaki her satırı benzersiz tanımlar. Aynı değer tekrar edemez ve genellikle boş bırakılamaz."
-  },
-  {
-    q: "Bir tablodaki alanın başka tablodaki primary key'e bağlanmasını sağlayan anahtar hangisidir?",
-    t: "mcq",
-    o: ["Candidate Key", "Foreign Key", "Index Only", "View", "Trigger"],
-    a: 1,
-    difficulty: "medium",
-    week: 2,
-    topic: "Veritabanı Yönetim Sistemleri / Foreign Key",
-    importance: 5,
-    explanation: "Foreign Key, iki tablo arasında ilişki kurar. Örneğin sipariş tablosundaki musteri_id, müşteri tablosundaki id alanına bağlanabilir."
-  },
-  {
-    q: "SQL'de yeni tablo oluşturmak için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["INSERT TABLE", "MAKE TABLE", "CREATE TABLE", "ADD TABLE", "NEW TABLE"],
-    a: 2,
-    difficulty: "easy",
-    week: 3,
-    topic: "Veritabanı Yönetim Sistemleri / CREATE TABLE",
-    importance: 5,
-    explanation: "CREATE TABLE, veritabanı içinde yeni tablo oluşturur. Tablo, satır ve sütunlardan oluşur."
-  },
-  {
-    q: "SQL'de tabloya yeni kayıt eklemek için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["SELECT", "UPDATE", "DELETE", "INSERT INTO", "DROP"],
-    a: 3,
-    difficulty: "easy",
-    week: 3,
-    topic: "Veritabanı Yönetim Sistemleri / INSERT",
-    importance: 5,
-    explanation: "INSERT INTO, tabloya yeni kayıt yani yeni satır eklemek için kullanılır."
-  },
-  {
-    q: "SQL'de tablodaki kayıtları listelemek için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["INSERT", "UPDATE", "DELETE", "CREATE", "SELECT"],
-    a: 4,
-    difficulty: "easy",
-    week: 3,
-    topic: "Veritabanı Yönetim Sistemleri / SELECT",
-    importance: 5,
-    explanation: "SELECT, veritabanından veri çekmek için kullanılır. Listeleme ve arama işlemlerinin temelidir."
-  },
-  {
-    q: "SQL'de var olan kaydı değiştirmek için hangi komut kullanılır?",
-    t: "mcq",
-    o: ["UPDATE", "INSERT", "SELECT", "DROP", "CREATE"],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "Veritabanı Yönetim Sistemleri / UPDATE",
-    importance: 5,
-    explanation: "UPDATE, mevcut kaydı günceller. Genellikle WHERE ile hangi kaydın güncelleneceği belirtilir."
-  },
-  {
-    q: "SQL'de kayıt silmek için kullanılan komut hangisidir?",
-    t: "mcq",
-    o: ["SELECT", "DELETE", "INSERT", "CREATE", "ORDER BY"],
-    a: 1,
-    difficulty: "easy",
-    week: 4,
-    topic: "Veritabanı Yönetim Sistemleri / DELETE",
-    importance: 5,
-    explanation: "DELETE, tablodan kayıt siler. WHERE kullanılmazsa tüm kayıtlar silinebilir."
-  },
-  {
-    q: "SQL'de sonuçları koşula göre filtrelemek için hangi ifade kullanılır?",
-    t: "mcq",
-    o: ["ORDER BY", "GROUP BY", "WHERE", "CREATE", "DROP"],
-    a: 2,
-    difficulty: "easy",
-    week: 4,
-    topic: "Veritabanı Yönetim Sistemleri / WHERE",
-    importance: 5,
-    explanation: "WHERE, hangi kayıtların seçileceğini, güncelleneceğini veya silineceğini belirleyen koşul bölümüdür."
-  },
-  {
-    q: "SQL'de sonuçları sıralamak için hangi ifade kullanılır?",
-    t: "mcq",
-    o: ["WHERE", "INSERT", "DELETE", "ORDER BY", "CREATE"],
-    a: 3,
-    difficulty: "easy",
-    week: 4,
-    topic: "Veritabanı Yönetim Sistemleri / ORDER BY",
-    importance: 4,
-    explanation: "ORDER BY, sonuçları belirli bir sütuna göre artan veya azalan sıralar."
-  },
-  {
-    q: "SQL'de iki tabloyu ortak alan üzerinden birleştirmek için genel olarak hangi yapı kullanılır?",
-    t: "mcq",
-    o: ["WHERE only", "CREATE", "DROP", "BACKUP", "JOIN"],
+    o: [
+      "push()",
+      "runApp()",
+      "setState()",
+      "build()",
+      "pop()"
+    ],
     a: 4,
     difficulty: "medium",
     week: 5,
-    topic: "Veritabanı Yönetim Sistemleri / JOIN",
-    importance: 5,
-    explanation: "JOIN, ilişkili tabloları ortak alanlar üzerinden birleştirir. Örneğin öğrenci ve bölüm tabloları birleştirilebilir."
+    topic: "Navigator pop",
+    importance: 4,
+    explanation: "Navigator.pop(context), mevcut sayfayı kapatıp önceki sayfaya geri döndürür. Pop kelimesi yığından çıkarmak anlamına gelir."
   },
+
   {
-    q: "LEFT JOIN ne yapar?",
+    q: "Flutter projesinde paketler, asset dosyaları ve proje ayarları hangi dosyada tanımlanır?",
     t: "mcq",
-    o: ["Sol tablodaki tüm kayıtları ve eşleşen sağ tablo kayıtlarını getirir", "Sadece sağ tabloyu siler", "Veritabanını yedekler", "Sadece yeni tablo oluşturur", "Tüm kayıtları siler"],
+    o: [
+      "pubspec.yaml",
+      "main.exe",
+      "index.php",
+      "database.sql",
+      "style.css"
+    ],
     a: 0,
     difficulty: "medium",
-    week: 5,
-    topic: "Veritabanı Yönetim Sistemleri / LEFT JOIN",
-    importance: 4,
-    explanation: "LEFT JOIN, sol tablodaki tüm kayıtları getirir; sağ tabloda eşleşme varsa onu da ekler, yoksa NULL dönebilir."
+    week: 6,
+    topic: "pubspec.yaml",
+    importance: 5,
+    explanation: "pubspec.yaml, Flutter projesinin yapılandırma dosyasıdır. Paketler, bağımlılıklar, resimler, fontlar ve bazı proje bilgileri burada tanımlanır."
   },
   {
-    q: "Normalizasyonun temel amacı nedir?",
+    q: "Flutter'da uygulama içinde kullanılacak resim, font veya ses dosyalarına genel olarak ne denir?",
     t: "mcq",
-    o: ["Veriyi düzensiz çoğaltmak", "Veri tekrarını azaltmak ve tutarlılığı artırmak", "Tablodaki tüm kayıtları silmek", "Sadece kullanıcı eklemek", "Veritabanını kapatmak"],
+    o: [
+      "Route",
+      "Asset",
+      "Compiler",
+      "Exception",
+      "Server"
+    ],
     a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "Assets",
+    importance: 4,
+    explanation: "Asset, uygulama içinde kullanılan dosyadır. Resim, ikon, font, ses veya JSON dosyası asset olabilir."
+  },
+  {
+    q: "Flutter'da başkalarının yazdığı hazır kod paketlerini projeye eklemek hangi kavramla ilişkilidir?",
+    t: "mcq",
+    o: [
+      "Widget tree",
+      "State",
+      "Dependency",
+      "AppBar",
+      "Scaffold"
+    ],
+    a: 2,
     difficulty: "medium",
     week: 6,
-    topic: "Veritabanı Yönetim Sistemleri / Normalizasyon",
-    importance: 5,
-    explanation: "Normalizasyon, veri tekrarını azaltıp veri bütünlüğünü korumak için tabloları düzenleme işlemidir."
-  },
-  {
-    q: "1NF için temel şartlardan biri hangisidir?",
-    t: "mcq",
-    o: ["Her tabloda resim olmalı", "Tüm kayıtlar silinmeli", "Alanlar atomik olmalı", "Tablo adı boş olmalı", "JOIN yasak olmalı"],
-    a: 2,
-    difficulty: "hard",
-    week: 6,
-    topic: "Veritabanı Yönetim Sistemleri / 1NF",
+    topic: "Package / Dependency",
     importance: 4,
-    explanation: "1NF, alanların atomik yani bölünemeyen tek değerler içermesini ister. Bir hücrede birden fazla değer tutulmamalıdır."
+    explanation: "Dependency, projenin ihtiyaç duyduğu dış pakettir. Örneğin HTTP isteği, video oynatma veya veritabanı için hazır paketler eklenebilir."
   },
   {
-    q: "Veritabanı yedekleme işleminin temel amacı nedir?",
+    q: "Kod değişikliklerini uygulamayı tamamen kapatmadan hızlıca görmeyi sağlayan Flutter özelliği hangisidir?",
     t: "mcq",
-    o: ["Veriyi bilinçli silmek", "Tablo adını değiştirmek", "Sorguyu renklendirmek", "Veri kaybına karşı geri dönüş sağlayabilmek", "Kullanıcı arayüzü çizmek"],
+    o: [
+      "Cold Start",
+      "Full Reset",
+      "Manual Build",
+      "Hot Reload",
+      "Hard Delete"
+    ],
     a: 3,
     difficulty: "easy",
-    week: 7,
-    topic: "Veritabanı Yönetim Sistemleri / Yedekleme",
+    week: 6,
+    topic: "Hot Reload",
     importance: 5,
-    explanation: "Yedekleme, sistem arızası veya yanlış silme gibi durumlarda veriyi geri döndürmek için yapılır."
+    explanation: "Hot Reload, kodda yapılan değişiklikleri uygulamayı tamamen kapatıp açmadan hızlı görmeyi sağlar. Bu özellik geliştirme sürecini hızlandırır."
   },
   {
-    q: "Bir sütunda boş değer girilmesini engelleyen SQL kısıtı hangisidir?",
+    q: "Flutter'da ekran genişliği/yüksekliği gibi cihaz bilgilerini almak için hangi yapı kullanılır?",
     t: "mcq",
-    o: ["DEFAULT", "CHECK", "JOIN", "ORDER BY", "NOT NULL"],
+    o: [
+      "TextField",
+      "AppBar",
+      "ListView",
+      "IconButton",
+      "MediaQuery"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 6,
+    topic: "Responsive / MediaQuery",
+    importance: 4,
+    explanation: "MediaQuery, ekran boyutu ve cihaz bilgilerini almaya yarar. Responsive tasarımda yani farklı ekranlara uyum sağlamada kullanılır."
+  },
+
+  {
+    q: "Basit bir To-Do uygulamasında kullanıcının görev yazdığı alan Flutter'da genellikle hangi widget ile yapılır?",
+    t: "mcq",
+    o: [
+      "TextField",
+      "AppBar",
+      "Icon",
+      "Divider",
+      "Image"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "To-Do App",
+    importance: 5,
+    explanation: "To-Do uygulamasında kullanıcı görevi yazmak için TextField kullanır. TextField, kullanıcıdan metin girişi almak için kullanılan widget'tır."
+  },
+  {
+    q: "Basit bir To-Do uygulamasında görevleri ekranda listelemek için en uygun widget hangisidir?",
+    t: "mcq",
+    o: [
+      "Text",
+      "ListView",
+      "AppBar",
+      "Padding",
+      "Center"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 7,
+    topic: "To-Do Listeleme",
+    importance: 5,
+    explanation: "Görevler birden fazla elemandan oluştuğu için ListView ile listelenir. ListView, çok sayıda veriyi kaydırılabilir liste şeklinde gösterir."
+  },
+  {
+    q: "To-Do uygulamasında görev listesinin değişmesi için genellikle hangi işlem gerekir?",
+    t: "mcq",
+    o: [
+      "Sadece print yazmak",
+      "Sadece AppBar silmek",
+      "Listeyi değiştirip setState() çağırmak",
+      "MaterialApp kaldırmak",
+      "pubspec.yaml silmek"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 7,
+    topic: "To-Do State Yönetimi",
+    importance: 5,
+    explanation: "Görev eklendiğinde veya silindiğinde liste değişir. Bu değişikliğin ekrana yansıması için StatefulWidget içinde setState() çağrılır."
+  },
+  {
+    q: "Flutter'da kullanıcıya kısa bilgi veya uyarı göstermek için genellikle hangi yapı kullanılır?",
+    t: "mcq",
+    o: [
+      "Navigator",
+      "Column",
+      "Container",
+      "SnackBar",
+      "Row"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 7,
+    topic: "SnackBar",
+    importance: 4,
+    explanation: "SnackBar, kullanıcıya kısa süreli mesaj göstermek için kullanılır. Örneğin 'Görev eklendi' veya 'Boş görev girilemez' mesajı gösterilebilir."
+  },
+  {
+    q: "Flutter'da UI ve UX farkı için en doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "UI sadece veritabanı, UX sadece internet demektir",
+      "UI sadece kod hatası, UX sadece derleme demektir",
+      "UI ve UX tamamen aynı şeydir",
+      "UI sadece Android, UX sadece iOS içindir",
+      "UI görünen arayüzdür, UX kullanıcının yaşadığı deneyimdir"
+    ],
     a: 4,
     difficulty: "medium",
     week: 7,
-    topic: "Veritabanı Yönetim Sistemleri / Constraint",
+    topic: "UI / UX",
     importance: 4,
-    explanation: "NOT NULL, bir sütunun boş bırakılmasını engeller. Veri bütünlüğünü artırır."
+    explanation: "UI, kullanıcının gördüğü ekran ve arayüzdür. UX ise kullanıcının uygulamayı kullanırken yaşadığı kolaylık, memnuniyet ve genel deneyimdir."
   }
 ];
