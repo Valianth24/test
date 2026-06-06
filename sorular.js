@@ -229,10 +229,6 @@ window.questionBank = [
     explanation: "Items.Clear(), ListBox içindeki bütün elemanları temizler. Items, listedeki eleman koleksiyonudur."
   },
 
-  // =========================================================
-  // ==== MOBİL PROGRAMLAMA – 20 FİNAL SORUSU =================
-  // =========================================================
-
   {
     q: "Mobil programlama en doğru şekilde neyi ifade eder?",
     t: "mcq",
@@ -454,10 +450,6 @@ window.questionBank = [
     explanation: "ListView, verileri liste halinde göstermek için kullanılır. To-Do uygulamasında görevler burada gösterilebilir."
   },
 
-  // =========================================================
-  // ==== İNTERNET PROGRAMLAMA – 20 FİNAL SORUSU ==============
-  // =========================================================
-
   {
     q: "PHP'de tek bir koşul doğruysa kod çalıştırmak için hangi yapı kullanılır?",
     t: "mcq",
@@ -678,11 +670,6 @@ window.questionBank = [
     importance: 5,
     explanation: "file_put_contents(), dosyaya veri yazmayı tek fonksiyonla kolaylaştırır."
   },
-
-  // =========================================================
-  // ==== VERİTABANI YÖNETİM SİSTEMLERİ – 20 FİNAL SORUSU =====
-  // =========================================================
-
   {
     q: "Veritabanı en doğru şekilde neyi ifade eder?",
     t: "mcq",
