@@ -1,1117 +1,1348 @@
 window.questionBank = [
+  // =========================================================
+  // ===================== AĞ TEMELLERİ ======================
+  // =========================================================
+
   {
-    q: "Dizi veri yapısında rastgele erişim ne anlama gelir?",
+    q: "Alan adlarını IP adreslerine çeviren sistem hangisidir?",
     t: "mcq",
-    o: [
-      "Elemanlara indeks numarasıyla doğrudan ulaşılabilmesi",
-      "Elemanların sadece sırayla silinebilmesi",
-      "Her elemanın sonraki elemanın adresini tutması",
-      "Son eklenen elemanın ilk çıkarılması",
-      "İlk eklenen elemanın ilk çıkarılması"
-    ],
+    o: ["ARP", "DNS", "FTP", "SMTP", "ICMP"],
+    a: 1,
+    difficulty: "easy",
+    week: 7,
+    topic: "DNS",
+    importance: 5,
+    explanation: "Soruda alan adı, domain veya IP adresine çevirme geçiyorsa cevap DNS olur. DNS, google.com gibi isimleri IP adresine çevirir."
+  },
+  {
+    q: "IP adresini MAC adresine çevirmek için kullanılan protokol hangisidir?",
+    t: "mcq",
+    o: ["HTTP", "SMTP", "ARP", "FTP", "DNS"],
+    a: 2,
+    difficulty: "medium",
+    week: 11,
+    topic: "ARP",
+    importance: 5,
+    explanation: "Soruda IP'den MAC adresi bulma geçiyorsa cevap ARP olur. DNS isimden IP bulur, ARP ise IP'den MAC adresi bulur."
+  },
+  {
+    q: "Bir hedefe ulaşılıp ulaşılamadığını ve gecikmeyi test eden komut hangisidir?",
+    t: "mcq",
+    o: ["ping", "ipconfig", "netstat", "nslookup", "route print"],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "ping",
+    importance: 5,
+    explanation: "Soruda erişim testi, gecikme, paket kaybı veya hedefe ulaşılıyor mu ifadesi varsa cevap ping olur."
+  },
+  {
+    q: "ping komutu hangi protokolü kullanır?",
+    t: "mcq",
+    o: ["FTP", "HTTP", "SMTP", "ICMP", "POP3"],
+    a: 3,
+    difficulty: "medium",
+    week: 12,
+    topic: "ICMP",
+    importance: 5,
+    explanation: "ping komutu ICMP kullanır. Sınavda ping hangi protokol ile çalışır diye sorulursa cevap ICMP'dir."
+  },
+  {
+    q: "Paketin hedefe giderken geçtiği routerları gösteren komut hangisidir?",
+    t: "mcq",
+    o: ["nslookup", "tracert / traceroute", "ipconfig", "arp -a", "curl"],
+    a: 1,
+    difficulty: "medium",
+    week: 12,
+    topic: "tracert",
+    importance: 5,
+    explanation: "Soruda paketin geçtiği yol, hop, routerlar veya hedefe giderken izlediği yol deniyorsa cevap tracert/traceroute olur."
+  },
+  {
+    q: "Windows'ta IP adresi, varsayılan ağ geçidi ve DNS bilgilerini gösteren komut hangisidir?",
+    t: "mcq",
+    o: ["netstat", "nslookup", "ipconfig", "telnet", "ping"],
+    a: 2,
+    difficulty: "easy",
+    week: 12,
+    topic: "ipconfig",
+    importance: 5,
+    explanation: "Soruda IP bilgisi, gateway veya DNS adreslerini görme geçiyorsa Windows tarafında cevap ipconfig olur."
+  },
+  {
+    q: "DNS sorgusu yapmak için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["ping", "tracert", "ipconfig", "nslookup", "netstat"],
+    a: 3,
+    difficulty: "medium",
+    week: 12,
+    topic: "nslookup",
+    importance: 5,
+    explanation: "Soruda DNS sorgusu veya alan adının hangi IP'ye gittiğini öğrenme geçiyorsa cevap nslookup olur."
+  },
+  {
+    q: "Açık portları ve aktif bağlantıları görüntülemek için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["netstat", "ping", "nslookup", "ipconfig", "tracert"],
+    a: 0,
+    difficulty: "medium",
+    week: 12,
+    topic: "netstat",
+    importance: 5,
+    explanation: "Soruda açık port, aktif bağlantı veya bağlantı listesi geçiyorsa cevap netstat olur."
+  },
+  {
+    q: "Farklı ağlar arasında veri yönlendiren cihaz hangisidir?",
+    t: "mcq",
+    o: ["Switch", "Hub", "Router", "Access Point", "Repeater"],
+    a: 2,
+    difficulty: "easy",
+    week: 2,
+    topic: "Router",
+    importance: 5,
+    explanation: "Soruda farklı ağları bağlama, yönlendirme veya IP'ye göre paket gönderme geçiyorsa cevap Router olur."
+  },
+  {
+    q: "Aynı yerel ağdaki cihazları birbirine bağlayan ve veriyi hedef cihaza gönderen cihaz hangisidir?",
+    t: "mcq",
+    o: ["Firewall", "Modem", "Hub", "Switch", "Proxy"],
+    a: 3,
+    difficulty: "easy",
+    week: 2,
+    topic: "Switch",
+    importance: 5,
+    explanation: "Soruda aynı ağ, MAC adresi veya hedef cihaza gönderme geçiyorsa cevap Switch olur."
+  },
+  {
+    q: "Gelen veriyi hedef ayırmadan tüm portlara gönderen cihaz hangisidir?",
+    t: "mcq",
+    o: ["Hub", "Router", "Switch", "Firewall", "Access Point"],
     a: 0,
     difficulty: "easy",
     week: 2,
-    topic: "Dizilerde Rastgele Erişim",
+    topic: "Hub",
     importance: 5,
-    explanation: "Rastgele erişim, dizideki bir elemana indeks kullanarak doğrudan ulaşmak demektir. Örneğin dizi[4] denildiğinde bilgisayar baştan tek tek saymak zorunda kalmadan 4. indeksteki elemana gider. Bu yüzden dizilerde erişim genellikle O(1) kabul edilir."
+    explanation: "Soruda veriyi herkese gönderir, verimsizdir veya çakışmaya neden olur deniyorsa cevap Hub olur."
   },
   {
-    q: "Aşağıdakilerden hangisi dizilerin bağlı listelere göre avantajıdır?",
+    q: "Ağ trafiğini güvenlik kurallarına göre izinli veya engelli olarak ayıran cihaz hangisidir?",
     t: "mcq",
-    o: [
-      "Sık ekleme ve silmede her zaman daha iyi olması",
-      "İndeksle elemana hızlı erişim sağlaması",
-      "Her elemanın pointer tutması",
-      "Bellekte dağınık şekilde saklanması",
-      "Boyutunun her zaman otomatik büyümesi"
-    ],
+    o: ["Hub", "Firewall", "Switch", "Modem", "Repeater"],
     a: 1,
     difficulty: "easy",
     week: 2,
-    topic: "Dizi Avantajları",
+    topic: "Firewall",
     importance: 5,
-    explanation: "Dizilerin en önemli avantajı indeksle hızlı erişim sağlamasıdır. Eğer hangi sıradaki elemana gideceğini biliyorsan dizi çok hızlıdır. Bağlı listede ise istenen elemana ulaşmak için baştan başlayıp düğümler arasında ilerlemek gerekir."
+    explanation: "Soruda güvenlik, zararlı trafik, engelleme veya izin verme geçiyorsa cevap Firewall olur."
   },
   {
-    q: "Bağlı listedeki bir düğüm genellikle hangi iki bilgiyi içerir?",
+    q: "Kablosuz cihazların ağa bağlanmasını sağlayan cihaz hangisidir?",
     t: "mcq",
-    o: [
-      "Sadece renk ve boyut",
-      "Sadece indeks ve uzunluk",
-      "Veri ve sonraki düğümün adresi",
-      "Kök ve yaprak bilgisi",
-      "Sadece FIFO bilgisi"
-    ],
+    o: ["Router only", "Hub", "Access Point", "Firewall", "Proxy"],
     a: 2,
     difficulty: "easy",
-    week: 3,
-    topic: "Bağlı Liste Düğümü",
+    week: 2,
+    topic: "Access Point",
     importance: 5,
-    explanation: "Bağlı listedeki her eleman düğüm olarak adlandırılır. Bir düğüm genellikle saklanan veriyi ve bir sonraki düğümün adresini tutar. Bu yüzden bağlı listedeki elemanlar bellekte yan yana olmak zorunda değildir."
+    explanation: "Soruda Wi-Fi dağıtma, kablosuz bağlantı veya SSID geçiyorsa cevap Access Point olur."
   },
   {
-    q: "Tek yönlü bağlı listede her düğüm hangi düğümü gösterir?",
+    q: "İnternet servis sağlayıcısından gelen bağlantıyı ev veya ofis ağı için kullanılabilir hale getiren cihaz hangisidir?",
     t: "mcq",
-    o: [
-      "Kendisinden önceki düğümü",
-      "Kök düğümü",
-      "En büyük düğümü",
-      "Kendisinden sonraki düğümü",
-      "Rastgele seçilen düğümü"
-    ],
+    o: ["Switch", "Hub", "Firewall", "Modem", "Load Balancer"],
     a: 3,
-    difficulty: "medium",
-    week: 3,
-    topic: "Tek Yönlü Bağlı Liste",
-    importance: 5,
-    explanation: "Tek yönlü bağlı listede her düğüm yalnızca kendisinden sonraki düğümün adresini tutar. Bu yüzden liste baştan sona doğru gezilir. Geriye doğru gitmek için ayrıca önceki düğüm bilgisi yoktur."
-  },
-  {
-    q: "Çift yönlü bağlı listenin tek yönlü bağlı listeden farkı nedir?",
-    t: "mcq",
-    o: [
-      "Hiç veri tutmaması",
-      "Sadece bir eleman tutabilmesi",
-      "Dizi gibi bellekte yan yana durması",
-      "Sadece stack olarak çalışması",
-      "Her düğümün hem önceki hem sonraki düğümü gösterebilmesi"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 3,
-    topic: "Çift Yönlü Bağlı Liste",
+    difficulty: "easy",
+    week: 2,
+    topic: "Modem",
     importance: 4,
-    explanation: "Çift yönlü bağlı listede her düğüm hem önceki hem de sonraki düğümün adresini tutar. Bu sayede listede ileri ve geri yönde dolaşmak mümkündür. Tek yönlü listede ise genellikle sadece sonraki düğüme gidilir."
+    explanation: "Soruda internet servis sağlayıcısı, bağlantı veya sinyal dönüştürme geçiyorsa cevap Modem olur."
   },
   {
-    q: "Dairesel bağlı listeyi diğer bağlı listelerden ayıran temel özellik hangisidir?",
+    q: "TCP protokolünün en temel özelliği hangisidir?",
     t: "mcq",
-    o: [
-      "Son düğümün tekrar ilk düğümü göstermesi",
-      "Her düğümün en fazla iki çocuk alması",
-      "İlk giren elemanın ilk çıkması",
-      "Son giren elemanın ilk çıkması",
-      "Verilerin mutlaka sıralı olması"
-    ],
+    o: ["Güvenilir ve bağlantılı çalışması", "Bağlantısız ve en hızlı olması", "Alan adını IP'ye çevirmesi", "IP'yi MAC'e çevirmesi", "Sadece kablosuz çalışması"],
     a: 0,
     difficulty: "medium",
-    week: 3,
-    topic: "Dairesel Bağlı Liste",
-    importance: 4,
-    explanation: "Dairesel bağlı listede son düğümün bağlantısı NULL yerine tekrar ilk düğümü gösterir. Böylece liste halka gibi olur. Bu yapı bazı döngüsel işlemlerde avantaj sağlayabilir."
+    week: 6,
+    topic: "TCP",
+    importance: 5,
+    explanation: "Soruda güvenilir, bağlantılı, hata kontrolü, sıralama veya tekrar gönderim geçiyorsa TCP düşünülür."
   },
   {
-    q: "Stack veri yapısında underflow durumu ne zaman oluşur?",
+    q: "UDP protokolünün en temel özelliği hangisidir?",
     t: "mcq",
-    o: [
-      "Stack doluyken eleman eklenirse",
-      "Stack boşken eleman çıkarılmaya çalışılırsa",
-      "Stack içinde iki eleman varsa",
-      "Stack sadece sayı tutarsa",
-      "Stack queue'ya çevrilirse"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 4,
-    topic: "Stack Underflow",
-    importance: 4,
-    explanation: "Underflow, boş bir stack'ten eleman çıkarılmaya çalışıldığında oluşur. Yani stack zaten boşsa pop işlemi yapılamaz. Bu kavram stack'in güvenli kullanılmasında önemlidir."
-  },
-  {
-    q: "Stack veri yapısında overflow durumu ne zaman oluşabilir?",
-    t: "mcq",
-    o: [
-      "Stack boşken pop yapılırsa",
-      "Stack içinde tek eleman varsa",
-      "Sabit kapasiteli stack doluyken yeni eleman eklenirse",
-      "Stack'in en üst elemanına bakılırsa",
-      "Stack'te LIFO mantığı kullanılırsa"
-    ],
+    o: ["Güvenilir ve bağlantılı çalışması", "Alan adını çözmesi", "Hızlı ve bağlantısız çalışması", "Dosya transferi yapması", "MAC adresi bulması"],
     a: 2,
     difficulty: "medium",
-    week: 4,
-    topic: "Stack Overflow",
-    importance: 4,
-    explanation: "Overflow, sabit boyutlu bir stack tamamen doluyken yeni eleman eklenmeye çalışılırsa oluşabilir. Yani kapasite doludur ama push yapılmak istenir. Bu yüzden stack kapasitesi kontrol edilmelidir."
-  },
-  {
-    q: "Fonksiyon çağrılarında stack kullanılmasının temel nedeni nedir?",
-    t: "mcq",
-    o: [
-      "Fonksiyonların alfabetik sıralanması",
-      "Her fonksiyonun veritabanına kaydedilmesi",
-      "Fonksiyonların sadece bir kez çalışması",
-      "Son çağrılan fonksiyonun önce tamamlanması",
-      "Fonksiyonların queue ile bekletilmesi"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 4,
-    topic: "Call Stack",
+    week: 6,
+    topic: "UDP",
     importance: 5,
-    explanation: "Programda bir fonksiyon başka bir fonksiyonu çağırabilir. En son çağrılan fonksiyon önce biter ve kontrol önceki fonksiyona döner. Bu davranış LIFO mantığına uyar, bu yüzden fonksiyon çağrıları stack ile yönetilir."
+    explanation: "Soruda hızlı, bağlantısız, canlı yayın, oyun, VoIP veya düşük gecikme geçiyorsa UDP düşünülür."
   },
   {
-    q: "Parantez dengesi kontrolünde neden stack kullanılır?",
+    q: "TCP bağlantısı kurulurken kullanılan SYN, SYN-ACK ve ACK adımlarından oluşan süreç nedir?",
     t: "mcq",
-    o: [
-      "Çünkü ilk açılan parantez mutlaka ilk kapanır",
-      "Çünkü parantezler rastgele silinir",
-      "Çünkü stack sadece sayıları sıralar",
-      "Çünkü queue son gireni ilk çıkarır",
-      "Çünkü en son açılan parantezin önce kapanması gerekir"
-    ],
-    a: 4,
+    o: ["DNS çözümleme", "ARP sorgusu", "ICMP testi", "3-Way Handshake", "Port tarama"],
+    a: 3,
     difficulty: "hard",
+    week: 6,
+    topic: "3-Way Handshake",
+    importance: 5,
+    explanation: "Soruda SYN, SYN-ACK ve ACK kelimeleri geçiyorsa cevap 3-Way Handshake olur."
+  },
+  {
+    q: "Web sayfalarının tarayıcı üzerinden açılmasında kullanılan protokol hangisidir?",
+    t: "mcq",
+    o: ["HTTP / HTTPS", "FTP", "SMTP", "ARP", "ICMP"],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "HTTP HTTPS",
+    importance: 5,
+    explanation: "Soruda web, tarayıcı, site açma veya güvenli web geçiyorsa HTTP/HTTPS düşünülür."
+  },
+  {
+    q: "Dosya aktarımı için kullanılan protokol hangisidir?",
+    t: "mcq",
+    o: ["DNS", "FTP", "ICMP", "ARP", "POP3"],
+    a: 1,
+    difficulty: "easy",
+    week: 7,
+    topic: "FTP",
+    importance: 5,
+    explanation: "Soruda dosya gönderme, dosya alma veya file transfer geçiyorsa cevap FTP olur."
+  },
+  {
+    q: "E-posta göndermek için kullanılan protokol hangisidir?",
+    t: "mcq",
+    o: ["IMAP", "POP3", "SMTP", "DNS", "ARP"],
+    a: 2,
+    difficulty: "easy",
+    week: 7,
+    topic: "SMTP",
+    importance: 5,
+    explanation: "Soruda mail gönderme geçiyorsa cevap SMTP olur. POP3 ve IMAP mail alma tarafındadır."
+  },
+  {
+    q: "E-posta almak için kullanılan protokoller hangileridir?",
+    t: "mcq",
+    o: ["HTTP ve HTTPS", "FTP ve DNS", "ARP ve ICMP", "POP3 ve IMAP", "TCP ve UDP"],
+    a: 3,
+    difficulty: "easy",
+    week: 7,
+    topic: "POP3 IMAP",
+    importance: 5,
+    explanation: "Soruda mail alma, sunucudan e-posta çekme veya e-postayı yönetme geçiyorsa POP3/IMAP düşünülür."
+  },
+  {
+    q: "OSI modeli kaç katmandan oluşur?",
+    t: "mcq",
+    o: ["7", "4", "5", "3", "8"],
+    a: 0,
+    difficulty: "easy",
+    week: 8,
+    topic: "OSI Modeli",
+    importance: 5,
+    explanation: "OSI modeli sorulursa katman sayısı 7'dir. TCP/IP modeli ise 4 katmandır."
+  },
+  {
+    q: "OSI modelinde IP adresleme ve routing hangi katmandadır?",
+    t: "mcq",
+    o: ["Fiziksel", "Ağ", "Sunum", "Uygulama", "Oturum"],
+    a: 1,
+    difficulty: "medium",
+    week: 8,
+    topic: "Ağ Katmanı",
+    importance: 5,
+    explanation: "Soruda IP, router, routing veya yönlendirme geçiyorsa OSI katmanı Ağ katmanıdır."
+  },
+  {
+    q: "OSI modelinde TCP ve UDP hangi katmanda çalışır?",
+    t: "mcq",
+    o: ["Veri Bağlantı", "Fiziksel", "Taşıma", "Sunum", "Oturum"],
+    a: 2,
+    difficulty: "medium",
+    week: 8,
+    topic: "Taşıma Katmanı",
+    importance: 5,
+    explanation: "TCP ve UDP taşıma katmanı protokolleridir. Soruda TCP/UDP katmanı sorulursa cevap Taşıma olur."
+  },
+  {
+    q: "OSI modelinde MAC adresleme ve çerçeveleme hangi katmanla ilgilidir?",
+    t: "mcq",
+    o: ["Uygulama", "Sunum", "Ağ", "Veri Bağlantı", "Taşıma"],
+    a: 3,
+    difficulty: "medium",
+    week: 8,
+    topic: "Veri Bağlantı Katmanı",
+    importance: 5,
+    explanation: "Soruda MAC adresi, switch veya frame/çerçeve geçiyorsa Veri Bağlantı katmanı düşünülür."
+  },
+  {
+    q: "OSI modelinde kablo, bit ve elektriksel sinyal iletimi hangi katmandadır?",
+    t: "mcq",
+    o: ["Fiziksel", "Taşıma", "Ağ", "Uygulama", "Oturum"],
+    a: 0,
+    difficulty: "easy",
+    week: 8,
+    topic: "Fiziksel Katman",
+    importance: 5,
+    explanation: "Soruda kablo, bit, sinyal veya fiziksel iletim geçiyorsa cevap Fiziksel katman olur."
+  },
+  {
+    q: "TCP/IP modeli kaç katmandan oluşur?",
+    t: "mcq",
+    o: ["7", "4", "6", "8", "3"],
+    a: 1,
+    difficulty: "easy",
+    week: 10,
+    topic: "TCP/IP Modeli",
+    importance: 5,
+    explanation: "TCP/IP modeli 4 katmandır. OSI modeli 7 katmandır."
+  },
+  {
+    q: "Merkezi bir switch veya router etrafında kurulan, küçük ofislerde sık kullanılan topoloji hangisidir?",
+    t: "mcq",
+    o: ["Bus", "Ring", "Star", "Mesh", "Tree"],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "Star Topoloji",
+    importance: 5,
+    explanation: "Soruda merkezi cihaz, küçük ofis veya kolay yönetim geçiyorsa cevap Star/Yıldız topoloji olur."
+  },
+  {
+    q: "Yedek yollar sayesinde güvenilir olan fakat maliyeti yüksek topoloji hangisidir?",
+    t: "mcq",
+    o: ["Bus", "Ring", "Star", "Mesh", "Point-to-point"],
+    a: 3,
+    difficulty: "medium",
+    week: 3,
+    topic: "Mesh Topoloji",
+    importance: 5,
+    explanation: "Soruda yedek yol, kesintisizlik, çok bağlantı ve pahalı geçiyorsa cevap Mesh topoloji olur."
+  },
+  {
+    q: "Parazite karşı UTP kablodan daha korumalı olan kablo türü hangisidir?",
+    t: "mcq",
+    o: ["STP", "UTP", "HDMI", "VGA", "USB"],
+    a: 0,
+    difficulty: "medium",
     week: 4,
-    topic: "Stack ile Parantez Kontrolü",
-    importance: 4,
-    explanation: "Parantez kontrolünde en son açılan parantezin önce kapanması gerekir. Örneğin ( [ ] ) yapısında önce [ kapanır, sonra ( kapanır. Bu durum son giren ilk çıkar mantığına uygundur. Bu yüzden stack kullanılır."
-  },
-  {
-    q: "Queue veri yapısında front neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Kuyruğun başındaki, ilk çıkacak elemanı",
-      "Kuyruğun sonundaki, en son eklenen elemanı",
-      "Stack'in en üst elemanını",
-      "Ağacın kök düğümünü",
-      "Grafın en uzak düğümünü"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "Queue Front",
+    topic: "STP Kablo",
     importance: 5,
-    explanation: "Front, kuyruğun baş tarafını ifade eder. Queue FIFO çalıştığı için ilk çıkacak eleman front tarafındadır. Banka sırasında en öndeki kişi nasıl önce işlem yaparsa queue'da da front elemanı önce çıkar."
+    explanation: "Soruda korumalı, shielded, parazit veya elektromanyetik etki geçiyorsa cevap STP olur."
   },
+
+  // =========================================================
+  // ============ NESNE YÖNELİMLİ PROGRAMLAMA ================
+  // =========================================================
+
   {
-    q: "Queue veri yapısında rear neyi ifade eder?",
+    q: "Nesne yönelimli programlamada nesne üretmek için kullanılan şablon yapı hangisidir?",
     t: "mcq",
-    o: [
-      "Kuyruğun başındaki elemanı",
-      "Kuyruğun sonunu, yeni elemanın eklendiği yeri",
-      "Stack'in en üst noktasını",
-      "Ağacın yaprak düğümünü",
-      "Dizinin ilk indeksini"
-    ],
+    o: ["Object", "Class", "Method", "Property", "Constructor"],
     a: 1,
     difficulty: "easy",
-    week: 5,
-    topic: "Queue Rear",
+    week: 1,
+    topic: "Class",
     importance: 5,
-    explanation: "Rear, kuyruğun son tarafıdır. Queue'ya yeni eleman eklendiğinde bu eleman rear tarafına eklenir. Yani enqueue işlemi rear tarafında gerçekleşir."
+    explanation: "Soruda şablon, taslak veya nesne üretir ifadesi varsa cevap Class/Sınıf olur."
   },
   {
-    q: "Dairesel kuyruk hangi problemi azaltmak için kullanılır?",
+    q: "Bir sınıftan üretilen gerçek örneğe ne denir?",
+    t: "mcq",
+    o: ["Method", "Property", "Object", "Interface", "Namespace"],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Object",
+    importance: 5,
+    explanation: "Class şablondur, Object ise o şablondan üretilen gerçek örnektir."
+  },
+  {
+    q: "Bir sınıfın ad, yaş, renk, marka gibi bilgilerine ne denir?",
+    t: "mcq",
+    o: ["Method", "Loop", "Property / Özellik", "Constructor", "Exception"],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Property",
+    importance: 5,
+    explanation: "Soruda bir nesnenin bilgileri, durumu veya özellikleri geçiyorsa cevap Property/Özellik olur."
+  },
+  {
+    q: "Bir sınıfın çalıştır, hesapla, yazdır gibi davranışlarını temsil eden yapı hangisidir?",
+    t: "mcq",
+    o: ["Class", "Method", "Field", "Object", "Namespace"],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Method",
+    importance: 5,
+    explanation: "Soruda davranış, işlem veya eylem geçiyorsa cevap Method/Metot olur."
+  },
+  {
+    q: "Nesne oluşturulurken çalışan ve ilk değerleri atamak için kullanılan özel metot hangisidir?",
+    t: "mcq",
+    o: ["Destructor", "Loop", "Constructor", "Interface", "Property"],
+    a: 2,
+    difficulty: "medium",
+    week: 2,
+    topic: "Constructor",
+    importance: 5,
+    explanation: "Soruda nesne oluşurken çalışır veya ilk değer atar deniyorsa cevap Constructor/Yapıcı metot olur."
+  },
+  {
+    q: "OOP'nin dört temel ilkesi hangileridir?",
     t: "mcq",
     o: [
-      "Stack'in LIFO çalışmasını",
-      "Ağaçta kök bulunmasını",
-      "Basit kuyrukta boşalan alanların boşa gitmesini",
-      "BST'de sol tarafın küçük olmasını",
-      "Grafın kenar içermesini"
+      "SELECT, INSERT, UPDATE, DELETE",
+      "if, else, for, while",
+      "HTML, CSS, JavaScript, SQL",
+      "Encapsulation, Inheritance, Polymorphism, Abstraction",
+      "public, private, static, void"
     ],
+    a: 3,
+    difficulty: "easy",
+    week: 1,
+    topic: "OOP İlkeleri",
+    importance: 5,
+    explanation: "OOP'nin temel dört ilkesi kapsülleme, kalıtım, çok biçimlilik ve soyutlamadır."
+  },
+  {
+    q: "Veriyi dışarıdan doğrudan erişime kapatıp kontrollü erişim sağlamaya ne denir?",
+    t: "mcq",
+    o: ["Inheritance", "Encapsulation", "Polymorphism", "Abstraction", "Overloading"],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Encapsulation",
+    importance: 5,
+    explanation: "Soruda private alan, getter/setter veya veriyi koruma geçiyorsa cevap Encapsulation/Kapsülleme olur."
+  },
+  {
+    q: "Bir sınıfın başka bir sınıftan özellik ve metot almasına ne denir?",
+    t: "mcq",
+    o: ["Encapsulation", "Polymorphism", "Inheritance", "Abstraction", "Composition"],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "Inheritance",
+    importance: 5,
+    explanation: "Soruda miras alma, üst sınıf-alt sınıf veya base-derived geçiyorsa cevap Inheritance/Kalıtım olur."
+  },
+  {
+    q: "Aynı metodun farklı sınıflarda farklı davranabilmesi hangi OOP ilkesidir?",
+    t: "mcq",
+    o: ["Abstraction", "Encapsulation", "Inheritance", "Polymorphism", "Constructor"],
+    a: 3,
+    difficulty: "medium",
+    week: 4,
+    topic: "Polymorphism",
+    importance: 5,
+    explanation: "Soruda aynı isim farklı davranış veya aynı çağrı farklı sonuç geçiyorsa cevap Polymorphism/Çok biçimlilik olur."
+  },
+  {
+    q: "Gereksiz detayları gizleyip sadece gerekli kısmı göstermeye ne denir?",
+    t: "mcq",
+    o: ["Abstraction", "Inheritance", "Encapsulation", "Overloading", "Composition"],
+    a: 0,
+    difficulty: "medium",
+    week: 4,
+    topic: "Abstraction",
+    importance: 5,
+    explanation: "Soruda detay gizleme veya sadece gerekli bilgiyi gösterme geçiyorsa cevap Abstraction/Soyutlama olur."
+  },
+  {
+    q: "Sadece sınıf içinden erişilebilen erişim belirleyici hangisidir?",
+    t: "mcq",
+    o: ["public", "private", "protected", "static", "virtual"],
+    a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "private",
+    importance: 5,
+    explanation: "Soruda yalnızca kendi sınıfı içinde erişim deniyorsa cevap private olur."
+  },
+  {
+    q: "Her yerden erişilebilen erişim belirleyici hangisidir?",
+    t: "mcq",
+    o: ["protected", "private", "public", "abstract", "override"],
+    a: 2,
+    difficulty: "easy",
+    week: 2,
+    topic: "public",
+    importance: 5,
+    explanation: "Soruda her yerden erişim deniyorsa cevap public olur."
+  },
+  {
+    q: "Kendi sınıfı ve ondan türeyen sınıflardan erişilebilen erişim belirleyici hangisidir?",
+    t: "mcq",
+    o: ["public", "private", "static", "protected", "sealed"],
+    a: 3,
+    difficulty: "medium",
+    week: 2,
+    topic: "protected",
+    importance: 4,
+    explanation: "Soruda miras alan sınıf da erişebilir deniyorsa cevap protected olur."
+  },
+  {
+    q: "Nesne oluşturmadan sınıf adıyla kullanılabilen elemanlar için hangi anahtar kelime kullanılır?",
+    t: "mcq",
+    o: ["static", "private", "virtual", "override", "new"],
+    a: 0,
+    difficulty: "medium",
+    week: 3,
+    topic: "static",
+    importance: 5,
+    explanation: "Soruda nesne oluşturmadan çağrılır veya sınıfa aittir deniyorsa cevap static olur."
+  },
+  {
+    q: "Aynı isimli metodun farklı parametrelerle yazılmasına ne denir?",
+    t: "mcq",
+    o: ["Overriding", "Overloading", "Inheritance", "Abstraction", "Interface"],
+    a: 1,
+    difficulty: "medium",
+    week: 5,
+    topic: "Method Overloading",
+    importance: 5,
+    explanation: "Soruda aynı metot adı ve farklı parametre geçiyorsa cevap Method Overloading olur."
+  },
+  {
+    q: "Üst sınıftaki metodun alt sınıfta yeniden yazılmasına ne denir?",
+    t: "mcq",
+    o: ["Encapsulation", "Overloading", "Overriding", "Composition", "Constructor"],
     a: 2,
     difficulty: "medium",
     week: 5,
-    topic: "Dairesel Kuyruk",
-    importance: 4,
-    explanation: "Basit kuyruk sabit diziyle yapıldığında baştan elemanlar çıkarıldıkça boş alanlar oluşabilir. Dairesel kuyrukta son ile baş mantıksal olarak bağlanır ve boşalan alanlar tekrar kullanılabilir. Bu bellek kullanımını daha verimli hale getirir."
+    topic: "Method Overriding",
+    importance: 5,
+    explanation: "Soruda miras alınan metodu yeniden tanımlama geçiyorsa cevap Method Overriding olur."
   },
   {
-    q: "Öncelikli kuyrukta elemanlar hangi mantığa göre işlenir?",
+    q: "C#'ta mevcut nesneyi ifade eden anahtar kelime hangisidir?",
     t: "mcq",
-    o: [
-      "Her zaman alfabetik sıraya göre",
-      "Her zaman en son girene göre",
-      "Her zaman rastgele seçilerek",
-      "Öncelik değerine göre",
-      "Sadece eklenme saatine göre"
-    ],
+    o: ["base", "new", "static", "this", "void"],
     a: 3,
     difficulty: "medium",
-    week: 5,
-    topic: "Öncelikli Kuyruk",
+    week: 4,
+    topic: "this",
     importance: 4,
-    explanation: "Öncelikli kuyrukta elemanlar sadece geliş sırasına göre değil, öncelik değerine göre işlenir. Örneğin acil serviste durumu ağır olan hasta daha önce alınabilir. Bu yapı genellikle heap ile ilişkilidir."
+    explanation: "Soruda bu nesne veya mevcut sınıf örneği geçiyorsa cevap this olur."
   },
   {
-    q: "Deque yani çift uçlu kuyrukta hangi işlem mümkündür?",
+    q: "C#'ta üst sınıfın constructor veya metoduna erişmek için kullanılan anahtar kelime hangisidir?",
     t: "mcq",
-    o: [
-      "Sadece baştan çıkarma",
-      "Sadece sondan ekleme",
-      "Sadece stack gibi pop yapma",
-      "Sadece kök düğüm silme",
-      "Hem baştan hem sondan ekleme ve çıkarma"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 5,
-    topic: "Deque",
-    importance: 3,
-    explanation: "Deque, double ended queue demektir. Yani iki uçlu kuyruktur. Hem baştan hem sondan eleman eklenebilir ve çıkarılabilir. Bu yüzden basit queue'ya göre daha esnektir."
-  },
-  {
-    q: "Ağaç veri yapısında çocuk düğüm ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Bir düğümün doğrudan altında bulunan düğüm",
-      "Her zaman ağacın kökü",
-      "Hiç bağlantısı olmayan düğüm",
-      "Stack'in en üst elemanı",
-      "Queue'nun son elemanı"
-    ],
+    o: ["base", "this", "new", "public", "return"],
     a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "Ağaç Terimleri",
-    importance: 5,
-    explanation: "Ağaçta bir düğümün doğrudan altında bulunan düğümlere çocuk denir. Örneğin A düğümünün altında B ve C varsa B ve C, A'nın çocuklarıdır. A ise onların ebeveynidir."
+    difficulty: "medium",
+    week: 4,
+    topic: "base",
+    importance: 4,
+    explanation: "Soruda üst sınıfı çağırma veya base class erişimi geçiyorsa cevap base olur."
   },
   {
-    q: "Ağaç veri yapısında ebeveyn düğüm ne anlama gelir?",
+    q: "Nesne oluşturmak için kullanılan anahtar kelime hangisidir?",
     t: "mcq",
-    o: [
-      "Hiç çocuğu olmayan düğüm",
-      "Bir düğümün üstündeki ve ona doğrudan bağlı olan düğüm",
-      "Her zaman en küçük değer",
-      "Her zaman son eklenen düğüm",
-      "Dizinin son elemanı"
-    ],
+    o: ["void", "new", "return", "static", "get"],
     a: 1,
     difficulty: "easy",
-    week: 6,
-    topic: "Ağaç Terimleri",
+    week: 1,
+    topic: "new",
     importance: 5,
-    explanation: "Ebeveyn düğüm, bir düğümün doğrudan üstündeki düğümdür. A düğümünün altında B varsa A, B'nin ebeveynidir. Bu kavram aile ağacı mantığıyla çok kolay anlaşılır."
+    explanation: "Soruda nesne oluşturma geçiyorsa cevap new olur."
   },
   {
-    q: "Ağaçta derinlik kavramı neyi ifade eder?",
+    q: "Sınıflara uygulanması gereken davranışları sözleşme gibi belirleyen yapı hangisidir?",
     t: "mcq",
-    o: [
-      "Düğümün kaç çocuğu olduğunu",
-      "Ağacın kaç yaprağı olduğunu",
-      "Bir düğümün kökten olan uzaklığını",
-      "Dizinin toplam uzunluğunu",
-      "Queue'nun doluluk oranını"
-    ],
+    o: ["Class", "Object", "Interface", "Property", "Field"],
     a: 2,
     difficulty: "medium",
     week: 6,
-    topic: "Derinlik",
-    importance: 4,
-    explanation: "Derinlik, bir düğümün kök düğümden ne kadar uzakta olduğunu gösterir. Kökün derinliği genellikle 0 kabul edilir. Kökün çocukları 1 derinliktedir. Bu kavram ağaç seviyelerini anlamak için önemlidir."
+    topic: "Interface",
+    importance: 5,
+    explanation: "Soruda sözleşme, uygulamak zorunda veya implements geçiyorsa cevap Interface olur."
   },
   {
-    q: "Ağaçta yükseklik kavramı en doğru nasıl açıklanır?",
+    q: "Nesne üretilemeyen, ortak özellik ve davranışları taşıyan sınıf türü hangisidir?",
     t: "mcq",
-    o: [
-      "Düğümün veri tipidir",
-      "Dizinin eleman sayısıdır",
-      "Stack'in kapasitesidir",
-      "Bir düğümden en uzak yaprağa kadar olan yol uzunluğudur",
-      "Queue'nun ilk elemanıdır"
-    ],
+    o: ["static method", "interface only", "sealed class", "abstract class", "object"],
     a: 3,
     difficulty: "medium",
     week: 6,
-    topic: "Yükseklik",
-    importance: 4,
-    explanation: "Yükseklik, bir düğümden aşağıya doğru en uzak yaprağa kadar olan yolun uzunluğudur. Ağacın yüksekliği, kökten en uzak yaprağa kadar olan mesafedir. Dengeli ağaçlarda yükseklik küçük tutulmaya çalışılır."
+    topic: "Abstract Class",
+    importance: 5,
+    explanation: "Soruda nesne oluşturulamaz veya soyut sınıf geçiyorsa cevap abstract class olur."
   },
   {
-    q: "Tam ikili ağaç yani Full Binary Tree için doğru ifade hangisidir?",
+    q: "Bir sınıftan başka sınıf türetmek hangi OOP ilkesiyle ilgilidir?",
+    t: "mcq",
+    o: ["Inheritance", "Encapsulation", "Polymorphism", "Abstraction", "Exception"],
+    a: 0,
+    difficulty: "easy",
+    week: 3,
+    topic: "Inheritance",
+    importance: 5,
+    explanation: "Soruda sınıftan sınıf türetme veya üst-alt sınıf geçiyorsa cevap kalıtımdır."
+  },
+  {
+    q: "Bir sınıfın başka bir sınıfı içinde nesne olarak kullanmasına ne denir?",
+    t: "mcq",
+    o: ["Inheritance", "Composition", "Polymorphism", "Override", "Static"],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "Composition",
+    importance: 4,
+    explanation: "Soruda has-a ilişkisi veya Arabanın Motoru vardır gibi ifade geçiyorsa cevap Composition olur."
+  },
+  {
+    q: "Kalıtım hangi ilişkiyi temsil eder?",
+    t: "mcq",
+    o: ["has-a", "part-of", "is-a", "uses-a", "calls-a"],
+    a: 2,
+    difficulty: "medium",
+    week: 3,
+    topic: "is-a",
+    importance: 4,
+    explanation: "Kedi bir hayvandır gibi ifadeler is-a ilişkisidir ve kalıtımla ilgilidir."
+  },
+  {
+    q: "Composition hangi ilişkiyi temsil eder?",
+    t: "mcq",
+    o: ["is-a", "inherits-a", "extends-a", "has-a", "overrides-a"],
+    a: 3,
+    difficulty: "medium",
+    week: 6,
+    topic: "has-a",
+    importance: 4,
+    explanation: "Arabanın motoru vardır gibi ifadeler has-a ilişkisidir ve composition ile ilgilidir."
+  },
+  {
+    q: "Bir sınıfın içindeki verileri güvenli hale getirmek için en çok kullanılan OOP ilkesi hangisidir?",
+    t: "mcq",
+    o: ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction", "Overloading"],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Encapsulation",
+    importance: 5,
+    explanation: "Soruda veri güvenliği, private alan veya getter/setter geçiyorsa Encapsulation düşünülür."
+  },
+  {
+    q: "Kod tekrarını azaltmak ve ortak özellikleri üst sınıfta toplamak için hangi OOP ilkesi kullanılır?",
+    t: "mcq",
+    o: ["Encapsulation", "Inheritance", "Abstraction", "Interface", "Constructor"],
+    a: 1,
+    difficulty: "medium",
+    week: 3,
+    topic: "Inheritance",
+    importance: 5,
+    explanation: "Ortak özellikleri üst sınıfa koyup alt sınıflarda kullanmak kalıtımın temel amacıdır."
+  },
+  {
+    q: "Aynı komutla farklı nesnelerin farklı davranabilmesi hangi OOP ilkesidir?",
+    t: "mcq",
+    o: ["Inheritance", "Encapsulation", "Polymorphism", "Static", "Private"],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Polymorphism",
+    importance: 5,
+    explanation: "Soruda aynı çağrı farklı sonuç veya farklı nesneler farklı davranır geçiyorsa cevap Polymorphism olur."
+  },
+  {
+    q: "Bir sınıfın hangi verileri tutacağını, nesnenin ise bu sınıftan oluşturulan gerçek örnek olduğunu anlatan fark hangisidir?",
     t: "mcq",
     o: [
-      "Her düğümün mutlaka üç çocuğu vardır",
-      "Her düğümün ya iki çocuğu vardır ya da hiç çocuğu yoktur",
-      "Her düğüm yalnızca bir çocuk taşır",
-      "Tüm değerler rastgele yerleşir",
-      "Sadece queue ile çalışır"
+      "Method işlem, property döngüdür",
+      "Class nesnedir, object şablondur",
+      "Class şablondur, object gerçek örnektir",
+      "Interface nesne üretir, class üretmez",
+      "Constructor sadece hata yakalar"
     ],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Class Object Farkı",
+    importance: 5,
+    explanation: "Class şablon, object ise o şablondan üretilen gerçek örnektir."
+  },
+
+  // =========================================================
+  // ===================== VERİ YAPILARI =====================
+  // =========================================================
+
+  {
+    q: "Elemanlara indeks numarasıyla hızlı erişim sağlayan veri yapısı hangisidir?",
+    t: "mcq",
+    o: ["Dizi", "Stack", "Queue", "Graf", "AVL"],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Dizi",
+    importance: 5,
+    explanation: "Soruda indeksle hızlı erişim veya yan yana saklama geçiyorsa cevap Dizi olur."
+  },
+  {
+    q: "Her elemanın veri ve sonraki elemanın adresini tuttuğu veri yapısı hangisidir?",
+    t: "mcq",
+    o: ["Dizi", "Bağlı liste", "Heap", "Quick Sort", "BFS"],
+    a: 1,
+    difficulty: "easy",
+    week: 3,
+    topic: "Bağlı Liste",
+    importance: 5,
+    explanation: "Soruda düğüm, sonraki adres veya dinamik yapı geçiyorsa cevap Bağlı liste olur."
+  },
+  {
+    q: "Son giren ilk çıkar mantığıyla çalışan veri yapısı hangisidir?",
+    t: "mcq",
+    o: ["Queue", "Graf", "Stack", "Dizi", "Merge Sort"],
+    a: 2,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack",
+    importance: 5,
+    explanation: "Soruda LIFO veya son giren ilk çıkar geçiyorsa cevap Stack olur."
+  },
+  {
+    q: "İlk giren ilk çıkar mantığıyla çalışan veri yapısı hangisidir?",
+    t: "mcq",
+    o: ["Stack", "BST", "Dizi", "Queue", "Bubble Sort"],
+    a: 3,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue",
+    importance: 5,
+    explanation: "Soruda FIFO veya ilk giren ilk çıkar geçiyorsa cevap Queue olur."
+  },
+  {
+    q: "Stack veri yapısına eleman ekleme işlemi hangisidir?",
+    t: "mcq",
+    o: ["Push", "Pop", "Dequeue", "Enqueue", "Search"],
+    a: 0,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack İşlemleri",
+    importance: 5,
+    explanation: "Stack + ekleme sorulursa cevap Push olur. Stack + çıkarma sorulursa Pop olur."
+  },
+  {
+    q: "Stack veri yapısından eleman çıkarma işlemi hangisidir?",
+    t: "mcq",
+    o: ["Enqueue", "Pop", "Rear", "Insert", "Binary Search"],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack İşlemleri",
+    importance: 5,
+    explanation: "Stack'ten çıkarma Pop'tur. Queue'dan çıkarma ise Dequeue'dur."
+  },
+  {
+    q: "Queue veri yapısına eleman ekleme işlemi hangisidir?",
+    t: "mcq",
+    o: ["Push", "Pop", "Enqueue", "Peek", "Pivot"],
+    a: 2,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue İşlemleri",
+    importance: 5,
+    explanation: "Queue + ekleme sorulursa cevap Enqueue olur."
+  },
+  {
+    q: "Queue veri yapısından eleman çıkarma işlemi hangisidir?",
+    t: "mcq",
+    o: ["Push", "Pop", "Peek", "Dequeue", "Rotate"],
+    a: 3,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue İşlemleri",
+    importance: 5,
+    explanation: "Queue'dan çıkarma Dequeue'dur. Stack'ten çıkarma Pop'tur."
+  },
+  {
+    q: "Her düğümün en fazla iki çocuğu olan ağaç türü hangisidir?",
+    t: "mcq",
+    o: ["Binary Tree", "Graf", "Queue", "Bubble Sort", "Hash tablo"],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "Binary Tree",
+    importance: 5,
+    explanation: "Soruda en fazla iki çocuk, sol çocuk veya sağ çocuk geçiyorsa cevap Binary Tree olur."
+  },
+  {
+    q: "BST'de küçük değerler nereye yerleştirilir?",
+    t: "mcq",
+    o: ["Sağ alt ağaca", "Sol alt ağaca", "Kökün üstüne", "Queue'nun sonuna", "Stack'e"],
+    a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "BST",
+    importance: 5,
+    explanation: "BST kuralı: küçük değerler sola, büyük değerler sağa gider."
+  },
+  {
+    q: "BST'de büyük değerler nereye yerleştirilir?",
+    t: "mcq",
+    o: ["Kökün üstüne", "Sol alt ağaca", "Sağ alt ağaca", "Queue'nun başına", "Stack'in altına"],
+    a: 2,
+    difficulty: "easy",
+    week: 8,
+    topic: "BST",
+    importance: 5,
+    explanation: "BST kuralı: küçük sol, büyük sağ."
+  },
+  {
+    q: "BST'de değerleri küçükten büyüğe veren dolaşma yöntemi hangisidir?",
+    t: "mcq",
+    o: ["Preorder", "Postorder", "Levelorder", "Inorder", "DFS only"],
+    a: 3,
+    difficulty: "medium",
+    week: 8,
+    topic: "Inorder",
+    importance: 5,
+    explanation: "BST + küçükten büyüğe sıralı sonuç deniyorsa cevap Inorder olur."
+  },
+  {
+    q: "Inorder dolaşma sırası hangisidir?",
+    t: "mcq",
+    o: ["Sol - Kök - Sağ", "Kök - Sol - Sağ", "Sol - Sağ - Kök", "Kök - Sağ - Sol", "Sağ - Kök - Sol"],
+    a: 0,
+    difficulty: "medium",
+    week: 8,
+    topic: "Traversal",
+    importance: 5,
+    explanation: "Inorder sırası Sol - Kök - Sağ şeklindedir."
+  },
+  {
+    q: "Preorder dolaşma sırası hangisidir?",
+    t: "mcq",
+    o: ["Sol - Kök - Sağ", "Kök - Sol - Sağ", "Sol - Sağ - Kök", "Sağ - Sol - Kök", "Kök - Sağ - Sol - Kök"],
+    a: 1,
+    difficulty: "medium",
+    week: 8,
+    topic: "Traversal",
+    importance: 4,
+    explanation: "Preorder'da kök önce gelir. Sıra Kök - Sol - Sağ şeklindedir."
+  },
+  {
+    q: "Postorder dolaşma sırası hangisidir?",
+    t: "mcq",
+    o: ["Kök - Sol - Sağ", "Sol - Kök - Sağ", "Sol - Sağ - Kök", "Kök - Sağ - Sol", "Sağ - Kök - Sol"],
+    a: 2,
+    difficulty: "medium",
+    week: 8,
+    topic: "Traversal",
+    importance: 4,
+    explanation: "Postorder'da kök en son gelir. Sıra Sol - Sağ - Kök şeklindedir."
+  },
+  {
+    q: "Kendini dengede tutan ikili arama ağacı hangisidir?",
+    t: "mcq",
+    o: ["Heap", "B ağacı", "Graf", "AVL", "Queue"],
+    a: 3,
+    difficulty: "medium",
+    week: 9,
+    topic: "AVL",
+    importance: 5,
+    explanation: "Soruda dengeli BST, denge faktörü veya rotasyon geçiyorsa cevap AVL olur."
+  },
+  {
+    q: "AVL ağacında denge bozulursa hangi işlem yapılır?",
+    t: "mcq",
+    o: ["Rotasyon", "Dequeue", "Push", "Binary Search", "Bubble Sort"],
+    a: 0,
+    difficulty: "medium",
+    week: 9,
+    topic: "AVL Rotasyon",
+    importance: 5,
+    explanation: "AVL'de denge bozulursa ağacı düzeltmek için rotasyon yapılır."
+  },
+  {
+    q: "Max Heap yapısında kökte hangi eleman bulunur?",
+    t: "mcq",
+    o: ["En küçük eleman", "En büyük eleman", "Son eklenen eleman", "İlk eklenen eleman", "Rastgele eleman"],
     a: 1,
     difficulty: "medium",
     week: 7,
-    topic: "Tam İkili Ağaç",
+    topic: "Heap",
     importance: 4,
-    explanation: "Full Binary Tree yapısında her düğüm ya iki çocuğa sahiptir ya da hiç çocuğu yoktur. Yani tek çocuklu düğüm bulunmaz. Bu özellik sınavlarda tanım sorusu olarak gelebilir."
+    explanation: "Max maksimum demektir. Max Heap'te kökte en büyük eleman bulunur."
   },
   {
-    q: "BST'ye 50 kökünden sonra 30 değeri eklenirse 30 nereye gider?",
+    q: "Min Heap yapısında kökte hangi eleman bulunur?",
     t: "mcq",
-    o: [
-      "50'nin sağına",
-      "50'nin üstüne",
-      "50'nin soluna",
-      "Queue'nun sonuna",
-      "Stack'in altına"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 8,
-    topic: "BST Ekleme",
-    importance: 5,
-    explanation: "BST'de küçük değerler sola, büyük değerler sağa gider. 30, 50'den küçük olduğu için 50'nin soluna yerleşir. Bu soru BST'nin temel kuralını ölçer."
-  },
-  {
-    q: "BST'ye 50 kökünden sonra 70 değeri eklenirse 70 nereye gider?",
-    t: "mcq",
-    o: [
-      "50'nin soluna",
-      "Kökün üstüne",
-      "Dizinin ilk indeksine",
-      "50'nin sağına",
-      "Stack'in en üstüne"
-    ],
-    a: 3,
-    difficulty: "easy",
-    week: 8,
-    topic: "BST Ekleme",
-    importance: 5,
-    explanation: "70, 50'den büyük olduğu için BST kuralına göre sağ alt ağaca gider. BST'de sol taraf küçük, sağ taraf büyük değerleri tutar. Bu kural tüm alt ağaçlarda da geçerlidir."
-  },
-  {
-    q: "BST'de yaprak düğüm silinirken ne yapılır?",
-    t: "mcq",
-    o: [
-      "Tüm ağaç silinir",
-      "Kök mutlaka değiştirilir",
-      "AVL rotasyonu zorunludur",
-      "Queue oluşturulur",
-      "Düğüm doğrudan silinebilir"
-    ],
-    a: 4,
-    difficulty: "medium",
-    week: 8,
-    topic: "BST Silme",
-    importance: 4,
-    explanation: "Yaprak düğümün çocuğu yoktur. Bu yüzden BST'de silinmesi en kolay durumdur. Yaprak düğüm doğrudan silinebilir; yerine çocuk bağlama gibi ek bir işlem gerekmez."
-  },
-  {
-    q: "BST'de tek çocuklu bir düğüm silinirse genel olarak ne yapılır?",
-    t: "mcq",
-    o: [
-      "Silinen düğümün yerine tek çocuğu bağlanır",
-      "Tüm sağ alt ağaç silinir",
-      "Kök her zaman NULL yapılır",
-      "Dizi sıralanır",
-      "Queue boşaltılır"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 8,
-    topic: "BST Silme",
-    importance: 4,
-    explanation: "BST'de silinecek düğümün tek çocuğu varsa, o çocuk silinen düğümün yerine bağlanır. Böylece ağaç yapısı korunur. Bu, yaprak silmeden biraz daha dikkat isteyen bir durumdur."
-  },
-  {
-    q: "BST'de iki çocuklu düğüm silinirken neden daha dikkatli davranılır?",
-    t: "mcq",
-    o: [
-      "Çünkü düğümün hiçbir bağlantısı yoktur",
-      "Çünkü yerine uygun bir değer getirilerek BST düzeni korunmalıdır",
-      "Çünkü stack boşalır",
-      "Çünkü queue doludur",
-      "Çünkü dizi boyutu sabittir"
-    ],
-    a: 1,
-    difficulty: "hard",
-    week: 8,
-    topic: "BST Silme",
-    importance: 4,
-    explanation: "İki çocuklu düğüm silinirken ağacın sol küçük sağ büyük kuralı bozulmamalıdır. Bu yüzden genellikle silinen düğümün yerine inorder successor veya predecessor getirilir. Amaç BST düzenini korumaktır."
-  },
-  {
-    q: "BST'de inorder traversal sonucu hangi özellik ortaya çıkar?",
-    t: "mcq",
-    o: [
-      "Elemanlar rastgele gelir",
-      "Kök en son silinir",
-      "Değerler küçükten büyüğe sıralı gelir",
-      "Queue FIFO çalışır",
-      "Stack LIFO çalışır"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 8,
-    topic: "Inorder Traversal",
-    importance: 5,
-    explanation: "BST'de inorder dolaşma Sol-Kök-Sağ şeklindedir. Çünkü sol küçük, kök orta, sağ büyük değerleri tutar. Bu yüzden inorder traversal sonucu değerler küçükten büyüğe sıralı olarak elde edilir."
-  },
-  {
-    q: "Aşağıdaki ağaçta kök 40, sol çocuk 20, sağ çocuk 60 ise preorder sırası nedir?",
-    t: "mcq",
-    o: [
-      "20, 40, 60",
-      "20, 60, 40",
-      "60, 40, 20",
-      "40, 20, 60",
-      "40, 60, 20"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 8,
-    topic: "Preorder Traversal",
-    importance: 4,
-    explanation: "Preorder sırası Kök-Sol-Sağ şeklindedir. Kök 40 olduğu için önce 40 yazılır. Sonra sol çocuk 20, sonra sağ çocuk 60 gelir. Bu yüzden doğru sıra 40, 20, 60 olur."
-  },
-  {
-    q: "Aşağıdaki ağaçta kök 40, sol çocuk 20, sağ çocuk 60 ise postorder sırası nedir?",
-    t: "mcq",
-    o: [
-      "20, 60, 40",
-      "40, 20, 60",
-      "20, 40, 60",
-      "60, 40, 20",
-      "40, 60, 20"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 8,
-    topic: "Postorder Traversal",
-    importance: 4,
-    explanation: "Postorder sırası Sol-Sağ-Kök şeklindedir. Önce sol çocuk 20, sonra sağ çocuk 60, en son kök 40 gezilir. Bu yüzden doğru sıra 20, 60, 40 olur."
-  },
-  {
-    q: "AVL ağacında balance factor yani denge faktörü nasıl düşünülür?",
-    t: "mcq",
-    o: [
-      "Düğümün veri tipi olarak",
-      "Sol alt ağacın yüksekliği ile sağ alt ağacın yüksekliği arasındaki fark olarak",
-      "Queue'daki eleman sayısı olarak",
-      "Dizinin indeks değeri olarak",
-      "Stack'in en üst değeri olarak"
-    ],
-    a: 1,
-    difficulty: "hard",
-    week: 9,
-    topic: "AVL Denge Faktörü",
-    importance: 4,
-    explanation: "AVL ağacında denge faktörü genellikle sol alt ağacın yüksekliği eksi sağ alt ağacın yüksekliği şeklinde düşünülür. Değer -1, 0 veya 1 ise düğüm dengeli kabul edilir. Bunun dışına çıkarsa rotasyon gerekebilir."
-  },
-  {
-    q: "AVL ağacında LL dengesizliği için genellikle hangi işlem uygulanır?",
-    t: "mcq",
-    o: [
-      "Sol rotasyon",
-      "Queue temizleme",
-      "Sağ rotasyon",
-      "Bubble Sort",
-      "Linear Search"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 9,
-    topic: "AVL Rotasyonları",
-    importance: 3,
-    explanation: "LL durumu, sol tarafın soluna ekleme yapılarak ağacın sol-heavy hale gelmesiyle oluşur. Bu durumda genellikle sağ rotasyon uygulanır. Rotasyonun amacı ağacın yüksekliğini dengelemektir."
-  },
-  {
-    q: "AVL ağacında RR dengesizliği için genellikle hangi işlem uygulanır?",
-    t: "mcq",
-    o: [
-      "Sağ rotasyon",
-      "BFS",
-      "DFS",
-      "Sol rotasyon",
-      "Selection Sort"
-    ],
-    a: 3,
-    difficulty: "hard",
-    week: 9,
-    topic: "AVL Rotasyonları",
-    importance: 3,
-    explanation: "RR durumu, sağ tarafın sağına ekleme yapılınca oluşur. Ağaç sağ tarafa doğru ağırlaşır. Bu durumda genellikle sol rotasyon yapılır ve ağaç tekrar dengelenir."
-  },
-  {
-    q: "B ağacının veritabanlarında kullanılmasının temel nedeni hangisidir?",
-    t: "mcq",
-    o: [
-      "Düğüm derecesini sıfırlaması",
-      "Disk erişimini azaltarak büyük verilerde hızlı arama sağlaması",
-      "Stack'i FIFO yapması",
-      "Queue'yu LIFO yapması",
-      "Dizileri tamamen silmesi"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 9,
-    topic: "B Ağacı Kullanımı",
-    importance: 4,
-    explanation: "B ağaçları çok dallı ve dengeli yapılardır. Büyük veri kümelerinde, özellikle veritabanı ve dosya sistemlerinde daha az disk erişimiyle arama yapılmasına yardım eder. Bu yüzden indeksleme sistemlerinde önemlidir."
-  },
-  {
-    q: "Red-Black Tree için aşağıdakilerden hangisi doğru bir özelliktir?",
-    t: "mcq",
-    o: [
-      "Her düğümün mutlaka üç çocuğu vardır",
-      "Her zaman queue mantığıyla çalışır",
-      "Düğümler kırmızı veya siyah renklidir",
-      "Tüm düğümler yapraktır",
-      "Sadece dizi sıralar"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 9,
-    topic: "Red-Black Tree",
-    importance: 3,
-    explanation: "Red-Black Tree dengeli ağaç türlerinden biridir. Her düğüm kırmızı veya siyah renklidir. Belirli renk kuralları sayesinde ağaç dengeli kalır ve işlemler verimli yapılabilir."
-  },
-  {
-    q: "Heap veri yapısında en büyük veya en küçük elemana hızlı erişilmesinin nedeni nedir?",
-    t: "mcq",
-    o: [
-      "Tüm elemanların rastgele tutulması",
-      "Elemanların graf düğümü olması",
-      "Kök düğümde öncelikli değerin tutulması",
-      "Stack'in boş olması",
-      "Queue'nun dolu olması"
-    ],
+    o: ["En büyük eleman", "Rastgele eleman", "En küçük eleman", "Son eklenen eleman", "İlk silinen eleman"],
     a: 2,
     difficulty: "medium",
     week: 7,
     topic: "Heap",
     importance: 4,
-    explanation: "Heap yapısında Max Heap ise en büyük eleman, Min Heap ise en küçük eleman kökte tutulur. Bu yüzden en öncelikli elemana erişmek hızlıdır. Heap, öncelikli kuyruk ve Heap Sort için önemlidir."
+    explanation: "Min minimum demektir. Min Heap'te kökte en küçük eleman bulunur."
   },
   {
-    q: "Linear Search hangi durumda özellikle tercih edilebilir?",
+    q: "Büyük veri ve veritabanı indekslerinde kullanılan dengeli çok dallı ağaç hangisidir?",
     t: "mcq",
-    o: [
-      "Veri mutlaka sıralıysa ve çok büyükse",
-      "Veri sıralı değilse ve basit arama gerekiyorsa",
-      "Sadece BST içinde arama yapılacaksa",
-      "Sadece heap kökünü bulmak için",
-      "Sadece AVL rotasyonu yapmak için"
-    ],
-    a: 1,
+    o: ["AVL", "Binary Tree", "Heap", "B Ağacı", "Stack"],
+    a: 3,
+    difficulty: "medium",
+    week: 9,
+    topic: "B Ağacı",
+    importance: 4,
+    explanation: "Soruda veritabanı, disk, büyük veri veya çok dallı ağaç geçiyorsa cevap B Ağacı olur."
+  },
+  {
+    q: "Verileri baştan sona tek tek kontrol eden arama algoritması hangisidir?",
+    t: "mcq",
+    o: ["Linear Search", "Binary Search", "Quick Sort", "Merge Sort", "DFS"],
+    a: 0,
     difficulty: "easy",
     week: 12,
     topic: "Linear Search",
     importance: 5,
-    explanation: "Linear Search, verinin sıralı olmasını gerektirmez. Elemanları baştan sona tek tek kontrol eder. Basit ama büyük veri için yavaş olabilir. En kötü durumda tüm elemanlara bakar ve O(n) çalışır."
+    explanation: "Soruda tek tek arama veya sıralama gerekmez geçiyorsa cevap Linear Search olur."
   },
   {
-    q: "Binary Search işleminde aranan değer ortadaki değerden küçükse ne yapılır?",
+    q: "Sıralı veride ortadan başlayarak arama yapan algoritma hangisidir?",
     t: "mcq",
-    o: [
-      "Sağ yarıya gidilir",
-      "Arama tamamen durdurulur",
-      "Sol yarıda aramaya devam edilir",
-      "Dizi rastgele karıştırılır",
-      "Stack'e push yapılır"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 12,
-    topic: "Binary Search",
-    importance: 5,
-    explanation: "Binary Search sıralı dizide çalışır. Ortadaki değer kontrol edilir. Aranan değer ortadaki değerden küçükse sağ taraf elenir ve sol yarıda aramaya devam edilir. Bu yüzden her adımda arama alanı küçülür."
-  },
-  {
-    q: "Binary Search işleminde aranan değer ortadaki değerden büyükse ne yapılır?",
-    t: "mcq",
-    o: [
-      "Sol yarıya gidilir",
-      "Queue boşaltılır",
-      "Arama hatalı kabul edilir",
-      "Sağ yarıda aramaya devam edilir",
-      "Dizi tamamen silinir"
-    ],
-    a: 3,
-    difficulty: "medium",
-    week: 12,
-    topic: "Binary Search",
-    importance: 5,
-    explanation: "Sıralı dizide ortadaki değer aranan değerden küçükse, aranan değer sağ tarafta olabilir. Bu yüzden sol taraf elenir ve sağ yarıda aramaya devam edilir. Binary Search bu mantıkla hızlı çalışır."
-  },
-  {
-    q: "Sıralı olmayan bir dizide Binary Search uygulamak neden doğru değildir?",
-    t: "mcq",
-    o: [
-      "Çünkü Binary Search sadece stack ile çalışır",
-      "Çünkü hangi yarının eleneceğine doğru karar verilemez",
-      "Çünkü Binary Search hiç karşılaştırma yapmaz",
-      "Çünkü Binary Search sadece graf üzerinde çalışır",
-      "Çünkü Binary Search sadece ağaç siler"
-    ],
+    o: ["Linear Search", "Binary Search", "Bubble Sort", "Selection Sort", "BFS"],
     a: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 12,
-    topic: "Binary Search Şartı",
+    topic: "Binary Search",
     importance: 5,
-    explanation: "Binary Search, ortadaki değere bakarak aranan değerin solda mı sağda mı olduğunu anlamaya çalışır. Bu karar ancak veri sıralıysa doğru verilebilir. Veri sıralı değilse yanlış taraf elenebilir."
+    explanation: "Soruda sıralı veri, ortadan arama veya yarıya bölme geçiyorsa cevap Binary Search olur."
   },
   {
-    q: "Bubble Sort'ta bir tur sonunda genellikle hangi eleman doğru yerine yaklaşır?",
+    q: "Binary Search algoritmasının doğru çalışması için en önemli şart hangisidir?",
     t: "mcq",
-    o: [
-      "En küçük eleman her zaman başa gelir",
-      "Ortadaki eleman silinir",
-      "En büyük eleman sona doğru gider",
-      "Kök düğüm değişir",
-      "Queue'nun front elemanı değişmez"
-    ],
+    o: ["Verinin rastgele olması", "Verinin stack içinde olması", "Verinin sıralı olması", "Verinin graf olması", "Verinin ağaç olması"],
     a: 2,
     difficulty: "medium",
+    week: 12,
+    topic: "Binary Search",
+    importance: 5,
+    explanation: "Binary Search sıralı veri ister. Veri sıralı değilse sağa mı sola mı gidileceği bilinemez."
+  },
+  {
+    q: "Yan yana elemanları karşılaştırıp büyük olanı sona taşıyan sıralama algoritması hangisidir?",
+    t: "mcq",
+    o: ["Selection Sort", "Insertion Sort", "Merge Sort", "Bubble Sort", "Quick Sort"],
+    a: 3,
+    difficulty: "easy",
     week: 10,
     topic: "Bubble Sort",
     importance: 5,
-    explanation: "Bubble Sort yan yana elemanları karşılaştırır. Büyük olan eleman sağa doğru ilerler. Bu yüzden her tur sonunda büyük elemanlardan biri dizinin sonuna yerleşir. Bu mantık kabarcık gibi sona çıkma benzetmesiyle anlatılır."
+    explanation: "Soruda yan yana karşılaştırma veya büyük eleman sona gider geçiyorsa cevap Bubble Sort olur."
   },
   {
-    q: "Selection Sort'ta her turda yapılan ana işlem nedir?",
+    q: "Her turda en küçük elemanı seçip başa koyan sıralama algoritması hangisidir?",
     t: "mcq",
-    o: [
-      "Ortadaki elemanı pivot seçmek",
-      "En küçük elemanı bulup doğru konuma koymak",
-      "Son giren elemanı çıkarmak",
-      "İlk giren elemanı çıkarmak",
-      "Düğüm derecesi hesaplamak"
-    ],
-    a: 1,
+    o: ["Selection Sort", "Bubble Sort", "Insertion Sort", "Merge Sort", "Quick Sort"],
+    a: 0,
     difficulty: "easy",
     week: 11,
     topic: "Selection Sort",
     importance: 5,
-    explanation: "Selection Sort'ta sıralanmamış bölümdeki en küçük eleman bulunur ve sıralı bölümün sonuna yerleştirilir. Yani algoritma her turda seçim yapar. Bu yüzden adı seçmeli sıralamadır."
+    explanation: "Soruda en küçüğü seç veya başa koy geçiyorsa cevap Selection Sort olur."
   },
   {
-    q: "Insertion Sort özellikle hangi durumda daha iyi performans gösterebilir?",
+    q: "Kart dizer gibi elemanı doğru yerine yerleştiren sıralama algoritması hangisidir?",
     t: "mcq",
-    o: [
-      "Veri tamamen rastgele ve çok büyükse",
-      "Veri neredeyse sıralıysa",
-      "Veri sadece graf düğümlerinden oluşuyorsa",
-      "Veri stack içinde saklanıyorsa",
-      "Veri mutlaka B ağacıysa"
-    ],
+    o: ["Bubble Sort", "Insertion Sort", "Selection Sort", "Quick Sort", "Heap Sort"],
     a: 1,
-    difficulty: "medium",
+    difficulty: "easy",
     week: 13,
     topic: "Insertion Sort",
-    importance: 4,
-    explanation: "Insertion Sort, yeni elemanı sıralı bölümde doğru yere yerleştirir. Eğer veri zaten büyük ölçüde sıralıysa az sayıda kaydırma yapılır. Bu nedenle küçük veya neredeyse sıralı verilerde iyi olabilir."
+    importance: 5,
+    explanation: "Soruda kart dizer gibi, araya yerleştir veya doğru konuma ekle geçiyorsa cevap Insertion Sort olur."
   },
   {
-    q: "Merge Sort'un temel avantajı hangisidir?",
+    q: "Pivot kullanan sıralama algoritması hangisidir?",
     t: "mcq",
-    o: [
-      "Her durumda rastgele çalışması",
-      "Büyük verilerde temel O(n²) sıralamalara göre daha verimli olabilmesi",
-      "Sadece stack'te çalışması",
-      "Verinin sıralı olmasını şart koşmaması ve hiç bellek kullanmaması",
-      "Sadece queue elemanlarını silmesi"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 13,
-    topic: "Merge Sort",
-    importance: 4,
-    explanation: "Merge Sort böl ve fethet mantığıyla çalışır. Dizi parçalara bölünür ve parçalar sıralı olarak birleştirilir. Karmaşıklığı genellikle O(n log n) kabul edildiği için büyük veri kümelerinde Bubble veya Selection Sort'a göre daha iyi olabilir."
-  },
-  {
-    q: "Quick Sort'ta pivot ne işe yarar?",
-    t: "mcq",
-    o: [
-      "Queue'nun başını gösterir",
-      "Diziyi küçükler ve büyükler olarak ayırmak için referans eleman olur",
-      "Stack'teki en üst elemanı siler",
-      "Ağacın yapraklarını sayar",
-      "Grafın komşuluk matrisini oluşturur"
-    ],
-    a: 1,
+    o: ["Merge Sort", "Bubble Sort", "Quick Sort", "Selection Sort", "Linear Search"],
+    a: 2,
     difficulty: "medium",
     week: 13,
     topic: "Quick Sort",
     importance: 4,
-    explanation: "Quick Sort'ta pivot bir referans elemandır. Diğer elemanlar pivotun küçükleri ve büyükleri olarak ayrılır. Sonra aynı işlem alt parçalar için devam eder. Pivot seçimi performansı etkileyebilir."
+    explanation: "Soruda pivot kelimesi varsa cevap Quick Sort olur."
   },
   {
-    q: "Graf teorisinde izole yani ayrık düğüm ne demektir?",
+    q: "Böl ve birleştir mantığıyla çalışan sıralama algoritması hangisidir?",
     t: "mcq",
-    o: [
-      "Hiçbir kenarla başka düğüme bağlı olmayan düğüm",
-      "Her düğüme bağlı olan düğüm",
-      "Grafın en yüksek dereceli düğümü",
-      "Queue'nun başındaki düğüm",
-      "Stack'in en üstündeki düğüm"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 14,
-    topic: "Graf Terimleri",
-    importance: 4,
-    explanation: "Ayrık veya izole düğüm, başka hiçbir düğüme bağlı olmayan düğümdür. Yani derecesi 0'dır. Graf sorularında bağlantısı olmayan tek başına duran düğüm olarak görülebilir."
-  },
-  {
-    q: "Graf teorisinde paralel kenar ne demektir?",
-    t: "mcq",
-    o: [
-      "Bir düğümün kendisine dönmesi",
-      "İki düğüm arasında birden fazla kenar bulunması",
-      "Hiç bağlantısı olmayan düğüm",
-      "Ağacın kök düğümü",
-      "Dizinin ilk elemanı"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 14,
-    topic: "Paralel Kenar",
-    importance: 4,
-    explanation: "Paralel kenar, aynı iki düğüm arasında birden fazla bağlantı olmasıdır. Basit graf yapısında paralel kenar bulunmaz. Çoklu graf ise paralel kenar içerebilir."
-  },
-  {
-    q: "Graf teorisinde döngü yani loop ne demektir?",
-    t: "mcq",
-    o: [
-      "İki farklı düğüm arasında bağlantı olması",
-      "Grafın tamamen bağlantısız olması",
-      "Bir kenarın başladığı ve bittiği düğümün aynı olması",
-      "Stack'in boş olması",
-      "Queue'nun dolu olması"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 14,
-    topic: "Graf Döngüsü",
-    importance: 4,
-    explanation: "Döngü, bir kenarın aynı düğümden başlayıp aynı düğüme dönmesidir. Yani düğüm kendisine bağlıdır. Pseudograf gibi bazı graf türlerinde döngü bulunabilir."
-  },
-  {
-    q: "Yönlü graf ile yönsüz graf arasındaki fark hangisidir?",
-    t: "mcq",
-    o: [
-      "Yönsüz graf hiç kenar içermez",
-      "Yönlü grafta kenarların gidiş yönü vardır",
-      "Yönlü graf sadece dizilerde kullanılır",
-      "Yönsüz graf sadece stack mantığıyla çalışır",
-      "İkisinde de bağlantı kavramı yoktur"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 14,
-    topic: "Graf Türleri",
-    importance: 5,
-    explanation: "Yönlü grafta bağlantıların yönü vardır. A'dan B'ye bağlantı olması B'den A'ya bağlantı olduğu anlamına gelmeyebilir. Yönsüz grafta ise bağlantı iki yönlü kabul edilir."
-  },
-  {
-    q: "Ağırlıklı graf ne demektir?",
-    t: "mcq",
-    o: [
-      "Tüm düğümlerin aynı renkte olması",
-      "Her düğümün çocuk sayısının iki olması",
-      "Kenarların üzerinde maliyet, mesafe veya ağırlık değeri bulunması",
-      "Grafın hiç kenar içermemesi",
-      "Grafın sadece stack ile gezilmesi"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 14,
-    topic: "Ağırlıklı Graf",
-    importance: 4,
-    explanation: "Ağırlıklı grafta kenarların üzerinde mesafe, maliyet, süre gibi değerler bulunur. Örneğin şehirler arası yolları gösteren grafta kenar ağırlığı kilometre olabilir. En kısa yol problemlerinde bu değerler önemlidir."
-  },
-  {
-    q: "Komşuluk matrisinde iki düğüm arasında bağlantı varsa genellikle hangi değer yazılır?",
-    t: "mcq",
-    o: ["0", "NULL", "1", "-1", "FIFO"],
-    a: 2,
-    difficulty: "easy",
-    week: 14,
-    topic: "Komşuluk Matrisi",
-    importance: 5,
-    explanation: "Komşuluk matrisinde bağlantı varsa genellikle 1 yazılır. Bağlantı yoksa 0 yazılır. Bu tablo, hangi düğümün hangi düğüme bağlı olduğunu görmeyi kolaylaştırır."
-  },
-  {
-    q: "Komşuluk matrisinde iki düğüm arasında bağlantı yoksa genellikle hangi değer yazılır?",
-    t: "mcq",
-    o: ["1", "LIFO", "FIFO", "0", "Root"],
+    o: ["Bubble Sort", "Selection Sort", "Insertion Sort", "Merge Sort", "Linear Search"],
     a: 3,
-    difficulty: "easy",
-    week: 14,
-    topic: "Komşuluk Matrisi",
-    importance: 5,
-    explanation: "Komşuluk matrisinde bağlantı yoksa 0 yazılır. Örneğin A ile C arasında kenar yoksa A satırı C sütununda 0 görülebilir. Bağlantı varsa 1 yazılır."
-  },
-  {
-    q: "BFS algoritması hangi mantıkla çalışır?",
-    t: "mcq",
-    o: [
-      "Bir yoldan sonuna kadar gidip geri dönerek",
-      "Yakındaki düğümleri önce kontrol ederek",
-      "Her zaman en büyük elemanı sona taşıyarak",
-      "Sadece kök düğümü silerek",
-      "Diziyi pivotla bölerek"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 14,
-    topic: "BFS Mantığı",
-    importance: 5,
-    explanation: "BFS, başlangıç noktasına yakın düğümleri önce kontrol eder. Önce doğrudan bağlı olanlara, sonra onların bağlı olduklarına geçer. Bu yüzden genişlik öncelikli arama denir ve Queue kullanır."
-  },
-  {
-    q: "DFS algoritması hangi mantıkla çalışır?",
-    t: "mcq",
-    o: [
-      "Yakındaki tüm düğümleri aynı anda yazdırarak",
-      "Queue'ya göre ilk geleni çıkararak",
-      "Bir yoldan gidebildiği kadar derine gidip sonra geri dönerek",
-      "Diziyi küçükten büyüğe sıralayarak",
-      "Kenar ağırlıklarını sıfırlayarak"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 14,
-    topic: "DFS Mantığı",
-    importance: 5,
-    explanation: "DFS, bir yol seçer ve o yolda gidebildiği kadar derine gider. Yol biterse geri dönüp başka yolu dener. Bu yüzden derinlik öncelikli arama denir ve Stack mantığıyla ilişkilidir."
-  },
-  {
-    q: "BFS algoritmasının Queue kullanmasının nedeni hangisidir?",
-    t: "mcq",
-    o: [
-      "En son görülen düğümü önce işlemek istemesi",
-      "İlk görülen düğümleri önce işlemek istemesi",
-      "Küçük değerleri sola koyması",
-      "Büyük değerleri sağa koyması",
-      "Pivot seçmesi"
-    ],
-    a: 1,
-    difficulty: "hard",
-    week: 14,
-    topic: "BFS Queue İlişkisi",
-    importance: 5,
-    explanation: "BFS, önce görülen düğümleri önce işler. Bu FIFO mantığıdır. Queue da FIFO çalışır. Bu yüzden BFS algoritması kuyruk veri yapısıyla anlatılır."
-  },
-  {
-    q: "DFS algoritmasının Stack kullanmasının nedeni hangisidir?",
-    t: "mcq",
-    o: [
-      "İlk görülen düğümü önce işlemek istemesi",
-      "Veriyi küçükten büyüğe sıralaması",
-      "Son gidilen noktadan geri dönme mantığına ihtiyaç duyması",
-      "Her düğümü iki çocukla sınırlaması",
-      "Komşuluk matrisinde 0 yazması"
-    ],
-    a: 2,
-    difficulty: "hard",
-    week: 14,
-    topic: "DFS Stack İlişkisi",
-    importance: 5,
-    explanation: "DFS bir yoldan derine gider. Yol bitince en son geldiği yere geri dönmesi gerekir. Bu davranış LIFO mantığına uygundur. Stack de LIFO çalışır. Bu yüzden DFS stack ile ilişkilidir."
-  },
-  {
-    q: "Hash tablo hangi mantığa dayalı bir veri yapısıdır?",
-    t: "mcq",
-    o: [
-      "Anahtar-değer eşleşmesi",
-      "Son giren ilk çıkar",
-      "İlk giren ilk çıkar",
-      "Sol küçük sağ büyük",
-      "Yan yana karşılaştırma"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 1,
-    topic: "Hash Tablosu",
-    importance: 4,
-    explanation: "Hash tablo, anahtar-değer mantığına dayanır. Örneğin öğrenci numarası anahtar, öğrencinin adı değer olabilir. Amaç doğru hash fonksiyonu ile veriye hızlı erişmektir."
-  },
-  {
-    q: "Hash tabloların temel avantajı hangisidir?",
-    t: "mcq",
-    o: [
-      "Her zaman sıralı çıktı vermesi",
-      "Veriye hızlı erişim sağlayabilmesi",
-      "Sadece ağaç olarak çalışması",
-      "Her düğümün iki çocuk alması",
-      "Sadece queue kullanması"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 1,
-    topic: "Hash Tablosu",
-    importance: 4,
-    explanation: "Hash tablolar doğru kullanıldığında anahtar üzerinden veriye hızlı erişim sağlar. Bu yüzden önbellekleme, indeksleme ve hızlı arama gereken alanlarda kullanılabilir."
-  },
-  {
-    q: "Veri yapısı seçerken en önemli ölçütlerden biri hangisidir?",
-    t: "mcq",
-    o: [
-      "Sadece değişken adının uzunluğu",
-      "Sadece ekran rengi",
-      "Yapılacak işlemlerin türü ve performans ihtiyacı",
-      "Klavye markası",
-      "Monitör çözünürlüğü"
-    ],
-    a: 2,
-    difficulty: "medium",
-    week: 1,
-    topic: "Veri Yapısı Seçimi",
-    importance: 5,
-    explanation: "Veri yapısı seçerken ne yapmak istediğine bakılır. Hızlı indeks erişimi gerekiyorsa dizi, sık ekleme-silme gerekiyorsa bağlı liste, son yapılanı geri almak gerekiyorsa stack, sıra mantığı gerekiyorsa queue tercih edilebilir."
-  },
-  {
-    q: "Arama işlemini hızlandırmak için verinin önceden sıralı olması hangi algoritma için özellikle gereklidir?",
-    t: "mcq",
-    o: [
-      "Linear Search",
-      "Binary Search",
-      "Pop",
-      "Enqueue",
-      "DFS"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 12,
-    topic: "Binary Search",
-    importance: 5,
-    explanation: "Binary Search için veri sıralı olmalıdır. Çünkü algoritma ortadaki elemana bakarak sağ mı sol mu devam edeceğine karar verir. Sıralama yoksa bu karar güvenilir olmaz."
-  },
-  {
-    q: "O(n) karmaşıklık sıfır bilen biri için en doğru nasıl açıklanır?",
-    t: "mcq",
-    o: [
-      "Eleman sayısı arttıkça işlem sayısının da yaklaşık aynı oranda artması",
-      "İşlemin her zaman tek adımda bitmesi",
-      "İşlemin hiçbir zaman yapılmaması",
-      "Her adımda verinin yarısının elenmesi",
-      "İşlemin sadece iki elemanda çalışması"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 12,
-    topic: "Zaman Karmaşıklığı",
-    importance: 5,
-    explanation: "O(n), eleman sayısı arttıkça işlem süresinin de eleman sayısıyla birlikte artması demektir. Linear Search buna örnektir. 100 eleman varsa en kötü 100 elemana bakmak gerekebilir."
-  },
-  {
-    q: "O(log n) karmaşıklık hangi mantığa daha yakındır?",
-    t: "mcq",
-    o: [
-      "Her zaman tüm elemanlara bakma",
-      "Her adımda arama alanını küçültme, genellikle yarıya indirme",
-      "Sadece ilk elemana bakma",
-      "Veriyi hiç kontrol etmeme",
-      "Elemanları rastgele silme"
-    ],
-    a: 1,
-    difficulty: "medium",
-    week: 12,
-    topic: "Zaman Karmaşıklığı",
-    importance: 5,
-    explanation: "O(log n), her adımda problem alanının ciddi şekilde küçüldüğü durumlarda görülür. Binary Search her adımda dizinin yarısını eler. Dengeli BST'de arama da benzer şekilde O(log n) olabilir."
-  },
-  {
-    q: "O(n²) karmaşıklık neden büyük veriler için genellikle kötü kabul edilir?",
-    t: "mcq",
-    o: [
-      "Çünkü işlem sayısı eleman sayısının karesi gibi hızlı büyüyebilir",
-      "Çünkü işlem her zaman tek adımda biter",
-      "Çünkü hiç karşılaştırma yapılmaz",
-      "Çünkü sadece queue kullanılır",
-      "Çünkü sadece kök düğüm bulunur"
-    ],
-    a: 0,
     difficulty: "medium",
     week: 13,
-    topic: "Zaman Karmaşıklığı",
-    importance: 5,
-    explanation: "O(n²), eleman sayısı arttıkça işlem sayısının çok hızlı artabileceğini gösterir. Örneğin 10 elemanda 100'e yakın işlem, 100 elemanda 10000'e yakın işlem gerekebilir. Bubble Sort ve Selection Sort gibi algoritmalarda sık görülür."
+    topic: "Merge Sort",
+    importance: 4,
+    explanation: "Soruda böl ve birleştir veya divide and conquer geçiyorsa cevap Merge Sort olur."
   },
   {
-    q: "Dizi, bağlı liste, stack ve queue hangi sınıfa girer?",
+    q: "Düğüm ve kenarlardan oluşan veri yapısı hangisidir?",
     t: "mcq",
-    o: [
-      "Lineer veri yapıları",
-      "Lineer olmayan veri yapıları",
-      "Sadece graf yapıları",
-      "Sadece ağaç yapıları",
-      "Sadece hash yapıları"
-    ],
+    o: ["Graf", "Stack", "Queue", "Dizi", "Bubble Sort"],
     a: 0,
     difficulty: "easy",
-    week: 1,
-    topic: "Lineer Veri Yapıları",
+    week: 14,
+    topic: "Graf",
     importance: 5,
-    explanation: "Dizi, bağlı liste, stack ve queue elemanları sıra halinde düşünülen yapılardır. Bu yüzden lineer veri yapılarıdır. Ağaç ve graf ise dallanma veya çoklu bağlantı içerdiği için lineer olmayan yapılardır."
+    explanation: "Soruda düğüm, kenar veya bağlantı geçiyorsa cevap Graf olur."
   },
   {
-    q: "Ağaç, graf ve hash tablo hangi veri yapısı grubunda değerlendirilir?",
+    q: "BFS ve DFS için doğru eşleştirme hangisidir?",
     t: "mcq",
     o: [
-      "Sadece stack yapıları",
-      "Lineer olmayan veri yapıları",
-      "Sadece queue yapıları",
-      "Sadece dizi türleri",
-      "Sadece bağlı liste türleri"
+      "BFS Stack, DFS Queue kullanır",
+      "BFS Queue, DFS Stack kullanır",
+      "BFS Dizi, DFS Bağlı liste kullanır",
+      "BFS Quick Sort, DFS Merge Sort kullanır",
+      "BFS AVL, DFS Heap kullanır"
     ],
     a: 1,
     difficulty: "medium",
-    week: 1,
-    topic: "Lineer Olmayan Veri Yapıları",
+    week: 14,
+    topic: "BFS DFS",
     importance: 5,
-    explanation: "Ağaç, graf ve hash tablo lineer olmayan veri yapıları arasında sayılır. Çünkü bu yapılarda veriler basit bir sıra halinde ilerlemez. Ağaçta hiyerarşi, grafta bağlantı ağı, hash tabloda anahtar-değer mantığı vardır."
+    explanation: "Bunu direkt ezberle: BFS = Queue, DFS = Stack."
+  },
+
+  // =========================================================
+  // ============= KODLAMA / PROGRAMLAMA TEMELLERİ ===========
+  // =========================================================
+
+  {
+    q: "Tam sayı tutmak için kullanılan veri tipi hangisidir?",
+    t: "mcq",
+    o: ["int", "string", "bool", "double", "char"],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veri Tipleri",
+    importance: 5,
+    explanation: "Soruda tam sayı, 1, 5, 100 gibi değerler varsa cevap int olur."
   },
   {
-    q: "Sık sık 'son yapılan işlemi geri al' özelliği gereken bir uygulamada hangi veri yapısı uygundur?",
+    q: "Metin veya yazı tutmak için kullanılan veri tipi hangisidir?",
     t: "mcq",
-    o: ["Queue", "Graph", "Tree", "Stack", "Hash table"],
+    o: ["int", "string", "double", "bool", "float"],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veri Tipleri",
+    importance: 5,
+    explanation: "Soruda ad, soyad, metin veya yazı geçiyorsa cevap string olur."
+  },
+  {
+    q: "Doğru veya yanlış değer tutan veri tipi hangisidir?",
+    t: "mcq",
+    o: ["int", "double", "bool", "string", "decimal"],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veri Tipleri",
+    importance: 5,
+    explanation: "Soruda true/false veya doğru/yanlış geçiyorsa cevap bool/boolean olur."
+  },
+  {
+    q: "Ondalıklı sayı tutmak için kullanılan veri tipi hangisidir?",
+    t: "mcq",
+    o: ["string", "bool", "char", "double", "void"],
+    a: 3,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veri Tipleri",
+    importance: 5,
+    explanation: "Soruda 3.14, 2.5 veya ondalıklı sayı geçiyorsa double/float düşünülür."
+  },
+  {
+    q: "Bir koşula göre işlem yaptırmak için kullanılan yapı hangisidir?",
+    t: "mcq",
+    o: ["if-else", "for", "while", "class", "return"],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Koşul Yapıları",
+    importance: 5,
+    explanation: "Soruda eğer, şart veya koşul geçiyorsa cevap if-else olur."
+  },
+  {
+    q: "Aynı değişkenin farklı sabit değerlerine göre seçim yapmak için kullanılan yapı hangisidir?",
+    t: "mcq",
+    o: ["if only", "switch-case", "while", "for", "try-catch"],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "switch-case",
+    importance: 5,
+    explanation: "Soruda menü seçimi veya farklı sabit değerler geçiyorsa switch-case uygun olur."
+  },
+  {
+    q: "Kaç kez çalışacağı belli olan tekrar işlemlerinde en çok kullanılan döngü hangisidir?",
+    t: "mcq",
+    o: ["while", "if", "for", "switch", "try"],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "for Döngüsü",
+    importance: 5,
+    explanation: "Soruda belirli sayıda tekrar veya kaç kez döneceği belli deniyorsa cevap for olur."
+  },
+  {
+    q: "Koşul doğru olduğu sürece çalışan döngü hangisidir?",
+    t: "mcq",
+    o: ["for", "switch", "if", "while", "return"],
+    a: 3,
+    difficulty: "easy",
+    week: 3,
+    topic: "while Döngüsü",
+    importance: 5,
+    explanation: "Soruda koşul sağlandıkça devam et deniyorsa cevap while olur."
+  },
+  {
+    q: "En az bir kez çalışan döngü hangisidir?",
+    t: "mcq",
+    o: ["do-while", "for", "while", "foreach", "switch"],
+    a: 0,
+    difficulty: "medium",
+    week: 3,
+    topic: "do-while",
+    importance: 4,
+    explanation: "do-while önce çalışır, sonra koşulu kontrol eder. Bu yüzden en az bir kez çalışır."
+  },
+  {
+    q: "Birden fazla değeri aynı isim altında saklayan yapı hangisidir?",
+    t: "mcq",
+    o: ["Metot", "Dizi", "Koşul", "Operatör", "Exception"],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Diziler",
+    importance: 5,
+    explanation: "Soruda birden fazla değer, aynı tür veya indeks geçiyorsa cevap Dizi olur."
+  },
+  {
+    q: "Dizideki eleman sayısını veren özellik hangisidir?",
+    t: "mcq",
+    o: ["CountOnly", "SizeText", "Length", "IndexOf", "Return"],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Length",
+    importance: 5,
+    explanation: "Soruda dizinin uzunluğu veya eleman sayısı geçiyorsa cevap Length olur."
+  },
+  {
+    q: "Bir sayının çift olup olmadığını kontrol etmek için en uygun ifade hangisidir?",
+    t: "mcq",
+    o: ["sayi + 2 == 0", "sayi / 2 == 0", "sayi * 2 == 0", "sayi % 2 == 0", "sayi == true"],
     a: 3,
     difficulty: "easy",
     week: 4,
-    topic: "Stack Kullanım Alanı",
+    topic: "Tek Çift Kontrolü",
     importance: 5,
-    explanation: "Geri alma işleminde en son yapılan işlem ilk geri alınır. Bu son giren ilk çıkar mantığıdır. Bu yüzden Undo/Redo gibi özelliklerde stack kullanılır."
+    explanation: "% kalan operatörüdür. Bir sayı 2'ye bölününce kalan 0 ise sayı çifttir."
   },
   {
-    q: "Yazıcıya gönderilen belgelerin sırayla yazdırılması hangi veri yapısına benzer?",
+    q: "% operatörü ne işe yarar?",
     t: "mcq",
-    o: ["Stack", "Tree", "Graph", "BST", "Queue"],
-    a: 4,
-    difficulty: "easy",
-    week: 5,
-    topic: "Queue Kullanım Alanı",
-    importance: 5,
-    explanation: "Yazıcı kuyruğunda ilk gönderilen belge genellikle önce yazdırılır. Bu ilk giren ilk çıkar mantığıdır. Bu yüzden yazıcı sırası queue veri yapısına benzer."
-  },
-  {
-    q: "Bir dosya sistemi klasör-alt klasör ilişkisiyle düşünülürse hangi veri yapısına benzer?",
-    t: "mcq",
-    o: [
-      "Ağaç",
-      "Stack",
-      "Queue",
-      "Bubble Sort",
-      "Linear Search"
-    ],
+    o: ["Bölmeden kalanı verir", "Toplama yapar", "Metin birleştirir", "Koşul başlatır", "Metot döndürür"],
     a: 0,
     difficulty: "easy",
-    week: 6,
-    topic: "Ağaç Kullanım Alanı",
+    week: 4,
+    topic: "Mod Operatörü",
     importance: 5,
-    explanation: "Dosya sisteminde klasörlerin içinde alt klasörler bulunur. Bu üst-alt ilişki ağaç yapısına benzer. En üst klasör kök gibi, alt klasörler çocuk düğümler gibi düşünülebilir."
+    explanation: "% operatörü bölme işleminden kalanı verir. Tek/çift ve bölünebilme sorularında kullanılır."
   },
   {
-    q: "Şehirler ve şehirler arasındaki yollar hangi veri yapısıyla modellenebilir?",
+    q: "Eşitlik karşılaştırması yapmak için kullanılan operatör hangisidir?",
     t: "mcq",
-    o: [
-      "Sadece stack",
-      "Sadece queue",
-      "Graf",
-      "Sadece dizi",
-      "Sadece bubble sort"
-    ],
+    o: ["=", "==", "+=", "!=", "&&"],
+    a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "Karşılaştırma Operatörleri",
+    importance: 5,
+    explanation: "Tek = atama yapar. Çift == eşitlik kontrolü yapar."
+  },
+  {
+    q: "Bir değişkene değer atamak için kullanılan operatör hangisidir?",
+    t: "mcq",
+    o: ["==", "!=", "=", "&&", "||"],
     a: 2,
     difficulty: "easy",
-    week: 14,
-    topic: "Graf Kullanım Alanı",
+    week: 2,
+    topic: "Atama Operatörü",
     importance: 5,
-    explanation: "Şehirler düğüm, şehirler arasındaki yollar kenar olarak düşünülebilir. Bu yüzden şehir-yol ilişkileri graf veri yapısıyla modellenebilir. Harita ve yol bulma algoritmaları graf mantığını kullanır."
+    explanation: "sayi = 5 ifadesi, sayi değişkenine 5 değerini atar."
+  },
+  {
+    q: "İki şartın da doğru olması gerektiğinde kullanılan mantıksal operatör hangisidir?",
+    t: "mcq",
+    o: ["||", "==", "!=", "&&", "%"],
+    a: 3,
+    difficulty: "medium",
+    week: 2,
+    topic: "Mantıksal Operatörler",
+    importance: 4,
+    explanation: "&& operatörü ve anlamına gelir. İki koşulun da doğru olması gerekir."
+  },
+  {
+    q: "Şartlardan en az birinin doğru olması yeterliyse kullanılan mantıksal operatör hangisidir?",
+    t: "mcq",
+    o: ["||", "&&", "==", "%", "="],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Mantıksal Operatörler",
+    importance: 4,
+    explanation: "|| operatörü veya anlamına gelir. Koşullardan biri doğruysa sonuç doğru olur."
+  },
+  {
+    q: "Geriye değer döndürmeyen metot hangi anahtar kelimeyle tanımlanır?",
+    t: "mcq",
+    o: ["int", "void", "string", "bool", "return"],
+    a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "Metotlar",
+    importance: 5,
+    explanation: "Soruda geriye değer döndürmez deniyorsa cevap void olur."
+  },
+  {
+    q: "Geriye tam sayı döndüren metot hangi dönüş tipiyle tanımlanır?",
+    t: "mcq",
+    o: ["void", "string", "int", "bool", "object"],
+    a: 2,
+    difficulty: "medium",
+    week: 8,
+    topic: "Metotlar",
+    importance: 5,
+    explanation: "Metot geriye tam sayı döndürecekse dönüş tipi int olmalıdır."
+  },
+  {
+    q: "Metoda dışarıdan gönderilen değere ne denir?",
+    t: "mcq",
+    o: ["Döngü", "Operatör", "Sabit", "Parametre", "Exception"],
+    a: 3,
+    difficulty: "medium",
+    week: 8,
+    topic: "Parametre",
+    importance: 5,
+    explanation: "Soruda metoda verilen değer veya dışarıdan gelen bilgi geçiyorsa cevap parametre olur."
+  },
+  {
+    q: "Metottan sonucu geri döndürmek için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["return", "break", "continue", "switch", "catch"],
+    a: 0,
+    difficulty: "easy",
+    week: 8,
+    topic: "return",
+    importance: 5,
+    explanation: "return, metottan sonucu geri göndermek için kullanılır."
+  },
+  {
+    q: "Hata yakalamak ve programın çökmesini engellemek için kullanılan yapı hangisidir?",
+    t: "mcq",
+    o: ["if-else", "try-catch", "switch", "for", "return"],
+    a: 1,
+    difficulty: "medium",
+    week: 12,
+    topic: "try-catch",
+    importance: 5,
+    explanation: "Soruda hata yakalama veya program çökmesin geçiyorsa cevap try-catch olur."
+  },
+  {
+    q: "Genel hata sınıfı hangisidir?",
+    t: "mcq",
+    o: ["FormatException", "Timer", "Exception", "DialogResult", "Convert"],
+    a: 2,
+    difficulty: "medium",
+    week: 12,
+    topic: "Exception",
+    importance: 5,
+    explanation: "Exception genel hata sınıfıdır. Farklı hata türlerini genel olarak yakalamak için kullanılabilir."
+  },
+  {
+    q: "Metin olarak gelen bir değeri tam sayıya çevirmek için hangi yapı kullanılır?",
+    t: "mcq",
+    o: ["ToString()", "Math.Sqrt()", "Length", "Convert.ToInt32()", "Math.Abs()"],
+    a: 3,
+    difficulty: "medium",
+    week: 3,
+    topic: "Veri Dönüştürme",
+    importance: 5,
+    explanation: "TextBox gibi alanlardan gelen değer metindir. Tam sayı gerekiyorsa Convert.ToInt32 kullanılır."
+  },
+  {
+    q: "Metin olarak gelen ondalıklı bir değeri sayıya çevirmek için hangi yapı kullanılır?",
+    t: "mcq",
+    o: ["Convert.ToDouble()", "ToString()", "Length", "Clear()", "ShowDialog()"],
+    a: 0,
+    difficulty: "medium",
+    week: 3,
+    topic: "Veri Dönüştürme",
+    importance: 5,
+    explanation: "Ondalıklı sayı gerekiyorsa Convert.ToDouble kullanılır."
+  },
+  {
+    q: "Bir değeri metne çevirmek için kullanılan metot hangisidir?",
+    t: "mcq",
+    o: ["ToInt32()", "ToString()", "Clear()", "Add()", "ShowDialog()"],
+    a: 1,
+    difficulty: "easy",
+    week: 3,
+    topic: "ToString",
+    importance: 5,
+    explanation: "Label veya Text alanına sayı yazdırırken değer genellikle ToString ile metne çevrilir."
+  },
+  {
+    q: "Bir sayının karekökünü almak için kullanılan Math metodu hangisidir?",
+    t: "mcq",
+    o: ["Math.Pow()", "Math.Abs()", "Math.Sqrt()", "Math.Round()", "Math.Min()"],
+    a: 2,
+    difficulty: "easy",
+    week: 2,
+    topic: "Math.Sqrt",
+    importance: 4,
+    explanation: "Soruda karekök geçiyorsa cevap Math.Sqrt olur."
+  },
+  {
+    q: "Bir sayının mutlak değerini almak için kullanılan Math metodu hangisidir?",
+    t: "mcq",
+    o: ["Math.Sqrt()", "Math.Pow()", "Math.Round()", "Math.Abs()", "Math.Max()"],
+    a: 3,
+    difficulty: "medium",
+    week: 2,
+    topic: "Math.Abs",
+    importance: 4,
+    explanation: "Soruda mutlak değer veya negatif sayıyı pozitife çevirme geçiyorsa cevap Math.Abs olur."
+  },
+  {
+    q: "Üs alma işlemi için kullanılan Math metodu hangisidir?",
+    t: "mcq",
+    o: ["Math.Pow()", "Math.Abs()", "Math.Sqrt()", "Math.Round()", "Math.Min()"],
+    a: 0,
+    difficulty: "medium",
+    week: 2,
+    topic: "Math.Pow",
+    importance: 4,
+    explanation: "Soruda üs alma veya karesini alma geçiyorsa Math.Pow kullanılır."
+  },
+  {
+    q: "Bir işlemi tekrar tekrar kullanmak için yazılan kod bloğuna ne denir?",
+    t: "mcq",
+    o: ["Değişken", "Metot / Fonksiyon", "Operatör", "Koşul", "Hata"],
+    a: 1,
+    difficulty: "easy",
+    week: 8,
+    topic: "Metot",
+    importance: 5,
+    explanation: "Soruda tekrar kullanılabilir kod bloğu veya belirli işi yapan parça geçiyorsa cevap metot/fonksiyon olur."
   }
 ];
