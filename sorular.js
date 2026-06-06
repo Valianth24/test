@@ -1,66 +1,906 @@
-// 4 Ders Final Seti – Ek 80 Soruluk Soru Bankası
-// Dersler: Görsel Programlama, Mobil Programlama, İnternet Programlama, Veritabanı Yönetim Sistemleri
-// Format: window.questionBank = [ { q, t, o, a, difficulty, week, topic, importance, explanation }, ... ]
-// Not: a = doğru şık index’i (0=A, 1=B, 2=C, 3=D, 4=E)
+
 
 window.questionBank = [
   // =========================================================
-  // ==== GÖRSEL PROGRAMLAMA – EK 20 FİNAL SORUSU ============
+  // ==== GÖRSEL PROGRAMLAMA – 20 FİNAL SORUSU ================
   // =========================================================
 
   {
-    q: "Windows Forms'ta bir kontrolün ekranda görünüp görünmeyeceğini belirleyen özellik hangisidir?",
+    q: "Windows Forms uygulamasında kullanıcıya bilgi göstermek için en uygun kontrol hangisidir?",
     t: "mcq",
-    o: ["Visible", "Text", "Name", "Items", "Interval"],
+    o: ["Label", "TextBox", "Button", "Timer", "OpenFileDialog"],
     a: 0,
     difficulty: "easy",
     week: 1,
-    topic: "Kontrol Özellikleri",
+    topic: "Görsel Programlama / Kontroller",
     importance: 5,
-    explanation: "Visible, bir kontrolün görünür olup olmadığını belirler. true görünür, false gizli anlamına gelir."
+    explanation: "Label, kullanıcıya yazı veya sonuç göstermek için kullanılır. TextBox veri almak, Button işlem başlatmak içindir."
   },
   {
-    q: "Windows Forms'ta bir kontrolü kod içinde tanımak için kullanılan kimlik/ad özelliği hangisidir?",
+    q: "Kullanıcıdan metin veya sayı girişi almak için hangi Windows Forms kontrolü kullanılır?",
     t: "mcq",
-    o: ["Text", "Name", "BackColor", "Font", "Enabled"],
+    o: ["Label", "TextBox", "PictureBox", "ProgressBar", "Panel"],
     a: 1,
     difficulty: "easy",
     week: 1,
-    topic: "Name Özelliği",
+    topic: "Görsel Programlama / TextBox",
     importance: 5,
-    explanation: "Name, kontrolün kod tarafındaki adıdır. Örneğin txtAd, btnKaydet gibi isimler kodda bu kontrolü çağırmak için kullanılır."
+    explanation: "TextBox, kullanıcının klavyeden veri girdiği kutudur. Sayı da girilebilir ama işlem yapmadan önce genellikle dönüştürmek gerekir."
   },
   {
-    q: "TextBox içindeki yazı değiştiğinde çalışan olay genellikle hangisidir?",
+    q: "Button kontrolünde kullanıcı tıkladığında çalışan olay hangisidir?",
     t: "mcq",
-    o: ["Click", "Load", "TextChanged", "Tick", "Shown"],
+    o: ["Load", "TextChanged", "Click", "SelectedIndexChanged", "Tick"],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Görsel Programlama / Olaylar",
+    importance: 5,
+    explanation: "Click olayı, butona tıklanınca çalışır. Olay, kullanıcının yaptığı hareket sonucunda çalışan kod bölümüdür."
+  },
+  {
+    q: "C# dilinde tam sayı saklamak için hangi veri tipi kullanılır?",
+    t: "mcq",
+    o: ["string", "bool", "double", "int", "char"],
+    a: 3,
+    difficulty: "easy",
+    week: 2,
+    topic: "Görsel Programlama / Veri Tipleri",
+    importance: 5,
+    explanation: "int, tam sayı veri tipidir. 10, 25, -3 gibi ondalıksız sayıları saklar."
+  },
+  {
+    q: "C# dilinde doğru/yanlış değer tutan veri tipi hangisidir?",
+    t: "mcq",
+    o: ["string", "int", "float", "char", "bool"],
+    a: 4,
+    difficulty: "easy",
+    week: 2,
+    topic: "Görsel Programlama / Boolean",
+    importance: 5,
+    explanation: "bool veri tipi true veya false değerini tutar. Koşul yapılarında çok kullanılır."
+  },
+  {
+    q: "C# dilinde '=' operatörü ne işe yarar?",
+    t: "mcq",
+    o: ["Atama yapar", "Eşit mi diye karşılaştırır", "Bölme yapar", "Metni siler", "Döngüyü durdurur"],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Görsel Programlama / Operatörler",
+    importance: 5,
+    explanation: "'=' atama operatörüdür. Örneğin x = 5; ifadesi x değişkenine 5 değerini verir."
+  },
+  {
+    q: "C# dilinde '==' operatörü ne için kullanılır?",
+    t: "mcq",
+    o: ["Değer atamak için", "Eşitlik karşılaştırması yapmak için", "Çarpma yapmak için", "Dosya açmak için", "Form kapatmak için"],
+    a: 1,
+    difficulty: "easy",
+    week: 2,
+    topic: "Görsel Programlama / Karşılaştırma",
+    importance: 5,
+    explanation: "'==' iki değerin eşit olup olmadığını kontrol eder. Sonuç true veya false olur."
+  },
+  {
+    q: "MessageBox.Show() metodu ne işe yarar?",
+    t: "mcq",
+    o: ["Dosya siler", "Form rengini değiştirir", "Ekrana mesaj kutusu çıkarır", "Dizi oluşturur", "Veritabanı açar"],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "Görsel Programlama / MessageBox",
+    importance: 5,
+    explanation: "MessageBox.Show(), kullanıcıya küçük bir mesaj penceresi gösterir. Uyarı, bilgi veya hata mesajlarında kullanılır."
+  },
+  {
+    q: "Bir öğrencinin notu 50 ve üzeriyse 'Geçti', değilse 'Kaldı' yazdırmak için en uygun yapı hangisidir?",
+    t: "mcq",
+    o: ["for", "while", "foreach", "if-else", "try-finally"],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "Görsel Programlama / if-else",
+    importance: 5,
+    explanation: "İki ihtimal varsa if-else kullanılır. Koşul doğruysa if, yanlışsa else bloğu çalışır."
+  },
+  {
+    q: "Aynı değişkenin 1, 2, 3 gibi farklı sabit değerlerine göre işlem yapılacaksa hangi yapı uygundur?",
+    t: "mcq",
+    o: ["if only", "for", "while", "try-catch", "switch-case"],
+    a: 4,
+    difficulty: "medium",
+    week: 5,
+    topic: "Görsel Programlama / switch-case",
+    importance: 5,
+    explanation: "switch-case, aynı değişkenin farklı sabit değerlerine göre işlem yaptırır. Menü seçimlerinde çok kullanılır."
+  },
+  {
+    q: "Kaç kez çalışacağı belli olan tekrar işlemlerinde hangi döngü daha uygundur?",
+    t: "mcq",
+    o: ["for", "while", "do-while", "switch", "try"],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "Görsel Programlama / for",
+    importance: 5,
+    explanation: "for döngüsü başlangıç, koşul ve artış bölümleriyle belirli sayıda tekrar yapar."
+  },
+  {
+    q: "Koşul doğru olduğu sürece çalışan döngü hangisidir?",
+    t: "mcq",
+    o: ["switch", "while", "if", "catch", "return"],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "Görsel Programlama / while",
+    importance: 5,
+    explanation: "while döngüsü koşul doğru olduğu sürece çalışır. Koşul baştan yanlışsa hiç çalışmayabilir."
+  },
+  {
+    q: "Bir dizi veya koleksiyonun elemanlarını tek tek gezmek için hangi döngü kullanılır?",
+    t: "mcq",
+    o: ["if", "switch", "foreach", "try", "case"],
+    a: 2,
+    difficulty: "easy",
+    week: 7,
+    topic: "Görsel Programlama / foreach",
+    importance: 5,
+    explanation: "foreach, dizi veya liste içindeki elemanları sırayla dolaşmak için kullanılır."
+  },
+  {
+    q: "Geriye değer döndürmeyen metot hangi anahtar kelimeyle tanımlanır?",
+    t: "mcq",
+    o: ["int", "string", "return", "void", "bool"],
+    a: 3,
+    difficulty: "medium",
+    week: 8,
+    topic: "Görsel Programlama / Metotlar",
+    importance: 5,
+    explanation: "void, metodun geriye değer döndürmediğini gösterir. Sadece işlem yapar."
+  },
+  {
+    q: "Bir metodun dışarıdan aldığı değerlere ne denir?",
+    t: "mcq",
+    o: ["Değişken tipi", "Form", "Kontrol", "Olay", "Parametre"],
+    a: 4,
+    difficulty: "medium",
+    week: 8,
+    topic: "Görsel Programlama / Parametre",
+    importance: 5,
+    explanation: "Parametre, metoda dışarıdan gönderilen değerdir. Örneğin Topla(int a, int b) metodunda a ve b parametredir."
+  },
+  {
+    q: "Aynı türden birden fazla veriyi tek isim altında saklayan yapı hangisidir?",
+    t: "mcq",
+    o: ["Dizi", "Button", "Label", "Form", "Exception"],
+    a: 0,
+    difficulty: "easy",
+    week: 11,
+    topic: "Görsel Programlama / Diziler",
+    importance: 5,
+    explanation: "Dizi, aynı türden birden fazla veriyi tek isim altında tutar. Örneğin int[] sayilar = {1,2,3};"
+  },
+  {
+    q: "C# Windows Forms'ta sıfıra bölme hatasını yakalamak için hangi özel hata sınıfı kullanılır?",
+    t: "mcq",
+    o: ["FormatException", "DivideByZeroException", "FileNotFoundException", "IndexOutOfRangeException", "NullReferenceException"],
+    a: 1,
+    difficulty: "medium",
+    week: 12,
+    topic: "Görsel Programlama / Hata Yakalama",
+    importance: 5,
+    explanation: "DivideByZeroException, bir sayının sıfıra bölünmesi durumunda oluşan hatadır."
+  },
+  {
+    q: "Kullanıcı sayı yerine harf girerse ve sayıya çevrilemezse genellikle hangi hata oluşur?",
+    t: "mcq",
+    o: ["DivideByZeroException", "IOException", "FormatException", "OverflowException", "ArgumentException"],
     a: 2,
     difficulty: "medium",
-    week: 3,
-    topic: "TextChanged Olayı",
-    importance: 4,
-    explanation: "TextChanged, TextBox içindeki metin değiştiğinde tetiklenir. Anlık arama veya karakter sayma işlemlerinde kullanılabilir."
+    week: 12,
+    topic: "Görsel Programlama / FormatException",
+    importance: 5,
+    explanation: "FormatException, veri beklenen biçime çevrilemediğinde oluşur. Örneğin 'abc' değerini int'e çevirmek hata verir."
   },
   {
-    q: "Bir form ilk açılırken çalışan olay hangisidir?",
+    q: "try-catch-finally yapısında hata olsa da olmasa da çalışan blok hangisidir?",
     t: "mcq",
-    o: ["Click", "Tick", "KeyDown", "Load", "Clear"],
+    o: ["try", "catch", "throw", "finally", "return"],
+    a: 3,
+    difficulty: "easy",
+    week: 13,
+    topic: "Görsel Programlama / finally",
+    importance: 5,
+    explanation: "finally bloğu her durumda çalışır. Dosya kapatma veya işlem sonu mesajı verme için kullanılabilir."
+  },
+  {
+    q: "ListBox içindeki tüm elemanları temizlemek için kullanılan ifade hangisidir?",
+    t: "mcq",
+    o: ["listBox1.Items.Add();", "listBox1.Text.Clear();", "listBox1.SelectedIndex = 0;", "listBox1.Hide();", "listBox1.Items.Clear();"],
+    a: 4,
+    difficulty: "medium",
+    week: 3,
+    topic: "Görsel Programlama / ListBox",
+    importance: 4,
+    explanation: "Items.Clear(), ListBox içindeki bütün elemanları temizler. Items, listedeki eleman koleksiyonudur."
+  },
+
+  // =========================================================
+  // ==== MOBİL PROGRAMLAMA – 20 FİNAL SORUSU =================
+  // =========================================================
+
+  {
+    q: "Mobil programlama en doğru şekilde neyi ifade eder?",
+    t: "mcq",
+    o: ["Taşınabilir cihazlar için uygulama geliştirmeyi", "Sadece masaüstü program yazmayı", "Sadece veritabanı kurmayı", "Sadece web sayfası renklendirmeyi", "Sadece ağ kablosu kurmayı"],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Programlama / Giriş",
+    importance: 5,
+    explanation: "Mobil programlama, telefon, tablet ve giyilebilir cihaz gibi taşınabilir cihazlarda çalışan uygulamalar geliştirmektir."
+  },
+  {
+    q: "Mobil cihazlarda düşük güç tüketimi ve verimlilik için yaygın kullanılan işlemci mimarisi hangisidir?",
+    t: "mcq",
+    o: ["x86 Server", "ARM/RISC", "CISC only", "Mainframe", "Quantum"],
+    a: 1,
+    difficulty: "medium",
+    week: 1,
+    topic: "Mobil Programlama / Donanım",
+    importance: 5,
+    explanation: "ARM tabanlı RISC mimarisi, düşük güç tüketimi ve iyi performans dengesi nedeniyle mobil cihazlarda yaygındır."
+  },
+  {
+    q: "1992 yılında tanıtılan ve ilk gerçek akıllı telefon hamlesi kabul edilen cihaz hangisidir?",
+    t: "mcq",
+    o: ["iPhone", "T-Mobile G1", "IBM Simon", "Nokia 3310", "Motorola Razr"],
+    a: 2,
+    difficulty: "medium",
+    week: 1,
+    topic: "Mobil Programlama / Tarihçe",
+    importance: 4,
+    explanation: "IBM Simon; dokunmatik ekran, e-posta, faks ve uygulama özellikleriyle ilk gerçek akıllı telefon hamlesi olarak kabul edilir."
+  },
+  {
+    q: "5G teknolojisinin en belirgin özelliklerinden biri hangisidir?",
+    t: "mcq",
+    o: ["Sadece analog ses", "Sadece SMS", "Sadece MMS", "Ultra düşük gecikme", "Sadece kablolu bağlantı"],
     a: 3,
     difficulty: "easy",
     week: 1,
-    topic: "Form Load",
+    topic: "Mobil Programlama / 5G",
     importance: 5,
-    explanation: "Form Load olayı, form ekrana yüklenirken çalışır. Başlangıç değerleri genellikle burada atanır."
+    explanation: "5G; yüksek hız, düşük gecikme, IoT, AR/VR ve çok sayıda cihaz bağlantısı ile öne çıkar."
   },
   {
-    q: "Bir kontrolün kullanıcı tarafından tıklanabilir/aktif olup olmadığını belirleyen özellik hangisidir?",
+    q: "Android için resmi/yerel geliştirmede en yaygın kullanılan diller hangileridir?",
     t: "mcq",
-    o: ["Text", "Name", "Items", "Visible", "Enabled"],
+    o: ["Swift ve Objective-C", "PHP ve SQL", "HTML ve CSS", "Ruby ve Perl", "Kotlin ve Java"],
+    a: 4,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Programlama / Native",
+    importance: 5,
+    explanation: "Android native geliştirmede Kotlin ve Java kullanılır. Native, platformun resmi araçlarıyla geliştirme demektir."
+  },
+  {
+    q: "iOS için native geliştirmede kullanılan temel modern dil hangisidir?",
+    t: "mcq",
+    o: ["Swift", "Kotlin", "PHP", "SQL", "C# Windows Forms"],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Programlama / iOS",
+    importance: 5,
+    explanation: "Swift, Apple ekosisteminde iOS/macOS uygulama geliştirmek için kullanılan modern dildir."
+  },
+  {
+    q: "Tek kod tabanıyla Android ve iOS uygulaması geliştirme yaklaşımı hangisidir?",
+    t: "mcq",
+    o: ["Native", "Cross-platform", "Kernel mode", "Database first", "Console app"],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Programlama / Cross-platform",
+    importance: 5,
+    explanation: "Cross-platform, tek kod tabanından birden fazla platforma uygulama çıkarmaya çalışır. Flutter ve React Native örnektir."
+  },
+  {
+    q: "HTML, CSS ve JavaScript ile geliştirilip WebView içinde çalışan mobil uygulama yaklaşımı hangisidir?",
+    t: "mcq",
+    o: ["Native", "SDK", "Hybrid", "Emulator", "Gradle"],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Mobil Programlama / Hybrid",
+    importance: 5,
+    explanation: "Hybrid uygulama web teknolojileriyle yapılır ve mobil cihazda WebView adlı yerel kapsayıcı içinde çalışır."
+  },
+  {
+    q: "SDK açılımı hangisidir?",
+    t: "mcq",
+    o: ["System Data Kernel", "Software Design Key", "Secure Device Kit", "Software Development Kit", "Server Debug Kernel"],
+    a: 3,
+    difficulty: "easy",
+    week: 3,
+    topic: "Mobil Programlama / SDK",
+    importance: 5,
+    explanation: "SDK, Software Development Kit demektir. Geliştirme araçları, API’ler, kütüphaneler, emülatör ve dokümantasyon içerir."
+  },
+  {
+    q: "API en doğru şekilde neyi ifade eder?",
+    t: "mcq",
+    o: ["Uygulamanın mağaza ikonu", "Sadece fiziksel cihaz", "Sadece ekran tasarımı", "Sadece RAM alanı", "Yazılımların iletişim kurmasını sağlayan arayüz/sözleşme"],
+    a: 4,
+    difficulty: "medium",
+    week: 3,
+    topic: "Mobil Programlama / API",
+    importance: 5,
+    explanation: "API, Application Programming Interface demektir. Yazılımların birbirleriyle hangi kurallarla konuşacağını belirler."
+  },
+  {
+    q: "Android Studio hangi tür yazılımdır?",
+    t: "mcq",
+    o: ["IDE", "Veritabanı motoru", "Mobil işletim sistemi", "Ağ protokolü", "Dosya sıkıştırıcı"],
+    a: 0,
+    difficulty: "easy",
+    week: 3,
+    topic: "Mobil Programlama / Android Studio",
+    importance: 5,
+    explanation: "Android Studio bir IDE’dir. Kod yazma, derleme, hata ayıklama ve emülatör çalıştırma gibi araçları bir arada sunar."
+  },
+  {
+    q: "Android Activity yaşam döngüsünde uygulama ilk oluşturulduğunda çalışan metot hangisidir?",
+    t: "mcq",
+    o: ["onPause()", "onCreate()", "onDestroy()", "onStop()", "onRestart()"],
+    a: 1,
+    difficulty: "medium",
+    week: 1,
+    topic: "Mobil Programlama / Activity Lifecycle",
+    importance: 5,
+    explanation: "onCreate(), Activity ilk oluşturulduğunda çalışır. Arayüz genellikle burada hazırlanır."
+  },
+  {
+    q: "Android'de uygulama ön planda ve kullanıcıyla etkileşimdeyken hangi yaşam döngüsü metodu aktif durumdadır?",
+    t: "mcq",
+    o: ["onStop()", "onDestroy()", "onResume()", "onCreate()", "onPause()"],
+    a: 2,
+    difficulty: "medium",
+    week: 1,
+    topic: "Mobil Programlama / onResume",
+    importance: 5,
+    explanation: "onResume(), uygulamanın ön planda olduğu ve kullanıcı etkileşimine hazır olduğu durumdur."
+  },
+  {
+    q: "Android'de kullanıcıya görünen ekranı temsil eden bileşen hangisidir?",
+    t: "mcq",
+    o: ["Service", "Broadcast Receiver", "Content Provider", "Activity", "Manifest"],
+    a: 3,
+    difficulty: "easy",
+    week: 3,
+    topic: "Mobil Programlama / Android Bileşenleri",
+    importance: 5,
+    explanation: "Activity, Android uygulamasında kullanıcıya gösterilen ekranı temsil eder."
+  },
+  {
+    q: "Android'de arka planda çalışan işlemler için kullanılan bileşen hangisidir?",
+    t: "mcq",
+    o: ["Activity", "Intent", "View", "Layout", "Service"],
+    a: 4,
+    difficulty: "easy",
+    week: 3,
+    topic: "Mobil Programlama / Service",
+    importance: 5,
+    explanation: "Service, kullanıcı arayüzü olmadan arka planda çalışan işlemler için kullanılır."
+  },
+  {
+    q: "Ekran döndürme, adım sayma ve hareket algılama için kullanılan sensör hangisidir?",
+    t: "mcq",
+    o: ["İvmeölçer", "Barometre", "Işık sensörü", "NFC", "Mikrofon"],
+    a: 0,
+    difficulty: "easy",
+    week: 12,
+    topic: "Mobil Programlama / Sensörler",
+    importance: 5,
+    explanation: "İvmeölçer, cihazın 3 eksendeki ivmesini ölçer. Ekran yönü ve hareket algılamada kullanılır."
+  },
+  {
+    q: "Dönüş hareketini ve açısal hızı algılayan sensör hangisidir?",
+    t: "mcq",
+    o: ["GPS", "Jiroskop", "Yakınlık sensörü", "Işık sensörü", "Barometre"],
+    a: 1,
+    difficulty: "medium",
+    week: 12,
+    topic: "Mobil Programlama / Jiroskop",
+    importance: 4,
+    explanation: "Jiroskop, cihazın dönüş hareketlerini algılar. Oyun, AR/VR ve kamera stabilizasyonunda kullanılır."
+  },
+  {
+    q: "Android'de hassas konum izni hangisidir?",
+    t: "mcq",
+    o: ["ACCESS_WIFI_STATE", "INTERNET", "ACCESS_FINE_LOCATION", "VIBRATE", "CAMERA"],
+    a: 2,
+    difficulty: "medium",
+    week: 10,
+    topic: "Mobil Programlama / Konum İzinleri",
+    importance: 5,
+    explanation: "ACCESS_FINE_LOCATION, GPS gibi hassas konum kaynaklarına erişmek için kullanılır."
+  },
+  {
+    q: "Android uygulamasını Google Play'e yüklemek için modern dağıtım paketi genellikle hangisidir?",
+    t: "mcq",
+    o: ["ZIP", "EXE", "DLL", "AAB", "DOCX"],
+    a: 3,
+    difficulty: "medium",
+    week: 14,
+    topic: "Mobil Programlama / Yayınlama",
+    importance: 5,
+    explanation: "AAB, Android App Bundle demektir. Google Play'e modern Android uygulama dağıtımında kullanılır."
+  },
+  {
+    q: "To-Do uygulamasında görevleri listelemek için kullanılan Android arayüz bileşeni hangisidir?",
+    t: "mcq",
+    o: ["Toast", "Button", "EditText", "ImageView", "ListView"],
+    a: 4,
+    difficulty: "easy",
+    week: 14,
+    topic: "Mobil Programlama / To-Do App",
+    importance: 4,
+    explanation: "ListView, verileri liste halinde göstermek için kullanılır. To-Do uygulamasında görevler burada gösterilebilir."
+  },
+
+  // =========================================================
+  // ==== İNTERNET PROGRAMLAMA – 20 FİNAL SORUSU ==============
+  // =========================================================
+
+  {
+    q: "PHP'de tek bir koşul doğruysa kod çalıştırmak için hangi yapı kullanılır?",
+    t: "mcq",
+    o: ["if", "for", "while", "echo", "switch only"],
+    a: 0,
+    difficulty: "easy",
+    week: 3,
+    topic: "İnternet Programlama / if",
+    importance: 5,
+    explanation: "if, koşul doğruysa içindeki kodu çalıştırır. Koşul yanlışsa çalıştırmaz."
+  },
+  {
+    q: "PHP'de koşul yanlış olduğunda çalışacak alternatif blok hangisidir?",
+    t: "mcq",
+    o: ["case", "else", "break", "default", "foreach"],
+    a: 1,
+    difficulty: "easy",
+    week: 3,
+    topic: "İnternet Programlama / else",
+    importance: 5,
+    explanation: "else, if koşulu yanlışsa çalışır. İki ihtimalli durumlarda kullanılır."
+  },
+  {
+    q: "PHP'de kaç kez çalışacağı belli olan tekrar işlemlerinde hangi döngü tercih edilir?",
+    t: "mcq",
+    o: ["while", "switch", "for", "if", "include"],
+    a: 2,
+    difficulty: "easy",
+    week: 4,
+    topic: "İnternet Programlama / for",
+    importance: 5,
+    explanation: "for döngüsü, belirli sayıda tekrar yapılacaksa uygundur."
+  },
+  {
+    q: "PHP'de koşul doğru olduğu sürece çalışan döngü hangisidir?",
+    t: "mcq",
+    o: ["for", "switch", "case", "while", "echo"],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "İnternet Programlama / while",
+    importance: 5,
+    explanation: "while, koşul doğru olduğu sürece çalışır. Koşul yanlış olduğunda döngü biter."
+  },
+  {
+    q: "PHP'de bir metnin uzunluğunu bulmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["trim()", "substr()", "strpos()", "str_replace()", "strlen()"],
+    a: 4,
+    difficulty: "easy",
+    week: 5,
+    topic: "İnternet Programlama / strlen",
+    importance: 5,
+    explanation: "strlen(), string yani metin uzunluğunu verir. Boşluklar da karakter sayılır."
+  },
+  {
+    q: "PHP'de metnin başındaki ve sonundaki boşlukları temizleyen fonksiyon hangisidir?",
+    t: "mcq",
+    o: ["trim()", "strlen()", "substr()", "strpos()", "explode()"],
+    a: 0,
+    difficulty: "easy",
+    week: 5,
+    topic: "İnternet Programlama / trim",
+    importance: 5,
+    explanation: "trim(), metnin başındaki ve sonundaki boşlukları siler. Form verilerini temizlerken kullanılır."
+  },
+  {
+    q: "HTTP'de verileri URL üzerinde taşıyan yöntem hangisidir?",
+    t: "mcq",
+    o: ["POST", "GET", "FILES", "SESSION", "COOKIE"],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "İnternet Programlama / GET",
+    importance: 5,
+    explanation: "GET, verileri URL parametresi olarak gönderir. Bu yüzden adres çubuğunda görünür."
+  },
+  {
+    q: "HTTP'de veriyi istek gövdesinde taşıyan ve formlarda sık kullanılan yöntem hangisidir?",
+    t: "mcq",
+    o: ["GET", "COOKIE", "POST", "SERVER", "REQUEST"],
+    a: 2,
+    difficulty: "easy",
+    week: 6,
+    topic: "İnternet Programlama / POST",
+    importance: 5,
+    explanation: "POST, veriyi URL yerine HTTP body içinde gönderir. Şifre ve form işlemlerinde GET'e göre daha uygundur."
+  },
+  {
+    q: "PHP'de GET yöntemiyle gelen veriler hangi süper global dizide tutulur?",
+    t: "mcq",
+    o: ["$_POST", "$_FILES", "$_SESSION", "$_GET", "$_COOKIE"],
+    a: 3,
+    difficulty: "easy",
+    week: 6,
+    topic: "İnternet Programlama / $_GET",
+    importance: 5,
+    explanation: "$_GET, URL üzerinden gelen verileri tutar. Örneğin sayfa.php?id=5 için $_GET['id'] kullanılabilir."
+  },
+  {
+    q: "PHP'de dosya yükleme bilgileri hangi süper global dizide tutulur?",
+    t: "mcq",
+    o: ["$_GET", "$_POST", "$_SESSION", "$_COOKIE", "$_FILES"],
+    a: 4,
+    difficulty: "easy",
+    week: 7,
+    topic: "İnternet Programlama / $_FILES",
+    importance: 5,
+    explanation: "$_FILES, yüklenen dosyanın adı, geçici yolu, boyutu ve hata kodu gibi bilgileri tutar."
+  },
+  {
+    q: "Dosya yükleme formunda bulunması gereken enctype değeri hangisidir?",
+    t: "mcq",
+    o: ["multipart/form-data", "text/plain", "application/json", "urlencoded-only", "file/input"],
+    a: 0,
+    difficulty: "easy",
+    week: 7,
+    topic: "İnternet Programlama / Dosya Yükleme",
+    importance: 5,
+    explanation: "Dosya yüklemek için formda enctype='multipart/form-data' olmalıdır. Aksi halde dosya düzgün gönderilmez."
+  },
+  {
+    q: "PHP'de yüklenen dosyayı geçici konumdan kalıcı klasöre taşımak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["copy_file()", "move_uploaded_file()", "file_put_contents()", "mkdir()", "rename_only()"],
+    a: 1,
+    difficulty: "easy",
+    week: 7,
+    topic: "İnternet Programlama / move_uploaded_file",
+    importance: 5,
+    explanation: "move_uploaded_file(), yüklenen dosyayı tmp_name geçici yolundan hedef klasöre taşır."
+  },
+  {
+    q: "PHP'de oturum başlatmak için hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["session_destroy()", "setcookie()", "session_start()", "session_close()", "start_cookie()"],
+    a: 2,
+    difficulty: "easy",
+    week: 8,
+    topic: "İnternet Programlama / Session",
+    importance: 5,
+    explanation: "session_start(), oturum mekanizmasını başlatır. $_SESSION kullanmadan önce çağrılmalıdır."
+  },
+  {
+    q: "PHP'de oturum bilgileri hangi süper global dizide tutulur?",
+    t: "mcq",
+    o: ["$_GET", "$_POST", "$_FILES", "$_SESSION", "$_SERVER"],
+    a: 3,
+    difficulty: "easy",
+    week: 8,
+    topic: "İnternet Programlama / $_SESSION",
+    importance: 5,
+    explanation: "$_SESSION, kullanıcıya ait oturum verilerini sunucu tarafında tutar."
+  },
+  {
+    q: "Şifreleri güvenli saklamak için PHP'de hangi fonksiyon kullanılır?",
+    t: "mcq",
+    o: ["strlen()", "trim()", "md5_text()", "echo()", "password_hash()"],
+    a: 4,
+    difficulty: "medium",
+    week: 9,
+    topic: "İnternet Programlama / password_hash",
+    importance: 5,
+    explanation: "password_hash(), şifreyi güvenli hash değerine dönüştürür. Şifreler düz metin saklanmamalıdır."
+  },
+  {
+    q: "Hash'lenmiş şifreyi kontrol etmek için hangi PHP fonksiyonu kullanılır?",
+    t: "mcq",
+    o: ["password_verify()", "password_hash()", "trim()", "session_start()", "mysqli_connect()"],
+    a: 0,
+    difficulty: "medium",
+    week: 9,
+    topic: "İnternet Programlama / password_verify",
+    importance: 5,
+    explanation: "password_verify(), kullanıcının girdiği şifreyi kayıtlı hash ile karşılaştırır."
+  },
+  {
+    q: "Veritabanına yeni kayıt eklemek için kullanılan SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["SELECT", "INSERT INTO", "UPDATE", "DELETE", "DROP"],
+    a: 1,
+    difficulty: "easy",
+    week: 11,
+    topic: "İnternet Programlama / INSERT",
+    importance: 5,
+    explanation: "INSERT INTO, tabloya yeni kayıt ekler. CRUD işlemlerinde Create karşılığıdır."
+  },
+  {
+    q: "Veritabanından veri çekmek için kullanılan SQL komutu hangisidir?",
+    t: "mcq",
+    o: ["INSERT", "DELETE", "SELECT", "UPDATE", "CREATE"],
+    a: 2,
+    difficulty: "easy",
+    week: 11,
+    topic: "İnternet Programlama / SELECT",
+    importance: 5,
+    explanation: "SELECT, veritabanından veri okumak veya listelemek için kullanılır."
+  },
+  {
+    q: "SQL Injection riskini azaltmak için hangi yöntem tercih edilmelidir?",
+    t: "mcq",
+    o: ["URL uzatmak", "Şifreyi ekrana yazdırmak", "GET kullanmak", "Prepared statement kullanmak", "Dosya adını büyütmek"],
+    a: 3,
+    difficulty: "medium",
+    week: 13,
+    topic: "İnternet Programlama / SQL Injection",
+    importance: 5,
+    explanation: "Prepared statement, kullanıcı verisi ile SQL sorgusunu ayırır. Bu, SQL Injection saldırı riskini azaltır."
+  },
+  {
+    q: "PHP'de dosyaya tek fonksiyonla veri yazmak için hangisi kullanılır?",
+    t: "mcq",
+    o: ["fopen()", "fread()", "feof()", "mkdir()", "file_put_contents()"],
+    a: 4,
+    difficulty: "easy",
+    week: 14,
+    topic: "İnternet Programlama / Dosya İşlemleri",
+    importance: 5,
+    explanation: "file_put_contents(), dosyaya veri yazmayı tek fonksiyonla kolaylaştırır."
+  },
+
+  // =========================================================
+  // ==== VERİTABANI YÖNETİM SİSTEMLERİ – 20 FİNAL SORUSU =====
+  // =========================================================
+
+  {
+    q: "Veritabanı en doğru şekilde neyi ifade eder?",
+    t: "mcq",
+    o: ["Verilerin düzenli saklandığı ve yönetildiği yapı", "Sadece klavye kısayolu", "Sadece resim dosyası", "Sadece işletim sistemi", "Sadece web tarayıcısı"],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veritabanı Yönetim Sistemleri / Temel Kavram",
+    importance: 5,
+    explanation: "Veritabanı, verilerin düzenli biçimde saklandığı, arandığı, güncellendiği ve yönetildiği sistemdir."
+  },
+  {
+    q: "DBMS açılımı hangisidir?",
+    t: "mcq",
+    o: ["Data Backup Main Server", "Database Management System", "Digital Base Memory Script", "Dynamic Binary Model System", "Database Mapping Service"],
+    a: 1,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veritabanı Yönetim Sistemleri / DBMS",
+    importance: 5,
+    explanation: "DBMS, Database Management System demektir. Türkçesi Veritabanı Yönetim Sistemi'dir."
+  },
+  {
+    q: "SQL Server hangi tür sistemdir?",
+    t: "mcq",
+    o: ["Kelime işlemci", "E-posta istemcisi", "İlişkisel veritabanı yönetim sistemi", "Grafik editörü", "Mobil işletim sistemi"],
+    a: 2,
+    difficulty: "easy",
+    week: 1,
+    topic: "Veritabanı Yönetim Sistemleri / SQL Server",
+    importance: 5,
+    explanation: "SQL Server, Microsoft tarafından geliştirilen ilişkisel veritabanı yönetim sistemidir."
+  },
+  {
+    q: "SQL Server'ın kullandığı SQL genişletmesi hangisidir?",
+    t: "mcq",
+    o: ["HTML", "CSS", "PHP", "T-SQL", "XML"],
+    a: 3,
+    difficulty: "medium",
+    week: 1,
+    topic: "Veritabanı Yönetim Sistemleri / T-SQL",
+    importance: 5,
+    explanation: "T-SQL, Transact-SQL demektir. SQL Server'ın SQL üzerine eklediği gelişmiş yapılardır."
+  },
+  {
+    q: "SQL Server güvenlik yapılandırmasında Mixed Mode ne anlama gelir?",
+    t: "mcq",
+    o: ["Sadece Windows kullanıcıları giriş yapabilir", "Sadece tablo sahipleri giriş yapabilir", "Hiç kullanıcı giremez", "Sadece yedekten giriş yapılır", "Hem Windows hem SQL Server kullanıcıları giriş yapabilir"],
     a: 4,
     difficulty: "medium",
     week: 1,
-    topic: "Enabled Özelliği",
+    topic: "Veritabanı Yönetim Sistemleri / SQL Server Güvenlik",
     importance: 4,
+    explanation: "Mixed Mode, hem Windows Authentication hem de SQL Server Authentication kullanılabildiği anlamına gelir."
+  },
+  {
+    q: "Tablodaki her kaydı benzersiz tanımlayan alan hangisidir?",
+    t: "mcq",
+    o: ["Primary Key", "Foreign Key", "VARCHAR", "ORDER BY", "JOIN"],
+    a: 0,
+    difficulty: "easy",
+    week: 2,
+    topic: "Veritabanı Yönetim Sistemleri / Primary Key",
+    importance: 5,
+    explanation: "Primary Key, tablodaki her satırı benzersiz tanımlar. Aynı değer tekrar edemez ve genellikle boş bırakılamaz."
+  },
+  {
+    q: "Bir tablodaki alanın başka tablodaki primary key'e bağlanmasını sağlayan anahtar hangisidir?",
+    t: "mcq",
+    o: ["Candidate Key", "Foreign Key", "Index Only", "View", "Trigger"],
+    a: 1,
+    difficulty: "medium",
+    week: 2,
+    topic: "Veritabanı Yönetim Sistemleri / Foreign Key",
+    importance: 5,
+    explanation: "Foreign Key, iki tablo arasında ilişki kurar. Örneğin sipariş tablosundaki musteri_id, müşteri tablosundaki id alanına bağlanabilir."
+  },
+  {
+    q: "SQL'de yeni tablo oluşturmak için hangi komut kullanılır?",
+    t: "mcq",
+    o: ["INSERT TABLE", "MAKE TABLE", "CREATE TABLE", "ADD TABLE", "NEW TABLE"],
+    a: 2,
+    difficulty: "easy",
+    week: 3,
+    topic: "Veritabanı Yönetim Sistemleri / CREATE TABLE",
+    importance: 5,
+    explanation: "CREATE TABLE, veritabanı içinde yeni tablo oluşturur. Tablo, satır ve sütunlardan oluşur."
+  },
+  {
+    q: "SQL'de tabloya yeni kayıt eklemek için hangi komut kullanılır?",
+    t: "mcq",
+    o: ["SELECT", "UPDATE", "DELETE", "INSERT INTO", "DROP"],
+    a: 3,
+    difficulty: "easy",
+    week: 3,
+    topic: "Veritabanı Yönetim Sistemleri / INSERT",
+    importance: 5,
+    explanation: "INSERT INTO, tabloya yeni kayıt yani yeni satır eklemek için kullanılır."
+  },
+  {
+    q: "SQL'de tablodaki kayıtları listelemek için hangi komut kullanılır?",
+    t: "mcq",
+    o: ["INSERT", "UPDATE", "DELETE", "CREATE", "SELECT"],
+    a: 4,
+    difficulty: "easy",
+    week: 3,
+    topic: "Veritabanı Yönetim Sistemleri / SELECT",
+    importance: 5,
+    explanation: "SELECT, veritabanından veri çekmek için kullanılır. Listeleme ve arama işlemlerinin temelidir."
+  },
+  {
+    q: "SQL'de var olan kaydı değiştirmek için hangi komut kullanılır?",
+    t: "mcq",
+    o: ["UPDATE", "INSERT", "SELECT", "DROP", "CREATE"],
+    a: 0,
+    difficulty: "easy",
+    week: 4,
+    topic: "Veritabanı Yönetim Sistemleri / UPDATE",
+    importance: 5,
+    explanation: "UPDATE, mevcut kaydı günceller. Genellikle WHERE ile hangi kaydın güncelleneceği belirtilir."
+  },
+  {
+    q: "SQL'de kayıt silmek için kullanılan komut hangisidir?",
+    t: "mcq",
+    o: ["SELECT", "DELETE", "INSERT", "CREATE", "ORDER BY"],
+    a: 1,
+    difficulty: "easy",
+    week: 4,
+    topic: "Veritabanı Yönetim Sistemleri / DELETE",
+    importance: 5,
+    explanation: "DELETE, tablodan kayıt siler. WHERE kullanılmazsa tüm kayıtlar silinebilir."
+  },
+  {
+    q: "SQL'de sonuçları koşula göre filtrelemek için hangi ifade kullanılır?",
+    t: "mcq",
+    o: ["ORDER BY", "GROUP BY", "WHERE", "CREATE", "DROP"],
+    a: 2,
+    difficulty: "easy",
+    week: 4,
+    topic: "Veritabanı Yönetim Sistemleri / WHERE",
+    importance: 5,
+    explanation: "WHERE, hangi kayıtların seçileceğini, güncelleneceğini veya silineceğini belirleyen koşul bölümüdür."
+  },
+  {
+    q: "SQL'de sonuçları sıralamak için hangi ifade kullanılır?",
+    t: "mcq",
+    o: ["WHERE", "INSERT", "DELETE", "ORDER BY", "CREATE"],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "Veritabanı Yönetim Sistemleri / ORDER BY",
+    importance: 4,
+    explanation: "ORDER BY, sonuçları belirli bir sütuna göre artan veya azalan sıralar."
+  },
+  {
+    q: "SQL'de iki tabloyu ortak alan üzerinden birleştirmek için genel olarak hangi yapı kullanılır?",
+    t: "mcq",
+    o: ["WHERE only", "CREATE", "DROP", "BACKUP", "JOIN"],
+    a: 4,
+    difficulty: "medium",
+    week: 5,
+    topic: "Veritabanı Yönetim Sistemleri / JOIN",
+    importance: 5,
+    explanation: "JOIN, ilişkili tabloları ortak alanlar üzerinden birleştirir. Örneğin öğrenci ve bölüm tabloları birleştirilebilir."
+  },
+  {
+    q: "LEFT JOIN ne yapar?",
+    t: "mcq",
+    o: ["Sol tablodaki tüm kayıtları ve eşleşen sağ tablo kayıtlarını getirir", "Sadece sağ tabloyu siler", "Veritabanını yedekler", "Sadece yeni tablo oluşturur", "Tüm kayıtları siler"],
+    a: 0,
+    difficulty: "medium",
+    week: 5,
+    topic: "Veritabanı Yönetim Sistemleri / LEFT JOIN",
+    importance: 4,
+    explanation: "LEFT JOIN, sol tablodaki tüm kayıtları getirir; sağ tabloda eşleşme varsa onu da ekler, yoksa NULL dönebilir."
+  },
+  {
+    q: "Normalizasyonun temel amacı nedir?",
+    t: "mcq",
+    o: ["Veriyi düzensiz çoğaltmak", "Veri tekrarını azaltmak ve tutarlılığı artırmak", "Tablodaki tüm kayıtları silmek", "Sadece kullanıcı eklemek", "Veritabanını kapatmak"],
+    a: 1,
+    difficulty: "medium",
+    week: 6,
+    topic: "Veritabanı Yönetim Sistemleri / Normalizasyon",
+    importance: 5,
+    explanation: "Normalizasyon, veri tekrarını azaltıp veri bütünlüğünü korumak için tabloları düzenleme işlemidir."
+  },
+  {
+    q: "1NF için temel şartlardan biri hangisidir?",
+    t: "mcq",
+    o: ["Her tabloda resim olmalı", "Tüm kayıtlar silinmeli", "Alanlar atomik olmalı", "Tablo adı boş olmalı", "JOIN yasak olmalı"],
+    a: 2,
+    difficulty: "hard",
+    week: 6,
+    topic: "Veritabanı Yönetim Sistemleri / 1NF",
+    importance: 4,
+    explanation: "1NF, alanların atomik yani bölünemeyen tek değerler içermesini ister. Bir hücrede birden fazla değer tutulmamalıdır."
+  },
+  {
+    q: "Veritabanı yedekleme işleminin temel amacı nedir?",
+    t: "mcq",
+    o: ["Veriyi bilinçli silmek", "Tablo adını değiştirmek", "Sorguyu renklendirmek", "Veri kaybına karşı geri dönüş sağlayabilmek", "Kullanıcı arayüzü çizmek"],
+    a: 3,
+    difficulty: "easy",
+    week: 7,
+    topic: "Veritabanı Yönetim Sistemleri / Yedekleme",
+    importance: 5,
+    explanation: "Yedekleme, sistem arızası veya yanlış silme gibi durumlarda veriyi geri döndürmek için yapılır."
+  },
+  {
+    q: "Bir sütunda boş değer girilmesini engelleyen SQL kısıtı hangisidir?",
+    t: "mcq",
+    o: ["DEFAULT", "CHECK", "JOIN", "ORDER BY", "NOT NULL"],
+    a: 4,
+    difficulty: "medium",
+    week: 7,
+    topic: "Veritabanı Yönetim Sistemleri / Constraint",
+    importance: 4,
+    explanation: "NOT NULL, bir sütunun boş bırakılmasını engeller. Veri bütünlüğünü artırır."
+  }
+];    importance: 4,
     explanation: "Enabled false yapılırsa kontrol pasif olur ve kullanıcı onunla işlem yapamaz. Visible gizler, Enabled pasifleştirir."
   },
   {
