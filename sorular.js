@@ -1,922 +1,1117 @@
 window.questionBank = [
   {
-    q: "Veri yapısı en doğru şekilde nasıl tanımlanır?",
+    q: "Dizi veri yapısında rastgele erişim ne anlama gelir?",
     t: "mcq",
     o: [
-      "Verileri bilgisayarda düzenli saklama ve yönetme yöntemi",
-      "Sadece ekrana yazı yazdıran komut",
-      "Sadece internet bağlantısı sağlayan cihaz",
-      "Programın renk ve tema ayarları",
-      "Sadece klavyeden veri girme işlemi"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 1,
-    topic: "Veri Yapılarına Giriş",
-    importance: 5,
-    explanation: "Veri yapısı, verilerin bilgisayarda nasıl saklanacağını ve nasıl yönetileceğini belirleyen yapıdır. Örneğin dizi, bağlı liste, stack, queue, ağaç ve graf birer veri yapısıdır. Amaç veriye daha hızlı ulaşmak, ekleme-silme işlemlerini düzenli yapmak ve belleği verimli kullanmaktır."
-  },
-  {
-    q: "Algoritma kavramı aşağıdakilerden hangisini ifade eder?",
-    t: "mcq",
-    o: [
-      "Bilgisayardaki fiziksel bellek yuvasını",
-      "Bir problemi çözmek için izlenen adım adım işlem yolunu",
-      "Sadece verileri saklayan tabloyu",
-      "Sadece grafik çizen programı",
-      "Bilgisayarın ekran kartını"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 1,
-    topic: "Algoritma Mantığı",
-    importance: 5,
-    explanation: "Algoritma, bir problemi çözmek için takip edilen adım adım yoldur. Mesela bir dizide sayı aramak için ilk elemandan başla, kontrol et, değilse sıradakine geç şeklinde ilerlemek bir algoritmadır. Veri yapısı veriyi nasıl sakladığımızı, algoritma ise o veriyle ne yaptığımızı anlatır."
-  },
-  {
-    q: "Aşağıdakilerden hangisi lineer veri yapısına örnektir?",
-    t: "mcq",
-    o: ["Graf", "Ağaç", "Dizi", "B ağacı", "İkili arama ağacı"],
-    a: 2,
-    difficulty: "easy",
-    week: 1,
-    topic: "Lineer Veri Yapıları",
-    importance: 5,
-    explanation: "Lineer veri yapılarında elemanlar sıra halinde düşünülür. Dizi, bağlı liste, stack ve queue lineer veri yapılarıdır. Ağaç ve graf ise dallanma veya bağlantı yapısı içerdiği için lineer olmayan veri yapılarıdır."
-  },
-  {
-    q: "Aşağıdakilerden hangisi lineer olmayan veri yapısına örnektir?",
-    t: "mcq",
-    o: ["Dizi", "Stack", "Queue", "Ağaç", "Bağlı liste"],
-    a: 3,
-    difficulty: "easy",
-    week: 1,
-    topic: "Lineer Olmayan Veri Yapıları",
-    importance: 5,
-    explanation: "Ağaç, verileri üst-alt ilişkiyle saklayan hiyerarşik bir yapıdır. Bu yüzden lineer değildir. Lineer yapılarda elemanlar bir sıra gibi ilerlerken, ağaçta dallanma vardır. Graf da lineer olmayan veri yapısına örnektir."
-  },
-  {
-    q: "Dizi veri yapısının en temel özelliği hangisidir?",
-    t: "mcq",
-    o: [
-      "Elemanların düğümler halinde dağınık tutulması",
+      "Elemanlara indeks numarasıyla doğrudan ulaşılabilmesi",
+      "Elemanların sadece sırayla silinebilmesi",
       "Her elemanın sonraki elemanın adresini tutması",
-      "Aynı türden verilerin bellekte ardışık saklanması",
-      "Son giren elemanın ilk çıkması",
-      "İlk giren elemanın ilk çıkması"
-    ],
-    a: 2,
-    difficulty: "easy",
-    week: 2,
-    topic: "Diziler",
-    importance: 5,
-    explanation: "Dizi, aynı türden verilerin bellekte yan yana tutulduğu veri yapısıdır. Örneğin [10, 20, 30] bir sayı dizisidir. Dizide elemanlara indeks ile ulaşılır. Bu yüzden indeks biliniyorsa istenen elemana hızlı erişilir."
-  },
-  {
-    q: "Dizilerde bir elemana indeks ile erişmek neden hızlıdır?",
-    t: "mcq",
-    o: [
-      "Çünkü dizi elemanları bellekte ardışık tutulur",
-      "Çünkü dizilerde sadece bir eleman bulunur",
-      "Çünkü dizilerde hiç silme yapılamaz",
-      "Çünkü diziler sadece metin saklar",
-      "Çünkü diziler kuyruk mantığıyla çalışır"
+      "Son eklenen elemanın ilk çıkarılması",
+      "İlk eklenen elemanın ilk çıkarılması"
     ],
     a: 0,
     difficulty: "easy",
     week: 2,
-    topic: "Dizilerde Erişim",
+    topic: "Dizilerde Rastgele Erişim",
     importance: 5,
-    explanation: "Dizide elemanlar bellekte yan yana tutulur. Bu yüzden bilgisayar, indeks numarasını kullanarak doğrudan ilgili elemana gidebilir. Örneğin dizi[3] denildiğinde üçüncü indeksteki elemana direkt erişilir. Bu erişim genellikle O(1) kabul edilir."
+    explanation: "Rastgele erişim, dizideki bir elemana indeks kullanarak doğrudan ulaşmak demektir. Örneğin dizi[4] denildiğinde bilgisayar baştan tek tek saymak zorunda kalmadan 4. indeksteki elemana gider. Bu yüzden dizilerde erişim genellikle O(1) kabul edilir."
   },
   {
-    q: "Dizilerde ortaya eleman ekleme veya ortadan eleman silme işlemi neden maliyetlidir?",
+    q: "Aşağıdakilerden hangisi dizilerin bağlı listelere göre avantajıdır?",
     t: "mcq",
     o: [
-      "Çünkü elemanların kaydırılması gerekebilir",
-      "Çünkü diziler veri tutamaz",
-      "Çünkü dizilerde indeks yoktur",
-      "Çünkü diziler sadece stack olarak çalışır",
-      "Çünkü diziler graf bağlantısı ister"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 2,
-    topic: "Dizi Dezavantajları",
-    importance: 5,
-    explanation: "Dizide elemanlar yan yana durduğu için ortaya yeni eleman eklenirse arkadaki elemanların sağa kaydırılması gerekir. Ortadan eleman silinirse boşluğu kapatmak için elemanlar sola kaydırılır. Bu yüzden ekleme ve silme işlemleri dizide her zaman çok kolay değildir."
-  },
-  {
-    q: "Bağlı liste veri yapısı en doğru şekilde nasıl açıklanır?",
-    t: "mcq",
-    o: [
-      "Elemanların düğümler halinde tutulduğu ve her düğümün sonraki düğümü gösterdiği yapı",
-      "Elemanların bellekte kesinlikle yan yana tutulduğu yapı",
-      "Sadece son giren ilk çıkar mantığıyla çalışan yapı",
-      "Sadece ilk giren ilk çıkar mantığıyla çalışan yapı",
-      "Sadece sayıları küçükten büyüğe sıralayan yapı"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 3,
-    topic: "Bağlı Liste",
-    importance: 5,
-    explanation: "Bağlı liste, düğümlerden oluşur. Her düğümün içinde veri ve bir sonraki düğümün adresi bulunur. Bu yüzden elemanların bellekte yan yana olması gerekmez. Bir elemandan diğerine bağlantı adresi sayesinde gidilir."
-  },
-  {
-    q: "Bağlı listede belirli bir elemana ulaşmak neden diziye göre daha yavaş olabilir?",
-    t: "mcq",
-    o: [
-      "Çünkü bağlı listede baştan başlayıp düğümler arasında sırayla ilerlemek gerekir",
-      "Çünkü bağlı listede hiç veri bulunmaz",
-      "Çünkü bağlı liste sadece tek eleman saklar",
-      "Çünkü bağlı liste sadece sıralı verilerle çalışır",
-      "Çünkü bağlı liste otomatik olarak silinir"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 3,
-    topic: "Bağlı Listede Erişim",
-    importance: 5,
-    explanation: "Dizide indeks ile doğrudan elemana gidilebilir. Bağlı listede ise 5. elemana ulaşmak için 1. düğümden başlanır, sonra 2., sonra 3. düğüm diye ilerlenir. Çünkü her düğüm sadece bir sonraki düğümün adresini bilir. Bu yüzden erişim genellikle O(n) olur."
-  },
-  {
-    q: "Sürekli ekleme ve silme yapılacak bir yapıda bağlı listenin diziye göre avantajı nedir?",
-    t: "mcq",
-    o: [
-      "Bağlı liste dinamik büyüyebilir ve bağlantılar değiştirilerek ekleme-silme yapılabilir",
-      "Bağlı liste her zaman tek eleman tutar",
-      "Bağlı liste indeksle O(1) erişim sağlar",
-      "Bağlı liste hiçbir zaman bellek kullanmaz",
-      "Bağlı liste sadece sabit boyutludur"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 3,
-    topic: "Dizi ve Bağlı Liste Farkı",
-    importance: 5,
-    explanation: "Bağlı liste dinamik bir yapıdır. Eleman eklemek veya silmek için çoğu zaman bağlantı adreslerini güncellemek yeterlidir. Dizide ise özellikle ortada ekleme-silme yapılırken elemanların kaydırılması gerekebilir. Bu yüzden ekleme-silme ağırlıklı durumlarda bağlı liste avantajlı olabilir."
-  },
-  {
-    q: "Stack veri yapısı hangi mantıkla çalışır?",
-    t: "mcq",
-    o: [
-      "FIFO yani ilk giren ilk çıkar",
-      "LIFO yani son giren ilk çıkar",
-      "Her zaman küçük değer sola gider",
-      "Her zaman büyük değer sona gider",
-      "Her düğüm en fazla iki çocuk alır"
+      "Sık ekleme ve silmede her zaman daha iyi olması",
+      "İndeksle elemana hızlı erişim sağlaması",
+      "Her elemanın pointer tutması",
+      "Bellekte dağınık şekilde saklanması",
+      "Boyutunun her zaman otomatik büyümesi"
     ],
     a: 1,
     difficulty: "easy",
-    week: 4,
-    topic: "Stack",
+    week: 2,
+    topic: "Dizi Avantajları",
     importance: 5,
-    explanation: "Stack, tabak yığını gibi çalışır. En son koyduğun tabak en üsttedir ve ilk onu alırsın. Bu yüzden stack LIFO yani Last In First Out mantığıyla çalışır. Türkçesi son giren ilk çıkar demektir."
+    explanation: "Dizilerin en önemli avantajı indeksle hızlı erişim sağlamasıdır. Eğer hangi sıradaki elemana gideceğini biliyorsan dizi çok hızlıdır. Bağlı listede ise istenen elemana ulaşmak için baştan başlayıp düğümler arasında ilerlemek gerekir."
   },
   {
-    q: "Stack veri yapısında eleman ekleme işlemi hangisidir?",
-    t: "mcq",
-    o: ["Push", "Pop", "Dequeue", "Enqueue", "Search"],
-    a: 0,
-    difficulty: "easy",
-    week: 4,
-    topic: "Stack İşlemleri",
-    importance: 5,
-    explanation: "Stack'e eleman ekleme işlemine push denir. Mesela stack içine önce 10, sonra 20 eklenirse 20 en üstte olur. Stack'ten eleman çıkarma işlemine ise pop denir."
-  },
-  {
-    q: "Stack veri yapısında eleman çıkarma işlemi hangisidir?",
-    t: "mcq",
-    o: ["Enqueue", "Dequeue", "Pop", "Front", "Rear"],
-    a: 2,
-    difficulty: "easy",
-    week: 4,
-    topic: "Stack İşlemleri",
-    importance: 5,
-    explanation: "Stack'te eleman çıkarma işlemine pop denir. Stack son giren ilk çıkar mantığıyla çalışır. Örneğin stack [10, 20, 30] şeklindeyse pop yapıldığında çıkan eleman 30 olur."
-  },
-  {
-    q: "Stack veri yapısında en üstteki elemana bakıp onu çıkarmayan işlem hangisidir?",
-    t: "mcq",
-    o: ["Push", "Pop", "Peek", "Dequeue", "Enqueue"],
-    a: 2,
-    difficulty: "medium",
-    week: 4,
-    topic: "Peek İşlemi",
-    importance: 4,
-    explanation: "Peek veya Top işlemi, stack'in en üstündeki elemana bakmayı sağlar ama o elemanı çıkarmaz. Pop ise en üstteki elemanı çıkarır. Bu fark sınavlarda karıştırılabilir."
-  },
-  {
-    q: "Aşağıdakilerden hangisi stack kullanımına en uygun örnektir?",
+    q: "Bağlı listedeki bir düğüm genellikle hangi iki bilgiyi içerir?",
     t: "mcq",
     o: [
-      "Geri al yani Undo işlemi",
-      "Banka müşteri sırası",
-      "Yazıcı kuyruğu",
-      "Market kasa sırası",
-      "Otobüs durağı sırası"
+      "Sadece renk ve boyut",
+      "Sadece indeks ve uzunluk",
+      "Veri ve sonraki düğümün adresi",
+      "Kök ve yaprak bilgisi",
+      "Sadece FIFO bilgisi"
     ],
-    a: 0,
+    a: 2,
     difficulty: "easy",
-    week: 4,
-    topic: "Stack Kullanım Alanları",
+    week: 3,
+    topic: "Bağlı Liste Düğümü",
     importance: 5,
-    explanation: "Undo işleminde en son yapılan işlem ilk geri alınır. Bu tam olarak stack mantığıdır. Çünkü stack son giren ilk çıkar mantığıyla çalışır. Fonksiyon çağrıları ve parantez kontrolü de stack kullanımına örnektir."
+    explanation: "Bağlı listedeki her eleman düğüm olarak adlandırılır. Bir düğüm genellikle saklanan veriyi ve bir sonraki düğümün adresini tutar. Bu yüzden bağlı listedeki elemanlar bellekte yan yana olmak zorunda değildir."
   },
   {
-    q: "Queue veri yapısı hangi mantıkla çalışır?",
+    q: "Tek yönlü bağlı listede her düğüm hangi düğümü gösterir?",
     t: "mcq",
     o: [
-      "LIFO yani son giren ilk çıkar",
-      "FIFO yani ilk giren ilk çıkar",
-      "Sol küçük sağ büyük",
-      "Yan yana karşılaştırma",
-      "Pivot seçme"
+      "Kendisinden önceki düğümü",
+      "Kök düğümü",
+      "En büyük düğümü",
+      "Kendisinden sonraki düğümü",
+      "Rastgele seçilen düğümü"
     ],
-    a: 1,
-    difficulty: "easy",
-    week: 5,
-    topic: "Queue",
-    importance: 5,
-    explanation: "Queue yani kuyruk, banka sırası gibi çalışır. İlk gelen kişi önce işlem yapar. Bu yüzden queue FIFO yani First In First Out mantığıyla çalışır. Türkçesi ilk giren ilk çıkar demektir."
-  },
-  {
-    q: "Queue veri yapısında eleman ekleme işlemi hangisidir?",
-    t: "mcq",
-    o: ["Push", "Pop", "Peek", "Enqueue", "DFS"],
     a: 3,
-    difficulty: "easy",
-    week: 5,
-    topic: "Queue İşlemleri",
+    difficulty: "medium",
+    week: 3,
+    topic: "Tek Yönlü Bağlı Liste",
     importance: 5,
-    explanation: "Queue'ya eleman ekleme işlemine enqueue denir. Eleman kuyruğun sonuna eklenir. Kuyruktan eleman çıkarma işlemine ise dequeue denir."
+    explanation: "Tek yönlü bağlı listede her düğüm yalnızca kendisinden sonraki düğümün adresini tutar. Bu yüzden liste baştan sona doğru gezilir. Geriye doğru gitmek için ayrıca önceki düğüm bilgisi yoktur."
   },
   {
-    q: "Queue veri yapısında eleman çıkarma işlemi hangisidir?",
-    t: "mcq",
-    o: ["Dequeue", "Push", "Pop", "Peek", "Insert"],
-    a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "Queue İşlemleri",
-    importance: 5,
-    explanation: "Queue'da eleman çıkarma işlemine dequeue denir. Queue ilk giren ilk çıkar mantığıyla çalıştığı için en önce eklenen eleman önce çıkarılır. Örneğin queue [10, 20, 30] ise dequeue sonucu çıkan eleman 10 olur."
-  },
-  {
-    q: "Stack ve Queue arasındaki temel fark hangisidir?",
+    q: "Çift yönlü bağlı listenin tek yönlü bağlı listeden farkı nedir?",
     t: "mcq",
     o: [
-      "Stack son gireni önce çıkarır, Queue ilk gireni önce çıkarır",
-      "Stack ilk gireni önce çıkarır, Queue son gireni önce çıkarır",
-      "Stack ve Queue tamamen aynıdır",
-      "Stack sadece ağaçlarda, Queue sadece dizilerde kullanılır",
-      "Stack'te ekleme yoktur, Queue'da çıkarma yoktur"
+      "Hiç veri tutmaması",
+      "Sadece bir eleman tutabilmesi",
+      "Dizi gibi bellekte yan yana durması",
+      "Sadece stack olarak çalışması",
+      "Her düğümün hem önceki hem sonraki düğümü gösterebilmesi"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 3,
+    topic: "Çift Yönlü Bağlı Liste",
+    importance: 4,
+    explanation: "Çift yönlü bağlı listede her düğüm hem önceki hem de sonraki düğümün adresini tutar. Bu sayede listede ileri ve geri yönde dolaşmak mümkündür. Tek yönlü listede ise genellikle sadece sonraki düğüme gidilir."
+  },
+  {
+    q: "Dairesel bağlı listeyi diğer bağlı listelerden ayıran temel özellik hangisidir?",
+    t: "mcq",
+    o: [
+      "Son düğümün tekrar ilk düğümü göstermesi",
+      "Her düğümün en fazla iki çocuk alması",
+      "İlk giren elemanın ilk çıkması",
+      "Son giren elemanın ilk çıkması",
+      "Verilerin mutlaka sıralı olması"
     ],
     a: 0,
-    difficulty: "easy",
-    week: 5,
-    topic: "Stack Queue Farkı",
-    importance: 5,
-    explanation: "Stack LIFO çalışır: son giren ilk çıkar. Queue FIFO çalışır: ilk giren ilk çıkar. Bunu tabak yığını ve banka sırası gibi düşünebilirsin. Tabak yığında son koyulan önce alınır, banka sırasında ilk gelen önce işlem yapar."
+    difficulty: "medium",
+    week: 3,
+    topic: "Dairesel Bağlı Liste",
+    importance: 4,
+    explanation: "Dairesel bağlı listede son düğümün bağlantısı NULL yerine tekrar ilk düğümü gösterir. Böylece liste halka gibi olur. Bu yapı bazı döngüsel işlemlerde avantaj sağlayabilir."
   },
   {
-    q: "Ağaç veri yapısı hangi tür ilişkiyi temsil etmek için uygundur?",
+    q: "Stack veri yapısında underflow durumu ne zaman oluşur?",
     t: "mcq",
     o: [
-      "Hiyerarşik yani üst-alt ilişkileri",
-      "Sadece yan yana duran verileri",
-      "Sadece son giren ilk çıkar ilişkisini",
-      "Sadece ilk giren ilk çıkar ilişkisini",
-      "Sadece rastgele sayıları"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "Ağaç Veri Yapısı",
-    importance: 5,
-    explanation: "Ağaç veri yapısı üst-alt ilişkisini göstermek için kullanılır. Örneğin klasör yapısı, aile ağacı, şirket organizasyon şeması ve karar ağaçları buna örnektir. En üstte kök bulunur, aşağı doğru dallar oluşur."
-  },
-  {
-    q: "Ağaç veri yapısında kök yani root ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Ağacın en üstteki başlangıç düğümü",
-      "Ağacın en alttaki son düğümü",
-      "Hiç çocuğu olmayan düğüm",
-      "Her zaman en küçük sayı",
-      "İki düğüm arasındaki bağlantı"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 6,
-    topic: "Kök Düğüm",
-    importance: 5,
-    explanation: "Kök, ağacın en üstündeki başlangıç düğümüdür. Ağaçtaki diğer düğümlere kökten ulaşılır. Kök her zaman en küçük veya en büyük değer olmak zorunda değildir; sadece başlangıç noktasıdır."
-  },
-  {
-    q: "Ağaç veri yapısında yaprak yani leaf ne anlama gelir?",
-    t: "mcq",
-    o: [
-      "Ağacın başlangıç düğümü",
-      "Altında çocuğu olmayan düğüm",
-      "Her zaman en büyük değer",
-      "İki düğüm arasındaki çizgi",
-      "Ağacı dengeleyen işlem"
-    ],
-    a: 1,
-    difficulty: "easy",
-    week: 6,
-    topic: "Yaprak Düğüm",
-    importance: 5,
-    explanation: "Yaprak düğüm, altında başka düğüm bulunmayan düğümdür. Gerçek ağaçta yapraklar dalların ucundadır. Veri yapısında da yaprak düğümler ağacın uç noktalarıdır."
-  },
-  {
-    q: "Ağaç veri yapısında edge yani kenar neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Düğümün içinde saklanan veriyi",
-      "İki düğüm arasındaki bağlantıyı",
-      "Ağacın en üst düğümünü",
-      "Hiç çocuğu olmayan düğümü",
-      "Stack'ten eleman çıkarmayı"
+      "Stack doluyken eleman eklenirse",
+      "Stack boşken eleman çıkarılmaya çalışılırsa",
+      "Stack içinde iki eleman varsa",
+      "Stack sadece sayı tutarsa",
+      "Stack queue'ya çevrilirse"
     ],
     a: 1,
     difficulty: "medium",
-    week: 6,
-    topic: "Kenar Kavramı",
+    week: 4,
+    topic: "Stack Underflow",
     importance: 4,
-    explanation: "Kenar, iki düğüm arasındaki bağlantıdır. Ağaçta kök ile çocuk düğüm arasındaki çizgi bir kenardır. Graf konusunda da kenar iki düğüm arasındaki bağlantı anlamına gelir."
+    explanation: "Underflow, boş bir stack'ten eleman çıkarılmaya çalışıldığında oluşur. Yani stack zaten boşsa pop işlemi yapılamaz. Bu kavram stack'in güvenli kullanılmasında önemlidir."
   },
   {
-    q: "İkili ağaç yani Binary Tree en doğru şekilde nasıl tanımlanır?",
+    q: "Stack veri yapısında overflow durumu ne zaman oluşabilir?",
     t: "mcq",
     o: [
-      "Her düğümün en fazla iki çocuğu olduğu ağaç",
-      "Her düğümün en az üç çocuğu olduğu ağaç",
-      "Sadece tek eleman tutan dizi",
-      "İlk giren ilk çıkar mantığıyla çalışan yapı",
-      "Son giren ilk çıkar mantığıyla çalışan yapı"
+      "Stack boşken pop yapılırsa",
+      "Stack içinde tek eleman varsa",
+      "Sabit kapasiteli stack doluyken yeni eleman eklenirse",
+      "Stack'in en üst elemanına bakılırsa",
+      "Stack'te LIFO mantığı kullanılırsa"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 4,
+    topic: "Stack Overflow",
+    importance: 4,
+    explanation: "Overflow, sabit boyutlu bir stack tamamen doluyken yeni eleman eklenmeye çalışılırsa oluşabilir. Yani kapasite doludur ama push yapılmak istenir. Bu yüzden stack kapasitesi kontrol edilmelidir."
+  },
+  {
+    q: "Fonksiyon çağrılarında stack kullanılmasının temel nedeni nedir?",
+    t: "mcq",
+    o: [
+      "Fonksiyonların alfabetik sıralanması",
+      "Her fonksiyonun veritabanına kaydedilmesi",
+      "Fonksiyonların sadece bir kez çalışması",
+      "Son çağrılan fonksiyonun önce tamamlanması",
+      "Fonksiyonların queue ile bekletilmesi"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 4,
+    topic: "Call Stack",
+    importance: 5,
+    explanation: "Programda bir fonksiyon başka bir fonksiyonu çağırabilir. En son çağrılan fonksiyon önce biter ve kontrol önceki fonksiyona döner. Bu davranış LIFO mantığına uyar, bu yüzden fonksiyon çağrıları stack ile yönetilir."
+  },
+  {
+    q: "Parantez dengesi kontrolünde neden stack kullanılır?",
+    t: "mcq",
+    o: [
+      "Çünkü ilk açılan parantez mutlaka ilk kapanır",
+      "Çünkü parantezler rastgele silinir",
+      "Çünkü stack sadece sayıları sıralar",
+      "Çünkü queue son gireni ilk çıkarır",
+      "Çünkü en son açılan parantezin önce kapanması gerekir"
+    ],
+    a: 4,
+    difficulty: "hard",
+    week: 4,
+    topic: "Stack ile Parantez Kontrolü",
+    importance: 4,
+    explanation: "Parantez kontrolünde en son açılan parantezin önce kapanması gerekir. Örneğin ( [ ] ) yapısında önce [ kapanır, sonra ( kapanır. Bu durum son giren ilk çıkar mantığına uygundur. Bu yüzden stack kullanılır."
+  },
+  {
+    q: "Queue veri yapısında front neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Kuyruğun başındaki, ilk çıkacak elemanı",
+      "Kuyruğun sonundaki, en son eklenen elemanı",
+      "Stack'in en üst elemanını",
+      "Ağacın kök düğümünü",
+      "Grafın en uzak düğümünü"
     ],
     a: 0,
     difficulty: "easy",
+    week: 5,
+    topic: "Queue Front",
+    importance: 5,
+    explanation: "Front, kuyruğun baş tarafını ifade eder. Queue FIFO çalıştığı için ilk çıkacak eleman front tarafındadır. Banka sırasında en öndeki kişi nasıl önce işlem yaparsa queue'da da front elemanı önce çıkar."
+  },
+  {
+    q: "Queue veri yapısında rear neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Kuyruğun başındaki elemanı",
+      "Kuyruğun sonunu, yeni elemanın eklendiği yeri",
+      "Stack'in en üst noktasını",
+      "Ağacın yaprak düğümünü",
+      "Dizinin ilk indeksini"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue Rear",
+    importance: 5,
+    explanation: "Rear, kuyruğun son tarafıdır. Queue'ya yeni eleman eklendiğinde bu eleman rear tarafına eklenir. Yani enqueue işlemi rear tarafında gerçekleşir."
+  },
+  {
+    q: "Dairesel kuyruk hangi problemi azaltmak için kullanılır?",
+    t: "mcq",
+    o: [
+      "Stack'in LIFO çalışmasını",
+      "Ağaçta kök bulunmasını",
+      "Basit kuyrukta boşalan alanların boşa gitmesini",
+      "BST'de sol tarafın küçük olmasını",
+      "Grafın kenar içermesini"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 5,
+    topic: "Dairesel Kuyruk",
+    importance: 4,
+    explanation: "Basit kuyruk sabit diziyle yapıldığında baştan elemanlar çıkarıldıkça boş alanlar oluşabilir. Dairesel kuyrukta son ile baş mantıksal olarak bağlanır ve boşalan alanlar tekrar kullanılabilir. Bu bellek kullanımını daha verimli hale getirir."
+  },
+  {
+    q: "Öncelikli kuyrukta elemanlar hangi mantığa göre işlenir?",
+    t: "mcq",
+    o: [
+      "Her zaman alfabetik sıraya göre",
+      "Her zaman en son girene göre",
+      "Her zaman rastgele seçilerek",
+      "Öncelik değerine göre",
+      "Sadece eklenme saatine göre"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 5,
+    topic: "Öncelikli Kuyruk",
+    importance: 4,
+    explanation: "Öncelikli kuyrukta elemanlar sadece geliş sırasına göre değil, öncelik değerine göre işlenir. Örneğin acil serviste durumu ağır olan hasta daha önce alınabilir. Bu yapı genellikle heap ile ilişkilidir."
+  },
+  {
+    q: "Deque yani çift uçlu kuyrukta hangi işlem mümkündür?",
+    t: "mcq",
+    o: [
+      "Sadece baştan çıkarma",
+      "Sadece sondan ekleme",
+      "Sadece stack gibi pop yapma",
+      "Sadece kök düğüm silme",
+      "Hem baştan hem sondan ekleme ve çıkarma"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 5,
+    topic: "Deque",
+    importance: 3,
+    explanation: "Deque, double ended queue demektir. Yani iki uçlu kuyruktur. Hem baştan hem sondan eleman eklenebilir ve çıkarılabilir. Bu yüzden basit queue'ya göre daha esnektir."
+  },
+  {
+    q: "Ağaç veri yapısında çocuk düğüm ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Bir düğümün doğrudan altında bulunan düğüm",
+      "Her zaman ağacın kökü",
+      "Hiç bağlantısı olmayan düğüm",
+      "Stack'in en üst elemanı",
+      "Queue'nun son elemanı"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "Ağaç Terimleri",
+    importance: 5,
+    explanation: "Ağaçta bir düğümün doğrudan altında bulunan düğümlere çocuk denir. Örneğin A düğümünün altında B ve C varsa B ve C, A'nın çocuklarıdır. A ise onların ebeveynidir."
+  },
+  {
+    q: "Ağaç veri yapısında ebeveyn düğüm ne anlama gelir?",
+    t: "mcq",
+    o: [
+      "Hiç çocuğu olmayan düğüm",
+      "Bir düğümün üstündeki ve ona doğrudan bağlı olan düğüm",
+      "Her zaman en küçük değer",
+      "Her zaman son eklenen düğüm",
+      "Dizinin son elemanı"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 6,
+    topic: "Ağaç Terimleri",
+    importance: 5,
+    explanation: "Ebeveyn düğüm, bir düğümün doğrudan üstündeki düğümdür. A düğümünün altında B varsa A, B'nin ebeveynidir. Bu kavram aile ağacı mantığıyla çok kolay anlaşılır."
+  },
+  {
+    q: "Ağaçta derinlik kavramı neyi ifade eder?",
+    t: "mcq",
+    o: [
+      "Düğümün kaç çocuğu olduğunu",
+      "Ağacın kaç yaprağı olduğunu",
+      "Bir düğümün kökten olan uzaklığını",
+      "Dizinin toplam uzunluğunu",
+      "Queue'nun doluluk oranını"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 6,
+    topic: "Derinlik",
+    importance: 4,
+    explanation: "Derinlik, bir düğümün kök düğümden ne kadar uzakta olduğunu gösterir. Kökün derinliği genellikle 0 kabul edilir. Kökün çocukları 1 derinliktedir. Bu kavram ağaç seviyelerini anlamak için önemlidir."
+  },
+  {
+    q: "Ağaçta yükseklik kavramı en doğru nasıl açıklanır?",
+    t: "mcq",
+    o: [
+      "Düğümün veri tipidir",
+      "Dizinin eleman sayısıdır",
+      "Stack'in kapasitesidir",
+      "Bir düğümden en uzak yaprağa kadar olan yol uzunluğudur",
+      "Queue'nun ilk elemanıdır"
+    ],
+    a: 3,
+    difficulty: "medium",
+    week: 6,
+    topic: "Yükseklik",
+    importance: 4,
+    explanation: "Yükseklik, bir düğümden aşağıya doğru en uzak yaprağa kadar olan yolun uzunluğudur. Ağacın yüksekliği, kökten en uzak yaprağa kadar olan mesafedir. Dengeli ağaçlarda yükseklik küçük tutulmaya çalışılır."
+  },
+  {
+    q: "Tam ikili ağaç yani Full Binary Tree için doğru ifade hangisidir?",
+    t: "mcq",
+    o: [
+      "Her düğümün mutlaka üç çocuğu vardır",
+      "Her düğümün ya iki çocuğu vardır ya da hiç çocuğu yoktur",
+      "Her düğüm yalnızca bir çocuk taşır",
+      "Tüm değerler rastgele yerleşir",
+      "Sadece queue ile çalışır"
+    ],
+    a: 1,
+    difficulty: "medium",
     week: 7,
-    topic: "İkili Ağaç",
-    importance: 5,
-    explanation: "İkili ağaçta her düğümün en fazla iki çocuğu olabilir. Bu çocuklar genellikle sol çocuk ve sağ çocuk olarak adlandırılır. Bir düğümün 0, 1 veya 2 çocuğu olabilir; 3 çocuğu olamaz."
+    topic: "Tam İkili Ağaç",
+    importance: 4,
+    explanation: "Full Binary Tree yapısında her düğüm ya iki çocuğa sahiptir ya da hiç çocuğu yoktur. Yani tek çocuklu düğüm bulunmaz. Bu özellik sınavlarda tanım sorusu olarak gelebilir."
   },
   {
-    q: "İkili arama ağacında yani BST'de küçük değerler nereye yerleştirilir?",
+    q: "BST'ye 50 kökünden sonra 30 değeri eklenirse 30 nereye gider?",
     t: "mcq",
     o: [
-      "Sol alt ağaca",
-      "Sağ alt ağaca",
-      "Kökün üstüne",
+      "50'nin sağına",
+      "50'nin üstüne",
+      "50'nin soluna",
       "Queue'nun sonuna",
-      "Stack'in en altına"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 8,
-    topic: "BST Kuralı",
-    importance: 5,
-    explanation: "BST yani ikili arama ağacında temel kural şudur: küçük değerler sol tarafa, büyük değerler sağ tarafa gider. Örneğin kök 50 ise 30 sola yerleşir çünkü 30, 50'den küçüktür."
-  },
-  {
-    q: "İkili arama ağacında yani BST'de büyük değerler nereye yerleştirilir?",
-    t: "mcq",
-    o: [
-      "Sol alt ağaca",
-      "Kökün üstüne",
-      "Queue'nun başına",
-      "Sağ alt ağaca",
       "Stack'in altına"
     ],
+    a: 2,
+    difficulty: "easy",
+    week: 8,
+    topic: "BST Ekleme",
+    importance: 5,
+    explanation: "BST'de küçük değerler sola, büyük değerler sağa gider. 30, 50'den küçük olduğu için 50'nin soluna yerleşir. Bu soru BST'nin temel kuralını ölçer."
+  },
+  {
+    q: "BST'ye 50 kökünden sonra 70 değeri eklenirse 70 nereye gider?",
+    t: "mcq",
+    o: [
+      "50'nin soluna",
+      "Kökün üstüne",
+      "Dizinin ilk indeksine",
+      "50'nin sağına",
+      "Stack'in en üstüne"
+    ],
     a: 3,
     difficulty: "easy",
     week: 8,
-    topic: "BST Kuralı",
+    topic: "BST Ekleme",
     importance: 5,
-    explanation: "BST'de büyük değerler sağ alt ağaca yerleştirilir. Örneğin kök 50 ise 70 sağ tarafa gider çünkü 70, 50'den büyüktür. Bu kural arama işlemini hızlandırır."
+    explanation: "70, 50'den büyük olduğu için BST kuralına göre sağ alt ağaca gider. BST'de sol taraf küçük, sağ taraf büyük değerleri tutar. Bu kural tüm alt ağaçlarda da geçerlidir."
   },
   {
-    q: "BST'de arama işlemi neden hızlı olabilir?",
+    q: "BST'de yaprak düğüm silinirken ne yapılır?",
     t: "mcq",
     o: [
-      "Çünkü her adımda yanlış taraf elenebilir",
-      "Çünkü hiç karşılaştırma yapılmaz",
-      "Çünkü tüm düğümler rastgele silinir",
-      "Çünkü sadece son eklenen elemana bakılır",
-      "Çünkü veriler bellekte mutlaka yan yana tutulur"
+      "Tüm ağaç silinir",
+      "Kök mutlaka değiştirilir",
+      "AVL rotasyonu zorunludur",
+      "Queue oluşturulur",
+      "Düğüm doğrudan silinebilir"
+    ],
+    a: 4,
+    difficulty: "medium",
+    week: 8,
+    topic: "BST Silme",
+    importance: 4,
+    explanation: "Yaprak düğümün çocuğu yoktur. Bu yüzden BST'de silinmesi en kolay durumdur. Yaprak düğüm doğrudan silinebilir; yerine çocuk bağlama gibi ek bir işlem gerekmez."
+  },
+  {
+    q: "BST'de tek çocuklu bir düğüm silinirse genel olarak ne yapılır?",
+    t: "mcq",
+    o: [
+      "Silinen düğümün yerine tek çocuğu bağlanır",
+      "Tüm sağ alt ağaç silinir",
+      "Kök her zaman NULL yapılır",
+      "Dizi sıralanır",
+      "Queue boşaltılır"
     ],
     a: 0,
     difficulty: "medium",
     week: 8,
-    topic: "BST Arama Mantığı",
-    importance: 5,
-    explanation: "BST'de aranan değer kökle karşılaştırılır. Aranan değer küçükse sola, büyükse sağa gidilir. Böylece her adımda ağacın bir tarafı elenir. Ağaç dengeliyse arama ortalama O(log n) olabilir."
+    topic: "BST Silme",
+    importance: 4,
+    explanation: "BST'de silinecek düğümün tek çocuğu varsa, o çocuk silinen düğümün yerine bağlanır. Böylece ağaç yapısı korunur. Bu, yaprak silmeden biraz daha dikkat isteyen bir durumdur."
   },
   {
-    q: "BST'de inorder dolaşma sırası hangisidir?",
+    q: "BST'de iki çocuklu düğüm silinirken neden daha dikkatli davranılır?",
     t: "mcq",
     o: [
-      "Kök - Sol - Sağ",
-      "Sol - Kök - Sağ",
-      "Sol - Sağ - Kök",
-      "Sağ - Kök - Sol",
-      "Kök - Sağ - Sol"
+      "Çünkü düğümün hiçbir bağlantısı yoktur",
+      "Çünkü yerine uygun bir değer getirilerek BST düzeni korunmalıdır",
+      "Çünkü stack boşalır",
+      "Çünkü queue doludur",
+      "Çünkü dizi boyutu sabittir"
     ],
     a: 1,
+    difficulty: "hard",
+    week: 8,
+    topic: "BST Silme",
+    importance: 4,
+    explanation: "İki çocuklu düğüm silinirken ağacın sol küçük sağ büyük kuralı bozulmamalıdır. Bu yüzden genellikle silinen düğümün yerine inorder successor veya predecessor getirilir. Amaç BST düzenini korumaktır."
+  },
+  {
+    q: "BST'de inorder traversal sonucu hangi özellik ortaya çıkar?",
+    t: "mcq",
+    o: [
+      "Elemanlar rastgele gelir",
+      "Kök en son silinir",
+      "Değerler küçükten büyüğe sıralı gelir",
+      "Queue FIFO çalışır",
+      "Stack LIFO çalışır"
+    ],
+    a: 2,
     difficulty: "medium",
     week: 8,
     topic: "Inorder Traversal",
     importance: 5,
-    explanation: "Inorder dolaşma sırası Sol - Kök - Sağ şeklindedir. BST üzerinde inorder dolaşma yapılırsa değerler küçükten büyüğe sıralı şekilde elde edilir. Bu yüzden inorder traversal finalde çok sorulabilir."
+    explanation: "BST'de inorder dolaşma Sol-Kök-Sağ şeklindedir. Çünkü sol küçük, kök orta, sağ büyük değerleri tutar. Bu yüzden inorder traversal sonucu değerler küçükten büyüğe sıralı olarak elde edilir."
   },
   {
-    q: "BST'de preorder dolaşma sırası hangisidir?",
+    q: "Aşağıdaki ağaçta kök 40, sol çocuk 20, sağ çocuk 60 ise preorder sırası nedir?",
     t: "mcq",
     o: [
-      "Kök - Sol - Sağ",
-      "Sol - Kök - Sağ",
-      "Sol - Sağ - Kök",
-      "Sağ - Sol - Kök",
-      "Sol - Kök - Sağ - Kök"
+      "20, 40, 60",
+      "20, 60, 40",
+      "60, 40, 20",
+      "40, 20, 60",
+      "40, 60, 20"
     ],
-    a: 0,
+    a: 3,
     difficulty: "medium",
     week: 8,
     topic: "Preorder Traversal",
     importance: 4,
-    explanation: "Preorder dolaşma sırası Kök - Sol - Sağ şeklindedir. Yani önce düğümün kendisi gezilir, sonra sol alt ağaç, sonra sağ alt ağaç gezilir."
+    explanation: "Preorder sırası Kök-Sol-Sağ şeklindedir. Kök 40 olduğu için önce 40 yazılır. Sonra sol çocuk 20, sonra sağ çocuk 60 gelir. Bu yüzden doğru sıra 40, 20, 60 olur."
   },
   {
-    q: "BST'de postorder dolaşma sırası hangisidir?",
+    q: "Aşağıdaki ağaçta kök 40, sol çocuk 20, sağ çocuk 60 ise postorder sırası nedir?",
     t: "mcq",
     o: [
-      "Kök - Sol - Sağ",
-      "Sol - Kök - Sağ",
-      "Sol - Sağ - Kök",
-      "Kök - Sağ - Sol",
-      "Sağ - Kök - Sol"
+      "20, 60, 40",
+      "40, 20, 60",
+      "20, 40, 60",
+      "60, 40, 20",
+      "40, 60, 20"
     ],
-    a: 2,
+    a: 0,
     difficulty: "medium",
     week: 8,
     topic: "Postorder Traversal",
     importance: 4,
-    explanation: "Postorder dolaşma sırası Sol - Sağ - Kök şeklindedir. Yani kök en son gezilir. Ağaç silme gibi işlemlerde önce çocukları işlemek gerektiği için postorder mantığı önemlidir."
+    explanation: "Postorder sırası Sol-Sağ-Kök şeklindedir. Önce sol çocuk 20, sonra sağ çocuk 60, en son kök 40 gezilir. Bu yüzden doğru sıra 20, 60, 40 olur."
   },
   {
-    q: "AVL ağacı ne işe yarar?",
+    q: "AVL ağacında balance factor yani denge faktörü nasıl düşünülür?",
     t: "mcq",
     o: [
-      "BST'yi dengede tutarak arama, ekleme ve silmeyi verimli hale getirir",
-      "Stack'i FIFO yapar",
-      "Queue'yu LIFO yapar",
-      "Dizideki indeksleri siler",
-      "Grafı tamamen rastgele hale getirir"
+      "Düğümün veri tipi olarak",
+      "Sol alt ağacın yüksekliği ile sağ alt ağacın yüksekliği arasındaki fark olarak",
+      "Queue'daki eleman sayısı olarak",
+      "Dizinin indeks değeri olarak",
+      "Stack'in en üst değeri olarak"
     ],
-    a: 0,
-    difficulty: "medium",
-    week: 9,
-    topic: "AVL Ağacı",
-    importance: 5,
-    explanation: "AVL ağacı, kendini dengede tutan bir ikili arama ağacıdır. Normal BST tek tarafa uzarsa arama yavaşlayabilir. AVL ağacı rotasyonlarla dengeyi korur ve işlemlerin O(log n) seviyesinde kalmasını hedefler."
-  },
-  {
-    q: "AVL ağacında denge bozulursa hangi işlem yapılır?",
-    t: "mcq",
-    o: [
-      "Rotasyon",
-      "Dequeue",
-      "Pop",
-      "Enqueue",
-      "Linear Search"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 9,
-    topic: "AVL Rotasyon",
-    importance: 5,
-    explanation: "AVL ağacında sol ve sağ alt ağaçların yükseklik farkı fazla olursa denge bozulur. Bu durumda rotasyon yapılır. Rotasyon, ağacı yeniden dengeli hale getiren döndürme işlemidir."
-  },
-  {
-    q: "AVL ağacında denge faktörü genellikle hangi değerler arasında olmalıdır?",
-    t: "mcq",
-    o: [
-      "-1, 0, 1",
-      "5, 6, 7",
-      "10, 20, 30",
-      "Sadece 100",
-      "Sadece -10"
-    ],
-    a: 0,
+    a: 1,
     difficulty: "hard",
     week: 9,
     topic: "AVL Denge Faktörü",
     importance: 4,
-    explanation: "AVL ağacında her düğüm için sol ve sağ alt ağaçların yükseklik farkı kontrol edilir. Denge faktörü genellikle -1, 0 veya 1 olmalıdır. Bu aralık dışına çıkarsa ağaç dengesiz kabul edilir ve rotasyon gerekebilir."
+    explanation: "AVL ağacında denge faktörü genellikle sol alt ağacın yüksekliği eksi sağ alt ağacın yüksekliği şeklinde düşünülür. Değer -1, 0 veya 1 ise düğüm dengeli kabul edilir. Bunun dışına çıkarsa rotasyon gerekebilir."
   },
   {
-    q: "B ağacı genellikle hangi amaçla kullanılır?",
+    q: "AVL ağacında LL dengesizliği için genellikle hangi işlem uygulanır?",
     t: "mcq",
     o: [
-      "Büyük verilerde ve disk tabanlı sistemlerde hızlı arama yapmak için",
-      "Stack'ten eleman çıkarmak için",
-      "Sadece küçük dizileri yazdırmak için",
-      "Sadece kuyruktaki ilk elemanı silmek için",
-      "Sadece grafın düğüm derecesini bulmak için"
+      "Sol rotasyon",
+      "Queue temizleme",
+      "Sağ rotasyon",
+      "Bubble Sort",
+      "Linear Search"
     ],
-    a: 0,
-    difficulty: "medium",
+    a: 2,
+    difficulty: "hard",
     week: 9,
-    topic: "B Ağacı",
-    importance: 4,
-    explanation: "B ağacı, büyük veri kümelerinde ve disk tabanlı sistemlerde kullanılan dengeli, çok dallı bir ağaç yapısıdır. Veritabanı indeksleme ve dosya sistemlerinde tercih edilir çünkü daha az disk erişimiyle hızlı arama yapılmasına yardım eder."
+    topic: "AVL Rotasyonları",
+    importance: 3,
+    explanation: "LL durumu, sol tarafın soluna ekleme yapılarak ağacın sol-heavy hale gelmesiyle oluşur. Bu durumda genellikle sağ rotasyon uygulanır. Rotasyonun amacı ağacın yüksekliğini dengelemektir."
   },
   {
-    q: "Max Heap yapısında kökte hangi eleman bulunur?",
+    q: "AVL ağacında RR dengesizliği için genellikle hangi işlem uygulanır?",
     t: "mcq",
     o: [
-      "En büyük eleman",
-      "En küçük eleman",
-      "En son eklenen eleman",
-      "İlk eklenen eleman",
-      "Rastgele bir eleman"
+      "Sağ rotasyon",
+      "BFS",
+      "DFS",
+      "Sol rotasyon",
+      "Selection Sort"
     ],
-    a: 0,
-    difficulty: "medium",
-    week: 7,
-    topic: "Heap",
-    importance: 4,
-    explanation: "Max Heap yapısında her düğüm çocuklarından büyük veya eşit kabul edilir. Bu yüzden en büyük eleman her zaman kökte bulunur. Min Heap'te ise en küçük eleman köktedir."
+    a: 3,
+    difficulty: "hard",
+    week: 9,
+    topic: "AVL Rotasyonları",
+    importance: 3,
+    explanation: "RR durumu, sağ tarafın sağına ekleme yapılınca oluşur. Ağaç sağ tarafa doğru ağırlaşır. Bu durumda genellikle sol rotasyon yapılır ve ağaç tekrar dengelenir."
   },
   {
-    q: "Min Heap yapısında kökte hangi eleman bulunur?",
+    q: "B ağacının veritabanlarında kullanılmasının temel nedeni hangisidir?",
     t: "mcq",
     o: [
-      "En büyük eleman",
-      "En küçük eleman",
-      "Her zaman son eklenen eleman",
-      "Her zaman ilk silinen eleman",
-      "Her zaman ortadaki eleman"
+      "Düğüm derecesini sıfırlaması",
+      "Disk erişimini azaltarak büyük verilerde hızlı arama sağlaması",
+      "Stack'i FIFO yapması",
+      "Queue'yu LIFO yapması",
+      "Dizileri tamamen silmesi"
     ],
     a: 1,
     difficulty: "medium",
+    week: 9,
+    topic: "B Ağacı Kullanımı",
+    importance: 4,
+    explanation: "B ağaçları çok dallı ve dengeli yapılardır. Büyük veri kümelerinde, özellikle veritabanı ve dosya sistemlerinde daha az disk erişimiyle arama yapılmasına yardım eder. Bu yüzden indeksleme sistemlerinde önemlidir."
+  },
+  {
+    q: "Red-Black Tree için aşağıdakilerden hangisi doğru bir özelliktir?",
+    t: "mcq",
+    o: [
+      "Her düğümün mutlaka üç çocuğu vardır",
+      "Her zaman queue mantığıyla çalışır",
+      "Düğümler kırmızı veya siyah renklidir",
+      "Tüm düğümler yapraktır",
+      "Sadece dizi sıralar"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 9,
+    topic: "Red-Black Tree",
+    importance: 3,
+    explanation: "Red-Black Tree dengeli ağaç türlerinden biridir. Her düğüm kırmızı veya siyah renklidir. Belirli renk kuralları sayesinde ağaç dengeli kalır ve işlemler verimli yapılabilir."
+  },
+  {
+    q: "Heap veri yapısında en büyük veya en küçük elemana hızlı erişilmesinin nedeni nedir?",
+    t: "mcq",
+    o: [
+      "Tüm elemanların rastgele tutulması",
+      "Elemanların graf düğümü olması",
+      "Kök düğümde öncelikli değerin tutulması",
+      "Stack'in boş olması",
+      "Queue'nun dolu olması"
+    ],
+    a: 2,
+    difficulty: "medium",
     week: 7,
     topic: "Heap",
     importance: 4,
-    explanation: "Min Heap yapısında her düğüm çocuklarından küçük veya eşit kabul edilir. Bu yüzden en küçük eleman kökte yer alır. Öncelikli kuyruklarda heap mantığı sık kullanılır."
+    explanation: "Heap yapısında Max Heap ise en büyük eleman, Min Heap ise en küçük eleman kökte tutulur. Bu yüzden en öncelikli elemana erişmek hızlıdır. Heap, öncelikli kuyruk ve Heap Sort için önemlidir."
   },
   {
-    q: "Linear Search yani doğrusal arama nasıl çalışır?",
+    q: "Linear Search hangi durumda özellikle tercih edilebilir?",
     t: "mcq",
     o: [
-      "Elemanları baştan sona tek tek kontrol eder",
-      "Veriyi her adımda ikiye böler",
-      "Her zaman en küçük elemanı seçer",
-      "Yan yana elemanları yer değiştirir",
-      "Önce kökü sonra sol tarafı gezer"
+      "Veri mutlaka sıralıysa ve çok büyükse",
+      "Veri sıralı değilse ve basit arama gerekiyorsa",
+      "Sadece BST içinde arama yapılacaksa",
+      "Sadece heap kökünü bulmak için",
+      "Sadece AVL rotasyonu yapmak için"
     ],
-    a: 0,
+    a: 1,
     difficulty: "easy",
     week: 12,
     topic: "Linear Search",
     importance: 5,
-    explanation: "Linear Search en basit arama yöntemidir. Aranan değer bulunana kadar elemanlar baştan sona tek tek kontrol edilir. Veri sıralı olmak zorunda değildir. En kötü durumda tüm elemanlara bakılması gerekir, bu yüzden karmaşıklığı O(n)'dir."
+    explanation: "Linear Search, verinin sıralı olmasını gerektirmez. Elemanları baştan sona tek tek kontrol eder. Basit ama büyük veri için yavaş olabilir. En kötü durumda tüm elemanlara bakar ve O(n) çalışır."
   },
   {
-    q: "Binary Search yani ikili arama için en önemli şart hangisidir?",
+    q: "Binary Search işleminde aranan değer ortadaki değerden küçükse ne yapılır?",
     t: "mcq",
     o: [
-      "Verinin sıralı olması",
-      "Verinin mutlaka stack içinde olması",
-      "Verinin mutlaka graf olması",
-      "Verinin tamamen rastgele olması",
-      "Verinin sadece metinlerden oluşması"
+      "Sağ yarıya gidilir",
+      "Arama tamamen durdurulur",
+      "Sol yarıda aramaya devam edilir",
+      "Dizi rastgele karıştırılır",
+      "Stack'e push yapılır"
     ],
-    a: 0,
-    difficulty: "easy",
+    a: 2,
+    difficulty: "medium",
     week: 12,
     topic: "Binary Search",
     importance: 5,
-    explanation: "Binary Search sıralı veride çalışır. Ortadaki elemana bakar, aranan değer küçükse sol yarıya, büyükse sağ yarıya geçer. Veri sıralı değilse hangi tarafa gidileceği bilinemeyeceği için binary search doğru çalışmaz."
+    explanation: "Binary Search sıralı dizide çalışır. Ortadaki değer kontrol edilir. Aranan değer ortadaki değerden küçükse sağ taraf elenir ve sol yarıda aramaya devam edilir. Bu yüzden her adımda arama alanı küçülür."
   },
   {
-    q: "Binary Search neden Linear Search'e göre daha hızlıdır?",
+    q: "Binary Search işleminde aranan değer ortadaki değerden büyükse ne yapılır?",
     t: "mcq",
     o: [
-      "Çünkü her adımda arama alanını yaklaşık yarıya indirir",
-      "Çünkü hiç karşılaştırma yapmaz",
-      "Çünkü sadece ilk elemana bakar",
-      "Çünkü verileri rastgele siler",
-      "Çünkü sadece bağlı listede çalışır"
+      "Sol yarıya gidilir",
+      "Queue boşaltılır",
+      "Arama hatalı kabul edilir",
+      "Sağ yarıda aramaya devam edilir",
+      "Dizi tamamen silinir"
     ],
-    a: 0,
+    a: 3,
     difficulty: "medium",
     week: 12,
-    topic: "Binary Search Mantığı",
+    topic: "Binary Search",
     importance: 5,
-    explanation: "Binary Search her adımda arama alanını ikiye böler. Örneğin 100 elemanda arama yaparken tek tek 100 elemana bakmak yerine her adımda yarısını eler. Bu yüzden karmaşıklığı O(log n)'dir. Ancak veri sıralı olmalıdır."
+    explanation: "Sıralı dizide ortadaki değer aranan değerden küçükse, aranan değer sağ tarafta olabilir. Bu yüzden sol taraf elenir ve sağ yarıda aramaya devam edilir. Binary Search bu mantıkla hızlı çalışır."
   },
   {
-    q: "Jump Search hangi veri türünde daha anlamlıdır?",
+    q: "Sıralı olmayan bir dizide Binary Search uygulamak neden doğru değildir?",
     t: "mcq",
     o: [
-      "Sıralı dizilerde",
-      "Sırasız stack yapısında",
-      "Rastgele graf yapısında",
-      "Sadece ağaç kökünde",
-      "Sadece tek elemanlı listede"
+      "Çünkü Binary Search sadece stack ile çalışır",
+      "Çünkü hangi yarının eleneceğine doğru karar verilemez",
+      "Çünkü Binary Search hiç karşılaştırma yapmaz",
+      "Çünkü Binary Search sadece graf üzerinde çalışır",
+      "Çünkü Binary Search sadece ağaç siler"
     ],
-    a: 0,
+    a: 1,
     difficulty: "medium",
     week: 12,
-    topic: "Jump Search",
-    importance: 3,
-    explanation: "Jump Search sıralı dizilerde belirli bloklar halinde sıçrayarak arama yapar. Örneğin belirli aralıklarla ileri atlar, aranan değerin bulunabileceği bloğu tespit edince o blok içinde doğrusal arama yapar."
+    topic: "Binary Search Şartı",
+    importance: 5,
+    explanation: "Binary Search, ortadaki değere bakarak aranan değerin solda mı sağda mı olduğunu anlamaya çalışır. Bu karar ancak veri sıralıysa doğru verilebilir. Veri sıralı değilse yanlış taraf elenebilir."
   },
   {
-    q: "Bubble Sort algoritmasının temel mantığı hangisidir?",
+    q: "Bubble Sort'ta bir tur sonunda genellikle hangi eleman doğru yerine yaklaşır?",
     t: "mcq",
     o: [
-      "Yan yana elemanları karşılaştırıp büyük olanı sona doğru taşımak",
-      "Her zaman ortadaki elemanı seçmek",
-      "Kökten başlayıp sola gitmek",
-      "İlk giren elemanı ilk çıkarmak",
-      "Son giren elemanı ilk çıkarmak"
+      "En küçük eleman her zaman başa gelir",
+      "Ortadaki eleman silinir",
+      "En büyük eleman sona doğru gider",
+      "Kök düğüm değişir",
+      "Queue'nun front elemanı değişmez"
     ],
-    a: 0,
-    difficulty: "easy",
+    a: 2,
+    difficulty: "medium",
     week: 10,
     topic: "Bubble Sort",
     importance: 5,
-    explanation: "Bubble Sort yan yana duran iki elemanı karşılaştırır. Eğer soldaki eleman sağdakinden büyükse yer değiştirir. Böylece büyük elemanlar her turda dizinin sonuna doğru gider. Basittir ama büyük veri için yavaştır."
+    explanation: "Bubble Sort yan yana elemanları karşılaştırır. Büyük olan eleman sağa doğru ilerler. Bu yüzden her tur sonunda büyük elemanlardan biri dizinin sonuna yerleşir. Bu mantık kabarcık gibi sona çıkma benzetmesiyle anlatılır."
   },
   {
-    q: "Selection Sort algoritmasının temel mantığı hangisidir?",
+    q: "Selection Sort'ta her turda yapılan ana işlem nedir?",
     t: "mcq",
     o: [
-      "Her turda en küçük elemanı seçip doğru konuma yerleştirmek",
-      "Yan yana elemanları sadece bir kez karşılaştırmak",
-      "Veriyi her adımda ikiye bölmek",
-      "Queue'dan eleman çıkarmak",
-      "Stack'e eleman eklemek"
+      "Ortadaki elemanı pivot seçmek",
+      "En küçük elemanı bulup doğru konuma koymak",
+      "Son giren elemanı çıkarmak",
+      "İlk giren elemanı çıkarmak",
+      "Düğüm derecesi hesaplamak"
     ],
-    a: 0,
+    a: 1,
     difficulty: "easy",
     week: 11,
     topic: "Selection Sort",
     importance: 5,
-    explanation: "Selection Sort, sıralanmamış bölümdeki en küçük elemanı bulur ve dizinin başındaki doğru konuma yerleştirir. Adı seçmeli sıralamadır çünkü her turda uygun eleman seçilir. Tüm durumlarda genellikle O(n²) çalışır."
+    explanation: "Selection Sort'ta sıralanmamış bölümdeki en küçük eleman bulunur ve sıralı bölümün sonuna yerleştirilir. Yani algoritma her turda seçim yapar. Bu yüzden adı seçmeli sıralamadır."
   },
   {
-    q: "Insertion Sort algoritması hangi günlük örneğe benzetilebilir?",
+    q: "Insertion Sort özellikle hangi durumda daha iyi performans gösterebilir?",
     t: "mcq",
     o: [
-      "Eldeki kartları sırayla doğru yere yerleştirmeye",
-      "Banka sırasına",
-      "Tabak yığınına",
-      "Şehir haritasına",
-      "Telefon kablosuna"
+      "Veri tamamen rastgele ve çok büyükse",
+      "Veri neredeyse sıralıysa",
+      "Veri sadece graf düğümlerinden oluşuyorsa",
+      "Veri stack içinde saklanıyorsa",
+      "Veri mutlaka B ağacıysa"
     ],
-    a: 0,
-    difficulty: "easy",
-    week: 13,
-    topic: "Insertion Sort",
-    importance: 5,
-    explanation: "Insertion Sort, eldeki iskambil kartlarını sıralamaya benzer. Her yeni eleman, daha önce sıralanmış bölüm içinde doğru yere yerleştirilir. Küçük veya neredeyse sıralı verilerde kullanışlı olabilir."
-  },
-  {
-    q: "Bubble Sort, Selection Sort ve Insertion Sort için genel olarak hangi karmaşıklık sık görülür?",
-    t: "mcq",
-    o: ["O(1)", "O(log n)", "O(n)", "O(n²)", "O(0)"],
-    a: 3,
+    a: 1,
     difficulty: "medium",
     week: 13,
-    topic: "Sıralama Karmaşıklığı",
-    importance: 5,
-    explanation: "Bubble Sort, Selection Sort ve Insertion Sort temel sıralama algoritmalarıdır. Genellikle iç içe karşılaştırma veya tekrar eden geçişler yaptıkları için ortalama veya kötü durumda O(n²) karmaşıklığa sahiptirler. Bu yüzden büyük veri kümelerinde verimsiz olabilirler."
+    topic: "Insertion Sort",
+    importance: 4,
+    explanation: "Insertion Sort, yeni elemanı sıralı bölümde doğru yere yerleştirir. Eğer veri zaten büyük ölçüde sıralıysa az sayıda kaydırma yapılır. Bu nedenle küçük veya neredeyse sıralı verilerde iyi olabilir."
   },
   {
-    q: "Merge Sort hangi temel yaklaşımla çalışır?",
+    q: "Merge Sort'un temel avantajı hangisidir?",
     t: "mcq",
     o: [
-      "Böl ve fethet",
-      "Son giren ilk çıkar",
-      "İlk giren ilk çıkar",
-      "Sol küçük sağ büyük",
-      "Yan yana tek karşılaştırma"
+      "Her durumda rastgele çalışması",
+      "Büyük verilerde temel O(n²) sıralamalara göre daha verimli olabilmesi",
+      "Sadece stack'te çalışması",
+      "Verinin sıralı olmasını şart koşmaması ve hiç bellek kullanmaması",
+      "Sadece queue elemanlarını silmesi"
     ],
-    a: 0,
+    a: 1,
     difficulty: "medium",
     week: 13,
     topic: "Merge Sort",
     importance: 4,
-    explanation: "Merge Sort, böl ve fethet mantığıyla çalışır. Dizi küçük parçalara bölünür, sonra bu parçalar sıralı şekilde birleştirilir. Temel sıralamalara göre büyük verilerde daha verimli olabilir."
+    explanation: "Merge Sort böl ve fethet mantığıyla çalışır. Dizi parçalara bölünür ve parçalar sıralı olarak birleştirilir. Karmaşıklığı genellikle O(n log n) kabul edildiği için büyük veri kümelerinde Bubble veya Selection Sort'a göre daha iyi olabilir."
   },
   {
-    q: "Quick Sort algoritmasında kullanılan temel kavram hangisidir?",
+    q: "Quick Sort'ta pivot ne işe yarar?",
     t: "mcq",
-    o: ["Pivot", "Front", "Rear", "Root only", "Leaf only"],
-    a: 0,
+    o: [
+      "Queue'nun başını gösterir",
+      "Diziyi küçükler ve büyükler olarak ayırmak için referans eleman olur",
+      "Stack'teki en üst elemanı siler",
+      "Ağacın yapraklarını sayar",
+      "Grafın komşuluk matrisini oluşturur"
+    ],
+    a: 1,
     difficulty: "medium",
     week: 13,
     topic: "Quick Sort",
     importance: 4,
-    explanation: "Quick Sort, pivot adı verilen bir eleman seçer. Elemanları pivotun küçükleri ve büyükleri olarak ayırır. Sonra bu parçaları tekrar sıralar. Ortalama durumda oldukça hızlı bir sıralama algoritmasıdır."
+    explanation: "Quick Sort'ta pivot bir referans elemandır. Diğer elemanlar pivotun küçükleri ve büyükleri olarak ayrılır. Sonra aynı işlem alt parçalar için devam eder. Pivot seçimi performansı etkileyebilir."
   },
   {
-    q: "Graf veri yapısı en doğru şekilde nasıl tanımlanır?",
+    q: "Graf teorisinde izole yani ayrık düğüm ne demektir?",
     t: "mcq",
     o: [
-      "Düğümlerden ve bu düğümler arasındaki kenarlardan oluşan yapı",
-      "Sadece yan yana duran sayı dizisi",
-      "Son girenin ilk çıktığı yapı",
-      "İlk girenin ilk çıktığı yapı",
-      "Sadece kökü olan ama bağlantısı olmayan yapı"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 14,
-    topic: "Graf",
-    importance: 5,
-    explanation: "Graf, düğümlerden ve bu düğümleri birbirine bağlayan kenarlardan oluşur. Şehirler düğüm, şehirler arasındaki yollar kenar olarak düşünülebilir. Sosyal ağlarda kişiler düğüm, arkadaşlık ilişkileri kenar olabilir."
-  },
-  {
-    q: "Graf yapısında düğüm yani vertex neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Graf üzerindeki nokta veya varlık",
-      "İki nokta arasındaki bağlantı",
-      "Stack'ten eleman çıkarma işlemi",
-      "Queue'ya eleman ekleme işlemi",
-      "Dizinin indeks numarası"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 14,
-    topic: "Graf Düğümü",
-    importance: 5,
-    explanation: "Düğüm, graf üzerindeki nokta veya varlıktır. Örneğin şehir haritasında şehirler düğümdür. Sosyal ağda kişiler düğümdür. Düğümleri birbirine bağlayan çizgilere ise kenar denir."
-  },
-  {
-    q: "Graf yapısında kenar yani edge neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "İki düğüm arasındaki bağlantı",
-      "Grafın en üst düğümü",
-      "Hiç çocuğu olmayan düğüm",
-      "Dizinin ilk elemanı",
-      "Stack'in en üst elemanı"
-    ],
-    a: 0,
-    difficulty: "easy",
-    week: 14,
-    topic: "Graf Kenarı",
-    importance: 5,
-    explanation: "Kenar, iki düğüm arasındaki bağlantıdır. Şehir örneğinde şehirler arasındaki yol kenardır. Sosyal ağ örneğinde iki kişi arasındaki arkadaşlık ilişkisi kenar gibi düşünülebilir."
-  },
-  {
-    q: "Graf yapısında komşu düğüm ne demektir?",
-    t: "mcq",
-    o: [
-      "Bir düğüme doğrudan kenarla bağlı olan düğüm",
-      "Her zaman grafın en uzak düğümü",
-      "Hiç bağlantısı olmayan düğüm",
-      "Stack'te en üstteki düğüm",
-      "Dizideki son eleman"
+      "Hiçbir kenarla başka düğüme bağlı olmayan düğüm",
+      "Her düğüme bağlı olan düğüm",
+      "Grafın en yüksek dereceli düğümü",
+      "Queue'nun başındaki düğüm",
+      "Stack'in en üstündeki düğüm"
     ],
     a: 0,
     difficulty: "medium",
     week: 14,
-    topic: "Komşu Düğüm",
-    importance: 5,
-    explanation: "Komşu düğüm, bir düğüme doğrudan bağlı olan düğümdür. Örneğin A ile B arasında çizgi varsa B, A'nın komşusudur. BFS ve DFS anlatılırken komşu kavramı çok önemlidir."
-  },
-  {
-    q: "Graf yapısında düğüm derecesi neyi ifade eder?",
-    t: "mcq",
-    o: [
-      "Bir düğümün bağlantı veya komşu sayısını",
-      "Grafın toplam renk sayısını",
-      "Dizinin uzunluğunu",
-      "Stack'teki son elemanı",
-      "Queue'daki ilk elemanı"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 14,
-    topic: "Düğüm Derecesi",
-    importance: 5,
-    explanation: "Düğüm derecesi, bir düğümün kaç bağlantısı olduğunu gösterir. Eğer A düğümü B ve C düğümlerine bağlıysa A'nın derecesi 2'dir. Yani derece, düğümün komşu sayısı gibi düşünülebilir."
-  },
-  {
-    q: "Komşuluk matrisi neyi gösterir?",
-    t: "mcq",
-    o: [
-      "Graf düğümleri arasında bağlantı olup olmadığını 0 ve 1 ile gösterir",
-      "Stack'teki elemanların en üstten alta sırasını gösterir",
-      "Queue'daki elemanların bekleme süresini gösterir",
-      "Dizinin sadece ilk elemanını gösterir",
-      "BST'deki sadece kök düğümü gösterir"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 14,
-    topic: "Komşuluk Matrisi",
-    importance: 5,
-    explanation: "Komşuluk matrisi, graf bağlantılarını tablo şeklinde gösterir. İki düğüm arasında bağlantı varsa 1, bağlantı yoksa 0 yazılır. Bu yöntem özellikle küçük graflarda bağlantıları düzenli göstermek için kullanılır."
-  },
-  {
-    q: "Basit graf hangi özelliğe sahiptir?",
-    t: "mcq",
-    o: [
-      "Paralel kenarı ve döngüsü olmayan yönsüz graf olması",
-      "Her düğümün kendisine bağlı olması",
-      "Her iki düğüm arasında birden fazla kenar bulunması",
-      "Sadece stack ile çalışması",
-      "Sadece queue ile çalışması"
-    ],
-    a: 0,
-    difficulty: "medium",
-    week: 14,
-    topic: "Graf Türleri",
+    topic: "Graf Terimleri",
     importance: 4,
-    explanation: "Basit graf, paralel kenarı ve döngüsü olmayan graf türüdür. Paralel kenar, aynı iki düğüm arasında birden fazla bağlantı olmasıdır. Döngü ise bir kenarın başladığı ve bittiği düğümün aynı olmasıdır."
+    explanation: "Ayrık veya izole düğüm, başka hiçbir düğüme bağlı olmayan düğümdür. Yani derecesi 0'dır. Graf sorularında bağlantısı olmayan tek başına duran düğüm olarak görülebilir."
   },
   {
-    q: "Graf üzerinde BFS algoritması hangi veri yapısını kullanır?",
+    q: "Graf teorisinde paralel kenar ne demektir?",
     t: "mcq",
-    o: ["Stack", "Queue", "Dizi indeksini", "AVL rotasyonunu", "Selection Sort'u"],
+    o: [
+      "Bir düğümün kendisine dönmesi",
+      "İki düğüm arasında birden fazla kenar bulunması",
+      "Hiç bağlantısı olmayan düğüm",
+      "Ağacın kök düğümü",
+      "Dizinin ilk elemanı"
+    ],
     a: 1,
     difficulty: "medium",
     week: 14,
-    topic: "BFS",
-    importance: 5,
-    explanation: "BFS, Queue yani kuyruk kullanır. Çünkü BFS yakından uzağa doğru arama yapar. Önce başlangıç noktasına doğrudan bağlı olan düğümler ele alınır, sonra onların bağlı olduğu düğümlere geçilir. Bu sıra mantığı FIFO yani kuyruk mantığına uygundur."
+    topic: "Paralel Kenar",
+    importance: 4,
+    explanation: "Paralel kenar, aynı iki düğüm arasında birden fazla bağlantı olmasıdır. Basit graf yapısında paralel kenar bulunmaz. Çoklu graf ise paralel kenar içerebilir."
   },
   {
-    q: "Graf üzerinde DFS algoritması hangi veri yapısını kullanır?",
-    t: "mcq",
-    o: ["Stack", "Queue", "Bubble Sort", "B ağacı", "Komşuluk matrisi"],
-    a: 0,
-    difficulty: "medium",
-    week: 14,
-    topic: "DFS",
-    importance: 5,
-    explanation: "DFS, Stack yani yığın mantığını kullanır. DFS bir yoldan gidebildiği kadar derine gider, yol bitince geri döner. Bu geri dönme mantığı stack yapısına uygundur. Stack son gidilen yerden geri dönmeyi kolaylaştırır."
-  },
-  {
-    q: "BFS algoritmasının sıfırdan en anlaşılır açıklaması hangisidir?",
+    q: "Graf teorisinde döngü yani loop ne demektir?",
     t: "mcq",
     o: [
-      "Başlangıç noktasına yakın olanları önce kontrol edip sonra daha uzaklara geçer",
-      "Her zaman en büyük elemanı köke taşır",
-      "Son giren elemanı ilk çıkarır",
-      "Diziyi yan yana karşılaştırarak sıralar",
-      "Küçük değerleri sola büyük değerleri sağa koyar"
+      "İki farklı düğüm arasında bağlantı olması",
+      "Grafın tamamen bağlantısız olması",
+      "Bir kenarın başladığı ve bittiği düğümün aynı olması",
+      "Stack'in boş olması",
+      "Queue'nun dolu olması"
     ],
-    a: 0,
+    a: 2,
+    difficulty: "medium",
+    week: 14,
+    topic: "Graf Döngüsü",
+    importance: 4,
+    explanation: "Döngü, bir kenarın aynı düğümden başlayıp aynı düğüme dönmesidir. Yani düğüm kendisine bağlıdır. Pseudograf gibi bazı graf türlerinde döngü bulunabilir."
+  },
+  {
+    q: "Yönlü graf ile yönsüz graf arasındaki fark hangisidir?",
+    t: "mcq",
+    o: [
+      "Yönsüz graf hiç kenar içermez",
+      "Yönlü grafta kenarların gidiş yönü vardır",
+      "Yönlü graf sadece dizilerde kullanılır",
+      "Yönsüz graf sadece stack mantığıyla çalışır",
+      "İkisinde de bağlantı kavramı yoktur"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 14,
+    topic: "Graf Türleri",
+    importance: 5,
+    explanation: "Yönlü grafta bağlantıların yönü vardır. A'dan B'ye bağlantı olması B'den A'ya bağlantı olduğu anlamına gelmeyebilir. Yönsüz grafta ise bağlantı iki yönlü kabul edilir."
+  },
+  {
+    q: "Ağırlıklı graf ne demektir?",
+    t: "mcq",
+    o: [
+      "Tüm düğümlerin aynı renkte olması",
+      "Her düğümün çocuk sayısının iki olması",
+      "Kenarların üzerinde maliyet, mesafe veya ağırlık değeri bulunması",
+      "Grafın hiç kenar içermemesi",
+      "Grafın sadece stack ile gezilmesi"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 14,
+    topic: "Ağırlıklı Graf",
+    importance: 4,
+    explanation: "Ağırlıklı grafta kenarların üzerinde mesafe, maliyet, süre gibi değerler bulunur. Örneğin şehirler arası yolları gösteren grafta kenar ağırlığı kilometre olabilir. En kısa yol problemlerinde bu değerler önemlidir."
+  },
+  {
+    q: "Komşuluk matrisinde iki düğüm arasında bağlantı varsa genellikle hangi değer yazılır?",
+    t: "mcq",
+    o: ["0", "NULL", "1", "-1", "FIFO"],
+    a: 2,
+    difficulty: "easy",
+    week: 14,
+    topic: "Komşuluk Matrisi",
+    importance: 5,
+    explanation: "Komşuluk matrisinde bağlantı varsa genellikle 1 yazılır. Bağlantı yoksa 0 yazılır. Bu tablo, hangi düğümün hangi düğüme bağlı olduğunu görmeyi kolaylaştırır."
+  },
+  {
+    q: "Komşuluk matrisinde iki düğüm arasında bağlantı yoksa genellikle hangi değer yazılır?",
+    t: "mcq",
+    o: ["1", "LIFO", "FIFO", "0", "Root"],
+    a: 3,
+    difficulty: "easy",
+    week: 14,
+    topic: "Komşuluk Matrisi",
+    importance: 5,
+    explanation: "Komşuluk matrisinde bağlantı yoksa 0 yazılır. Örneğin A ile C arasında kenar yoksa A satırı C sütununda 0 görülebilir. Bağlantı varsa 1 yazılır."
+  },
+  {
+    q: "BFS algoritması hangi mantıkla çalışır?",
+    t: "mcq",
+    o: [
+      "Bir yoldan sonuna kadar gidip geri dönerek",
+      "Yakındaki düğümleri önce kontrol ederek",
+      "Her zaman en büyük elemanı sona taşıyarak",
+      "Sadece kök düğümü silerek",
+      "Diziyi pivotla bölerek"
+    ],
+    a: 1,
     difficulty: "medium",
     week: 14,
     topic: "BFS Mantığı",
     importance: 5,
-    explanation: "BFS'yi yakından uzağa arama gibi düşünebilirsin. Bir noktadan başlar, önce o noktaya doğrudan bağlı olanları kontrol eder, sonra onların bağlı olduklarına geçer. Bu yüzden genişlik öncelikli arama denir ve Queue kullanır."
+    explanation: "BFS, başlangıç noktasına yakın düğümleri önce kontrol eder. Önce doğrudan bağlı olanlara, sonra onların bağlı olduklarına geçer. Bu yüzden genişlik öncelikli arama denir ve Queue kullanır."
   },
   {
-    q: "DFS algoritmasının sıfırdan en anlaşılır açıklaması hangisidir?",
+    q: "DFS algoritması hangi mantıkla çalışır?",
     t: "mcq",
     o: [
-      "Bir yoldan gidebildiği kadar derine gidip yol bitince geri döner",
-      "İlk gelen elemanı ilk çıkarır",
-      "Her zaman yan yana iki elemanı karşılaştırır",
-      "Her zaman en küçük elemanı seçer",
-      "Sadece dizide indeksle arama yapar"
+      "Yakındaki tüm düğümleri aynı anda yazdırarak",
+      "Queue'ya göre ilk geleni çıkararak",
+      "Bir yoldan gidebildiği kadar derine gidip sonra geri dönerek",
+      "Diziyi küçükten büyüğe sıralayarak",
+      "Kenar ağırlıklarını sıfırlayarak"
     ],
-    a: 0,
+    a: 2,
     difficulty: "medium",
     week: 14,
     topic: "DFS Mantığı",
     importance: 5,
-    explanation: "DFS'yi labirentte bir yola girip sonuna kadar gitmek gibi düşünebilirsin. Yol bitince geri döner ve başka yola girer. Bu yüzden derinlik öncelikli arama denir. Geri dönme mantığı nedeniyle Stack kullanır."
+    explanation: "DFS, bir yol seçer ve o yolda gidebildiği kadar derine gider. Yol biterse geri dönüp başka yolu dener. Bu yüzden derinlik öncelikli arama denir ve Stack mantığıyla ilişkilidir."
   },
   {
-    q: "BFS ve DFS arasındaki temel fark hangisidir?",
+    q: "BFS algoritmasının Queue kullanmasının nedeni hangisidir?",
     t: "mcq",
     o: [
-      "BFS yakından uzağa gider ve Queue kullanır; DFS bir yoldan derine gider ve Stack kullanır",
-      "BFS Stack kullanır, DFS Queue kullanır",
-      "BFS sadece dizileri sıralar, DFS sadece sayıları toplar",
-      "BFS sadece AVL'de, DFS sadece B ağacında kullanılır",
-      "BFS ve DFS arasında hiçbir fark yoktur"
+      "En son görülen düğümü önce işlemek istemesi",
+      "İlk görülen düğümleri önce işlemek istemesi",
+      "Küçük değerleri sola koyması",
+      "Büyük değerleri sağa koyması",
+      "Pivot seçmesi"
     ],
-    a: 0,
+    a: 1,
     difficulty: "hard",
     week: 14,
-    topic: "BFS DFS Farkı",
+    topic: "BFS Queue İlişkisi",
     importance: 5,
-    explanation: "BFS genişlik öncelikli aramadır; yakın düğümlerden başlayarak ilerler ve Queue kullanır. DFS derinlik öncelikli aramadır; bir yoldan sonuna kadar gider ve geri döner, bu yüzden Stack kullanır. Finalde en sık sorulabilecek farklardan biridir."
+    explanation: "BFS, önce görülen düğümleri önce işler. Bu FIFO mantığıdır. Queue da FIFO çalışır. Bu yüzden BFS algoritması kuyruk veri yapısıyla anlatılır."
+  },
+  {
+    q: "DFS algoritmasının Stack kullanmasının nedeni hangisidir?",
+    t: "mcq",
+    o: [
+      "İlk görülen düğümü önce işlemek istemesi",
+      "Veriyi küçükten büyüğe sıralaması",
+      "Son gidilen noktadan geri dönme mantığına ihtiyaç duyması",
+      "Her düğümü iki çocukla sınırlaması",
+      "Komşuluk matrisinde 0 yazması"
+    ],
+    a: 2,
+    difficulty: "hard",
+    week: 14,
+    topic: "DFS Stack İlişkisi",
+    importance: 5,
+    explanation: "DFS bir yoldan derine gider. Yol bitince en son geldiği yere geri dönmesi gerekir. Bu davranış LIFO mantığına uygundur. Stack de LIFO çalışır. Bu yüzden DFS stack ile ilişkilidir."
+  },
+  {
+    q: "Hash tablo hangi mantığa dayalı bir veri yapısıdır?",
+    t: "mcq",
+    o: [
+      "Anahtar-değer eşleşmesi",
+      "Son giren ilk çıkar",
+      "İlk giren ilk çıkar",
+      "Sol küçük sağ büyük",
+      "Yan yana karşılaştırma"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 1,
+    topic: "Hash Tablosu",
+    importance: 4,
+    explanation: "Hash tablo, anahtar-değer mantığına dayanır. Örneğin öğrenci numarası anahtar, öğrencinin adı değer olabilir. Amaç doğru hash fonksiyonu ile veriye hızlı erişmektir."
+  },
+  {
+    q: "Hash tabloların temel avantajı hangisidir?",
+    t: "mcq",
+    o: [
+      "Her zaman sıralı çıktı vermesi",
+      "Veriye hızlı erişim sağlayabilmesi",
+      "Sadece ağaç olarak çalışması",
+      "Her düğümün iki çocuk alması",
+      "Sadece queue kullanması"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 1,
+    topic: "Hash Tablosu",
+    importance: 4,
+    explanation: "Hash tablolar doğru kullanıldığında anahtar üzerinden veriye hızlı erişim sağlar. Bu yüzden önbellekleme, indeksleme ve hızlı arama gereken alanlarda kullanılabilir."
+  },
+  {
+    q: "Veri yapısı seçerken en önemli ölçütlerden biri hangisidir?",
+    t: "mcq",
+    o: [
+      "Sadece değişken adının uzunluğu",
+      "Sadece ekran rengi",
+      "Yapılacak işlemlerin türü ve performans ihtiyacı",
+      "Klavye markası",
+      "Monitör çözünürlüğü"
+    ],
+    a: 2,
+    difficulty: "medium",
+    week: 1,
+    topic: "Veri Yapısı Seçimi",
+    importance: 5,
+    explanation: "Veri yapısı seçerken ne yapmak istediğine bakılır. Hızlı indeks erişimi gerekiyorsa dizi, sık ekleme-silme gerekiyorsa bağlı liste, son yapılanı geri almak gerekiyorsa stack, sıra mantığı gerekiyorsa queue tercih edilebilir."
+  },
+  {
+    q: "Arama işlemini hızlandırmak için verinin önceden sıralı olması hangi algoritma için özellikle gereklidir?",
+    t: "mcq",
+    o: [
+      "Linear Search",
+      "Binary Search",
+      "Pop",
+      "Enqueue",
+      "DFS"
+    ],
+    a: 1,
+    difficulty: "easy",
+    week: 12,
+    topic: "Binary Search",
+    importance: 5,
+    explanation: "Binary Search için veri sıralı olmalıdır. Çünkü algoritma ortadaki elemana bakarak sağ mı sol mu devam edeceğine karar verir. Sıralama yoksa bu karar güvenilir olmaz."
+  },
+  {
+    q: "O(n) karmaşıklık sıfır bilen biri için en doğru nasıl açıklanır?",
+    t: "mcq",
+    o: [
+      "Eleman sayısı arttıkça işlem sayısının da yaklaşık aynı oranda artması",
+      "İşlemin her zaman tek adımda bitmesi",
+      "İşlemin hiçbir zaman yapılmaması",
+      "Her adımda verinin yarısının elenmesi",
+      "İşlemin sadece iki elemanda çalışması"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 12,
+    topic: "Zaman Karmaşıklığı",
+    importance: 5,
+    explanation: "O(n), eleman sayısı arttıkça işlem süresinin de eleman sayısıyla birlikte artması demektir. Linear Search buna örnektir. 100 eleman varsa en kötü 100 elemana bakmak gerekebilir."
+  },
+  {
+    q: "O(log n) karmaşıklık hangi mantığa daha yakındır?",
+    t: "mcq",
+    o: [
+      "Her zaman tüm elemanlara bakma",
+      "Her adımda arama alanını küçültme, genellikle yarıya indirme",
+      "Sadece ilk elemana bakma",
+      "Veriyi hiç kontrol etmeme",
+      "Elemanları rastgele silme"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 12,
+    topic: "Zaman Karmaşıklığı",
+    importance: 5,
+    explanation: "O(log n), her adımda problem alanının ciddi şekilde küçüldüğü durumlarda görülür. Binary Search her adımda dizinin yarısını eler. Dengeli BST'de arama da benzer şekilde O(log n) olabilir."
+  },
+  {
+    q: "O(n²) karmaşıklık neden büyük veriler için genellikle kötü kabul edilir?",
+    t: "mcq",
+    o: [
+      "Çünkü işlem sayısı eleman sayısının karesi gibi hızlı büyüyebilir",
+      "Çünkü işlem her zaman tek adımda biter",
+      "Çünkü hiç karşılaştırma yapılmaz",
+      "Çünkü sadece queue kullanılır",
+      "Çünkü sadece kök düğüm bulunur"
+    ],
+    a: 0,
+    difficulty: "medium",
+    week: 13,
+    topic: "Zaman Karmaşıklığı",
+    importance: 5,
+    explanation: "O(n²), eleman sayısı arttıkça işlem sayısının çok hızlı artabileceğini gösterir. Örneğin 10 elemanda 100'e yakın işlem, 100 elemanda 10000'e yakın işlem gerekebilir. Bubble Sort ve Selection Sort gibi algoritmalarda sık görülür."
+  },
+  {
+    q: "Dizi, bağlı liste, stack ve queue hangi sınıfa girer?",
+    t: "mcq",
+    o: [
+      "Lineer veri yapıları",
+      "Lineer olmayan veri yapıları",
+      "Sadece graf yapıları",
+      "Sadece ağaç yapıları",
+      "Sadece hash yapıları"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 1,
+    topic: "Lineer Veri Yapıları",
+    importance: 5,
+    explanation: "Dizi, bağlı liste, stack ve queue elemanları sıra halinde düşünülen yapılardır. Bu yüzden lineer veri yapılarıdır. Ağaç ve graf ise dallanma veya çoklu bağlantı içerdiği için lineer olmayan yapılardır."
+  },
+  {
+    q: "Ağaç, graf ve hash tablo hangi veri yapısı grubunda değerlendirilir?",
+    t: "mcq",
+    o: [
+      "Sadece stack yapıları",
+      "Lineer olmayan veri yapıları",
+      "Sadece queue yapıları",
+      "Sadece dizi türleri",
+      "Sadece bağlı liste türleri"
+    ],
+    a: 1,
+    difficulty: "medium",
+    week: 1,
+    topic: "Lineer Olmayan Veri Yapıları",
+    importance: 5,
+    explanation: "Ağaç, graf ve hash tablo lineer olmayan veri yapıları arasında sayılır. Çünkü bu yapılarda veriler basit bir sıra halinde ilerlemez. Ağaçta hiyerarşi, grafta bağlantı ağı, hash tabloda anahtar-değer mantığı vardır."
+  },
+  {
+    q: "Sık sık 'son yapılan işlemi geri al' özelliği gereken bir uygulamada hangi veri yapısı uygundur?",
+    t: "mcq",
+    o: ["Queue", "Graph", "Tree", "Stack", "Hash table"],
+    a: 3,
+    difficulty: "easy",
+    week: 4,
+    topic: "Stack Kullanım Alanı",
+    importance: 5,
+    explanation: "Geri alma işleminde en son yapılan işlem ilk geri alınır. Bu son giren ilk çıkar mantığıdır. Bu yüzden Undo/Redo gibi özelliklerde stack kullanılır."
+  },
+  {
+    q: "Yazıcıya gönderilen belgelerin sırayla yazdırılması hangi veri yapısına benzer?",
+    t: "mcq",
+    o: ["Stack", "Tree", "Graph", "BST", "Queue"],
+    a: 4,
+    difficulty: "easy",
+    week: 5,
+    topic: "Queue Kullanım Alanı",
+    importance: 5,
+    explanation: "Yazıcı kuyruğunda ilk gönderilen belge genellikle önce yazdırılır. Bu ilk giren ilk çıkar mantığıdır. Bu yüzden yazıcı sırası queue veri yapısına benzer."
+  },
+  {
+    q: "Bir dosya sistemi klasör-alt klasör ilişkisiyle düşünülürse hangi veri yapısına benzer?",
+    t: "mcq",
+    o: [
+      "Ağaç",
+      "Stack",
+      "Queue",
+      "Bubble Sort",
+      "Linear Search"
+    ],
+    a: 0,
+    difficulty: "easy",
+    week: 6,
+    topic: "Ağaç Kullanım Alanı",
+    importance: 5,
+    explanation: "Dosya sisteminde klasörlerin içinde alt klasörler bulunur. Bu üst-alt ilişki ağaç yapısına benzer. En üst klasör kök gibi, alt klasörler çocuk düğümler gibi düşünülebilir."
+  },
+  {
+    q: "Şehirler ve şehirler arasındaki yollar hangi veri yapısıyla modellenebilir?",
+    t: "mcq",
+    o: [
+      "Sadece stack",
+      "Sadece queue",
+      "Graf",
+      "Sadece dizi",
+      "Sadece bubble sort"
+    ],
+    a: 2,
+    difficulty: "easy",
+    week: 14,
+    topic: "Graf Kullanım Alanı",
+    importance: 5,
+    explanation: "Şehirler düğüm, şehirler arasındaki yollar kenar olarak düşünülebilir. Bu yüzden şehir-yol ilişkileri graf veri yapısıyla modellenebilir. Harita ve yol bulma algoritmaları graf mantığını kullanır."
   }
 ];
